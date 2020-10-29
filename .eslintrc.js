@@ -20,5 +20,5 @@ module.exports = {
     }],
     '@typescript-eslint/semi': ['error']
   },
-  ignorePatterns: ['webpack.config.js', 'dist'],
+  ignorePatterns: ['dist'],
 };
