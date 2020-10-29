@@ -1,0 +1,16 @@
+import { MasterSwitch } from './services/MasterSwitch';
+import { Core, CoreOptions } from './core';
+
+export default function provideCore(opts: CoreOptions): Promise<Core> {
+  const masterSwitch = new MasterSwitch({
+    apiKey: opts.apiKey,
+    experienceKey: opts.experienceKey
+  });
+  return masterSwitch.checkIsDisabled().then(isDisabled => {
+    if (!isDisabled) {
+      return new Core();
+    } else {
+      throw new Error('MasterSwitchApi determined the front-end should be disabled');
+    }
+  });
+}
