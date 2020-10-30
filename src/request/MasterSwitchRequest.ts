@@ -2,7 +2,7 @@ import Urls from '../http/urls';
 import HttpRequester from '../http/HttpRequester';
 import MasterSwitchResponse from '../response/MasterSwitchResponse';
 
-export interface MasterSwitchRequestOptions {
+interface MasterSwitchRequestOptions {
   apiKey: string;
   experienceKey: string;
 }
@@ -10,7 +10,7 @@ export interface MasterSwitchRequestOptions {
 /**
  * MasterSwitchRequest makes and returns a call to the MasterSwitch api.
  */
-export class MasterSwitchRequest {
+export default class MasterSwitchRequest {
   private apiKey: string;
   private experienceKey: string;
 

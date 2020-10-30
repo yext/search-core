@@ -1,10 +1,10 @@
-import { MasterSwitch } from '../../src/services/MasterSwitch';
+import MasterSwitchApi from '../../src/services/MasterSwitchApi';
 
-describe('MasterSwitch', () => {
+describe('MasterSwitchApi', () => {
   let masterSwitchApi;
 
   beforeEach(() => {
-    masterSwitchApi = new MasterSwitch({
+    masterSwitchApi = new MasterSwitchApi ({
       apiKey: 'mockKey',
       experienceKey: 'mockExperience'
     });
@@ -12,26 +12,26 @@ describe('MasterSwitch', () => {
 
   it('behaves correctly when JSON is present and disabled is true', async () => {
     fetch.mockResponseOnce(JSON.stringify({ disabled: true }));
-    const isDisabled = await masterSwitchApi.isDisabled();
-    expect(isDisabled).toBeTruthy();
+    const isEnabled = await masterSwitchApi.isEnabled();
+    expect(isEnabled).toBeFalsy();
   });
 
   it('behaves correctly when JSON is present and disabled is false', async () => {
     fetch.mockResponseOnce(JSON.stringify({ disabled: false }));
-    const isDisabled = await masterSwitchApi.isDisabled();
-    expect(isDisabled).toBeFalsy();
+    const isEnabled = await masterSwitchApi.isEnabled();
+    expect(isEnabled).toBeTruthy();
   });
 
   it('behaves correctly when status page contains JSON of empty object', async () => {
     fetch.mockResponseOnce(JSON.stringify({}));
-    const isDisabled = await masterSwitchApi.isDisabled();
-    expect(isDisabled).toBeFalsy();
+    const isEnabled = await masterSwitchApi.isEnabled();
+    expect(isEnabled).toBeTruthy();
   });
 
   it('behaves correctly when network call results in an error', async () => {
     fetch.mockRejectOnce(new Error('Page does not exist'));
-    const isDisabled = await masterSwitchApi.isDisabled();
-    expect(isDisabled).toBeFalsy();
+    const isEnabled = await masterSwitchApi.isEnabled();
+    expect(isEnabled).toBeTruthy();
   });
 
   it('behaves correctly when timeout is reached', async () => {
@@ -39,7 +39,7 @@ describe('MasterSwitch', () => {
       return new Promise(resolve => setTimeout(resolve, 200));
     }
     fetch.mockResponseOnce(mockTimeout);
-    const isDisabled = await masterSwitchApi.isDisabled();
-    expect(isDisabled).toBeFalsy();
+    const isEnabled = await masterSwitchApi.isEnabled();
+    expect(isEnabled).toBeTruthy();
   });
 });
