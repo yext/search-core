@@ -19,13 +19,13 @@ export interface MasterSwitchService {
    * @returns {Promise<boolean>} A Promise containing a boolean indicating if the front-end
    *                             should be disabled.
    */
-  checkIsDisabled(): Promise<boolean>;
+  isDisabled(): Promise<boolean>;
 }
 
 export class MasterSwitch implements MasterSwitchService {
   constructor(private opts: MasterSwitchOptions) {}
 
-  checkIsDisabled(): Promise<boolean> {
+  isDisabled(): Promise<boolean> {
     // A 100ms timeout is enforced on the status call.
     const timeout = new Promise<boolean>((resolve, reject) => {
       setTimeout(() => reject(false), 100);
