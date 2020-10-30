@@ -19,7 +19,7 @@ export default class MasterSwitchApi {
     });
 
     return Promise.race([timeout, this._checkApi()])
-      .then(isDisabled => isDisabled)
+      .then(isEnabled => isEnabled)
       .catch(() => true);
   }
 
