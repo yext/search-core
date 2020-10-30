@@ -1,15 +1,10 @@
 import MasterSwitchRequester from '../requesters/MasterSwitchRequester';
 
-interface MasterSwitchOptions {
-  apiKey: string;
-  experienceKey: string;
-}
-
 /**
  * MasterSwitch checks if the front-end for the given experience should be temporarily disabled.
  */
 export default class MasterSwitchApi {
-  constructor(private opts: MasterSwitchOptions) {}
+  constructor(private apiKey: string, private experienceKey: string) {}
 
   /**
    * Note that this check errs on the side of enabling the front-end. If the network call
@@ -28,6 +23,7 @@ export default class MasterSwitchApi {
   }
 
   _checkApi(): Promise<boolean> {
-    return new MasterSwitchRequester(this.opts).get().then(res => !res.disabled);
+    return new MasterSwitchRequester(this.apiKey, this.experienceKey).get()
+      .then(res => !res.disabled);
   }
 }
