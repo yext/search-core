@@ -7,10 +7,9 @@ export default function provideCore(opts: CoreOptions): Promise<Core> {
     experienceKey: opts.experienceKey
   });
   return masterSwitch.checkIsDisabled().then(isDisabled => {
-    if (!isDisabled) {
-      return new Core();
-    } else {
+    if (isDisabled) {
       throw new Error('MasterSwitchApi determined the front-end should be disabled');
     }
+    return new Core();
   });
 }
