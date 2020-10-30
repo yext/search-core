@@ -2,13 +2,6 @@ import Urls from '../http/urls';
 import HttpRequester from '../http/HttpRequester';
 
 /**
- * The shape of the MasterSwitch api response.
- */
-interface MasterSwitchResponse {
-  disabled: boolean
-}
-
-/**
  * MasterSwitch checks if the front-end for the given experience should be temporarily disabled.
  */
 export default class MasterSwitchApi {
@@ -30,7 +23,7 @@ export default class MasterSwitchApi {
       .catch(() => true);
   }
 
-  _get(): Promise<MasterSwitchResponse> {
+  _checkApi(): Promise<boolean> {
     const requester = new HttpRequester();
     const baseUrl = Urls.MASTER_SWITCH;
     const url = `${baseUrl}/${this.apiKey}/${this.experienceKey}/status.json`;
@@ -38,10 +31,7 @@ export default class MasterSwitchApi {
     const reqInit = {
       credentials: ('omit' as RequestCredentials)
     };
-    return requester.get<MasterSwitchResponse>(url, {}, reqInit);
-  }
-
-  _checkApi(): Promise<boolean> {
-    return this._get().then(res => !res.disabled);
+    return requester.get<{ disabled: boolean }>(url, {}, reqInit)
+      .then(res => !res.disabled);
   }
 }
