@@ -1,4 +1,4 @@
-import { fetch as  fetchPolyfill } from 'whatwg-fetch';
+import { fetch as fetchPolyfill } from 'whatwg-fetch';
 import { addParamsToURL } from '../utils/urlutils';
 
 /**

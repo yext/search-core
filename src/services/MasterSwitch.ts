@@ -15,7 +15,7 @@ export interface MasterSwitchService {
    * Note that this check errs on the side of enabling the front-end. If the network call
    * does not complete successfully, due to timeout or other error, those failures are caught.
    * In these failure cases, the assumption is that things are enabled.
-   * 
+   *
    * @returns {Promise<boolean>} A Promise containing a boolean indicating if the front-end
    *                             should be disabled.
    */
