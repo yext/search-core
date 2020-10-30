@@ -1,4 +1,4 @@
-import MasterSwitchApi from './services/MasterSwitchApi';
+import MasterSwitchApi from './infra/MasterSwitchApi';
 import { Core, CoreOptions } from './core';
 
 export default function provideCore(opts: CoreOptions): Promise<Core> {
