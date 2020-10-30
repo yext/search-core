@@ -1,17 +1,25 @@
 import Urls from '../http/urls';
 import HttpRequester from '../http/HttpRequester';
-import { MasterSwitchOptions, MasterSwitchResponse } from '../services/MasterSwitch';
+import MasterSwitchResponse from '../response/MasterSwitchResponse';
 
-export default class MasterSwitchRequest {
+export interface MasterSwitchRequestOptions {
+  apiKey: string;
+  experienceKey: string;
+}
+
+/**
+ * MasterSwitchRequest makes and returns a call to the MasterSwitch api.
+ */
+export class MasterSwitchRequest {
   private apiKey: string;
   private experienceKey: string;
 
-  constructor(opts: MasterSwitchOptions) {
+  constructor(opts: MasterSwitchRequestOptions) {
     this.apiKey = opts.apiKey;
     this.experienceKey = opts.experienceKey;
   }
 
-  get(): Promise<boolean> {
+  get(): Promise<MasterSwitchResponse> {
     const requester = new HttpRequester();
     const baseUrl = Urls.MasterSwitchApi;
     const url = `${baseUrl}/${this.apiKey}/${this.experienceKey}/status.json`;
@@ -19,7 +27,6 @@ export default class MasterSwitchRequest {
     const reqInit = {
       credentials: ('omit' as RequestCredentials)
     };
-    return requester.get<MasterSwitchResponse>(url, {}, reqInit)
-      .then(json => json.disabled);
+    return requester.get<MasterSwitchResponse>(url, {}, reqInit);
   }
 }
