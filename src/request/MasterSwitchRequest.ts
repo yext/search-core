@@ -1,6 +1,6 @@
-import Urls from '../../http/urls';
-import { HttpRequesterImpl } from '../../http/HttpRequester';
-import { MasterSwitchOptions, MasterSwitchResponse } from '../../services/MasterSwitch';
+import Urls from '../http/urls';
+import { HttpRequesterImpl } from '../http/HttpRequester';
+import { MasterSwitchOptions, MasterSwitchResponse } from '../services/MasterSwitch';
 
 export default class MasterSwitchRequest {
   private apiKey:string;

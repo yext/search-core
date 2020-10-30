@@ -1,4 +1,4 @@
-import MasterSwitchRequest from '../models/request/MasterSwitchRequest';
+import MasterSwitchRequest from '../request/MasterSwitchRequest';
 
 export interface MasterSwitchOptions {
   apiKey: string;
