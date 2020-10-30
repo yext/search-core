@@ -9,6 +9,8 @@ const RequestMethods: Record<string, string> = {
   POST: 'post',
 };
 
+type UrlParams = Record<string, string|number|boolean>;
+
 /**
  * HttpRequester is a wrapper around the native implementation of AJAX
  * related matters.
@@ -19,7 +21,7 @@ export default class HttpRequester {
    */
   get<T>(
     url: string,
-    queryParams: Record<string, string|number|boolean>,
+    queryParams: UrlParams,
     options?: RequestInit,
   ): Promise<T> {
     const reqInitWithMethod = {
@@ -35,7 +37,7 @@ export default class HttpRequester {
    */
   post<T>(
     url: string,
-    queryParams: Record<string, string|number|boolean>,
+    queryParams: UrlParams,
     body: BodyInit,
     reqInit: RequestInit
   ): Promise<T> {
@@ -53,7 +55,7 @@ export default class HttpRequester {
    */
   _fetch(
     url: string,
-    queryParams: Record<string, string|number|boolean>,
+    queryParams: UrlParams,
     reqInit: RequestInit
   ): Promise<Response> {
     const urlWithParams = addParamsToURL(url, queryParams);
