@@ -9,7 +9,6 @@ jobs:
     steps:
       - checkout
       - node/install-packages
-      - run: npm run lint
       - run: npm run build
       - run: npm test
 
