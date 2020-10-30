@@ -21,7 +21,7 @@ export default class MasterSwitchRequester {
 
   get(): Promise<MasterSwitchResponse> {
     const requester = new HttpRequester();
-    const baseUrl = Urls.MasterSwitchApi;
+    const baseUrl = Urls.MASTER_SWITCH;
     const url = `${baseUrl}/${this.apiKey}/${this.experienceKey}/status.json`;
 
     const reqInit = {

@@ -4,10 +4,10 @@ import { addParamsToURL } from '../utils/urlutils';
 /**
  * Available HTTP request methods
  */
-const RequestMethods: Record<string, string> = {
-  GET: 'get',
-  POST: 'post',
-};
+enum RequestMethods {
+  GET = 'get',
+  POST = 'post',
+}
 
 type UrlParams = Record<string, string|number|boolean>;
 
