@@ -3,8 +3,8 @@ import HttpRequester from '../http/HttpRequester';
 import { MasterSwitchOptions, MasterSwitchResponse } from '../services/MasterSwitch';
 
 export default class MasterSwitchRequest {
-  private apiKey:string;
-  private experienceKey:string;
+  private apiKey: string;
+  private experienceKey: string;
 
   constructor(opts: MasterSwitchOptions) {
     this.apiKey = opts.apiKey;

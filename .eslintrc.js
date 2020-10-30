@@ -20,7 +20,8 @@ module.exports = {
         code: 100,
         ignorePattern: '^const\\s.+=\\s*require\\s*\\('
     }],
-    '@typescript-eslint/semi': ['error']
+    '@typescript-eslint/semi': ['error'],
+    '@typescript-eslint/type-annotation-spacing': ['error'],
   },
   ignorePatterns: ['dist'],
 };
