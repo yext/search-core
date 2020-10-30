@@ -1,7 +1,7 @@
-import { HttpRequesterImpl } from '../../src/http/HttpRequester';
+import HttpRequester from '../../src/http/HttpRequester';
 
 describe('HttpRequester', () => {
-  const httpRequester = new HttpRequesterImpl();
+  const httpRequester = new HttpRequester();
 
   it('can make get requests', async () => {
     fetch.mockResponseOnce('{}');

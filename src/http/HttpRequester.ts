@@ -10,35 +10,10 @@ const RequestMethods: Record<string, string> = {
 };
 
 /**
-* HttpRequester is a wrapper around the native implementation of AJAX
-* related matters.
-*/
-export interface HttpRequester {
- /**
-  * Perform a GET request
-  */
- get<T>(
-   url: string,
-   queryParams: Record<string, string | number | boolean>,
-   options: RequestInit
- ): Promise<T>;
-
- /**
-  * Perform a POST HTTP request
-  */
- post<T>(
-   url: string,
-   queryParams: Record<string, string | number | boolean>,
-   body: BodyInit,
-   reqInit: RequestInit
- ): Promise<T>;
-}
-
-/**
  * HttpRequester is a wrapper around the native implementation of AJAX
  * related matters.
  */
-export class HttpRequesterImpl implements HttpRequester {
+export default class HttpRequester {
   /**
    * Perform a GET request
    */

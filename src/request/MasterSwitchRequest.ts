@@ -1,5 +1,5 @@
 import Urls from '../http/urls';
-import { HttpRequesterImpl } from '../http/HttpRequester';
+import HttpRequester from '../http/HttpRequester';
 import { MasterSwitchOptions, MasterSwitchResponse } from '../services/MasterSwitch';
 
 export default class MasterSwitchRequest {
@@ -12,7 +12,7 @@ export default class MasterSwitchRequest {
   }
 
   get(): Promise<boolean> {
-    const requester = new HttpRequesterImpl();
+    const requester = new HttpRequester();
     const baseUrl = Urls.MasterSwitchApi;
     const url = `${baseUrl}/${this.apiKey}/${this.experienceKey}/status.json`;
 
