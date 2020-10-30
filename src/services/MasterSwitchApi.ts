@@ -1,4 +1,4 @@
-import MasterSwitchRequest from '../request/MasterSwitchRequest';
+import MasterSwitchRequester from '../requesters/MasterSwitchRequester';
 
 interface MasterSwitchOptions {
   apiKey: string;
@@ -28,6 +28,6 @@ export default class MasterSwitchApi {
   }
 
   _checkApi(): Promise<boolean> {
-    return new MasterSwitchRequest(this.opts).get().then(res => !res.disabled);
+    return new MasterSwitchRequester(this.opts).get().then(res => !res.disabled);
   }
 }

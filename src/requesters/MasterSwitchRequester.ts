@@ -1,20 +1,20 @@
 import Urls from '../http/urls';
 import HttpRequester from '../http/HttpRequester';
-import MasterSwitchResponse from '../response/MasterSwitchResponse';
+import MasterSwitchResponse from '../responses/MasterSwitchResponse';
 
-interface MasterSwitchRequestOptions {
+interface MasterSwitchRequesterOptions {
   apiKey: string;
   experienceKey: string;
 }
 
 /**
- * MasterSwitchRequest makes and returns a call to the MasterSwitch api.
+ * MasterSwitchRequester makes and returns a call to the MasterSwitch api.
  */
-export default class MasterSwitchRequest {
+export default class MasterSwitchRequester {
   private apiKey: string;
   private experienceKey: string;
 
-  constructor(opts: MasterSwitchRequestOptions) {
+  constructor(opts: MasterSwitchRequesterOptions) {
     this.apiKey = opts.apiKey;
     this.experienceKey = opts.experienceKey;
   }
