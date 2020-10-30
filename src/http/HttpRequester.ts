@@ -1,4 +1,5 @@
 import { fetch as  fetchPolyfill } from 'whatwg-fetch';
+import { addParamsToURL } from '../utils/urlutils';
 
 /**
  * Available HTTP request methods
@@ -16,23 +17,22 @@ export interface HttpRequester {
  /**
   * Perform a GET request
   */
- get(
+ get<T>(
    url: string,
    queryParams: Record<string, string | number | boolean>,
    options: RequestInit
- ): Promise<Response>;
+ ): Promise<T>;
 
  /**
   * Perform a POST HTTP request
   */
- post(
+ post<T>(
    url: string,
    queryParams: Record<string, string | number | boolean>,
    body: BodyInit,
    reqInit: RequestInit
- ): Promise<Response>;
+ ): Promise<T>;
 }
-
 
 /**
  * HttpRequester is a wrapper around the native implementation of AJAX
@@ -42,33 +42,35 @@ export class HttpRequesterImpl implements HttpRequester {
   /**
    * Perform a GET request
    */
-  get(
+  get<T>(
     url: string,
     queryParams: Record<string, string|number|boolean>,
     options?: RequestInit,
-  ): Promise<Response> {
+  ): Promise<T> {
     const reqInitWithMethod = {
       method: RequestMethods.GET,
       ...options
     };
-    return this._fetch(url, queryParams, reqInitWithMethod);
+    return this._fetch(url, queryParams, reqInitWithMethod)
+      .then(res => res.json());
   }
 
   /**
    * Perform a POST request
    */
-  post(
+  post<T>(
     url: string,
     queryParams: Record<string, string|number|boolean>,
     body: BodyInit,
     reqInit: RequestInit
-  ): Promise<Response> {
+  ): Promise<T> {
     const reqInitWithMethodAndBody = {
       method: RequestMethods.POST,
       body: JSON.stringify(body),
       ...reqInit
     };
-    return this._fetch(url, queryParams, reqInitWithMethodAndBody);
+    return this._fetch(url, queryParams, reqInitWithMethodAndBody)
+      .then(res => res.json());
   }
 
   /**
@@ -79,30 +81,10 @@ export class HttpRequesterImpl implements HttpRequester {
     queryParams: Record<string, string|number|boolean>,
     reqInit: RequestInit
   ): Promise<Response> {
-    const urlWithParams = this._addParamsToUrl(url, queryParams);
+    const urlWithParams = addParamsToURL(url, queryParams);
     if (!window.fetch) {
       return fetchPolyfill(urlWithParams, reqInit);
     }
     return fetch(urlWithParams, reqInit);
-  }
-
-  /**
-   * Returns the request url updated with the given params.
-   */
-  _addParamsToUrl(url: string, params: Record<string, string|number|boolean>): string {
-    let hasParam = url.indexOf('?') > -1;
-
-    let searchQuery = '';
-    for (const key in params) {
-      if (!hasParam) {
-        hasParam = true;
-        searchQuery += '?';
-      } else {
-        searchQuery += '&';
-      }
-
-      searchQuery += key + '=' + encodeURIComponent(params[key]);
-    }
-    return url + searchQuery;
   }
 }

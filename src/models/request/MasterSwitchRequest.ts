@@ -19,8 +19,7 @@ export default class MasterSwitchRequest {
     const reqInit = {
       credentials: ('omit' as RequestCredentials)
     };
-    return requester.get(url, {}, reqInit)
-      .then(res => res.json())
-      .then(json => (json as MasterSwitchResponse).disabled);
+    return requester.get<MasterSwitchResponse>(url, {}, reqInit)
+      .then(json => json.disabled);
   }
 }
