@@ -18,12 +18,12 @@ export default class MasterSwitchApi {
       setTimeout(() => reject(true), 100);
     });
 
-    return Promise.race([timeout, this._checkApi()])
+    return Promise.race([timeout, this.checkApi()])
       .then(isEnabled => isEnabled)
       .catch(() => true);
   }
 
-  _checkApi(): Promise<boolean> {
+  private checkApi(): Promise<boolean> {
     const requester = new HttpRequester();
     const baseUrl = Urls.MASTER_SWITCH;
     const url = `${baseUrl}/${this.apiKey}/${this.experienceKey}/status.json`;
