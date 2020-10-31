@@ -28,7 +28,7 @@ export default class HttpRequester {
       method: RequestMethods.GET,
       ...options
     };
-    return this._fetch(url, queryParams, reqInitWithMethod)
+    return this.fetch(url, queryParams, reqInitWithMethod)
       .then(res => res.json());
   }
 
@@ -46,14 +46,14 @@ export default class HttpRequester {
       body: JSON.stringify(body),
       ...reqInit
     };
-    return this._fetch(url, queryParams, reqInitWithMethodAndBody)
+    return this.fetch(url, queryParams, reqInitWithMethodAndBody)
       .then(res => res.json());
   }
 
   /**
    * Perform a fetch, using the polyfill if needed.
    */
-  _fetch(
+  private fetch(
     url: string,
     queryParams: UrlParams,
     reqInit: RequestInit
