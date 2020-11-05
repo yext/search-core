@@ -40,9 +40,12 @@
   "jest": {
     "bail": 0,
     "verbose": true,
-    "moduleFileExtensions": ["js", "ts"],
+    "moduleFileExtensions": [
+      "js",
+      "ts"
+    ],
     "setupFilesAfterEnv": [
-        "./tests/setup/setup.js"
+      "./tests/setup/setup.js"
     ],
     "moduleDirectories": [
       "node_modules",

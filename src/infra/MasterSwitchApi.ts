@@ -1,4 +1,4 @@
-import Urls from '../http/urls';
+import { BaseUrls } from '../constants';
 import HttpRequester from '../http/HttpRequester';
 
 /**
@@ -24,14 +24,13 @@ export default class MasterSwitchApi {
   }
 
   private checkApi(): Promise<boolean> {
-    const requester = new HttpRequester();
-    const baseUrl = Urls.MASTER_SWITCH;
+    const baseUrl = BaseUrls.MasterSwitch;
     const url = `${baseUrl}/${this.apiKey}/${this.experienceKey}/status.json`;
 
     const reqInit = {
       credentials: ('omit' as RequestCredentials)
     };
-    return requester.get<{ disabled: boolean }>(url, {}, reqInit)
+    return HttpRequester.get<{ disabled: boolean }>(url, {}, reqInit)
       .then(res => !res.disabled);
   }
 }
