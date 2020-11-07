@@ -1,5 +1,6 @@
 import SearchService from './search/SearchService';
 import { UniversalSearchRequest } from './search/SearchService'
+import UniversalSearchResponse from './models/UniversalSearchResponse';
 
 export interface CoreDependencies {
   searchService: SearchService;
@@ -12,7 +13,7 @@ export class Core implements CoreDependencies {
     this.searchService = dependencies.searchService;
   }
 
-  universalSearch (request: UniversalSearchRequest) {
+  universalSearch (request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
     return this.searchService.universalSearch(request);
   }
 

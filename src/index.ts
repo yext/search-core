@@ -1,4 +1,4 @@
-import MasterSwitchApi from './infra/MasterSwitchApi';
+import MasterSwitchApi from './status/MasterSwitchApi';
 import { Core, CoreDependencies } from './core';
 import SearchService from './search/SearchService';
 

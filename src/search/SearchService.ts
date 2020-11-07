@@ -1,13 +1,14 @@
-import { default as HttpRequester } from '../http/HttpRequester';
+import HttpRequester from '../http/HttpRequester';
 import { QueryParams } from '../http/urlUtils';
 import { BaseUrls, defaultApiVersion } from '../constants';
+import UniversalSearchResponse from '../models/UniversalSearchResponse';
 
 /**
  * Public interface for constructing a universal search
  */
 export interface UniversalSearchRequest {
   query: string,
-  queryTrigger?: string,
+  queryTrigger?: 'initialize' | 'query-parameter', // These values were in the SDK. Do we want to enforce these values? Does the backend expect them?
   spellCheckEnabled?: boolean,
   sessionTrackingEnabled?: boolean,
   geolocation?: Geolocation
@@ -44,8 +45,9 @@ export default class SearchService {
     this.config = config;
   }
 
-  universalSearch (request: UniversalSearchRequest) {
+  async universalSearch (request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
     const requestUrl: string = BaseUrls.LiveApi + LiveApiEndpoints.UniversalSearch;
+
     const queryParams: UniversalSearchQueryParams = {
       input: request.query,
       experienceKey: this.config.experienceKey,
@@ -58,10 +60,16 @@ export default class SearchService {
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       queryTrigger: request.queryTrigger,
     };
-    return HttpRequester.get(requestUrl, queryParams);
+
+    const rawUniversalSearchResponse = await HttpRequester.get<Object>(requestUrl, queryParams);
+
+    console.log('Raw Universal Response:');
+    console.log(rawUniversalSearchResponse);
+    
+    return UniversalSearchResponse.from(rawUniversalSearchResponse);
   }
 
-  verticalSearch () {
+  async verticalSearch () {
 
   }
 }
