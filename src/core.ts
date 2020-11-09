@@ -1,5 +1,5 @@
 import SearchService from './search/SearchService';
-import { UniversalSearchRequest } from './search/SearchService';
+import UniversalSearchRequest from './models/UniversalSearchRequest';
 import UniversalSearchResponse from './models/UniversalSearchResponse';
 //import VerticalSearchResponse from './models/VerticalSearchResponse';
 
