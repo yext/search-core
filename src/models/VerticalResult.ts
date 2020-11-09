@@ -14,14 +14,14 @@ export default class VerticalResult{
   // { mapCenter: centerCordinates, mapMarkers: mapMarkers }
   // Do we also want this functionality?
   constructor(
-    // appliedQueryFilters: [AppliedQueryFilter]
-    encodedState: string,
-    // facets: [Facet],
-    queryDurationMillis: number,
-    results: [Result],
-    resultsCount: number,
-    source: Source,
-    verticalKey: string
+    // readonly appliedQueryFilters: [AppliedQueryFilter]
+    readonly encodedState: string,
+    // readonly facets: [Facet],
+    readonly queryDurationMillis: number,
+    readonly results: [Result],
+    readonly resultsCount: number,
+    readonly source: Source,
+    readonly verticalKey: string
   ) {}
 
   static from(data: any): VerticalResult {

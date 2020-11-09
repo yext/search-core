@@ -13,15 +13,15 @@ export default class Result {
     - 'collapsed'
   */
   constructor(
-    rawData: unknown,
-    index?: number, // Can we remove index?
-    name?: string,
-    description?: string,
-    link?: string,
-    id?: string,
-    //subtitle?: string;
-    distance?: number,
-    distanceFromFilter?: number,
+    readonly rawData: unknown,
+    readonly index?: number, // Can we remove index?
+    readonly name?: string,
+    readonly description?: string,
+    readonly link?: string,
+    readonly id?: string,
+    // readonly subtitle?: string;
+    readonly distance?: number,
+    readonly distanceFromFilter?: number,
   ) {}
 
   static fromArray(results: any, source: Source): [Result] {

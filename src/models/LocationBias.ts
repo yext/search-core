@@ -1,9 +1,9 @@
 export default class LocationBias {
   constructor(
-    latitude: number,
-    longitude: number,
-    locationDisplayName: string,
-    method: 'IP' | 'DEVICE' | 'UNKNOWN'
+    readonly latitude: number,
+    readonly longitude: number,
+    readonly locationDisplayName: string,
+    readonly method: 'IP' | 'DEVICE' | 'UNKNOWN'
   ){}
 
   static from(data: any): LocationBias {

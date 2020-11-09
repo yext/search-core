@@ -4,12 +4,12 @@ import SearchIntent from './SearchIntent';
 export default class VerticalSearchResponse {
 
   constructor(
-    verticalResult: VerticalResult,
-    queryId: string,
-    // directAnswer?: DirectAnswer;
-    searchIntents?: [SearchIntent],
-    // spellCheckedQuery?: SpellCheckedQuery,
-    // alternativeVerticals?: [AlternativeVertical];
+    readonly verticalResult: VerticalResult,
+    readonly queryId: string,
+    // readonly directAnswer?: DirectAnswer;
+    readonly searchIntents?: [SearchIntent],
+    // readonly spellCheckedQuery?: SpellCheckedQuery,
+    // readonly alternativeVerticals?: [AlternativeVertical];
   ) {}
 
   static from(data: any): VerticalSearchResponse {

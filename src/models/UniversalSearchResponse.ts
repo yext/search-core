@@ -3,11 +3,11 @@ import SearchIntent from './SearchIntent';
 
 export default class UniversalSearchResponse {
   private constructor(
-    verticalResults: [VerticalResult],
-    queryId: string,
-    // directAnswer?: DirectAnswer,
-    searchIntents?: [SearchIntent],
-    // spellCheckedQuery?: SpellCheckedQuery,
+    readonly verticalResults: [VerticalResult],
+    readonly queryId: string,
+    // readonly directAnswer?: DirectAnswer,
+    readonly searchIntents?: [SearchIntent],
+    // readonly spellCheckedQuery?: SpellCheckedQuery,
   ) {}
 
   static from(data: any): UniversalSearchResponse {

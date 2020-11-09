@@ -1,13 +1,11 @@
 export default class SearchIntent {
-  nearMe: boolean;
-
-  constructor(props: SearchIntent) {
-    this.nearMe = props.nearMe;
-  }
+  constructor(
+    readonly nearMe: boolean
+  ) {}
 
   static from(data: any): SearchIntent{
-    return new SearchIntent({
-      nearMe: data.includes('NEAR_ME')
-    });
+    return new SearchIntent(
+      data.includes('NEAR_ME')
+    );
   }
 }
