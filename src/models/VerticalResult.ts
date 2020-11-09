@@ -41,6 +41,3 @@ export default class VerticalResult{
     return verticals.map((vertical: any) => VerticalResult.from(vertical));
   }
 }
-
-
-

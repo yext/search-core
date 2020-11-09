@@ -50,62 +50,68 @@ export default class Result {
 
   static fromKnowledgeManager(result: any): Result {
     const rawData = result.data || {};
-    return new Result({
-      rawData: rawData,
-      index: result.index,
-      name: rawData.name,
-      description: rawData.description,
-      link: rawData.website,
-      id: rawData.id,
-      distance: result.distance,
-      distanceFromFilter: result.distanceFromFilter
-    });
+    return new Result(
+      rawData,
+      result.index,
+      rawData.name,
+      rawData.description,
+      rawData.website,
+      rawData.id,
+      result.distance,
+      result.distanceFromFilter
+    );
   }
 
   static fromGoogleCustomSearchEngine(result: any): Result {
-    return new Result({
-      rawData: result,
-      name: result.htmlTitle.replace(/(<([^>]+)>)/ig, ''),
-      description: result.htmlSnippet,
-      link: result.link
-    });
+    return new Result(
+      result,
+      result.index,
+      result.htmlTitle.replace(/(<([^>]+)>)/ig, ''),
+      result.htmlSnippet,
+      result.link
+    );
   }
 
   static fromBingCustomSearchEngine(result: any): Result {
-    return new Result({
-      rawData: result,
-      name: result.name,
-      description: result.snippet,
-      link: result.url
-    });
+    return new Result(
+      result,
+      result.index,
+      result.name,
+      result.snippet,
+      result.url
+    );
   }
 
   static fromZendeskSearchEngine(result: any) {
-    return new Result({
-      rawData: result,
-      name: result.title,
-      description: result.snippet,
-      link: result.html_url
-    });
+    return new Result(
+      result,
+      result.index,
+      result.title,
+      result.snippet,
+      result.html_url
+    );
   }
 
   static fromAlgoliaSearchEngine(result: any) {
-    return new Result({
-      rawData: result.data,
-      description: result.objectID,
-      id: result.objectID
-    });
+    return new Result(
+      result,
+      result.index,
+      result.name,
+      undefined,
+      undefined,
+      result.objectID
+    );
   }
 
   static fromGeneric(result: any) {
-    return new Result({
-      rawData: result,
-      name: result.name,
-      description: result.description, // Do we want to truncate this like in the SDK?
-      link: result.website,
-      id: result.id,
-      index: result.index
-    });
+    return new Result(
+      result,
+      result.index,
+      result.name,
+      result.description, // Do we want to truncate this like in the SDK?
+      result.website,
+      result.id,
+    );
   }
 
 }
