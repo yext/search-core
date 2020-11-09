@@ -10,3 +10,8 @@ export default interface UniversalSearchRequest {
   sessionTrackingEnabled?: boolean,
   geolocation?: Geolocation
 }
+
+interface Geolocation {
+  lat: string;
+  lng: string;
+}

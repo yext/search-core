@@ -7,9 +7,3 @@ interface CoreConfig {
   apiVersion?: number,
   configurationLabel?: 'STAGING' | 'PRODUCTION' | string,
 }
-
-interface Geolocation {
-  lat: string;
-  lng: string;
-}
-
