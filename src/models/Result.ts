@@ -1,19 +1,10 @@
 import { Source } from './VerticalResult';
 
 export default class Result {
-  rawData: any;
-  index?: number; // Can we remove index?
-  name?: string;
-  description?: string;
-  link?: string;
-  id?: string;
-  subtitle?: string;
-  distance?: number;
-  distanceFromFilter?: number;
   /*
-  The SDK computes a formatted and a highlighed data field. Do we want that processing to happen here? 
-  I think that processing should probably not be the responsibility of this class.
-  The SDK also contains other fields that don't seem to be used. Do we want those as well? They include:
+  The SDK computes a formatted and a highlighed data field. Do we want that processing to happen
+  here? I think that processing should probably not be the responsibility of this class. The SDK
+  also contains other fields that don't seem to be used. Do we want those as well? They include:
     - 'modifier'
     - 'bigDate'
     - 'image' (I belive we typically access images from the raw data, not the result data )
@@ -21,19 +12,19 @@ export default class Result {
     - 'subtitle'
     - 'collapsed'
   */
+  constructor(
+    rawData: unknown,
+    index?: number, // Can we remove index?
+    name?: string,
+    description?: string,
+    link?: string,
+    id?: string,
+    //subtitle?: string;
+    distance?: number,
+    distanceFromFilter?: number,
+  ) {}
 
-  constructor (props: Result) {
-    this.rawData = props.rawData;
-    this.index = props.index;
-    this.name = props.name;
-    this.description = props.description;
-    this.link = props.link;
-    this.id = props.id;
-    this.distance = props.distance;
-    this.distanceFromFilter = props.distanceFromFilter;
-  }
-
-  static fromArray (results: any, source: Source): [Result] {
+  static fromArray(results: any, source: Source): [Result] {
     return results.map((result: any, index: number) => {
       result = {
         ...result,
@@ -57,7 +48,7 @@ export default class Result {
     });
   }
 
-  static fromKnowledgeManager (result: any): Result {
+  static fromKnowledgeManager(result: any): Result {
     const rawData = result.data || {};
     return new Result({
       rawData: rawData,
@@ -71,7 +62,7 @@ export default class Result {
     });
   }
 
-  static fromGoogleCustomSearchEngine (result: any): Result {
+  static fromGoogleCustomSearchEngine(result: any): Result {
     return new Result({
       rawData: result,
       name: result.htmlTitle.replace(/(<([^>]+)>)/ig, ''),
@@ -80,7 +71,7 @@ export default class Result {
     });
   }
 
-  static fromBingCustomSearchEngine (result: any): Result {
+  static fromBingCustomSearchEngine(result: any): Result {
     return new Result({
       rawData: result,
       name: result.name,
@@ -89,7 +80,7 @@ export default class Result {
     });
   }
 
-  static fromZendeskSearchEngine (result: any) {
+  static fromZendeskSearchEngine(result: any) {
     return new Result({
       rawData: result,
       name: result.title,
@@ -98,7 +89,7 @@ export default class Result {
     });
   }
 
-  static fromAlgoliaSearchEngine (result: any) {
+  static fromAlgoliaSearchEngine(result: any) {
     return new Result({
       rawData: result.data,
       description: result.objectID,
@@ -106,7 +97,7 @@ export default class Result {
     });
   }
 
-  static fromGeneric (result: any) {
+  static fromGeneric(result: any) {
     return new Result({
       rawData: result,
       name: result.name,

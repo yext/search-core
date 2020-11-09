@@ -1,3 +1,3 @@
-interface AppliedQueryFilter {
-  
-}
+/*class AppliedQueryFilter {
+
+}*/

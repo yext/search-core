@@ -2,13 +2,16 @@ import HttpRequester from '../http/HttpRequester';
 import { QueryParams } from '../http/urlUtils';
 import { BaseUrls, defaultApiVersion } from '../constants';
 import UniversalSearchResponse from '../models/UniversalSearchResponse';
+//import VerticalSearchResponse from '../models/VerticalSearchResponse';
 
 /**
  * Public interface for constructing a universal search
  */
 export interface UniversalSearchRequest {
   query: string,
-  queryTrigger?: 'initialize' | 'query-parameter', // These values were in the SDK. Do we want to enforce these values? Does the backend expect them?
+  // These query trigger values were in the SDK. Do we want to enforce these values?
+  // Does the backend expect them?
+  queryTrigger?: 'initialize' | 'query-parameter',
   spellCheckEnabled?: boolean,
   sessionTrackingEnabled?: boolean,
   geolocation?: Geolocation
@@ -41,11 +44,11 @@ const enum LiveApiEndpoints {
 export default class SearchService {
   readonly config: CoreConfig;
 
-  constructor (config: CoreConfig) {
+  constructor(config: CoreConfig) {
     this.config = config;
   }
 
-  async universalSearch (request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
+  async universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
     const requestUrl: string = BaseUrls.LiveApi + LiveApiEndpoints.UniversalSearch;
 
     const queryParams: UniversalSearchQueryParams = {
@@ -61,15 +64,15 @@ export default class SearchService {
       queryTrigger: request.queryTrigger,
     };
 
-    const rawUniversalSearchResponse = await HttpRequester.get<Object>(requestUrl, queryParams);
+    const rawUniversalSearchResponse = await HttpRequester.get<unknown>(requestUrl, queryParams);
 
     console.log('Raw Universal Response:');
     console.log(rawUniversalSearchResponse);
-    
+
     return UniversalSearchResponse.from(rawUniversalSearchResponse);
   }
 
-  async verticalSearch () {
+  /*async verticalSearch(): Promise<VerticalSearchResponse> {
 
-  }
+  }*/
 }

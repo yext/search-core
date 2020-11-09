@@ -11,7 +11,7 @@ export default function provideCore(config: CoreConfig): Promise<Core> {
     }
     const coreDependencies: CoreDependencies = {
       searchService: new SearchService(config)
-    }
+    };
     return new Core(coreDependencies);
   });
 }

@@ -9,7 +9,7 @@ interface SanitizedQueryParams {
 /**
  * Updates a url with the given params.
  */
-export function addParamsToURL (
+export function addParamsToURL(
   url: string,
   params: QueryParams
 ): string {
@@ -29,7 +29,7 @@ export function addParamsToURL (
   return updatedUrl;
 }
 
-function sanitizeQueryParams (params: QueryParams) : SanitizedQueryParams {
+function sanitizeQueryParams(params: QueryParams): SanitizedQueryParams {
   Object.keys(params).forEach(key => {
     if ( params[key] === undefined || params[key] === null ) {
       delete params[key];

@@ -5,4 +5,4 @@ export const enum BaseUrls {
 
 // (cea2aj) Do we want to use this version? I have also seen '20190301' in the SDK.
 // Is that newer?
-export const defaultApiVersion: number = 20190101;
+export const defaultApiVersion = 20190101;

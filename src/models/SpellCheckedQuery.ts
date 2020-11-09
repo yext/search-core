@@ -1,3 +1,3 @@
-interface SpellCheckedQuery {
+/*class SpellCheckedQuery {
 
-}
+}*/
