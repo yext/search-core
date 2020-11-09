@@ -1,8 +1,6 @@
 import HttpRequester from '../../src/http/HttpRequester';
 
 describe('HttpRequester', () => {
-  const httpRequester = new HttpRequester();
-
   it('can make get requests', async () => {
     fetch.mockResponseOnce('{}');
     const queryParams = {
@@ -11,7 +9,7 @@ describe('HttpRequester', () => {
     const reqInit = {
       credentials: 'omit'
     };
-    await httpRequester.get('http://yext.com', queryParams, reqInit);
+    await HttpRequester.get('http://yext.com', queryParams, reqInit);
     const expectedReqInit = {
       method: 'get',
       credentials: 'omit'
@@ -30,7 +28,7 @@ describe('HttpRequester', () => {
     const reqInit = {
       credentials: 'include'
     };
-    await httpRequester.post('http://yext.com', queryParams, jsonBody, reqInit);
+    await HttpRequester.post('http://yext.com', queryParams, jsonBody, reqInit);
     const expectedReqInit = {
       method: 'post',
       body: '{\"data\":\"123\"}',

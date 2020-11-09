@@ -1,4 +1,4 @@
-export const enum BaseUrls {
+export enum BaseUrls {
   MasterSwitch = 'https://answersstatus.pagescdn.com',
   LiveApi = 'https://liveapi.yext.com'
 }
