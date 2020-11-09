@@ -1,21 +1,10 @@
 import HttpRequester from '../http/HttpRequester';
 import { QueryParams } from '../http/urlUtils';
 import { BaseUrls, defaultApiVersion } from '../constants';
+import UniversalSearchRequest from '../models/UniversalSearchRequest';
+//import VerticalSearchRequest from '../models/VerticalSearchResponse';
 import UniversalSearchResponse from '../models/UniversalSearchResponse';
 //import VerticalSearchResponse from '../models/VerticalSearchResponse';
-
-/**
- * Public interface for constructing a universal search
- */
-export interface UniversalSearchRequest {
-  query: string,
-  // These query trigger values were in the SDK. Do we want to enforce these values?
-  // Does the backend expect them?
-  queryTrigger?: 'initialize' | 'query-parameter',
-  spellCheckEnabled?: boolean,
-  sessionTrackingEnabled?: boolean,
-  geolocation?: Geolocation
-}
 
 /**
  * Internal interface representing the universal search query params
@@ -42,11 +31,7 @@ const enum LiveApiEndpoints {
 }
 
 export default class SearchService {
-  readonly config: CoreConfig;
-
-  constructor(config: CoreConfig) {
-    this.config = config;
-  }
+  constructor(readonly config: CoreConfig) {}
 
   async universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
     const requestUrl: string = BaseUrls.LiveApi + LiveApiEndpoints.UniversalSearch;
