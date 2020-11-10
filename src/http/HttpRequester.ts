@@ -1,5 +1,5 @@
 import { fetch as fetchPolyfill } from 'whatwg-fetch';
-import { addParamsToURL } from '../http/url-utils';
+import { addParamsToURL } from './urlutils';
 import { QueryParams } from './params';
 
 /**
