@@ -1,14 +1,25 @@
 import Result from './Result';
 
+/**
+ * A direct answer to a search
+ */
 export default class DirectAnswer {
   private constructor(
-    readonly type: string,
-    readonly content: Record<string, unknown>,
-    readonly relatedItem: RelatedItem
+    private type: string,
+    private content: DirectAnswerContent,
+    private relatedItem: RelatedItem
   ) {}
 }
 
+interface DirectAnswerContent {
+  entityName?: string,
+  fieldName?: string,
+  fieldApiName?: string,
+  value?: string,
+  fieldType?: string,
+}
+
 interface RelatedItem {
-  readonly verticalKey: string;
-  readonly result: Result;
+  verticalKey: string;
+  result: Result;
 }

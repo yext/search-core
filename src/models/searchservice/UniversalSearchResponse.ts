@@ -1,13 +1,17 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import VerticalResult from './VerticalResult';
-import SearchIntent from './SearchIntent';
+import { SearchIntent } from '../../constants';
 
+/**
+ * A representation of a response from a universal search
+ */
 export default class UniversalSearchResponse {
   private constructor(
-    readonly verticalResults: [VerticalResult],
-    readonly queryId: string,
-    // readonly directAnswer?: DirectAnswer,
-    readonly searchIntents?: [SearchIntent],
-    // readonly spellCheckedQuery?: SpellCheckedQuery,
+    private verticalResults: [VerticalResult],
+    private queryId: string,
+    // private directAnswer?: DirectAnswer,
+    private searchIntents?: [SearchIntent],
+    // private spellCheckedQuery?: SpellCheckedQuery,
   ) {}
 
   static from(data: any): UniversalSearchResponse {
@@ -15,9 +19,14 @@ export default class UniversalSearchResponse {
       throw Error('The search data does not contain a response property');
     }
 
+    const verticalResults = Array.isArray(data.response.modules)
+      ? data.response.modules.map((vertical: any) => VerticalResult.from(vertical))
+      : [];
+
     return new UniversalSearchResponse(
-      VerticalResult.fromArray(data.response.modules),
-      data.response.queryId
+      verticalResults,
+      data.response.queryId,
+      data.searchIntent
     );
   }
 }

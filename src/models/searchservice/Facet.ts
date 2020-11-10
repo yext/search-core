@@ -1,8 +1,6 @@
-/* export default class Facet {
+/**
+ * A dynamic search filter
+ */
+export default class Facet {
 
-  static fromArray(facets: any): [Facet] {
-    return facets.map((facet: any) => {
-      return new Facet(facet);
-    });
-  }
-} */
+}

@@ -1,11 +1,15 @@
+/**
+ * Location information including how it was obtained
+ */
 export default class LocationBias {
   private constructor(
-    readonly latitude: number,
-    readonly longitude: number,
-    readonly locationDisplayName: string,
-    readonly method: 'IP' | 'DEVICE' | 'UNKNOWN'
+    private latitude: number,
+    private longitude: number,
+    private locationDisplayName: string,
+    private method: 'IP' | 'DEVICE' | 'UNKNOWN'
   ) {}
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static from(data: any): LocationBias {
     return new LocationBias(
       data.latitude,

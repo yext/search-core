@@ -22,8 +22,9 @@ module.exports = {
     }],
     '@typescript-eslint/semi': ['error'],
     '@typescript-eslint/type-annotation-spacing': ['error'],
-    '@typescript-eslint/explicit-module-boundary-types': ['off'],
-    '@typescript-eslint/no-explicit-any': ['off']
+    '@typescript-eslint/explicit-module-boundary-types': ['error', {
+      allowArgumentsExplicitlyTypedAsAny: true,
+    }],
   },
   ignorePatterns: ['dist'],
 };

@@ -1,6 +1,6 @@
 import HttpRequester from '../http/HttpRequester';
 import { UniversalSearchQueryParams } from '../http/params';
-import { BaseUrls, LiveApiEndpoints, defaultApiVersion } from '../constants';
+import { BaseUrls, LiveApiEndpoints, defaultApiVersion} from '../constants';
 import UniversalSearchRequest from '../models/searchservice/UniversalSearchRequest';
 //import VerticalSearchRequest from '../models/VerticalSearchResponse';
 import UniversalSearchResponse from '../models/searchservice/UniversalSearchResponse';
@@ -8,8 +8,8 @@ import UniversalSearchResponse from '../models/searchservice/UniversalSearchResp
 
 export default class SearchService {
   constructor(
-    readonly config: Config,
-    readonly httpRequester: HttpRequester
+    private config: Config,
+    private httpRequester: HttpRequester
   ) {}
 
   async universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
@@ -28,6 +28,7 @@ export default class SearchService {
       queryTrigger: request.queryTrigger,
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const rawUniversalSearchResponse = await this.httpRequester.get<any>(requestUrl, queryParams);
 
     console.log('Raw Universal Response:');

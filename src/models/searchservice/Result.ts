@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export const enum Source {
   KnowledgeManager = 'KNOWLEDGE_MANAGER',
   Google = 'GOOGLE_CSE',
@@ -6,6 +7,9 @@ export const enum Source {
   Algolia = 'ALGOLIA',
 }
 
+/**
+ * An individual search result
+ */
 export default class Result {
   /*
   The SDK computes a formatted and a highlighed data field. Do we want that processing to happen
@@ -19,15 +23,14 @@ export default class Result {
     - 'collapsed'
   */
   private constructor(
-    readonly rawData: unknown,
-    readonly index?: number, // Can we remove index?
-    readonly name?: string,
-    readonly description?: string,
-    readonly link?: string,
-    readonly id?: string,
-    // readonly subtitle?: string;
-    readonly distance?: number,
-    readonly distanceFromFilter?: number,
+    private rawData: unknown,
+    private index?: number,
+    private name?: string,
+    private description?: string,
+    private link?: string,
+    private id?: string,
+    private distance?: number,
+    private distanceFromFilter?: number,
   ) {}
 
   static fromArray(results: any, source: Source): [Result] {
@@ -88,7 +91,7 @@ export default class Result {
     );
   }
 
-  static fromZendeskSearchEngine(result: any) {
+  static fromZendeskSearchEngine(result: any): Result {
     return new Result(
       result,
       result.index,
@@ -98,7 +101,7 @@ export default class Result {
     );
   }
 
-  static fromAlgoliaSearchEngine(result: any) {
+  static fromAlgoliaSearchEngine(result: any): Result {
     return new Result(
       result,
       result.index,
@@ -109,7 +112,7 @@ export default class Result {
     );
   }
 
-  static fromGeneric(result: any) {
+  static fromGeneric(result: any): Result {
     return new Result(
       result,
       result.index,
