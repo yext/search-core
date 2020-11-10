@@ -1,6 +1,6 @@
 declare module 'whatwg-fetch';
 
-interface CoreConfig {
+interface Config {
   apiKey: string,
   experienceKey: string,
   locale?: string,

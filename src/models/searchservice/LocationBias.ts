@@ -1,5 +1,5 @@
 export default class LocationBias {
-  constructor(
+  private constructor(
     readonly latitude: number,
     readonly longitude: number,
     readonly locationDisplayName: string,

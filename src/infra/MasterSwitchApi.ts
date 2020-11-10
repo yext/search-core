@@ -24,13 +24,14 @@ export default class MasterSwitchApi {
   }
 
   private checkApi(): Promise<boolean> {
+    const requester = new HttpRequester();
     const baseUrl = BaseUrls.MasterSwitch;
     const url = `${baseUrl}/${this.apiKey}/${this.experienceKey}/status.json`;
 
     const reqInit = {
       credentials: ('omit' as RequestCredentials)
     };
-    return HttpRequester.get<{ disabled: boolean }>(url, {}, reqInit)
+    return requester.get<{ disabled: boolean }>(url, {}, reqInit)
       .then(res => !res.disabled);
   }
 }

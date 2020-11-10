@@ -1,13 +1,6 @@
 //import Facet from './Facet';
-import Result from './Result';
+import { default as Result, Source } from './Result';
 
-export const enum Source {
-  KnowledgeMananger = 'KNOWLEDGE_MANAGER',
-  Google = 'GOOGLE_CSE',
-  Bing = 'BING_CSE',
-  Zendesk = 'ZENDESK',
-  Algolia = 'ALGOLIA',
-}
 
 export default class VerticalResult{
   // Currently the SDk iterates through the results and constructs a map object shaped like

@@ -1,18 +1,10 @@
-import SearchService from './search/SearchService';
-import UniversalSearchRequest from './models/UniversalSearchRequest';
-import UniversalSearchResponse from './models/UniversalSearchResponse';
+import SearchService from './services/SearchService';
+import UniversalSearchRequest from './models/searchservice/UniversalSearchRequest';
+import UniversalSearchResponse from './models/searchservice/UniversalSearchResponse';
 //import VerticalSearchResponse from './models/VerticalSearchResponse';
 
-export interface CoreDependencies {
-  searchService: SearchService;
-}
-
-export class Core implements CoreDependencies {
-  searchService: SearchService;
-
-  constructor(dependencies: CoreDependencies) {
-    this.searchService = dependencies.searchService;
-  }
+export default class Core{
+  constructor(private searchService: SearchService) {}
 
   universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
     return this.searchService.universalSearch(request);

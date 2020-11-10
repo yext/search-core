@@ -1,5 +1,6 @@
 import { fetch as fetchPolyfill } from 'whatwg-fetch';
-import { addParamsToURL, QueryParams } from './urlUtils';
+import { addParamsToURL } from './urlutils';
+import { QueryParams } from './params';
 
 /**
  * Available HTTP request methods
@@ -17,7 +18,7 @@ export default class HttpRequester {
   /**
    * Perform a GET request
    */
-  static get<T>(
+  get<T>(
     url: string,
     queryParams: QueryParams,
     options?: RequestInit,
@@ -33,7 +34,7 @@ export default class HttpRequester {
   /**
    * Perform a POST request
    */
-  static post<T>(
+  post<T>(
     url: string,
     queryParams: QueryParams,
     body: BodyInit,
@@ -51,13 +52,13 @@ export default class HttpRequester {
   /**
    * Perform a fetch, using the polyfill if needed.
    */
-  static fetch(
+  private fetch(
     url: string,
     queryParams: QueryParams,
     reqInit: RequestInit
   ): Promise<Response> {
     const urlWithParams = addParamsToURL(url, queryParams);
-    if (typeof window === 'object' && !window.fetch) {
+    if (!window.fetch) {
       return fetchPolyfill(urlWithParams, reqInit);
     }
     return fetch(urlWithParams, reqInit);

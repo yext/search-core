@@ -3,7 +3,7 @@ import SearchIntent from './SearchIntent';
 
 export default class VerticalSearchResponse {
 
-  constructor(
+  private constructor(
     readonly verticalResult: VerticalResult,
     readonly queryId: string,
     // readonly directAnswer?: DirectAnswer;

@@ -1,10 +1,4 @@
-export interface QueryParams {
-  [key: string]: string | number | boolean | undefined
-}
-
-interface SanitizedQueryParams {
-  [key: string]: string | number | boolean
-}
+import { QueryParams, SanitizedQueryParams } from './params';
 
 /**
  * Updates a url with the given params.

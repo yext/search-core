@@ -1,4 +1,10 @@
-import { Source } from './VerticalResult';
+export const enum Source {
+  KnowledgeManager = 'KNOWLEDGE_MANAGER',
+  Google = 'GOOGLE_CSE',
+  Bing = 'BING_CSE',
+  Zendesk = 'ZENDESK',
+  Algolia = 'ALGOLIA',
+}
 
 export default class Result {
   /*
@@ -12,7 +18,7 @@ export default class Result {
     - 'subtitle'
     - 'collapsed'
   */
-  constructor(
+  private constructor(
     readonly rawData: unknown,
     readonly index?: number, // Can we remove index?
     readonly name?: string,
@@ -32,7 +38,7 @@ export default class Result {
       };
 
       switch (source) {
-        case Source.KnowledgeMananger:
+        case Source.KnowledgeManager:
           return Result.fromKnowledgeManager(result);
         case Source.Google:
           return Result.fromGoogleCustomSearchEngine(result);

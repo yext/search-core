@@ -1,17 +1,17 @@
-import MasterSwitchApi from './status/MasterSwitchApi';
-import { Core, CoreDependencies } from './core';
-import SearchService from './search/SearchService';
+import MasterSwitchApi from './infra/MasterSwitchApi';
+import Core from './core';
+import SearchService from './services/SearchService';
+import HttpRequester from './http/HttpRequester';
 
-export default function provideCore(config: CoreConfig): Promise<Core> {
+export default function provideCore(config: Config): Promise<Core> {
   const masterSwitch = new MasterSwitchApi(config.apiKey, config.experienceKey);
 
   return masterSwitch.isEnabled().then(isEnabled => {
     if (!isEnabled) {
       throw new Error('MasterSwitchApi determined the front-end should be disabled');
     }
-    const coreDependencies: CoreDependencies = {
-      searchService: new SearchService(config)
-    };
-    return new Core(coreDependencies);
+    const httpRequester = new HttpRequester();
+    const searchService = new SearchService(config, httpRequester);
+    return new Core(searchService);
   });
 }

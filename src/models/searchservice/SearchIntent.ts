@@ -1,5 +1,5 @@
 export default class SearchIntent {
-  constructor(
+  private constructor(
     readonly nearMe: boolean
   ) {}
 

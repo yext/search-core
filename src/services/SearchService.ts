@@ -1,37 +1,16 @@
 import HttpRequester from '../http/HttpRequester';
-import { QueryParams } from '../http/urlUtils';
-import { BaseUrls, defaultApiVersion } from '../constants';
-import UniversalSearchRequest from '../models/UniversalSearchRequest';
+import { UniversalSearchQueryParams } from '../http/params';
+import { BaseUrls, LiveApiEndpoints, defaultApiVersion } from '../constants';
+import UniversalSearchRequest from '../models/searchservice/UniversalSearchRequest';
 //import VerticalSearchRequest from '../models/VerticalSearchResponse';
-import UniversalSearchResponse from '../models/UniversalSearchResponse';
+import UniversalSearchResponse from '../models/searchservice/UniversalSearchResponse';
 //import VerticalSearchResponse from '../models/VerticalSearchResponse';
 
-/**
- * Internal interface representing the universal search query params
- */
-interface UniversalSearchQueryParams extends QueryParams {
-  input: string,
-  experienceKey: string,
-  api_key: string,
-  v: number,
-  version?: string,
-  location?: string,
-  locale?: string,
-  skipSpellCheck?: boolean,
-  sessionTrackingEnabled?: boolean
-  queryTrigger?: string,
-  /* (cea2aj) Does it make sense for the core to send these params? */
-  // context?: string,
-  // referrerPageUrl?: string
-}
-
-const enum LiveApiEndpoints {
-  UniversalSearch = '/v2/accounts/me/answers/query',
-  VerticalSearch = '/v2/accounts/me/answers/vertical/query'
-}
-
 export default class SearchService {
-  constructor(readonly config: CoreConfig) {}
+  constructor(
+    readonly config: Config,
+    readonly httpRequester: HttpRequester
+  ) {}
 
   async universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
     const requestUrl: string = BaseUrls.LiveApi + LiveApiEndpoints.UniversalSearch;
@@ -49,7 +28,7 @@ export default class SearchService {
       queryTrigger: request.queryTrigger,
     };
 
-    const rawUniversalSearchResponse = await HttpRequester.get<unknown>(requestUrl, queryParams);
+    const rawUniversalSearchResponse = await this.httpRequester.get<any>(requestUrl, queryParams);
 
     console.log('Raw Universal Response:');
     console.log(rawUniversalSearchResponse);
