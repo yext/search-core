@@ -7,7 +7,7 @@ export default class VerticalSearchResponse {
     private verticalResult: VerticalResult,
     private queryId: string,
     // private directAnswer?: DirectAnswer;
-    private searchIntents?: [SearchIntent],
+    private searchIntents?: SearchIntent[],
     // private spellCheckedQuery?: SpellCheckedQuery,
     // private alternativeVerticals?: [AlternativeVertical];
   ) {}
@@ -20,7 +20,20 @@ export default class VerticalSearchResponse {
 
     return new VerticalSearchResponse(
       VerticalResult.from(data.response),
-      data.response.queryId
+      data.response.queryId,
+      data.response.searchIntents
     );
+  }
+
+  getVerticalResult(): VerticalResult {
+    return this.verticalResult;
+  }
+
+  getQueryId(): string {
+    return this.queryId;
+  }
+
+  getSearchIntents(): SearchIntent[] {
+    return this.searchIntents || [];
   }
 }

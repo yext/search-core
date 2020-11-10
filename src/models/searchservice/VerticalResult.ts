@@ -10,11 +10,11 @@ export default class VerticalResult{
   // { mapCenter: centerCordinates, mapMarkers: mapMarkers }
   // Do we also want this functionality?
   constructor(
-    // private appliedQueryFilters: [AppliedQueryFilter]
+    // private appliedQueryFilters: AppliedQueryFilter[]
     private encodedState: string,
-    // private facets: [Facet],
+    // private facets: Facet[],
     private queryDurationMillis: number,
-    private results: [Result],
+    private results: Result[],
     private resultsCount: number,
     private source: Source,
     private verticalKey: string
@@ -33,4 +33,29 @@ export default class VerticalResult{
       data.verticalConfigId,
     );
   }
+
+  getEncodedState(): string {
+    return this.encodedState;
+  }
+
+  getQueryDurationMillis(): number {
+    return this.queryDurationMillis;
+  }
+
+  getResults(): Result[] {
+    return this.results || [];
+  }
+
+  getResultsCount(): number {
+    return this.resultsCount;
+  }
+
+  getSource(): string {
+    return this.source;
+  }
+
+  getVerticalKey(): string {
+    return this.verticalKey;
+  }
+
 }
