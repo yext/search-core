@@ -7,7 +7,7 @@
   "scripts": {
     "test": "npm run lint && jest",
     "lint": "eslint .",
-    "build": "tsc",
+    "build": "tsc --traceResolution",
     "dev": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
