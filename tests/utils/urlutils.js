@@ -1,4 +1,4 @@
-import { addParamsToURL } from '../../src/http/urlUtils';
+import { addParamsToURL } from '../../src/http/urlutils';
 
 describe('Url Utils', () => {
   describe('addParamsToUrl', () => {
