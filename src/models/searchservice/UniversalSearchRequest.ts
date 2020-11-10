@@ -1,9 +1,11 @@
+import { QueryTrigger } from '../../constants';
+
 /**
  * Options for constructing a universal search
  */
 export default interface UniversalSearchRequest {
   query: string,
-  queryTrigger?: 'initialize' | 'query-parameter' | string,
+  queryTrigger?: QueryTrigger,
   spellCheckEnabled?: boolean,
   sessionTrackingEnabled?: boolean,
   geolocation?: Geolocation

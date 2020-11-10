@@ -1,5 +1,6 @@
 //import Facet from './Facet';
-import { default as Result, Source } from './Result';
+import { default as ResultFactory, Source } from './ResultFactory';
+import Result from './Result';
 
 /**
  * A result from an individual vertical
@@ -26,7 +27,7 @@ export default class VerticalResult{
       data.encodedState,
       //Facet.fromArray(data.facets),
       data.queryDurationMillis,
-      Result.fromArray(data.results, data.source),
+      ResultFactory.createResultArray(data.results, data.source),
       data.resultsCount,
       data.source,
       data.verticalConfigId,
