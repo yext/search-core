@@ -39,6 +39,10 @@ export default class UniversalSearchResponse {
     return this.queryId ?? null;
   }
 
+  getSearchIntents(): SearchIntent[] {
+    return this.searchIntents ?? [];
+  }
+
   /* getDirectAnswer(): DirectAnswer {
     return this.directAnswer;
   }

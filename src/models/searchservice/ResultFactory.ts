@@ -38,7 +38,7 @@ export default class ResultFactory {
   }
 
   static fromKnowledgeManager(result: any): Result {
-    const rawData = result.data || {};
+    const rawData = result.data ?? {};
     return Result.fromObject({
       rawData: rawData,
       index: result.index,
@@ -98,6 +98,17 @@ export default class ResultFactory {
       description: result.description, // Do we want to truncate this like in the SDK?
       link: result.website,
       id: result.id,
+    });
+  }
+
+  static fromDirectAnswer(result: any): Result {
+    const rawData = result.fieldValues ?? {};
+    return Result.fromObject({
+      rawData: rawData,
+      name: rawData.name,
+      description: rawData.description,
+      link: result.website,
+      id: result.id
     });
   }
 }
