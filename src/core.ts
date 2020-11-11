@@ -3,7 +3,7 @@ import UniversalSearchRequest from './models/searchservice/UniversalSearchReques
 import UniversalSearchResponse from './models/searchservice/UniversalSearchResponse';
 //import VerticalSearchResponse from './models/VerticalSearchResponse';
 
-export default class Core{
+export default class Core {
   constructor(private searchService: SearchService) {}
 
   universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {

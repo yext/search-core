@@ -1,5 +1,3 @@
-import { QueryTrigger } from '../../constants';
-
 /**
  * Options for constructing a universal search
  */
@@ -11,7 +9,12 @@ export default interface UniversalSearchRequest {
   geolocation?: Geolocation
 }
 
-interface Geolocation {
+export enum QueryTrigger {
+  Initialize = 'initialize',
+  QueryParameter = 'query-parameter'
+}
+
+export interface Geolocation {
   lat: string;
   lng: string;
 }

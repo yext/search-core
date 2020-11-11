@@ -1,39 +1,45 @@
-import { LocationBiasMethod } from '../../constants';
+interface LocationBiasProps {
+  latitude: number;
+  longitude: number;
+  displayName: string;
+  method: LocationBiasMethod;
+}
+
+enum LocationBiasMethod {
+  Ip = 'IP',
+  Device = 'DEVICE',
+  Unknown = 'UNKNOWN'
+}
 
 /**
  * Location information including how it was obtained
  */
 export default class LocationBias {
-  private constructor(
-    private latitude: number,
-    private longitude: number,
-    private locationDisplayName: string,
-    private method: LocationBiasMethod
-  ) {}
+  private constructor(private props: LocationBiasProps) {}
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static from(data: any): LocationBias {
-    return new LocationBias(
-      data.latitude,
-      data.longitude,
-      data.locationDisplayName,
-      data.accuracy
-    );
+    return new LocationBias({
+      latitude: data.latitude,
+      longitude: data.longitude,
+      displayName: data.locationDisplayName,
+      method: data.accuracy
+    });
   }
 
-  getLatitude(): number {
-    return this.latitude;
+  get latitude(): number {
+    return this.props.latitude;
   }
 
-  getLongitude(): number {
-    return this.longitude;
+  get longitude(): number {
+    return this.props.longitude;
   }
 
-  getLocationDisplayName(): string {
-    return this.locationDisplayName;
+  get displayName(): string {
+    return this.props.displayName;
   }
 
-  getMethod(): LocationBiasMethod {
-    return this.method;
+  get method(): LocationBiasMethod {
+    return this.props.method;
   }
 }

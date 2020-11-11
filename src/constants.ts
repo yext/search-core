@@ -12,15 +12,4 @@ export enum SearchIntent {
   NearMe = 'NEAR_ME'
 }
 
-export enum LocationBiasMethod {
-  Ip = 'IP',
-  Device = 'DEVICE',
-  Unknown = 'UNKNOWN'
-}
-
-export enum QueryTrigger {
-  Initialize = 'initialize',
-  QueryParameter = 'query-parameter'
-}
-
 export const defaultApiVersion = 20190101;
