@@ -23,7 +23,17 @@ module.exports = {
     '@typescript-eslint/semi': ['error'],
     '@typescript-eslint/type-annotation-spacing': ['error'],
     '@typescript-eslint/explicit-module-boundary-types': ['error', {
-      allowArgumentsExplicitlyTypedAsAny: true,
+      allowedNames: [
+        'from',
+        'fromKnowledgeManager',
+        'fromGoogleCustomSearchEngine',
+        'fromBingCustomSearchEngine',
+        'fromZendeskSearchEngine',
+        'fromAlgoliaSearchEngine',
+        'fromGeneric',
+        'fromDirectAnswer',
+        'createResultArray'
+      ]
     }],
   },
   ignorePatterns: ['dist'],
