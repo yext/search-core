@@ -1,6 +1,6 @@
 import MasterSwitchApi from './infra/MasterSwitchApi';
 import Core from './core';
-import SearchService from './services/SearchService';
+import SearchServiceImpl from './infra/SearchServiceImpl';
 import HttpRequester from './http/HttpRequester';
 
 export default function provideCore(config: Config): Promise<Core> {
@@ -11,7 +11,7 @@ export default function provideCore(config: Config): Promise<Core> {
       throw new Error('MasterSwitchApi determined the front-end should be disabled');
     }
     const httpRequester = new HttpRequester();
-    const searchService = new SearchService(config, httpRequester);
+    const searchService = new SearchServiceImpl(config, httpRequester);
     return new Core(searchService);
   });
 }
