@@ -2,13 +2,14 @@
 import VerticalResult from './VerticalResult';
 import { SearchIntent } from '../../constants';
 import DirectAnswer from './DirectAnswer';
+import SpellCheck from './SpellCheck';
 
 interface UniversalSearchResponseProps {
   verticalResults: VerticalResult[],
   queryId: string,
   directAnswer?: DirectAnswer,
   searchIntents?: SearchIntent[],
-  // spellCheckedQuery?: SpellCheckedQuery,
+  spellCheck?: SpellCheck,
 }
 /**
  * A representation of a response from a universal search
@@ -28,7 +29,9 @@ export default class UniversalSearchResponse {
     return new UniversalSearchResponse({
       verticalResults: verticalResults,
       queryId: data.response.queryId,
-      searchIntents: data.searchIntents
+      directAnswer: DirectAnswer.from(data.response.directAnswer),
+      searchIntents: data.response.searchIntents,
+      spellCheck: SpellCheck.from(data.response.spellCheck)
     });
   }
 
@@ -48,7 +51,7 @@ export default class UniversalSearchResponse {
     return this.props.directAnswer;
   }
 
-  /* get spellCheckedQuery(): SpellCheckedQuery {
-    return this.spellCheckedQuery;
-  } */
+  get spellCheck(): SpellCheck {
+    return this.spellCheck;
+  }
 }
