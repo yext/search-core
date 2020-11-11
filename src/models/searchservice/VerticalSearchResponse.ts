@@ -34,6 +34,6 @@ export default class VerticalSearchResponse {
   }
 
   getSearchIntents(): SearchIntent[] {
-    return this.searchIntents || [];
+    return this.searchIntents ?? [];
   }
 }

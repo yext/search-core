@@ -43,7 +43,7 @@ export default class VerticalResult{
   }
 
   getResults(): Result[] {
-    return this.results || [];
+    return this.results ?? [];
   }
 
   getResultsCount(): number {

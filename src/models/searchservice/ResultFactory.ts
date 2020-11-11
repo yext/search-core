@@ -9,6 +9,9 @@ export const enum Source {
   Algolia = 'ALGOLIA',
 }
 
+/**
+ * A factory which creates results from different sources
+ */
 export default class ResultFactory {
   static createResultArray(results: any, source: Source): [Result] {
     return results.map((result: any, index: number) => {

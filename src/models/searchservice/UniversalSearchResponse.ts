@@ -1,16 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import VerticalResult from './VerticalResult';
 import { SearchIntent } from '../../constants';
+//import DirectAnswer from './DirectAnswer';
 
 /**
  * A representation of a response from a universal search
  */
 export default class UniversalSearchResponse {
   private constructor(
-    private verticalResults: [VerticalResult],
+    private verticalResults: VerticalResult[],
     private queryId: string,
     // private directAnswer?: DirectAnswer,
-    private searchIntents?: [SearchIntent],
+    private searchIntents?: SearchIntent[],
     // private spellCheckedQuery?: SpellCheckedQuery,
   ) {}
 
@@ -29,4 +30,20 @@ export default class UniversalSearchResponse {
       data.searchIntent
     );
   }
+
+  getVerticalResults(): VerticalResult[] {
+    return this.verticalResults ?? [];
+  }
+
+  getQueryId(): string {
+    return this.queryId ?? null;
+  }
+
+  /* getDirectAnswer(): DirectAnswer {
+    return this.directAnswer;
+  }
+
+  getSpellCheckedQuery(): SpellCheckedQuery {
+    return this.spellCheckedQuery;
+  } */
 }

@@ -13,7 +13,7 @@ export default class Result {
     - 'collapsed'
   */
   private constructor(
-    private rawData: unknown,
+    private rawData: Record<string, unknown>,
     private index?: number,
     private name?: string,
     private description?: string,
@@ -35,5 +35,37 @@ export default class Result {
       result.distance,
       result.distanceFromFilter
     );
+  }
+
+  getRawData(): Record<string, unknown> {
+    return this.rawData ?? {};
+  }
+
+  getIndex(): number | null{
+    return this.index ?? null;
+  }
+
+  getName(): string | null {
+    return this.name ?? null;
+  }
+
+  getDescription(): string | null {
+    return this.description ?? null;
+  }
+
+  getLink(): string | null {
+    return this.link ?? null;
+  }
+
+  getId(): string | null {
+    return this.id ?? null;
+  }
+
+  getDistance(): number | null {
+    return this.distance ?? null;
+  }
+
+  getDistanceFromFilter(): number | null {
+    return this.distanceFromFilter ?? null;
   }
 }

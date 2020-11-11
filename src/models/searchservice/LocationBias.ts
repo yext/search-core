@@ -20,4 +20,20 @@ export default class LocationBias {
       data.accuracy
     );
   }
+
+  getLatitude(): number {
+    return this.latitude;
+  }
+
+  getLongitude(): number {
+    return this.longitude;
+  }
+
+  getLocationDisplayName(): string {
+    return this.locationDisplayName;
+  }
+
+  getMethod(): LocationBiasMethod {
+    return this.method;
+  }
 }
