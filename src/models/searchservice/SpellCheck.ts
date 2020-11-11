@@ -1,7 +1,7 @@
 interface SpellCheckProps {
   originalQuery: string;
   correctedQuery: string;
-  spellCheckType: SpellCheckType;
+  type: SpellCheckType;
 }
 
 enum SpellCheckType {
@@ -30,7 +30,19 @@ export default class SpellCheck {
     return new SpellCheck({
       originalQuery: data.originalQuery,
       correctedQuery: data.correctedQuery.value,
-      spellCheckType: data.spellCheckType,
+      type: data.spellCheckType,
     });
+  }
+
+  get originalQuery(): string {
+    return this.props.originalQuery;
+  }
+
+  get correctedQuery(): string {
+    return this.props.correctedQuery;
+  }
+
+  get type(): SpellCheckType {
+    return this.props.type;
   }
 }
