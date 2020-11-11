@@ -7,7 +7,7 @@ interface VerticalSearchResponseProps {
   queryId: string;
   directAnswer?: DirectAnswer;
   searchIntents?: SearchIntent[];
-  // private spellCheckedQuery?: SpellCheckedQuery;
+  // private spellCheck?: SpellCheck;
   // private alternativeVerticals?: [AlternativeVertical];
 }
 
