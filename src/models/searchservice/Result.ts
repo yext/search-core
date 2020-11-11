@@ -1,8 +1,4 @@
-/**
- * An individual search result
- */
-export default class Result {
-  /*
+/*
   The SDK computes a formatted and a highlighed data field. Do we want that processing to happen
   here? I think that processing should probably not be the responsibility of this class. The SDK
   also contains other fields that don't seem to be used. Do we want those as well? They include:
@@ -12,60 +8,51 @@ export default class Result {
     - 'callsToAction' (Again, I belive that's usually in the raw data)
     - 'collapsed'
   */
-  private constructor(
-    private rawData: Record<string, unknown>,
-    private index?: number,
-    private name?: string,
-    private description?: string,
-    private link?: string,
-    private id?: string,
-    private distance?: number,
-    private distanceFromFilter?: number,
-  ) {}
+interface ResultProps {
+  rawData: Record<string, unknown>,
+  index?: number,
+  name?: string,
+  description?: string,
+  link?: string,
+  id?: string,
+  distance?: number,
+  distanceFromFilter?: number,
+}
+/**
+ * An individual search result
+ */
+export default class Result {
+  public constructor(private props: ResultProps) {}
 
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  static fromObject(result: any): Result {
-    return new Result(
-      result.rawData,
-      result.index,
-      result.name,
-      result.description,
-      result.link,
-      result.id,
-      result.distance,
-      result.distanceFromFilter
-    );
+  get rawData(): Record<string, unknown> {
+    return this.props.rawData;
   }
 
-  getRawData(): Record<string, unknown> {
-    return this.rawData ?? {};
+  get index(): number | undefined {
+    return this.props.index;
   }
 
-  getIndex(): number | null{
-    return this.index ?? null;
+  get name(): string | undefined {
+    return this.props.name;
   }
 
-  getName(): string | null {
-    return this.name ?? null;
+  get description(): string | undefined {
+    return this.props.description;
   }
 
-  getDescription(): string | null {
-    return this.description ?? null;
+  get link(): string | undefined {
+    return this.props.link;
   }
 
-  getLink(): string | null {
-    return this.link ?? null;
+  get id(): string | undefined {
+    return this.props.id;
   }
 
-  getId(): string | null {
-    return this.id ?? null;
+  get distance(): number | undefined {
+    return this.props.distance;
   }
 
-  getDistance(): number | null {
-    return this.distance ?? null;
-  }
-
-  getDistanceFromFilter(): number | null {
-    return this.distanceFromFilter ?? null;
+  get distanceFromFilter(): number | undefined {
+    return this.props.distanceFromFilter;
   }
 }

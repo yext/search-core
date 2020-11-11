@@ -13,7 +13,7 @@ export const enum Source {
  * A factory which creates results from different sources
  */
 export default class ResultFactory {
-  static createResultArray(results: any, source: Source): [Result] {
+  public static createResultArray(results: any, source: Source): [Result] {
     return results.map((result: any, index: number) => {
       result = {
         ...result,
@@ -37,9 +37,9 @@ export default class ResultFactory {
     });
   }
 
-  static fromKnowledgeManager(result: any): Result {
+  private static fromKnowledgeManager(result: any): Result {
     const rawData = result.data ?? {};
-    return Result.fromObject({
+    return new Result({
       rawData: rawData,
       index: result.index,
       name: rawData.name,
@@ -51,8 +51,8 @@ export default class ResultFactory {
     });
   }
 
-  static fromGoogleCustomSearchEngine(result: any): Result {
-    return Result.fromObject({
+  private static fromGoogleCustomSearchEngine(result: any): Result {
+    return new Result({
       rawData: result,
       index: result.index,
       name: result.htmlTitle.replace(/(<([^>]+)>)/ig, ''),
@@ -61,8 +61,8 @@ export default class ResultFactory {
     });
   }
 
-  static fromBingCustomSearchEngine(result: any): Result {
-    return Result.fromObject({
+  private static fromBingCustomSearchEngine(result: any): Result {
+    return new Result({
       rawData: result,
       index: result.index,
       name: result.name,
@@ -71,8 +71,8 @@ export default class ResultFactory {
     });
   }
 
-  static fromZendeskSearchEngine(result: any): Result {
-    return Result.fromObject({
+  private static fromZendeskSearchEngine(result: any): Result {
+    return new Result({
       rawData: result,
       index: result.index,
       name: result.title,
@@ -81,8 +81,8 @@ export default class ResultFactory {
     });
   }
 
-  static fromAlgoliaSearchEngine(result: any): Result {
-    return Result.fromObject({
+  private static fromAlgoliaSearchEngine(result: any): Result {
+    return new Result({
       rawData: result,
       index: result.index,
       name: result.name,
@@ -90,8 +90,8 @@ export default class ResultFactory {
     });
   }
 
-  static fromGeneric(result: any): Result {
-    return Result.fromObject({
+  private static fromGeneric(result: any): Result {
+    return new Result({
       rawData: result,
       index: result.index,
       name: result.name,
@@ -101,9 +101,9 @@ export default class ResultFactory {
     });
   }
 
-  static fromDirectAnswer(result: any): Result {
+  public static fromDirectAnswer(result: any): Result {
     const rawData = result.fieldValues ?? {};
-    return Result.fromObject({
+    return new Result({
       rawData: rawData,
       name: rawData.name,
       description: rawData.description,
