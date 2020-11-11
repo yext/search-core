@@ -2,60 +2,62 @@
 import { default as ResultFactory, Source } from './ResultFactory';
 import Result from './Result';
 
+// Currently the SDk iterates through the results and constructs a map object shaped like
+// { mapCenter: centerCordinates, mapMarkers: mapMarkers }
+// Do we also want this functionality?
+interface VerticalResultProps {
+  // appliedQueryFilters: AppliedQueryFilter[];
+  encodedState: string;
+  // facets: Facet[];
+  queryDurationMillis: number;
+  results: Result[];
+  resultsCount: number;
+  source: Source;
+  verticalKey: string;
+}
+
 /**
  * A result from an individual vertical
  */
 export default class VerticalResult{
-  // Currently the SDk iterates through the results and constructs a map object shaped like
-  // { mapCenter: centerCordinates, mapMarkers: mapMarkers }
-  // Do we also want this functionality?
-  constructor(
-    // private appliedQueryFilters: AppliedQueryFilter[]
-    private encodedState: string,
-    // private facets: Facet[],
-    private queryDurationMillis: number,
-    private results: Result[],
-    private resultsCount: number,
-    private source: Source,
-    private verticalKey: string
-  ) {}
+  constructor(private props: VerticalResultProps) {}
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static from(data: any): VerticalResult {
-    return new VerticalResult(
-      //data.appliedQueryFilters,
-      data.encodedState,
-      //Facet.fromArray(data.facets),
-      data.queryDurationMillis,
-      ResultFactory.createResultArray(data.results, data.source),
-      data.resultsCount,
-      data.source,
-      data.verticalConfigId,
-    );
+    return new VerticalResult({
+      // appliedQueryFilters: data.appliedQueryFilters,
+      encodedState: data.encodedState,
+      // facets: facet.fromArray(data.facets),
+      queryDurationMillis: data.queryDurationMillis,
+      results: ResultFactory.createResultArray(data.results, data.source),
+      resultsCount: data.resultsCount,
+      source: data.source,
+      verticalKey: data.verticalConfigId,
+    });
   }
 
-  getEncodedState(): string {
-    return this.encodedState;
+  get encodedState(): string {
+    return this.props.encodedState;
   }
 
-  getQueryDurationMillis(): number {
-    return this.queryDurationMillis;
+  get queryDurationMillis(): number {
+    return this.props.queryDurationMillis;
   }
 
-  getResults(): Result[] {
-    return this.results ?? [];
+  get results(): Result[] {
+    return this.props.results;
   }
 
-  getResultsCount(): number {
-    return this.resultsCount;
+  get resultsCount(): number {
+    return this.props.resultsCount;
   }
 
-  getSource(): string {
-    return this.source;
+  get source(): string {
+    return this.props.source;
   }
 
-  getVerticalKey(): string {
-    return this.verticalKey;
+  get verticalKey(): string {
+    return this.props.verticalKey;
   }
 
 }

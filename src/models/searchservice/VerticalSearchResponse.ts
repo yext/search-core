@@ -1,16 +1,19 @@
 import VerticalResult from './VerticalResult';
 import { SearchIntent } from '../../constants';
+import DirectAnswer from './DirectAnswer';
+
+interface VerticalSearchResponseProps {
+  verticalResult: VerticalResult;
+  queryId: string;
+  directAnswer?: DirectAnswer;
+  searchIntents?: SearchIntent[];
+  // private spellCheckedQuery?: SpellCheckedQuery;
+  // private alternativeVerticals?: [AlternativeVertical];
+}
 
 export default class VerticalSearchResponse {
 
-  private constructor(
-    private verticalResult: VerticalResult,
-    private queryId: string,
-    // private directAnswer?: DirectAnswer;
-    private searchIntents?: SearchIntent[],
-    // private spellCheckedQuery?: SpellCheckedQuery,
-    // private alternativeVerticals?: [AlternativeVertical];
-  ) {}
+  private constructor(private props: VerticalSearchResponseProps) {}
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static from(data: any): VerticalSearchResponse {
@@ -18,22 +21,27 @@ export default class VerticalSearchResponse {
       throw Error('The search data does not contain a response property');
     }
 
-    return new VerticalSearchResponse(
-      VerticalResult.from(data.response),
-      data.response.queryId,
-      data.response.searchIntents
-    );
+    return new VerticalSearchResponse({
+      verticalResult: VerticalResult.from(data.response),
+      queryId: data.response.queryId,
+      directAnswer: data.response.directAnswer,
+      searchIntents: data.response.searchIntents
+    });
   }
 
   getVerticalResult(): VerticalResult {
-    return this.verticalResult;
+    return this.props.verticalResult;
   }
 
   getQueryId(): string {
-    return this.queryId;
+    return this.props.queryId;
   }
 
-  getSearchIntents(): SearchIntent[] {
-    return this.searchIntents ?? [];
+  getDirectAnswer(): DirectAnswer | undefined {
+    return this.props.directAnswer;
+  }
+
+  getSearchIntents(): SearchIntent[] | undefined {
+    return this.props.searchIntents;
   }
 }
