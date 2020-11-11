@@ -17,8 +17,8 @@ export default class VerticalSearchResponse {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static from(data: any): VerticalSearchResponse {
-    if (!data.response){
-      throw Error('The search data does not contain a response property');
+    if (!('response' in data)){
+      throw new Error('The search data does not contain a response property');
     }
 
     return new VerticalSearchResponse({

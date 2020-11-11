@@ -18,8 +18,8 @@ export default class UniversalSearchResponse {
   private constructor(private props: UniversalSearchResponseProps) {}
 
   static from(data: any): UniversalSearchResponse {
-    if (!data.response){
-      throw Error('The search data does not contain a response property');
+    if (!('response' in data)){
+      throw new Error('The search data does not contain a response property');
     }
 
     const verticalResults = Array.isArray(data.response.modules)
@@ -29,9 +29,9 @@ export default class UniversalSearchResponse {
     return new UniversalSearchResponse({
       verticalResults: verticalResults,
       queryId: data.response.queryId,
-      directAnswer: DirectAnswer.from(data.response.directAnswer),
+      directAnswer: data.response.directAnswer && DirectAnswer.from(data.response.directAnswer),
       searchIntents: data.response.searchIntents,
-      spellCheck: SpellCheck.from(data.response.spellCheck)
+      spellCheck: data.response.spellCheck && SpellCheck.from(data.response.spellCheck)
     });
   }
 

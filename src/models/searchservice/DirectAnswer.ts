@@ -19,10 +19,10 @@ export default class DirectAnswer {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static from(data: any): DirectAnswer {
-    if (!data.relatedItem) {
+    if (!('relatedItem' in data)) {
       throw new Error('The direct answer does not contain a relatedItem property');
     }
-    if (!data.answer) {
+    if (!('answer' in data)) {
       throw new Error('The direct answer does not contain an answer property');
     }
 
