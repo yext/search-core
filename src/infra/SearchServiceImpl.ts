@@ -1,3 +1,4 @@
+import createVerticalSearchResponse from '../transformers/searchservice/createVerticalSearchResponse';
 import SearchService from '../services/SearchService';
 import HttpRequester from '../http/HttpRequester';
 import { BaseUrls, LiveApiEndpoints, defaultApiVersion } from '../constants';
@@ -7,6 +8,8 @@ import UniversalSearchRequest from '../models/searchservice/request/UniversalSea
 import UniversalSearchResponse from '../models/searchservice/response/UniversalSearchResponse';
 import createUniversalSearchResponse from '../transformers/searchservice/createUniversalSearchResponse';
 import Config from '../models/core/Config';
+import VerticalSearchRequest from '../models/searchservice/request/VerticalSearchRequest';
+import VerticalSearchResponse from '../models/searchservice/response/VerticalSearchResponse';
 
 /**
  * Internal interface representing the query params which may be sent in a universal search
@@ -24,6 +27,31 @@ interface UniversalSearchQueryParams extends QueryParams {
   queryTrigger?: QueryTrigger,
   context?: string;
   referrerPageUrl?: string
+}
+
+/**
+ * Internal interface representing the query params which may be sent in a vertical search
+ */
+interface VerticalSearchQueryParams extends QueryParams {
+  experienceKey: string,
+  api_key: string,
+  v: number,
+  version?: string,
+  locale?: string,
+  input: string,
+  queryId: string,
+  location?: string,
+  verticalKey: string,
+  limit?: number,
+  offset?: number,
+  retrieveFacets?: boolean,
+  skipSpellCheck?: boolean,
+  queryTrigger: QueryTrigger,
+  sessionTrackingEnabled: boolean,
+  sortBys: string,
+  context: string,
+  referrerPageUrl: string,
+  source: string
 }
 
 /**
@@ -65,6 +93,37 @@ export default class SearchServiceImpl implements SearchService {
       queryParams);
 
     return createUniversalSearchResponse(rawUniversalSearchResponse);
+  }
+
+  async verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse> {
+    const requestUrl: string = BaseUrls.LiveApi + LiveApiEndpoints.VerticalSearch;
+
+    const queryParams: VerticalSearchQueryParams = {
+      experienceKey: this.config.experienceKey,
+      api_key: this.config.apiKey,
+      v: this.config.apiVersion || defaultApiVersion,
+      version: this.config.configurationLabel,
+      locale: this.config.locale,
+      input: request.query,
+      location: request.geolocation?.toString(),
+      verticalKey: request.verticalKey,
+      limit: request.limit,
+      offset: request.offset,
+      queryId: request.queryId,
+      retrieveFacets: request.retrieveFacets,
+      skipSpellCheck: request.skipSpellCheck,
+      queryTrigger: request.queryTrigger,
+      sessionTrackingEnabled: request.sessionTrackingEnabled,
+      sortBys: JSON.stringify(request.sortBys),
+      context: request.context,
+      referrerPageUrl: request.referrerPageUrl,
+      source: request.querySource
+    };
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const response = await this.httpRequester.get<any>(requestUrl, queryParams);
+
+    return createVerticalSearchResponse(response);
   }
 
   /**
