@@ -1,5 +1,5 @@
-import UniversalSearchRequest from '../models/searchservice/UniversalSearchRequest';
-import UniversalSearchResponse from '../models/searchservice/UniversalSearchResponse';
+import UniversalSearchRequest from '../models/searchservice/request/UniversalSearchRequest';
+import UniversalSearchResponse from '../models/searchservice/response/UniversalSearchResponse';
 
 /**
  * A service which performs Yext Answers searches

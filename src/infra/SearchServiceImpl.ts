@@ -2,11 +2,11 @@ import SearchService from '../services/SearchService';
 import HttpRequester from '../http/HttpRequester';
 import { BaseUrls, LiveApiEndpoints, defaultApiVersion } from '../constants';
 import { QueryParams } from '../http/params';
-import { QueryTrigger } from '../models/searchservice/RequestElements';
-import UniversalSearchRequest from '../models/searchservice/UniversalSearchRequest';
-//import VerticalSearchRequest from '../models/VerticalSearchResponse';
-import UniversalSearchResponse from '../models/searchservice/UniversalSearchResponse';
-//import VerticalSearchResponse from '../models/VerticalSearchResponse';
+import { QueryTrigger } from '../models/searchservice/request/QueryTrigger';
+import UniversalSearchRequest from '../models/searchservice/request/UniversalSearchRequest';
+import UniversalSearchResponse from '../models/searchservice/response/UniversalSearchResponse';
+import createUniversalSearchResponse
+  from '../transformers/searchservice/createUniversalSearchResponse';
 
 /**
  * Internal interface representing the query params which may be sent in a universal search
@@ -30,14 +30,18 @@ interface UniversalSearchQueryParams extends QueryParams {
  * An implementation of SearchService which hits LiveAPI
  */
 export default class SearchServiceImpl implements SearchService {
-  constructor(
-    private config: Config,
-    private httpRequester: HttpRequester
-  ) {}
+  private config: Config;
+  private httpRequester: HttpRequester;
+  private universalSearchUrl: string;
+
+  constructor(config: Config, httpRequester: HttpRequester) {
+    this.config = config;
+    this.httpRequester = httpRequester;
+
+    this.universalSearchUrl = BaseUrls.LiveApi + LiveApiEndpoints.UniversalSearch;
+  }
 
   async universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
-    const requestUrl: string = BaseUrls.LiveApi + LiveApiEndpoints.UniversalSearch;
-
     this.injectToStringMethods(request);
 
     const queryParams: UniversalSearchQueryParams = {
@@ -56,9 +60,11 @@ export default class SearchServiceImpl implements SearchService {
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rawUniversalSearchResponse = await this.httpRequester.get<any>(requestUrl, queryParams);
+    const rawUniversalSearchResponse = await this.httpRequester.get<any>(
+      this.universalSearchUrl,
+      queryParams);
 
-    return UniversalSearchResponse.from(rawUniversalSearchResponse);
+    return createUniversalSearchResponse(rawUniversalSearchResponse);
   }
 
   /**
@@ -76,8 +82,4 @@ export default class SearchServiceImpl implements SearchService {
       };
     }
   }
-
-  /*async verticalSearch(): Promise<VerticalSearchResponse> {
-
-  }*/
 }

@@ -1,6 +1,6 @@
 import SearchService from './services/SearchService';
-import UniversalSearchRequest from './models/searchservice/UniversalSearchRequest';
-import UniversalSearchResponse from './models/searchservice/UniversalSearchResponse';
+import UniversalSearchRequest from './models/searchservice/request/UniversalSearchRequest';
+import UniversalSearchResponse from './models/searchservice/response/UniversalSearchResponse';
 //import VerticalSearchResponse from './models/VerticalSearchResponse';
 
 export default class Core {

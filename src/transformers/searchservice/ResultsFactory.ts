@@ -1,13 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import Result from './Result';
-
-export const enum Source {
-  KnowledgeManager = 'KNOWLEDGE_MANAGER',
-  Google = 'GOOGLE_CSE',
-  Bing = 'BING_CSE',
-  Zendesk = 'ZENDESK',
-  Algolia = 'ALGOLIA',
-}
+import Result from '../../models/searchservice/response/Result';
+import { Source } from '../../models/searchservice/response/Source';
 
 /**
  * A factory which creates results from different sources
@@ -37,9 +29,9 @@ export default class ResultsFactory {
     });
   }
 
-  private static fromKnowledgeManager(result: any): Result {
+  private static fromKnowledgeManager(result: any): Readonly<Result> {
     const rawData = result.data ?? {};
-    return new Result({
+    return Object.freeze({
       rawData: rawData,
       index: result.index,
       name: rawData.name,
@@ -51,8 +43,8 @@ export default class ResultsFactory {
     });
   }
 
-  private static fromGoogleCustomSearchEngine(result: any): Result {
-    return new Result({
+  private static fromGoogleCustomSearchEngine(result: any): Readonly<Result> {
+    return Object.freeze({
       rawData: result,
       index: result.index,
       name: result.htmlTitle.replace(/(<([^>]+)>)/ig, ''),
@@ -61,8 +53,8 @@ export default class ResultsFactory {
     });
   }
 
-  private static fromBingCustomSearchEngine(result: any): Result {
-    return new Result({
+  private static fromBingCustomSearchEngine(result: any): Readonly<Result> {
+    return Object.freeze({
       rawData: result,
       index: result.index,
       name: result.name,
@@ -71,8 +63,8 @@ export default class ResultsFactory {
     });
   }
 
-  private static fromZendeskSearchEngine(result: any): Result {
-    return new Result({
+  private static fromZendeskSearchEngine(result: any): Readonly<Result> {
+    return Object.freeze({
       rawData: result,
       index: result.index,
       name: result.title,
@@ -81,8 +73,8 @@ export default class ResultsFactory {
     });
   }
 
-  private static fromAlgoliaSearchEngine(result: any): Result {
-    return new Result({
+  private static fromAlgoliaSearchEngine(result: any): Readonly<Result> {
+    return Object.freeze({
       rawData: result,
       index: result.index,
       name: result.name,
@@ -90,8 +82,8 @@ export default class ResultsFactory {
     });
   }
 
-  private static fromGeneric(result: any): Result {
-    return new Result({
+  private static fromGeneric(result: any): Readonly<Result> {
+    return Object.freeze({
       rawData: result,
       index: result.index,
       name: result.name,
@@ -101,9 +93,9 @@ export default class ResultsFactory {
     });
   }
 
-  public static fromDirectAnswer(result: any): Result {
+  public static fromDirectAnswer(result: any): Readonly<Result> {
     const rawData = result.fieldValues ?? {};
-    return new Result({
+    return Object.freeze({
       rawData: rawData,
       name: rawData.name,
       description: rawData.description,

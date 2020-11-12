@@ -1,4 +1,6 @@
-import { QueryTrigger, Context, Coordinates } from './RequestElements';
+import Context from './Context';
+import Coordinates from './Coordinates';
+import { QueryTrigger } from './QueryTrigger';
 
 /**
  * Options for constructing a universal search

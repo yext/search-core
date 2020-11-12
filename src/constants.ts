@@ -8,8 +8,4 @@ export enum LiveApiEndpoints {
   VerticalSearch = '/v2/accounts/me/answers/vertical/query'
 }
 
-export enum SearchIntent {
-  NearMe = 'NEAR_ME'
-}
-
 export const defaultApiVersion = 20190101;
