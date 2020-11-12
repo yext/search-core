@@ -5,8 +5,8 @@ import { QueryParams } from '../http/params';
 import { QueryTrigger } from '../models/searchservice/request/QueryTrigger';
 import UniversalSearchRequest from '../models/searchservice/request/UniversalSearchRequest';
 import UniversalSearchResponse from '../models/searchservice/response/UniversalSearchResponse';
-import createUniversalSearchResponse
-  from '../transformers/searchservice/createUniversalSearchResponse';
+import createUniversalSearchResponse from '../transformers/searchservice/createUniversalSearchResponse';
+import Config from '../models/core/Config';
 
 /**
  * Internal interface representing the query params which may be sent in a universal search

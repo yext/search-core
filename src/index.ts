@@ -2,6 +2,7 @@ import MasterSwitchApi from './infra/MasterSwitchApi';
 import Core from './core';
 import SearchServiceImpl from './infra/SearchServiceImpl';
 import HttpRequester from './http/HttpRequester';
+import Config from './models/core/Config';
 
 export default function provideCore(config: Config): Promise<Core> {
   const masterSwitch = new MasterSwitchApi(config.apiKey, config.experienceKey);
