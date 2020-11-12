@@ -2,6 +2,7 @@ import UniversalSearchResponse from '../../models/searchservice/response/Univers
 import createVerticalResults from './createVerticalResults';
 import createDirectAnswer from './createDirectAnswer';
 import createSpellCheck from './createSpellCheck';
+import createLocationBias from './createLocationBias';
 
 export default function createUniversalSearchResponse(data: any): Readonly<UniversalSearchResponse> {
   if (!data.response){
@@ -17,6 +18,7 @@ export default function createUniversalSearchResponse(data: any): Readonly<Unive
     queryId: data.response.queryId,
     directAnswer: data.response.directAnswer && createDirectAnswer(data.response.directAnswer),
     searchIntents: data.response.searchIntents,
-    spellCheck: data.response.spellCheck && createSpellCheck(data.response.spellCheck)
+    spellCheck: data.response.spellCheck && createSpellCheck(data.response.spellCheck),
+    locationBias: data.response.locationBias && createLocationBias(data.response.locationBias)
   });
 }
