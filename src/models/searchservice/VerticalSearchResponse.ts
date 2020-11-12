@@ -1,9 +1,9 @@
-import VerticalResult from './VerticalResult';
+import VerticalResults from './VerticalResults';
 import { SearchIntent } from '../../constants';
 import DirectAnswer from './DirectAnswer';
 
 interface VerticalSearchResponseProps {
-  verticalResult: VerticalResult;
+  verticalResults: VerticalResults;
   queryId: string;
   directAnswer?: DirectAnswer;
   searchIntents?: SearchIntent[];
@@ -11,26 +11,29 @@ interface VerticalSearchResponseProps {
   // private alternativeVerticals?: [AlternativeVertical];
 }
 
+/**
+ * A representation of a response from a vertical search
+ */
 export default class VerticalSearchResponse {
 
   private constructor(private props: VerticalSearchResponseProps) {}
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static from(data: any): VerticalSearchResponse {
-    if (!('response' in data)){
+    if (!data.response){
       throw new Error('The search data does not contain a response property');
     }
 
     return new VerticalSearchResponse({
-      verticalResult: VerticalResult.from(data.response),
+      verticalResults: VerticalResults.from(data.response),
       queryId: data.response.queryId,
       directAnswer: data.response.directAnswer,
       searchIntents: data.response.searchIntents
     });
   }
 
-  getVerticalResult(): VerticalResult {
-    return this.props.verticalResult;
+  getVerticalResults(): VerticalResults {
+    return this.props.verticalResults;
   }
 
   getQueryId(): string {

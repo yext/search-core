@@ -32,7 +32,7 @@ module.exports = {
         'fromAlgoliaSearchEngine',
         'fromGeneric',
         'fromDirectAnswer',
-        'createResultArray'
+        'create'
       ]
     }],
   },

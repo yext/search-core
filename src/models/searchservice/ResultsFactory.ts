@@ -12,8 +12,8 @@ export const enum Source {
 /**
  * A factory which creates results from different sources
  */
-export default class ResultFactory {
-  public static createResultArray(results: any, source: Source): [Result] {
+export default class ResultsFactory {
+  public static create(results: any, source: Source): [Result] {
     return results.map((result: any, index: number) => {
       result = {
         ...result,

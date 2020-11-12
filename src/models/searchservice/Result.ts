@@ -1,13 +1,3 @@
-/*
-  The SDK computes a formatted and a highlighed data field. Do we want that processing to happen
-  here? I think that processing should probably not be the responsibility of this class. The SDK
-  also contains other fields that don't seem to be used. Do we want those as well? They include:
-    - 'modifier'
-    - 'bigDate'
-    - 'image' (I belive we typically access images from the raw data, not the result data )
-    - 'callsToAction' (Again, I belive that's usually in the raw data)
-    - 'collapsed'
-  */
 interface ResultProps {
   rawData: Record<string, unknown>,
   index?: number,

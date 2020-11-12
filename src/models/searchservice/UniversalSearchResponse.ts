@@ -1,11 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import VerticalResult from './VerticalResult';
+import VerticalResults from './VerticalResults';
 import { SearchIntent } from '../../constants';
 import DirectAnswer from './DirectAnswer';
 import SpellCheck from './SpellCheck';
 
 interface UniversalSearchResponseProps {
-  verticalResults: VerticalResult[],
+  verticalResults: VerticalResults[],
   queryId: string,
   directAnswer?: DirectAnswer,
   searchIntents?: SearchIntent[],
@@ -18,12 +18,12 @@ export default class UniversalSearchResponse {
   private constructor(private props: UniversalSearchResponseProps) {}
 
   static from(data: any): UniversalSearchResponse {
-    if (!('response' in data)){
+    if (!data.response){
       throw new Error('The search data does not contain a response property');
     }
 
     const verticalResults = Array.isArray(data.response.modules)
-      ? data.response.modules.map((vertical: any) => VerticalResult.from(vertical))
+      ? data.response.modules.map((vertical: any) => VerticalResults.from(vertical))
       : [];
 
     return new UniversalSearchResponse({
@@ -35,7 +35,7 @@ export default class UniversalSearchResponse {
     });
   }
 
-  get verticalResults(): VerticalResult[] {
+  get verticalResults(): VerticalResults[] {
     return this.props.verticalResults;
   }
 
@@ -47,11 +47,11 @@ export default class UniversalSearchResponse {
     return this.props.searchIntents;
   }
 
- get directAnswer(): DirectAnswer | undefined{
+  get directAnswer(): DirectAnswer | undefined{
     return this.props.directAnswer;
   }
 
-  get spellCheck(): SpellCheck {
-    return this.spellCheck;
+  get spellCheck(): SpellCheck | undefined {
+    return this.props.spellCheck;
   }
 }

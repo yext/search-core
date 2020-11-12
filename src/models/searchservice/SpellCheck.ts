@@ -5,17 +5,8 @@ interface SpellCheckProps {
 }
 
 enum SpellCheckType {
-  /**
-   * 'Did you mean ...?'
-   */
   Suggest = 'SUGGEST',
-  /**
-   * 'Showing results for ... instead of ...'
-   */
   AutoCorrect = 'AUTOCORRECT',
-  /**
-   * 'Including results for ..'
-   */
   Combine = 'COMBINE'
 }
 

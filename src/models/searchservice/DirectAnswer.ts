@@ -1,14 +1,14 @@
 import Result from './Result';
-import ResultFactory from './ResultFactory';
+import ResultsFactory from './ResultsFactory';
 
 interface DirectAnswerProps {
+  value: string;
   relatedResult: Result;
   verticalKey: string;
-  entityName?: string;
-  fieldName?: string;
-  fieldApiName?: string;
-  value?: string;
-  fieldType?: string;
+  entityName: string;
+  fieldName: string;
+  fieldApiName: string;
+  fieldType: string;
 }
 
 /**
@@ -19,15 +19,15 @@ export default class DirectAnswer {
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static from(data: any): DirectAnswer {
-    if (!('relatedItem' in data)) {
+    if (!data.relatedItem) {
       throw new Error('The direct answer does not contain a relatedItem property');
     }
-    if (!('answer' in data)) {
+    if (!data.answer) {
       throw new Error('The direct answer does not contain an answer property');
     }
 
     return new DirectAnswer({
-      relatedResult: ResultFactory.fromDirectAnswer(data.relatedItem.data),
+      relatedResult: ResultsFactory.fromDirectAnswer(data.relatedItem.data),
       verticalKey: data.relatedItem.verticalConfigId,
       entityName: data.answer.entityName,
       fieldName: data.answer.fieldName,
@@ -35,6 +35,10 @@ export default class DirectAnswer {
       value: data.answer.value,
       fieldType: data.answer.fieldType
     });
+  }
+
+  get value(): string {
+    return this.props.value;
   }
 
   get relatedResult(): Result {
@@ -45,23 +49,19 @@ export default class DirectAnswer {
     return this.props.verticalKey;
   }
 
-  get entityName(): string | undefined {
+  get entityName(): string {
     return this.props.entityName;
   }
 
-  get fieldName(): string | undefined {
+  get fieldName(): string {
     return this.props.fieldName;
   }
 
-  get fieldApiName(): string | undefined {
+  get fieldApiName(): string {
     return this.props.fieldApiName;
   }
 
-  get value(): string | undefined {
-    return this.props.value;
-  }
-
-  get fieldType(): string | undefined {
+  get fieldType(): string {
     return this.props.fieldType;
   }
 }

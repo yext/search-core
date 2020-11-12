@@ -1,14 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 //import Facet from './Facet';
-import { default as ResultFactory, Source } from './ResultFactory';
+import { default as ResultsFactory, Source } from './ResultsFactory';
 import Result from './Result';
 import AppliedQueryFilter from './AppliedQueryFilter';
 
-// Currently the SDk iterates through the results and constructs a map object shaped like
-// { mapCenter: centerCordinates, mapMarkers: mapMarkers }
-// Do we also want this functionality?
-interface VerticalResultProps {
+interface VerticalResultsProps {
   appliedQueryFilters: AppliedQueryFilter[];
   encodedState: string;
   // facets: Facet[];
@@ -22,20 +19,20 @@ interface VerticalResultProps {
 /**
  * A result from an individual vertical
  */
-export default class VerticalResult{
-  constructor(private props: VerticalResultProps) {}
+export default class VerticalResults{
+  constructor(private props: VerticalResultsProps) {}
 
-  static from(data: any): VerticalResult {
+  static from(data: any): VerticalResults {
     const appliedQueryFilters = data.appliedQueryFilters.map((appliedQueryFilter: any) => {
       return AppliedQueryFilter.from(appliedQueryFilter);
     });
 
-    return new VerticalResult({
+    return new VerticalResults({
       appliedQueryFilters: appliedQueryFilters,
       encodedState: data.encodedState,
       // facets: facet.fromArray(data.facets),
       queryDurationMillis: data.queryDurationMillis,
-      results: ResultFactory.createResultArray(data.results, data.source),
+      results: ResultsFactory.create(data.results, data.source),
       resultsCount: data.resultsCount,
       source: data.source,
       verticalKey: data.verticalConfigId,
