@@ -7,7 +7,7 @@ export default interface SpellCheck {
   type: SpellCheckType;
 }
 
-enum SpellCheckType {
+export enum SpellCheckType {
   Suggest = 'SUGGEST',
   AutoCorrect = 'AUTOCORRECT',
   Combine = 'COMBINE'

@@ -1,7 +1,6 @@
 /**
  * Location information including how it was obtained
  */
-
 export default interface LocationBias {
   latitude: number;
   longitude: number;
