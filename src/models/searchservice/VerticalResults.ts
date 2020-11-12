@@ -7,7 +7,6 @@ import AppliedQueryFilter from './AppliedQueryFilter';
 
 interface VerticalResultsProps {
   appliedQueryFilters: AppliedQueryFilter[];
-  encodedState: string;
   // facets: Facet[];
   queryDurationMillis: number;
   results: Result[];
@@ -29,7 +28,6 @@ export default class VerticalResults{
 
     return new VerticalResults({
       appliedQueryFilters: appliedQueryFilters,
-      encodedState: data.encodedState,
       // facets: facet.fromArray(data.facets),
       queryDurationMillis: data.queryDurationMillis,
       results: ResultsFactory.create(data.results, data.source),
@@ -37,10 +35,6 @@ export default class VerticalResults{
       source: data.source,
       verticalKey: data.verticalConfigId,
     });
-  }
-
-  get encodedState(): string {
-    return this.props.encodedState;
   }
 
   get queryDurationMillis(): number {
