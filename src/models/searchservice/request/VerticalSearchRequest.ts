@@ -1,3 +1,4 @@
+import Context from './Context';
 import Coordinates from './Coordinates';
 import { QueryTrigger } from './QueryTrigger';
 import SortBy from './SortBy';
@@ -18,7 +19,7 @@ export default interface VerticalSearchRequest {
   queryTrigger: QueryTrigger,
   sessionTrackingEnabled: boolean,
   sortBys: SortBy[],
-  context: string,
+  context: Context,
   referrerPageUrl: string,
   querySource: string,
 }

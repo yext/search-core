@@ -1,4 +1,3 @@
-
 interface SortByProps {
   type: string,
   field: string,

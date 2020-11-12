@@ -46,12 +46,12 @@ interface VerticalSearchQueryParams extends QueryParams {
   offset?: number,
   retrieveFacets?: boolean,
   skipSpellCheck?: boolean,
-  queryTrigger: QueryTrigger,
-  sessionTrackingEnabled: boolean,
-  sortBys: string,
-  context: string,
-  referrerPageUrl: string,
-  source: string
+  queryTrigger?: QueryTrigger,
+  sessionTrackingEnabled?: boolean,
+  sortBys?: string,
+  context?: string,
+  referrerPageUrl?: string,
+  source?: string
 }
 
 /**
@@ -115,7 +115,7 @@ export default class SearchServiceImpl implements SearchService {
       queryTrigger: request.queryTrigger,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       sortBys: JSON.stringify(request.sortBys),
-      context: request.context,
+      context: request.context?.toString(),
       referrerPageUrl: request.referrerPageUrl,
       source: request.querySource
     };
