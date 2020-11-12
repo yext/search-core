@@ -39,7 +39,6 @@ interface VerticalSearchQueryParams extends QueryParams {
   version?: string,
   locale?: string,
   input: string,
-  queryId: string,
   location?: string,
   verticalKey: string,
   limit?: number,
@@ -105,16 +104,17 @@ export default class SearchServiceImpl implements SearchService {
       version: this.config.configurationLabel,
       locale: this.config.locale,
       input: request.query,
-      location: request.geolocation?.toString(),
+      location: request.geolocation
+        ? `${request.geolocation?.latitude},${request.geolocation?.longitude}`
+        : '',
       verticalKey: request.verticalKey,
       limit: request.limit,
       offset: request.offset,
-      queryId: request.queryId,
       retrieveFacets: request.retrieveFacets,
       skipSpellCheck: request.skipSpellCheck,
       queryTrigger: request.queryTrigger,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
-      sortBys: JSON.stringify(request.sortBys),
+      sortBys: JSON.stringify(request.sortBys || []),
       context: request.context?.toString(),
       referrerPageUrl: request.referrerPageUrl,
       source: request.querySource
@@ -123,7 +123,7 @@ export default class SearchServiceImpl implements SearchService {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const response = await this.httpRequester.get<any>(requestUrl, queryParams);
 
-    return createVerticalSearchResponse(response);
+    return response;//createVerticalSearchResponse(response);
   }
 
   /**

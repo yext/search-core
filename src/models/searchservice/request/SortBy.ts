@@ -1,33 +1,30 @@
-interface SortByProps {
-  type: string,
-  field: string,
-  direction: string
-}
-
 /**
  * Represents a criterion that can be used to sort results
  */
 export default class SortBy {
-  private constructor(private props: SortByProps) { }
+  private constructor(
+    private type: string,
+    private field: string,
+    private direction: string) {}
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   static from(data: any): SortBy {
-    return new SortBy({
-      type: data.type,
-      field: data.field,
-      direction: data.direction,
-    });
+    return new SortBy(
+      data.type,
+      data.field,
+      data.direction,
+    );
   }
 
-  get type(): string {
-    return this.props.type;
+  getType(): string {
+    return this.type;
   }
 
-  get field(): string {
-    return this.props.field;
+  getField(): string {
+    return this.field;
   }
 
-  get direction(): string {
-    return this.props.direction;
+  getDirection(): string {
+    return this.direction;
   }
 }
