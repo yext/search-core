@@ -1,10 +1,16 @@
-export interface CoreOptions {
-  apiKey: string;
-  experienceKey: string;
-}
+import SearchService from './services/SearchService';
+import UniversalSearchRequest from './models/searchservice/request/UniversalSearchRequest';
+import UniversalSearchResponse from './models/searchservice/response/UniversalSearchResponse';
+//import VerticalSearchResponse from './models/VerticalSearchResponse';
 
-export class Core {
-  constructor() {
-    console.log('I\'m alive!');
+export default class Core {
+  constructor(private searchService: SearchService) {}
+
+  universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
+    return this.searchService.universalSearch(request);
   }
+
+  /*verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse> {
+    return this.searchService.verticalSearch();
+  }*/
 }

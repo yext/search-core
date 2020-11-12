@@ -1,5 +1,6 @@
 import { fetch as fetchPolyfill } from 'whatwg-fetch';
-import { addParamsToURL } from '../utils/urlutils';
+import { addParamsToURL } from './urlutils';
+import { QueryParams } from './params';
 
 /**
  * Available HTTP request methods
@@ -8,8 +9,6 @@ enum RequestMethods {
   GET = 'get',
   POST = 'post',
 }
-
-type UrlParams = Record<string, string|number|boolean>;
 
 /**
  * HttpRequester is a wrapper around the native implementation of AJAX
@@ -21,7 +20,7 @@ export default class HttpRequester {
    */
   get<T>(
     url: string,
-    queryParams: UrlParams,
+    queryParams: QueryParams,
     options?: RequestInit,
   ): Promise<T> {
     const reqInitWithMethod = {
@@ -37,7 +36,7 @@ export default class HttpRequester {
    */
   post<T>(
     url: string,
-    queryParams: UrlParams,
+    queryParams: QueryParams,
     body: BodyInit,
     reqInit: RequestInit
   ): Promise<T> {
@@ -55,7 +54,7 @@ export default class HttpRequester {
    */
   private fetch(
     url: string,
-    queryParams: UrlParams,
+    queryParams: QueryParams,
     reqInit: RequestInit
   ): Promise<Response> {
     const urlWithParams = addParamsToURL(url, queryParams);
