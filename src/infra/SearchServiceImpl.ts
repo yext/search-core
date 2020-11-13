@@ -89,9 +89,9 @@ export default class SearchServiceImpl implements SearchService {
       referrerPageUrl: request.referrerPageUrl,
     };
 
-    const rawUniversalSearchResponse = await this.httpService.get<JsonObject>(this.universalSearchUrl, queryParams);
+    const response = await this.httpService.get<JsonObject>(this.universalSearchUrl, queryParams);
 
-    return createUniversalSearchResponse(rawUniversalSearchResponse);
+    return createUniversalSearchResponse(response);
   }
 
   async verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse> {
@@ -100,7 +100,7 @@ export default class SearchServiceImpl implements SearchService {
     const queryParams: VerticalSearchQueryParams = {
       experienceKey: this.config.experienceKey,
       api_key: this.config.apiKey,
-      v: this.config.apiVersion || defaultApiVersion,
+      v: defaultApiVersion,
       version: this.config.configurationLabel,
       locale: this.config.locale,
       input: request.query,
@@ -118,8 +118,7 @@ export default class SearchServiceImpl implements SearchService {
       source: request.querySource
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const response = await this.httpRequester.get<any>(this.verticalSearchUrl, queryParams);
+    const response = await this.httpService.get<JsonObject>(this.verticalSearchUrl, queryParams);
 
     return createVerticalSearchResponse(response);
   }
