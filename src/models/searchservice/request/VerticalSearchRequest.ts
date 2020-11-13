@@ -15,7 +15,7 @@ export default interface VerticalSearchRequest {
   offset: number,
   retrieveFacets: boolean,
   skipSpellCheck: boolean,
-  geolocation: Coordinates,
+  coordinates: Coordinates,
   queryTrigger: QueryTrigger,
   sessionTrackingEnabled: boolean,
   sortBys: SortBy[],

@@ -60,12 +60,14 @@ export default class SearchServiceImpl implements SearchService {
   private config: Config;
   private httpRequester: HttpRequester;
   private universalSearchUrl: string;
+  private verticalSearchUrl: string;
 
   constructor(config: Config, httpRequester: HttpRequester) {
     this.config = config;
     this.httpRequester = httpRequester;
 
     this.universalSearchUrl = BaseUrls.LiveApi + LiveApiEndpoints.UniversalSearch;
+    this.verticalSearchUrl = BaseUrls.LiveApi + LiveApiEndpoints.VerticalSearch;
   }
 
   async universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
@@ -95,7 +97,7 @@ export default class SearchServiceImpl implements SearchService {
   }
 
   async verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse> {
-    const requestUrl: string = BaseUrls.LiveApi + LiveApiEndpoints.VerticalSearch;
+    this.injectToStringMethods(request);
 
     const queryParams: VerticalSearchQueryParams = {
       experienceKey: this.config.experienceKey,
@@ -104,9 +106,7 @@ export default class SearchServiceImpl implements SearchService {
       version: this.config.configurationLabel,
       locale: this.config.locale,
       input: request.query,
-      location: request.geolocation
-        ? `${request.geolocation?.latitude},${request.geolocation?.longitude}`
-        : '',
+      location: request.coordinates?.toString(),
       verticalKey: request.verticalKey,
       limit: request.limit,
       offset: request.offset,
@@ -121,9 +121,9 @@ export default class SearchServiceImpl implements SearchService {
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const response = await this.httpRequester.get<any>(requestUrl, queryParams);
+    const response = await this.httpRequester.get<any>(this.verticalSearchUrl, queryParams);
 
-    return response;//createVerticalSearchResponse(response);
+    return createVerticalSearchResponse(response);
   }
 
   /**
