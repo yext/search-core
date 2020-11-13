@@ -1,0 +1,259 @@
+{
+  "meta": {
+    "uuid": "0f999a8a-773e-4691-8646-f822dcef225a",
+    "errors": []
+  },
+  "response": {
+    "businessId": 2287528,
+    "modules": [
+      {
+        "verticalConfigId": "people",
+        "resultsCount": 1,
+        "encodedState": "",
+        "results": [
+          {
+            "data": {
+              "id": "Employee-2116",
+              "type": "ce_person",
+              "website": "http://www.test.com",
+              "address": {
+                "line1": "7333 Yext Drive",
+                "city": "Mclean",
+                "region": "VA",
+                "postalCode": "22102",
+                "countryCode": "US"
+              },
+              "associations": [
+                "Runners Association"
+              ],
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+              "name": "Howard Lerman",
+              "cityCoordinate": {
+                "latitude": 38.936319622802734,
+                "longitude": -74.28428039350781
+              },
+              "c_allstateLadyCTA": {
+                "label": "Learn More",
+                "linkType": "URL",
+                "link": "http://yext.com"
+              },
+              "c_employeeCity": "Tysons Corner",
+              "c_employeeCountry": "United States",
+              "c_employeeDepartment": "Consulting",
+              "c_employeeRegion": "Virginia",
+              "c_employeeTitle": "Associate Technical Project Manager",
+              "c_oliverCta": {
+                "url": "https://www.yext.com/",
+                "icon": "yext",
+                "label": "test cta"
+              },
+              "c_startDate": "2017-09-18",
+              "emails": [
+                "test@yext.com"
+              ],
+              "firstName": "Howard",
+              "geocodedCoordinate": {
+                "latitude": 38.924648,
+                "longitude": -77.216859
+              },
+              "languages": [
+                "German"
+              ],
+              "lastName": "Lerman",
+              "mainPhone": "+18888888888",
+              "specialities": [
+                "Documentation",
+                "Coding"
+              ],
+              "websiteUrl": {
+                "url": "http://www.test.com",
+                "displayUrl": "http://www.testdisplay.com",
+                "preferDisplayUrl": true
+              },
+              "yextDisplayCoordinate": {
+                "latitude": 38.924648,
+                "longitude": -77.216859
+              },
+              "yextRoutableCoordinate": {
+                "latitude": 38.9242965590283,
+                "longitude": -77.2177549312077
+              }
+            },
+            "highlightedFields": {
+              "name": {
+                "value": "Howard Lerman",
+                "matchedSubstrings": [
+                  {
+                    "offset": 0,
+                    "length": 5
+                  }
+                ]
+              }
+            },
+            "distance": 36032
+          }
+        ],
+        "appliedQueryFilters": [],
+        "queryDurationMillis": 40,
+        "facets": [],
+        "source": "KNOWLEDGE_MANAGER"
+      },
+      {
+        "verticalConfigId": "faq",
+        "resultsCount": 2,
+        "encodedState": "",
+        "results": [
+          {
+            "data": {
+              "id": "1074283123523689994",
+              "type": "faq",
+              "answer": "Great question! To start, you can **bold,** *italicize,* and ++underline.++ You can also create lists.",
+              "name": "Howard loves FAQs"
+            },
+            "highlightedFields": {
+              "answer": {
+                "value": "Great question! To start, you can **bold,** *italicize,* and ++underline.++ You can also create two types of lists",
+                "matchedSubstrings": []
+              },
+              "name": {
+                "value": "Howard loves FAQs",
+                "matchedSubstrings": [
+                  {
+                    "offset": 0,
+                    "length": 5
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "data": {
+              "id": "faq-134",
+              "type": "faq",
+              "answer": "Yes. We require a Federal Tax ID number, to verify your business status.",
+              "name": "Will I need my Federal Tax Identification Number?",
+              "c_NERTags": [
+                "Tax"
+              ]
+            },
+            "highlightedFields": {
+              "answer": {
+                "value": "Yes. We require a Federal Tax ID number, to verify your business status.",
+                "matchedSubstrings": [
+                  {
+                    "offset": 33,
+                    "length": 6
+                  }
+                ]
+              },
+              "name": {
+                "value": "Will I need my Federal Tax Identification Number?",
+                "matchedSubstrings": [
+                  {
+                    "offset": 42,
+                    "length": 6
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "appliedQueryFilters": [],
+        "queryDurationMillis": 106,
+        "facets": [],
+        "source": "KNOWLEDGE_MANAGER"
+      }
+    ],
+    "failedVerticals": [],
+    "queryId": "28aa65cc-5aff-4a4e-afcf-ad04a70738fc",
+    "directAnswer": {
+      "type": "FIELD_VALUE",
+      "answer": {
+        "entityName": "Howard Lerman",
+        "fieldName": "Phone Number",
+        "fieldApiName": "mainPhone",
+        "value": "+18888888888",
+        "fieldType": "phone"
+      },
+      "relatedItem": {
+        "verticalConfigId": "people",
+        "data": {
+          "id": "Employee-2116",
+          "type": "ce_person",
+          "website": "http://www.test.com",
+          "fieldValues": {
+            "address": {
+              "line1": "7333 Yext Drive",
+              "city": "Mclean",
+              "region": "VA",
+              "postalCode": "22102",
+              "countryCode": "US"
+            },
+            "associations": [
+              "Runners Association"
+            ],
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+            "name": "Howard Lerman",
+            "cityCoordinate": {
+              "latitude": 38.936319622802734,
+              "longitude": -74.28428039350781
+            },
+            "c_allstateLadyCTA": {
+              "label": "Learn More",
+              "linkType": "URL",
+              "link": "http://yext.com"
+            },
+            "c_employeeCity": "Tysons Corner",
+            "c_employeeCountry": "United States",
+            "c_employeeDepartment": "Consulting",
+            "c_employeeRegion": "Virginia",
+            "c_employeeTitle": "Associate Technical Project Manager",
+            "c_oliverCta": {
+              "url": "https://www.yext.com/",
+              "icon": "yext",
+              "label": "test cta"
+            },
+            "c_startDate": "2017-09-18",
+            "emails": [
+              "test@yext.com"
+            ],
+            "firstName": "Howard",
+            "geocodedCoordinate": {
+              "latitude": 38.924648,
+              "longitude": -77.216859
+            },
+            "languages": [
+              "German"
+            ],
+            "lastName": "Lerman",
+            "mainPhone": "+18888888888",
+            "specialities": [
+              "Documentation",
+              "Coding"
+            ],
+            "websiteUrl": {
+              "url": "http://www.test.com",
+              "displayUrl": "http://www.testdisplay.com",
+              "preferDisplayUrl": true
+            },
+            "yextDisplayCoordinate": {
+              "latitude": 38.924648,
+              "longitude": -77.216859
+            },
+            "yextRoutableCoordinate": {
+              "latitude": 38.9242965590283,
+              "longitude": -77.2177549312077
+            }
+          }
+        }
+      }
+    },
+    "searchIntents": ["NEAR_ME"],
+    "locationBias": {
+      "latitude": 49.042,
+      "longitude": -72.6054,
+      "locationDisplayName": "Virginia, United States",
+      "accuracy": "IP"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import HttpServiceMock from '../mocks/HttpServiceMock';
-import mockUniversalResponse from '../fixtures/universalresponse.json';
+import mockUniversalResponse from '../fixtures/liveapiuniversalresponse.json';
 import SearchServiceImpl from '../../src/infra/SearchServiceImpl';
 import Config from '../../src/models/core/Config';
 import UniversalSearchRequest from '../../src/models/searchservice/request/UniversalSearchRequest';
