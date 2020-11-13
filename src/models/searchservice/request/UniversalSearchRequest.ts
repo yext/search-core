@@ -11,6 +11,6 @@ export default interface UniversalSearchRequest {
   spellCheckEnabled?: boolean;
   sessionTrackingEnabled?: boolean;
   coordinates?: Coordinates;
-  context: Context
+  context?: Context
   referrerPageUrl?: string
 }

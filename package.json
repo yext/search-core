@@ -52,10 +52,12 @@
       "<rootDir>"
     ],
     "testPathIgnorePatterns": [
-      "./tests/setup/setup.js"
+      "./tests/setup/setup.js",
+      "./tests/mocks/*"
     ],
     "testMatch": [
-      "<rootDir>/tests/**/*.js"
+      "<rootDir>/tests/**/*.js",
+      "<rootDir>/tests/**/*.ts"
     ]
   }
 }

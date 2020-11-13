@@ -1,0 +1,518 @@
+{
+  "meta": {
+    "uuid": "0f999a8a-773e-4691-8646-f822dcef225a",
+    "errors": []
+  },
+  "response": {
+    "businessId": 2287528,
+    "modules": [
+      {
+        "verticalConfigId": "people",
+        "resultsCount": 1,
+        "encodedState": "",
+        "results": [
+          {
+            "data": {
+              "id": "Employee-2116",
+              "type": "ce_person",
+              "website": "http://www.test.com",
+              "address": {
+                "line1": "7900 Westpark Drive",
+                "city": "Mclean",
+                "region": "VA",
+                "postalCode": "22102",
+                "countryCode": "US"
+              },
+              "associations": [
+                "Runners Association"
+              ],
+              "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mollis nunc sed id semper risus. Commodo elit at imperdiet dui accumsan sit amet nulla facilisi. Scelerisque viverra mauris in aliquam. A erat nam at lectus. Egestas purus viverra accumsan in nisl nisi scelerisque. Habitant morbi tristique senectus et netus. Congue nisi vitae suscipit tellus mauris a diam maecenas sed.",
+              "name": "Amani Farooque",
+              "cityCoordinate": {
+                "latitude": 38.936519622802734,
+                "longitude": -77.18428039550781
+              },
+              "c_allstateLadyCTA": {
+                "label": "Learn More",
+                "linkType": "URL",
+                "link": "http://yext.com"
+              },
+              "c_employeeCity": "Tysons Corner",
+              "c_employeeCountry": "United States",
+              "c_employeeDepartment": "Consulting",
+              "c_employeeRegion": "Virginia",
+              "c_employeeTitle": "Associate Technical Project Manager",
+              "c_oliverCta": {
+                "url": "https://www.yext.com/s/2287528/entity/edit2?entityIds=13411251",
+                "icon": "yext",
+                "label": "test cta"
+              },
+              "c_startDate": "2017-09-18",
+              "emails": [
+                "afarooque@yext.com",
+                "af@yext.com",
+                "aplomb@yext.com"
+              ],
+              "firstName": "Amani",
+              "geocodedCoordinate": {
+                "latitude": 38.924648,
+                "longitude": -77.216859
+              },
+              "headshot": {
+                "url": "http://a.mktgcdn.com/p/bmc3W88h2mMRXk-wHQ7dB0Em4rR_dfia6OVrAK3LjYU/192x191.png",
+                "width": 192,
+                "height": 191,
+                "sourceUrl": "http://a.mktgcdn.com/p/bmc3W88h2mMRXk-wHQ7dB0Em4rR_dfia6OVrAK3LjYU/192x191.png"
+              },
+              "languages": [
+                "German"
+              ],
+              "lastName": "Farooque",
+              "mainPhone": "+18003332222",
+              "specialities": [
+                "Documentation",
+                "Coding"
+              ],
+              "websiteUrl": {
+                "url": "http://www.test.com",
+                "displayUrl": "http://www.testdisplay.com",
+                "preferDisplayUrl": true
+              },
+              "yextDisplayCoordinate": {
+                "latitude": 38.924648,
+                "longitude": -77.216859
+              },
+              "yextRoutableCoordinate": {
+                "latitude": 38.9242965590283,
+                "longitude": -77.2177549312077
+              }
+            },
+            "highlightedFields": {
+              "name": {
+                "value": "Amani Farooque",
+                "matchedSubstrings": [
+                  {
+                    "offset": 0,
+                    "length": 5
+                  }
+                ]
+              }
+            },
+            "distance": 36032
+          }
+        ],
+        "appliedQueryFilters": [],
+        "queryDurationMillis": 40,
+        "facets": [],
+        "source": "KNOWLEDGE_MANAGER"
+      },
+      {
+        "verticalConfigId": "faq",
+        "resultsCount": 14,
+        "encodedState": "",
+        "results": [
+          {
+            "data": {
+              "id": "1074283123523689994",
+              "type": "faq",
+              "answer": "Great question! To start, you can **bold,** *italicize,* and ++underline.++ You can also create two types of lists:  \nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\n**Bulleted Lists**\n\n* These typically have bullets\n* These are represented by \\<ul\\> in the HTML, standing for unordered list\n* so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text  \nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\n**Numbered Lists**\n\n1. These have numbers next to each item\n2. These are represented by \\<ol\\> in the HTML, standing for ordered list\n3. so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text  \nYou an also add links!\n\n1. [This is a regular link](https://google.com/)\n2. [This is an email link](mailto:afarooque@yext.com)\n3. And this is a phone link \\- [Call Now](tel:+18004402000)\n4. so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much textso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text  \nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\n* These typically have bullets\n* These are represented by \\<ul\\> in the HTML, standing for unordered list\n* so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\n1. These typically have bullets\n2. These are represented by \\<ul\\> in the HTML, standing for unordered list\n3. so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text",
+              "name": "Amani loves FAQs"
+            },
+            "highlightedFields": {
+              "answer": {
+                "value": "Great question! To start, you can **bold,** *italicize,* and ++underline.++ You can also create two types of lists:  \nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\n**Bulleted Lists**\n\n* These typically have bullets\n* These are represented by \\<ul\\> in the HTML, standing for unordered list\n* so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text  \nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\n**Numbered Lists**\n\n1. These have numbers next to each item\n2. These are represented by \\<ol\\> in the HTML, standing for ordered list\n3. so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text  \nYou an also add links!\n\n1. [This is a regular link](https://google.com/)\n2. [This is an email link](mailto:afarooque@yext.com)\n3. And this is a phone link \\- [Call Now](tel:+18004402000)\n4. so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much textso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text  \nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\nso much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\n* These typically have bullets\n* These are represented by \\<ul\\> in the HTML, standing for unordered list\n* so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text\n\n1. These typically have bullets\n2. These are represented by \\<ul\\> in the HTML, standing for unordered list\n3. so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text so much text",
+                "matchedSubstrings": []
+              },
+              "name": {
+                "value": "Amani loves FAQs",
+                "matchedSubstrings": [
+                  {
+                    "offset": 0,
+                    "length": 5
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "data": {
+              "id": "faq-134",
+              "type": "faq",
+              "answer": "Yes. We require a Federal Tax ID number, to verify your business status.",
+              "name": "Will I need my Federal Tax Identification Number?",
+              "c_NERTags": [
+                "Tax"
+              ]
+            },
+            "highlightedFields": {
+              "answer": {
+                "value": "Yes. We require a Federal Tax ID number, to verify your business status.",
+                "matchedSubstrings": [
+                  {
+                    "offset": 33,
+                    "length": 6
+                  }
+                ]
+              },
+              "name": {
+                "value": "Will I need my Federal Tax Identification Number?",
+                "matchedSubstrings": [
+                  {
+                    "offset": 42,
+                    "length": 6
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "data": {
+              "id": "faq-72",
+              "type": "faq",
+              "answer": "Scan your Roses' Roses Card from the App on your phone, or swipe a Roses' Roses Card that’s linked to your account. In a pinch, you can give your phone number that’s associated with your account, too.",
+              "name": "How do I let you know I’m a Madsion Sandwiches MR™ Rewards member?",
+              "c_NERTags": [
+                "your",
+                "Card",
+                "from",
+                "App",
+                "on",
+                "phone",
+                "account."
+              ]
+            },
+            "highlightedFields": {
+              "answer": {
+                "value": "Scan your Roses' Roses Card from the App on your phone, or swipe a Roses' Roses Card that’s linked to your account. In a pinch, you can give your phone number that’s associated with your account, too.",
+                "matchedSubstrings": [
+                  {
+                    "offset": 49,
+                    "length": 5
+                  },
+                  {
+                    "offset": 146,
+                    "length": 5
+                  },
+                  {
+                    "offset": 152,
+                    "length": 6
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "data": {
+              "id": "faq-99",
+              "type": "faq",
+              "answer": "Your Madsion Sandwiches Card is like your backstage pass. Scan it from the Madsion Sandwiches App or swipe the plastic Madsion Sandwiches Card at the register to redeem $2.00 Rewards or Surprise Rewards.Note: You cannot provide your mobile phone number associated with your account to redeem rewards.",
+              "name": "How do I show you I’m a Madsion Sandwiches MR™ Rewards member and get my rewards?",
+              "c_NERTags": [
+                "Madsion",
+                "Sandwiches",
+                "Card",
+                "pass.",
+                "the",
+                "App",
+                "plastic",
+                "register",
+                "redeem",
+                "$2.00",
+                "Rewards",
+                "Surprise",
+                "Rewards.Note:"
+              ]
+            },
+            "highlightedFields": {
+              "answer": {
+                "value": "Your Madsion Sandwiches Card is like your backstage pass. Scan it from the Madsion Sandwiches App or swipe the plastic Madsion Sandwiches Card at the register to redeem $2.00 Rewards or Surprise Rewards.Note: You cannot provide your mobile phone number associated with your account to redeem rewards.",
+                "matchedSubstrings": [
+                  {
+                    "offset": 240,
+                    "length": 5
+                  },
+                  {
+                    "offset": 246,
+                    "length": 6
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "data": {
+              "id": "faq-66",
+              "type": "faq",
+              "answer": "You get to keep all your tokens, as long as you make one earning Roses' Roses purchase or redeem a reward at least once every 12 months. Just scan your Roses' Roses Card or provide your phone number that’s associated with your account to earn tokens. If you don’t, your token balance will expire and reset to zero.",
+              "name": "Will my token balance expire?",
+              "c_NERTags": [
+                "tokens",
+                "redeem",
+                "reward",
+                "Roses'",
+                "Card",
+                "account",
+                "token",
+                "balance",
+                "to",
+                "zero."
+              ]
+            },
+            "highlightedFields": {
+              "answer": {
+                "value": "You get to keep all your tokens, as long as you make one earning Roses' Roses purchase or redeem a reward at least once every 12 months. Just scan your Roses' Roses Card or provide your phone number that’s associated with your account to earn tokens. If you don’t, your token balance will expire and reset to zero.",
+                "matchedSubstrings": [
+                  {
+                    "offset": 186,
+                    "length": 5
+                  },
+                  {
+                    "offset": 192,
+                    "length": 6
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "data": {
+              "id": "faq-143",
+              "type": "faq",
+              "answer": "iPhone 4s, 5, 5c, 5s, SE, 6, 6Plus, 7, 7 Plus with iOS 9.0 or later. Smartphones with Android OS 4.4 and above.",
+              "name": "What type of phone do I need to use?",
+              "c_NERTags": [
+                "iPhone",
+                "4s",
+                "5",
+                "5c",
+                "5s",
+                "SE",
+                "6",
+                "6Plus",
+                "7",
+                "Plus",
+                "iOS",
+                "9.0",
+                "or",
+                "later.",
+                "Smartphones",
+                "with",
+                "Android",
+                "OS",
+                "4.4",
+                "and",
+                "above."
+              ]
+            },
+            "highlightedFields": {
+              "name": {
+                "value": "What type of phone do I need to use?",
+                "matchedSubstrings": [
+                  {
+                    "offset": 13,
+                    "length": 5
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "data": {
+              "id": "faq-89",
+              "type": "faq",
+              "answer": "Any way you want! Sandwiches? Salads? COOKIES?! You can use the $2.00 Reward toward App, online, or in-restaurant purchases.If you’re using the Roses' Roses App or website to order, you can apply any available $2.00 Rewards to your total bill.When making a purchase in a restaurant, select the rewards you want to use in your App, and scan your Roses' Roses Card at the cash register or swipe your plastic Roses' Roses Card.Note: you may not enter your phone number to redeem your $2.00 Reward.",
+              "name": "How do I use my $2.00 Reward?"
+            },
+            "highlightedFields": {
+              "answer": {
+                "value": "Any way you want! Sandwiches? Salads? COOKIES?! You can use the $2.00 Reward toward App, online, or in-restaurant purchases.If you’re using the Roses' Roses App or website to order, you can apply any available $2.00 Rewards to your total bill.When making a purchase in a restaurant, select the rewards you want to use in your App, and scan your Roses' Roses Card at the cash register or swipe your plastic Roses' Roses Card.Note: you may not enter your phone number to redeem your $2.00 Reward.",
+                "matchedSubstrings": [
+                  {
+                    "offset": 453,
+                    "length": 5
+                  },
+                  {
+                    "offset": 459,
+                    "length": 6
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "data": {
+              "id": "faq-91",
+              "type": "faq",
+              "answer": "We know, we know - you can barely stop smiling! Who doesn’t love a surprise? You can redeem a Surprise Reward through online, App, or in-person orders at a Roses' Roses restaurant.Ordering on the go via the Roses' Roses App or online: Apply any available Surprise Rewards to your order to get your surprise.At a Roses' Roses Restaurant: Select the rewards you want to use and then scan your Roses' Roses Card at the cash register or swipe your plastic Roses' Roses Card.Note: you may not enter your phone number to redeem your Surprise Reward offer. You do not need to print out the Surprise Reward offer for redemption.",
+              "name": "How do I use my Surprise Reward?"
+            },
+            "highlightedFields": {
+              "answer": {
+                "value": "We know, we know - you can barely stop smiling! Who doesn’t love a surprise? You can redeem a Surprise Reward through online, App, or in-person orders at a Roses' Roses restaurant.Ordering on the go via the Roses' Roses App or online: Apply any available Surprise Rewards to your order to get your surprise.At a Roses' Roses Restaurant: Select the rewards you want to use and then scan your Roses' Roses Card at the cash register or swipe your plastic Roses' Roses Card.Note: you may not enter your phone number to redeem your Surprise Reward offer. You do not need to print out the Surprise Reward offer for redemption.",
+                "matchedSubstrings": [
+                  {
+                    "offset": 499,
+                    "length": 5
+                  },
+                  {
+                    "offset": 505,
+                    "length": 6
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "data": {
+              "id": "faq-100",
+              "type": "faq",
+              "answer": "You have 90 days to use your $2.00 Reward once it has been issued to you. If it is not used after 90 days, the reward will expire and you will not be able to use it.Note: Remember, your tokens don't expire, as long as you make one earning Madsion Sandwiches purchase or redeem a reward at least once every 12 months. Just scan your Madsion Sandwiches Card or provide your phone number to earn tokens. If you don't, your token balance will expire and reset to zero. The more you swipe, the more tokens you'll have which will earn you more rewards, so keep spending!",
+              "name": "I earned a $2.00 Reward! When will it expire?"
+            },
+            "highlightedFields": {
+              "answer": {
+                "value": "You have 90 days to use your $2.00 Reward once it has been issued to you. If it is not used after 90 days, the reward will expire and you will not be able to use it.Note: Remember, your tokens don't expire, as long as you make one earning Madsion Sandwiches purchase or redeem a reward at least once every 12 months. Just scan your Madsion Sandwiches Card or provide your phone number to earn tokens. If you don't, your token balance will expire and reset to zero. The more you swipe, the more tokens you'll have which will earn you more rewards, so keep spending!",
+                "matchedSubstrings": [
+                  {
+                    "offset": 372,
+                    "length": 5
+                  },
+                  {
+                    "offset": 378,
+                    "length": 6
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "data": {
+              "id": "faq-51",
+              "type": "faq",
+              "answer": "We have a number of PDF versions of the Madsion Sandwiches brochure for various regions of the world.",
+              "name": "Do you a have a franchise brochure that I can view?",
+              "c_NERTags": [
+                "Madsion",
+                "Sandwiches"
+              ]
+            },
+            "highlightedFields": {
+              "answer": {
+                "value": "We have a number of PDF versions of the Madsion Sandwiches brochure for various regions of the world.",
+                "matchedSubstrings": [
+                  {
+                    "offset": 10,
+                    "length": 6
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "appliedQueryFilters": [],
+        "queryDurationMillis": 106,
+        "facets": [],
+        "source": "KNOWLEDGE_MANAGER"
+      }
+    ],
+    "failedVerticals": [],
+    "queryId": "28aa65cc-5aff-4a4e-afcf-ad04a70738fc",
+    "directAnswer": {
+      "type": "FIELD_VALUE",
+      "answer": {
+        "entityName": "Amani Farooque",
+        "fieldName": "Phone Number",
+        "fieldApiName": "mainPhone",
+        "value": "+18003332222",
+        "fieldType": "phone"
+      },
+      "relatedItem": {
+        "verticalConfigId": "people",
+        "data": {
+          "id": "Employee-2116",
+          "type": "ce_person",
+          "website": "http://www.test.com",
+          "fieldValues": {
+            "address": {
+              "line1": "7900 Westpark Drive",
+              "city": "Mclean",
+              "region": "VA",
+              "postalCode": "22102",
+              "countryCode": "US"
+            },
+            "associations": [
+              "Runners Association"
+            ],
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mollis nunc sed id semper risus. Commodo elit at imperdiet dui accumsan sit amet nulla facilisi. Scelerisque viverra mauris in aliquam. A erat nam at lectus. Egestas purus viverra accumsan in nisl nisi scelerisque. Habitant morbi tristique senectus et netus. Congue nisi vitae suscipit tellus mauris a diam maecenas sed.",
+            "name": "Amani Farooque",
+            "cityCoordinate": {
+              "latitude": 38.936519622802734,
+              "longitude": -77.18428039550781
+            },
+            "c_allstateLadyCTA": {
+              "label": "Learn More",
+              "linkType": "URL",
+              "link": "http://yext.com"
+            },
+            "c_employeeCity": "Tysons Corner",
+            "c_employeeCountry": "United States",
+            "c_employeeDepartment": "Consulting",
+            "c_employeeRegion": "Virginia",
+            "c_employeeTitle": "Associate Technical Project Manager",
+            "c_oliverCta": {
+              "url": "https://www.yext.com/s/2287528/entity/edit2?entityIds=13411251",
+              "icon": "yext",
+              "label": "test cta"
+            },
+            "c_startDate": "2017-09-18",
+            "emails": [
+              "afarooque@yext.com",
+              "af@yext.com",
+              "aplomb@yext.com"
+            ],
+            "firstName": "Amani",
+            "geocodedCoordinate": {
+              "latitude": 38.924648,
+              "longitude": -77.216859
+            },
+            "headshot": {
+              "url": "http://a.mktgcdn.com/p/bmc3W88h2mMRXk-wHQ7dB0Em4rR_dfia6OVrAK3LjYU/192x191.png",
+              "width": 192,
+              "height": 191,
+              "sourceUrl": "http://a.mktgcdn.com/p/bmc3W88h2mMRXk-wHQ7dB0Em4rR_dfia6OVrAK3LjYU/192x191.png"
+            },
+            "languages": [
+              "German"
+            ],
+            "lastName": "Farooque",
+            "mainPhone": "+18003332222",
+            "specialities": [
+              "Documentation",
+              "Coding"
+            ],
+            "websiteUrl": {
+              "url": "http://www.test.com",
+              "displayUrl": "http://www.testdisplay.com",
+              "preferDisplayUrl": true
+            },
+            "yextDisplayCoordinate": {
+              "latitude": 38.924648,
+              "longitude": -77.216859
+            },
+            "yextRoutableCoordinate": {
+              "latitude": 38.9242965590283,
+              "longitude": -77.2177549312077
+            }
+          }
+        }
+      }
+    },
+    "searchIntents": [],
+    "locationBias": {
+      "latitude": 49.042,
+      "longitude": -72.6054,
+      "locationDisplayName": "Virginia, United States",
+      "accuracy": "IP"
+    }
+  }
+}
