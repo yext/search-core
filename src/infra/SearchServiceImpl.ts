@@ -1,3 +1,4 @@
+import createVerticalSearchResponse from '../transformers/searchservice/createVerticalSearchResponse';
 import SearchService from '../services/SearchService';
 import { BaseUrls, LiveApiEndpoints, defaultApiVersion } from '../constants';
 import { QueryParams } from '../models/http/params';
@@ -8,6 +9,8 @@ import createUniversalSearchResponse from '../transformers/searchservice/createU
 import HttpService from '../services/HttpService';
 import Config from '../models/core/Config';
 import { JsonObject } from '../models/core/JsonObject';
+import VerticalSearchRequest from '../models/searchservice/request/VerticalSearchRequest';
+import VerticalSearchResponse from '../models/searchservice/response/VerticalSearchResponse';
 
 /**
  * Internal interface representing the query params which may be sent in a universal search
@@ -28,18 +31,44 @@ interface UniversalSearchQueryParams extends QueryParams {
 }
 
 /**
+ * Internal interface representing the query params which may be sent in a vertical search
+ */
+interface VerticalSearchQueryParams extends QueryParams {
+  experienceKey: string,
+  api_key: string,
+  v: number,
+  version?: string,
+  locale?: string,
+  input: string,
+  location?: string,
+  verticalKey: string,
+  limit?: number,
+  offset?: number,
+  retrieveFacets?: boolean,
+  skipSpellCheck?: boolean,
+  queryTrigger?: QueryTrigger,
+  sessionTrackingEnabled?: boolean,
+  sortBys?: string,
+  context?: string,
+  referrerPageUrl?: string,
+  source?: string
+}
+
+/**
  * An implementation of SearchService which hits LiveAPI
  */
 export default class SearchServiceImpl implements SearchService {
   private config: Config;
   private httpService: HttpService;
   private universalSearchUrl: string;
+  private verticalSearchUrl: string;
 
   constructor(config: Config, httpService: HttpService) {
     this.config = config;
     this.httpService = httpService;
 
     this.universalSearchUrl = BaseUrls.LiveApi + LiveApiEndpoints.UniversalSearch;
+    this.verticalSearchUrl = BaseUrls.LiveApi + LiveApiEndpoints.VerticalSearch;
   }
 
   async universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
@@ -63,6 +92,36 @@ export default class SearchServiceImpl implements SearchService {
     const rawUniversalSearchResponse = await this.httpService.get<JsonObject>(this.universalSearchUrl, queryParams);
 
     return createUniversalSearchResponse(rawUniversalSearchResponse);
+  }
+
+  async verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse> {
+    this.injectToStringMethods(request);
+
+    const queryParams: VerticalSearchQueryParams = {
+      experienceKey: this.config.experienceKey,
+      api_key: this.config.apiKey,
+      v: this.config.apiVersion || defaultApiVersion,
+      version: this.config.configurationLabel,
+      locale: this.config.locale,
+      input: request.query,
+      location: request.coordinates?.toString(),
+      verticalKey: request.verticalKey,
+      limit: request.limit,
+      offset: request.offset,
+      retrieveFacets: request.retrieveFacets,
+      skipSpellCheck: request.skipSpellCheck,
+      queryTrigger: request.queryTrigger,
+      sessionTrackingEnabled: request.sessionTrackingEnabled,
+      sortBys: JSON.stringify(request.sortBys || []),
+      context: request.context?.toString(),
+      referrerPageUrl: request.referrerPageUrl,
+      source: request.querySource
+    };
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const response = await this.httpRequester.get<any>(this.verticalSearchUrl, queryParams);
+
+    return createVerticalSearchResponse(response);
   }
 
   /**
