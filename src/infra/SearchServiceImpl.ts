@@ -88,6 +88,7 @@ export default class SearchServiceImpl implements SearchService {
       referrerPageUrl: request.referrerPageUrl,
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const rawUniversalSearchResponse = await this.httpRequester.get<any>(
       this.universalSearchUrl,
       queryParams);
@@ -119,6 +120,7 @@ export default class SearchServiceImpl implements SearchService {
       source: request.querySource
     };
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const response = await this.httpRequester.get<any>(this.verticalSearchUrl, queryParams);
 
     return createVerticalSearchResponse(response);
