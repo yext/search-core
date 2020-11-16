@@ -38,11 +38,11 @@ describe('SearchService', () => {
         queryTrigger: undefined,
         referrerPageUrl: undefined,
         sessionTrackingEnabled: undefined,
-        skipSpellCheck: true,
+        skipSpellCheck: undefined,
         v: 20190101,
         version: undefined
       };
-      const searchService: SearchServiceImpl = new SearchServiceImpl(
+      const searchService = new SearchServiceImpl(
         configWithRequiredParams,
         mockHttpService as HttpService
       );
@@ -54,7 +54,7 @@ describe('SearchService', () => {
       const requestWithAllParams: UniversalSearchRequest = {
         query: 'testQuery',
         queryTrigger: QueryTrigger.Initialize,
-        spellCheckEnabled: true,
+        skipSpellCheck: true,
         sessionTrackingEnabled: true,
         coordinates: {
           latitude: '40',
@@ -75,7 +75,7 @@ describe('SearchService', () => {
         queryTrigger: 'initialize',
         referrerPageUrl: 'yext.com',
         sessionTrackingEnabled: true,
-        skipSpellCheck: false,
+        skipSpellCheck: true,
         v: 20190101,
         version: 'PRODUCTION'
       };
