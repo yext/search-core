@@ -7,6 +7,6 @@ export default interface HighlightedValue {
   value: string,
   matchedSubstrings: {
     length?: number,
-    index?: number
+    offset?: number
   }[]
 }

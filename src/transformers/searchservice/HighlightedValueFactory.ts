@@ -19,21 +19,23 @@ export default class HighlightedValueFactory {
     Object.entries(data).forEach(([fieldName]) => {
       const highlightedField = data[fieldName];
 
-      // check for nested fields
-      if (typeof highlightedField === 'object' &&
-          Object.keys(highlightedField).length > 0 &&
-          highlightedField['matchedSubstrings'] === undefined) {
+      const fieldIsNested = typeof highlightedField === 'object' &&
+        Object.keys(highlightedField).length > 0 &&
+        highlightedField['matchedSubstrings'] === undefined;
+
+      if (fieldIsNested) {
         const currentPath = [...path];
         currentPath.push(fieldName);
 
-        // recurse to children fields
         const nestedHighlightedValues = this.create(data[fieldName], currentPath);
         highlightedValues.push(...nestedHighlightedValues);
       } else {
+        const value = data[fieldName].value;
         const currentPath = [...path];
         currentPath.push(fieldName);
+        const matchedSubstrings = data[fieldName].matchedSubstrings;
 
-        const highlightedValue = this.from(data[fieldName], fieldName, currentPath);
+        const highlightedValue = this.from(value, fieldName, currentPath, matchedSubstrings);
         highlightedValues.push(highlightedValue);
       }
     });
@@ -41,12 +43,23 @@ export default class HighlightedValueFactory {
     return highlightedValues;
   }
 
-  private static from(data: any, fieldName: string, path: string[]): Readonly<HighlightedValue>{
+  /**
+   * Constructs a single HighlightedValue
+   */
+  private static from(
+    value: string,
+    fieldName: string,
+    path: string[],
+    matchedSubstrings: {
+      length: number,
+      offset: number
+    }[]): Readonly<HighlightedValue>
+  {
     return Object.freeze({
+      value: value,
       fieldName: fieldName,
       path: path,
-      value: data.value,
-      matchedSubstrings: data.matchedSubstrings
+      matchedSubstrings: matchedSubstrings
     });
   }
 }
