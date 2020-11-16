@@ -30,17 +30,9 @@ describe('SearchService', () => {
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
-        context: undefined,
         experienceKey: 'testExperienceKey',
         input: 'testQuery',
-        locale: undefined,
-        location: undefined,
-        queryTrigger: undefined,
-        referrerPageUrl: undefined,
-        sessionTrackingEnabled: undefined,
-        skipSpellCheck: undefined,
-        v: 20190101,
-        version: undefined
+        v: 20190101
       };
       const searchService = new SearchServiceImpl(
         configWithRequiredParams,

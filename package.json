@@ -56,8 +56,7 @@
       "./tests/mocks/*"
     ],
     "testMatch": [
-      "<rootDir>/tests/**/*.js",
-      "<rootDir>/tests/**/*.ts"
+      "<rootDir>/tests/**/*.[jt]s"
     ]
   }
 }
