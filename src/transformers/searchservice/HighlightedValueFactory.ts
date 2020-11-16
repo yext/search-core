@@ -19,11 +19,11 @@ export default class HighlightedValueFactory {
     Object.entries(data).forEach(([fieldName]) => {
       const highlightedField = data[fieldName];
 
-      const fieldIsNested = typeof highlightedField === 'object' &&
+      const currentFieldContainsNestedFields = typeof highlightedField === 'object' &&
         Object.keys(highlightedField).length > 0 &&
         highlightedField['matchedSubstrings'] === undefined;
 
-      if (fieldIsNested) {
+      if (currentFieldContainsNestedFields) {
         const currentPath = [...path];
         currentPath.push(fieldName);
 
