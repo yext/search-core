@@ -12,10 +12,10 @@ enum RequestMethods {
 }
 
 /**
- * HttpRequester is a wrapper around the native implementation of AJAX
+ * HttpServiceImpl is a wrapper around the native implementation of AJAX
  * related matters.
  */
-export default class HttpRequester implements HttpService {
+export default class HttpServiceImpl implements HttpService {
   /**
    * Perform a GET request
    */

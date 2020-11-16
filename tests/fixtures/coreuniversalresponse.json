@@ -20,10 +20,10 @@
               "Runners Association"
             ],
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-            "name": "Howard Lerman",
+            "name": "Bob Smith",
             "cityCoordinate": {
-              "latitude": 38.936319622802735,
-              "longitude": -74.28428039350781
+              "latitude": 30.123456,
+              "longitude": -70.123456
             },
             "c_allstateLadyCTA": {
               "label": "Learn More",
@@ -44,15 +44,15 @@
             "emails": [
               "test@yext.com"
             ],
-            "firstName": "Howard",
+            "firstName": "Bob",
             "geocodedCoordinate": {
-              "latitude": 38.924648,
-              "longitude": -77.216859
+              "latitude": 30.123456,
+              "longitude": -70.123456
             },
             "languages": [
               "German"
             ],
-            "lastName": "Lerman",
+            "lastName": "Smith",
             "mainPhone": "+18888888888",
             "specialities": [
               "Documentation",
@@ -64,16 +64,16 @@
               "preferDisplayUrl": true
             },
             "yextDisplayCoordinate": {
-              "latitude": 38.924648,
-              "longitude": -77.216859
+              "latitude": 30.123456,
+              "longitude": -70.123456
             },
             "yextRoutableCoordinate": {
-              "latitude": 38.9242965590283,
-              "longitude": -77.2177549312077
+              "latitude": 30.123456,
+              "longitude": -70.123456
             }
           },
           "index": 1,
-          "name": "Howard Lerman",
+          "name": "Bob Smith",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
           "link": "http://www.test.com",
           "id": "Employee-2116",
@@ -93,10 +93,10 @@
             "id": "1074283123523689994",
             "type": "faq",
             "answer": "Great question! To start, you can **bold,** *italicize,* and ++underline.++ You can also create lists.",
-            "name": "Howard loves FAQs"
+            "name": "Bob loves FAQs"
           },
           "index": 1,
-          "name": "Howard loves FAQs",
+          "name": "Bob loves FAQs",
           "id": "1074283123523689994"
         },
         {
@@ -134,10 +134,10 @@
           "Runners Association"
         ],
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "name": "Howard Lerman",
+        "name": "Bob Smith",
         "cityCoordinate": {
-          "latitude": 38.936319622802735,
-          "longitude": -74.28428039350781
+          "latitude": 30.123456,
+          "longitude": -70.123456
         },
         "c_allstateLadyCTA": {
           "label": "Learn More",
@@ -158,15 +158,15 @@
         "emails": [
           "test@yext.com"
         ],
-        "firstName": "Howard",
+        "firstName": "Bob",
         "geocodedCoordinate": {
-          "latitude": 38.924648,
-          "longitude": -77.216859
+          "latitude": 30.123456,
+          "longitude": -70.123456
         },
         "languages": [
           "German"
         ],
-        "lastName": "Lerman",
+        "lastName": "Smith",
         "mainPhone": "+18888888888",
         "specialities": [
           "Documentation",
@@ -178,21 +178,21 @@
           "preferDisplayUrl": true
         },
         "yextDisplayCoordinate": {
-          "latitude": 38.924648,
-          "longitude": -77.216859
+          "latitude": 30.123456,
+          "longitude": -70.123456
         },
         "yextRoutableCoordinate": {
-          "latitude": 38.9242965590283,
-          "longitude": -77.2177549312077
+          "latitude": 30.123456,
+          "longitude": -70.123456
         }
       },
-      "name": "Howard Lerman",
+      "name": "Bob Smith",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
       "link": "http://www.test.com",
       "id": "Employee-2116"
     },
     "verticalKey": "people",
-    "entityName": "Howard Lerman",
+    "entityName": "Bob Smith",
     "fieldName": "Phone Number",
     "fieldApiName": "mainPhone",
     "value": "+18888888888",
@@ -200,8 +200,8 @@
   },
   "searchIntents": ["NEAR_ME"],
   "locationBias": {
-    "latitude": 49.042,
-    "longitude": -72.6054,
+    "latitude": 30.123456,
+    "longitude": -70.123456,
     "displayName": "Virginia, United States",
     "method": "IP"
   }

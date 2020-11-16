@@ -22,7 +22,7 @@ describe('SearchService', () => {
   const mockHttpService = new HttpServiceMock();
 
   describe('Universal Search', () => {
-    mockHttpService.setMockResponse(mockUniversalResponse);
+    mockHttpService.get.mockResolvedValue(mockUniversalResponse);
     const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/query';
     it('Query params are correct when only required params are supplied', async () => {
       const requestWithRequiredParams: UniversalSearchRequest = {
