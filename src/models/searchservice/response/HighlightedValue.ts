@@ -1,12 +1,12 @@
 /**
- * A value that the API suggests to highlight
+ * Suggested highlighed values
  */
 export default interface HighlightedValue {
   fieldName: string,
-  fieldPath?: string[],
+  path?: string[],
   value: string,
   matchedSubstrings: {
-    length: number,
-    index: number
+    length?: number,
+    index?: number
   }[]
 }
