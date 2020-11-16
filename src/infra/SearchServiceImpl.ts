@@ -8,7 +8,6 @@ import UniversalSearchResponse from '../models/searchservice/response/UniversalS
 import createUniversalSearchResponse from '../transformers/searchservice/createUniversalSearchResponse';
 import HttpService from '../services/HttpService';
 import Config from '../models/core/Config';
-import { JsonObject } from '../models/core/JsonObject';
 import VerticalSearchRequest from '../models/searchservice/request/VerticalSearchRequest';
 import VerticalSearchResponse from '../models/searchservice/response/VerticalSearchResponse';
 
@@ -89,7 +88,8 @@ export default class SearchServiceImpl implements SearchService {
       referrerPageUrl: request.referrerPageUrl,
     };
 
-    const response = await this.httpService.get<JsonObject>(this.universalSearchUrl, queryParams);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const response = await this.httpService.get<any>(this.universalSearchUrl, queryParams);
 
     return createUniversalSearchResponse(response);
   }
@@ -118,7 +118,8 @@ export default class SearchServiceImpl implements SearchService {
       source: request.querySource
     };
 
-    const response = await this.httpService.get<JsonObject>(this.verticalSearchUrl, queryParams);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const response = await this.httpService.get<any>(this.verticalSearchUrl, queryParams);
 
     return createVerticalSearchResponse(response);
   }
