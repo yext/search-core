@@ -10,8 +10,12 @@ export default function createUniversalSearchResponse(data: any): Readonly<Unive
     throw new Error('The search data does not contain a response property');
   }
 
+  if (!data.meta){
+    throw new Error('The search data does not contain a meta property');
+  }
+
   const verticalResults = Array.isArray(data.response.modules)
-    ? data.response.modules.map((vertical: any) => createVerticalResults(vertical))
+    ? data.response.modules.map(createVerticalResults)
     : [];
 
   return Object.freeze({
