@@ -1,17 +1,21 @@
+/**
+ * Represents a single filter comparing a value to a field
+ */
 export default class SimpleFilter {
-  constructor(private fieldName: string,
+  constructor(
+    private fieldId: string,
     private comparator: string,
     private comparedValue: string) {}
 
-  getFieldName(): string {
-    return this.fieldName;
+  getFieldId(): string {
+    return this.fieldId;
   }
 
   getComparator(): string {
     return this.comparator;
   }
 
-  getComparedValue(): string {
+  getComparedValue(): string | number | boolean {
     return this.comparedValue;
   }
 }
