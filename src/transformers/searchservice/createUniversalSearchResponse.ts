@@ -25,6 +25,6 @@ export default function createUniversalSearchResponse(data: any): Readonly<Unive
     searchIntents: data.response.searchIntents,
     spellCheck: data.response.spellCheck && createSpellCheck(data.response.spellCheck),
     locationBias: data.response.locationBias && createLocationBias(data.response.locationBias),
-    erros: data.meta.errors && data.meta.errors.map(createAnswersError)
+    errors: data.meta.errors && data.meta.errors.map(createAnswersError)
   });
 }
