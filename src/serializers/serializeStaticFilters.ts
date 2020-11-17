@@ -4,33 +4,36 @@ import StaticFilters from '../models/searchservice/request/StaticFilters';
 
 export default function serializeStaticFilters(
   filter: CombinedFilter | SimpleFilter): string | undefined {
-  if (filter instanceof CombinedFilter) {
+  if (isCombinedFilter(filter)) {
     return JSON.stringify(shapeCombinedFilterForApi(filter));
   }
 
-  if (filter instanceof SimpleFilter) {
-    return JSON.stringify(shapeSimpleFilterForApi(filter));
-  }
+  return JSON.stringify(shapeSimpleFilterForApi(filter));
 }
 
 function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilters {
   const shapedFilters: StaticFilters[] = [];
-  for (const filter of combinedFilter.getFilters()) {
-    if (filter instanceof SimpleFilter) {
-      shapedFilters.push(shapeSimpleFilterForApi(filter));
-    } else {
+  for (const filter of combinedFilter.filters) {
+    if (isCombinedFilter(filter)) {
       shapedFilters.push(shapeCombinedFilterForApi(filter));
+    } else {
+      shapedFilters.push(shapeSimpleFilterForApi(filter));
     }
   }
   return shapedFilters.length === 1
     ? shapedFilters[0]
-    : { [combinedFilter.getCombinator()]: shapedFilters };
+    : { [combinedFilter.combinator]: shapedFilters };
 }
 
 function shapeSimpleFilterForApi(filter: SimpleFilter): StaticFilters {
   return {
-    [filter.getFieldId()]: {
-      [filter.getComparator()]: filter.getComparedValue()
+    [filter.fieldId]: {
+      [filter.comparator]: filter.comparedValue
     }
   };
+}
+
+function isCombinedFilter(filter: CombinedFilter | SimpleFilter): filter is CombinedFilter {
+  return ((filter as CombinedFilter).filters !== undefined)
+    && ((filter as CombinedFilter).combinator !== undefined);
 }
