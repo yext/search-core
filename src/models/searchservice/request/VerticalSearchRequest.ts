@@ -16,6 +16,7 @@ export default interface VerticalSearchRequest {
   limit?: number,
   offset?: number,
   retrieveFacets?: boolean,
+  facetFilters?: SimpleFilter[],
   skipSpellCheck?: boolean,
   coordinates?: Coordinates,
   queryTrigger?: QueryTrigger,

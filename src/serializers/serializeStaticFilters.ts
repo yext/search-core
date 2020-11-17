@@ -25,7 +25,7 @@ function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilter
     : { [combinedFilter.combinator]: shapedFilters };
 }
 
-function shapeSimpleFilterForApi(filter: SimpleFilter): StaticFilters {
+export function shapeSimpleFilterForApi(filter: SimpleFilter): StaticFilters {
   return {
     [filter.fieldId]: {
       [filter.comparator]: filter.comparedValue
