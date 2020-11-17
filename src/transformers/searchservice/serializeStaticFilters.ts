@@ -1,5 +1,6 @@
 import CombinedFilter from '../../models/searchservice/request/CombinedFilter';
 import SimpleFilter from '../../models/searchservice/request/SimpleFilter';
+import StaticFilters from '../../models/searchservice/request/StaticFilters';
 
 export default function serializeStaticFilters(
   filter: CombinedFilter | SimpleFilter): string | undefined {
@@ -12,7 +13,7 @@ export default function serializeStaticFilters(
   }
 }
 
-function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): any {
+function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilters {
   const shapedFilters: any[] = [];
   for (const filter of combinedFilter.getFilters()) {
     if (filter instanceof SimpleFilter) {
@@ -26,7 +27,7 @@ function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): any {
     : { [combinedFilter.getCombinator()]: shapedFilters };
 }
 
-function shapeSimpleFilterForApi(filter: SimpleFilter): any {
+function shapeSimpleFilterForApi(filter: SimpleFilter): StaticFilters {
   return {
     [filter.getFieldId()]: {
       [filter.getComparator()]: filter.getComparedValue()
