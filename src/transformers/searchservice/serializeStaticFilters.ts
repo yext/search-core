@@ -4,7 +4,7 @@ import SimpleFilter from '../../models/searchservice/request/SimpleFilter';
 export default function serializeStaticFilters(
   filter: CombinedFilter | SimpleFilter): string | undefined {
   if (filter instanceof CombinedFilter) {
-    return JSON.stringify(shapeCombinedFilterForApi([ filter ], filter.getCombinator()));
+    return JSON.stringify(shapeCombinedFilterForApi(filter));
   }
 
   if (filter instanceof SimpleFilter) {
@@ -12,19 +12,18 @@ export default function serializeStaticFilters(
   }
 }
 
-function shapeCombinedFilterForApi(
-  filters: (CombinedFilter|SimpleFilter)[], combinator: string): any {
+function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): any {
   const shapedFilters: any[] = [];
-  for (const filter of filters) {
+  for (const filter of combinedFilter.getFilters()) {
     if (filter instanceof SimpleFilter) {
       shapedFilters.push(shapeSimpleFilterForApi(filter));
     } else {
-      shapedFilters.push(shapeCombinedFilterForApi(filter.getFilters(), filter.getCombinator()));
+      shapedFilters.push(shapeCombinedFilterForApi(filter));
     }
   }
   return shapedFilters.length === 1
     ? shapedFilters[0]
-    : { [combinator]: shapedFilters };
+    : { [combinedFilter.getCombinator()]: shapedFilters };
 }
 
 function shapeSimpleFilterForApi(filter: SimpleFilter): any {
