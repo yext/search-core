@@ -4,5 +4,5 @@
 export default interface SimpleFilter {
   fieldId: string;
   comparator: string;
-  comparedValue: string;
+  comparedValue: string | number | boolean;
 }

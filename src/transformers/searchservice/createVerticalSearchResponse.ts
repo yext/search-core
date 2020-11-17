@@ -1,4 +1,5 @@
 import VerticalSearchResponse from '../../models/searchservice/response/VerticalSearchResponse';
+import createFacets from './createFacets';
 import createVerticalResults from './createVerticalResults';
 
 export default function createVerticalSearchResponse(data: any): Readonly<VerticalSearchResponse> {
@@ -10,6 +11,7 @@ export default function createVerticalSearchResponse(data: any): Readonly<Vertic
     verticalResults: createVerticalResults(data.response),
     queryId: data.response.queryId,
     directAnswer: data.response.directAnswer,
-    searchIntents: data.response.searchIntents
+    searchIntents: data.response.searchIntents,
+    facets: createFacets(data.response.facets),
   });
 }

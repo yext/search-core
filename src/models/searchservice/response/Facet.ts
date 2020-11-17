@@ -1,4 +1,4 @@
-import SimpleFilter from "../request/SimpleFilter";
+import SimpleFilter from '../request/SimpleFilter';
 
 export default interface Facet {
   fieldId: string;
