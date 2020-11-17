@@ -3,9 +3,7 @@ import createAppliedQueryFilter from './createAppliedQueryFilter';
 import VerticalResults from '../../models/searchservice/response/VerticalResults';
 
 export default function createVerticalResults(data: any): Readonly<VerticalResults> {
-  const appliedQueryFilters = data.appliedQueryFilters.map((appliedQueryFilter: any) => {
-    return createAppliedQueryFilter(appliedQueryFilter);
-  });
+  const appliedQueryFilters = data.appliedQueryFilters.map(createAppliedQueryFilter);
 
   return Object.freeze({
     appliedQueryFilters: appliedQueryFilters,
