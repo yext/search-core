@@ -10,6 +10,7 @@ import createUniversalSearchResponse from '../transformers/searchservice/createU
 import Config from '../models/core/Config';
 import VerticalSearchRequest from '../models/searchservice/request/VerticalSearchRequest';
 import VerticalSearchResponse from '../models/searchservice/response/VerticalSearchResponse';
+import serializeStaticFilters from '../serializers/serializeStaticFilters';
 
 /**
  * Internal interface representing the query params which may be sent in a universal search
@@ -41,6 +42,7 @@ interface VerticalSearchQueryParams extends QueryParams {
   input: string,
   location?: string,
   verticalKey: string,
+  filters?: string,
   limit?: number,
   offset?: number,
   retrieveFacets?: boolean,
@@ -108,6 +110,7 @@ export default class SearchServiceImpl implements SearchService {
       input: request.query,
       location: request.coordinates?.toString(),
       verticalKey: request.verticalKey,
+      filters: request.staticFilters && serializeStaticFilters(request.staticFilters),
       limit: request.limit,
       offset: request.offset,
       retrieveFacets: request.retrieveFacets,
