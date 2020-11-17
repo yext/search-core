@@ -18,8 +18,8 @@ it('createAppliedQueryFilter correctly transforms appliedQueryFilters', () => {
 
   const transformedAppliedQueryFilters = createAppliedQueryFilter(response.appliedQueryFilters[0]);
   expect(transformedAppliedQueryFilters).toMatchObject({
-    key: 'Job Category',
-    value: 'Sales',
+    displayKey: 'Job Category',
+    displayValue: 'Sales',
     filter: {
       fieldId: 'c_jobCategory',
       comparator: '$eq',
