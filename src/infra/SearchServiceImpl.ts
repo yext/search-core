@@ -81,7 +81,7 @@ export default class SearchServiceImpl implements SearchService {
       version: this.config.configurationLabel,
       location: request.coordinates?.toString(),
       locale: this.config.locale,
-      skipSpellCheck: !request.spellCheckEnabled,
+      skipSpellCheck: request.skipSpellCheck,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       queryTrigger: request.queryTrigger,
       context: request.context?.toString(),

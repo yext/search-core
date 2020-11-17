@@ -8,7 +8,7 @@ import { QueryTrigger } from './QueryTrigger';
 export default interface UniversalSearchRequest {
   query: string;
   queryTrigger?: QueryTrigger;
-  spellCheckEnabled?: boolean;
+  skipSpellCheck?: boolean;
   sessionTrackingEnabled?: boolean;
   coordinates?: Coordinates;
   context: Context

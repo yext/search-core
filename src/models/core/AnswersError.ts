@@ -3,6 +3,10 @@
  */
 export default interface AnswersError {
   code: number,
-  type: string,
+  type: ErrorType,
   message: string
+}
+
+export enum ErrorType {
+  FATAL_ERROR = 'FATAL_ERROR'
 }
