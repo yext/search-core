@@ -55,7 +55,7 @@
       "./tests/setup/setup.js"
     ],
     "testMatch": [
-      "<rootDir>/tests/**/*.js"
+      "<rootDir>/tests/**/*.[jt]s"
     ]
   }
 }
