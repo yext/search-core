@@ -1,3 +1,5 @@
+import HighlightedValue from './HighlightedValue';
+
 /**
  * An individual search result
  */
@@ -10,4 +12,5 @@ export default interface Result {
   id?: string;
   distance?: number;
   distanceFromFilter?: number;
+  highlightedValues?: HighlightedValue[];
 }
