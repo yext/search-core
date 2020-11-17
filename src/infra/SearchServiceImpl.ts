@@ -1,12 +1,12 @@
 import createVerticalSearchResponse from '../transformers/searchservice/createVerticalSearchResponse';
 import SearchService from '../services/SearchService';
-import HttpRequester from '../http/HttpRequester';
 import { BaseUrls, LiveApiEndpoints, defaultApiVersion } from '../constants';
-import { QueryParams } from '../http/params';
+import { QueryParams } from '../models/http/params';
 import { QueryTrigger } from '../models/searchservice/request/QueryTrigger';
 import UniversalSearchRequest from '../models/searchservice/request/UniversalSearchRequest';
 import UniversalSearchResponse from '../models/searchservice/response/UniversalSearchResponse';
 import createUniversalSearchResponse from '../transformers/searchservice/createUniversalSearchResponse';
+import HttpService from '../services/HttpService';
 import Config from '../models/core/Config';
 import VerticalSearchRequest from '../models/searchservice/request/VerticalSearchRequest';
 import VerticalSearchResponse from '../models/searchservice/response/VerticalSearchResponse';
@@ -62,13 +62,13 @@ interface VerticalSearchQueryParams extends QueryParams {
  */
 export default class SearchServiceImpl implements SearchService {
   private config: Config;
-  private httpRequester: HttpRequester;
+  private httpService: HttpService;
   private universalSearchUrl: string;
   private verticalSearchUrl: string;
 
-  constructor(config: Config, httpRequester: HttpRequester) {
+  constructor(config: Config, httpService: HttpService) {
     this.config = config;
-    this.httpRequester = httpRequester;
+    this.httpService = httpService;
 
     this.universalSearchUrl = BaseUrls.LiveApi + LiveApiEndpoints.UniversalSearch;
     this.verticalSearchUrl = BaseUrls.LiveApi + LiveApiEndpoints.VerticalSearch;
@@ -81,11 +81,11 @@ export default class SearchServiceImpl implements SearchService {
       input: request.query,
       experienceKey: this.config.experienceKey,
       api_key: this.config.apiKey,
-      v: this.config.apiVersion || defaultApiVersion,
+      v: defaultApiVersion,
       version: this.config.configurationLabel,
       location: request.coordinates?.toString(),
       locale: this.config.locale,
-      skipSpellCheck: !request.spellCheckEnabled,
+      skipSpellCheck: request.skipSpellCheck,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       queryTrigger: request.queryTrigger,
       context: request.context?.toString(),
@@ -93,11 +93,9 @@ export default class SearchServiceImpl implements SearchService {
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rawUniversalSearchResponse = await this.httpRequester.get<any>(
-      this.universalSearchUrl,
-      queryParams);
+    const response = await this.httpService.get<any>(this.universalSearchUrl, queryParams);
 
-    return createUniversalSearchResponse(rawUniversalSearchResponse);
+    return createUniversalSearchResponse(response);
   }
 
   async verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse> {
@@ -106,7 +104,7 @@ export default class SearchServiceImpl implements SearchService {
     const queryParams: VerticalSearchQueryParams = {
       experienceKey: this.config.experienceKey,
       api_key: this.config.apiKey,
-      v: this.config.apiVersion || defaultApiVersion,
+      v: defaultApiVersion,
       version: this.config.configurationLabel,
       locale: this.config.locale,
       input: request.query,
@@ -127,7 +125,7 @@ export default class SearchServiceImpl implements SearchService {
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const response = await this.httpRequester.get<any>(this.verticalSearchUrl, queryParams);
+    const response = await this.httpService.get<any>(this.verticalSearchUrl, queryParams);
 
     return createVerticalSearchResponse(response);
   }
@@ -135,7 +133,7 @@ export default class SearchServiceImpl implements SearchService {
   /**
    * Injects toString() methods into the request objects that require them
    */
-  injectToStringMethods(request: UniversalSearchRequest): void {
+  private injectToStringMethods(request: UniversalSearchRequest): void {
     if (request.coordinates) {
       request.coordinates.toString = function() {
         return `${this.latitude},${this.longitude}`;

@@ -1,4 +1,4 @@
-import { QueryParams, SanitizedQueryParams } from './params';
+import { QueryParams, SanitizedQueryParams } from '../models/http/params';
 
 /**
  * Updates a url with the given params.
