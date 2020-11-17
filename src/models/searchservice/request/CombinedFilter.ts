@@ -6,13 +6,18 @@ import SimpleFilter from './SimpleFilter';
 export default class CombinedFilter {
   constructor(
     private filters: (SimpleFilter | CombinedFilter)[],
-    private combinator: string) {}
+    private combinator: FilterCombinator) {}
 
   getFilters(): (SimpleFilter | CombinedFilter)[] {
     return this.filters;
   }
 
-  getCombinator(): string {
+  getCombinator(): FilterCombinator {
     return this.combinator;
   }
+}
+
+export enum FilterCombinator {
+  AND = '$and',
+  OR = '$or'
 }

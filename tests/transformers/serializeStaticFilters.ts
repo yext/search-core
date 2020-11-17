@@ -1,4 +1,4 @@
-import CombinedFilter from '../../src/models/searchservice/request/CombinedFilter';
+import CombinedFilter, { FilterCombinator } from '../../src/models/searchservice/request/CombinedFilter';
 import SimpleFilter from '../../src/models/searchservice/request/SimpleFilter';
 import serializeStaticFilters from '../../src/transformers/searchservice/serializeStaticFilters';
 
@@ -9,10 +9,10 @@ it('serializeStaticFilters works with multiple levels of nesting', () => {
         new SimpleFilter('c_Region', '$eq', 'APAC'),
         new SimpleFilter('c_Region', '$eq', 'EMEA')
       ],
-      '$or'
+      FilterCombinator.OR
     ),
     new SimpleFilter('builtin.entityType', '$eq', 'Publication'),
-  ], '$and'));
+  ], FilterCombinator.AND));
 
   const expectedSerializedFilters =
     '{"$and":[{"$or":[{"c_Region":{"$eq":"APAC"}},{"c_Region":{"$eq":"EMEA"}}]},' +
@@ -26,7 +26,7 @@ it('serializeStaticFilters works with a simple Combined Filter', () => {
       new SimpleFilter('c_Region', '$eq', 'APAC'),
       new SimpleFilter('c_Region', '$eq', 'EMEA')
     ],
-    '$or'
+    FilterCombinator.OR
   ));
 
   const expectedSerializedFilters = '{"$or":[{"c_Region":{"$eq":"APAC"}},{"c_Region":{"$eq":"EMEA"}}]}';
