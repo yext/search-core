@@ -1,5 +1,5 @@
 import { fetch as fetchPolyfill } from 'whatwg-fetch';
-import { addParamsToURL } from '../utils/urlutils';
+import { addParamsToURL, sanitizeQueryParams } from '../utils/urlutils';
 import { QueryParams } from '../models/http/params';
 import HttpService from '../services/HttpService';
 
@@ -38,12 +38,13 @@ export default class HttpServiceImpl implements HttpService {
   post<T>(
     url: string,
     queryParams: QueryParams,
-    body: BodyInit,
+    body: QueryParams,
     reqInit: RequestInit
   ): Promise<T> {
+    const sanitizedBodyParams = sanitizeQueryParams(body);
     const reqInitWithMethodAndBody = {
       method: RequestMethods.POST,
-      body: JSON.stringify(body),
+      body: JSON.stringify(sanitizedBodyParams),
       ...reqInit
     };
     return this.fetch(url, queryParams, reqInitWithMethodAndBody)

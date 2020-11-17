@@ -3,7 +3,7 @@ import createVerticalResults from './createVerticalResults';
 import createDirectAnswer from './createDirectAnswer';
 import createSpellCheck from './createSpellCheck';
 import createLocationBias from './createLocationBias';
-import createAnswersError from '../core/AnswersError';
+import createAnswersError from '../core/createAnswersError';
 
 export default function createUniversalSearchResponse(data: any): Readonly<UniversalSearchResponse> {
   if (!data.response){
