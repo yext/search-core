@@ -7,7 +7,7 @@ import createAnswersError from '../core/createAnswersError';
 
 export default function createUniversalSearchResponse(data: any): Readonly<UniversalSearchResponse> {
   if (!data.response){
-    throw new Error('The search does not contain a response property');
+    throw new Error('The search data does not contain a response property');
   }
 
   if (!data.meta){
