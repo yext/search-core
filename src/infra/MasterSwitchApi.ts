@@ -1,5 +1,5 @@
 import { BaseUrls } from '../constants';
-import HttpRequester from '../http/HttpRequester';
+import HttpServiceImpl from './HttpServiceImpl';
 
 /**
  * MasterSwitch checks if the front-end for the given experience should be temporarily disabled.
@@ -24,7 +24,7 @@ export default class MasterSwitchApi {
   }
 
   private checkApi(): Promise<boolean> {
-    const requester = new HttpRequester();
+    const requester = new HttpServiceImpl();
     const baseUrl = BaseUrls.MasterSwitch;
     const url = `${baseUrl}/${this.apiKey}/${this.experienceKey}/status.json`;
 
