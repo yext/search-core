@@ -57,7 +57,7 @@ export default class HighlightedValueFactory {
   }
 
   /**
-   * Constructs a single HighlightedValue
+   * Constructs a single {@link HighlightedValue}
    */
   private static from(
     value: string,
@@ -77,7 +77,7 @@ export default class HighlightedValueFactory {
   }
 
   /**
-   * Determines whether a field is a child highlighted field which does not contain sub-fields
+   * Determines whether or not a field is a {@link ChildHighlightedField}
    *
    * @param field
    */
