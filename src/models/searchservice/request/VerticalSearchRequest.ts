@@ -12,6 +12,7 @@ import SortBy from './SortBy';
 export default interface VerticalSearchRequest {
   query: string,
   verticalKey: string,
+  context: Context,
   limit?: number,
   offset?: number,
   retrieveFacets?: boolean,
@@ -21,7 +22,6 @@ export default interface VerticalSearchRequest {
   sessionTrackingEnabled?: boolean,
   staticFilters?: CombinedFilter | SimpleFilter,
   sortBys?: SortBy[],
-  context: Context,
   referrerPageUrl?: string,
   querySource?: string
 }
