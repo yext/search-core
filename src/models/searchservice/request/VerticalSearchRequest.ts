@@ -19,7 +19,7 @@ export default interface VerticalSearchRequest {
   coordinates?: Coordinates,
   queryTrigger?: QueryTrigger,
   sessionTrackingEnabled?: boolean,
-  filters: CombinedFilter | SimpleFilter,
+  staticFilters: CombinedFilter | SimpleFilter,
   sortBys?: SortBy[],
   context: Context,
   referrerPageUrl?: string,
