@@ -110,7 +110,7 @@ export default class SearchServiceImpl implements SearchService {
       input: request.query,
       location: request.coordinates?.toString(),
       verticalKey: request.verticalKey,
-      filters: serializeStaticFilters(request.staticFilters),
+      filters: request.staticFilters && serializeStaticFilters(request.staticFilters),
       limit: request.limit,
       offset: request.offset,
       retrieveFacets: request.retrieveFacets,
