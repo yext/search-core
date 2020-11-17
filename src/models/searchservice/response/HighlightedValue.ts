@@ -2,7 +2,7 @@
  * Represents field values or substrings of field values that the answers API emphasized
  *
  * For example, if a user searches for 'pet' and a description field in the results contains the value 'A pet store',
- * the API may match the word 'pet'
+ * the API will likely match the word 'pet'
  */
 export default interface HighlightedValue {
   fieldName: string,
