@@ -1,6 +1,6 @@
-import CombinedFilter from '../../models/searchservice/request/CombinedFilter';
-import SimpleFilter from '../../models/searchservice/request/SimpleFilter';
-import StaticFilters from '../../models/searchservice/request/StaticFilters';
+import CombinedFilter from '../models/searchservice/request/CombinedFilter';
+import SimpleFilter from '../models/searchservice/request/SimpleFilter';
+import StaticFilters from '../models/searchservice/request/StaticFilters';
 
 export default function serializeStaticFilters(
   filter: CombinedFilter | SimpleFilter): string | undefined {
@@ -14,7 +14,7 @@ export default function serializeStaticFilters(
 }
 
 function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilters {
-  const shapedFilters: any[] = [];
+  const shapedFilters: StaticFilters[] = [];
   for (const filter of combinedFilter.getFilters()) {
     if (filter instanceof SimpleFilter) {
       shapedFilters.push(shapeSimpleFilterForApi(filter));

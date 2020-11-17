@@ -1,6 +1,6 @@
 import CombinedFilter, { FilterCombinator } from '../../src/models/searchservice/request/CombinedFilter';
 import SimpleFilter from '../../src/models/searchservice/request/SimpleFilter';
-import serializeStaticFilters from '../../src/transformers/searchservice/serializeStaticFilters';
+import serializeStaticFilters from '../../src/serializers/serializeStaticFilters';
 
 it('serializeStaticFilters works with multiple levels of nesting', () => {
   const actualSerializedFilters = serializeStaticFilters(new CombinedFilter([

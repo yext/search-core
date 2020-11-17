@@ -10,7 +10,7 @@ import createUniversalSearchResponse from '../transformers/searchservice/createU
 import Config from '../models/core/Config';
 import VerticalSearchRequest from '../models/searchservice/request/VerticalSearchRequest';
 import VerticalSearchResponse from '../models/searchservice/response/VerticalSearchResponse';
-import serializeStaticFilters from '../transformers/searchservice/serializeStaticFilters';
+import serializeStaticFilters from '../serializers/serializeStaticFilters';
 
 /**
  * Internal interface representing the query params which may be sent in a universal search
