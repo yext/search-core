@@ -6,11 +6,6 @@ export default interface QuestionSubmissionRequest {
   entityId: number
   name: string
   questionText: string
-
-  /**
-   * The publisher of the question e.g 'FIRSTPARTY'
-   */
-  site: string
   questionDescription?: string
   sessionTrackingEnabled?: boolean
 }

@@ -17,6 +17,6 @@ export enum KnowledgeApiEndpoints {
 export const defaultApiVersion = 20190101;
 
 export enum Environments {
-  PRODUCTION = 'production',
-  SANDBOX = 'sandbox'
+  Production = 'production',
+  Sandbox = 'sandbox'
 }

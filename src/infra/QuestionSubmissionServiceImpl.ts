@@ -23,7 +23,7 @@ interface RawQuestionSubmissionResponse {
 export default class QuestionSubmissionServiceImpl implements QuestionSubmissionService {
   private requestUrl;
   constructor(private config: Config, private httpService: HttpService) {
-    const isStaging = config.environment === Environments.SANDBOX;
+    const isStaging = config.environment === Environments.Sandbox;
     const baseUrl = isStaging ? BaseUrls.KnowledgeApiSandbox : BaseUrls.KnowledgeApi;
     this.requestUrl = baseUrl + KnowledgeApiEndpoints.CreateQuestion;
   }
@@ -32,7 +32,6 @@ export default class QuestionSubmissionServiceImpl implements QuestionSubmission
     const queryParams = {
       v: defaultApiVersion,
       api_key: this.config.apiKey,
-      jsLibVersion: this.config.jsLibVersion,
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
 
@@ -43,7 +42,7 @@ export default class QuestionSubmissionServiceImpl implements QuestionSubmission
       questionDescription: request.questionDescription,
       questionLanguage: this.config.locale,
       questionText: request.questionText,
-      site: request.site
+      site: 'FIRSTPARTY'
     };
 
     const requestInit = {

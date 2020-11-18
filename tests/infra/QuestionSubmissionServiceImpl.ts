@@ -6,8 +6,7 @@ import HttpService from '../../src/services/HttpService';
 const baseCoreConfig = {
   apiKey: 'anApiKey',
   experienceKey: 'anExperienceKey',
-  environment: Environments.PRODUCTION,
-  jsLibVersion: 'theLibraryVersion',
+  environment: Environments.Production,
   locale: 'fr',
   configurationLabel: 'STAGING'
 };
@@ -48,7 +47,6 @@ describe('it passes request params correctly', () => {
   it('used the right query params', () => {
     const expectedQueryParams = {
       api_key: 'anApiKey',
-      jsLibVersion: 'theLibraryVersion',
       sessionTrackingEnabled: true,
       v: 20190101
     };
@@ -85,7 +83,7 @@ describe('it passes request params correctly', () => {
 it('uses the sandbox url when the environment is sandbox', async () => {
   const coreConfig = {
     ...baseCoreConfig,
-    environment: Environments.SANDBOX
+    environment: Environments.Sandbox
   };
   const qaService = new QuestionSubmissionServiceImpl(coreConfig, mockHttp as HttpService);
   await qaService.submitQuestion(qaRequest);
