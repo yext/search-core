@@ -10,6 +10,7 @@ export enum LiveApiEndpoints {
   VerticalSearch = '/v2/accounts/me/answers/vertical/query'
 }
 
+<<<<<<< HEAD
 export enum KnowledgeApiEndpoints {
   CreateQuestion = '/v2/accounts/me/createQuestion'
 }
@@ -20,3 +21,12 @@ export enum Environments {
   Production = 'production',
   Sandbox = 'sandbox'
 }
+=======
+export const defaultApiVersion = 20190101;
+
+/** The identifier of the production environment */
+export const PRODUCTION = 'production';
+
+/** The identifier of the sandbox environment */
+export const SANDBOX = 'sandbox';
+>>>>>>> 68cf57e... autocomplete: add autocomplete service

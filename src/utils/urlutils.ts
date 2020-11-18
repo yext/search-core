@@ -1,4 +1,5 @@
 import { QueryParams, SanitizedQueryParams } from '../models/http/params';
+import { PRODUCTION, SANDBOX } from '../constants';
 
 /**
  * Updates a url with the given params.
@@ -31,5 +32,13 @@ export function sanitizeQueryParams(params: QueryParams): SanitizedQueryParams {
   });
 
   return params as SanitizedQueryParams;
+}
+
+/**
+ * Returns the base url for the live api backend in the desired environment.
+ * @param {string} env The desired environment.
+ */
+export function getCachedLiveApiUrl(env = PRODUCTION) {
+  return env === SANDBOX ? 'https://liveapi-sandbox.yext.com' : 'https://liveapi-cached.yext.com';
 }
 
