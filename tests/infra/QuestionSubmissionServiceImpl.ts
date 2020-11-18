@@ -15,7 +15,6 @@ const qaRequest = {
   email: 'tom@myspace.com',
   entityId: 1234569,
   name: 'mori calliope',
-  site: 'FIRSTPARTY',
   questionText: 'an exciting question',
   sessionTrackingEnabled: true
 };
