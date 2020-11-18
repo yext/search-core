@@ -16,7 +16,7 @@ const qaRequest = {
   entityId: 1234569,
   name: 'mori calliope',
   site: 'FIRSTPARTY',
-  questionText: 'what are simps?',
+  questionText: 'an exciting question',
   sessionTrackingEnabled: true
 };
 
@@ -61,7 +61,7 @@ describe('it passes request params correctly', () => {
       name: 'mori calliope',
       site: 'FIRSTPARTY',
       questionDescription: undefined,
-      questionText: 'what are simps?',
+      questionText: 'an exciting question',
       questionLanguage: 'fr'
     };
     const actualBodyParams = actualHttpParams[2];
