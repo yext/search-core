@@ -1,8 +1,10 @@
 import AppliedQueryFilter from '../../models/searchservice/response/AppliedQueryFilter';
+import createSimpleFilter from './createSimpleFilter';
 
 export default function createAppliedQueryFilter(data: any): Readonly<AppliedQueryFilter> {
   return Object.freeze({
-    key: data.displayKey,
-    value: data.displayValue
+    displayKey: data.displayKey,
+    displayValue: data.displayValue,
+    filter: createSimpleFilter(data.filter)
   });
 }
