@@ -3,7 +3,7 @@
  */
 export default interface QuestionSubmissionRequest {
   email: string
-  entityId: number
+  entityId: string
   name: string
   questionText: string
   questionDescription?: string

@@ -13,7 +13,7 @@ const baseCoreConfig = {
 
 const qaRequest = {
   email: 'tom@myspace.com',
-  entityId: 1234569,
+  entityId: '1234569',
   name: 'mori calliope',
   questionText: 'an exciting question',
   sessionTrackingEnabled: true
@@ -23,27 +23,34 @@ const mockHttp = new HttpServiceMock();
 mockHttp.post.mockResolvedValue({
   meta: {
     uuid: 'aUUID',
-    errors: []
+    errors: [
+      {
+        code: 2246,
+        type: 'FATAL_ERROR',
+        message: 'Entity not found: 1234569'
+      }
+    ]
   },
   response: {}
 });
 
-describe('it passes request params correctly', () => {
+describe('a production env question submission', () => {
   let actualHttpParams;
+  let response;
   beforeAll(async () => {
     const qaService = new QuestionSubmissionServiceImpl(baseCoreConfig, mockHttp as HttpService);
-    await qaService.submitQuestion(qaRequest);
+    response = await qaService.submitQuestion(qaRequest);
     const mockCalls = mockHttp.post.mock.calls;
     actualHttpParams = mockCalls[mockCalls.length - 1];
   });
 
-  it('used the right url', () => {
+  it('passed the right url', () => {
     const expectedUrl = 'https://api.yext.com/v2/accounts/me/createQuestion';
     const actualUrl = actualHttpParams[0];
     expect(expectedUrl).toEqual(actualUrl);
   });
 
-  it('used the right query params', () => {
+  it('passed the right query params', () => {
     const expectedQueryParams = {
       api_key: 'anApiKey',
       sessionTrackingEnabled: true,
@@ -53,10 +60,10 @@ describe('it passes request params correctly', () => {
     expect(expectedQueryParams).toEqual(actualQueryParams);
   });
 
-  it('used the right body params', () => {
+  it('passed the right body params', () => {
     const expectedBodyParams = {
       email: 'tom@myspace.com',
-      entityId: 1234569,
+      entityId: '1234569',
       name: 'mori calliope',
       site: 'FIRSTPARTY',
       questionDescription: undefined,
@@ -67,7 +74,7 @@ describe('it passes request params correctly', () => {
     expect(expectedBodyParams).toEqual(actualBodyParams);
   });
 
-  it('used the right req init', () => {
+  it('passed the right req init', () => {
     const expectedReqInit = {
       headers: {
         'Content-Type': 'application/json'
@@ -76,6 +83,16 @@ describe('it passes request params correctly', () => {
     };
     const actualReqInit = actualHttpParams[3];
     expect(actualReqInit).toEqual(expectedReqInit);
+  });
+
+  it('parses the response correctly', () => {
+    expect(response).toMatchObject({
+      uuid: 'aUUID',
+      errors: [{
+        code: 2246,
+        message: 'Entity not found: 1234569'
+      }]
+    });
   });
 });
 
