@@ -23,7 +23,7 @@ export function addParamsToURL(
   return updatedUrl;
 }
 
-function sanitizeQueryParams(params: QueryParams): SanitizedQueryParams {
+export function sanitizeQueryParams(params: QueryParams): SanitizedQueryParams {
   Object.keys(params).forEach(key => {
     if ( params[key] === undefined || params[key] === null ) {
       delete params[key];
