@@ -6,7 +6,6 @@ import HttpService from '../../src/services/HttpService';
 const baseCoreConfig = {
   apiKey: 'anApiKey',
   experienceKey: 'anExperienceKey',
-  environment: Environments.Production,
   locale: 'fr',
   configurationLabel: 'STAGING'
 };
@@ -44,7 +43,7 @@ describe('a production env question submission', () => {
     actualHttpParams = mockCalls[mockCalls.length - 1];
   });
 
-  it('passed the right url', () => {
+  it('uses the production endpoint by default', () => {
     const expectedUrl = 'https://api.yext.com/v2/accounts/me/createQuestion';
     const actualUrl = actualHttpParams[0];
     expect(expectedUrl).toEqual(actualUrl);

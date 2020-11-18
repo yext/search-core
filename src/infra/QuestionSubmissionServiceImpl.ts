@@ -6,17 +6,6 @@ import QuestionSubmissionRequest from '../models/questionsubmission/QuestionSubm
 import QuestionSubmissionResponse from '../models/questionsubmission/QuestionSubmissionResponse';
 import createAnswersError from '../transformers/core/createAnswersError';
 
-interface RawQuestionSubmissionResponse {
-  meta: {
-    uuid: string,
-    errors: {
-      code: number,
-      type: string,
-      message: string
-    }[]
-  }
-}
-
 /**
  * An implementation of QuestionSubmissionService which hits LiveAPI
  */
@@ -52,7 +41,8 @@ export default class QuestionSubmissionServiceImpl implements QuestionSubmission
       }
     };
 
-    const data = await this.httpService.post<RawQuestionSubmissionResponse>(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const data = await this.httpService.post<any>(
       this.requestUrl,
       queryParams,
       body,
