@@ -1,12 +1,11 @@
 import { getCachedLiveApiUrl } from '../utils/urlutils';
-import AutoCompleteDataTransformer from './AutoCompleteDataTransformer';
+import AutoCompleteDataTransformer from '../transformers/autocompleteservice/AutoCompleteDataTransformer';
 import AutoCompleteRequest from '../models/autocompleteservice/AutoCompleteRequest';
 import AutoCompleteData from '../models/autocompleteservice/AutoCompleteData';
-import { defaultApiVersion } from '../constants';
+import { defaultApiVersion, LiveApiEndpoints } from '../constants';
 import Config from '../models/core/Config';
 import HttpServiceImpl from './HttpServiceImpl';
 import { QueryParams } from '../models/http/params';
-import { AnswersEndpointError } from '../errors/errors';
 import { AutoCompleteService } from '../services/AutoCompleteService';
 
 
@@ -19,7 +18,7 @@ interface UniversalAutocompleteQueryParams extends QueryParams {
   experienceKey: string,
   api_key: string,
   v: number,
-  version?: string,
+  version?: string | number,
   locale?: string,
   sessionTrackingEnabled?: boolean
 }
@@ -34,7 +33,7 @@ interface VerticalAutocompleteQueryParams extends QueryParams {
   api_key: string,
   v: number,
   verticalKey?: string,
-  version?: string,
+  version?: string | number,
   locale?: string,
   sessionTrackingEnabled?: boolean
 }
@@ -49,7 +48,7 @@ interface FilterAutocompleteQueryParams extends QueryParams {
   api_key: string,
   v: number,
   verticalKey?: string,
-  version?: string,
+  version?: string | number,
   locale?: string,
   sessionTrackingEnabled?: boolean,
   search_parameters: any
@@ -85,17 +84,14 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       locale: this.config.locale,
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
-    const univeralAutoCompleteURL = this.baseURL + '/v2/accounts/me/answers/autocomplete';
+    const univeralAutoCompleteURL = this.baseURL + LiveApiEndpoints.UniversalAutoComplete;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const rawUniversalAutocompleteResponse = await this.httpRequester.get<any>(
       univeralAutoCompleteURL,
       queryParams);
 
-    return rawUniversalAutocompleteResponse.json()
-    .then((response: { response: any; }) => AutoCompleteDataTransformer.universal(response.response))
-    .catch((error: any) => {
-      throw new AnswersEndpointError('Universal search request failed', 'AutoComplete', error);
-    });
+    return AutoCompleteDataTransformer.universal(rawUniversalAutocompleteResponse);
   }
 
   /**
@@ -115,17 +111,14 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       verticalKey: request.verticalKey,
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
-    const verticalAutoCompleteURL = this.baseURL + '/v2/accounts/me/answers/vertical/autocomplete';
+    const verticalAutoCompleteURL = this.baseURL + LiveApiEndpoints.VerticalAutoComplete;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const rawVerticalAutocompleteResponse = await this.httpRequester.get<any>(
       verticalAutoCompleteURL,
       queryParams);
 
-    return rawVerticalAutocompleteResponse.json()
-    .then((response: { response: any; }) => AutoCompleteDataTransformer.vertical(response.response))
-    .catch((error: any) => {
-      throw new AnswersEndpointError('Vertical search request failed', 'AutoComplete', error);
-    });
+    return AutoCompleteDataTransformer.vertical(rawVerticalAutocompleteResponse);
   }
 
   /**
@@ -146,16 +139,13 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       verticalKey: request.verticalKey,
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
-    const filterAutoCompleteURL = this.baseURL + '/v2/accounts/me/answers/vertical/autocomplete';
+    const filterAutoCompleteURL = this.baseURL + LiveApiEndpoints.FilterAutoComplete;
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const rawFilterAutocompleteResponse = await this.httpRequester.get<any>(
       filterAutoCompleteURL,
       queryParams);
 
-    return rawFilterAutocompleteResponse.json()
-    .then((response: { response: any; }) => AutoCompleteDataTransformer.filter(response.response))
-    .catch((error: any) => {
-      throw new AnswersEndpointError('Filter search request failed', 'AutoComplete', error);
-    });
+    return AutoCompleteDataTransformer.filter(rawFilterAutocompleteResponse);
   }
  }
