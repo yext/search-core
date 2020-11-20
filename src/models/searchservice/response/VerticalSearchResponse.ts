@@ -14,5 +14,6 @@ export default interface VerticalSearchResponseProps {
   facets?: Readonly<Facet[]>;
   spellCheck?: SpellCheck,
   locationBias?: LocationBias,
-  allResultsForVertical?: VerticalSearchResponseProps
+  allResultsForVertical?: VerticalSearchResponseProps,
+  alternativeVerticals?: Readonly<VerticalResults[]>
 }
