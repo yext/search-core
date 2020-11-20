@@ -11,7 +11,6 @@ import SpellCheck from './SpellCheck';
 export default interface VerticalSearchResponseProps {
   verticalResults: VerticalResults;
   queryId: string;
-  directAnswer?: DirectAnswer;
   searchIntents?: SearchIntent[];
   facets?: Readonly<Facet[]>;
   spellCheck?: SpellCheck,

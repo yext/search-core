@@ -12,7 +12,6 @@ export default function createVerticalSearchResponse(data: any): Readonly<Vertic
   return Object.freeze({
     verticalResults: createVerticalResults(data.response),
     queryId: data.response.queryId,
-    directAnswer: data.response.directAnswer,
     searchIntents: data.response.searchIntents,
     facets: createFacets(data.response.facets),
     spellCheck: data.response.spellCheck && createSpellCheck(data.response.spellCheck),
