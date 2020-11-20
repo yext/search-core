@@ -17,6 +17,7 @@ export default function createVerticalSearchResponse(data: any): Readonly<Vertic
     facets: createFacets(data.response.facets),
     spellCheck: data.response.spellCheck && createSpellCheck(data.response.spellCheck),
     locationBias: data.response.locationBias && createLocationBias(data.response.locationBias),
-    allResultsForVertical: data.response.allResultsForVertical && createVerticalSearchResponse({ response: data.response.allResultsForVertical }),
+    allResultsForVertical: data.response.allResultsForVertical
+      && createVerticalSearchResponse({ response: data.response.allResultsForVertical }),
   });
 }
