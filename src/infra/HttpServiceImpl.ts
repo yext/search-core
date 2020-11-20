@@ -1,6 +1,6 @@
 import { fetch as fetchPolyfill } from 'whatwg-fetch';
-import { addParamsToURL, sanitizeQueryParams } from '../utils/urlutils';
-import { QueryParams } from '../models/http/params';
+import { addParamsToURL } from '../utils/urlutils';
+import { AutoCompleteQueryParams, QueryParams } from '../models/http/params';
 import HttpService from '../services/HttpService';
 
 /**
@@ -21,7 +21,7 @@ export default class HttpServiceImpl implements HttpService {
    */
   get<T>(
     url: string,
-    queryParams: QueryParams,
+    queryParams: QueryParams | AutoCompleteQueryParams,
     options?: RequestInit,
   ): Promise<T> {
     const reqInitWithMethod = {
@@ -56,7 +56,7 @@ export default class HttpServiceImpl implements HttpService {
    */
   private fetch(
     url: string,
-    queryParams: QueryParams,
+    queryParams: QueryParams | AutoCompleteQueryParams,
     reqInit: RequestInit
   ): Promise<Response> {
     const urlWithParams = addParamsToURL(url, queryParams);

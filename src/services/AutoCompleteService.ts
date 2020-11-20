@@ -1,5 +1,5 @@
-import AutoCompleteData from '../models/autocompleteservice/AutoCompleteData';
-import AutoCompleteRequest from '../models/autocompleteservice/AutoCompleteRequest';
+import { AutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
+import { AutoCompleteRequest } from '../models/autocompleteservice/AutoCompleteRequest';
 
 /**
 * An interface for a service that performs query suggestions.
@@ -13,7 +13,7 @@ export interface AutoCompleteService {
    * @param {AutoCompleteRequest} request
    * @returns {Promise<AutoCompleteData>}
    */
-  autoCompleteForUniversal(request: AutoCompleteRequest): Promise<AutoCompleteData>;
+  autoCompleteForUniversal(request: AutoCompleteRequest): Promise<AutoCompleteResponse>;
 
   /**
    * Retrieves query suggestions for a vertical.
@@ -21,7 +21,7 @@ export interface AutoCompleteService {
    * @param {AutoCompleteRequest} request
    * @returns {Promise<AutoCompleteData>}
    */
-  autoCompleteForVertical(request: AutoCompleteRequest): Promise<AutoCompleteData>;
+  autoCompleteForVertical(request: AutoCompleteRequest): Promise<AutoCompleteResponse>;
 
   /**
    * Retrieves query suggestions for filter search.
@@ -29,5 +29,5 @@ export interface AutoCompleteService {
    * @param {AutoCompleteRequest} request
    * @returns {Promise<AutoCompleteData>}
    */
-  autoCompleteForFilter(request: AutoCompleteRequest): Promise<AutoCompleteData>;
+  autoCompleteForFilter(request: AutoCompleteRequest): Promise<AutoCompleteResponse>;
  }

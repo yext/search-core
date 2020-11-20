@@ -3,8 +3,13 @@
 * AutoComplete on vertical, universal, or filter search.
 */
 
-export default interface AutoCompleteRequest {
+export interface SearchParameters {
+  sectioned: boolean,
+  fields: any
+}
+export interface AutoCompleteRequest {
   input: string,
   verticalKey? : string,
-  sessionTrackingEnabled?: boolean
+  sessionTrackingEnabled?: boolean,
+  searchParameters?: SearchParameters
 }

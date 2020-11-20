@@ -5,6 +5,5 @@ export default interface Config {
   experienceKey: string,
   locale?: string,
   experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number,
-  environment?: Environments,
-  searchParameters?: any
+  environment?: Environments
 }
