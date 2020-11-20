@@ -18,5 +18,7 @@ export default function createVerticalSearchResponse(data: any): Readonly<Vertic
     locationBias: data.response.locationBias && createLocationBias(data.response.locationBias),
     allResultsForVertical: data.response.allResultsForVertical
       && createVerticalSearchResponse({ response: data.response.allResultsForVertical }),
+    alternativeVerticals: data.response.alternativeVerticals && data.response.alternativeVerticals.modules
+      && data.response.alternativeVerticals.modules.map(createVerticalResults),
   });
 }
