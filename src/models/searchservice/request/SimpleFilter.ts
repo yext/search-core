@@ -1,8 +1,8 @@
 /**
  * Represents a single filter comparing a value to a field
  */
-export default interface SimpleFilter {
+export default interface SimpleFilter<T> {
   fieldId: string;
   comparator: string;
-  comparedValue: string | number | boolean;
+  comparedValue: T;
 }
