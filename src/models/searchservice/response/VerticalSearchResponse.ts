@@ -1,6 +1,5 @@
 import VerticalResults from './VerticalResults';
 import { SearchIntent } from './SearchIntent';
-import DirectAnswer from './DirectAnswer';
 import Facet from './Facet';
 import LocationBias from './LocationBias';
 import SpellCheck from './SpellCheck';
