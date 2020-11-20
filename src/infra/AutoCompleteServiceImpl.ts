@@ -8,34 +8,12 @@ import HttpServiceImpl from './HttpServiceImpl';
 import { AutoCompleteQueryParams } from '../models/http/params';
 import { AutoCompleteService } from '../services/AutoCompleteService';
 
-
-/**
- * Internal interface representing the query params which are sent for a universal
- * autocomplete request.
- */
-interface UniversalAutoCompleteQueryParams extends AutoCompleteQueryParams {
-  input: string,
-  experienceKey: string,
-  api_key: string,
-  v: number,
-  version?: string | number,
-  locale?: string,
-  sessionTrackingEnabled?: boolean
-}
-
 /**
  * Internal interface representing the query params which are sent for a vertical
  * autocomplete request.
  */
 interface VerticalAutoCompleteQueryParams extends AutoCompleteQueryParams {
-  input: string,
-  experienceKey: string,
-  api_key: string,
-  v: number,
   verticalKey?: string,
-  version?: string | number,
-  locale?: string,
-  sessionTrackingEnabled?: boolean
 }
 
 /**
@@ -43,14 +21,7 @@ interface VerticalAutoCompleteQueryParams extends AutoCompleteQueryParams {
  * autocomplete request.
  */
 interface FilterAutoCompleteQueryParams extends AutoCompleteQueryParams {
-  input: string,
-  experienceKey: string,
-  api_key: string,
-  v: number,
   verticalKey?: string,
-  version?: string | number,
-  locale?: string,
-  sessionTrackingEnabled?: boolean,
   search_parameters?: SearchParameters
 }
 
@@ -59,12 +30,12 @@ interface FilterAutoCompleteQueryParams extends AutoCompleteQueryParams {
 */
 export default class AutoCompleteServiceImpl implements AutoCompleteService {
   private config: Config;
-  private httpRequester: HttpServiceImpl;
+  private httpService: HttpServiceImpl;
   private baseURL: string;
 
   constructor(config: Config, httpRequester: HttpServiceImpl) {
     this.config = config;
-    this.httpRequester = httpRequester;
+    this.httpService = httpRequester;
 
     this.baseURL = getCachedLiveApiUrl(this.config.environment);
   }
@@ -75,7 +46,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
    * @returns {Promise<AutoCompleteData>}
    */
   async autoCompleteForUniversal(request: AutoCompleteRequest): Promise<AutoCompleteResponse> {
-    const queryParams: UniversalAutoCompleteQueryParams = {
+    const queryParams: AutoCompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
       api_key: this.config.apiKey,
@@ -87,7 +58,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
     const univeralAutoCompleteURL = this.baseURL + LiveApiEndpoints.UniversalAutoComplete;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rawUniversalAutocompleteResponse = await this.httpRequester.get<any>(
+    const rawUniversalAutocompleteResponse = await this.httpService.get<any>(
       univeralAutoCompleteURL,
       queryParams);
 
@@ -114,7 +85,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
     const verticalAutoCompleteURL = this.baseURL + LiveApiEndpoints.VerticalAutoComplete;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rawVerticalAutocompleteResponse = await this.httpRequester.get<any>(
+    const rawVerticalAutocompleteResponse = await this.httpService.get<any>(
       verticalAutoCompleteURL,
       queryParams);
 
@@ -142,7 +113,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
     const filterAutoCompleteURL = this.baseURL + LiveApiEndpoints.FilterAutoComplete;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rawFilterAutocompleteResponse = await this.httpRequester.get<any>(
+    const rawFilterAutocompleteResponse = await this.httpService.get<any>(
       filterAutoCompleteURL,
       queryParams);
 
