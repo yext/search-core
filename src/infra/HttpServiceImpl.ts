@@ -1,6 +1,7 @@
 import { fetch as fetchPolyfill } from 'whatwg-fetch';
-import { addParamsToURL } from '../utils/urlutils';
-import { AutoCompleteQueryParams, QueryParams } from '../models/http/params';
+import { addParamsToURL, sanitizeQueryParams } from '../utils/urlutils';
+import { QueryParams } from '../models/http/params';
+import { AutoCompleteQueryParams } from '../models/autocompleteservice/autocompleteparams';
 import HttpService from '../services/HttpService';
 
 /**

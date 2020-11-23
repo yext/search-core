@@ -1,4 +1,5 @@
-import { AutoCompleteQueryParams, QueryParams, SanitizedQueryParams } from '../models/http/params';
+import { QueryParams, SanitizedQueryParams } from '../models/http/params';
+import { AutoCompleteQueryParams } from '../models/autocompleteservice/autocompleteparams';
 import { Environments } from '../constants';
 
 /**
@@ -24,7 +25,7 @@ export function addParamsToURL(
   return updatedUrl;
 }
 
-function sanitizeQueryParams(params: QueryParams | AutoCompleteQueryParams): SanitizedQueryParams {
+export function sanitizeQueryParams(params: QueryParams | AutoCompleteQueryParams): SanitizedQueryParams {
   Object.keys(params).forEach(key => {
     if ( params[key] === undefined || params[key] === null ) {
       delete params[key];

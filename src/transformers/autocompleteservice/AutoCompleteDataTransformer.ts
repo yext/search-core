@@ -1,4 +1,5 @@
 import { AutoCompleteResponse, AutoCompleteResponseResult } from '../../models/autocompleteservice/AutoCompleteResponse';
+import createSimpleFilter from '../core/createSimpleFilter';
 
 export default class AutoCompleteDataTransformer {
   static from(response: any): Readonly<AutoCompleteResponse> {
@@ -27,7 +28,7 @@ export default class AutoCompleteDataTransformer {
 
 function createAutoCompleteResponseResult(results: any): AutoCompleteResponseResult {
   return Object.freeze({
-    filter: results.filter || {},
+    filter: createSimpleFilter(results.filter),
     key: results.key || '',
     matchedSubstrings: results.matchedSubstrings || [],
     value: results.value || '',
