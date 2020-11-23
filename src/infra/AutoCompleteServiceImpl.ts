@@ -5,7 +5,7 @@ import { AutoCompleteResponse } from '../models/autocompleteservice/AutoComplete
 import { defaultApiVersion, LiveApiEndpoints } from '../constants';
 import Config from '../models/core/Config';
 import HttpServiceImpl from './HttpServiceImpl';
-import { AutoCompleteQueryParams } from '../models/http/params';
+import { AutoCompleteQueryParams } from '../models/autocompleteservice/autocompleteparams';
 import { AutoCompleteService } from '../services/AutoCompleteService';
 
 /**

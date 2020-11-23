@@ -1,3 +1,5 @@
+import SimpleFilter from '../searchservice/request/SimpleFilter';
+
 export interface AutoCompleteResponse {
   sections: any;
   queryId: string;
@@ -5,10 +7,10 @@ export interface AutoCompleteResponse {
 }
 
 export interface AutoCompleteResponseResult {
-  filter: any;
+  filter: SimpleFilter;
   key: string;
   matchedSubstrings: any;
   value: string;
-  shortValue: any;
+  shortValue: string;
   intents: any;
 }
