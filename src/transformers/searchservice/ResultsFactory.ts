@@ -41,7 +41,8 @@ export default class ResultsFactory {
       id: rawData.id,
       distance: result.distance,
       distanceFromFilter: result.distanceFromFilter,
-      highlightedValues: HighlightedValueFactory.create(result.highlightedFields)
+      highlightedValues: HighlightedValueFactory.create(result.highlightedFields),
+      type: rawData.type
     });
   }
 
@@ -102,7 +103,8 @@ export default class ResultsFactory {
       name: rawData.name,
       description: rawData.description,
       link: result.website,
-      id: result.id
+      id: result.id,
+      type: result.type,
     });
   }
 }

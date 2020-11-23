@@ -13,4 +13,5 @@ export default interface Result {
   distance?: number;
   distanceFromFilter?: number;
   highlightedValues?: HighlightedValue[];
+  type?: string;
 }
