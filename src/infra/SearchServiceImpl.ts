@@ -28,7 +28,8 @@ interface UniversalSearchQueryParams extends QueryParams {
   sessionTrackingEnabled?: boolean
   queryTrigger?: QueryTrigger,
   context?: string;
-  referrerPageUrl?: string
+  referrerPageUrl?: string,
+  source?: string
 }
 
 /**
@@ -90,6 +91,7 @@ export default class SearchServiceImpl implements SearchService {
       queryTrigger: request.queryTrigger,
       context: request.context?.toString(),
       referrerPageUrl: request.referrerPageUrl,
+      source: request.querySource
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

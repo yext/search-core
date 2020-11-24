@@ -13,4 +13,5 @@ export default interface UniversalSearchRequest {
   coordinates?: Coordinates;
   context?: Context
   referrerPageUrl?: string
+  querySource?: string
 }

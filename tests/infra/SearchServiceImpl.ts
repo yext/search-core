@@ -55,7 +55,8 @@ describe('SearchService', () => {
         context: {
           key: 'value'
         },
-        referrerPageUrl: 'yext.com'
+        referrerPageUrl: 'yext.com',
+        querySource: 'STANDARD'
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
@@ -69,7 +70,8 @@ describe('SearchService', () => {
         sessionTrackingEnabled: true,
         skipSpellCheck: true,
         v: 20190101,
-        version: 'PRODUCTION'
+        version: 'PRODUCTION',
+        source: 'STANDARD'
       };
       const searchService: SearchServiceImpl = new SearchServiceImpl(
         configWithAllParams,
