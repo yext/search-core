@@ -14,6 +14,11 @@ export enum KnowledgeApiEndpoints {
   CreateQuestion = '/v2/accounts/me/createQuestion'
 }
 
+export enum QuerySource {
+  Standard = 'STANDARD',
+  Overlay = 'OVERLAY'
+}
+
 export const defaultApiVersion = 20190101;
 
 export enum Environments {

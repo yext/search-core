@@ -1,7 +1,7 @@
 import Context from './Context';
 import Coordinates from './Coordinates';
 import { QueryTrigger } from './QueryTrigger';
-
+import { QuerySource } from '../../../constants';
 /**
  * Options for constructing a universal search
  */
@@ -11,7 +11,7 @@ export default interface UniversalSearchRequest {
   skipSpellCheck?: boolean;
   sessionTrackingEnabled?: boolean;
   coordinates?: Coordinates;
-  context?: Context
-  referrerPageUrl?: string
-  querySource?: string
+  context?: Context;
+  referrerPageUrl?: string;
+  querySource?: QuerySource;
 }
