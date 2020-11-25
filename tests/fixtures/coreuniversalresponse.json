@@ -72,12 +72,14 @@
               "longitude": -70.123456
             }
           },
+          "source": "KNOWLEDGE_MANAGER",
           "index": 1,
           "name": "Bob Smith",
           "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
           "link": "http://www.test.com",
           "id": "Employee-2116",
-          "distance": 36032
+          "distance": 36032,
+          "entityType": "ce_person"
         }
       ],
       "resultsCount": 1,
@@ -95,9 +97,11 @@
             "answer": "Great question! To start, you can **bold,** *italicize,* and ++underline.++ You can also create lists.",
             "name": "Bob loves FAQs"
           },
+          "source": "KNOWLEDGE_MANAGER",
           "index": 1,
           "name": "Bob loves FAQs",
-          "id": "1074283123523689994"
+          "id": "1074283123523689994",
+          "entityType": "faq"
         },
         {
           "rawData": {
@@ -109,9 +113,11 @@
               "Tax"
             ]
           },
+          "source": "KNOWLEDGE_MANAGER",
           "index": 2,
           "name": "Will I need my Federal Tax Identification Number?",
-          "id": "faq-134"
+          "id": "faq-134",
+          "entityType": "faq"
         }
       ],
       "resultsCount": 2,

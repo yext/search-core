@@ -4,4 +4,5 @@ export enum Source {
   Bing = 'BING_CSE',
   Zendesk = 'ZENDESK',
   Algolia = 'ALGOLIA',
+  Generic = 'GENERIC'
 }
