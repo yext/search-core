@@ -29,7 +29,7 @@ interface UniversalSearchQueryParams extends QueryParams {
   queryTrigger?: QueryTrigger,
   context?: string;
   referrerPageUrl?: string,
-  source?: string
+  source?: QuerySource
 }
 
 /**
@@ -55,7 +55,7 @@ interface VerticalSearchQueryParams extends QueryParams {
   sortBys?: string,
   context?: string,
   referrerPageUrl?: string,
-  source?: string
+  source?: QuerySource
 }
 
 /**
