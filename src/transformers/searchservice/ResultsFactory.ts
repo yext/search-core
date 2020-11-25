@@ -34,6 +34,7 @@ export default class ResultsFactory {
     const rawData = result.data ?? {};
     return Object.freeze({
       rawData: rawData,
+      source: Source.KnowledgeManager,
       index: result.index,
       name: rawData.name,
       description: rawData.description,
@@ -42,13 +43,14 @@ export default class ResultsFactory {
       distance: result.distance,
       distanceFromFilter: result.distanceFromFilter,
       highlightedValues: HighlightedValueFactory.create(result.highlightedFields),
-      type: rawData.type
+      entityType: rawData.type
     });
   }
 
   private static fromGoogleCustomSearchEngine(result: any): Readonly<Result> {
     return Object.freeze({
       rawData: result,
+      source: Source.Google,
       index: result.index,
       name: result.htmlTitle.replace(/(<([^>]+)>)/ig, ''),
       description: result.htmlSnippet,
@@ -59,6 +61,7 @@ export default class ResultsFactory {
   private static fromBingCustomSearchEngine(result: any): Readonly<Result> {
     return Object.freeze({
       rawData: result,
+      source: Source.Bing,
       index: result.index,
       name: result.name,
       description: result.snippet,
@@ -69,6 +72,7 @@ export default class ResultsFactory {
   private static fromZendeskSearchEngine(result: any): Readonly<Result> {
     return Object.freeze({
       rawData: result,
+      source: Source.Zendesk,
       index: result.index,
       name: result.title,
       description: result.snippet,
@@ -79,6 +83,7 @@ export default class ResultsFactory {
   private static fromAlgoliaSearchEngine(result: any): Readonly<Result> {
     return Object.freeze({
       rawData: result,
+      source: Source.Algolia,
       index: result.index,
       name: result.name,
       id: result.objectID
@@ -88,6 +93,7 @@ export default class ResultsFactory {
   private static fromGeneric(result: any): Readonly<Result> {
     return Object.freeze({
       rawData: result,
+      source: Source.Generic,
       index: result.index,
       name: result.name,
       description: result.description, // Do we want to truncate this like in the SDK?
@@ -100,11 +106,12 @@ export default class ResultsFactory {
     const rawData = result.fieldValues ?? {};
     return Object.freeze({
       rawData: rawData,
+      source: Source.KnowledgeManager,
       name: rawData.name,
       description: rawData.description,
       link: result.website,
       id: result.id,
-      type: result.type,
+      entityType: result.type,
     });
   }
 }
