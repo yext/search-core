@@ -1,6 +1,6 @@
 import createVerticalSearchResponse from '../transformers/searchservice/createVerticalSearchResponse';
 import SearchService from '../services/SearchService';
-import { BaseUrls, LiveApiEndpoints, defaultApiVersion } from '../constants';
+import { BaseUrls, LiveApiEndpoints, QuerySource, defaultApiVersion } from '../constants';
 import { QueryParams } from '../models/http/params';
 import { QueryTrigger } from '../models/searchservice/request/QueryTrigger';
 import UniversalSearchRequest from '../models/searchservice/request/UniversalSearchRequest';
@@ -28,7 +28,8 @@ interface UniversalSearchQueryParams extends QueryParams {
   sessionTrackingEnabled?: boolean
   queryTrigger?: QueryTrigger,
   context?: string;
-  referrerPageUrl?: string
+  referrerPageUrl?: string,
+  source?: QuerySource
 }
 
 /**
@@ -54,7 +55,7 @@ interface VerticalSearchQueryParams extends QueryParams {
   sortBys?: string,
   context?: string,
   referrerPageUrl?: string,
-  source?: string
+  source?: QuerySource
 }
 
 /**
@@ -90,6 +91,7 @@ export default class SearchServiceImpl implements SearchService {
       queryTrigger: request.queryTrigger,
       context: request.context?.toString(),
       referrerPageUrl: request.referrerPageUrl,
+      source: request.querySource || QuerySource.Standard
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -121,7 +123,7 @@ export default class SearchServiceImpl implements SearchService {
       sortBys: JSON.stringify(request.sortBys || []),
       context: request.context?.toString(),
       referrerPageUrl: request.referrerPageUrl,
-      source: request.querySource
+      source: request.querySource || QuerySource.Standard
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any

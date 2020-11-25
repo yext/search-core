@@ -5,6 +5,7 @@ import Config from '../../src/models/core/Config';
 import UniversalSearchRequest from '../../src/models/searchservice/request/UniversalSearchRequest';
 import HttpService from '../../src/services/HttpService';
 import { QueryTrigger } from '../../src/models/searchservice/request/QueryTrigger';
+import { QuerySource } from '../../src/constants';
 
 describe('SearchService', () => {
   const configWithRequiredParams: Config = {
@@ -32,7 +33,8 @@ describe('SearchService', () => {
         api_key: 'testApiKey',
         experienceKey: 'testExperienceKey',
         input: 'testQuery',
-        v: 20190101
+        v: 20190101,
+        source: 'STANDARD'
       };
       const searchService = new SearchServiceImpl(
         configWithRequiredParams,
@@ -55,7 +57,8 @@ describe('SearchService', () => {
         context: {
           key: 'value'
         },
-        referrerPageUrl: 'yext.com'
+        referrerPageUrl: 'yext.com',
+        querySource: QuerySource.Standard
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
@@ -69,7 +72,8 @@ describe('SearchService', () => {
         sessionTrackingEnabled: true,
         skipSpellCheck: true,
         v: 20190101,
-        version: 'PRODUCTION'
+        version: 'PRODUCTION',
+        source: 'STANDARD'
       };
       const searchService: SearchServiceImpl = new SearchServiceImpl(
         configWithAllParams,
