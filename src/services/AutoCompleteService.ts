@@ -11,7 +11,7 @@ export interface AutoCompleteService {
    * Retrieves query suggestions for universal.
    *
    * @param {AutoCompleteRequest} request
-   * @returns {Promise<AutoCompleteData>}
+   * @returns {Promise<AutoCompleteResponse>}
    */
   autoCompleteForUniversal(request: AutoCompleteRequest): Promise<AutoCompleteResponse>;
 
@@ -19,7 +19,7 @@ export interface AutoCompleteService {
    * Retrieves query suggestions for a vertical.
    *
    * @param {AutoCompleteRequest} request
-   * @returns {Promise<AutoCompleteData>}
+   * @returns {Promise<AutoCompleteResponse>}
    */
   autoCompleteForVertical(request: AutoCompleteRequest): Promise<AutoCompleteResponse>;
 
@@ -27,7 +27,7 @@ export interface AutoCompleteService {
    * Retrieves query suggestions for filter search.
    *
    * @param {AutoCompleteRequest} request
-   * @returns {Promise<AutoCompleteData>}
+   * @returns {Promise<AutoCompleteResponse>}
    */
   autoCompleteForFilter(request: AutoCompleteRequest): Promise<AutoCompleteResponse>;
  }

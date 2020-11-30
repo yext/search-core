@@ -1,16 +1,19 @@
 import SimpleFilter from '../searchservice/request/SimpleFilter';
+import { SearchIntent } from '../searchservice/response/SearchIntent';
 
 export interface AutoCompleteResponse {
-  sections: any;
+  results: AutoCompleteResult[];
   queryId: string;
-  inputIntents: any;
+  inputIntents: SearchIntent[];
 }
 
-export interface AutoCompleteResponseResult {
+export interface AutoCompleteResult {
   filter: SimpleFilter;
   key: string;
-  matchedSubstrings: any;
-  value: string;
+  matchedSubstrings: {
+    length: number,
+    offset: number
+  }[];
+  inputValue: string;
   shortValue: string;
-  intents: any;
 }

@@ -1,6 +1,7 @@
 import { getCachedLiveApiUrl } from '../utils/urlutils';
-import AutoCompleteDataTransformer from '../transformers/autocompleteservice/AutoCompleteDataTransformer';
-import { AutoCompleteRequest, SearchParameters } from '../models/autocompleteservice/AutoCompleteRequest';
+import { createAutoCompleteResponse } from '../transformers/autocompleteservice/createAutoCompleteResponse';
+import { AutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest }
+  from '../models/autocompleteservice/AutoCompleteRequest';
 import { AutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
 import { defaultApiVersion, LiveApiEndpoints } from '../constants';
 import Config from '../models/core/Config';
@@ -22,7 +23,7 @@ interface VerticalAutoCompleteQueryParams extends AutoCompleteQueryParams {
  */
 interface FilterAutoCompleteQueryParams extends AutoCompleteQueryParams {
   verticalKey?: string,
-  search_parameters?: SearchParameters
+  search_parameters?: string
 }
 
 /**
@@ -43,7 +44,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
    * Retrieves query suggestions for universal.
    *
    * @param {AutoCompleteRequest} request
-   * @returns {Promise<AutoCompleteData>}
+   * @returns {Promise<AutoCompleteResponse>}
    */
   async autoCompleteForUniversal(request: AutoCompleteRequest): Promise<AutoCompleteResponse> {
     const queryParams: AutoCompleteQueryParams = {
@@ -62,16 +63,16 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       univeralAutoCompleteURL,
       queryParams);
 
-    return AutoCompleteDataTransformer.from(rawUniversalAutocompleteResponse);
+    return createAutoCompleteResponse(rawUniversalAutocompleteResponse);
   }
 
   /**
    * Retrieves query suggestions for a vertical.
    *
-   * @param {AutoCompleteRequest} request
-   * @returns {Promise<AutoCompleteData>}
+   * @param {VerticalAutoCompleteRequest} request
+   * @returns {Promise<AutoCompleteResponse>}
    */
-  async autoCompleteForVertical(request: AutoCompleteRequest): Promise<AutoCompleteResponse> {
+  async autoCompleteForVertical(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse> {
     const queryParams: VerticalAutoCompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
@@ -89,16 +90,16 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       verticalAutoCompleteURL,
       queryParams);
 
-    return AutoCompleteDataTransformer.from(rawVerticalAutocompleteResponse);
+    return createAutoCompleteResponse(rawVerticalAutocompleteResponse);
   }
 
   /**
    * Retrieves query suggestions for filter search.
    *
-   * @param {AutoCompleteRequest} request
-   * @returns {Promise<AutoCompleteData>}
+   * @param {FilterAutoCompleteRequest} request
+   * @returns {Promise<AutoCompleteResponse>}
    */
-  async autoCompleteForFilter(request: AutoCompleteRequest): Promise<AutoCompleteResponse> {
+  async autoCompleteForFilter(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse> {
     const queryParams: FilterAutoCompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
@@ -106,7 +107,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       v: defaultApiVersion,
       version: this.config.experienceVersion,
       locale: this.config.locale,
-      search_parameters: request.searchParameters,
+      search_parameters: JSON.stringify(request.searchParameters),
       verticalKey: request.verticalKey,
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
@@ -117,6 +118,6 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       filterAutoCompleteURL,
       queryParams);
 
-    return AutoCompleteDataTransformer.from(rawFilterAutocompleteResponse);
+    return createAutoCompleteResponse(rawFilterAutocompleteResponse);
   }
  }

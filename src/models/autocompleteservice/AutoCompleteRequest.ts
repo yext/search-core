@@ -3,13 +3,24 @@
 * AutoComplete on vertical, universal, or filter search.
 */
 
-export interface SearchParameters {
-  sectioned: boolean,
-  fields: any
-}
 export interface AutoCompleteRequest {
   input: string,
-  verticalKey? : string,
   sessionTrackingEnabled?: boolean,
-  searchParameters?: SearchParameters
+}
+
+export interface VerticalAutoCompleteRequest extends AutoCompleteRequest {
+  verticalKey: string,
+}
+
+export interface FilterAutoCompleteRequest extends VerticalAutoCompleteRequest {
+  searchParameters: SearchParameters
+}
+
+export interface SearchParameters {
+  sectioned: boolean,
+  fields: {
+    fieldApiName: string,
+    entityTypeId: string,
+    fetchEntities: boolean
+  }[];
 }

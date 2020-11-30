@@ -1,7 +1,6 @@
-import { SearchParameters } from './AutoCompleteRequest';
+import { QueryParams } from '../http/params';
 
-export interface AutoCompleteQueryParams {
-  [key: string]: string | number | boolean | undefined | SearchParameters
+export interface AutoCompleteQueryParams extends QueryParams {
   input: string,
   experienceKey: string,
   api_key: string,
