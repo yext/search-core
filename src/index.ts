@@ -4,15 +4,9 @@ import SearchServiceImpl from './infra/SearchServiceImpl';
 import QuestionSubmissionServiceImpl from './infra/QuestionSubmissionServiceImpl';
 import HttpServiceImpl from './infra/HttpServiceImpl';
 import Config from './models/core/Config';
-import { Environments } from './constants';
 
-export default function provideCore(userConfig: Config): Promise<Core> {
-  const config = {
-    environment: Environments.Production,
-    ...userConfig
-  };
-
-  const masterSwitch = new MasterSwitchApi(config.apiKey, config.experienceKey);
+export default function provideCore(config: Config): Promise<Core> {
+  const masterSwitch = new MasterSwitchApi(config);
 
   return masterSwitch.isEnabled().then(isEnabled => {
     if (!isEnabled) {

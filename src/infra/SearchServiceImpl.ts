@@ -1,6 +1,6 @@
 import createVerticalSearchResponse from '../transformers/searchservice/createVerticalSearchResponse';
 import SearchService from '../services/SearchService';
-import { BaseUrls, LiveApiEndpoints, QuerySource, defaultApiVersion } from '../constants';
+import { QuerySource, defaultApiVersion, defaultEndpoints } from '../constants';
 import { QueryParams } from '../models/http/params';
 import { QueryTrigger } from '../models/searchservice/request/QueryTrigger';
 import UniversalSearchRequest from '../models/searchservice/request/UniversalSearchRequest';
@@ -21,7 +21,7 @@ interface UniversalSearchQueryParams extends QueryParams {
   experienceKey: string,
   api_key: string,
   v: number,
-  version?: string,
+  version?: string | number,
   location?: string,
   locale?: string,
   skipSpellCheck?: boolean,
@@ -39,7 +39,7 @@ interface VerticalSearchQueryParams extends QueryParams {
   experienceKey: string,
   api_key: string,
   v: number,
-  version?: string,
+  version?: string | number,
   locale?: string,
   input: string,
   location?: string,
@@ -64,15 +64,16 @@ interface VerticalSearchQueryParams extends QueryParams {
 export default class SearchServiceImpl implements SearchService {
   private config: Config;
   private httpService: HttpService;
-  private universalSearchUrl: string;
-  private verticalSearchUrl: string;
+  private verticalSearchEndpoint: string;
+  private universalSearchEndpoint: string;
 
   constructor(config: Config, httpService: HttpService) {
     this.config = config;
     this.httpService = httpService;
-
-    this.universalSearchUrl = BaseUrls.LiveApi + LiveApiEndpoints.UniversalSearch;
-    this.verticalSearchUrl = BaseUrls.LiveApi + LiveApiEndpoints.VerticalSearch;
+    this.universalSearchEndpoint = config.endpoints?.universalSearch
+      ?? defaultEndpoints.universalSearch;
+    this.verticalSearchEndpoint = config.endpoints?.verticalSearch
+      ?? defaultEndpoints.verticalSearch;
   }
 
   async universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
@@ -83,7 +84,7 @@ export default class SearchServiceImpl implements SearchService {
       experienceKey: this.config.experienceKey,
       api_key: this.config.apiKey,
       v: defaultApiVersion,
-      version: this.config.configurationLabel,
+      version: this.config.experienceVersion,
       location: request.coordinates?.toString(),
       locale: this.config.locale,
       skipSpellCheck: request.skipSpellCheck,
@@ -95,7 +96,7 @@ export default class SearchServiceImpl implements SearchService {
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const response = await this.httpService.get<any>(this.universalSearchUrl, queryParams);
+    const response = await this.httpService.get<any>(this.universalSearchEndpoint, queryParams);
 
     return createUniversalSearchResponse(response);
   }
@@ -107,7 +108,7 @@ export default class SearchServiceImpl implements SearchService {
       experienceKey: this.config.experienceKey,
       api_key: this.config.apiKey,
       v: defaultApiVersion,
-      version: this.config.configurationLabel,
+      version: this.config.experienceVersion,
       locale: this.config.locale,
       input: request.query,
       location: request.coordinates?.toString(),
@@ -127,7 +128,7 @@ export default class SearchServiceImpl implements SearchService {
     };
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const response = await this.httpService.get<any>(this.verticalSearchUrl, queryParams);
+    const response = await this.httpService.get<any>(this.verticalSearchEndpoint, queryParams);
 
     return createVerticalSearchResponse(response);
   }

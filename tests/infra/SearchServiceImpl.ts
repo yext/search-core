@@ -10,14 +10,15 @@ import { QuerySource } from '../../src/constants';
 describe('SearchService', () => {
   const configWithRequiredParams: Config = {
     apiKey: 'testApiKey',
-    experienceKey: 'testExperienceKey'
+    experienceKey: 'testExperienceKey',
+    locale: 'en'
   };
 
   const configWithAllParams: Config = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'es',
-    configurationLabel: 'PRODUCTION'
+    experienceVersion: 'PRODUCTION'
   };
 
   const mockHttpService = new HttpServiceMock();
@@ -33,6 +34,7 @@ describe('SearchService', () => {
         api_key: 'testApiKey',
         experienceKey: 'testExperienceKey',
         input: 'testQuery',
+        locale: 'en',
         v: 20190101,
         source: 'STANDARD'
       };

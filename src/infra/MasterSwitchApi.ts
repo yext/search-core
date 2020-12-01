@@ -1,11 +1,18 @@
-import { BaseUrls } from '../constants';
+import { defaultEndpoints } from '../constants';
+import Config from '../models/core/Config';
 import HttpServiceImpl from './HttpServiceImpl';
 
 /**
  * MasterSwitch checks if the front-end for the given experience should be temporarily disabled.
  */
 export default class MasterSwitchApi {
-  constructor(private apiKey: string, private experienceKey: string) {}
+  private config: Config;
+  private endpoint: string;
+
+  constructor(config: Config) {
+    this.config = config;
+    this.endpoint = config.endpoints?.status ?? defaultEndpoints.status;
+  }
 
   /**
    * Note that this check errs on the side of enabling the front-end. If the network call
@@ -25,8 +32,8 @@ export default class MasterSwitchApi {
 
   private checkApi(): Promise<boolean> {
     const requester = new HttpServiceImpl();
-    const baseUrl = BaseUrls.MasterSwitch;
-    const url = `${baseUrl}/${this.apiKey}/${this.experienceKey}/status.json`;
+    const baseUrl = this.endpoint;
+    const url = `${baseUrl}/${this.config.apiKey}/${this.config.experienceKey}/status.json`;
 
     const reqInit = {
       credentials: ('omit' as RequestCredentials)

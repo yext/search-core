@@ -1,5 +1,4 @@
 import QuestionSubmissionServiceImpl from '../../src/infra/QuestionSubmissionServiceImpl';
-import { Environments } from '../../src/constants';
 import HttpServiceMock from '../mocks/HttpServiceMock';
 import HttpService from '../../src/services/HttpService';
 
@@ -7,7 +6,7 @@ const baseCoreConfig = {
   apiKey: 'anApiKey',
   experienceKey: 'anExperienceKey',
   locale: 'fr',
-  configurationLabel: 'STAGING'
+  experienceVersion: 'STAGING'
 };
 
 const qaRequest = {
@@ -93,17 +92,4 @@ describe('a production env question submission', () => {
       }]
     });
   });
-});
-
-it('uses the sandbox url when the environment is sandbox', async () => {
-  const coreConfig = {
-    ...baseCoreConfig,
-    environment: Environments.Sandbox
-  };
-  const qaService = new QuestionSubmissionServiceImpl(coreConfig, mockHttp as HttpService);
-  await qaService.submitQuestion(qaRequest);
-  const mockCalls = mockHttp.post.mock.calls;
-  const expectedUrl = 'https://api-sandbox.yext.com/v2/accounts/me/createQuestion';
-  const actualUrl = mockCalls[mockCalls.length - 1][0];
-  expect(expectedUrl).toEqual(actualUrl);
 });
