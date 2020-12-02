@@ -7,7 +7,10 @@ export enum BaseUrls {
 
 export enum LiveApiEndpoints {
   UniversalSearch = '/v2/accounts/me/answers/query',
-  VerticalSearch = '/v2/accounts/me/answers/vertical/query'
+  VerticalSearch = '/v2/accounts/me/answers/vertical/query',
+  UniversalAutoComplete = '/v2/accounts/me/answers/autocomplete',
+  VerticalAutoComplete = '/v2/accounts/me/answers/vertical/autocomplete',
+  FilterAutoComplete = '/v2/accounts/me/answers/filtersearch'
 }
 
 export enum KnowledgeApiEndpoints {
