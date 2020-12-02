@@ -20,7 +20,7 @@ export interface SearchParameters {
   sectioned: boolean,
   fields: {
     fieldApiName: string,
-    entityTypeId: string,
+    entityType: string,
     fetchEntities: boolean
   }[];
 }
