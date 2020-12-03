@@ -32,4 +32,3 @@ export function sanitizeQueryParams(params: QueryParams): SanitizedQueryParams {
 
   return params as SanitizedQueryParams;
 }
-
