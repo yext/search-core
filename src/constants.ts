@@ -1,21 +1,4 @@
-export enum BaseUrls {
-  MasterSwitch = 'https://answersstatus.pagescdn.com',
-  LiveApi = 'https://liveapi.yext.com',
-  KnowledgeApi = 'https://api.yext.com',
-  KnowledgeApiSandbox = 'https://api-sandbox.yext.com'
-}
-
-export enum LiveApiEndpoints {
-  UniversalSearch = '/v2/accounts/me/answers/query',
-  VerticalSearch = '/v2/accounts/me/answers/vertical/query',
-  UniversalAutoComplete = '/v2/accounts/me/answers/autocomplete',
-  VerticalAutoComplete = '/v2/accounts/me/answers/vertical/autocomplete',
-  FilterAutoComplete = '/v2/accounts/me/answers/filtersearch'
-}
-
-export enum KnowledgeApiEndpoints {
-  CreateQuestion = '/v2/accounts/me/createQuestion'
-}
+import Endpoints from './models/core/Endpoints';
 
 export enum QuerySource {
   Standard = 'STANDARD',
@@ -24,7 +7,12 @@ export enum QuerySource {
 
 export const defaultApiVersion = 20190101;
 
-export enum Environments {
-  Production = 'production',
-  Sandbox = 'sandbox'
-}
+export const defaultEndpoints: Required<Endpoints> = {
+  universalSearch: 'https://liveapi.yext.com/v2/accounts/me/answers/query',
+  verticalSearch: 'https://liveapi.yext/v2/accounts/me/answers/vertical/query',
+  questionSubmission: 'https://api.yext.com/v2/accounts/me/createQuestion',
+  status: 'https://answersstatus.pagescdn.com',
+  universalAutoComplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/autocomplete',
+  verticalAutoComplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/vertical/autocomplete',
+  filterAutoComplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/filtersearch',
+};

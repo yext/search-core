@@ -1,9 +1,9 @@
-import { Environments } from '../../constants';
+import Endpoints from './Endpoints';
 
 export default interface Config {
   apiKey: string,
   experienceKey: string,
-  locale?: string,
+  locale: string,
   experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number,
-  environment?: Environments
+  endpoints?: Endpoints
 }

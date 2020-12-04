@@ -1,9 +1,8 @@
-import { getCachedLiveApiUrl } from '../utils/urlutils';
 import { createAutoCompleteResponse } from '../transformers/autocompleteservice/createAutoCompleteResponse';
-import { AutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest }
+import { AutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest, UniversalAutoCompleteRequest }
   from '../models/autocompleteservice/AutoCompleteRequest';
 import { AutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
-import { defaultApiVersion, LiveApiEndpoints } from '../constants';
+import { defaultApiVersion, defaultEndpoints } from '../constants';
 import Config from '../models/core/Config';
 import HttpServiceImpl from './HttpServiceImpl';
 import { AutoCompleteQueryParams } from '../models/autocompleteservice/autocompleteparams';
@@ -32,21 +31,61 @@ interface FilterAutoCompleteQueryParams extends AutoCompleteQueryParams {
 export default class AutoCompleteServiceImpl implements AutoCompleteService {
   private config: Config;
   private httpService: HttpServiceImpl;
-  private baseURL: string;
+  private universalEndpoint: string;
+  private verticalEndpoint: string;
+  private filterEndpoint: string;
 
   constructor(config: Config, httpRequester: HttpServiceImpl) {
     this.config = config;
     this.httpService = httpRequester;
-
-    this.baseURL = getCachedLiveApiUrl(this.config.environment);
+    this.universalEndpoint = this.config.endpoints?.universalAutoComplete
+      ?? defaultEndpoints.universalAutoComplete;
+    this.verticalEndpoint = this.config.endpoints?.verticalAutoComplete
+      ?? defaultEndpoints.verticalAutoComplete;
+    this.filterEndpoint = this.config.endpoints?.filterAutoComplete
+      ?? defaultEndpoints.filterAutoComplete;
   }
+
+  /**
+   * Performs an auto complete request based on the type of request
+   *
+   * @param {AutoCompleteRequest} request
+   * @returns {Promise<AutoCompleteResponse>}
+   */
+  async autoComplete(request: AutoCompleteRequest): Promise<AutoCompleteResponse> {
+    if (this.isFilterAutoCompleteRequest(request)) {
+      return await this.autoCompleteForFilter(request);
+    } else if (this.isVerticalAutoCompleteRequest(request)) {
+      return await this.autoCompleteForVertical(request);
+    } else {
+      return await this.autoCompleteForUniversal(request);
+    }
+  }
+
+  isFilterAutoCompleteRequest(request: AutoCompleteRequest): request is FilterAutoCompleteRequest {
+    const searchParameters = (request as FilterAutoCompleteRequest).searchParameters;
+
+    return this.isVerticalAutoCompleteRequest && searchParameters !== undefined;
+  }
+
+  isVerticalAutoCompleteRequest(request: AutoCompleteRequest): request is VerticalAutoCompleteRequest {
+    const verticalKey = (request as VerticalAutoCompleteRequest).verticalKey;
+
+    return this.isUniversalAutoCompleteRequest && verticalKey !== undefined;
+  }
+
+  isUniversalAutoCompleteRequest(request: AutoCompleteRequest): request is UniversalAutoCompleteRequest {
+    return request.input !== undefined;
+  }
+
+
   /**
    * Retrieves query suggestions for universal.
    *
    * @param {AutoCompleteRequest} request
    * @returns {Promise<AutoCompleteResponse>}
    */
-  async autoCompleteForUniversal(request: AutoCompleteRequest): Promise<AutoCompleteResponse> {
+  async autoCompleteForUniversal(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
     const queryParams: AutoCompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
@@ -56,11 +95,10 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       locale: this.config.locale,
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
-    const univeralAutoCompleteURL = this.baseURL + LiveApiEndpoints.UniversalAutoComplete;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const rawUniversalAutocompleteResponse = await this.httpService.get<any>(
-      univeralAutoCompleteURL,
+      this.universalEndpoint,
       queryParams);
 
     return createAutoCompleteResponse(rawUniversalAutocompleteResponse);
@@ -83,11 +121,10 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       verticalKey: request.verticalKey,
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
-    const verticalAutoCompleteURL = this.baseURL + LiveApiEndpoints.VerticalAutoComplete;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const rawVerticalAutocompleteResponse = await this.httpService.get<any>(
-      verticalAutoCompleteURL,
+      this.verticalEndpoint,
       queryParams);
 
     return createAutoCompleteResponse(rawVerticalAutocompleteResponse);
@@ -111,11 +148,10 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       verticalKey: request.verticalKey,
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
-    const filterAutoCompleteURL = this.baseURL + LiveApiEndpoints.FilterAutoComplete;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const rawFilterAutocompleteResponse = await this.httpService.get<any>(
-      filterAutoCompleteURL,
+      this.filterEndpoint,
       queryParams);
 
     return createAutoCompleteResponse(rawFilterAutocompleteResponse);

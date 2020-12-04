@@ -4,15 +4,10 @@ import SearchServiceImpl from './infra/SearchServiceImpl';
 import QuestionSubmissionServiceImpl from './infra/QuestionSubmissionServiceImpl';
 import HttpServiceImpl from './infra/HttpServiceImpl';
 import Config from './models/core/Config';
-import { Environments } from './constants';
+import AutoCompleteServiceImpl from './infra/AutoCompleteServiceImpl';
 
-export default function provideCore(userConfig: Config): Promise<Core> {
-  const config = {
-    environment: Environments.Production,
-    ...userConfig
-  };
-
-  const masterSwitch = new MasterSwitchApi(config.apiKey, config.experienceKey);
+export default function provideCore(config: Config): Promise<Core> {
+  const masterSwitch = new MasterSwitchApi(config);
 
   return masterSwitch.isEnabled().then(isEnabled => {
     if (!isEnabled) {
@@ -21,6 +16,7 @@ export default function provideCore(userConfig: Config): Promise<Core> {
     const httpService = new HttpServiceImpl();
     const searchService = new SearchServiceImpl(config, httpService);
     const questionSubmissionService = new QuestionSubmissionServiceImpl(config, httpService);
-    return new Core(searchService, questionSubmissionService);
+    const autoCompleteService = new AutoCompleteServiceImpl(config, httpService);
+    return new Core(searchService, questionSubmissionService, autoCompleteService);
   });
 }

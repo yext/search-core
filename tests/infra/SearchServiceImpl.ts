@@ -8,25 +8,19 @@ import { QueryTrigger } from '../../src/models/searchservice/request/QueryTrigge
 import { QuerySource } from '../../src/constants';
 
 describe('SearchService', () => {
+  const mockHttpService = new HttpServiceMock();
+
   const configWithRequiredParams: Config = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
-    environment: 'test'
+    locale: 'en'
   };
-
-  const configWithAllParams: Config = {
-    apiKey: 'testApiKey',
-    experienceKey: 'testExperienceKey',
-    locale: 'es',
-    experienceVersion: 'PRODUCTION',
-    environment: 'test'
-  };
-
-  const mockHttpService = new HttpServiceMock();
 
   describe('Universal Search', () => {
     mockHttpService.get.mockResolvedValue(mockUniversalResponse);
     const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/query';
+
+
     it('Query params are correct when only required params are supplied', async () => {
       const requestWithRequiredParams: UniversalSearchRequest = {
         query: 'testQuery'
@@ -35,6 +29,7 @@ describe('SearchService', () => {
         api_key: 'testApiKey',
         experienceKey: 'testExperienceKey',
         input: 'testQuery',
+        locale: 'en',
         v: 20190101,
         source: 'STANDARD'
       };
@@ -62,6 +57,12 @@ describe('SearchService', () => {
         referrerPageUrl: 'yext.com',
         querySource: QuerySource.Standard
       };
+      const configWithAllParams: Config = {
+        apiKey: 'testApiKey',
+        experienceKey: 'testExperienceKey',
+        locale: 'es',
+        experienceVersion: 'PRODUCTION'
+      };
       const expectedQueryParams = {
         api_key: 'testApiKey',
         context: '{\"key\":\"value\"}',
@@ -83,6 +84,21 @@ describe('SearchService', () => {
       );
       await searchService.universalSearch(requestWithAllParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+    });
+
+    it('A custom universal search service endpoint may be supplied', async () => {
+      const config: Config = {
+        ...configWithRequiredParams,
+        endpoints: {
+          universalSearch: 'http://custom.endpoint.com/api'
+        }
+      };
+      const searchService: SearchServiceImpl = new SearchServiceImpl(
+        config,
+        mockHttpService as HttpService
+      );
+      await searchService.universalSearch({query: 'test'});
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expect.anything());
     });
   });
 });

@@ -1,5 +1,5 @@
 /**
- * Options for a QuestionSubmission createQuestion request
+ * Options for a QuestionSubmission request
  */
 export default interface QuestionSubmissionRequest {
   email: string

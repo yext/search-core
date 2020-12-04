@@ -1,4 +1,4 @@
-import { BaseUrls, KnowledgeApiEndpoints, defaultApiVersion, Environments } from '../constants';
+import { defaultApiVersion, defaultEndpoints } from '../constants';
 import QuestionSubmissionService from '../services/QuestionSubmissionService';
 import HttpService from '../services/HttpService';
 import Config from '../models/core/Config';
@@ -10,11 +10,10 @@ import createAnswersError from '../transformers/core/createAnswersError';
  * An implementation of QuestionSubmissionService which hits LiveAPI
  */
 export default class QuestionSubmissionServiceImpl implements QuestionSubmissionService {
-  private requestUrl;
+  private endpoint: string;
   constructor(private config: Config, private httpService: HttpService) {
-    const isStaging = config.environment === Environments.Sandbox;
-    const baseUrl = isStaging ? BaseUrls.KnowledgeApiSandbox : BaseUrls.KnowledgeApi;
-    this.requestUrl = baseUrl + KnowledgeApiEndpoints.CreateQuestion;
+    this.endpoint = this.config.endpoints?.questionSubmission
+      ?? defaultEndpoints.questionSubmission;
   }
 
   async submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse> {
@@ -43,7 +42,7 @@ export default class QuestionSubmissionServiceImpl implements QuestionSubmission
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const data = await this.httpService.post<any>(
-      this.requestUrl,
+      this.endpoint,
       queryParams,
       body,
       requestInit
