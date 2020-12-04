@@ -16,11 +16,13 @@ export interface FilterAutoCompleteRequest extends VerticalAutoCompleteRequest {
   searchParameters: SearchParameters
 }
 
+export interface SearchParameterField {
+  fieldApiName: string,
+  entityType: string,
+  fetchEntities: boolean
+}
+
 export interface SearchParameters {
   sectioned: boolean,
-  fields: {
-    fieldApiName: string,
-    entityType: string,
-    fetchEntities: boolean
-  }[];
+  fields: SearchParameterField[];
 }

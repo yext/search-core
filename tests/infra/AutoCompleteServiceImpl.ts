@@ -68,7 +68,7 @@ describe('AutoCompleteService', () => {
   describe('Filter AutoComplete', () => {
     const expectedFilterUrl = 'https://liveapi-cached.yext.com/v2/accounts/me/answers/filtersearch';
       it('query params are correct', async () => {
-        const searchParam: SearchParameters = {
+        const searchParams: SearchParameters = {
           sectioned: false,
             fields: [{
               fieldApiName: 'field',
@@ -76,11 +76,19 @@ describe('AutoCompleteService', () => {
               fetchEntities: false
             }]
         };
+        const convertedSearchParams = {
+          sectioned: false,
+            fields: [{
+              fieldId: 'field',
+              entityTypeId: 'location',
+              fetchEntities: false
+            }]
+        };
         const request: FilterAutoCompleteRequest = {
           input: 'salesforce',
           sessionTrackingEnabled: false,
           verticalKey: 'verticalKey',
-          searchParameters: searchParam
+          searchParameters: searchParams
         };
         const expectedQueryParams = {
           input: 'salesforce',
@@ -90,7 +98,7 @@ describe('AutoCompleteService', () => {
           locale: 'en',
           sessionTrackingEnabled: false,
           verticalKey: 'verticalKey',
-          search_parameters: JSON.stringify(searchParam)
+          search_parameters: JSON.stringify(convertedSearchParams)
         };
         const autocompleteService = new AutoCompleteServiceImpl(
           config,
