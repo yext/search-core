@@ -1,0 +1,28 @@
+{
+  "response": {
+    "businessId": 2287528,
+    "sections": [
+      {
+        "results": [
+          {
+            "key": "name",
+            "value": "Virginia Beach",
+            "filter": {
+              "name": {
+                "$eq": "Virginia Beach"
+              }
+            },
+            "matchedSubstrings": [
+              {
+                "offset": 0,
+                "length": 8
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "failedVerticals": [],
+    "queryId": "42d5b709-3b9f-464a-b9b5-764467cbf540"
+  }
+}
