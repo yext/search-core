@@ -18,7 +18,7 @@ module.exports = {
     'quote-props': ['error', 'as-needed'],
     'max-len': ['error', {
         code: 125,
-        ignorePattern: '^const\\s.+=\\s*require\\s*\\('
+        ignorePattern: '^import\\s.+\\sfrom\\s.+;$'
     }],
     '@typescript-eslint/semi': ['error'],
     '@typescript-eslint/type-annotation-spacing': ['error'],
