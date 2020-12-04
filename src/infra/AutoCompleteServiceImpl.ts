@@ -1,6 +1,6 @@
 import { createAutoCompleteResponse } from '../transformers/autocompleteservice/createAutoCompleteResponse';
 import { VerticalAutoCompleteRequest, FilterAutoCompleteRequest,
-  UniversalAutoCompleteRequest, SearchParameters }
+  UniversalAutoCompleteRequest, SearchParameters, SearchParameterField }
   from '../models/autocompleteservice/AutoCompleteRequest';
 import { AutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
 import { defaultApiVersion, defaultEndpoints } from '../constants';
@@ -8,7 +8,6 @@ import Config from '../models/core/Config';
 import HttpService from '../services/HttpService';
 import { AutoCompleteQueryParams } from '../models/autocompleteservice/autocompleteparams';
 import { AutoCompleteService } from '../services/AutoCompleteService';
-import { createConvertedSearchParamField } from '../transformers/autocompleteservice/createConvertedSearchParamField';
 
 /**
  * Internal interface representing the query params which are sent for a vertical
@@ -128,7 +127,13 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
   }
 
   private getFilterSearchParams(searchParams: SearchParameters) {
-    const convertedFields = searchParams.fields.map(createConvertedSearchParamField);
+    const convertedFields = searchParams.fields.map((field: SearchParameterField) => (
+      {
+        fieldId: field.fieldApiName,
+        entityTypeId: field.entityType,
+        fetchEntities: field.fetchEntities
+      }
+    ));
     const convertedSearchParams = {
       sectioned: searchParams.sectioned,
       fields: convertedFields

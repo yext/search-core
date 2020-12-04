@@ -18,7 +18,7 @@ describe('AutoCompleteService', () => {
   describe('Universal AutoComplete', () => {
     const expectedUniversalUrl = 'https://liveapi-cached.yext.com/v2/accounts/me/answers/autocomplete';
     mockHttpService.get.mockResolvedValue(mockAutoCompleteResponse);
-    it('query params are correct with sections returned', async () => {
+    it('query params are correct', async () => {
       const request: AutoCompleteRequest = {
         input: '',
         sessionTrackingEnabled: false
