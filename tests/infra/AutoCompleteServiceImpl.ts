@@ -84,7 +84,7 @@ describe('AutoCompleteService', () => {
           fields: [{
             fieldId: 'field',
             entityTypeId: 'location',
-            fetchEntities: false
+            shouldFetchEntities: false
           }]
       };
       const request: FilterAutoCompleteRequest = {

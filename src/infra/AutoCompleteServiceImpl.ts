@@ -131,7 +131,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       {
         fieldId: field.fieldApiName,
         entityTypeId: field.entityType,
-        fetchEntities: field.fetchEntities
+        shouldFetchEntities: field.fetchEntities
       }
     ));
     const convertedSearchParams = {
