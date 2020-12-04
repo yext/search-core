@@ -3,17 +3,17 @@ import { SearchIntent } from '../searchservice/response/SearchIntent';
 
 export interface AutoCompleteResponse {
   results: AutoCompleteResult[];
-  queryId: string;
   inputIntents: SearchIntent[];
+  queryId?: string;
 }
 
 export interface AutoCompleteResult {
-  filter: SimpleFilter;
-  key: string;
-  matchedSubstrings: {
+  value: string;
+  filter?: SimpleFilter;
+  key?: string;
+  matchedSubstrings?: {
     length: number,
     offset: number
   }[];
-  inputValue: string;
-  shortValue: string;
+  shortValue?: string;
 }

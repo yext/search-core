@@ -7,11 +7,15 @@ import VerticalSearchResponse from './models/searchservice/response/VerticalSear
 import QuestionSubmissionService from './services/QuestionSubmissionService';
 import QuestionSubmissionRequest from './models/questionsubmission/QuestionSubmissionRequest';
 import QuestionSubmissionResponse from './models/questionsubmission/QuestionSubmissionResponse';
+import { AutoCompleteRequest } from './models/autocompleteservice/AutoCompleteRequest';
+import { AutoCompleteResponse } from './models/autocompleteservice/AutoCompleteResponse';
+import { AutoCompleteService } from './services/AutoCompleteService';
 
 export default class Core {
   constructor(
     private searchService: SearchService,
-    private questionSubmissionService: QuestionSubmissionService
+    private questionSubmissionService: QuestionSubmissionService,
+    private autoCompleteService: AutoCompleteService
   ) {}
 
   universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
@@ -24,5 +28,9 @@ export default class Core {
 
   submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse> {
     return this.questionSubmissionService.submitQuestion(request);
+  }
+
+  autoComplete(request: AutoCompleteRequest): Promise<AutoCompleteResponse> {
+    return this.autoCompleteService.autoComplete(request);
   }
 }

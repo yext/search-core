@@ -13,6 +13,6 @@ export const defaultEndpoints: Required<Endpoints> = {
   questionSubmission: 'https://api.yext.com/v2/accounts/me/createQuestion',
   status: 'https://answersstatus.pagescdn.com',
   universalAutoComplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/autocomplete',
-  verticalAutoComplete: 'https://liveapi-cached.yext.com//v2/accounts/me/answers/vertical/autocomplete',
-  filterAutoComplete: 'https://liveapi-cached.yext.com//v2/accounts/me/answers/filtersearch',
+  verticalAutoComplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/vertical/autocomplete',
+  filterAutoComplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/filtersearch',
 };

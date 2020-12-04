@@ -1,5 +1,5 @@
 import { AutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
-import { AutoCompleteRequest } from '../models/autocompleteservice/AutoCompleteRequest';
+import { UniversalAutoCompleteRequest, FilterAutoCompleteRequest, VerticalAutoCompleteRequest, AutoCompleteRequest } from '../models/autocompleteservice/AutoCompleteRequest';
 
 /**
 * An interface for a service that performs query suggestions.
@@ -8,26 +8,34 @@ import { AutoCompleteRequest } from '../models/autocompleteservice/AutoCompleteR
 export interface AutoCompleteService {
 
   /**
-   * Retrieves query suggestions for universal.
+   * Performs an auto complete request based on the type of request
    *
    * @param {AutoCompleteRequest} request
    * @returns {Promise<AutoCompleteResponse>}
    */
-  autoCompleteForUniversal(request: AutoCompleteRequest): Promise<AutoCompleteResponse>;
+  autoComplete(request: AutoCompleteRequest): Promise<AutoCompleteResponse>;
+
+  /**
+   * Retrieves query suggestions for universal.
+   *
+   * @param {UniversalAutoCompleteRequest} request
+   * @returns {Promise<AutoCompleteResponse>}
+   */
+  autoCompleteForUniversal(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse>;
 
   /**
    * Retrieves query suggestions for a vertical.
    *
-   * @param {AutoCompleteRequest} request
+   * @param {VerticalAutoCompleteRequest} request
    * @returns {Promise<AutoCompleteResponse>}
    */
-  autoCompleteForVertical(request: AutoCompleteRequest): Promise<AutoCompleteResponse>;
+  autoCompleteForVertical(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse>;
 
   /**
    * Retrieves query suggestions for filter search.
    *
-   * @param {AutoCompleteRequest} request
+   * @param {FilterAutoCompleteRequest} request
    * @returns {Promise<AutoCompleteResponse>}
    */
-  autoCompleteForFilter(request: AutoCompleteRequest): Promise<AutoCompleteResponse>;
+  autoCompleteForFilter(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse>;
  }
