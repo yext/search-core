@@ -10,14 +10,8 @@ export function createAutoCompleteResponse(data: any): Readonly<AutoCompleteResp
   let responseResults: AutoCompleteResult[] = [];
   // the response may have its results nested in a sections object
   if (response.sections) {
-    const sections = response.sections.map((section: any) => ({
-      sectionResults: section.results.map(createAutoCompleteResult)
-    }));
-    sections.forEach((section: any) => {
-      section.sectionResults.forEach((result: AutoCompleteResult) => {
-        responseResults.push(result);
-      });
-    });
+    responseResults = response.sections.flatMap((section: any) =>
+      section.results.map(createAutoCompleteResult));
   } else {
     responseResults = response.results.map(createAutoCompleteResult);
   }
