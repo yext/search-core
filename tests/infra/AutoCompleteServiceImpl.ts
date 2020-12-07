@@ -5,6 +5,7 @@ import HttpService from '../../src/services/HttpService';
 import AutoCompleteServiceImpl from '../../src/infra/AutoCompleteServiceImpl';
 import mockAutoCompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutoCompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
+import { createAutoCompleteResponse } from '../../src/transformers/autocompleteservice/createAutoCompleteResponse';
 
 describe('AutoCompleteService', () => {
   const config: Config = {
@@ -109,6 +110,53 @@ describe('AutoCompleteService', () => {
       );
       await autocompleteService.autoCompleteForFilter(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams);
+    });
+  });
+
+  describe('AutoCompleteResponse', () => {
+    it('response without sections is parsed correctly', () => {
+      const expectedResponse = {
+        inputIntents: [],
+        results: [
+          {
+            value: 'salesforce',
+            matchedSubstrings: [
+              {
+                offset: 0,
+                length: 10
+              }
+            ]
+          }
+        ]
+      };
+      const actualResponse = createAutoCompleteResponse(mockAutoCompleteResponse);
+      expect(actualResponse).toEqual(expectedResponse);
+    });
+
+    it('response with sections is parsed correctly', () => {
+      const expectedResponse = {
+        inputIntents: [],
+        queryId: '42d5b709-3b9f-464a-b9b5-764467cbf540',
+        results: [
+          {
+            value: 'Virginia Beach',
+            matchedSubstrings: [
+              {
+                offset: 0,
+                length: 8
+              }
+            ],
+            filter: {
+              comparator: '$eq',
+              comparedValue: 'Virginia Beach',
+              fieldId: 'name'
+            },
+            key: 'name'
+          }
+        ]
+      };
+      const actualResponse = createAutoCompleteResponse(mockAutoCompleteResponseWithSections);
+      expect(actualResponse).toEqual(expectedResponse);
     });
   });
 });
