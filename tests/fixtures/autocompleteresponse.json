@@ -1,0 +1,20 @@
+{
+  "response": {
+    "input": {
+      "value": "salesforce",
+      "queryIntents": ["NEAR_ME"]
+    },
+    "results": [
+      {
+        "value": "salesforce",
+        "matchedSubstrings": [
+          {
+            "offset": 0,
+            "length": 10
+          }
+        ],
+        "queryIntents": ["NEAR_ME"]
+      }
+    ]
+  }
+}

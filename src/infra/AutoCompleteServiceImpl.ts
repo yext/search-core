@@ -1,10 +1,11 @@
 import { createAutoCompleteResponse } from '../transformers/autocompleteservice/createAutoCompleteResponse';
-import { VerticalAutoCompleteRequest, FilterAutoCompleteRequest, UniversalAutoCompleteRequest }
+import { VerticalAutoCompleteRequest, FilterAutoCompleteRequest,
+  UniversalAutoCompleteRequest, SearchParameters, SearchParameterField }
   from '../models/autocompleteservice/AutoCompleteRequest';
 import { AutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
 import { defaultApiVersion, defaultEndpoints } from '../constants';
 import Config from '../models/core/Config';
-import HttpServiceImpl from './HttpServiceImpl';
+import HttpService from '../services/HttpService';
 import { AutoCompleteQueryParams } from '../models/autocompleteservice/autocompleteparams';
 import { AutoCompleteService } from '../services/AutoCompleteService';
 
@@ -30,12 +31,12 @@ interface FilterAutoCompleteQueryParams extends AutoCompleteQueryParams {
 */
 export default class AutoCompleteServiceImpl implements AutoCompleteService {
   private config: Config;
-  private httpService: HttpServiceImpl;
+  private httpService: HttpService;
   private universalEndpoint: string;
   private verticalEndpoint: string;
   private filterEndpoint: string;
 
-  constructor(config: Config, httpRequester: HttpServiceImpl) {
+  constructor(config: Config, httpRequester: HttpService) {
     this.config = config;
     this.httpService = httpRequester;
     this.universalEndpoint = this.config.endpoints?.universalAutoComplete
@@ -104,6 +105,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
    * @returns {Promise<AutoCompleteResponse>}
    */
   async filterAutoComplete(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse> {
+    const searchParams = this.getFilterSearchParams(request.searchParameters);
     const queryParams: FilterAutoCompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
@@ -111,7 +113,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       v: defaultApiVersion,
       version: this.config.experienceVersion,
       locale: this.config.locale,
-      search_parameters: JSON.stringify(request.searchParameters),
+      search_parameters: JSON.stringify(searchParams),
       verticalKey: request.verticalKey,
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
@@ -122,5 +124,20 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
       queryParams);
 
     return createAutoCompleteResponse(rawFilterAutocompleteResponse);
+  }
+
+  private getFilterSearchParams(searchParams: SearchParameters) {
+    const convertedFields = searchParams.fields.map((field: SearchParameterField) => (
+      {
+        fieldId: field.fieldApiName,
+        entityTypeId: field.entityType,
+        shouldFetchEntities: field.fetchEntities
+      }
+    ));
+    const convertedSearchParams = {
+      sectioned: searchParams.sectioned,
+      fields: convertedFields
+    };
+    return convertedSearchParams;
   }
  }

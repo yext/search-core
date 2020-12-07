@@ -1,4 +1,4 @@
-import { AutoCompleteResponse } from '../../models/autocompleteservice/AutoCompleteResponse';
+import { AutoCompleteResponse, AutoCompleteResult } from '../../models/autocompleteservice/AutoCompleteResponse';
 import { createAutoCompleteResult } from './createAutoCompleteResult';
 
 export function createAutoCompleteResponse(data: any): Readonly<AutoCompleteResponse> {
@@ -7,16 +7,17 @@ export function createAutoCompleteResponse(data: any): Readonly<AutoCompleteResp
   }
 
   const response = data.response;
-  let results;
+  let responseResults: AutoCompleteResult[] = [];
   // the response may have its results nested in a sections object
   if (response.sections) {
-    results = response.sections.results.map(createAutoCompleteResult);
+    responseResults = response.sections.flatMap((section: any) =>
+      section.results.map(createAutoCompleteResult));
   } else {
-    results = response.results.map(createAutoCompleteResult);
+    responseResults = response.results.map(createAutoCompleteResult);
   }
   const inputIntents = response.input ? response.input.queryIntents : [];
   return Object.freeze({
-    results: results,
+    results: responseResults,
     queryId: response.queryId,
     inputIntents: inputIntents || []
   });
