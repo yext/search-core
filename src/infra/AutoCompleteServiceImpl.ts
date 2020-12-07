@@ -1,5 +1,5 @@
 import { createAutoCompleteResponse } from '../transformers/autocompleteservice/createAutoCompleteResponse';
-import { AutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest, UniversalAutoCompleteRequest }
+import { VerticalAutoCompleteRequest, FilterAutoCompleteRequest, UniversalAutoCompleteRequest }
   from '../models/autocompleteservice/AutoCompleteRequest';
 import { AutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
 import { defaultApiVersion, defaultEndpoints } from '../constants';
@@ -47,45 +47,12 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
   }
 
   /**
-   * Performs an auto complete request based on the type of request
-   *
-   * @param {AutoCompleteRequest} request
-   * @returns {Promise<AutoCompleteResponse>}
-   */
-  async autoComplete(request: AutoCompleteRequest): Promise<AutoCompleteResponse> {
-    if (this.isFilterAutoCompleteRequest(request)) {
-      return await this.autoCompleteForFilter(request);
-    } else if (this.isVerticalAutoCompleteRequest(request)) {
-      return await this.autoCompleteForVertical(request);
-    } else {
-      return await this.autoCompleteForUniversal(request);
-    }
-  }
-
-  isFilterAutoCompleteRequest(request: AutoCompleteRequest): request is FilterAutoCompleteRequest {
-    const searchParameters = (request as FilterAutoCompleteRequest).searchParameters;
-
-    return this.isVerticalAutoCompleteRequest && searchParameters !== undefined;
-  }
-
-  isVerticalAutoCompleteRequest(request: AutoCompleteRequest): request is VerticalAutoCompleteRequest {
-    const verticalKey = (request as VerticalAutoCompleteRequest).verticalKey;
-
-    return this.isUniversalAutoCompleteRequest && verticalKey !== undefined;
-  }
-
-  isUniversalAutoCompleteRequest(request: AutoCompleteRequest): request is UniversalAutoCompleteRequest {
-    return request.input !== undefined;
-  }
-
-
-  /**
    * Retrieves query suggestions for universal.
    *
    * @param {AutoCompleteRequest} request
    * @returns {Promise<AutoCompleteResponse>}
    */
-  async autoCompleteForUniversal(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
+  async universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
     const queryParams: AutoCompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
@@ -110,7 +77,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
    * @param {VerticalAutoCompleteRequest} request
    * @returns {Promise<AutoCompleteResponse>}
    */
-  async autoCompleteForVertical(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse> {
+  async verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse> {
     const queryParams: VerticalAutoCompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
@@ -136,7 +103,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
    * @param {FilterAutoCompleteRequest} request
    * @returns {Promise<AutoCompleteResponse>}
    */
-  async autoCompleteForFilter(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse> {
+  async filterAutoComplete(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse> {
     const queryParams: FilterAutoCompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,

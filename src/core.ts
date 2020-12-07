@@ -7,7 +7,8 @@ import VerticalSearchResponse from './models/searchservice/response/VerticalSear
 import QuestionSubmissionService from './services/QuestionSubmissionService';
 import QuestionSubmissionRequest from './models/questionsubmission/QuestionSubmissionRequest';
 import QuestionSubmissionResponse from './models/questionsubmission/QuestionSubmissionResponse';
-import { AutoCompleteRequest } from './models/autocompleteservice/AutoCompleteRequest';
+import { UniversalAutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest }
+  from './models/autocompleteservice/AutoCompleteRequest';
 import { AutoCompleteResponse } from './models/autocompleteservice/AutoCompleteResponse';
 import { AutoCompleteService } from './services/AutoCompleteService';
 
@@ -30,7 +31,15 @@ export default class Core {
     return this.questionSubmissionService.submitQuestion(request);
   }
 
-  autoComplete(request: AutoCompleteRequest): Promise<AutoCompleteResponse> {
-    return this.autoCompleteService.autoComplete(request);
+  universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
+    return this.autoCompleteService.universalAutoComplete(request);
+  }
+
+  verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse> {
+    return this.autoCompleteService.verticalAutoComplete(request);
+  }
+
+  filterAutoComplete(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse> {
+    return this.autoCompleteService.filterAutoComplete(request);
   }
 }
