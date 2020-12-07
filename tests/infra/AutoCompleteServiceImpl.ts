@@ -1,11 +1,13 @@
 import HttpServiceMock from '../mocks/HttpServiceMock';
 import Config from '../../src/models/core/Config';
-import { AutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest, SearchParameters} from '../../src/models/autocompleteservice/AutoCompleteRequest';
+import { UniversalAutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest, SearchParameters} from '../../src/models/autocompleteservice/AutoCompleteRequest';
 import HttpService from '../../src/services/HttpService';
 import AutoCompleteServiceImpl from '../../src/infra/AutoCompleteServiceImpl';
 import mockAutoCompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutoCompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
 import { createAutoCompleteResponse } from '../../src/transformers/autocompleteservice/createAutoCompleteResponse';
+import { defaultEndpoints } from '../../src/constants';
+import { SearchIntent } from '../../src/models/searchservice/response/SearchIntent';
 
 describe('AutoCompleteService', () => {
   const config: Config = {
@@ -17,10 +19,10 @@ describe('AutoCompleteService', () => {
   const mockHttpService = new HttpServiceMock();
 
   describe('Universal AutoComplete', () => {
-    const expectedUniversalUrl = 'https://liveapi-cached.yext.com/v2/accounts/me/answers/autocomplete';
+    const expectedUniversalUrl = defaultEndpoints.universalAutoComplete;
     mockHttpService.get.mockResolvedValue(mockAutoCompleteResponse);
     it('query params are correct', async () => {
-      const request: AutoCompleteRequest = {
+      const request: UniversalAutoCompleteRequest = {
         input: '',
         sessionTrackingEnabled: false
       };
@@ -36,13 +38,13 @@ describe('AutoCompleteService', () => {
         config,
         mockHttpService as HttpService
       );
-      await autocompleteService.autoCompleteForUniversal(request);
+      await autocompleteService.universalAutoComplete(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
     });
   });
 
   describe('Vertical AutoComplete', () => {
-    const expectedVerticalUrl = 'https://liveapi-cached.yext.com/v2/accounts/me/answers/vertical/autocomplete';
+    const expectedVerticalUrl = defaultEndpoints.verticalAutoComplete;
     mockHttpService.get.mockResolvedValue(mockAutoCompleteResponse);
     it('query params are correct', async () => {
       const request: VerticalAutoCompleteRequest = {
@@ -63,13 +65,13 @@ describe('AutoCompleteService', () => {
         config,
         mockHttpService as HttpService
       );
-      await autocompleteService.autoCompleteForVertical(request);
+      await autocompleteService.verticalAutoComplete(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
     });
   });
 
   describe('Filter AutoComplete', () => {
-    const expectedFilterUrl = 'https://liveapi-cached.yext.com/v2/accounts/me/answers/filtersearch';
+    const expectedFilterUrl = defaultEndpoints.filterAutoComplete;
     mockHttpService.get.mockResolvedValue(mockAutoCompleteResponseWithSections);
     it('query params are correct', async () => {
       const searchParams: SearchParameters = {
@@ -108,7 +110,7 @@ describe('AutoCompleteService', () => {
         config,
         mockHttpService as HttpService
       );
-      await autocompleteService.autoCompleteForFilter(request);
+      await autocompleteService.filterAutoComplete(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams);
     });
   });
@@ -116,7 +118,7 @@ describe('AutoCompleteService', () => {
   describe('AutoCompleteResponse', () => {
     it('response without sections is parsed correctly', () => {
       const expectedResponse = {
-        inputIntents: [],
+        inputIntents: [SearchIntent.NearMe],
         results: [
           {
             value: 'salesforce',

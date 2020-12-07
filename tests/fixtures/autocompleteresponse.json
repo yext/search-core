@@ -2,7 +2,7 @@
   "response": {
     "input": {
       "value": "salesforce",
-      "queryIntents": []
+      "queryIntents": ["NEAR_ME"]
     },
     "results": [
       {
@@ -13,7 +13,7 @@
             "length": 10
           }
         ],
-        "queryIntents": []
+        "queryIntents": ["NEAR_ME"]
       }
     ]
   }
