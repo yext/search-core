@@ -3,15 +3,12 @@
 * AutoComplete on vertical, universal, or filter search.
 */
 
-export interface AutoCompleteRequest {
+export interface UniversalAutoCompleteRequest {
   input: string,
   sessionTrackingEnabled?: boolean,
 }
 
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface UniversalAutoCompleteRequest extends AutoCompleteRequest {}
-
-export interface VerticalAutoCompleteRequest extends AutoCompleteRequest {
+export interface VerticalAutoCompleteRequest extends UniversalAutoCompleteRequest {
   verticalKey: string,
 }
 
