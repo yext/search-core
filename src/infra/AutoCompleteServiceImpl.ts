@@ -52,7 +52,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
    * @param {AutoCompleteRequest} request
    * @returns {Promise<AutoCompleteResponse>}
    */
-  async autoCompleteForUniversal(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
+  async universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
     const queryParams: AutoCompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
@@ -77,7 +77,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
    * @param {VerticalAutoCompleteRequest} request
    * @returns {Promise<AutoCompleteResponse>}
    */
-  async autoCompleteForVertical(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse> {
+  async verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse> {
     const queryParams: VerticalAutoCompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
@@ -103,7 +103,7 @@ export default class AutoCompleteServiceImpl implements AutoCompleteService {
    * @param {FilterAutoCompleteRequest} request
    * @returns {Promise<AutoCompleteResponse>}
    */
-  async autoCompleteForFilter(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse> {
+  async filterAutoComplete(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse> {
     const queryParams: FilterAutoCompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,

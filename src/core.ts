@@ -31,15 +31,15 @@ export default class Core {
     return this.questionSubmissionService.submitQuestion(request);
   }
 
-  autoCompleteForUniversal(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
-    return this.autoCompleteService.autoCompleteForUniversal(request);
+  universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
+    return this.autoCompleteService.universalAutoComplete(request);
   }
 
-  autoCompleteForVertical(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse> {
-    return this.autoCompleteService.autoCompleteForVertical(request);
+  verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse> {
+    return this.autoCompleteService.verticalAutoComplete(request);
   }
 
-  autoCompleteForFilter(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse> {
-    return this.autoCompleteService.autoCompleteForFilter(request);
+  filterAutoComplete(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse> {
+    return this.autoCompleteService.filterAutoComplete(request);
   }
 }
