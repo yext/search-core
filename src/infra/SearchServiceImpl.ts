@@ -1,8 +1,9 @@
 import createVerticalSearchResponse from '../transformers/searchservice/createVerticalSearchResponse';
 import SearchService from '../services/SearchService';
-import { QuerySource, defaultApiVersion, defaultEndpoints } from '../constants';
+import { defaultApiVersion, defaultEndpoints } from '../constants';
 import { QueryParams } from '../models/http/params';
 import { QueryTrigger } from '../models/searchservice/request/QueryTrigger';
+import { QuerySource } from '../models/searchservice/request/QuerySource';
 import UniversalSearchRequest from '../models/searchservice/request/UniversalSearchRequest';
 import UniversalSearchResponse from '../models/searchservice/response/UniversalSearchResponse';
 import createUniversalSearchResponse from '../transformers/searchservice/createUniversalSearchResponse';

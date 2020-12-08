@@ -6,7 +6,7 @@ import HttpServiceImpl from './infra/HttpServiceImpl';
 import Config from './models/core/Config';
 import AutoCompleteServiceImpl from './infra/AutoCompleteServiceImpl';
 
-export default function provideCore(config: Config): Promise<Core> {
+export function provideCore(config: Config): Promise<Core> {
   const masterSwitch = new MasterSwitchApi(config);
 
   return masterSwitch.isEnabled().then(isEnabled => {
@@ -20,3 +20,6 @@ export default function provideCore(config: Config): Promise<Core> {
     return new Core(searchService, questionSubmissionService, autoCompleteService);
   });
 }
+
+export { Core };
+export * from './models';

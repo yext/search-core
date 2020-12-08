@@ -8,7 +8,7 @@ export default interface LocationBias {
   method: LocationBiasMethod;
 }
 
-enum LocationBiasMethod {
+export enum LocationBiasMethod {
   Ip = 'IP',
   Device = 'DEVICE',
   Unknown = 'UNKNOWN'
