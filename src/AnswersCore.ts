@@ -9,7 +9,7 @@ import QuestionSubmissionRequest from './models/questionsubmission/QuestionSubmi
 import QuestionSubmissionResponse from './models/questionsubmission/QuestionSubmissionResponse';
 import { UniversalAutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest }
   from './models/autocompleteservice/AutoCompleteRequest';
-import { AutoCompleteResponse } from './models/autocompleteservice/AutoCompleteResponse';
+import { AutoCompleteResponse, FilterAutoCompleteResponse } from './models/autocompleteservice/AutoCompleteResponse';
 import { AutoCompleteService } from './services/AutoCompleteService';
 
 export default class AnswersCore {
@@ -39,7 +39,7 @@ export default class AnswersCore {
     return this.autoCompleteService.verticalAutoComplete(request);
   }
 
-  filterAutoComplete(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse> {
+  filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse> {
     return this.autoCompleteService.filterAutoComplete(request);
   }
 }
