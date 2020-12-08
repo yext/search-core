@@ -1,10 +1,5 @@
 import Endpoints from './models/core/Endpoints';
 
-export enum QuerySource {
-  Standard = 'STANDARD',
-  Overlay = 'OVERLAY'
-}
-
 export const defaultApiVersion = 20190101;
 
 export const defaultEndpoints: Required<Endpoints> = {

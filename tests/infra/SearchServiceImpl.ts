@@ -5,7 +5,7 @@ import Config from '../../src/models/core/Config';
 import UniversalSearchRequest from '../../src/models/searchservice/request/UniversalSearchRequest';
 import HttpService from '../../src/services/HttpService';
 import { QueryTrigger } from '../../src/models/searchservice/request/QueryTrigger';
-import { QuerySource } from '../../src/constants';
+import { QuerySource } from '../../src/models/searchservice/request/QuerySource';
 
 describe('SearchService', () => {
   const mockHttpService = new HttpServiceMock();
