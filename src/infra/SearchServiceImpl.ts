@@ -8,7 +8,7 @@ import UniversalSearchRequest from '../models/searchservice/request/UniversalSea
 import UniversalSearchResponse from '../models/searchservice/response/UniversalSearchResponse';
 import createUniversalSearchResponse from '../transformers/searchservice/createUniversalSearchResponse';
 import HttpService from '../services/HttpService';
-import Config from '../models/core/Config';
+import AnswersConfig from '../models/core/AnswersConfig';
 import VerticalSearchRequest from '../models/searchservice/request/VerticalSearchRequest';
 import VerticalSearchResponse from '../models/searchservice/response/VerticalSearchResponse';
 import serializeStaticFilters from '../serializers/serializeStaticFilters';
@@ -63,12 +63,12 @@ interface VerticalSearchQueryParams extends QueryParams {
  * An implementation of SearchService which hits LiveAPI
  */
 export default class SearchServiceImpl implements SearchService {
-  private config: Config;
+  private config: AnswersConfig;
   private httpService: HttpService;
   private verticalSearchEndpoint: string;
   private universalSearchEndpoint: string;
 
-  constructor(config: Config, httpService: HttpService) {
+  constructor(config: AnswersConfig, httpService: HttpService) {
     this.config = config;
     this.httpService = httpService;
     this.universalSearchEndpoint = config.endpoints?.universalSearch

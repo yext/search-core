@@ -12,7 +12,7 @@ import { UniversalAutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCo
 import { AutoCompleteResponse } from './models/autocompleteservice/AutoCompleteResponse';
 import { AutoCompleteService } from './services/AutoCompleteService';
 
-export default class Core {
+export default class AnswersCore {
   constructor(
     private searchService: SearchService,
     private questionSubmissionService: QuestionSubmissionService,

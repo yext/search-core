@@ -1,7 +1,7 @@
 import { defaultApiVersion, defaultEndpoints } from '../constants';
 import QuestionSubmissionService from '../services/QuestionSubmissionService';
 import HttpService from '../services/HttpService';
-import Config from '../models/core/Config';
+import AnswersConfig from '../models/core/AnswersConfig';
 import QuestionSubmissionRequest from '../models/questionsubmission/QuestionSubmissionRequest';
 import QuestionSubmissionResponse from '../models/questionsubmission/QuestionSubmissionResponse';
 import createAnswersError from '../transformers/core/createAnswersError';
@@ -11,7 +11,7 @@ import createAnswersError from '../transformers/core/createAnswersError';
  */
 export default class QuestionSubmissionServiceImpl implements QuestionSubmissionService {
   private endpoint: string;
-  constructor(private config: Config, private httpService: HttpService) {
+  constructor(private config: AnswersConfig, private httpService: HttpService) {
     this.endpoint = this.config.endpoints?.questionSubmission
       ?? defaultEndpoints.questionSubmission;
   }

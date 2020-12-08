@@ -1,7 +1,7 @@
 import QuestionSubmissionServiceImpl from '../../src/infra/QuestionSubmissionServiceImpl';
 import HttpServiceMock from '../mocks/HttpServiceMock';
 import HttpService from '../../src/services/HttpService';
-import Config from '../../src/models/core/Config';
+import AnswersConfig from '../../src/models/core/AnswersConfig';
 
 const baseCoreConfig = {
   apiKey: 'anApiKey',
@@ -54,7 +54,7 @@ describe('Question submission', () => {
 
   it('a custom endpoint may be supplied', async () => {
     const expectedUrl = 'https://custom.endpoint.com/api';
-    const coreConfig: Config = {
+    const coreConfig: AnswersConfig = {
       ...baseCoreConfig,
       endpoints: {
         questionSubmission: 'https://custom.endpoint.com/api'
