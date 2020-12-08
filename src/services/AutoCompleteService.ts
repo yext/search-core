@@ -1,4 +1,4 @@
-import { AutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
+import { AutoCompleteResponse, FilterAutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
 import { UniversalAutoCompleteRequest, FilterAutoCompleteRequest, VerticalAutoCompleteRequest } from '../models/autocompleteservice/AutoCompleteRequest';
 
 /**
@@ -26,7 +26,7 @@ export interface AutoCompleteService {
    * Retrieves query suggestions for filter search.
    *
    * @param {FilterAutoCompleteRequest} request
-   * @returns {Promise<AutoCompleteResponse>}
+   * @returns {Promise<FilterAutoCompleteResponse>}
    */
-  filterAutoComplete(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse>;
+  filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse>;
  }

@@ -4,7 +4,7 @@ import Context from './Context';
 import Coordinates from './Coordinates';
 import { QueryTrigger } from './QueryTrigger';
 import SortBy from './SortBy';
-import { QuerySource } from '../../../constants';
+import { QuerySource } from './QuerySource';
 
 /**
  * VerticalSearchRequest represents the options available when constructing a vertical

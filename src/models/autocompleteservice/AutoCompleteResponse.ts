@@ -7,6 +7,17 @@ export interface AutoCompleteResponse {
   queryId?: string;
 }
 
+export interface FilterAutoCompleteResponse {
+  sectioned: boolean,
+  sections?: {
+    label: string,
+    results: AutoCompleteResult[];
+  }[],
+  results?: AutoCompleteResult[],
+  inputIntents: SearchIntent[];
+  queryId?: string
+}
+
 export interface AutoCompleteResult {
   value: string;
   filter?: SimpleFilter;

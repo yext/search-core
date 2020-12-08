@@ -1,16 +1,16 @@
 import HttpServiceMock from '../mocks/HttpServiceMock';
 import mockUniversalResponse from '../fixtures/liveapiuniversalresponse.json';
 import SearchServiceImpl from '../../src/infra/SearchServiceImpl';
-import Config from '../../src/models/core/Config';
+import AnswersConfig from '../../src/models/core/AnswersConfig';
 import UniversalSearchRequest from '../../src/models/searchservice/request/UniversalSearchRequest';
 import HttpService from '../../src/services/HttpService';
 import { QueryTrigger } from '../../src/models/searchservice/request/QueryTrigger';
-import { QuerySource } from '../../src/constants';
+import { QuerySource } from '../../src/models/searchservice/request/QuerySource';
 
 describe('SearchService', () => {
   const mockHttpService = new HttpServiceMock();
 
-  const configWithRequiredParams: Config = {
+  const configWithRequiredParams: AnswersConfig = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en'
@@ -57,7 +57,7 @@ describe('SearchService', () => {
         referrerPageUrl: 'yext.com',
         querySource: QuerySource.Standard
       };
-      const configWithAllParams: Config = {
+      const configWithAllParams: AnswersConfig = {
         apiKey: 'testApiKey',
         experienceKey: 'testExperienceKey',
         locale: 'es',
@@ -87,7 +87,7 @@ describe('SearchService', () => {
     });
 
     it('A custom universal search service endpoint may be supplied', async () => {
-      const config: Config = {
+      const config: AnswersConfig = {
         ...configWithRequiredParams,
         endpoints: {
           universalSearch: 'http://custom.endpoint.com/api'

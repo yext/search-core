@@ -1,7 +1,7 @@
 import Context from './Context';
 import Coordinates from './Coordinates';
 import { QueryTrigger } from './QueryTrigger';
-import { QuerySource } from '../../../constants';
+import { QuerySource } from './QuerySource';
 /**
  * Options for constructing a universal search
  */
