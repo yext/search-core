@@ -3,10 +3,10 @@ import Core from './core';
 import SearchServiceImpl from './infra/SearchServiceImpl';
 import QuestionSubmissionServiceImpl from './infra/QuestionSubmissionServiceImpl';
 import HttpServiceImpl from './infra/HttpServiceImpl';
-import Config from './models/core/Config';
+import AnswersConfig from './models/core/AnswersConfig';
 import AutoCompleteServiceImpl from './infra/AutoCompleteServiceImpl';
 
-export function provideCore(config: Config): Promise<Core> {
+export function provideCore(config: AnswersConfig): Promise<Core> {
   const masterSwitch = new MasterSwitchApi(config);
 
   return masterSwitch.isEnabled().then(isEnabled => {

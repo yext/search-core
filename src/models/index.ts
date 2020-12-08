@@ -4,7 +4,7 @@ export * from './autocompleteservice/AutoCompleteResponse';
 
 // Core models
 export { default as AnswersError } from './core/AnswersError';
-export { default as Config } from './core/Config';
+export { default as AnswersConfig } from './core/AnswersConfig';
 export { default as Endpoints } from './core/Endpoints';
 
 // Question submission service

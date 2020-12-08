@@ -1,15 +1,15 @@
 import { defaultEndpoints } from '../constants';
-import Config from '../models/core/Config';
+import AnswersConfig from '../models/core/AnswersConfig';
 import HttpServiceImpl from './HttpServiceImpl';
 
 /**
  * MasterSwitch checks if the front-end for the given experience should be temporarily disabled.
  */
 export default class MasterSwitchApi {
-  private config: Config;
+  private config: AnswersConfig;
   private endpoint: string;
 
-  constructor(config: Config) {
+  constructor(config: AnswersConfig) {
     this.config = config;
     this.endpoint = config.endpoints?.status ?? defaultEndpoints.status;
   }

@@ -4,7 +4,7 @@ import { VerticalAutoCompleteRequest, FilterAutoCompleteRequest,
   from '../models/autocompleteservice/AutoCompleteRequest';
 import { AutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
 import { defaultApiVersion, defaultEndpoints } from '../constants';
-import Config from '../models/core/Config';
+import AnswersConfig from '../models/core/AnswersConfig';
 import HttpService from '../services/HttpService';
 import { AutoCompleteQueryParams } from '../models/autocompleteservice/autocompleteparams';
 import { AutoCompleteService } from '../services/AutoCompleteService';
@@ -30,13 +30,13 @@ interface FilterAutoCompleteQueryParams extends AutoCompleteQueryParams {
 * A service that performs query suggestions.
 */
 export default class AutoCompleteServiceImpl implements AutoCompleteService {
-  private config: Config;
+  private config: AnswersConfig;
   private httpService: HttpService;
   private universalEndpoint: string;
   private verticalEndpoint: string;
   private filterEndpoint: string;
 
-  constructor(config: Config, httpRequester: HttpService) {
+  constructor(config: AnswersConfig, httpRequester: HttpService) {
     this.config = config;
     this.httpService = httpRequester;
     this.universalEndpoint = this.config.endpoints?.universalAutoComplete
