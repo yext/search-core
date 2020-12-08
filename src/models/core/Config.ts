@@ -1,6 +1,6 @@
 import Endpoints from './Endpoints';
 
-export default interface AnswersConfig {
+export default interface Config {
   apiKey: string,
   experienceKey: string,
   locale: string,
