@@ -1,5 +1,5 @@
 import HttpServiceMock from '../mocks/HttpServiceMock';
-import Config from '../../src/models/core/Config';
+import AnswersConfig from '../../src/models/core/AnswersConfig';
 import { UniversalAutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest, SearchParameters} from '../../src/models/autocompleteservice/AutoCompleteRequest';
 import HttpService from '../../src/services/HttpService';
 import AutoCompleteServiceImpl from '../../src/infra/AutoCompleteServiceImpl';
@@ -10,7 +10,7 @@ import { defaultEndpoints } from '../../src/constants';
 import { SearchIntent } from '../../src/models/searchservice/response/SearchIntent';
 
 describe('AutoCompleteService', () => {
-  const config: Config = {
+  const config: AnswersConfig = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en',
