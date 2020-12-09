@@ -4,7 +4,7 @@
 # It works by generating docs and using git diff to see if there are any changes
 # This script will also fail if the api report is out of date
 
-npm run api-extractor-ci
+npm run build-ci
 git diff --exit-code
 
 diff_exit_code=$?
