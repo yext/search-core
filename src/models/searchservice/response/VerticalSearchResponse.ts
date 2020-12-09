@@ -7,13 +7,13 @@ import SpellCheck from './SpellCheck';
 /**
  * A representation of a response from a vertical search
  */
-export default interface VerticalSearchResponse {
+export default interface VerticalSearchResponseProps {
   verticalResults: VerticalResults;
   queryId: string;
   searchIntents?: SearchIntent[];
   facets?: Readonly<Facet[]>;
   spellCheck?: SpellCheck,
   locationBias?: LocationBias,
-  allResultsForVertical?: VerticalSearchResponse,
+  allResultsForVertical?: VerticalSearchResponseProps,
   alternativeVerticals?: Readonly<VerticalResults[]>
 }
