@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This script is meant to be run by CI to verify that the docs are up to date with the source code
-# The script should be ran after CI bulds new docs
+# The script should be ran after CI builds new docs
 # If there are any diffs after new docs are generated, they must be out of date
 
 git diff --exit-code
