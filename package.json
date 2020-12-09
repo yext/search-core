@@ -11,13 +11,15 @@
     "test": "npm run lint && jest",
     "lint": "eslint .",
     "build": "tsc && npm run api-extractor && npm run generate-docs",
-    "build-ci": "tsc && npm run api-extractor-ci",
+    "build-ci": "tsc && npm run api-extractor-ci && npm run generate-docs",
     "dev": "tsc --watch",
+    "pre-commit": "npm run build && npm run check-diffs",
     "postinstall": "for file in `ls .git-hooks`; do ln -sf ../../.git-hooks/${file} .git/hooks/${file}; done",
     "prepublishOnly": "npm run build",
     "api-extractor": "api-extractor run --local --verbose",
     "api-extractor-ci": "api-extractor run --verbose",
-    "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs"
+    "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs",
+    "check-diffs": "git diff --exit-code"
   },
   "repository": {
     "type": "git",
