@@ -4,7 +4,6 @@
 # The script should be ran after CI bulds new docs
 # If there are any diffs after new docs are generated, they must be out of date
 
-npm run generate-docs
 git diff --exit-code
 
 diff_exit_code=$?
