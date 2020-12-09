@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-filterAutoComplete(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse>;
+filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse>;
 ```
 
 ## Parameters
@@ -18,5 +18,5 @@ filterAutoComplete(request: FilterAutoCompleteRequest): Promise<AutoCompleteResp
 
 <b>Returns:</b>
 
-Promise&lt;[AutoCompleteResponse](./answers-core.autocompleteresponse.md)<!-- -->&gt;
+Promise&lt;[FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md)<!-- -->&gt;
 

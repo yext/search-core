@@ -44,6 +44,7 @@
 |  [Facet](./answers-core.facet.md) |  |
 |  [FacetOption](./answers-core.facetoption.md) |  |
 |  [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) |  |
+|  [FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md) |  |
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the answers API emphasized<!-- -->For example, if a user searches for 'pet' and a description field in the results contains the value 'A pet store', the API will likely match the word 'pet' |
 |  [LocationBias](./answers-core.locationbias.md) | Location information including how it was obtained |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request |

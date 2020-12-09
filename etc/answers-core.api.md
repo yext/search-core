@@ -25,7 +25,7 @@ export class AnswersCore {
     // Warning: (ae-forgotten-export) The symbol "AutoCompleteService" needs to be exported by the entry point index.d.ts
     constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutoCompleteService);
     // (undocumented)
-    filterAutoComplete(request: FilterAutoCompleteRequest): Promise<AutoCompleteResponse>;
+    filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse>;
     // (undocumented)
     submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
     // (undocumented)
@@ -171,6 +171,23 @@ export interface FacetOption {
 export interface FilterAutoCompleteRequest extends VerticalAutoCompleteRequest {
     // (undocumented)
     searchParameters: SearchParameters;
+}
+
+// @public (undocumented)
+export interface FilterAutoCompleteResponse {
+    // (undocumented)
+    inputIntents: SearchIntent[];
+    // (undocumented)
+    queryId?: string;
+    // (undocumented)
+    results?: AutoCompleteResult[];
+    // (undocumented)
+    sectioned: boolean;
+    // (undocumented)
+    sections?: {
+        label: string;
+        results: AutoCompleteResult[];
+    }[];
 }
 
 // @public
