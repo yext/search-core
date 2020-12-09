@@ -10,12 +10,12 @@
   "scripts": {
     "test": "npm run lint && jest",
     "lint": "eslint .",
-    "build": "tsc && npm run api-extractor",
-    "build-ci": "tsc && npm run api-extractor-ci",
+    "build": "tsc && npm run api-extractor && npm run generate-docs",
+    "build-ci": "tsc && npm run api-extractor-ci && npm run generate-docs",
     "dev": "tsc --watch",
     "prepublishOnly": "npm run build",
-    "api-extractor": "api-extractor run --local --verbose && npm run generate-docs",
-    "api-extractor-ci": "api-extractor run --verbose  && npm run generate-docs",
+    "api-extractor": "api-extractor run --local --verbose",
+    "api-extractor-ci": "api-extractor run --verbose",
     "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs",
     "validate-docs": "./scripts/validate-docs.sh",
     "clean": "rm temp/*"
