@@ -15,9 +15,9 @@
     "dev": "tsc --watch",
     "prepublishOnly": "npm run build",
     "api-extractor": "api-extractor run --local --verbose && npm run generate-docs",
-    "api-extractor-ci": "api-extractor run --verbose && npm run generate-docs",
+    "api-extractor-ci": "api-extractor run --verbose  && npm run generate-docs",
     "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs",
-    "check-diffs": "git diff --exit-code",
+    "validate-docs-ci": "./scripts/validate_docs_ci.sh",
     "clean": "rm temp/*"
   },
   "repository": {

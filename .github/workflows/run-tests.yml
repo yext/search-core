@@ -23,3 +23,16 @@ jobs:
     - run: npm run build-ci
     - run: npm run check-diffs
     - run: npm test
+
+  validate-docs:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      uses: actions/setup-node@v1
+      with:
+        node-version: 15.x
+    - run: npm ci
+    - run: npm run build-ci
+    - run: npm run validate-docs
+    - run: npm test
