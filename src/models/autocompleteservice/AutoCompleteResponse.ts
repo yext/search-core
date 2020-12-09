@@ -27,4 +27,8 @@ export interface AutoCompleteResult {
     offset: number
   }[];
   shortValue?: string;
+  relatedItem?: {
+    data: Record<string, unknown>,
+    highlightedFields: Record<string, unknown>
+  };
 }

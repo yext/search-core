@@ -3,7 +3,10 @@ import { createAutoCompleteResult } from './createAutoCompleteResult';
 
 export function createAutoCompleteResponse(data: any): Readonly<AutoCompleteResponse> {
   if (!data.response) {
-    throw new Error('The search data does not contain a response property');
+    throw new Error('The autocomplete data does not contain a response property');
+  }
+  if (!Object.keys(data.response).length) {
+    throw new Error('The autocomplete response is empty');
   }
 
   const response = data.response;
@@ -18,7 +21,10 @@ export function createAutoCompleteResponse(data: any): Readonly<AutoCompleteResp
 
 export function createFilterAutoCompleteResponse(data: any): Readonly<FilterAutoCompleteResponse> {
   if (!data.response) {
-    throw new Error('The search data does not contain a response property');
+    throw new Error('The autocomplete data does not contain a response property');
+  }
+  if (!Object.keys(data.response).length) {
+    throw new Error('The autocomplete response is empty');
   }
 
   const response = data.response;
