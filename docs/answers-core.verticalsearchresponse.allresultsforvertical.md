@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-allResultsForVertical?: VerticalSearchResponseProps;
+allResultsForVertical?: VerticalSearchResponse;
 ```
