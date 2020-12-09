@@ -13,7 +13,7 @@
     "build": "tsc && npm run api-extractor && npm run generate-docs",
     "build-ci": "tsc && npm run api-extractor-ci",
     "dev": "tsc --watch",
-    "dev-setup": "for file in `ls .git-hooks`; do ln -sf ../../.git-hooks/${file} .git/hooks/${file}; done",
+    "postinstall": "for file in `ls .git-hooks`; do ln -sf ../../.git-hooks/${file} .git/hooks/${file}; done",
     "prepublishOnly": "npm run build",
     "api-extractor": "api-extractor run --local --verbose",
     "api-extractor-ci": "api-extractor run --verbose",
