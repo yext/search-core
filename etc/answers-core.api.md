@@ -7,7 +7,7 @@
 // @public
 export interface AnswersConfig {
     apiKey: string;
-    // Warning: (ae-incompatible-release-tags) The symbol "endpoints" is marked as @public, but its signature references "Endpoints" which is marked as @internal
+    // @internal
     endpoints?: Endpoints;
     experienceKey: string;
     experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;

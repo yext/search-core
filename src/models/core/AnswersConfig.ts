@@ -29,6 +29,8 @@ export default interface AnswersConfig {
   experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number,
   /**
    * {@inheritDoc Endpoints}
+   *
+   * @internal
    */
   endpoints?: Endpoints
 }
