@@ -16,9 +16,7 @@
     "prepublishOnly": "npm run build",
     "api-extractor": "api-extractor run --local --verbose",
     "api-extractor-ci": "api-extractor run --verbose",
-    "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs",
-    "validate-docs": "./scripts/validate-docs.sh",
-    "clean": "rm temp/*"
+    "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs && rm -rf temp"
   },
   "repository": {
     "type": "git",

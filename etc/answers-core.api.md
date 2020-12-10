@@ -78,6 +78,11 @@ export interface AutoCompleteResult {
         offset: number;
     }[];
     // (undocumented)
+    relatedItem?: {
+        data: Record<string, unknown>;
+        highlightedFields: Record<string, unknown>;
+    };
+    // (undocumented)
     shortValue?: string;
     // (undocumented)
     value: string;
