@@ -1,0 +1,60 @@
+{
+  "response": {
+    "businessId": 2287528,
+    "sections": [
+      {
+        "label": "Name",
+        "results": [
+          {
+            "key": "name",
+            "value": "Virginia Beach",
+            "filter": {
+              "name": {
+                "$eq": "Virginia Beach"
+              }
+            },
+            "matchedSubstrings": [
+              {
+                "offset": 0,
+                "length": 8
+              }
+            ],
+            "relatedItem": {
+              "data": {
+                "mock": "data"
+              },
+              "highlightedFields": {
+                "mock": "field"
+              }
+            }
+          },
+          {
+            "key": "name",
+            "value": "Virginia Beach",
+            "filter": {
+              "name": {
+                "$eq": "Virginia Beach"
+              }
+            },
+            "matchedSubstrings": [
+              {
+                "offset": 0,
+                "length": 8
+              }
+            ],
+            "relatedItem": {
+              "data": {
+                "mock": "data2"
+              },
+              "highlightedFields": {
+                "mock": "field2"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "failedVerticals": [],
+    "queryId": "42d5b709-3b9f-464a-b9b5-764467cbf540"
+  }
+}

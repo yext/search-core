@@ -5,6 +5,7 @@ import HttpService from '../../src/services/HttpService';
 import AutoCompleteServiceImpl from '../../src/infra/AutoCompleteServiceImpl';
 import mockAutoCompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutoCompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
+import mockAutoCompleteResponseWithEntities from '../fixtures/autocompleteresponsewithentities.json';
 import { createAutoCompleteResponse, createFilterAutoCompleteResponse } from '../../src/transformers/autocompleteservice/createAutoCompleteResponse';
 import { defaultEndpoints } from '../../src/constants';
 import { SearchIntent } from '../../src/models/searchservice/response/SearchIntent';
@@ -165,6 +166,70 @@ describe('AutoCompleteService', () => {
         queryId: '42d5b709-3b9f-464a-b9b5-764467cbf540',
       };
       const actualResponse = createFilterAutoCompleteResponse(mockAutoCompleteResponseWithSections);
+      expect(actualResponse).toEqual(expectedResponse);
+    });
+
+    it ('response with sections and entities fetched is parsed correctly', () => {
+      const expectedResponse = {
+        sectioned: true,
+        sections: [
+          {
+            label: 'Name',
+            results: [
+              {
+                value: 'Virginia Beach',
+                matchedSubstrings: [
+                  {
+                    offset: 0,
+                    length: 8
+                  }
+                ],
+                filter: {
+                  comparator: '$eq',
+                  comparedValue: 'Virginia Beach',
+                  fieldId: 'name'
+                },
+                key: 'name',
+                relatedItem: {
+                  data: {
+                    mock: 'data'
+                  },
+                  highlightedFields: {
+                    mock: 'field'
+                  }
+                }
+              },
+              {
+                value: 'Virginia Beach',
+                matchedSubstrings: [
+                  {
+                    offset: 0,
+                    length: 8
+                  }
+                ],
+                filter: {
+                  comparator: '$eq',
+                  comparedValue: 'Virginia Beach',
+                  fieldId: 'name'
+                },
+                key: 'name',
+                relatedItem: {
+                  data: {
+                    mock: 'data2'
+                  },
+                  highlightedFields: {
+                    mock: 'field2'
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        results: [],
+        inputIntents: [],
+        queryId: '42d5b709-3b9f-464a-b9b5-764467cbf540',
+      };
+      const actualResponse = createFilterAutoCompleteResponse(mockAutoCompleteResponseWithEntities);
       expect(actualResponse).toEqual(expectedResponse);
     });
   });

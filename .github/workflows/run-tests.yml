@@ -3,7 +3,7 @@
 
 name: Run Tests
 
-on: push
+on: [push, pull_request]
 
 jobs:
   tests:
@@ -21,5 +21,5 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build-ci
-    - run: npm run validate-docs
+    - run: ./scripts/validate-docs.sh
     - run: npm test
