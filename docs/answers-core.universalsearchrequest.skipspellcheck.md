@@ -4,7 +4,7 @@
 
 ## UniversalSearchRequest.skipSpellCheck property
 
-Disables spellcheck if true.
+Disables spellcheck if true
 
 <b>Signature:</b>
 

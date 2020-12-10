@@ -36,6 +36,7 @@ export default class AnswersCore {
 
   /**
    * Performs an Answers search for a single vertical
+   *
    * @param request - The request options
    */
   verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse> {

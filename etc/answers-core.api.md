@@ -233,11 +233,9 @@ export enum QuerySource {
     Standard = "STANDARD"
 }
 
-// @public
+// @alpha
 export enum QueryTrigger {
-    // (undocumented)
     Initialize = "initialize",
-    // (undocumented)
     QueryParameter = "query-parameter"
 }
 
@@ -385,6 +383,7 @@ export interface UniversalSearchRequest {
     coordinates?: Coordinates_2;
     query: string;
     querySource?: QuerySource;
+    // Warning: (ae-incompatible-release-tags) The symbol "queryTrigger" is marked as @public, but its signature references "QueryTrigger" which is marked as @alpha
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;
     sessionTrackingEnabled?: boolean;
@@ -433,35 +432,22 @@ export interface VerticalResults {
 
 // @public
 export interface VerticalSearchRequest {
-    // (undocumented)
     context: Context;
-    // (undocumented)
     coordinates?: Coordinates_2;
-    // (undocumented)
     facetFilters?: SimpleFilter[];
-    // (undocumented)
     limit?: number;
-    // (undocumented)
     offset?: number;
-    // (undocumented)
     query: string;
-    // (undocumented)
     querySource?: QuerySource;
-    // (undocumented)
+    // Warning: (ae-incompatible-release-tags) The symbol "queryTrigger" is marked as @public, but its signature references "QueryTrigger" which is marked as @alpha
     queryTrigger?: QueryTrigger;
-    // (undocumented)
     referrerPageUrl?: string;
-    // (undocumented)
     retrieveFacets?: boolean;
-    // (undocumented)
     sessionTrackingEnabled?: boolean;
-    // (undocumented)
     skipSpellCheck?: boolean;
-    // (undocumented)
     sortBys?: SortBy[];
     // (undocumented)
     staticFilters?: CombinedFilter | SimpleFilter;
-    // (undocumented)
     verticalKey: string;
 }
 

@@ -4,8 +4,6 @@
  * @public
  */
 export default interface Context {
-  /**
-   * Arbitrary context values
-   */
+  /** Context keys and values */
   [property: string]: string | boolean;
 }

@@ -17,7 +17,6 @@
 |  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) |  |
 |  [QuerySource](./answers-core.querysource.md) | The source of the search request |
-|  [QueryTrigger](./answers-core.querytrigger.md) | The query trigger |
 |  [SearchIntent](./answers-core.searchintent.md) |  |
 |  [Source](./answers-core.source.md) |  |
 |  [SpellCheckType](./answers-core.spellchecktype.md) |  |
@@ -39,7 +38,7 @@
 |  [AutoCompleteResult](./answers-core.autocompleteresult.md) |  |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request.<!-- -->If omitted from a request, Yext will attempt to determine the location |
+|  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request which is used to bias the results<!-- -->If omitted from a request, Yext will attempt to determine the location |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search |
 |  [Facet](./answers-core.facet.md) |  |
 |  [FacetOption](./answers-core.facetoption.md) |  |
@@ -60,6 +59,6 @@
 |  [UniversalSearchResponse](./answers-core.universalsearchresponse.md) | A representation of a response from a universal search |
 |  [VerticalAutoCompleteRequest](./answers-core.verticalautocompleterequest.md) |  |
 |  [VerticalResults](./answers-core.verticalresults.md) | A result from an individual vertical |
-|  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | VerticalSearchRequest represents the options available when constructing a vertical search request |
+|  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options for constructing a vertical search |
 |  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search |
 

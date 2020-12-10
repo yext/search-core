@@ -4,8 +4,15 @@
 
 ## VerticalSearchRequest.queryTrigger property
 
+Indicates what triggered the query
+
 <b>Signature:</b>
 
 ```typescript
 queryTrigger?: QueryTrigger;
 ```
+
+## Remarks
+
+These values will likely change to be more relevant to the Answers Core.
+

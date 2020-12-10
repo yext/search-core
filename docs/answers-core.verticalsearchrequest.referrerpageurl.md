@@ -4,6 +4,8 @@
 
 ## VerticalSearchRequest.referrerPageUrl property
 
+The URl of the page which referred the user to the current page
+
 <b>Signature:</b>
 
 ```typescript

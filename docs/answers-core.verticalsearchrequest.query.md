@@ -4,6 +4,8 @@
 
 ## VerticalSearchRequest.query property
 
+The search query
+
 <b>Signature:</b>
 
 ```typescript

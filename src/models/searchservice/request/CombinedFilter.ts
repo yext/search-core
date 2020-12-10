@@ -6,13 +6,9 @@ import SimpleFilter from './SimpleFilter';
  * @public
  */
 export default interface CombinedFilter {
-  /**
-   * The filters to be combined
-   */
+  /** The filters to be combined */
   filters: (SimpleFilter | CombinedFilter)[];
-  /**
-   * The logical operator used to combine the filters
-   */
+  /** The logical operator used to combine the filters */
   combinator: FilterCombinator;
 }
 
@@ -22,12 +18,8 @@ export default interface CombinedFilter {
  * @public
  */
 export enum FilterCombinator {
-  /**
-   * Indicates that filters should be combined with a logical AND
-   * */
+  /** Indicates that filters should be combined with a logical AND */
   AND = '$and',
-  /**
-   * Indicates that filters should be combined with a logical OR
-   */
+  /** Indicates that filters should be combined with a logical OR */
   OR = '$or'
 }

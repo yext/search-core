@@ -4,6 +4,8 @@
 
 ## VerticalSearchRequest.verticalKey property
 
+The key associated with the vertical
+
 <b>Signature:</b>
 
 ```typescript

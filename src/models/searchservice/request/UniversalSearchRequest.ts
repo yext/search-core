@@ -9,29 +9,17 @@ import { QuerySource } from './QuerySource';
  * @public
  */
 export default interface UniversalSearchRequest {
-  /**
-   * The search query.
-   */
+  /** The search query. */
   query: string;
-  /**
-   * {@inheritDoc QueryTrigger}
-   */
+  /** {@inheritDoc QueryTrigger} */
   queryTrigger?: QueryTrigger;
-  /**
-   * Disables spellcheck if true.
-   */
+  /** Disables spellcheck if true */
   skipSpellCheck?: boolean;
-  /**
-   * Enables session tracking
-   */
+  /** Enables session tracking */
   sessionTrackingEnabled?: boolean;
-  /**
-   * {@inheritDoc Coordinates}
-   */
+  /** {@inheritDoc Coordinates} */
   coordinates?: Coordinates;
-  /**
-   * {@inheritDoc Context}
-  */
+  /** {@inheritDoc Context} */
   context?: Context;
   /**
    * The URl of the page which referred the user to the current page
@@ -41,8 +29,6 @@ export default interface UniversalSearchRequest {
    * the referrerPageUrl would be https://www.yext.com/
    */
   referrerPageUrl?: string;
-  /**
-   * {@inheritDoc QuerySource}
-   */
+  /** {@inheritDoc QuerySource} */
   querySource?: QuerySource;
 }

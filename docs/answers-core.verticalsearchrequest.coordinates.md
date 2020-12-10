@@ -4,6 +4,10 @@
 
 ## VerticalSearchRequest.coordinates property
 
+The coordinates of the user making the request which is used to bias the results
+
+If omitted from a request, Yext will attempt to determine the location
+
 <b>Signature:</b>
 
 ```typescript
