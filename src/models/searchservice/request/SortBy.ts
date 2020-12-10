@@ -4,7 +4,10 @@
  * @public
  */
 export default interface SortBy {
-  type: string;
+  /** The type of sort */
+  type: 'FIELD' | 'ENTITY_DISTANCE' | 'RELEVANCE';
+  /** The field name to sort by. Required only if SortBy type is 'FIELD' */
   field: string;
-  direction: string;
+  /** Direction to sort by */
+  direction: 'ASC' | 'DESC';
 }
