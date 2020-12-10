@@ -4,17 +4,17 @@
 
 ## AnswersCore class
 
+Exposes the Answers Core services
+
 <b>Signature:</b>
 
 ```typescript
 export default class AnswersCore 
 ```
 
-## Constructors
+## Remarks
 
-|  Constructor | Modifiers | Description |
-|  --- | --- | --- |
-|  [(constructor)(searchService, questionSubmissionService, autoCompleteService)](./answers-core.answerscore._constructor_.md) |  | Constructs a new instance of the <code>AnswersCore</code> class |
+The constructor for this class is marked as internal. Third-party code should not call the constructor directly or create subclasses that extend the `AnswersCore` class.
 
 ## Methods
 
@@ -23,7 +23,7 @@ export default class AnswersCore
 |  [filterAutoComplete(request)](./answers-core.answerscore.filterautocomplete.md) |  |  |
 |  [submitQuestion(request)](./answers-core.answerscore.submitquestion.md) |  |  |
 |  [universalAutoComplete(request)](./answers-core.answerscore.universalautocomplete.md) |  |  |
-|  [universalSearch(request)](./answers-core.answerscore.universalsearch.md) |  |  |
+|  [universalSearch(request)](./answers-core.answerscore.universalsearch.md) |  | Performs an Answers search across all verticals |
 |  [verticalAutoComplete(request)](./answers-core.answerscore.verticalautocomplete.md) |  |  |
-|  [verticalSearch(request)](./answers-core.answerscore.verticalsearch.md) |  |  |
+|  [verticalSearch(request)](./answers-core.answerscore.verticalsearch.md) |  | Performs an Answers search for a single vertical |
 

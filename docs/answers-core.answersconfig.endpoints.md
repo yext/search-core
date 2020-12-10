@@ -4,6 +4,8 @@
 
 ## AnswersConfig.endpoints property
 
+URLs to various Answers services
+
 <b>Signature:</b>
 
 ```typescript

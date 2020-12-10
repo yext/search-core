@@ -4,6 +4,8 @@
 
 ## CombinedFilter.filters property
 
+The filters to be combined
+
 <b>Signature:</b>
 
 ```typescript

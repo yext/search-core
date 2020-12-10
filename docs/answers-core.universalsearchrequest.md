@@ -4,7 +4,7 @@
 
 ## UniversalSearchRequest interface
 
-Options for constructing a universal search
+Options for constructing a universal search.
 
 <b>Signature:</b>
 
@@ -16,12 +16,12 @@ export default interface UniversalSearchRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [context?](./answers-core.universalsearchrequest.context.md) | Context | <i>(Optional)</i> |
-|  [coordinates?](./answers-core.universalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> |
-|  [query](./answers-core.universalsearchrequest.query.md) | string |  |
-|  [querySource?](./answers-core.universalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> |
-|  [queryTrigger?](./answers-core.universalsearchrequest.querytrigger.md) | [QueryTrigger](./answers-core.querytrigger.md) | <i>(Optional)</i> |
-|  [referrerPageUrl?](./answers-core.universalsearchrequest.referrerpageurl.md) | string | <i>(Optional)</i> |
-|  [sessionTrackingEnabled?](./answers-core.universalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> |
-|  [skipSpellCheck?](./answers-core.universalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> |
+|  [context?](./answers-core.universalsearchrequest.context.md) | Context | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
+|  [coordinates?](./answers-core.universalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> The coordinates of the user making the request.<!-- -->If omitted from a request, Yext will attempt to determine the location |
+|  [query](./answers-core.universalsearchrequest.query.md) | string | The search query. |
+|  [querySource?](./answers-core.universalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request |
+|  [queryTrigger?](./answers-core.universalsearchrequest.querytrigger.md) | [QueryTrigger](./answers-core.querytrigger.md) | <i>(Optional)</i> The query trigger |
+|  [referrerPageUrl?](./answers-core.universalsearchrequest.referrerpageurl.md) | string | <i>(Optional)</i> The URl of the page which referred the user to the current page |
+|  [sessionTrackingEnabled?](./answers-core.universalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking |
+|  [skipSpellCheck?](./answers-core.universalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> Disables spellcheck if true. |
 

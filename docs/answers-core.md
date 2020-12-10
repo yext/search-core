@@ -8,15 +8,16 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [AnswersCore](./answers-core.answerscore.md) |  |
+|  [AnswersCore](./answers-core.answerscore.md) | Exposes the Answers Core services |
 
 ## Enumerations
 
 |  Enumeration | Description |
 |  --- | --- |
+|  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) |  |
-|  [QuerySource](./answers-core.querysource.md) |  |
-|  [QueryTrigger](./answers-core.querytrigger.md) |  |
+|  [QuerySource](./answers-core.querysource.md) | The source of the search request |
+|  [QueryTrigger](./answers-core.querytrigger.md) | The query trigger |
 |  [SearchIntent](./answers-core.searchintent.md) |  |
 |  [Source](./answers-core.source.md) |  |
 |  [SpellCheckType](./answers-core.spellchecktype.md) |  |
@@ -25,22 +26,21 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [provideCore(config)](./answers-core.providecore.md) |  |
+|  [provideCore(config)](./answers-core.providecore.md) | The entrypoint to the answers-core library.<!-- -->Returns an [AnswersCore](./answers-core.answerscore.md) promise. If the backend determines that the core should be disabled, this function returns a rejected promise |
 
 ## Interfaces
 
 |  Interface | Description |
 |  --- | --- |
-|  [AnswersConfig](./answers-core.answersconfig.md) |  |
+|  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md) |
 |  [AnswersError](./answers-core.answerserror.md) | An error from the Answers Backend |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API determined should be applied to the search |
 |  [AutoCompleteResponse](./answers-core.autocompleteresponse.md) |  |
 |  [AutoCompleteResult](./answers-core.autocompleteresult.md) |  |
-|  [CombinedFilter](./answers-core.combinedfilter.md) | Represents more than one filter that will be combined to refine results. |
-|  [Context](./answers-core.context.md) |  |
-|  [Coordinates\_2](./answers-core.coordinates_2.md) |  |
+|  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
+|  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
+|  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request.<!-- -->If omitted from a request, Yext will attempt to determine the location |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search |
-|  [Endpoints](./answers-core.endpoints.md) |  |
 |  [Facet](./answers-core.facet.md) |  |
 |  [FacetOption](./answers-core.facetoption.md) |  |
 |  [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) |  |
@@ -52,11 +52,11 @@
 |  [Result](./answers-core.result.md) | An individual search result |
 |  [SearchParameterField](./answers-core.searchparameterfield.md) |  |
 |  [SearchParameters](./answers-core.searchparameters.md) |  |
-|  [SimpleFilter](./answers-core.simplefilter.md) | Represents a single filter comparing a value to a field |
+|  [SimpleFilter](./answers-core.simplefilter.md) | Represents a filter which compares values to a single field |
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query |
 |  [UniversalAutoCompleteRequest](./answers-core.universalautocompleterequest.md) | A domain model representation of an AutoComplete request. This model can be used for AutoComplete on vertical, universal, or filter search. |
-|  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options for constructing a universal search |
+|  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options for constructing a universal search. |
 |  [UniversalSearchResponse](./answers-core.universalsearchresponse.md) | A representation of a response from a universal search |
 |  [VerticalAutoCompleteRequest](./answers-core.verticalautocompleterequest.md) |  |
 |  [VerticalResults](./answers-core.verticalresults.md) | A result from an individual vertical |

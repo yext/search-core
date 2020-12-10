@@ -4,25 +4,23 @@
 
 ```ts
 
-// @public (undocumented)
+// @public
 export interface AnswersConfig {
-    // (undocumented)
     apiKey: string;
-    // (undocumented)
+    // Warning: (ae-incompatible-release-tags) The symbol "endpoints" is marked as @public, but its signature references "Endpoints" which is marked as @internal
     endpoints?: Endpoints;
-    // (undocumented)
     experienceKey: string;
-    // (undocumented)
     experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
-    // (undocumented)
     locale: string;
 }
 
-// @public (undocumented)
+// @public
 export class AnswersCore {
     // Warning: (ae-forgotten-export) The symbol "SearchService" needs to be exported by the entry point index.d.ts
     // Warning: (ae-forgotten-export) The symbol "QuestionSubmissionService" needs to be exported by the entry point index.d.ts
     // Warning: (ae-forgotten-export) The symbol "AutoCompleteService" needs to be exported by the entry point index.d.ts
+    //
+    // @internal
     constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutoCompleteService);
     // (undocumented)
     filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse>;
@@ -30,11 +28,9 @@ export class AnswersCore {
     submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
     // (undocumented)
     universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse>;
-    // (undocumented)
     universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
     // (undocumented)
     verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse>;
-    // (undocumented)
     verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
 }
 
@@ -85,25 +81,18 @@ export interface AutoCompleteResult {
 
 // @public
 export interface CombinedFilter {
-    // Warning: (ae-forgotten-export) The symbol "FilterCombinator" needs to be exported by the entry point index.d.ts
-    //
-    // (undocumented)
     combinator: FilterCombinator;
-    // (undocumented)
     filters: (SimpleFilter | CombinedFilter)[];
 }
 
-// @public (undocumented)
+// @public
 export interface Context {
-    // (undocumented)
     [property: string]: string | boolean;
 }
 
-// @public (undocumented)
+// @public
 interface Coordinates_2 {
-    // (undocumented)
     latitude: string;
-    // (undocumented)
     longitude: string;
 }
 
@@ -127,7 +116,9 @@ export interface DirectAnswer {
     verticalKey: string;
 }
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "Endpoints" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface Endpoints {
     // (undocumented)
     filterAutoComplete?: string;
@@ -191,6 +182,12 @@ export interface FilterAutoCompleteResponse {
 }
 
 // @public
+export enum FilterCombinator {
+    AND = "$and",
+    OR = "$or"
+}
+
+// @public
 export interface HighlightedValue {
     // (undocumented)
     fieldName: string;
@@ -227,18 +224,16 @@ export enum LocationBiasMethod {
     Unknown = "UNKNOWN"
 }
 
-// @public (undocumented)
+// @public
 export function provideCore(config: AnswersConfig): Promise<AnswersCore>;
 
-// @public (undocumented)
+// @public
 export enum QuerySource {
-    // (undocumented)
     Overlay = "OVERLAY",
-    // (undocumented)
     Standard = "STANDARD"
 }
 
-// @public (undocumented)
+// @public
 export enum QueryTrigger {
     // (undocumented)
     Initialize = "initialize",
@@ -386,21 +381,13 @@ export interface UniversalAutoCompleteRequest {
 
 // @public
 export interface UniversalSearchRequest {
-    // (undocumented)
     context?: Context;
-    // (undocumented)
     coordinates?: Coordinates_2;
-    // (undocumented)
     query: string;
-    // (undocumented)
     querySource?: QuerySource;
-    // (undocumented)
     queryTrigger?: QueryTrigger;
-    // (undocumented)
     referrerPageUrl?: string;
-    // (undocumented)
     sessionTrackingEnabled?: boolean;
-    // (undocumented)
     skipSpellCheck?: boolean;
 }
 

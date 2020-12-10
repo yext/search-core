@@ -12,7 +12,7 @@ export { default as QuestionSubmissionRequest } from './questionsubmission/Quest
 export { default as QuestionSubmissionResponse } from './questionsubmission/QuestionSubmissionResponse';
 
 // Search service
-export { default as CombinedFilter } from './searchservice/request/CombinedFilter';
+export { default as CombinedFilter, FilterCombinator } from './searchservice/request/CombinedFilter';
 export { default as Context } from './searchservice/request/Context';
 export { default as Coordinates } from './searchservice/request/Coordinates';
 export { QuerySource } from './searchservice/request/QuerySource';

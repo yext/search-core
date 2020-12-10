@@ -4,7 +4,7 @@
 
 ## CombinedFilter interface
 
-Represents more than one filter that will be combined to refine results.
+Represents multiple filters that will be combined to refine results.
 
 <b>Signature:</b>
 
@@ -16,6 +16,6 @@ export default interface CombinedFilter
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [combinator](./answers-core.combinedfilter.combinator.md) | FilterCombinator |  |
-|  [filters](./answers-core.combinedfilter.filters.md) | (SimpleFilter \| CombinedFilter)\[\] |  |
+|  [combinator](./answers-core.combinedfilter.combinator.md) | [FilterCombinator](./answers-core.filtercombinator.md) | The logical operator used to combine the filters |
+|  [filters](./answers-core.combinedfilter.filters.md) | (SimpleFilter \| CombinedFilter)\[\] | The filters to be combined |
 

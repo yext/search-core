@@ -4,8 +4,17 @@
 
 ## AnswersConfig.experienceVersion property
 
+The version of the answers experience configuration
+
+May be a configuration label (string) or a configuration version (number)
+
 <b>Signature:</b>
 
 ```typescript
 experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
 ```
+
+## Example
+
+Examples: 'PRODUCTION', 42
+

@@ -4,8 +4,15 @@
 
 ## Coordinates\_2.latitude property
 
+Latitude formatted as a decimal degree number
+
 <b>Signature:</b>
 
 ```typescript
 latitude: string;
 ```
+
+## Example
+
+`"40.741895"`
+

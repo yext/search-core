@@ -4,6 +4,8 @@
 
 ## UniversalSearchRequest.queryTrigger property
 
+The query trigger
+
 <b>Signature:</b>
 
 ```typescript

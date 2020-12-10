@@ -4,8 +4,15 @@
 
 ## UniversalSearchRequest.referrerPageUrl property
 
+The URl of the page which referred the user to the current page
+
 <b>Signature:</b>
 
 ```typescript
 referrerPageUrl?: string;
 ```
+
+## Example
+
+If a user is on https://www.yext.com/ and navigates to https://www.yext.com/answers and perform a search, the referrerPageUrl would be https://www.yext.com/
+

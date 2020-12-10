@@ -12,17 +12,32 @@ import { UniversalAutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCo
 import { AutoCompleteResponse, FilterAutoCompleteResponse } from './models/autocompleteservice/AutoCompleteResponse';
 import { AutoCompleteService } from './services/AutoCompleteService';
 
+/**
+ * Exposes the Answers Core services
+ *
+ * @public
+ */
 export default class AnswersCore {
+  /** @internal */
   constructor(
     private searchService: SearchService,
     private questionSubmissionService: QuestionSubmissionService,
     private autoCompleteService: AutoCompleteService
   ) {}
 
+  /**
+   * Performs an Answers search across all verticals
+   *
+   * @param request - The request options
+   */
   universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
     return this.searchService.universalSearch(request);
   }
 
+  /**
+   * Performs an Answers search for a single vertical
+   * @param request - The request options
+   */
   verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse> {
     return this.searchService.verticalSearch(request);
   }

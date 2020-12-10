@@ -4,6 +4,8 @@
 
 ## AnswersCore.universalSearch() method
 
+Performs an Answers search across all verticals
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,7 +16,7 @@ universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchRespons
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | UniversalSearchRequest |  |
+|  request | UniversalSearchRequest | The request options |
 
 <b>Returns:</b>
 

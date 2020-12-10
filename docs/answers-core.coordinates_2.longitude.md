@@ -4,8 +4,15 @@
 
 ## Coordinates\_2.longitude property
 
+Longitude formatted as a decimal degree number
+
 <b>Signature:</b>
 
 ```typescript
 longitude: string;
 ```
+
+## Example
+
+`"-73.989308"`
+

@@ -4,6 +4,8 @@
 
 ## UniversalSearchRequest.skipSpellCheck property
 
+Disables spellcheck if true.
+
 <b>Signature:</b>
 
 ```typescript

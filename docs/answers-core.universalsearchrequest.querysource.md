@@ -4,6 +4,8 @@
 
 ## UniversalSearchRequest.querySource property
 
+The source of the search request
+
 <b>Signature:</b>
 
 ```typescript

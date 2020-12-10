@@ -4,6 +4,10 @@
 
 ## Coordinates\_2 interface
 
+The coordinates of the user making the request.
+
+If omitted from a request, Yext will attempt to determine the location
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,6 +18,6 @@ export default interface Coordinates
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [latitude](./answers-core.coordinates_2.latitude.md) | string |  |
-|  [longitude](./answers-core.coordinates_2.longitude.md) | string |  |
+|  [latitude](./answers-core.coordinates_2.latitude.md) | string | Latitude formatted as a decimal degree number |
+|  [longitude](./answers-core.coordinates_2.longitude.md) | string | Longitude formatted as a decimal degree number |
 

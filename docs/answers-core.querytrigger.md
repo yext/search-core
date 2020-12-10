@@ -4,6 +4,8 @@
 
 ## QueryTrigger enum
 
+The query trigger
+
 <b>Signature:</b>
 
 ```typescript
