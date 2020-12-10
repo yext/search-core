@@ -17,6 +17,7 @@ export interface AutoCompleteResult
 |  [filter?](./answers-core.autocompleteresult.filter.md) | SimpleFilter | <i>(Optional)</i> |
 |  [key?](./answers-core.autocompleteresult.key.md) | string | <i>(Optional)</i> |
 |  [matchedSubstrings?](./answers-core.autocompleteresult.matchedsubstrings.md) | { length: number; offset: number; }\[\] | <i>(Optional)</i> |
+|  [relatedItem?](./answers-core.autocompleteresult.relateditem.md) | { data: Record&lt;string, unknown&gt;; highlightedFields: Record&lt;string, unknown&gt;; } | <i>(Optional)</i> |
 |  [shortValue?](./answers-core.autocompleteresult.shortvalue.md) | string | <i>(Optional)</i> |
 |  [value](./answers-core.autocompleteresult.value.md) | string |  |
 
