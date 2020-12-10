@@ -4,8 +4,10 @@
 
 ## SortBy.direction property
 
+Direction to sort by
+
 <b>Signature:</b>
 
 ```typescript
-direction: string;
+direction: 'ASC' | 'DESC';
 ```

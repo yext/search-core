@@ -4,8 +4,10 @@
 
 ## SortBy.type property
 
+The type of sort
+
 <b>Signature:</b>
 
 ```typescript
-type: string;
+type: 'FIELD' | 'ENTITY_DISTANCE' | 'RELEVANCE';
 ```

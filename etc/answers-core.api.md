@@ -327,12 +327,9 @@ export interface SimpleFilter {
 
 // @public
 export interface SortBy {
-    // (undocumented)
-    direction: string;
-    // (undocumented)
+    direction: 'ASC' | 'DESC';
     field: string;
-    // (undocumented)
-    type: string;
+    type: 'FIELD' | 'ENTITY_DISTANCE' | 'RELEVANCE';
 }
 
 // @public (undocumented)

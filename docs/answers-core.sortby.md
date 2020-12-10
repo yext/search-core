@@ -16,7 +16,7 @@ export default interface SortBy
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [direction](./answers-core.sortby.direction.md) | string |  |
-|  [field](./answers-core.sortby.field.md) | string |  |
-|  [type](./answers-core.sortby.type.md) | string |  |
+|  [direction](./answers-core.sortby.direction.md) | 'ASC' \| 'DESC' | Direction to sort by |
+|  [field](./answers-core.sortby.field.md) | string | The field name to sort by. Required only if SortBy type is 'FIELD' |
+|  [type](./answers-core.sortby.type.md) | 'FIELD' \| 'ENTITY\_DISTANCE' \| 'RELEVANCE' | The type of sort |
 

@@ -11,3 +11,8 @@ Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answer
 ```typescript
 context?: Context;
 ```
+
+## Remarks
+
+Context may be any object
+
