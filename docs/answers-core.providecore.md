@@ -6,8 +6,6 @@
 
 The entrypoint to the answers-core library.
 
-Returns an [AnswersCore](./answers-core.answerscore.md) promise. If the backend determines that the core should be disabled, this function returns a rejected promise
-
 <b>Signature:</b>
 
 ```typescript
@@ -23,4 +21,8 @@ export declare function provideCore(config: AnswersConfig): Promise<AnswersCore>
 <b>Returns:</b>
 
 Promise&lt;AnswersCore&gt;
+
+## Remarks
+
+Returns an [AnswersCore](./answers-core.answerscore.md) promise. If the backend determines that the core should be disabled, this function returns a rejected promise.
 

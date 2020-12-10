@@ -18,6 +18,6 @@ export default interface AnswersConfig
 |  --- | --- | --- |
 |  [apiKey](./answers-core.answersconfig.apikey.md) | string | The api key of the answers experience |
 |  [experienceKey](./answers-core.answersconfig.experiencekey.md) | string | The experience key of the answers experience |
-|  [experienceVersion?](./answers-core.answersconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the answers experience configuration<!-- -->May be a configuration label (string) or a configuration version (number) |
+|  [experienceVersion?](./answers-core.answersconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the answers experience configuration |
 |  [locale](./answers-core.answersconfig.locale.md) | string | The locale of the answers experience |
 

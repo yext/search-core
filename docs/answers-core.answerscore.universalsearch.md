@@ -4,7 +4,7 @@
 
 ## AnswersCore.universalSearch() method
 
-Performs an Answers search across all verticals
+Performs an Answers search across all verticals.
 
 <b>Signature:</b>
 

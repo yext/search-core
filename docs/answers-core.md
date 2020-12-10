@@ -8,7 +8,7 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [AnswersCore](./answers-core.answerscore.md) | Exposes the Answers Core services |
+|  [AnswersCore](./answers-core.answerscore.md) | Exposes the Answers Core services. |
 
 ## Enumerations
 
@@ -25,7 +25,7 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [provideCore(config)](./answers-core.providecore.md) | The entrypoint to the answers-core library.<!-- -->Returns an [AnswersCore](./answers-core.answerscore.md) promise. If the backend determines that the core should be disabled, this function returns a rejected promise |
+|  [provideCore(config)](./answers-core.providecore.md) | The entrypoint to the answers-core library. |
 
 ## Interfaces
 
@@ -38,7 +38,7 @@
 |  [AutoCompleteResult](./answers-core.autocompleteresult.md) |  |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request which is used to bias the results<!-- -->If omitted from a request, Yext will attempt to determine the location |
+|  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request which is used to bias the results. |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search |
 |  [Facet](./answers-core.facet.md) |  |
 |  [FacetOption](./answers-core.facetoption.md) |  |

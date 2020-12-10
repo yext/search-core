@@ -1,6 +1,7 @@
 /**
- * The coordinates of the user making the request which is used to bias the results
+ * The coordinates of the user making the request which is used to bias the results.
  *
+ * @remarks
  * If omitted from a request, Yext will attempt to determine the location
  *
  * @public

@@ -13,7 +13,7 @@ import { AutoCompleteResponse, FilterAutoCompleteResponse } from './models/autoc
 import { AutoCompleteService } from './services/AutoCompleteService';
 
 /**
- * Exposes the Answers Core services
+ * Exposes the Answers Core services.
  *
  * @public
  */
@@ -26,7 +26,7 @@ export default class AnswersCore {
   ) {}
 
   /**
-   * Performs an Answers search across all verticals
+   * Performs an Answers search across all verticals.
    *
    * @param request - Universal search request options
    */
@@ -35,7 +35,7 @@ export default class AnswersCore {
   }
 
   /**
-   * Performs an Answers search for a single vertical
+   * Performs an Answers search for a single vertical.
    *
    * @param request - Vertical search request options
    */

@@ -17,7 +17,7 @@ export default interface UniversalSearchRequest
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [context?](./answers-core.universalsearchrequest.context.md) | Context | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [coordinates?](./answers-core.universalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> The coordinates of the user making the request which is used to bias the results<!-- -->If omitted from a request, Yext will attempt to determine the location |
+|  [coordinates?](./answers-core.universalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> The coordinates of the user making the request which is used to bias the results. |
 |  [query](./answers-core.universalsearchrequest.query.md) | string | The search query. |
 |  [querySource?](./answers-core.universalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request |
 |  [queryTrigger?](./answers-core.universalsearchrequest.querytrigger.md) | QueryTrigger | <i>(Optional)</i> Indicates what triggered the query |

@@ -15,6 +15,7 @@ export default interface AnswersConfig {
   /**
    * The version of the answers experience configuration
    *
+   * @remarks
    * May be a configuration label (string) or a configuration version (number)
    *
    * @example
