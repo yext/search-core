@@ -4,8 +4,15 @@
 
 ## SimpleFilter.comparedValue property
 
+The value to compare
+
 <b>Signature:</b>
 
 ```typescript
 comparedValue: string | number | boolean;
 ```
+
+## Example
+
+'Sales'
+

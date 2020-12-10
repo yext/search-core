@@ -16,7 +16,7 @@ verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | VerticalSearchRequest | The request options |
+|  request | VerticalSearchRequest | Vertical search request options |
 
 <b>Returns:</b>
 

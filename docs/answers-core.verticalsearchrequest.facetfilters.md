@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.facetFilters property
 
-The [filters](./answers-core.simplefilter.md) to apply to the search
+The facet filters to apply to the search
 
 <b>Signature:</b>
 

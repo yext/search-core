@@ -6,9 +6,7 @@ import Endpoints from './Endpoints';
  * @public
  */
 export default interface AnswersConfig {
-  /**
-   * The api key of the answers experience
-   */
+  /** The api key of the answers experience */
   apiKey: string,
   /**
    * The experience key of the answers experience

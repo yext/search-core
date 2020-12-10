@@ -16,7 +16,7 @@ universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchRespons
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | UniversalSearchRequest | The request options |
+|  request | UniversalSearchRequest | Universal search request options |
 
 <b>Returns:</b>
 

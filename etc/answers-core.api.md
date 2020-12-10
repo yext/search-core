@@ -320,11 +320,8 @@ export interface SearchParameters {
 
 // @public
 export interface SimpleFilter {
-    // (undocumented)
     comparator: string;
-    // (undocumented)
     comparedValue: string | number | boolean;
-    // (undocumented)
     fieldId: string;
 }
 
@@ -451,7 +448,6 @@ export interface VerticalSearchRequest {
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
     sortBys?: SortBy[];
-    // (undocumented)
     staticFilters?: CombinedFilter | SimpleFilter;
     verticalKey: string;
 }

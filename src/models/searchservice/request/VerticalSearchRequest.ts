@@ -24,7 +24,7 @@ export default interface VerticalSearchRequest {
   offset?: number,
   /** Indicates that faces should be retieved */
   retrieveFacets?: boolean,
-  /** The {@link SimpleFilter | filters} to apply to the search */
+  /** The facet filters to apply to the search */
   facetFilters?: SimpleFilter[],
   /** Skips spell checking if true */
   skipSpellCheck?: boolean,
@@ -34,6 +34,7 @@ export default interface VerticalSearchRequest {
   queryTrigger?: QueryTrigger,
   /** Enables session tracking */
   sessionTrackingEnabled?: boolean,
+  /** The static filters to apply to the search */
   staticFilters?: CombinedFilter | SimpleFilter,
   /** Determines how results are sorted **/
   sortBys?: SortBy[],

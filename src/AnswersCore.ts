@@ -28,7 +28,7 @@ export default class AnswersCore {
   /**
    * Performs an Answers search across all verticals
    *
-   * @param request - The request options
+   * @param request - Universal search request options
    */
   universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
     return this.searchService.universalSearch(request);
@@ -37,7 +37,7 @@ export default class AnswersCore {
   /**
    * Performs an Answers search for a single vertical
    *
-   * @param request - The request options
+   * @param request - Vertical search request options
    */
   verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse> {
     return this.searchService.verticalSearch(request);

@@ -4,8 +4,15 @@
 
 ## SimpleFilter.fieldId property
 
+The fieldId to apply the filter against
+
 <b>Signature:</b>
 
 ```typescript
 fieldId: string;
 ```
+
+## Example
+
+'c\_jobCategory'
+
