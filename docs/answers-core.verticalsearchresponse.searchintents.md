@@ -4,7 +4,7 @@
 
 ## VerticalSearchResponse.searchIntents property
 
-An array of [search intents](./answers-core.searchintent.md)<!-- -->.
+An array of [SearchIntent](./answers-core.searchintent.md)<!-- -->s.
 
 <b>Signature:</b>
 

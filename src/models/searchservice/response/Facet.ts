@@ -10,7 +10,7 @@ export default interface Facet {
   fieldId: string;
   /** The name of the facet which is meant to be displayed to the user. */
   displayName: string;
-  /** {@inheritDoc FacetOption} */
+  /** An array of {@link FacetOption}s */
   options: FacetOption[];
 }
 

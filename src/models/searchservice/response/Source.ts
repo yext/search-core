@@ -1,5 +1,5 @@
 /**
- * Represents the source of a {@link Result | result}.
+ * Represents the source of a {@link Result}.
  *
  * @public
  */

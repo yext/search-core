@@ -21,7 +21,7 @@ export default interface VerticalSearchResponse
 |  [facets?](./answers-core.verticalsearchresponse.facets.md) | Readonly&lt;Facet\[\]&gt; | <i>(Optional)</i> An array of [Facet](./answers-core.facet.md)<!-- -->s associated with the search results. |
 |  [locationBias?](./answers-core.verticalsearchresponse.locationbias.md) | LocationBias | <i>(Optional)</i> Information about the location bias applied to an Answers search. |
 |  [queryId](./answers-core.verticalsearchresponse.queryid.md) | string | The ID of the query. |
-|  [searchIntents?](./answers-core.verticalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [search intents](./answers-core.searchintent.md)<!-- -->. |
+|  [searchIntents?](./answers-core.verticalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./answers-core.searchintent.md)<!-- -->s. |
 |  [spellCheck?](./answers-core.verticalsearchresponse.spellcheck.md) | SpellCheck | <i>(Optional)</i> A spellcheck response from a search query. |
 |  [verticalResults](./answers-core.verticalsearchresponse.verticalresults.md) | VerticalResults | Represents results from a search vertical |
 

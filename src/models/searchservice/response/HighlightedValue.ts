@@ -8,7 +8,7 @@
  * @public
  */
 export default interface HighlightedValue {
-  /** The field name of the highlighted value */
+  /** The field name of the highlighted value. */
   fieldName: string,
   /**
    * Represents the nested field structure of the highlighted value.

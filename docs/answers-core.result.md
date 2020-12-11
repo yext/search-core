@@ -26,5 +26,5 @@ export default interface Result
 |  [link?](./answers-core.result.link.md) | string | <i>(Optional)</i> A hyperlink associated with the result. |
 |  [name?](./answers-core.result.name.md) | string | <i>(Optional)</i> The name of the result. |
 |  [rawData](./answers-core.result.rawdata.md) | Record&lt;string, unknown&gt; | Raw entity profile data in the shape of key-value pairs. |
-|  [source](./answers-core.result.source.md) | [Source](./answers-core.source.md) | Represents the source of a [result](./answers-core.result.md)<!-- -->. |
+|  [source](./answers-core.result.source.md) | [Source](./answers-core.source.md) | Represents the source of a [Result](./answers-core.result.md)<!-- -->. |
 

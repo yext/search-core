@@ -4,7 +4,7 @@
 
 ## Facet.options property
 
-A filter associated with the facet.
+An array of [FacetOption](./answers-core.facetoption.md)<!-- -->s
 
 <b>Signature:</b>
 

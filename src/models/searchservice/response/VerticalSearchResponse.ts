@@ -14,7 +14,7 @@ export default interface VerticalSearchResponse {
   verticalResults: VerticalResults;
   /** The ID of the query. */
   queryId: string;
-  /** An array of {@link SearchIntent | search intents}. */
+  /** An array of {@link SearchIntent}s. */
   searchIntents?: SearchIntent[];
   /** An array of {@link Facet}s associated with the search results. */
   facets?: Readonly<Facet[]>;

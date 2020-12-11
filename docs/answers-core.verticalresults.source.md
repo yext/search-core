@@ -4,7 +4,7 @@
 
 ## VerticalResults.source property
 
-Represents the source of a [result](./answers-core.result.md)<!-- -->.
+Represents the source of a [Result](./answers-core.result.md)<!-- -->.
 
 <b>Signature:</b>
 
