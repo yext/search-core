@@ -44,11 +44,8 @@ export interface AnswersError {
 
 // @public
 export interface AppliedQueryFilter {
-    // (undocumented)
     displayKey: string;
-    // (undocumented)
     displayValue: string;
-    // (undocumented)
     filter: SimpleFilter;
 }
 
@@ -105,19 +102,12 @@ export { Coordinates_2 as Coordinates }
 
 // @public
 export interface DirectAnswer {
-    // (undocumented)
     entityName: string;
-    // (undocumented)
     fieldApiName: string;
-    // (undocumented)
     fieldName: string;
-    // (undocumented)
     fieldType: string;
-    // (undocumented)
     relatedResult: Result;
-    // (undocumented)
     value: string;
-    // (undocumented)
     verticalKey: string;
 }
 
@@ -141,25 +131,18 @@ export interface Endpoints {
     verticalSearch?: string;
 }
 
-// @public (undocumented)
+// @public
 export interface Facet {
-    // (undocumented)
     displayName: string;
-    // (undocumented)
     fieldId: string;
-    // (undocumented)
     options: FacetOption[];
 }
 
-// @public (undocumented)
+// @public
 export interface FacetOption {
-    // (undocumented)
     count: number;
-    // (undocumented)
     displayName: string;
-    // (undocumented)
     filter: SimpleFilter;
-    // (undocumented)
     selected: boolean;
 }
 
@@ -194,38 +177,27 @@ export enum FilterCombinator {
 
 // @public
 export interface HighlightedValue {
-    // (undocumented)
     fieldName: string;
-    // (undocumented)
     matchedSubstrings: {
         length: number;
         offset: number;
     }[];
-    // (undocumented)
     path: string[];
-    // (undocumented)
     value: string;
 }
 
 // @public
 export interface LocationBias {
-    // (undocumented)
     displayName: string;
-    // (undocumented)
     latitude: number;
-    // (undocumented)
     longitude: number;
-    // (undocumented)
     method: LocationBiasMethod;
 }
 
-// @public (undocumented)
+// @public
 export enum LocationBiasMethod {
-    // (undocumented)
     Device = "DEVICE",
-    // (undocumented)
     Ip = "IP",
-    // (undocumented)
     Unknown = "UNKNOWN"
 }
 
@@ -270,25 +242,15 @@ export interface QuestionSubmissionResponse {
 
 // @public
 export interface Result {
-    // (undocumented)
     description?: string;
-    // (undocumented)
     distance?: number;
-    // (undocumented)
     distanceFromFilter?: number;
-    // (undocumented)
     entityType?: string;
-    // (undocumented)
     highlightedValues?: HighlightedValue[];
-    // (undocumented)
     id?: string;
-    // (undocumented)
     index?: number;
-    // (undocumented)
     link?: string;
-    // (undocumented)
     name?: string;
-    // (undocumented)
     rawData: Record<string, unknown>;
     // (undocumented)
     source: Source;
