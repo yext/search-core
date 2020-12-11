@@ -1,13 +1,13 @@
-import VerticalResults from './VerticalResults';
+import { VerticalResults } from './VerticalResults';
 import { SearchIntent } from './SearchIntent';
-import Facet from './Facet';
-import LocationBias from './LocationBias';
-import SpellCheck from './SpellCheck';
+import { Facet } from './Facet';
+import { LocationBias } from './LocationBias';
+import { SpellCheck } from './SpellCheck';
 
 /**
  * A representation of a response from a vertical search
  */
-export default interface VerticalSearchResponse {
+export interface VerticalSearchResponse {
   verticalResults: VerticalResults;
   queryId: string;
   searchIntents?: SearchIntent[];

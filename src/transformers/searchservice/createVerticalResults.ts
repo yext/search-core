@@ -1,8 +1,8 @@
-import ResultsFactory from './ResultsFactory';
-import createAppliedQueryFilter from './createAppliedQueryFilter';
-import VerticalResults from '../../models/searchservice/response/VerticalResults';
+import { ResultsFactory } from './ResultsFactory';
+import { createAppliedQueryFilter } from './createAppliedQueryFilter';
+import { VerticalResults } from '../../models/searchservice/response/VerticalResults';
 
-export default function createVerticalResults(data: any): Readonly<VerticalResults> {
+export function createVerticalResults(data: any): Readonly<VerticalResults> {
   const appliedQueryFilters = data.appliedQueryFilters.map(createAppliedQueryFilter);
 
   return Object.freeze({

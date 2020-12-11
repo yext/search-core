@@ -1,5 +1,5 @@
 import { AutoCompleteResult } from '../../models/autocompleteservice/AutoCompleteResponse';
-import createSimpleFilter from '../core/createSimpleFilter';
+import { createSimpleFilter } from '../core/createSimpleFilter';
 
 export function createAutoCompleteResult(results: any): AutoCompleteResult {
   return Object.freeze({

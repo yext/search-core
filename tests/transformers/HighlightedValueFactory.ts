@@ -1,4 +1,4 @@
-import HighlightedValueFactory from '../../src/transformers/searchservice/HighlightedValueFactory';
+import { HighlightedValueFactory } from '../../src/transformers/searchservice/HighlightedValueFactory';
 
 it('Non-nested highlighted fields', () => {
   const liveApiData = {

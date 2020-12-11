@@ -1,4 +1,4 @@
-import SimpleFilter from '../searchservice/request/SimpleFilter';
+import { SimpleFilter } from '../searchservice/request/SimpleFilter';
 import { SearchIntent } from '../searchservice/response/SearchIntent';
 
 export interface AutoCompleteResponse {

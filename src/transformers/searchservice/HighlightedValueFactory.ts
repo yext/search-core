@@ -1,4 +1,4 @@
-import HighlightedValue from '../../models/searchservice/response/HighlightedValue';
+import { HighlightedValue } from '../../models/searchservice/response/HighlightedValue';
 
 /**
  * A highlighted field object from the API that does not contain nested fields
@@ -14,7 +14,7 @@ interface ChildHighlightedField {
 /**
  * Responsible for constructing {@link HighlightedValue}s
  */
-export default class HighlightedValueFactory {
+export class HighlightedValueFactory {
   /**
    * Constructs an array of {@link HighlightedValue}s
    *

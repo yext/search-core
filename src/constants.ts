@@ -1,4 +1,4 @@
-import Endpoints from './models/core/Endpoints';
+import { Endpoints } from './models/core/Endpoints';
 
 export const defaultApiVersion = 20190101;
 

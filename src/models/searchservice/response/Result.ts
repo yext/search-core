@@ -1,10 +1,10 @@
-import HighlightedValue from './HighlightedValue';
+import { HighlightedValue } from './HighlightedValue';
 import { Source } from './Source';
 
 /**
  * An individual search result
  */
-export default interface Result {
+export interface Result {
   rawData: Record<string, unknown>;
   source: Source;
   index?: number;

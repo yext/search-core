@@ -1,7 +1,7 @@
-import Facet, { FacetOption } from '../../models/searchservice/response/Facet';
-import createSimpleFilter from '../core/createSimpleFilter';
+import { Facet, FacetOption } from '../../models/searchservice/response/Facet';
+import { createSimpleFilter } from '../core/createSimpleFilter';
 
-export default function createFacets(facets: any): Readonly<Facet[]> {
+export function createFacets(facets: any): Readonly<Facet[]> {
   return Object.freeze(facets.map((facet: any) => ({
     fieldId: facet.fieldId,
     displayName: facet.displayName,

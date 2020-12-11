@@ -1,10 +1,10 @@
-import MasterSwitchApi from './infra/MasterSwitchApi';
-import AnswersCore from './AnswersCore';
-import SearchServiceImpl from './infra/SearchServiceImpl';
-import QuestionSubmissionServiceImpl from './infra/QuestionSubmissionServiceImpl';
-import HttpServiceImpl from './infra/HttpServiceImpl';
-import AnswersConfig from './models/core/AnswersConfig';
-import AutoCompleteServiceImpl from './infra/AutoCompleteServiceImpl';
+import { MasterSwitchApi } from './infra/MasterSwitchApi';
+import { AnswersCore } from './AnswersCore';
+import { SearchServiceImpl } from './infra/SearchServiceImpl';
+import { QuestionSubmissionServiceImpl } from './infra/QuestionSubmissionServiceImpl';
+import { HttpServiceImpl } from './infra/HttpServiceImpl';
+import { AnswersConfig } from './models/core/AnswersConfig';
+import { AutoCompleteServiceImpl } from './infra/AutoCompleteServiceImpl';
 
 export function provideCore(config: AnswersConfig): Promise<AnswersCore> {
   const masterSwitch = new MasterSwitchApi(config);

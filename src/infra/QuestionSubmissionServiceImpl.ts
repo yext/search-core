@@ -1,15 +1,15 @@
 import { defaultApiVersion, defaultEndpoints } from '../constants';
-import QuestionSubmissionService from '../services/QuestionSubmissionService';
-import HttpService from '../services/HttpService';
-import AnswersConfig from '../models/core/AnswersConfig';
-import QuestionSubmissionRequest from '../models/questionsubmission/QuestionSubmissionRequest';
-import QuestionSubmissionResponse from '../models/questionsubmission/QuestionSubmissionResponse';
-import createAnswersError from '../transformers/core/createAnswersError';
+import { QuestionSubmissionService } from '../services/QuestionSubmissionService';
+import { HttpService } from '../services/HttpService';
+import { AnswersConfig } from '../models/core/AnswersConfig';
+import { QuestionSubmissionRequest } from '../models/questionsubmission/QuestionSubmissionRequest';
+import { QuestionSubmissionResponse } from '../models/questionsubmission/QuestionSubmissionResponse';
+import { createAnswersError }from '../transformers/core/createAnswersError';
 
 /**
  * An implementation of QuestionSubmissionService which hits LiveAPI
  */
-export default class QuestionSubmissionServiceImpl implements QuestionSubmissionService {
+export class QuestionSubmissionServiceImpl implements QuestionSubmissionService {
   private endpoint: string;
   constructor(private config: AnswersConfig, private httpService: HttpService) {
     this.endpoint = this.config.endpoints?.questionSubmission

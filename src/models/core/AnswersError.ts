@@ -1,7 +1,7 @@
 /**
  * An error from the Answers Backend
  */
-export default interface AnswersError {
+export interface AnswersError {
   code: number,
   message: string
 }

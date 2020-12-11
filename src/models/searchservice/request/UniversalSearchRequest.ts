@@ -1,11 +1,11 @@
-import Context from './Context';
-import Coordinates from './Coordinates';
+import { Context } from './Context';
+import { Coordinates } from './Coordinates';
 import { QueryTrigger } from './QueryTrigger';
 import { QuerySource } from './QuerySource';
 /**
  * Options for constructing a universal search
  */
-export default interface UniversalSearchRequest {
+export interface UniversalSearchRequest {
   query: string;
   queryTrigger?: QueryTrigger;
   skipSpellCheck?: boolean;

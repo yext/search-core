@@ -1,9 +1,9 @@
-import Result from './Result';
+import { Result } from './Result';
 
 /**
  * A direct answer to a search
  */
-export default interface DirectAnswer {
+export interface DirectAnswer {
   value: string;
   relatedResult: Result;
   verticalKey: string;
