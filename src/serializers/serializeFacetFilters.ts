@@ -1,5 +1,5 @@
-import SimpleFilter from '../models/searchservice/request/SimpleFilter';
-import StaticFilters from '../models/searchservice/request/StaticFilters';
+import { SimpleFilter } from '../models/searchservice/request/SimpleFilter';
+import { StaticFilters } from '../models/searchservice/request/StaticFilters';
 import { shapeSimpleFilterForApi } from './serializeStaticFilters';
 
 export function serializeFacetFilters(filters: SimpleFilter[]): string {

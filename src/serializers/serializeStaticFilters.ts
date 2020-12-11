@@ -1,6 +1,6 @@
-import CombinedFilter from '../models/searchservice/request/CombinedFilter';
-import SimpleFilter from '../models/searchservice/request/SimpleFilter';
-import StaticFilters from '../models/searchservice/request/StaticFilters';
+import { CombinedFilter } from '../models/searchservice/request/CombinedFilter';
+import { SimpleFilter } from '../models/searchservice/request/SimpleFilter';
+import { StaticFilters } from '../models/searchservice/request/StaticFilters';
 
 export function serializeStaticFilters(
   filter: CombinedFilter | SimpleFilter): string | undefined {
