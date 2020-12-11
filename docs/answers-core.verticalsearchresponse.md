@@ -16,12 +16,12 @@ export default interface VerticalSearchResponse
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [allResultsForVertical?](./answers-core.verticalsearchresponse.allresultsforvertical.md) | VerticalSearchResponse | <i>(Optional)</i> |
-|  [alternativeVerticals?](./answers-core.verticalsearchresponse.alternativeverticals.md) | Readonly&lt;VerticalResults\[\]&gt; | <i>(Optional)</i> |
-|  [facets?](./answers-core.verticalsearchresponse.facets.md) | Readonly&lt;Facet\[\]&gt; | <i>(Optional)</i> |
-|  [locationBias?](./answers-core.verticalsearchresponse.locationbias.md) | LocationBias | <i>(Optional)</i> |
-|  [queryId](./answers-core.verticalsearchresponse.queryid.md) | string |  |
-|  [searchIntents?](./answers-core.verticalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [spellCheck?](./answers-core.verticalsearchresponse.spellcheck.md) | SpellCheck | <i>(Optional)</i> |
-|  [verticalResults](./answers-core.verticalsearchresponse.verticalresults.md) | VerticalResults |  |
+|  [allResultsForVertical?](./answers-core.verticalsearchresponse.allresultsforvertical.md) | VerticalSearchResponse | <i>(Optional)</i> A representation of a response from a vertical search |
+|  [alternativeVerticals?](./answers-core.verticalsearchresponse.alternativeverticals.md) | Readonly&lt;VerticalResults\[\]&gt; | <i>(Optional)</i> The [vertical results](./answers-core.verticalresults.md) for each search vertical |
+|  [facets?](./answers-core.verticalsearchresponse.facets.md) | Readonly&lt;Facet\[\]&gt; | <i>(Optional)</i> An array of [facets](./answers-core.facet.md) asociated with the search results |
+|  [locationBias?](./answers-core.verticalsearchresponse.locationbias.md) | LocationBias | <i>(Optional)</i> Information about the location bias applied to an Answers search |
+|  [queryId](./answers-core.verticalsearchresponse.queryid.md) | string | The ID of the query |
+|  [searchIntents?](./answers-core.verticalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [search intents](./answers-core.searchintent.md) |
+|  [spellCheck?](./answers-core.verticalsearchresponse.spellcheck.md) | SpellCheck | <i>(Optional)</i> A spellcheck response from a search query |
+|  [verticalResults](./answers-core.verticalsearchresponse.verticalresults.md) | VerticalResults | Represents results from a search vertical |
 

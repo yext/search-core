@@ -250,13 +250,11 @@ export interface Result {
     link?: string;
     name?: string;
     rawData: Record<string, unknown>;
-    // (undocumented)
     source: Source;
 }
 
-// @public (undocumented)
+// @public
 export enum SearchIntent {
-    // (undocumented)
     NearMe = "NEAR_ME"
 }
 
@@ -292,39 +290,27 @@ export interface SortBy {
     type: 'FIELD' | 'ENTITY_DISTANCE' | 'RELEVANCE';
 }
 
-// @public (undocumented)
+// @public
 export enum Source {
-    // (undocumented)
     Algolia = "ALGOLIA",
-    // (undocumented)
     Bing = "BING_CSE",
-    // (undocumented)
     Generic = "GENERIC",
-    // (undocumented)
     Google = "GOOGLE_CSE",
-    // (undocumented)
     KnowledgeManager = "KNOWLEDGE_MANAGER",
-    // (undocumented)
     Zendesk = "ZENDESK"
 }
 
 // @public
 export interface SpellCheck {
-    // (undocumented)
     correctedQuery: string;
-    // (undocumented)
     originalQuery: string;
-    // (undocumented)
     type: SpellCheckType;
 }
 
-// @public (undocumented)
+// @public
 export enum SpellCheckType {
-    // (undocumented)
     AutoCorrect = "AUTOCORRECT",
-    // (undocumented)
     Combine = "COMBINE",
-    // (undocumented)
     Suggest = "SUGGEST"
 }
 
@@ -351,19 +337,12 @@ export interface UniversalSearchRequest {
 
 // @public
 export interface UniversalSearchResponse {
-    // (undocumented)
     directAnswer?: DirectAnswer;
-    // (undocumented)
     errors?: AnswersError[];
-    // (undocumented)
     locationBias?: LocationBias;
-    // (undocumented)
     queryId?: string;
-    // (undocumented)
     searchIntents?: SearchIntent[];
-    // (undocumented)
     spellCheck?: SpellCheck;
-    // (undocumented)
     verticalResults: VerticalResults[];
 }
 
@@ -375,17 +354,11 @@ export interface VerticalAutoCompleteRequest extends UniversalAutoCompleteReques
 
 // @public
 export interface VerticalResults {
-    // (undocumented)
     appliedQueryFilters: AppliedQueryFilter[];
-    // (undocumented)
     queryDurationMillis: number;
-    // (undocumented)
     results: Result[];
-    // (undocumented)
     resultsCount: number;
-    // (undocumented)
     source: Source;
-    // (undocumented)
     verticalKey: string;
 }
 
@@ -411,21 +384,13 @@ export interface VerticalSearchRequest {
 
 // @public
 export interface VerticalSearchResponse {
-    // (undocumented)
     allResultsForVertical?: VerticalSearchResponse;
-    // (undocumented)
     alternativeVerticals?: Readonly<VerticalResults[]>;
-    // (undocumented)
     facets?: Readonly<Facet[]>;
-    // (undocumented)
     locationBias?: LocationBias;
-    // (undocumented)
     queryId: string;
-    // (undocumented)
     searchIntents?: SearchIntent[];
-    // (undocumented)
     spellCheck?: SpellCheck;
-    // (undocumented)
     verticalResults: VerticalResults;
 }
 

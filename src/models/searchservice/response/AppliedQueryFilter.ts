@@ -1,7 +1,7 @@
 import SimpleFilter from '../request/SimpleFilter';
 
 /**
- * A filter that the Answers API determined should be applied to the search
+ * A filter that the Answers API applied to the search
  *
  * @public
  */

@@ -4,6 +4,8 @@
 
 ## VerticalResults.queryDurationMillis property
 
+The duration of the query in milliseconds
+
 <b>Signature:</b>
 
 ```typescript

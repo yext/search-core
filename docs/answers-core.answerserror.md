@@ -4,7 +4,7 @@
 
 ## AnswersError interface
 
-An error from the Answers Backend.
+An error from the Answers API
 
 <b>Signature:</b>
 

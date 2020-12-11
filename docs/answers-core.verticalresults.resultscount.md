@@ -4,8 +4,15 @@
 
 ## VerticalResults.resultsCount property
 
+The total number of results within the vertical
+
 <b>Signature:</b>
 
 ```typescript
 resultsCount: number;
 ```
+
+## Remarks
+
+This number may be higher than the number of results in the results array since the API limits the number of results returned in each request
+

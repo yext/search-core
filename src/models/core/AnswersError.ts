@@ -1,5 +1,5 @@
 /**
- * An error from the Answers Backend.
+ * An error from the Answers API
  *
  * @public
  */

@@ -4,6 +4,8 @@
 
 ## VerticalSearchResponse.facets property
 
+An array of [facets](./answers-core.facet.md) asociated with the search results
+
 <b>Signature:</b>
 
 ```typescript

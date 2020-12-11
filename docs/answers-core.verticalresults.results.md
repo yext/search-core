@@ -4,6 +4,8 @@
 
 ## VerticalResults.results property
 
+An array of search [results](./answers-core.result.md) for the vertical
+
 <b>Signature:</b>
 
 ```typescript

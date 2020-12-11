@@ -4,7 +4,7 @@
 
 ## Facet interface
 
-Represents dyamic filter options from the backend
+Represents dyamic filter options from the Answers API
 
 <b>Signature:</b>
 

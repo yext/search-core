@@ -4,6 +4,8 @@
 
 ## SearchIntent enum
 
+Represents intents from the Answers API
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,5 +16,5 @@ export declare enum SearchIntent
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  NearMe | <code>&quot;NEAR_ME&quot;</code> |  |
+|  NearMe | <code>&quot;NEAR_ME&quot;</code> | The Answers API is requesting a prompt for the user's location |
 

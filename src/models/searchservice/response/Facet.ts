@@ -1,7 +1,7 @@
 import SimpleFilter from '../request/SimpleFilter';
 
 /**
- * Represents dyamic filter options from the backend
+ * Represents dyamic filter options from the Answers API
  *
  * @public
  */

@@ -17,9 +17,9 @@
 |  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location |
 |  [QuerySource](./answers-core.querysource.md) | The source of the search request |
-|  [SearchIntent](./answers-core.searchintent.md) |  |
-|  [Source](./answers-core.source.md) |  |
-|  [SpellCheckType](./answers-core.spellchecktype.md) |  |
+|  [SearchIntent](./answers-core.searchintent.md) | Represents intents from the Answers API |
+|  [Source](./answers-core.source.md) | Represents the source of a [result](./answers-core.result.md)<!-- -->. |
+|  [SpellCheckType](./answers-core.spellchecktype.md) | Represents the type of spell check performed |
 
 ## Functions
 
@@ -31,16 +31,16 @@
 
 |  Interface | Description |
 |  --- | --- |
-|  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
-|  [AnswersError](./answers-core.answerserror.md) | An error from the Answers Backend. |
-|  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API determined should be applied to the search |
+|  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md) |
+|  [AnswersError](./answers-core.answerserror.md) | An error from the Answers API |
+|  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search |
 |  [AutoCompleteResponse](./answers-core.autocompleteresponse.md) |  |
 |  [AutoCompleteResult](./answers-core.autocompleteresult.md) |  |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request which is used to bias the results. |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search |
-|  [Facet](./answers-core.facet.md) | Represents dyamic filter options from the backend |
+|  [Facet](./answers-core.facet.md) | Represents dyamic filter options from the Answers API |
 |  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet |
 |  [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) |  |
 |  [FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md) |  |

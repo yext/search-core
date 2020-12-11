@@ -4,6 +4,8 @@
 
 ## VerticalSearchResponse.locationBias property
 
+Information about the location bias applied to an Answers search
+
 <b>Signature:</b>
 
 ```typescript

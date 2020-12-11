@@ -16,11 +16,11 @@ export default interface UniversalSearchResponse
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [directAnswer?](./answers-core.universalsearchresponse.directanswer.md) | DirectAnswer | <i>(Optional)</i> |
-|  [errors?](./answers-core.universalsearchresponse.errors.md) | AnswersError\[\] | <i>(Optional)</i> |
-|  [locationBias?](./answers-core.universalsearchresponse.locationbias.md) | LocationBias | <i>(Optional)</i> |
-|  [queryId?](./answers-core.universalsearchresponse.queryid.md) | string | <i>(Optional)</i> |
-|  [searchIntents?](./answers-core.universalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [spellCheck?](./answers-core.universalsearchresponse.spellcheck.md) | SpellCheck | <i>(Optional)</i> |
-|  [verticalResults](./answers-core.universalsearchresponse.verticalresults.md) | VerticalResults\[\] |  |
+|  [directAnswer?](./answers-core.universalsearchresponse.directanswer.md) | DirectAnswer | <i>(Optional)</i> A direct answer to a search |
+|  [errors?](./answers-core.universalsearchresponse.errors.md) | AnswersError\[\] | <i>(Optional)</i> An array of [AnswersError](./answers-core.answerserror.md) from the API |
+|  [locationBias?](./answers-core.universalsearchresponse.locationbias.md) | LocationBias | <i>(Optional)</i> Information about the location bias applied to an Answers search |
+|  [queryId?](./answers-core.universalsearchresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query |
+|  [searchIntents?](./answers-core.universalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./answers-core.searchintent.md) which represents requests from the API |
+|  [spellCheck?](./answers-core.universalsearchresponse.spellcheck.md) | SpellCheck | <i>(Optional)</i> A spellcheck response from a search query |
+|  [verticalResults](./answers-core.universalsearchresponse.verticalresults.md) | VerticalResults\[\] | An array of [VerticalResults](./answers-core.verticalresults.md) which represent the results for each vertical |
 
