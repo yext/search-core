@@ -9,16 +9,16 @@ VerticalSearchRequest represents the options available when constructing a verti
 <b>Signature:</b>
 
 ```typescript
-export default interface VerticalSearchRequest 
+export interface VerticalSearchRequest 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [context](./answers-core.verticalsearchrequest.context.md) | Context |  |
+|  [context](./answers-core.verticalsearchrequest.context.md) | [Context](./answers-core.context.md) |  |
 |  [coordinates?](./answers-core.verticalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> |
-|  [facetFilters?](./answers-core.verticalsearchrequest.facetfilters.md) | SimpleFilter\[\] | <i>(Optional)</i> |
+|  [facetFilters?](./answers-core.verticalsearchrequest.facetfilters.md) | [SimpleFilter](./answers-core.simplefilter.md)<!-- -->\[\] | <i>(Optional)</i> |
 |  [limit?](./answers-core.verticalsearchrequest.limit.md) | number | <i>(Optional)</i> |
 |  [offset?](./answers-core.verticalsearchrequest.offset.md) | number | <i>(Optional)</i> |
 |  [query](./answers-core.verticalsearchrequest.query.md) | string |  |
@@ -28,7 +28,7 @@ export default interface VerticalSearchRequest
 |  [retrieveFacets?](./answers-core.verticalsearchrequest.retrievefacets.md) | boolean | <i>(Optional)</i> |
 |  [sessionTrackingEnabled?](./answers-core.verticalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> |
 |  [skipSpellCheck?](./answers-core.verticalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> |
-|  [sortBys?](./answers-core.verticalsearchrequest.sortbys.md) | SortBy\[\] | <i>(Optional)</i> |
-|  [staticFilters?](./answers-core.verticalsearchrequest.staticfilters.md) | CombinedFilter \| SimpleFilter | <i>(Optional)</i> |
+|  [sortBys?](./answers-core.verticalsearchrequest.sortbys.md) | [SortBy](./answers-core.sortby.md)<!-- -->\[\] | <i>(Optional)</i> |
+|  [staticFilters?](./answers-core.verticalsearchrequest.staticfilters.md) | [CombinedFilter](./answers-core.combinedfilter.md) \| [SimpleFilter](./answers-core.simplefilter.md) | <i>(Optional)</i> |
 |  [verticalKey](./answers-core.verticalsearchrequest.verticalkey.md) | string |  |
 

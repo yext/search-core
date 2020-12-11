@@ -9,7 +9,7 @@ A direct answer to a search
 <b>Signature:</b>
 
 ```typescript
-export default interface DirectAnswer 
+export interface DirectAnswer 
 ```
 
 ## Properties
@@ -20,7 +20,7 @@ export default interface DirectAnswer
 |  [fieldApiName](./answers-core.directanswer.fieldapiname.md) | string |  |
 |  [fieldName](./answers-core.directanswer.fieldname.md) | string |  |
 |  [fieldType](./answers-core.directanswer.fieldtype.md) | string |  |
-|  [relatedResult](./answers-core.directanswer.relatedresult.md) | Result |  |
+|  [relatedResult](./answers-core.directanswer.relatedresult.md) | [Result](./answers-core.result.md) |  |
 |  [value](./answers-core.directanswer.value.md) | string |  |
 |  [verticalKey](./answers-core.directanswer.verticalkey.md) | string |  |
 

@@ -9,13 +9,13 @@ Shape of the QuestionSubmission api response
 <b>Signature:</b>
 
 ```typescript
-export default interface QuestionSubmissionResponse 
+export interface QuestionSubmissionResponse 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [errors](./answers-core.questionsubmissionresponse.errors.md) | AnswersError\[\] |  |
+|  [errors](./answers-core.questionsubmissionresponse.errors.md) | [AnswersError](./answers-core.answerserror.md)<!-- -->\[\] |  |
 |  [uuid](./answers-core.questionsubmissionresponse.uuid.md) | string |  |
 

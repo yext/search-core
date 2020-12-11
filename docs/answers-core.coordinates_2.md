@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export default interface Coordinates 
+export interface Coordinates 
 ```
 
 ## Properties

@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export default class AnswersCore 
+export declare class AnswersCore 
 ```
 
 ## Constructors

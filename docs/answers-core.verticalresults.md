@@ -9,16 +9,16 @@ A result from an individual vertical
 <b>Signature:</b>
 
 ```typescript
-export default interface VerticalResults 
+export interface VerticalResults 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [appliedQueryFilters](./answers-core.verticalresults.appliedqueryfilters.md) | AppliedQueryFilter\[\] |  |
+|  [appliedQueryFilters](./answers-core.verticalresults.appliedqueryfilters.md) | [AppliedQueryFilter](./answers-core.appliedqueryfilter.md)<!-- -->\[\] |  |
 |  [queryDurationMillis](./answers-core.verticalresults.querydurationmillis.md) | number |  |
-|  [results](./answers-core.verticalresults.results.md) | Result\[\] |  |
+|  [results](./answers-core.verticalresults.results.md) | [Result](./answers-core.result.md)<!-- -->\[\] |  |
 |  [resultsCount](./answers-core.verticalresults.resultscount.md) | number |  |
 |  [source](./answers-core.verticalresults.source.md) | [Source](./answers-core.source.md) |  |
 |  [verticalKey](./answers-core.verticalresults.verticalkey.md) | string |  |

@@ -11,7 +11,7 @@ For example, if a user searches for 'pet' and a description field in the results
 <b>Signature:</b>
 
 ```typescript
-export default interface HighlightedValue 
+export interface HighlightedValue 
 ```
 
 ## Properties

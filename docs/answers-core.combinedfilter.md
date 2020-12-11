@@ -9,7 +9,7 @@ Represents more than one filter that will be combined to refine results.
 <b>Signature:</b>
 
 ```typescript
-export default interface CombinedFilter 
+export interface CombinedFilter 
 ```
 
 ## Properties
@@ -17,5 +17,5 @@ export default interface CombinedFilter
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [combinator](./answers-core.combinedfilter.combinator.md) | FilterCombinator |  |
-|  [filters](./answers-core.combinedfilter.filters.md) | (SimpleFilter \| CombinedFilter)\[\] |  |
+|  [filters](./answers-core.combinedfilter.filters.md) | ([SimpleFilter](./answers-core.simplefilter.md) \| [CombinedFilter](./answers-core.combinedfilter.md)<!-- -->)\[\] |  |
 

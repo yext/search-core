@@ -14,9 +14,9 @@ export declare function provideCore(config: AnswersConfig): Promise<AnswersCore>
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | AnswersConfig |  |
+|  config | [AnswersConfig](./answers-core.answersconfig.md) |  |
 
 <b>Returns:</b>
 
-Promise&lt;AnswersCore&gt;
+Promise&lt;[AnswersCore](./answers-core.answerscore.md)<!-- -->&gt;
 

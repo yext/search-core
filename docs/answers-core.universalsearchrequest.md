@@ -9,14 +9,14 @@ Options for constructing a universal search
 <b>Signature:</b>
 
 ```typescript
-export default interface UniversalSearchRequest 
+export interface UniversalSearchRequest 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [context?](./answers-core.universalsearchrequest.context.md) | Context | <i>(Optional)</i> |
+|  [context?](./answers-core.universalsearchrequest.context.md) | [Context](./answers-core.context.md) | <i>(Optional)</i> |
 |  [coordinates?](./answers-core.universalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> |
 |  [query](./answers-core.universalsearchrequest.query.md) | string |  |
 |  [querySource?](./answers-core.universalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> |
