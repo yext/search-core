@@ -14,9 +14,9 @@
 
 |  Enumeration | Description |
 |  --- | --- |
-|  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
-|  [LocationBiasMethod](./answers-core.locationbiasmethod.md) |  |
-|  [QuerySource](./answers-core.querysource.md) | The source of the search request. |
+|  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined |
+|  [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location |
+|  [QuerySource](./answers-core.querysource.md) | The source of the search request |
 |  [SearchIntent](./answers-core.searchintent.md) |  |
 |  [Source](./answers-core.source.md) |  |
 |  [SpellCheckType](./answers-core.spellchecktype.md) |  |
@@ -40,12 +40,12 @@
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request which is used to bias the results. |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search |
-|  [Facet](./answers-core.facet.md) |  |
-|  [FacetOption](./answers-core.facetoption.md) |  |
+|  [Facet](./answers-core.facet.md) | Represents dyamic filter options from the backend |
+|  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet |
 |  [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) |  |
 |  [FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md) |  |
-|  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the answers API emphasized<!-- -->For example, if a user searches for 'pet' and a description field in the results contains the value 'A pet store', the API will likely match the word 'pet' |
-|  [LocationBias](./answers-core.locationbias.md) | Location information including how it was obtained |
+|  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the Answers API emphasized |
+|  [LocationBias](./answers-core.locationbias.md) | Information about the location bias applied to an Answers search |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | Shape of the QuestionSubmission api response |
 |  [Result](./answers-core.result.md) | An individual search result |

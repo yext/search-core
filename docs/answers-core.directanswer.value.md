@@ -4,6 +4,8 @@
 
 ## DirectAnswer.value property
 
+The result of the direct answer
+
 <b>Signature:</b>
 
 ```typescript

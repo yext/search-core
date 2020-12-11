@@ -4,6 +4,8 @@
 
 ## DirectAnswer.entityName property
 
+The name of the entity of the direct answer
+
 <b>Signature:</b>
 
 ```typescript

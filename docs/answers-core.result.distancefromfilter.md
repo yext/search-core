@@ -4,6 +4,8 @@
 
 ## Result.distanceFromFilter property
 
+The distance from the filter to the result
+
 <b>Signature:</b>
 
 ```typescript

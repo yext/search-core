@@ -4,6 +4,8 @@
 
 ## HighlightedValue.fieldName property
 
+The field name of the highlighted value
+
 <b>Signature:</b>
 
 ```typescript

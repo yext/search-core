@@ -4,6 +4,8 @@
 
 ## Facet interface
 
+Represents dyamic filter options from the backend
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,7 +16,7 @@ export default interface Facet
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [displayName](./answers-core.facet.displayname.md) | string |  |
-|  [fieldId](./answers-core.facet.fieldid.md) | string |  |
-|  [options](./answers-core.facet.options.md) | [FacetOption](./answers-core.facetoption.md)<!-- -->\[\] |  |
+|  [displayName](./answers-core.facet.displayname.md) | string | The name of the facet which is meant to be displayed to the user |
+|  [fieldId](./answers-core.facet.fieldid.md) | string | The associated fieldId |
+|  [options](./answers-core.facet.options.md) | [FacetOption](./answers-core.facetoption.md)<!-- -->\[\] | A filter associated with the facet |
 

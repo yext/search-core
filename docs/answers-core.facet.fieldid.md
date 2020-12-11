@@ -4,6 +4,8 @@
 
 ## Facet.fieldId property
 
+The associated fieldId
+
 <b>Signature:</b>
 
 ```typescript

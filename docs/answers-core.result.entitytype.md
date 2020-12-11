@@ -4,6 +4,8 @@
 
 ## Result.entityType property
 
+The entity type of the result
+
 <b>Signature:</b>
 
 ```typescript

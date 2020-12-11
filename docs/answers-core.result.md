@@ -16,15 +16,15 @@ export default interface Result
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [description?](./answers-core.result.description.md) | string | <i>(Optional)</i> |
-|  [distance?](./answers-core.result.distance.md) | number | <i>(Optional)</i> |
-|  [distanceFromFilter?](./answers-core.result.distancefromfilter.md) | number | <i>(Optional)</i> |
-|  [entityType?](./answers-core.result.entitytype.md) | string | <i>(Optional)</i> |
-|  [highlightedValues?](./answers-core.result.highlightedvalues.md) | HighlightedValue\[\] | <i>(Optional)</i> |
-|  [id?](./answers-core.result.id.md) | string | <i>(Optional)</i> |
-|  [index?](./answers-core.result.index.md) | number | <i>(Optional)</i> |
-|  [link?](./answers-core.result.link.md) | string | <i>(Optional)</i> |
-|  [name?](./answers-core.result.name.md) | string | <i>(Optional)</i> |
-|  [rawData](./answers-core.result.rawdata.md) | Record&lt;string, unknown&gt; |  |
+|  [description?](./answers-core.result.description.md) | string | <i>(Optional)</i> A description of the result |
+|  [distance?](./answers-core.result.distance.md) | number | <i>(Optional)</i> The distance from the user to the result |
+|  [distanceFromFilter?](./answers-core.result.distancefromfilter.md) | number | <i>(Optional)</i> The distance from the filter to the result |
+|  [entityType?](./answers-core.result.entitytype.md) | string | <i>(Optional)</i> The entity type of the result |
+|  [highlightedValues?](./answers-core.result.highlightedvalues.md) | HighlightedValue\[\] | <i>(Optional)</i> An array of [highlighted values](./answers-core.highlightedvalue.md) associated with the result |
+|  [id?](./answers-core.result.id.md) | string | <i>(Optional)</i> The result ID which depends on the Result Source |
+|  [index?](./answers-core.result.index.md) | number | <i>(Optional)</i> The index of the result among the other results in the search |
+|  [link?](./answers-core.result.link.md) | string | <i>(Optional)</i> A hyperlink associated with the result |
+|  [name?](./answers-core.result.name.md) | string | <i>(Optional)</i> The name of the result |
+|  [rawData](./answers-core.result.rawdata.md) | Record&lt;string, unknown&gt; | Raw entity profile data in the shape of key-value pairs |
 |  [source](./answers-core.result.source.md) | [Source](./answers-core.source.md) |  |
 

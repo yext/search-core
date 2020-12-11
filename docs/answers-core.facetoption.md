@@ -4,6 +4,8 @@
 
 ## FacetOption interface
 
+A filter associated with the facet
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,8 +16,8 @@ export interface FacetOption
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [count](./answers-core.facetoption.count.md) | number |  |
-|  [displayName](./answers-core.facetoption.displayname.md) | string |  |
-|  [filter](./answers-core.facetoption.filter.md) | SimpleFilter |  |
-|  [selected](./answers-core.facetoption.selected.md) | boolean |  |
+|  [count](./answers-core.facetoption.count.md) | number | The number of results associated with this facet option |
+|  [displayName](./answers-core.facetoption.displayname.md) | string | The name of the facet option |
+|  [filter](./answers-core.facetoption.filter.md) | SimpleFilter | The filter associated with this facet option |
+|  [selected](./answers-core.facetoption.selected.md) | boolean | Whether or not the filter is selected in the search results |
 
