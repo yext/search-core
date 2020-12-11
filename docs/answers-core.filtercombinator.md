@@ -4,7 +4,7 @@
 
 ## FilterCombinator enum
 
-Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined
+Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined.
 
 <b>Signature:</b>
 
@@ -16,6 +16,6 @@ export declare enum FilterCombinator
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  AND | <code>&quot;$and&quot;</code> | Indicates that filters should be combined with a logical AND |
-|  OR | <code>&quot;$or&quot;</code> | Indicates that filters should be combined with a logical OR |
+|  AND | <code>&quot;$and&quot;</code> | Indicates that filters should be combined with a logical AND. |
+|  OR | <code>&quot;$or&quot;</code> | Indicates that filters should be combined with a logical OR. |
 

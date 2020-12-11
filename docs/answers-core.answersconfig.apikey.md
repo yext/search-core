@@ -4,7 +4,7 @@
 
 ## AnswersConfig.apiKey property
 
-The api key of the answers experience
+The api key of the answers experience.
 
 <b>Signature:</b>
 

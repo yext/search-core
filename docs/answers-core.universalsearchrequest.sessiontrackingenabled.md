@@ -4,7 +4,7 @@
 
 ## UniversalSearchRequest.sessionTrackingEnabled property
 
-Enables session tracking
+Enables session tracking.
 
 <b>Signature:</b>
 

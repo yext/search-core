@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.staticFilters property
 
-The static filters to apply to the search
+The static filters to apply to the search.
 
 <b>Signature:</b>
 

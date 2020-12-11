@@ -1,5 +1,5 @@
 /**
- * URLs to various Answers services
+ * URLs to various Answers services.
  *
  * @internal
  */

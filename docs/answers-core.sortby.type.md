@@ -4,7 +4,7 @@
 
 ## SortBy.type property
 
-The type of sort
+The type of sort.
 
 <b>Signature:</b>
 

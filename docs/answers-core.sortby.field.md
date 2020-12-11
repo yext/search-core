@@ -4,7 +4,7 @@
 
 ## SortBy.field property
 
-The field name to sort by. Required only if SortBy type is 'FIELD'
+The field name to sort by. Required only if SortBy type is 'FIELD'.
 
 <b>Signature:</b>
 

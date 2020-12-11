@@ -14,5 +14,5 @@ coordinates?: Coordinates;
 
 ## Remarks
 
-If omitted from a request, Yext will attempt to determine the location
+If omitted from a request, Yext will attempt to determine the location.
 

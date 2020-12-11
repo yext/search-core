@@ -14,5 +14,5 @@ context: Context;
 
 ## Remarks
 
-Context may be any object
+Context may be any object.
 

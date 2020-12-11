@@ -4,7 +4,7 @@
 
 ## QuerySource enum
 
-The source of the search request
+The source of the search request.
 
 <b>Signature:</b>
 
@@ -16,6 +16,6 @@ export declare enum QuerySource
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  Overlay | <code>&quot;OVERLAY&quot;</code> | Indicates that the query was initaited from an Answers Overlay |
-|  Standard | <code>&quot;STANDARD&quot;</code> | Indicates that the query was initiated from a standard Answers integration |
+|  Overlay | <code>&quot;OVERLAY&quot;</code> | Indicates that the query was initaited from an Answers Overlay. |
+|  Standard | <code>&quot;STANDARD&quot;</code> | Indicates that the query was initiated from a standard Answers integration. |
 

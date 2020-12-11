@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.retrieveFacets property
 
-Indicates that faces should be retieved
+Indicates that faces should be retieved.
 
 <b>Signature:</b>
 

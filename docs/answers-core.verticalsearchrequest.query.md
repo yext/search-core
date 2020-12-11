@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.query property
 
-The search query
+The search query.
 
 <b>Signature:</b>
 

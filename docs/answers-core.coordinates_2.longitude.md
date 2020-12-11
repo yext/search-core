@@ -4,7 +4,7 @@
 
 ## Coordinates\_2.longitude property
 
-Longitude formatted as a decimal degree number
+Longitude formatted as a decimal degree number.
 
 <b>Signature:</b>
 

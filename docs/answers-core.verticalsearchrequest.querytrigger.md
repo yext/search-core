@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.queryTrigger property
 
-Indicates what triggered the query
+Indicates what triggered the query.
 
 <b>Signature:</b>
 

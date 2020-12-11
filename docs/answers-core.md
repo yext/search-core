@@ -14,9 +14,9 @@
 
 |  Enumeration | Description |
 |  --- | --- |
-|  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined |
+|  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) |  |
-|  [QuerySource](./answers-core.querysource.md) | The source of the search request |
+|  [QuerySource](./answers-core.querysource.md) | The source of the search request. |
 |  [SearchIntent](./answers-core.searchintent.md) |  |
 |  [Source](./answers-core.source.md) |  |
 |  [SpellCheckType](./answers-core.spellchecktype.md) |  |
@@ -31,8 +31,8 @@
 
 |  Interface | Description |
 |  --- | --- |
-|  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md) |
-|  [AnswersError](./answers-core.answerserror.md) | An error from the Answers Backend |
+|  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
+|  [AnswersError](./answers-core.answerserror.md) | An error from the Answers Backend. |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API determined should be applied to the search |
 |  [AutoCompleteResponse](./answers-core.autocompleteresponse.md) |  |
 |  [AutoCompleteResult](./answers-core.autocompleteresult.md) |  |
@@ -51,8 +51,8 @@
 |  [Result](./answers-core.result.md) | An individual search result |
 |  [SearchParameterField](./answers-core.searchparameterfield.md) |  |
 |  [SearchParameters](./answers-core.searchparameters.md) |  |
-|  [SimpleFilter](./answers-core.simplefilter.md) | Represents a filter which compares values to a single field |
-|  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results |
+|  [SimpleFilter](./answers-core.simplefilter.md) | Represents a filter which compares values to a single field. |
+|  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query |
 |  [UniversalAutoCompleteRequest](./answers-core.universalautocompleterequest.md) | A domain model representation of an AutoComplete request. This model can be used for AutoComplete on vertical, universal, or filter search. |
 |  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |

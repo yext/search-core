@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.limit property
 
-The maximum number of results to include with a max of 50
+The maximum number of results to include with a max of 50.
 
 <b>Signature:</b>
 

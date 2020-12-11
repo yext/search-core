@@ -4,7 +4,7 @@
 
 ## SortBy interface
 
-Represents a criterion that can be used to sort results
+Represents a criterion that can be used to sort results.
 
 <b>Signature:</b>
 
@@ -16,7 +16,7 @@ export default interface SortBy
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [direction](./answers-core.sortby.direction.md) | 'ASC' \| 'DESC' | Direction to sort by |
-|  [field](./answers-core.sortby.field.md) | string | The field name to sort by. Required only if SortBy type is 'FIELD' |
-|  [type](./answers-core.sortby.type.md) | 'FIELD' \| 'ENTITY\_DISTANCE' \| 'RELEVANCE' | The type of sort |
+|  [direction](./answers-core.sortby.direction.md) | 'ASC' \| 'DESC' | Direction to sort by. |
+|  [field](./answers-core.sortby.field.md) | string | The field name to sort by. Required only if SortBy type is 'FIELD'. |
+|  [type](./answers-core.sortby.type.md) | 'FIELD' \| 'ENTITY\_DISTANCE' \| 'RELEVANCE' | The type of sort. |
 

@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.sortBys property
 
-Determines how results are sorted \*
+Determines how results are sorted. \*
 
 <b>Signature:</b>
 

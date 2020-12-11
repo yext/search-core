@@ -14,5 +14,5 @@ export default interface Context
 
 ## Remarks
 
-Context may be any object
+Context may be any object.
 

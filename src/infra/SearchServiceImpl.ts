@@ -15,7 +15,7 @@ import serializeStaticFilters from '../serializers/serializeStaticFilters';
 import serializeFacetFilters from '../serializers/serializeFacetFilters';
 
 /**
- * Represents the query params which may be sent in a universal search
+ * Represents the query params which may be sent in a universal search.
  *
  * @internal
  */
@@ -36,7 +36,7 @@ interface UniversalSearchQueryParams extends QueryParams {
 }
 
 /**
- * Represents the query params which may be sent in a vertical search
+ * Represents the query params which may be sent in a vertical search.
  *
  * @internal
  */
@@ -64,7 +64,7 @@ interface VerticalSearchQueryParams extends QueryParams {
 }
 
 /**
- * The implementation of SearchService which hits LiveAPI
+ * The implementation of SearchService which hits LiveAPI.
  *
  * @internal
  */

@@ -24,5 +24,5 @@ Promise&lt;AnswersCore&gt;
 
 ## Remarks
 
-Returns a Promise containing an [AnswersCore](./answers-core.answerscore.md) instance If the backend determines that the core should be disabled, this function returns a rejected promise.
+Returns a Promise containing an [AnswersCore](./answers-core.answerscore.md) instance. If the backend determines that the core should be disabled, this function returns a rejected promise.
 

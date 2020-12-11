@@ -4,7 +4,7 @@
 
 ## SimpleFilter.comparedValue property
 
-The value to compare
+The value to compare.
 
 <b>Signature:</b>
 

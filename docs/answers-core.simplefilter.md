@@ -4,7 +4,7 @@
 
 ## SimpleFilter interface
 
-Represents a filter which compares values to a single field
+Represents a filter which compares values to a single field.
 
 <b>Signature:</b>
 
@@ -16,7 +16,7 @@ export default interface SimpleFilter
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [comparator](./answers-core.simplefilter.comparator.md) | string | The filter comparator |
-|  [comparedValue](./answers-core.simplefilter.comparedvalue.md) | string \| number \| boolean | The value to compare |
-|  [fieldId](./answers-core.simplefilter.fieldid.md) | string | The fieldId to apply the filter against |
+|  [comparator](./answers-core.simplefilter.comparator.md) | string | The filter comparator. |
+|  [comparedValue](./answers-core.simplefilter.comparedvalue.md) | string \| number \| boolean | The value to compare. |
+|  [fieldId](./answers-core.simplefilter.fieldid.md) | string | The fieldId to apply the filter against. |
 

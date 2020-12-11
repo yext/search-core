@@ -4,7 +4,7 @@
 
 ## SortBy.direction property
 
-Direction to sort by
+Direction to sort by.
 
 <b>Signature:</b>
 

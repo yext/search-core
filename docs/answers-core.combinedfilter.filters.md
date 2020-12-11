@@ -4,7 +4,7 @@
 
 ## CombinedFilter.filters property
 
-The filters to be combined
+The filters to be combined.
 
 <b>Signature:</b>
 

@@ -4,7 +4,7 @@
 
 ## AnswersConfig.experienceVersion property
 
-The version of the answers experience configuration
+The version of the answers experience configuration.
 
 <b>Signature:</b>
 
@@ -14,7 +14,7 @@ experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
 
 ## Remarks
 
-May be a configuration label (string) or a configuration version (number)
+May be a configuration label (string) or a configuration version (number).
 
 ## Example
 

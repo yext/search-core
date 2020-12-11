@@ -16,6 +16,6 @@ export default interface CombinedFilter
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [combinator](./answers-core.combinedfilter.combinator.md) | [FilterCombinator](./answers-core.filtercombinator.md) | The logical operator used to combine the filters |
-|  [filters](./answers-core.combinedfilter.filters.md) | (SimpleFilter \| CombinedFilter)\[\] | The filters to be combined |
+|  [combinator](./answers-core.combinedfilter.combinator.md) | [FilterCombinator](./answers-core.filtercombinator.md) | The logical operator used to combine the filters. |
+|  [filters](./answers-core.combinedfilter.filters.md) | (SimpleFilter \| CombinedFilter)\[\] | The filters to be combined. |
 

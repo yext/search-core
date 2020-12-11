@@ -4,7 +4,7 @@
 
 ## SimpleFilter.comparator property
 
-The filter comparator
+The filter comparator.
 
 <b>Signature:</b>
 

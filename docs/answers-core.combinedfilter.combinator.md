@@ -4,7 +4,7 @@
 
 ## CombinedFilter.combinator property
 
-The logical operator used to combine the filters
+The logical operator used to combine the filters.
 
 <b>Signature:</b>
 

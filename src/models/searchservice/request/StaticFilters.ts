@@ -1,5 +1,5 @@
 /**
- * Represents static filters in the format that the Answers API expects
+ * Represents static filters in the format that the Answers API expects.
  *
  * @internal
  */
@@ -8,7 +8,7 @@ export default interface StaticFilters {
 }
 
 /**
- * Represents a single filter
+ * Represents a single filter.
  *
  * @internal
  */

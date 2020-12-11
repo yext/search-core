@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.verticalKey property
 
-The key associated with the vertical
+The key associated with the vertical.
 
 <b>Signature:</b>
 
