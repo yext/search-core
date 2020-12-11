@@ -4,7 +4,7 @@
 
 ## UniversalSearchRequest interface
 
-Options for constructing a universal search.
+Options which can be specified for a universal search.
 
 <b>Signature:</b>
 

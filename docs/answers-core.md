@@ -8,7 +8,7 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [AnswersCore](./answers-core.answerscore.md) | Exposes the Answers Core services. |
+|  [AnswersCore](./answers-core.answerscore.md) | Provides methods for executing searches, submitting questions, and performing autocompletes. |
 
 ## Enumerations
 
@@ -55,10 +55,10 @@
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query |
 |  [UniversalAutoCompleteRequest](./answers-core.universalautocompleterequest.md) | A domain model representation of an AutoComplete request. This model can be used for AutoComplete on vertical, universal, or filter search. |
-|  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options for constructing a universal search. |
+|  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
 |  [UniversalSearchResponse](./answers-core.universalsearchresponse.md) | A representation of a response from a universal search |
 |  [VerticalAutoCompleteRequest](./answers-core.verticalautocompleterequest.md) |  |
 |  [VerticalResults](./answers-core.verticalresults.md) | A result from an individual vertical |
-|  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options for constructing a vertical search |
+|  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
 |  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search |
 

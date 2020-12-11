@@ -4,7 +4,7 @@
 
 ## AnswersCore class
 
-Exposes the Answers Core services.
+Provides methods for executing searches, submitting questions, and performing autocompletes.
 
 <b>Signature:</b>
 

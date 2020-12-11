@@ -7,7 +7,7 @@ import SortBy from './SortBy';
 import { QuerySource } from './QuerySource';
 
 /**
- * Options for constructing a vertical search
+ * Options which can be specified for a vertical search.
  *
  * @public
  */

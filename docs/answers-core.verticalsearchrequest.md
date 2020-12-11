@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest interface
 
-Options for constructing a vertical search
+Options which can be specified for a vertical search.
 
 <b>Signature:</b>
 

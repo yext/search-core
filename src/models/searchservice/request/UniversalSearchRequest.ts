@@ -4,7 +4,7 @@ import { QueryTrigger } from './QueryTrigger';
 import { QuerySource } from './QuerySource';
 
 /**
- * Options for constructing a universal search.
+ * Options which can be specified for a universal search.
  *
  * @public
  */

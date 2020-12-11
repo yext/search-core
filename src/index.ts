@@ -10,7 +10,7 @@ import AutoCompleteServiceImpl from './infra/AutoCompleteServiceImpl';
  * The entrypoint to the answers-core library.
  *
  * @remarks
- * Returns an {@link AnswersCore} promise.
+ * Returns a Promise containing an {@link AnswersCore} instance
  * If the backend determines that the core should be disabled, this function returns a rejected promise.
  *
  * @param config - The answers-core config

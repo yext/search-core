@@ -13,7 +13,7 @@ import { AutoCompleteResponse, FilterAutoCompleteResponse } from './models/autoc
 import { AutoCompleteService } from './services/AutoCompleteService';
 
 /**
- * Exposes the Answers Core services.
+ * Provides methods for executing searches, submitting questions, and performing autocompletes.
  *
  * @public
  */
