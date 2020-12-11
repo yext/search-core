@@ -16,6 +16,6 @@ export default interface AnswersError
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [code](./answers-core.answerserror.code.md) | number |  |
-|  [message](./answers-core.answerserror.message.md) | string |  |
+|  [code](./answers-core.answerserror.code.md) | number | The error code. |
+|  [message](./answers-core.answerserror.message.md) | string | The error message. |
 

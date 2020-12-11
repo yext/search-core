@@ -4,6 +4,8 @@
 
 ## AnswersError.message property
 
+The error message.
+
 <b>Signature:</b>
 
 ```typescript

@@ -36,9 +36,7 @@ export class AnswersCore {
 
 // @public
 export interface AnswersError {
-    // (undocumented)
     code: number;
-    // (undocumented)
     message: string;
 }
 

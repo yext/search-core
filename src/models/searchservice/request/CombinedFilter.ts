@@ -6,7 +6,7 @@ import SimpleFilter from './SimpleFilter';
  * @public
  */
 export default interface CombinedFilter {
-  /** The filters to be combined. */
+  /** An array of filters applied to the search. */
   filters: (SimpleFilter | CombinedFilter)[];
   /** The logical operator used to combine the filters. */
   combinator: FilterCombinator;

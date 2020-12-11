@@ -4,7 +4,7 @@
 
 ## CombinedFilter.filters property
 
-The filters to be combined.
+An array of filters applied to the search.
 
 <b>Signature:</b>
 
