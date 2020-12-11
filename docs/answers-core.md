@@ -14,9 +14,9 @@
 
 |  Enumeration | Description |
 |  --- | --- |
-|  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined |
+|  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location |
-|  [QuerySource](./answers-core.querysource.md) | The source of the search request |
+|  [QuerySource](./answers-core.querysource.md) | The source of the search request. |
 |  [SearchIntent](./answers-core.searchintent.md) | Represents intents from the Answers API |
 |  [Source](./answers-core.source.md) | Represents the source of a [result](./answers-core.result.md)<!-- -->. |
 |  [SpellCheckType](./answers-core.spellchecktype.md) | Represents the type of spell check performed |
@@ -31,7 +31,7 @@
 
 |  Interface | Description |
 |  --- | --- |
-|  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md) |
+|  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
 |  [AnswersError](./answers-core.answerserror.md) | An error from the Answers API |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search |
 |  [AutoCompleteResponse](./answers-core.autocompleteresponse.md) |  |
@@ -58,7 +58,7 @@
 |  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
 |  [UniversalSearchResponse](./answers-core.universalsearchresponse.md) | A representation of a response from a universal search |
 |  [VerticalAutoCompleteRequest](./answers-core.verticalautocompleterequest.md) |  |
-|  [VerticalResults](./answers-core.verticalresults.md) | A result from an individual vertical |
+|  [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical |
 |  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
 |  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search |
 
