@@ -4,7 +4,7 @@
 
 ## FacetOption.selected property
 
-Whether or not the filter is selected in the search results
+Whether or not the filter is selected in the search results.
 
 <b>Signature:</b>
 

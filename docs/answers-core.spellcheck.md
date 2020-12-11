@@ -4,7 +4,7 @@
 
 ## SpellCheck interface
 
-A spellcheck response from a search query
+A spellcheck response from a search query.
 
 <b>Signature:</b>
 
@@ -16,7 +16,7 @@ export default interface SpellCheck
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [correctedQuery](./answers-core.spellcheck.correctedquery.md) | string | The corrected version of the originalQuery |
-|  [originalQuery](./answers-core.spellcheck.originalquery.md) | string | The query that was input into the spell checker |
-|  [type](./answers-core.spellcheck.type.md) | [SpellCheckType](./answers-core.spellchecktype.md) | The type of spell check |
+|  [correctedQuery](./answers-core.spellcheck.correctedquery.md) | string | The corrected version of the originalQuery. |
+|  [originalQuery](./answers-core.spellcheck.originalquery.md) | string | The query that was input into the spell checker. |
+|  [type](./answers-core.spellcheck.type.md) | [SpellCheckType](./answers-core.spellchecktype.md) | The type of spell check. |
 

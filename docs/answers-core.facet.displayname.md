@@ -4,7 +4,7 @@
 
 ## Facet.displayName property
 
-The name of the facet which is meant to be displayed to the user
+The name of the facet which is meant to be displayed to the user.
 
 <b>Signature:</b>
 

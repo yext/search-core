@@ -4,7 +4,7 @@
 
 ## LocationBias.displayName property
 
-The name of the location
+The name of the location.
 
 <b>Signature:</b>
 
@@ -14,5 +14,5 @@ displayName: string;
 
 ## Example
 
-Arlington, Virginia
+Arlington, Virginia.
 

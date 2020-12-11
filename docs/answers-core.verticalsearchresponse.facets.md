@@ -4,7 +4,7 @@
 
 ## VerticalSearchResponse.facets property
 
-An array of [facets](./answers-core.facet.md) asociated with the search results
+An array of [Facet](./answers-core.facet.md)<!-- -->s associated with the search results.
 
 <b>Signature:</b>
 

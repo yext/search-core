@@ -4,7 +4,7 @@
 
 ## LocationBias.longitude property
 
-The location's longitude
+The location's longitude.
 
 <b>Signature:</b>
 

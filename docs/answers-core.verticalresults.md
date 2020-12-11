@@ -16,10 +16,10 @@ export default interface VerticalResults
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [appliedQueryFilters](./answers-core.verticalresults.appliedqueryfilters.md) | AppliedQueryFilter\[\] | A array of [query filters](./answers-core.appliedqueryfilter.md) which were applied to the vertical results |
-|  [queryDurationMillis](./answers-core.verticalresults.querydurationmillis.md) | number | The duration of the query in milliseconds |
-|  [results](./answers-core.verticalresults.results.md) | Result\[\] | An array of search [results](./answers-core.result.md) for the vertical |
-|  [resultsCount](./answers-core.verticalresults.resultscount.md) | number | The total number of results within the vertical |
+|  [appliedQueryFilters](./answers-core.verticalresults.appliedqueryfilters.md) | AppliedQueryFilter\[\] | A array of [AppliedQueryFilter](./answers-core.appliedqueryfilter.md)<!-- -->s which were applied to the vertical results. |
+|  [queryDurationMillis](./answers-core.verticalresults.querydurationmillis.md) | number | The duration of the query in milliseconds. |
+|  [results](./answers-core.verticalresults.results.md) | Result\[\] | An array of search [Result](./answers-core.result.md)<!-- -->s for the vertical. |
+|  [resultsCount](./answers-core.verticalresults.resultscount.md) | number | The total number of results within the vertical. |
 |  [source](./answers-core.verticalresults.source.md) | [Source](./answers-core.source.md) | Represents the source of a [result](./answers-core.result.md)<!-- -->. |
-|  [verticalKey](./answers-core.verticalresults.verticalkey.md) | string | The vertical key associated with the vertical results |
+|  [verticalKey](./answers-core.verticalresults.verticalkey.md) | string | The vertical key associated with the vertical results. |
 

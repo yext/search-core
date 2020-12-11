@@ -4,7 +4,7 @@
 
 ## AppliedQueryFilter.displayValue property
 
-The value used in the filter
+The value used in the filter.
 
 <b>Signature:</b>
 

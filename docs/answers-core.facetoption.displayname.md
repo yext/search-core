@@ -4,7 +4,7 @@
 
 ## FacetOption.displayName property
 
-The name of the facet option
+The name of the facet option.
 
 <b>Signature:</b>
 

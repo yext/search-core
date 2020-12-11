@@ -4,7 +4,7 @@
 
 ## AppliedQueryFilter.displayKey property
 
-The key used in the filter
+The key used in the filter.
 
 <b>Signature:</b>
 

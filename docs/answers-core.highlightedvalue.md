@@ -4,7 +4,7 @@
 
 ## HighlightedValue interface
 
-Represents field values or substrings of field values that the Answers API emphasized
+Represents field values or substrings of field values that the Answers API emphasized.
 
 <b>Signature:</b>
 
@@ -14,14 +14,14 @@ export default interface HighlightedValue
 
 ## Example
 
-If a user searches for 'pet' and a description field in the results contains the value 'A pet store', the API will likely match the word 'pet'
+If a user searches for 'pet' and a description field in the results contains the value 'A pet store', the API will likely match the word 'pet'.
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [fieldName](./answers-core.highlightedvalue.fieldname.md) | string | The field name of the highlighted value |
-|  [matchedSubstrings](./answers-core.highlightedvalue.matchedsubstrings.md) | { length: number; offset: number; }\[\] | An array of substring matches which correspond to the highlighting |
-|  [path](./answers-core.highlightedvalue.path.md) | string\[\] | Represents the nested field structure of the highlighted value |
-|  [value](./answers-core.highlightedvalue.value.md) | string | The value of the field which should be highlighted |
+|  [matchedSubstrings](./answers-core.highlightedvalue.matchedsubstrings.md) | { length: number; offset: number; }\[\] | An array of substring matches which correspond to the highlighting. |
+|  [path](./answers-core.highlightedvalue.path.md) | string\[\] | Represents the nested field structure of the highlighted value. |
+|  [value](./answers-core.highlightedvalue.value.md) | string | The value of the field which should be highlighted. |
 

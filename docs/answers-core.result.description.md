@@ -4,7 +4,7 @@
 
 ## Result.description property
 
-A description of the result
+A description of the result.
 
 <b>Signature:</b>
 

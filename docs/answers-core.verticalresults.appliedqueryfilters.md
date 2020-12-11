@@ -4,7 +4,7 @@
 
 ## VerticalResults.appliedQueryFilters property
 
-A array of [query filters](./answers-core.appliedqueryfilter.md) which were applied to the vertical results
+A array of [AppliedQueryFilter](./answers-core.appliedqueryfilter.md)<!-- -->s which were applied to the vertical results.
 
 <b>Signature:</b>
 

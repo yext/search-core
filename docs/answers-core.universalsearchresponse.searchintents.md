@@ -4,7 +4,7 @@
 
 ## UniversalSearchResponse.searchIntents property
 
-An array of [SearchIntent](./answers-core.searchintent.md) which represents requests from the API
+An array of [SearchIntent](./answers-core.searchintent.md)<!-- -->s which represents requests from the API.
 
 <b>Signature:</b>
 

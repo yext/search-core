@@ -5,18 +5,18 @@ import LocationBias from './LocationBias';
 import SpellCheck from './SpellCheck';
 
 /**
- * A representation of a response from a vertical search
+ * A representation of a response from a vertical search.
  *
  * @public
  */
 export default interface VerticalSearchResponse {
   /** {@inheritDoc VerticalResults} */
   verticalResults: VerticalResults;
-  /** The ID of the query */
+  /** The ID of the query. */
   queryId: string;
-  /** An array of {@link SearchIntent | search intents} */
+  /** An array of {@link SearchIntent | search intents}. */
   searchIntents?: SearchIntent[];
-  /** An array of {@link Facet | facets} asociated with the search results */
+  /** An array of {@link Facet}s associated with the search results. */
   facets?: Readonly<Facet[]>;
   /** {@inheritDoc SpellCheck} */
   spellCheck?: SpellCheck,
@@ -24,6 +24,6 @@ export default interface VerticalSearchResponse {
   locationBias?: LocationBias,
   /** {@inheritDoc VerticalSearchResponse} */
   allResultsForVertical?: VerticalSearchResponse,
-  /** The {@link VerticalResults | vertical results} for each search vertical */
+  /** The {@link VerticalResults} for each search vertical. */
   alternativeVerticals?: Readonly<VerticalResults[]>
 }

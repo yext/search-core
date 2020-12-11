@@ -4,7 +4,7 @@
 
 ## Result.rawData property
 
-Raw entity profile data in the shape of key-value pairs
+Raw entity profile data in the shape of key-value pairs.
 
 <b>Signature:</b>
 

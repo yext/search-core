@@ -1,31 +1,31 @@
 import SimpleFilter from '../request/SimpleFilter';
 
 /**
- * Represents dyamic filter options from the Answers API
+ * Represents dynamic filter options from the Answers API.
  *
  * @public
  */
 export default interface Facet {
-  /** The associated fieldId */
+  /** The associated fieldId. */
   fieldId: string;
-  /** The name of the facet which is meant to be displayed to the user */
+  /** The name of the facet which is meant to be displayed to the user. */
   displayName: string;
   /** {@inheritDoc FacetOption} */
   options: FacetOption[];
 }
 
 /**
- * A filter associated with the facet
+ * A filter associated with the facet.
  *
  * @public
  */
 export interface FacetOption {
-  /** The name of the facet option */
+  /** The name of the facet option. */
   displayName: string;
-  /** The number of results associated with this facet option */
+  /** The number of results associated with this facet option. */
   count: number;
-  /** Whether or not the filter is selected in the search results */
+  /** Whether or not the filter is selected in the search results. */
   selected: boolean;
-  /** The filter associated with this facet option */
+  /** The filter associated with this facet option. */
   filter: SimpleFilter;
 }

@@ -4,7 +4,7 @@
 
 ## DirectAnswer.verticalKey property
 
-The vertical key of the direct answer
+The vertical key of the direct answer.
 
 <b>Signature:</b>
 

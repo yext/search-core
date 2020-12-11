@@ -4,7 +4,7 @@
 
 ## Result.distance property
 
-The distance from the user to the result
+The distance from the user to the result.
 
 <b>Signature:</b>
 

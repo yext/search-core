@@ -4,7 +4,7 @@
 
 ## AppliedQueryFilter.filter property
 
-The filter applied to the query results
+The filter applied to the query results.
 
 <b>Signature:</b>
 

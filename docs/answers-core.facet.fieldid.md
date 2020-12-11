@@ -4,7 +4,7 @@
 
 ## Facet.fieldId property
 
-The associated fieldId
+The associated fieldId.
 
 <b>Signature:</b>
 

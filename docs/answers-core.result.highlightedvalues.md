@@ -4,7 +4,7 @@
 
 ## Result.highlightedValues property
 
-An array of [highlighted values](./answers-core.highlightedvalue.md) associated with the result
+An array of [highlighted values](./answers-core.highlightedvalue.md) associated with the result.
 
 <b>Signature:</b>
 

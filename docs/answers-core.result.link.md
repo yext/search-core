@@ -4,7 +4,7 @@
 
 ## Result.link property
 
-A hyperlink associated with the result
+A hyperlink associated with the result.
 
 <b>Signature:</b>
 

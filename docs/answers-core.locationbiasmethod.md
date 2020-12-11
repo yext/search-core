@@ -4,7 +4,7 @@
 
 ## LocationBiasMethod enum
 
-The method used to determine the location
+The method used to determine the location.
 
 <b>Signature:</b>
 
@@ -16,7 +16,7 @@ export declare enum LocationBiasMethod
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  Device | <code>&quot;DEVICE&quot;</code> | Location was determined by Device |
-|  Ip | <code>&quot;IP&quot;</code> | Location was determined by IP |
-|  Unknown | <code>&quot;UNKNOWN&quot;</code> | Unknown location bias method |
+|  Device | <code>&quot;DEVICE&quot;</code> | Location was determined by Device. |
+|  Ip | <code>&quot;IP&quot;</code> | Location was determined by IP. |
+|  Unknown | <code>&quot;UNKNOWN&quot;</code> | Unknown location bias method. |
 

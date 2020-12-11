@@ -4,7 +4,7 @@
 
 ## VerticalSearchResponse.alternativeVerticals property
 
-The [vertical results](./answers-core.verticalresults.md) for each search vertical
+The [VerticalResults](./answers-core.verticalresults.md) for each search vertical.
 
 <b>Signature:</b>
 

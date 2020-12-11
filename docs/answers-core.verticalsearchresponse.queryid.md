@@ -4,7 +4,7 @@
 
 ## VerticalSearchResponse.queryId property
 
-The ID of the query
+The ID of the query.
 
 <b>Signature:</b>
 

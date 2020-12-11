@@ -4,7 +4,7 @@
 
 ## SpellCheck.type property
 
-The type of spell check
+The type of spell check.
 
 <b>Signature:</b>
 

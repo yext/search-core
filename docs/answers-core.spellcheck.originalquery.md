@@ -4,7 +4,7 @@
 
 ## SpellCheck.originalQuery property
 
-The query that was input into the spell checker
+The query that was input into the spell checker.
 
 <b>Signature:</b>
 

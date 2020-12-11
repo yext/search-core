@@ -4,7 +4,7 @@
 
 ## VerticalSearchResponse.spellCheck property
 
-A spellcheck response from a search query
+A spellcheck response from a search query.
 
 <b>Signature:</b>
 

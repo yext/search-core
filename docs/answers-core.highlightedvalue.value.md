@@ -4,7 +4,7 @@
 
 ## HighlightedValue.value property
 
-The value of the field which should be highlighted
+The value of the field which should be highlighted.
 
 <b>Signature:</b>
 
@@ -14,5 +14,5 @@ value: string;
 
 ## Remarks
 
-No formatting is applied to this value. This is simply the value that the Answers API determined should be highlighted
+No formatting is applied to this value. This is simply the value that the Answers API determined should be highlighted.
 

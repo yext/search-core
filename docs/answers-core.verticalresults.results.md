@@ -4,7 +4,7 @@
 
 ## VerticalResults.results property
 
-An array of search [results](./answers-core.result.md) for the vertical
+An array of search [Result](./answers-core.result.md)<!-- -->s for the vertical.
 
 <b>Signature:</b>
 

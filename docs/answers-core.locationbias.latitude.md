@@ -4,7 +4,7 @@
 
 ## LocationBias.latitude property
 
-The location's latitude
+The location's latitude.
 
 <b>Signature:</b>
 

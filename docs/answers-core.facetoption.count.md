@@ -4,7 +4,7 @@
 
 ## FacetOption.count property
 
-The number of results associated with this facet option
+The number of results associated with this facet option.
 
 <b>Signature:</b>
 

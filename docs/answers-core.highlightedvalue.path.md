@@ -4,7 +4,7 @@
 
 ## HighlightedValue.path property
 
-Represents the nested field structure of the highlighted value
+Represents the nested field structure of the highlighted value.
 
 <b>Signature:</b>
 

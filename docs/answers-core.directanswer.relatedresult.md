@@ -4,7 +4,7 @@
 
 ## DirectAnswer.relatedResult property
 
-The entity associated with the direct answer
+The entity associated with the direct answer.
 
 <b>Signature:</b>
 

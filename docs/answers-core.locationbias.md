@@ -4,7 +4,7 @@
 
 ## LocationBias interface
 
-Information about the location bias applied to an Answers search
+Information about the location bias applied to an Answers search.
 
 <b>Signature:</b>
 
@@ -16,8 +16,8 @@ export default interface LocationBias
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [displayName](./answers-core.locationbias.displayname.md) | string | The name of the location |
-|  [latitude](./answers-core.locationbias.latitude.md) | number | The location's latitude |
-|  [longitude](./answers-core.locationbias.longitude.md) | number | The location's longitude |
-|  [method](./answers-core.locationbias.method.md) | [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location |
+|  [displayName](./answers-core.locationbias.displayname.md) | string | The name of the location. |
+|  [latitude](./answers-core.locationbias.latitude.md) | number | The location's latitude. |
+|  [longitude](./answers-core.locationbias.longitude.md) | number | The location's longitude. |
+|  [method](./answers-core.locationbias.method.md) | [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location. |
 

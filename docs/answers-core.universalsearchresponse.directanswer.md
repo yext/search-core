@@ -4,7 +4,7 @@
 
 ## UniversalSearchResponse.directAnswer property
 
-A direct answer to a search
+A direct answer to a search.
 
 <b>Signature:</b>
 

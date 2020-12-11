@@ -4,7 +4,7 @@
 
 ## LocationBias.method property
 
-The method used to determine the location
+The method used to determine the location.
 
 <b>Signature:</b>
 

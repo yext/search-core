@@ -4,7 +4,7 @@
 
 ## DirectAnswer.fieldName property
 
-The field name of the direct answer value
+The field name of the direct answer value.
 
 <b>Signature:</b>
 
