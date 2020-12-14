@@ -8,6 +8,8 @@ import { createAnswersError }from '../transformers/core/createAnswersError';
 
 /**
  * An implementation of QuestionSubmissionService which hits LiveAPI
+ *
+ * @internal
  */
 export class QuestionSubmissionServiceImpl implements QuestionSubmissionService {
   private endpoint: string;

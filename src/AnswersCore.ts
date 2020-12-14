@@ -43,6 +43,11 @@ export class AnswersCore {
     return this.searchService.verticalSearch(request);
   }
 
+  /**
+   * Allows a user to submit a question.
+   *
+   * @param request - Question submission request options
+   */
   submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse> {
     return this.questionSubmissionService.submitQuestion(request);
   }
