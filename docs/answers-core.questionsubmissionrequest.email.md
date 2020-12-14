@@ -4,7 +4,7 @@
 
 ## QuestionSubmissionRequest.email property
 
-The email of the user that is submitting the quesiton.
+The email of the user that is submitting the question.
 
 <b>Signature:</b>
 

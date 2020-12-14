@@ -16,7 +16,7 @@ export interface QuestionSubmissionRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [email](./answers-core.questionsubmissionrequest.email.md) | string | The email of the user that is submitting the quesiton. |
+|  [email](./answers-core.questionsubmissionrequest.email.md) | string | The email of the user that is submitting the question. |
 |  [entityId](./answers-core.questionsubmissionrequest.entityid.md) | string | The ID of the entity to associate with the question. |
 |  [name](./answers-core.questionsubmissionrequest.name.md) | string | The name of the user. |
 |  [questionDescription?](./answers-core.questionsubmissionrequest.questiondescription.md) | string | <i>(Optional)</i> Additional information about the question. |

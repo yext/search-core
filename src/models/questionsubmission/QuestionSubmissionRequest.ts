@@ -4,7 +4,7 @@
  * @public
  */
 export interface QuestionSubmissionRequest {
-  /** The email of the user that is submitting the quesiton. */
+  /** The email of the user that is submitting the question. */
   email: string
   /** The ID of the entity to associate with the question. */
   entityId: string
