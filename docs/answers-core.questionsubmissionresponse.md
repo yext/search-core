@@ -4,7 +4,7 @@
 
 ## QuestionSubmissionResponse interface
 
-Shape of the QuestionSubmission api response
+The QuestionSubmission Response.
 
 <b>Signature:</b>
 
@@ -16,6 +16,6 @@ export interface QuestionSubmissionResponse
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [errors](./answers-core.questionsubmissionresponse.errors.md) | [AnswersError](./answers-core.answerserror.md)<!-- -->\[\] |  |
-|  [uuid](./answers-core.questionsubmissionresponse.uuid.md) | string |  |
+|  [errors](./answers-core.questionsubmissionresponse.errors.md) | [AnswersError](./answers-core.answerserror.md)<!-- -->\[\] | Any errors related to the question submission. If there are no errors, question submission was successful. |
+|  [uuid](./answers-core.questionsubmissionresponse.uuid.md) | string | A unique id which corresponds to the request. |
 

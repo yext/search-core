@@ -4,6 +4,8 @@
 
 ## QuestionSubmissionRequest.questionDescription property
 
+Additional information about the question.
+
 <b>Signature:</b>
 
 ```typescript

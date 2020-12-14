@@ -4,6 +4,8 @@
 
 ## QuestionSubmissionRequest.questionText property
 
+The question.
+
 <b>Signature:</b>
 
 ```typescript

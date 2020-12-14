@@ -4,6 +4,8 @@
 
 ## QuestionSubmissionResponse.uuid property
 
+A unique id which corresponds to the request.
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,6 +4,8 @@
 
 ## AnswersCore.submitQuestion() method
 
+Allows a user to submit a question.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,7 +16,7 @@ submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionRe
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) |  |
+|  request | [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Question submission request options |
 
 <b>Returns:</b>
 

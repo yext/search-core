@@ -4,6 +4,8 @@
 
 ## QuestionSubmissionResponse.errors property
 
+Any errors related to the question submission. If there are no errors, question submission was successful.
+
 <b>Signature:</b>
 
 ```typescript
