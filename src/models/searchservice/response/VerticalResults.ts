@@ -3,7 +3,7 @@ import { AppliedQueryFilter } from './AppliedQueryFilter';
 import { Source } from './Source';
 
 /**
- * Represents results from a search vertical
+ * Represents results from a search vertical.
  *
  * @public
  */
