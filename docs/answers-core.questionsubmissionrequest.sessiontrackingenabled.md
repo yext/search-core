@@ -4,6 +4,8 @@
 
 ## QuestionSubmissionRequest.sessionTrackingEnabled property
 
+Enables session tracking.
+
 <b>Signature:</b>
 
 ```typescript

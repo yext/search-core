@@ -46,8 +46,8 @@
 |  [FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md) |  |
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the Answers API emphasized. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
-|  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request |
-|  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | Shape of the QuestionSubmission api response |
+|  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
+|  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | A representation of a response from a question submission. |
 |  [Result](./answers-core.result.md) | An individual search result. |
 |  [SearchParameterField](./answers-core.searchparameterfield.md) |  |
 |  [SearchParameters](./answers-core.searchparameters.md) |  |
