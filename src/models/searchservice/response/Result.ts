@@ -21,13 +21,18 @@ export default interface Result {
   link?: string;
   /** The result ID which depends on the Result Source. */
   id?: string;
-  /** The distance from the user to the result. */
+  /** The distance from the user to the result in meters. */
   distance?: number;
   /**
-   * The distance from the filter to the result.
+   * The distance from a {@link AppliedQueryFilter} location to the result in meters.
    *
-   * @privateRemarks
-   * Can someone double check me on this?
+   * @remarks
+   * The filter may be an inferred from the search query, or it may be specified explicitly through a facet or static filter
+   * on a {@link VerticalSearchRequest}.
+   *
+   * @example
+   * If a user searches for 'Offices in New York' and the VerticalResults contain an `AppliedQueryFilter` for 'New York', the
+   * distanceFromFilter value will be from the search result to 'New York'.
    */
   distanceFromFilter?: number;
   /** An array of {@link HighlightedValue | highlighted values} associated with the result. */

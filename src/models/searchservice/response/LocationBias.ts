@@ -25,20 +25,17 @@ export default interface LocationBias {
  * @public
  */
 export enum LocationBiasMethod {
-  /** Location was determined by IP. */
+  /** Location was determined by IP address. */
   Ip = 'IP',
   /**
-   * Location was determined by Device.
+   * Location was supplied by the user's device.
    *
-   * @privateRemarks
-   * Do we have any more info on this that we can include?
+   * @remarks
+   * This location bias method is set when coordinates are supplied in search requests.
    * */
   Device = 'DEVICE',
   /**
-   * Unknown location bias method.
-   *
-   * @privateRemarks
-   * Does this instead meant that the user's location is unknown?
+   * Location is unknown
    */
   Unknown = 'UNKNOWN'
 }

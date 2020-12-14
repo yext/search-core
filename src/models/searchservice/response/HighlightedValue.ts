@@ -36,7 +36,11 @@ export default interface HighlightedValue {
    * An array of substring matches which correspond to the highlighting.
    *
    * @remarks
-   * Offset indicates the index of the match, and the length indiates the number of characters of the match.
+   * Offset indicates the index of the match, and the length indicates the number of characters of the match.
+   *
+   * @example
+   * A user may search for 'Yext', and the result may include the value 'Yext is a search company'. The matched substrings
+   * would correspond to 'Yext' and the matchedSubstrings array would be: `[{ length: 4, offset: 0 }]`
    */
   matchedSubstrings: {
     length: number,
