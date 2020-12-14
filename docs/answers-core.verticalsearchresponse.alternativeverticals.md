@@ -4,6 +4,8 @@
 
 ## VerticalSearchResponse.alternativeVerticals property
 
+The [VerticalResults](./answers-core.verticalresults.md) for each search vertical.
+
 <b>Signature:</b>
 
 ```typescript

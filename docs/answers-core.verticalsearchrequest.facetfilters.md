@@ -4,6 +4,8 @@
 
 ## VerticalSearchRequest.facetFilters property
 
+The facet filters to apply to the search.
+
 <b>Signature:</b>
 
 ```typescript

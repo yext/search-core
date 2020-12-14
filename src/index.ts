@@ -6,6 +6,17 @@ import { HttpServiceImpl } from './infra/HttpServiceImpl';
 import { AnswersConfig } from './models/core/AnswersConfig';
 import { AutoCompleteServiceImpl } from './infra/AutoCompleteServiceImpl';
 
+/**
+ * The entrypoint to the answers-core library.
+ *
+ * @remarks
+ * Returns a Promise containing an {@link AnswersCore} instance.
+ * If the backend determines that the core should be disabled, this function returns a rejected promise.
+ *
+ * @param config - The answers-core config
+ *
+ * @public
+ */
 export function provideCore(config: AnswersConfig): Promise<AnswersCore> {
   const masterSwitch = new MasterSwitchApi(config);
 

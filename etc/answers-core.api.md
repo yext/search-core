@@ -4,25 +4,23 @@
 
 ```ts
 
-// @public (undocumented)
+// @public
 export interface AnswersConfig {
-    // (undocumented)
     apiKey: string;
-    // (undocumented)
+    // @internal
     endpoints?: Endpoints;
-    // (undocumented)
     experienceKey: string;
-    // (undocumented)
     experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
-    // (undocumented)
     locale: string;
 }
 
-// @public (undocumented)
+// @public
 export class AnswersCore {
     // Warning: (ae-forgotten-export) The symbol "SearchService" needs to be exported by the entry point index.d.ts
     // Warning: (ae-forgotten-export) The symbol "QuestionSubmissionService" needs to be exported by the entry point index.d.ts
     // Warning: (ae-forgotten-export) The symbol "AutoCompleteService" needs to be exported by the entry point index.d.ts
+    //
+    // @internal
     constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutoCompleteService);
     // (undocumented)
     filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse>;
@@ -30,29 +28,22 @@ export class AnswersCore {
     submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
     // (undocumented)
     universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse>;
-    // (undocumented)
     universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
     // (undocumented)
     verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse>;
-    // (undocumented)
     verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
 }
 
 // @public
 export interface AnswersError {
-    // (undocumented)
     code: number;
-    // (undocumented)
     message: string;
 }
 
 // @public
 export interface AppliedQueryFilter {
-    // (undocumented)
     displayKey: string;
-    // (undocumented)
     displayValue: string;
-    // (undocumented)
     filter: SimpleFilter;
 }
 
@@ -90,25 +81,18 @@ export interface AutoCompleteResult {
 
 // @public
 export interface CombinedFilter {
-    // Warning: (ae-forgotten-export) The symbol "FilterCombinator" needs to be exported by the entry point index.d.ts
-    //
-    // (undocumented)
     combinator: FilterCombinator;
-    // (undocumented)
     filters: (SimpleFilter | CombinedFilter)[];
 }
 
-// @public (undocumented)
+// @public
 export interface Context {
-    // (undocumented)
     [property: string]: string | boolean;
 }
 
-// @public (undocumented)
+// @public
 interface Coordinates_2 {
-    // (undocumented)
     latitude: string;
-    // (undocumented)
     longitude: string;
 }
 
@@ -116,23 +100,18 @@ export { Coordinates_2 as Coordinates }
 
 // @public
 export interface DirectAnswer {
-    // (undocumented)
     entityName: string;
-    // (undocumented)
     fieldApiName: string;
-    // (undocumented)
     fieldName: string;
-    // (undocumented)
     fieldType: string;
-    // (undocumented)
     relatedResult: Result;
-    // (undocumented)
     value: string;
-    // (undocumented)
     verticalKey: string;
 }
 
-// @public (undocumented)
+// Warning: (ae-internal-missing-underscore) The name "Endpoints" should be prefixed with an underscore because the declaration is marked as @internal
+//
+// @internal
 export interface Endpoints {
     // (undocumented)
     filterAutoComplete?: string;
@@ -150,25 +129,18 @@ export interface Endpoints {
     verticalSearch?: string;
 }
 
-// @public (undocumented)
+// @public
 export interface Facet {
-    // (undocumented)
     displayName: string;
-    // (undocumented)
     fieldId: string;
-    // (undocumented)
     options: FacetOption[];
 }
 
-// @public (undocumented)
+// @public
 export interface FacetOption {
-    // (undocumented)
     count: number;
-    // (undocumented)
     displayName: string;
-    // (undocumented)
     filter: SimpleFilter;
-    // (undocumented)
     selected: boolean;
 }
 
@@ -196,58 +168,49 @@ export interface FilterAutoCompleteResponse {
 }
 
 // @public
+export enum FilterCombinator {
+    AND = "$and",
+    OR = "$or"
+}
+
+// @public
 export interface HighlightedValue {
-    // (undocumented)
     fieldName: string;
-    // (undocumented)
     matchedSubstrings: {
         length: number;
         offset: number;
     }[];
-    // (undocumented)
     path: string[];
-    // (undocumented)
     value: string;
 }
 
 // @public
 export interface LocationBias {
-    // (undocumented)
     displayName: string;
-    // (undocumented)
     latitude: number;
-    // (undocumented)
     longitude: number;
-    // (undocumented)
     method: LocationBiasMethod;
 }
 
-// @public (undocumented)
+// @public
 export enum LocationBiasMethod {
-    // (undocumented)
     Device = "DEVICE",
-    // (undocumented)
     Ip = "IP",
-    // (undocumented)
     Unknown = "UNKNOWN"
 }
 
-// @public (undocumented)
+// @public
 export function provideCore(config: AnswersConfig): Promise<AnswersCore>;
 
-// @public (undocumented)
+// @public
 export enum QuerySource {
-    // (undocumented)
     Overlay = "OVERLAY",
-    // (undocumented)
     Standard = "STANDARD"
 }
 
-// @public (undocumented)
+// @alpha
 export enum QueryTrigger {
-    // (undocumented)
     Initialize = "initialize",
-    // (undocumented)
     QueryParameter = "query-parameter"
 }
 
@@ -277,33 +240,21 @@ export interface QuestionSubmissionResponse {
 
 // @public
 export interface Result {
-    // (undocumented)
     description?: string;
-    // (undocumented)
     distance?: number;
-    // (undocumented)
     distanceFromFilter?: number;
-    // (undocumented)
     entityType?: string;
-    // (undocumented)
     highlightedValues?: HighlightedValue[];
-    // (undocumented)
     id?: string;
-    // (undocumented)
     index?: number;
-    // (undocumented)
     link?: string;
-    // (undocumented)
     name?: string;
-    // (undocumented)
     rawData: Record<string, unknown>;
-    // (undocumented)
     source: Source;
 }
 
-// @public (undocumented)
+// @public
 export enum SearchIntent {
-    // (undocumented)
     NearMe = "NEAR_ME"
 }
 
@@ -327,57 +278,39 @@ export interface SearchParameters {
 
 // @public
 export interface SimpleFilter {
-    // (undocumented)
     comparator: string;
-    // (undocumented)
     comparedValue: string | number | boolean;
-    // (undocumented)
     fieldId: string;
 }
 
 // @public
 export interface SortBy {
-    // (undocumented)
-    direction: string;
-    // (undocumented)
+    direction: 'ASC' | 'DESC';
     field: string;
-    // (undocumented)
-    type: string;
+    type: 'FIELD' | 'ENTITY_DISTANCE' | 'RELEVANCE';
 }
 
-// @public (undocumented)
+// @public
 export enum Source {
-    // (undocumented)
     Algolia = "ALGOLIA",
-    // (undocumented)
     Bing = "BING_CSE",
-    // (undocumented)
     Generic = "GENERIC",
-    // (undocumented)
     Google = "GOOGLE_CSE",
-    // (undocumented)
     KnowledgeManager = "KNOWLEDGE_MANAGER",
-    // (undocumented)
     Zendesk = "ZENDESK"
 }
 
 // @public
 export interface SpellCheck {
-    // (undocumented)
     correctedQuery: string;
-    // (undocumented)
     originalQuery: string;
-    // (undocumented)
     type: SpellCheckType;
 }
 
-// @public (undocumented)
+// @public
 export enum SpellCheckType {
-    // (undocumented)
     AutoCorrect = "AUTOCORRECT",
-    // (undocumented)
     Combine = "COMBINE",
-    // (undocumented)
     Suggest = "SUGGEST"
 }
 
@@ -391,39 +324,25 @@ export interface UniversalAutoCompleteRequest {
 
 // @public
 export interface UniversalSearchRequest {
-    // (undocumented)
     context?: Context;
-    // (undocumented)
     coordinates?: Coordinates_2;
-    // (undocumented)
     query: string;
-    // (undocumented)
     querySource?: QuerySource;
-    // (undocumented)
+    // Warning: (ae-incompatible-release-tags) The symbol "queryTrigger" is marked as @public, but its signature references "QueryTrigger" which is marked as @alpha
     queryTrigger?: QueryTrigger;
-    // (undocumented)
     referrerPageUrl?: string;
-    // (undocumented)
     sessionTrackingEnabled?: boolean;
-    // (undocumented)
     skipSpellCheck?: boolean;
 }
 
 // @public
 export interface UniversalSearchResponse {
-    // (undocumented)
     directAnswer?: DirectAnswer;
-    // (undocumented)
     errors?: AnswersError[];
-    // (undocumented)
     locationBias?: LocationBias;
-    // (undocumented)
     queryId?: string;
-    // (undocumented)
     searchIntents?: SearchIntent[];
-    // (undocumented)
     spellCheck?: SpellCheck;
-    // (undocumented)
     verticalResults: VerticalResults[];
 }
 
@@ -435,71 +354,43 @@ export interface VerticalAutoCompleteRequest extends UniversalAutoCompleteReques
 
 // @public
 export interface VerticalResults {
-    // (undocumented)
     appliedQueryFilters: AppliedQueryFilter[];
-    // (undocumented)
     queryDurationMillis: number;
-    // (undocumented)
     results: Result[];
-    // (undocumented)
     resultsCount: number;
-    // (undocumented)
     source: Source;
-    // (undocumented)
     verticalKey: string;
 }
 
 // @public
 export interface VerticalSearchRequest {
-    // (undocumented)
     context: Context;
-    // (undocumented)
     coordinates?: Coordinates_2;
-    // (undocumented)
     facetFilters?: SimpleFilter[];
-    // (undocumented)
     limit?: number;
-    // (undocumented)
     offset?: number;
-    // (undocumented)
     query: string;
-    // (undocumented)
     querySource?: QuerySource;
-    // (undocumented)
+    // Warning: (ae-incompatible-release-tags) The symbol "queryTrigger" is marked as @public, but its signature references "QueryTrigger" which is marked as @alpha
     queryTrigger?: QueryTrigger;
-    // (undocumented)
     referrerPageUrl?: string;
-    // (undocumented)
     retrieveFacets?: boolean;
-    // (undocumented)
     sessionTrackingEnabled?: boolean;
-    // (undocumented)
     skipSpellCheck?: boolean;
-    // (undocumented)
     sortBys?: SortBy[];
-    // (undocumented)
     staticFilters?: CombinedFilter | SimpleFilter;
-    // (undocumented)
     verticalKey: string;
 }
 
 // @public
 export interface VerticalSearchResponse {
-    // (undocumented)
     allResultsForVertical?: VerticalSearchResponse;
-    // (undocumented)
     alternativeVerticals?: Readonly<VerticalResults[]>;
-    // (undocumented)
     facets?: Readonly<Facet[]>;
-    // (undocumented)
     locationBias?: LocationBias;
-    // (undocumented)
     queryId: string;
-    // (undocumented)
     searchIntents?: SearchIntent[];
-    // (undocumented)
     spellCheck?: SpellCheck;
-    // (undocumented)
     verticalResults: VerticalResults;
 }
 

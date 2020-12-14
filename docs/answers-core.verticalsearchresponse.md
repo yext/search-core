@@ -4,7 +4,7 @@
 
 ## VerticalSearchResponse interface
 
-A representation of a response from a vertical search
+A representation of a response from a vertical search.
 
 <b>Signature:</b>
 
@@ -16,12 +16,12 @@ export interface VerticalSearchResponse
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [allResultsForVertical?](./answers-core.verticalsearchresponse.allresultsforvertical.md) | [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | <i>(Optional)</i> |
-|  [alternativeVerticals?](./answers-core.verticalsearchresponse.alternativeverticals.md) | Readonly&lt;[VerticalResults](./answers-core.verticalresults.md)<!-- -->\[\]&gt; | <i>(Optional)</i> |
-|  [facets?](./answers-core.verticalsearchresponse.facets.md) | Readonly&lt;[Facet](./answers-core.facet.md)<!-- -->\[\]&gt; | <i>(Optional)</i> |
-|  [locationBias?](./answers-core.verticalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> |
-|  [queryId](./answers-core.verticalsearchresponse.queryid.md) | string |  |
-|  [searchIntents?](./answers-core.verticalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [spellCheck?](./answers-core.verticalsearchresponse.spellcheck.md) | [SpellCheck](./answers-core.spellcheck.md) | <i>(Optional)</i> |
-|  [verticalResults](./answers-core.verticalsearchresponse.verticalresults.md) | [VerticalResults](./answers-core.verticalresults.md) |  |
+|  [allResultsForVertical?](./answers-core.verticalsearchresponse.allresultsforvertical.md) | [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | <i>(Optional)</i> A representation of a response from a vertical search. |
+|  [alternativeVerticals?](./answers-core.verticalsearchresponse.alternativeverticals.md) | Readonly&lt;[VerticalResults](./answers-core.verticalresults.md)<!-- -->\[\]&gt; | <i>(Optional)</i> The [VerticalResults](./answers-core.verticalresults.md) for each search vertical. |
+|  [facets?](./answers-core.verticalsearchresponse.facets.md) | Readonly&lt;[Facet](./answers-core.facet.md)<!-- -->\[\]&gt; | <i>(Optional)</i> An array of [Facet](./answers-core.facet.md)<!-- -->s associated with the search results. |
+|  [locationBias?](./answers-core.verticalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
+|  [queryId](./answers-core.verticalsearchresponse.queryid.md) | string | The ID of the query. |
+|  [searchIntents?](./answers-core.verticalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./answers-core.searchintent.md)<!-- -->s. |
+|  [spellCheck?](./answers-core.verticalsearchresponse.spellcheck.md) | [SpellCheck](./answers-core.spellcheck.md) | <i>(Optional)</i> A spellcheck response from a search query. |
+|  [verticalResults](./answers-core.verticalsearchresponse.verticalresults.md) | [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical. |
 

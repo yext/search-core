@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest interface
 
-VerticalSearchRequest represents the options available when constructing a vertical search request
+Options which can be specified for a vertical search.
 
 <b>Signature:</b>
 
@@ -16,19 +16,19 @@ export interface VerticalSearchRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [context](./answers-core.verticalsearchrequest.context.md) | [Context](./answers-core.context.md) |  |
-|  [coordinates?](./answers-core.verticalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> |
-|  [facetFilters?](./answers-core.verticalsearchrequest.facetfilters.md) | [SimpleFilter](./answers-core.simplefilter.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [limit?](./answers-core.verticalsearchrequest.limit.md) | number | <i>(Optional)</i> |
-|  [offset?](./answers-core.verticalsearchrequest.offset.md) | number | <i>(Optional)</i> |
-|  [query](./answers-core.verticalsearchrequest.query.md) | string |  |
-|  [querySource?](./answers-core.verticalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> |
-|  [queryTrigger?](./answers-core.verticalsearchrequest.querytrigger.md) | [QueryTrigger](./answers-core.querytrigger.md) | <i>(Optional)</i> |
-|  [referrerPageUrl?](./answers-core.verticalsearchrequest.referrerpageurl.md) | string | <i>(Optional)</i> |
-|  [retrieveFacets?](./answers-core.verticalsearchrequest.retrievefacets.md) | boolean | <i>(Optional)</i> |
-|  [sessionTrackingEnabled?](./answers-core.verticalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> |
-|  [skipSpellCheck?](./answers-core.verticalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> |
-|  [sortBys?](./answers-core.verticalsearchrequest.sortbys.md) | [SortBy](./answers-core.sortby.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [staticFilters?](./answers-core.verticalsearchrequest.staticfilters.md) | [CombinedFilter](./answers-core.combinedfilter.md) \| [SimpleFilter](./answers-core.simplefilter.md) | <i>(Optional)</i> |
-|  [verticalKey](./answers-core.verticalsearchrequest.verticalkey.md) | string |  |
+|  [context](./answers-core.verticalsearchrequest.context.md) | [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
+|  [coordinates?](./answers-core.verticalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> The coordinates of the user making the request which is used to bias the results. |
+|  [facetFilters?](./answers-core.verticalsearchrequest.facetfilters.md) | [SimpleFilter](./answers-core.simplefilter.md)<!-- -->\[\] | <i>(Optional)</i> The facet filters to apply to the search. |
+|  [limit?](./answers-core.verticalsearchrequest.limit.md) | number | <i>(Optional)</i> The maximum number of results to include with a max of 50. |
+|  [offset?](./answers-core.verticalsearchrequest.offset.md) | number | <i>(Optional)</i> The result offset which allows for fetching more results with the same query. |
+|  [query](./answers-core.verticalsearchrequest.query.md) | string | The search query. |
+|  [querySource?](./answers-core.verticalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request. |
+|  [queryTrigger?](./answers-core.verticalsearchrequest.querytrigger.md) | QueryTrigger | <i>(Optional)</i> Indicates what triggered the query. |
+|  [referrerPageUrl?](./answers-core.verticalsearchrequest.referrerpageurl.md) | string | <i>(Optional)</i> The URl of the page which referred the user to the current page. |
+|  [retrieveFacets?](./answers-core.verticalsearchrequest.retrievefacets.md) | boolean | <i>(Optional)</i> Indicates that faces should be retieved. |
+|  [sessionTrackingEnabled?](./answers-core.verticalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
+|  [skipSpellCheck?](./answers-core.verticalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> Skips spell checking if true. |
+|  [sortBys?](./answers-core.verticalsearchrequest.sortbys.md) | [SortBy](./answers-core.sortby.md)<!-- -->\[\] | <i>(Optional)</i> Determines how results are sorted. \* |
+|  [staticFilters?](./answers-core.verticalsearchrequest.staticfilters.md) | [CombinedFilter](./answers-core.combinedfilter.md) \| [SimpleFilter](./answers-core.simplefilter.md) | <i>(Optional)</i> The static filters to apply to the search. |
+|  [verticalKey](./answers-core.verticalsearchrequest.verticalkey.md) | string | The key associated with the vertical. |
 

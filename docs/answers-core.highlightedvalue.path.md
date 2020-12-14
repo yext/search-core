@@ -4,8 +4,25 @@
 
 ## HighlightedValue.path property
 
+Represents the nested field structure of the highlighted value.
+
 <b>Signature:</b>
 
 ```typescript
 path: string[];
 ```
+
+## Example
+
+In the knowledge graph a field may be nested in a structure such as:
+
+```
+{
+  description: {
+    featured: 'The offical answers engine'
+  }
+}
+
+```
+The associated path would then be `['description', 'featured']`
+

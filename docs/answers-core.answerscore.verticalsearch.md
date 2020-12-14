@@ -4,6 +4,8 @@
 
 ## AnswersCore.verticalSearch() method
 
+Performs an Answers search for a single vertical.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,7 +16,7 @@ verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) |  |
+|  request | [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Vertical search request options |
 
 <b>Returns:</b>
 

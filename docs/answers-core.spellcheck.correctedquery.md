@@ -4,6 +4,8 @@
 
 ## SpellCheck.correctedQuery property
 
+The corrected version of the originalQuery.
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,16 +4,22 @@
 
 ## Coordinates\_2 interface
 
+The coordinates of the user making the request which is used to bias the results.
+
 <b>Signature:</b>
 
 ```typescript
 export interface Coordinates 
 ```
 
+## Remarks
+
+If omitted from a request, Yext will attempt to determine the location.
+
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [latitude](./answers-core.coordinates_2.latitude.md) | string |  |
-|  [longitude](./answers-core.coordinates_2.longitude.md) | string |  |
+|  [latitude](./answers-core.coordinates_2.latitude.md) | string | Latitude formatted as a decimal degree number. |
+|  [longitude](./answers-core.coordinates_2.longitude.md) | string | Longitude formatted as a decimal degree number. |
 

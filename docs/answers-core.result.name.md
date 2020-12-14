@@ -4,6 +4,8 @@
 
 ## Result.name property
 
+The name of the result.
+
 <b>Signature:</b>
 
 ```typescript

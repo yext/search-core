@@ -4,6 +4,8 @@
 
 ## Result.index property
 
+The index of the result among the other results in the search.
+
 <b>Signature:</b>
 
 ```typescript

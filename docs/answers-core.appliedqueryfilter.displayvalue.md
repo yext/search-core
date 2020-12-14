@@ -4,8 +4,15 @@
 
 ## AppliedQueryFilter.displayValue property
 
+The value used in the filter.
+
 <b>Signature:</b>
 
 ```typescript
 displayValue: string;
 ```
+
+## Example
+
+'Sales'
+

@@ -4,6 +4,8 @@
 
 ## Source enum
 
+Represents the source of a [Result](./answers-core.result.md)<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,10 +16,10 @@ export declare enum Source
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  Algolia | <code>&quot;ALGOLIA&quot;</code> |  |
-|  Bing | <code>&quot;BING_CSE&quot;</code> |  |
-|  Generic | <code>&quot;GENERIC&quot;</code> |  |
-|  Google | <code>&quot;GOOGLE_CSE&quot;</code> |  |
-|  KnowledgeManager | <code>&quot;KNOWLEDGE_MANAGER&quot;</code> |  |
-|  Zendesk | <code>&quot;ZENDESK&quot;</code> |  |
+|  Algolia | <code>&quot;ALGOLIA&quot;</code> | The result is from Algolia. |
+|  Bing | <code>&quot;BING_CSE&quot;</code> | The result is from Bing Search Engine. |
+|  Generic | <code>&quot;GENERIC&quot;</code> | The result was from a generic source. |
+|  Google | <code>&quot;GOOGLE_CSE&quot;</code> | The result is from Google Custom Search Engine. |
+|  KnowledgeManager | <code>&quot;KNOWLEDGE_MANAGER&quot;</code> | The result is from an Answers Knowledge Graph. |
+|  Zendesk | <code>&quot;ZENDESK&quot;</code> | The result is from Zendesk. |
 

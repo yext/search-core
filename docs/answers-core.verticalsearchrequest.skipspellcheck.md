@@ -4,6 +4,8 @@
 
 ## VerticalSearchRequest.skipSpellCheck property
 
+Skips spell checking if true.
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,8 +4,15 @@
 
 ## SimpleFilter.comparator property
 
+The filter comparator.
+
 <b>Signature:</b>
 
 ```typescript
 comparator: string;
 ```
+
+## Example
+
+'$eq'
+

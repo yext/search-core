@@ -4,8 +4,19 @@
 
 ## Result.distanceFromFilter property
 
+The distance from a [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) location to the result in meters.
+
 <b>Signature:</b>
 
 ```typescript
 distanceFromFilter?: number;
 ```
+
+## Remarks
+
+The filter may be an inferred from the search query, or it may be specified explicitly through a facet or static filter on a [VerticalSearchRequest](./answers-core.verticalsearchrequest.md)<!-- -->.
+
+## Example
+
+If a user searches for 'Offices in New York' and the VerticalResults contain an `AppliedQueryFilter` for 'New York', the distanceFromFilter value will be from the search result to 'New York'.
+
