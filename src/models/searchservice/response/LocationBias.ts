@@ -35,7 +35,7 @@ export enum LocationBiasMethod {
    * */
   Device = 'DEVICE',
   /**
-   * Location is unknown
+   * Location is unknown.
    */
   Unknown = 'UNKNOWN'
 }
