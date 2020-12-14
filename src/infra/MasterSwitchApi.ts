@@ -5,7 +5,7 @@ import { HttpServiceImpl } from './HttpServiceImpl';
 /**
  * MasterSwitch checks if the front-end for the given experience should be temporarily disabled.
  */
- export class MasterSwitchApi {
+export class MasterSwitchApi {
   private config: AnswersConfig;
   private endpoint: string;
 

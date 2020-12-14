@@ -15,7 +15,7 @@ enum RequestMethods {
  * HttpServiceImpl is a wrapper around the native implementation of AJAX
  * related matters.
  */
- export class HttpServiceImpl implements HttpService {
+export class HttpServiceImpl implements HttpService {
   /**
    * Perform a GET request
    */
