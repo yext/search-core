@@ -1,11 +1,11 @@
-import SimpleFilter from './SimpleFilter';
+import { SimpleFilter } from './SimpleFilter';
 
 /**
  * Represents multiple filters that will be combined to refine results.
  *
  * @public
  */
-export default interface CombinedFilter {
+export interface CombinedFilter {
   /** An array of filters applied to the search. */
   filters: (SimpleFilter | CombinedFilter)[];
   /** The logical operator used to combine the filters. */

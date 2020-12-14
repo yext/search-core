@@ -1,4 +1,4 @@
-const HttpServiceMock = jest.fn(() => ({
+export const HttpServiceMock = jest.fn(() => ({
   get: jest.fn(
     function get<T>(): Promise<T> {
       return Promise.resolve(null);
@@ -10,5 +10,3 @@ const HttpServiceMock = jest.fn(() => ({
     }
   )
 }));
-
-export default HttpServiceMock;

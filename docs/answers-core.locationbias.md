@@ -9,7 +9,7 @@ Information about the location bias applied to an Answers search.
 <b>Signature:</b>
 
 ```typescript
-export default interface LocationBias 
+export interface LocationBias 
 ```
 
 ## Properties

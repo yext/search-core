@@ -1,16 +1,16 @@
-import VerticalResults from './VerticalResults';
+import { VerticalResults } from './VerticalResults';
 import { SearchIntent } from './SearchIntent';
-import DirectAnswer from './DirectAnswer';
-import SpellCheck from './SpellCheck';
-import LocationBias from './LocationBias';
-import AnswersError from '../../core/AnswersError';
+import { DirectAnswer } from './DirectAnswer';
+import { SpellCheck } from './SpellCheck';
+import { LocationBias } from './LocationBias';
+import { AnswersError } from '../../core/AnswersError';
 
 /**
  * A representation of a response from a universal search.
  *
  * @public
  */
-export default interface UniversalSearchResponse {
+export interface UniversalSearchResponse {
   /** An array of {@link VerticalResults} which represent the results for each vertical. */
   verticalResults: VerticalResults[],
   /** The ID of the search query. */

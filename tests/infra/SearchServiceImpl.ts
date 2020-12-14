@@ -1,9 +1,9 @@
-import HttpServiceMock from '../mocks/HttpServiceMock';
+import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import mockUniversalResponse from '../fixtures/liveapiuniversalresponse.json';
-import SearchServiceImpl from '../../src/infra/SearchServiceImpl';
-import AnswersConfig from '../../src/models/core/AnswersConfig';
-import UniversalSearchRequest from '../../src/models/searchservice/request/UniversalSearchRequest';
-import HttpService from '../../src/services/HttpService';
+import { SearchServiceImpl } from '../../src/infra/SearchServiceImpl';
+import { AnswersConfig } from '../../src/models/core/AnswersConfig';
+import { UniversalSearchRequest } from '../../src/models/searchservice/request/UniversalSearchRequest';
+import { HttpService } from '../../src/services/HttpService';
 import { QueryTrigger } from '../../src/models/searchservice/request/QueryTrigger';
 import { QuerySource } from '../../src/models/searchservice/request/QuerySource';
 

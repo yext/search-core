@@ -32,7 +32,7 @@
 |  Interface | Description |
 |  --- | --- |
 |  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
-|  [AnswersError](./answers-core.answerserror.md) | An error from the Answers API |
+|  [AnswersError](./answers-core.answerserror.md) | An error from the Answers Backend. |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutoCompleteResponse](./answers-core.autocompleteresponse.md) |  |
 |  [AutoCompleteResult](./answers-core.autocompleteresult.md) |  |

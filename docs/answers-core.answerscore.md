@@ -9,7 +9,7 @@ Provides methods for executing searches, submitting questions, and performing au
 <b>Signature:</b>
 
 ```typescript
-export default class AnswersCore 
+export declare class AnswersCore 
 ```
 
 ## Remarks

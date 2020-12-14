@@ -1,11 +1,11 @@
-import SimpleFilter from '../request/SimpleFilter';
+import { SimpleFilter } from '../request/SimpleFilter';
 
 /**
  * Represents dynamic filter options from the Answers API.
  *
  * @public
  */
-export default interface Facet {
+export interface Facet {
   /** The associated fieldId. */
   fieldId: string;
   /** The name of the facet which is meant to be displayed to the user. */

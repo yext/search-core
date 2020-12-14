@@ -1,4 +1,4 @@
-import HighlightedValue from './HighlightedValue';
+import { HighlightedValue } from './HighlightedValue';
 import { Source } from './Source';
 
 /**
@@ -6,7 +6,7 @@ import { Source } from './Source';
  *
  * @public
  */
-export default interface Result {
+export interface Result {
   /** Raw entity profile data in the shape of key-value pairs. */
   rawData: Record<string, unknown>;
   /** {@inheritDoc Source}*/

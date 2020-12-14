@@ -9,7 +9,7 @@ Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answer
 <b>Signature:</b>
 
 ```typescript
-export default interface Context 
+export interface Context 
 ```
 
 ## Remarks

@@ -1,8 +1,8 @@
-import CombinedFilter from '../models/searchservice/request/CombinedFilter';
-import SimpleFilter from '../models/searchservice/request/SimpleFilter';
-import StaticFilters from '../models/searchservice/request/StaticFilters';
+import { CombinedFilter } from '../models/searchservice/request/CombinedFilter';
+import { SimpleFilter } from '../models/searchservice/request/SimpleFilter';
+import { StaticFilters } from '../models/searchservice/request/StaticFilters';
 
-export default function serializeStaticFilters(
+export function serializeStaticFilters(
   filter: CombinedFilter | SimpleFilter): string | undefined {
   if (isCombinedFilter(filter)) {
     return JSON.stringify(shapeCombinedFilterForApi(filter));

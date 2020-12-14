@@ -3,7 +3,7 @@
  *
  * @internal
  */
-export default interface Endpoints {
+export interface Endpoints {
   universalSearch?: string,
   verticalSearch?: string,
   questionSubmission?: string,

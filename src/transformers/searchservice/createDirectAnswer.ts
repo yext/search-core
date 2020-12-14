@@ -1,7 +1,7 @@
-import DirectAnswer from '../../models/searchservice/response/DirectAnswer';
-import ResultsFactory from './ResultsFactory';
+import { DirectAnswer } from '../../models/searchservice/response/DirectAnswer';
+import { ResultsFactory } from './ResultsFactory';
 
-export default function createDirectAnswer(data: any): Readonly<DirectAnswer> {
+export function createDirectAnswer(data: any): Readonly<DirectAnswer> {
   return Object.freeze({
     relatedResult: ResultsFactory.fromDirectAnswer(data.relatedItem.data),
     verticalKey: data.relatedItem.verticalConfigId,

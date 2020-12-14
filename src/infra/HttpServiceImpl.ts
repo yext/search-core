@@ -1,7 +1,7 @@
 import { fetch as fetchPolyfill } from 'whatwg-fetch';
 import { addParamsToURL, sanitizeQueryParams } from '../utils/urlutils';
 import { QueryParams } from '../models/http/params';
-import HttpService from '../services/HttpService';
+import { HttpService } from '../services/HttpService';
 
 /**
  * Available HTTP request methods
@@ -15,7 +15,7 @@ enum RequestMethods {
  * HttpServiceImpl is a wrapper around the native implementation of AJAX
  * related matters.
  */
-export default class HttpServiceImpl implements HttpService {
+export class HttpServiceImpl implements HttpService {
   /**
    * Perform a GET request
    */

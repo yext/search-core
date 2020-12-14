@@ -9,7 +9,7 @@ A filter that the Answers API applied to the search.
 <b>Signature:</b>
 
 ```typescript
-export default interface AppliedQueryFilter 
+export interface AppliedQueryFilter 
 ```
 
 ## Properties
@@ -18,5 +18,5 @@ export default interface AppliedQueryFilter
 |  --- | --- | --- |
 |  [displayKey](./answers-core.appliedqueryfilter.displaykey.md) | string | The key used in the filter. |
 |  [displayValue](./answers-core.appliedqueryfilter.displayvalue.md) | string | The value used in the filter. |
-|  [filter](./answers-core.appliedqueryfilter.filter.md) | SimpleFilter | The filter applied to the query results. |
+|  [filter](./answers-core.appliedqueryfilter.filter.md) | [SimpleFilter](./answers-core.simplefilter.md) | The filter applied to the query results. |
 

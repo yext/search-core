@@ -9,7 +9,7 @@ Represents a criterion that can be used to sort results.
 <b>Signature:</b>
 
 ```typescript
-export default interface SortBy 
+export interface SortBy 
 ```
 
 ## Properties

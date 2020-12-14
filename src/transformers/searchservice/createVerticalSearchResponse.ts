@@ -1,10 +1,10 @@
-import VerticalSearchResponse from '../../models/searchservice/response/VerticalSearchResponse';
-import createFacets from './createFacets';
-import createLocationBias from './createLocationBias';
-import createSpellCheck from './createSpellCheck';
-import createVerticalResults from './createVerticalResults';
+import { VerticalSearchResponse } from '../../models/searchservice/response/VerticalSearchResponse';
+import { createFacets } from './createFacets';
+import { createLocationBias } from './createLocationBias';
+import { createSpellCheck } from './createSpellCheck';
+import { createVerticalResults } from './createVerticalResults';
 
-export default function createVerticalSearchResponse(data: any): Readonly<VerticalSearchResponse> {
+export function createVerticalSearchResponse(data: any): Readonly<VerticalSearchResponse> {
   if (!data.response){
     throw new Error('The search data does not contain a response property');
   }

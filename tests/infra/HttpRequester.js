@@ -1,4 +1,4 @@
-import HttpServiceImpl from '../../src/infra/HttpServiceImpl';
+import { HttpServiceImpl } from '../../src/infra/HttpServiceImpl';
 
 describe('HttpServiceImpl', () => {
     const httpServiceImpl = new HttpServiceImpl();

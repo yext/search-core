@@ -3,7 +3,7 @@
  *
  * @public
  */
-export default interface SimpleFilter {
+export interface SimpleFilter {
   /**
    * The fieldId to apply the filter against.
    *

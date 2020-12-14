@@ -7,7 +7,7 @@
  *
  * @public
  */
-export default interface HighlightedValue {
+export interface HighlightedValue {
   /** The field name of the highlighted value. */
   fieldName: string,
   /**

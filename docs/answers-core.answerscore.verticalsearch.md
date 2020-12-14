@@ -16,9 +16,9 @@ verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | VerticalSearchRequest | Vertical search request options |
+|  request | [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Vertical search request options |
 
 <b>Returns:</b>
 
-Promise&lt;VerticalSearchResponse&gt;
+Promise&lt;[VerticalSearchResponse](./answers-core.verticalsearchresponse.md)<!-- -->&gt;
 

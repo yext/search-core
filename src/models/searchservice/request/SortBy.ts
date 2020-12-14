@@ -3,7 +3,7 @@
  *
  * @public
  */
-export default interface SortBy {
+export interface SortBy {
   /** The type of sort. */
   type: 'FIELD' | 'ENTITY_DISTANCE' | 'RELEVANCE';
   /** The field name to sort by. Required only if SortBy type is 'FIELD'. */

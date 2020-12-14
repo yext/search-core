@@ -9,16 +9,16 @@ Options which can be specified for a vertical search.
 <b>Signature:</b>
 
 ```typescript
-export default interface VerticalSearchRequest 
+export interface VerticalSearchRequest 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [context](./answers-core.verticalsearchrequest.context.md) | Context | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
+|  [context](./answers-core.verticalsearchrequest.context.md) | [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [coordinates?](./answers-core.verticalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> The coordinates of the user making the request which is used to bias the results. |
-|  [facetFilters?](./answers-core.verticalsearchrequest.facetfilters.md) | SimpleFilter\[\] | <i>(Optional)</i> The facet filters to apply to the search. |
+|  [facetFilters?](./answers-core.verticalsearchrequest.facetfilters.md) | [SimpleFilter](./answers-core.simplefilter.md)<!-- -->\[\] | <i>(Optional)</i> The facet filters to apply to the search. |
 |  [limit?](./answers-core.verticalsearchrequest.limit.md) | number | <i>(Optional)</i> The maximum number of results to include with a max of 50. |
 |  [offset?](./answers-core.verticalsearchrequest.offset.md) | number | <i>(Optional)</i> The result offset which allows for fetching more results with the same query. |
 |  [query](./answers-core.verticalsearchrequest.query.md) | string | The search query. |
@@ -28,7 +28,7 @@ export default interface VerticalSearchRequest
 |  [retrieveFacets?](./answers-core.verticalsearchrequest.retrievefacets.md) | boolean | <i>(Optional)</i> Indicates that faces should be retieved. |
 |  [sessionTrackingEnabled?](./answers-core.verticalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [skipSpellCheck?](./answers-core.verticalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> Skips spell checking if true. |
-|  [sortBys?](./answers-core.verticalsearchrequest.sortbys.md) | SortBy\[\] | <i>(Optional)</i> Determines how results are sorted. \* |
-|  [staticFilters?](./answers-core.verticalsearchrequest.staticfilters.md) | CombinedFilter \| SimpleFilter | <i>(Optional)</i> The static filters to apply to the search. |
+|  [sortBys?](./answers-core.verticalsearchrequest.sortbys.md) | [SortBy](./answers-core.sortby.md)<!-- -->\[\] | <i>(Optional)</i> Determines how results are sorted. \* |
+|  [staticFilters?](./answers-core.verticalsearchrequest.staticfilters.md) | [CombinedFilter](./answers-core.combinedfilter.md) \| [SimpleFilter](./answers-core.simplefilter.md) | <i>(Optional)</i> The static filters to apply to the search. |
 |  [verticalKey](./answers-core.verticalsearchrequest.verticalkey.md) | string | The key associated with the vertical. |
 

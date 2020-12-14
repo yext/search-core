@@ -1,4 +1,4 @@
-import createAppliedQueryFilter from '../../src/transformers/searchservice/createAppliedQueryFilter';
+import { createAppliedQueryFilter } from '../../src/transformers/searchservice/createAppliedQueryFilter';
 
 it('createAppliedQueryFilter correctly transforms appliedQueryFilters', () => {
   const response = {

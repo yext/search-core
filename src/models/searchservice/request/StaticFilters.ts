@@ -3,7 +3,7 @@
  *
  * @internal
  */
-export default interface StaticFilters {
+export interface StaticFilters {
   [combinator: string]: (StaticFilters | Filter)[] | Filter | StaticFilters;
 }
 

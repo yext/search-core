@@ -16,9 +16,9 @@ universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchRespons
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | UniversalSearchRequest | Universal search request options |
+|  request | [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Universal search request options |
 
 <b>Returns:</b>
 
-Promise&lt;UniversalSearchResponse&gt;
+Promise&lt;[UniversalSearchResponse](./answers-core.universalsearchresponse.md)<!-- -->&gt;
 

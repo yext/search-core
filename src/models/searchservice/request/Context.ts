@@ -9,7 +9,7 @@
  *
  * @public
  */
-export default interface Context {
+export interface Context {
   /** Context keys and values */
   [property: string]: string | boolean;
 }

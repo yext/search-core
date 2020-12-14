@@ -3,7 +3,7 @@
  *
  * @public
  */
-export default interface LocationBias {
+export interface LocationBias {
   /** The location's latitude. */
   latitude: number;
   /** The location's longitude. */

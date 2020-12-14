@@ -9,7 +9,7 @@ Represents field values or substrings of field values that the Answers API empha
 <b>Signature:</b>
 
 ```typescript
-export default interface HighlightedValue 
+export interface HighlightedValue 
 ```
 
 ## Example

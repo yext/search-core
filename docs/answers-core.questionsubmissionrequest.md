@@ -9,7 +9,7 @@ Options for a QuestionSubmission request
 <b>Signature:</b>
 
 ```typescript
-export default interface QuestionSubmissionRequest 
+export interface QuestionSubmissionRequest 
 ```
 
 ## Properties

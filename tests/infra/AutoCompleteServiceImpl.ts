@@ -1,8 +1,8 @@
-import HttpServiceMock from '../mocks/HttpServiceMock';
-import AnswersConfig from '../../src/models/core/AnswersConfig';
+import { HttpServiceMock } from '../mocks/HttpServiceMock';
+import { AnswersConfig } from '../../src/models/core/AnswersConfig';
 import { UniversalAutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest, SearchParameters} from '../../src/models/autocompleteservice/AutoCompleteRequest';
-import HttpService from '../../src/services/HttpService';
-import AutoCompleteServiceImpl from '../../src/infra/AutoCompleteServiceImpl';
+import { HttpService } from '../../src/services/HttpService';
+import { AutoCompleteServiceImpl } from '../../src/infra/AutoCompleteServiceImpl';
 import mockAutoCompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutoCompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
 import mockAutoCompleteResponseWithEntities from '../fixtures/autocompleteresponsewithentities.json';

@@ -1,11 +1,11 @@
-import Result from './Result';
+import { Result } from './Result';
 
 /**
  * A direct answer to a search.
  *
  * @public
  */
-export default interface DirectAnswer {
+export interface DirectAnswer {
   /** The result of the direct answer. */
   value: string;
   /** The entity associated with the direct answer. */

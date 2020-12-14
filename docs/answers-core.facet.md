@@ -9,7 +9,7 @@ Represents dynamic filter options from the Answers API.
 <b>Signature:</b>
 
 ```typescript
-export default interface Facet 
+export interface Facet 
 ```
 
 ## Properties

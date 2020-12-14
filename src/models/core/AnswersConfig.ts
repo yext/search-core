@@ -1,11 +1,11 @@
-import Endpoints from './Endpoints';
+import { Endpoints } from './Endpoints';
 
 /**
  * The main configuration options for {@link AnswersCore}.
  *
  * @public
  */
-export default interface AnswersConfig {
+export interface AnswersConfig {
   /** The api key of the answers experience. */
   apiKey: string,
   /** The experience key of the answers experience. */

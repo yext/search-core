@@ -4,12 +4,12 @@
 
 ## AnswersError interface
 
-An error from the Answers API
+An error from the Answers Backend.
 
 <b>Signature:</b>
 
 ```typescript
-export default interface AnswersError 
+export interface AnswersError 
 ```
 
 ## Properties

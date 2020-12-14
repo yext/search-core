@@ -9,7 +9,7 @@ A spellcheck response from a search query.
 <b>Signature:</b>
 
 ```typescript
-export default interface SpellCheck 
+export interface SpellCheck 
 ```
 
 ## Properties

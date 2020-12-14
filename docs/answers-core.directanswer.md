@@ -9,7 +9,7 @@ A direct answer to a search.
 <b>Signature:</b>
 
 ```typescript
-export default interface DirectAnswer 
+export interface DirectAnswer 
 ```
 
 ## Properties
@@ -20,7 +20,7 @@ export default interface DirectAnswer
 |  [fieldApiName](./answers-core.directanswer.fieldapiname.md) | string | The field api name of the direct answer. |
 |  [fieldName](./answers-core.directanswer.fieldname.md) | string | The field name of the direct answer value. |
 |  [fieldType](./answers-core.directanswer.fieldtype.md) | string | The field type of the direct answer. |
-|  [relatedResult](./answers-core.directanswer.relatedresult.md) | Result | The entity associated with the direct answer. |
+|  [relatedResult](./answers-core.directanswer.relatedresult.md) | [Result](./answers-core.result.md) | The entity associated with the direct answer. |
 |  [value](./answers-core.directanswer.value.md) | string | The result of the direct answer. |
 |  [verticalKey](./answers-core.directanswer.verticalkey.md) | string | The vertical key of the direct answer. |
 

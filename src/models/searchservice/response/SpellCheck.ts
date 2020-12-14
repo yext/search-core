@@ -3,7 +3,7 @@
  *
  * @public
  */
-export default interface SpellCheck {
+export interface SpellCheck {
   /** The query that was input into the spell checker. */
   originalQuery: string;
   /** The corrected version of the originalQuery. */

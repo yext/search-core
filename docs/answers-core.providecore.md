@@ -16,11 +16,11 @@ export declare function provideCore(config: AnswersConfig): Promise<AnswersCore>
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | AnswersConfig | The answers-core config |
+|  config | [AnswersConfig](./answers-core.answersconfig.md) | The answers-core config |
 
 <b>Returns:</b>
 
-Promise&lt;AnswersCore&gt;
+Promise&lt;[AnswersCore](./answers-core.answerscore.md)<!-- -->&gt;
 
 ## Remarks
 

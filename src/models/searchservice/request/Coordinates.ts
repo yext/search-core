@@ -6,7 +6,7 @@
  *
  * @public
  */
-export default interface Coordinates {
+export interface Coordinates {
   /**
    * Latitude formatted as a decimal degree number.
    *

@@ -1,4 +1,4 @@
-import createUniversalSearchResponse from '../../src/transformers/searchservice/createUniversalSearchResponse';
+import { createUniversalSearchResponse } from '../../src/transformers/searchservice/createUniversalSearchResponse';
 import liveApiResponse from '../fixtures/liveapiuniversalresponse.json';
 import coreResponse from '../fixtures/coreuniversalresponse.json';
 

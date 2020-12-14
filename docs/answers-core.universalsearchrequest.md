@@ -9,14 +9,14 @@ Options which can be specified for a universal search.
 <b>Signature:</b>
 
 ```typescript
-export default interface UniversalSearchRequest 
+export interface UniversalSearchRequest 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [context?](./answers-core.universalsearchrequest.context.md) | Context | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
+|  [context?](./answers-core.universalsearchrequest.context.md) | [Context](./answers-core.context.md) | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [coordinates?](./answers-core.universalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> The coordinates of the user making the request which is used to bias the results. |
 |  [query](./answers-core.universalsearchrequest.query.md) | string | The search query. |
 |  [querySource?](./answers-core.universalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request. |

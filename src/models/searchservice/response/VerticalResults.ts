@@ -1,5 +1,5 @@
-import Result from './Result';
-import AppliedQueryFilter from './AppliedQueryFilter';
+import { Result } from './Result';
+import { AppliedQueryFilter } from './AppliedQueryFilter';
 import { Source } from './Source';
 
 /**
@@ -7,7 +7,7 @@ import { Source } from './Source';
  *
  * @public
  */
-export default interface VerticalResults {
+export interface VerticalResults {
   /** A array of {@link AppliedQueryFilter}s which were applied to the vertical results. */
   appliedQueryFilters: AppliedQueryFilter[];
   /** The duration of the query in milliseconds. */

@@ -1,6 +1,6 @@
-import SimpleFilter from '../../models/searchservice/request/SimpleFilter';
+import { SimpleFilter } from '../../models/searchservice/request/SimpleFilter';
 
-export default function createSimpleFilter(filter: any): Readonly<SimpleFilter> {
+export function createSimpleFilter(filter: any): Readonly<SimpleFilter> {
   const fieldId = Object.keys(filter)[0];
   const comparator = Object.keys(filter[fieldId])[0];
 

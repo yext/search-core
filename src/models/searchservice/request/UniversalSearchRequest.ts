@@ -1,5 +1,5 @@
-import Context from './Context';
-import Coordinates from './Coordinates';
+import { Context } from './Context';
+import { Coordinates } from './Coordinates';
 import { QueryTrigger } from './QueryTrigger';
 import { QuerySource } from './QuerySource';
 
@@ -8,7 +8,7 @@ import { QuerySource } from './QuerySource';
  *
  * @public
  */
-export default interface UniversalSearchRequest {
+export interface UniversalSearchRequest {
   /** The search query. */
   query: string;
   /** {@inheritDoc QueryTrigger} */

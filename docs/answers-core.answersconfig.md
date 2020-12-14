@@ -9,7 +9,7 @@ The main configuration options for [AnswersCore](./answers-core.answerscore.md)<
 <b>Signature:</b>
 
 ```typescript
-export default interface AnswersConfig 
+export interface AnswersConfig 
 ```
 
 ## Properties

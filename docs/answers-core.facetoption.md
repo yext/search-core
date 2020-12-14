@@ -18,6 +18,6 @@ export interface FacetOption
 |  --- | --- | --- |
 |  [count](./answers-core.facetoption.count.md) | number | The number of results associated with this facet option. |
 |  [displayName](./answers-core.facetoption.displayname.md) | string | The name of the facet option. |
-|  [filter](./answers-core.facetoption.filter.md) | SimpleFilter | The filter associated with this facet option. |
+|  [filter](./answers-core.facetoption.filter.md) | [SimpleFilter](./answers-core.simplefilter.md) | The filter associated with this facet option. |
 |  [selected](./answers-core.facetoption.selected.md) | boolean | Whether or not the filter is selected in the search results. |
 

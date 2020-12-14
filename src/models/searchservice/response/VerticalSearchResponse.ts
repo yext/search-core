@@ -1,15 +1,15 @@
-import VerticalResults from './VerticalResults';
+import { VerticalResults } from './VerticalResults';
 import { SearchIntent } from './SearchIntent';
-import Facet from './Facet';
-import LocationBias from './LocationBias';
-import SpellCheck from './SpellCheck';
+import { Facet } from './Facet';
+import { LocationBias } from './LocationBias';
+import { SpellCheck } from './SpellCheck';
 
 /**
  * A representation of a response from a vertical search.
  *
  * @public
  */
-export default interface VerticalSearchResponse {
+export interface VerticalSearchResponse {
   /** {@inheritDoc VerticalResults} */
   verticalResults: VerticalResults;
   /** The ID of the query. */

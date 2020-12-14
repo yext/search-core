@@ -9,7 +9,7 @@ The coordinates of the user making the request which is used to bias the results
 <b>Signature:</b>
 
 ```typescript
-export default interface Coordinates 
+export interface Coordinates 
 ```
 
 ## Remarks
