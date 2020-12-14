@@ -21,7 +21,7 @@ The constructor for this class is marked as internal. Third-party code should no
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [filterAutoComplete(request)](./answers-core.answerscore.filterautocomplete.md) |  |  |
-|  [submitQuestion(request)](./answers-core.answerscore.submitquestion.md) |  | Allows a user to submit a question. |
+|  [submitQuestion(request)](./answers-core.answerscore.submitquestion.md) |  | Submits a custom question to the Answers API. |
 |  [universalAutoComplete(request)](./answers-core.answerscore.universalautocomplete.md) |  |  |
 |  [universalSearch(request)](./answers-core.answerscore.universalsearch.md) |  | Performs an Answers search across all verticals. |
 |  [verticalAutoComplete(request)](./answers-core.answerscore.verticalautocomplete.md) |  |  |

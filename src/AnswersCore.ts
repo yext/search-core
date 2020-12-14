@@ -44,7 +44,7 @@ export class AnswersCore {
   }
 
   /**
-   * Allows a user to submit a question.
+   * Submits a custom question to the Answers API.
    *
    * @param request - Question submission request options
    */

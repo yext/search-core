@@ -4,7 +4,7 @@
 
 ## AnswersCore.submitQuestion() method
 
-Allows a user to submit a question.
+Submits a custom question to the Answers API.
 
 <b>Signature:</b>
 
