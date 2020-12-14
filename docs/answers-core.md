@@ -44,11 +44,11 @@
 |  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet. |
 |  [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) |  |
 |  [FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md) |  |
-|  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the answers API emphasized<!-- -->For example, if a user searches for 'pet' and a description field in the results contains the value 'A pet store', the API will likely match the word 'pet' |
-|  [LocationBias](./answers-core.locationbias.md) | Location information including how it was obtained |
+|  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the Answers API emphasized. |
+|  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | The QuestionSubmission Response. |
-|  [Result](./answers-core.result.md) | An individual search result |
+|  [Result](./answers-core.result.md) | An individual search result. |
 |  [SearchParameterField](./answers-core.searchparameterfield.md) |  |
 |  [SearchParameters](./answers-core.searchparameters.md) |  |
 |  [SimpleFilter](./answers-core.simplefilter.md) | Represents a filter which compares values to a single field. |
