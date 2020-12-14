@@ -17,8 +17,8 @@ export default interface Result
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [description?](./answers-core.result.description.md) | string | <i>(Optional)</i> A description of the result. |
-|  [distance?](./answers-core.result.distance.md) | number | <i>(Optional)</i> The distance from the user to the result. |
-|  [distanceFromFilter?](./answers-core.result.distancefromfilter.md) | number | <i>(Optional)</i> The distance from the filter to the result. |
+|  [distance?](./answers-core.result.distance.md) | number | <i>(Optional)</i> The distance from the user to the result in meters. |
+|  [distanceFromFilter?](./answers-core.result.distancefromfilter.md) | number | <i>(Optional)</i> The distance from a [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) location to the result in meters. |
 |  [entityType?](./answers-core.result.entitytype.md) | string | <i>(Optional)</i> The entity type of the result |
 |  [highlightedValues?](./answers-core.result.highlightedvalues.md) | HighlightedValue\[\] | <i>(Optional)</i> An array of [highlighted values](./answers-core.highlightedvalue.md) associated with the result. |
 |  [id?](./answers-core.result.id.md) | string | <i>(Optional)</i> The result ID which depends on the Result Source. |
