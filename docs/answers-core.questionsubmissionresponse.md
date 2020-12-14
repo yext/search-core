@@ -4,7 +4,7 @@
 
 ## QuestionSubmissionResponse interface
 
-The QuestionSubmission Response.
+A representation of a response from a question submission.
 
 <b>Signature:</b>
 
