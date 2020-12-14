@@ -4,7 +4,7 @@
 
 ## LocationBias interface
 
-Information about the location bias applied to an Answers search.
+Information about the user's location.
 
 <b>Signature:</b>
 

@@ -16,7 +16,7 @@ export interface AppliedQueryFilter
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [displayKey](./answers-core.appliedqueryfilter.displaykey.md) | string | The key used in the filter. |
+|  [displayKey](./answers-core.appliedqueryfilter.displaykey.md) | string | The display name of the filter key. |
 |  [displayValue](./answers-core.appliedqueryfilter.displayvalue.md) | string | The value used in the filter. |
 |  [filter](./answers-core.appliedqueryfilter.filter.md) | [SimpleFilter](./answers-core.simplefilter.md) | The filter applied to the query results. |
 

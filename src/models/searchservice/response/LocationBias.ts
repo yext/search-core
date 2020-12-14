@@ -1,5 +1,5 @@
 /**
- * Information about the location bias applied to an Answers search.
+ * Information about the user's location.
  *
  * @public
  */

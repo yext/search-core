@@ -4,7 +4,7 @@
 
 ## VerticalSearchResponse.verticalResults property
 
-Represents results from a search vertical
+Represents results from a search vertical.
 
 <b>Signature:</b>
 

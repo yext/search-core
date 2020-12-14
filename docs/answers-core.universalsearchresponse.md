@@ -18,7 +18,7 @@ export interface UniversalSearchResponse
 |  --- | --- | --- |
 |  [directAnswer?](./answers-core.universalsearchresponse.directanswer.md) | [DirectAnswer](./answers-core.directanswer.md) | <i>(Optional)</i> A direct answer to a search. |
 |  [errors?](./answers-core.universalsearchresponse.errors.md) | [AnswersError](./answers-core.answerserror.md)<!-- -->\[\] | <i>(Optional)</i> An array of [AnswersError](./answers-core.answerserror.md)<!-- -->s from the API. |
-|  [locationBias?](./answers-core.universalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> Information about the location bias applied to an Answers search. |
+|  [locationBias?](./answers-core.universalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
 |  [queryId?](./answers-core.universalsearchresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
 |  [searchIntents?](./answers-core.universalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./answers-core.searchintent.md)<!-- -->s which represents requests from the API. |
 |  [spellCheck?](./answers-core.universalsearchresponse.spellcheck.md) | [SpellCheck](./answers-core.spellcheck.md) | <i>(Optional)</i> A spellcheck response from a search query. |

@@ -4,7 +4,7 @@
 
 ## VerticalResults interface
 
-Represents results from a search vertical
+Represents results from a search vertical.
 
 <b>Signature:</b>
 

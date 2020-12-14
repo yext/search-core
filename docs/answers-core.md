@@ -45,7 +45,7 @@
 |  [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) |  |
 |  [FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md) |  |
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the Answers API emphasized. |
-|  [LocationBias](./answers-core.locationbias.md) | Information about the location bias applied to an Answers search. |
+|  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | Shape of the QuestionSubmission api response |
 |  [Result](./answers-core.result.md) | An individual search result. |
@@ -58,7 +58,7 @@
 |  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
 |  [UniversalSearchResponse](./answers-core.universalsearchresponse.md) | A representation of a response from a universal search. |
 |  [VerticalAutoCompleteRequest](./answers-core.verticalautocompleterequest.md) |  |
-|  [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical |
+|  [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical. |
 |  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
 |  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search. |
 

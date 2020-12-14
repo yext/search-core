@@ -18,5 +18,5 @@ export declare enum LocationBiasMethod
 |  --- | --- | --- |
 |  Device | <code>&quot;DEVICE&quot;</code> | Location was supplied by the user's device. |
 |  Ip | <code>&quot;IP&quot;</code> | Location was determined by IP address. |
-|  Unknown | <code>&quot;UNKNOWN&quot;</code> | Location is unknown |
+|  Unknown | <code>&quot;UNKNOWN&quot;</code> | Location is unknown. |
 

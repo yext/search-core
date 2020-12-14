@@ -7,7 +7,7 @@ import { SimpleFilter } from '../request/SimpleFilter';
  */
 export interface AppliedQueryFilter {
   /**
-   * The key used in the filter.
+   * The display name of the filter key.
    *
    * @example
    * 'Job Category'

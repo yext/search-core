@@ -4,7 +4,7 @@
 
 ## AppliedQueryFilter.displayKey property
 
-The key used in the filter.
+The display name of the filter key.
 
 <b>Signature:</b>
 
