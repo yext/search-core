@@ -4,6 +4,8 @@
 
 ## AnswersConfig.experienceKey property
 
+The experience key of the answers experience.
+
 <b>Signature:</b>
 
 ```typescript

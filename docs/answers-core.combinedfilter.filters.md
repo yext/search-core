@@ -4,6 +4,8 @@
 
 ## CombinedFilter.filters property
 
+An array of filters applied to the search.
+
 <b>Signature:</b>
 
 ```typescript

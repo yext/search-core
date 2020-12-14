@@ -1,3 +1,8 @@
+/**
+ * URLs to various Answers services.
+ *
+ * @internal
+ */
 export interface Endpoints {
   universalSearch?: string,
   verticalSearch?: string,

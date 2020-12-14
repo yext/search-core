@@ -4,6 +4,8 @@
 
 ## CombinedFilter.combinator property
 
+The logical operator used to combine the filters.
+
 <b>Signature:</b>
 
 ```typescript

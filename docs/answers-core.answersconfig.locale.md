@@ -4,6 +4,8 @@
 
 ## AnswersConfig.locale property
 
+The locale of the answers experience.
+
 <b>Signature:</b>
 
 ```typescript

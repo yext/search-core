@@ -15,7 +15,9 @@ import { serializeStaticFilters } from '../serializers/serializeStaticFilters';
 import { serializeFacetFilters } from '../serializers/serializeFacetFilters';
 
 /**
- * Internal interface representing the query params which may be sent in a universal search
+ * Represents the query params which may be sent in a universal search.
+ *
+ * @internal
  */
 interface UniversalSearchQueryParams extends QueryParams {
   input: string,
@@ -34,7 +36,9 @@ interface UniversalSearchQueryParams extends QueryParams {
 }
 
 /**
- * Internal interface representing the query params which may be sent in a vertical search
+ * Represents the query params which may be sent in a vertical search.
+ *
+ * @internal
  */
 interface VerticalSearchQueryParams extends QueryParams {
   experienceKey: string,
@@ -60,7 +64,9 @@ interface VerticalSearchQueryParams extends QueryParams {
 }
 
 /**
- * An implementation of SearchService which hits LiveAPI
+ * The implementation of SearchService which hits LiveAPI.
+ *
+ * @internal
  */
 export class SearchServiceImpl implements SearchService {
   private config: AnswersConfig;

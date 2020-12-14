@@ -4,6 +4,8 @@
 
 ## AnswersConfig interface
 
+The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,9 +16,8 @@ export interface AnswersConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [apiKey](./answers-core.answersconfig.apikey.md) | string |  |
-|  [endpoints?](./answers-core.answersconfig.endpoints.md) | [Endpoints](./answers-core.endpoints.md) | <i>(Optional)</i> |
-|  [experienceKey](./answers-core.answersconfig.experiencekey.md) | string |  |
-|  [experienceVersion?](./answers-core.answersconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> |
-|  [locale](./answers-core.answersconfig.locale.md) | string |  |
+|  [apiKey](./answers-core.answersconfig.apikey.md) | string | The api key of the answers experience. |
+|  [experienceKey](./answers-core.answersconfig.experiencekey.md) | string | The experience key of the answers experience. |
+|  [experienceVersion?](./answers-core.answersconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the answers experience configuration. |
+|  [locale](./answers-core.answersconfig.locale.md) | string | The locale of the answers experience. |
 

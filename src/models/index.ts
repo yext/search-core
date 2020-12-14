@@ -12,7 +12,7 @@ export { QuestionSubmissionRequest } from './questionsubmission/QuestionSubmissi
 export { QuestionSubmissionResponse } from './questionsubmission/QuestionSubmissionResponse';
 
 // Search service
-export { CombinedFilter } from './searchservice/request/CombinedFilter';
+export { CombinedFilter, FilterCombinator } from './searchservice/request/CombinedFilter';
 export { Context } from './searchservice/request/Context';
 export { Coordinates } from './searchservice/request/Coordinates';
 export { QuerySource } from './searchservice/request/QuerySource';

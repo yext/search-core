@@ -4,8 +4,15 @@
 
 ## UniversalSearchRequest.coordinates property
 
+The coordinates of the user making the request which is used to bias the results.
+
 <b>Signature:</b>
 
 ```typescript
 coordinates?: Coordinates;
 ```
+
+## Remarks
+
+If omitted from a request, Yext will attempt to determine the location.
+

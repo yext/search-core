@@ -4,6 +4,8 @@
 
 ## VerticalSearchRequest.offset property
 
+The result offset which allows for fetching more results with the same query.
+
 <b>Signature:</b>
 
 ```typescript

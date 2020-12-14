@@ -4,6 +4,8 @@
 
 ## provideCore() function
 
+The entrypoint to the answers-core library.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,9 +16,13 @@ export declare function provideCore(config: AnswersConfig): Promise<AnswersCore>
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | [AnswersConfig](./answers-core.answersconfig.md) |  |
+|  config | [AnswersConfig](./answers-core.answersconfig.md) | The answers-core config |
 
 <b>Returns:</b>
 
 Promise&lt;[AnswersCore](./answers-core.answerscore.md)<!-- -->&gt;
+
+## Remarks
+
+Returns a Promise containing an [AnswersCore](./answers-core.answerscore.md) instance. If the backend determines that the core should be disabled, this function returns a rejected promise.
 
