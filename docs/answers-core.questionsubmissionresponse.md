@@ -16,6 +16,6 @@ export interface QuestionSubmissionResponse
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [errors](./answers-core.questionsubmissionresponse.errors.md) | [AnswersError](./answers-core.answerserror.md)<!-- -->\[\] | Any errors related to the question submission. If there are no errors, question submission was successful. |
+|  [errors](./answers-core.questionsubmissionresponse.errors.md) | [AnswersError](./answers-core.answerserror.md)<!-- -->\[\] | Errors that occurred during question submission. If there are no errors, question submission was successful. |
 |  [uuid](./answers-core.questionsubmissionresponse.uuid.md) | string | A unique id which corresponds to the request. |
 
