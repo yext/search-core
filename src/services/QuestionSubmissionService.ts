@@ -3,6 +3,8 @@ import { QuestionSubmissionRequest } from '../models/questionsubmission/Question
 
 /**
  * Submits a custom question to the Answers API.
+ *
+ * @internal
  */
 export interface QuestionSubmissionService {
   submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>
