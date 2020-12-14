@@ -4,7 +4,7 @@
 
 ## VerticalResults interface
 
-A result from an individual vertical
+Represents results from a search vertical.
 
 <b>Signature:</b>
 
@@ -16,10 +16,10 @@ export interface VerticalResults
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [appliedQueryFilters](./answers-core.verticalresults.appliedqueryfilters.md) | [AppliedQueryFilter](./answers-core.appliedqueryfilter.md)<!-- -->\[\] |  |
-|  [queryDurationMillis](./answers-core.verticalresults.querydurationmillis.md) | number |  |
-|  [results](./answers-core.verticalresults.results.md) | [Result](./answers-core.result.md)<!-- -->\[\] |  |
-|  [resultsCount](./answers-core.verticalresults.resultscount.md) | number |  |
-|  [source](./answers-core.verticalresults.source.md) | [Source](./answers-core.source.md) |  |
-|  [verticalKey](./answers-core.verticalresults.verticalkey.md) | string |  |
+|  [appliedQueryFilters](./answers-core.verticalresults.appliedqueryfilters.md) | [AppliedQueryFilter](./answers-core.appliedqueryfilter.md)<!-- -->\[\] | A array of [AppliedQueryFilter](./answers-core.appliedqueryfilter.md)<!-- -->s which were applied to the vertical results. |
+|  [queryDurationMillis](./answers-core.verticalresults.querydurationmillis.md) | number | The duration of the query in milliseconds. |
+|  [results](./answers-core.verticalresults.results.md) | [Result](./answers-core.result.md)<!-- -->\[\] | An array of search [Result](./answers-core.result.md)<!-- -->s for the vertical. |
+|  [resultsCount](./answers-core.verticalresults.resultscount.md) | number | The total number of results within the vertical. |
+|  [source](./answers-core.verticalresults.source.md) | [Source](./answers-core.source.md) | Represents the source of a [Result](./answers-core.result.md)<!-- -->. |
+|  [verticalKey](./answers-core.verticalresults.verticalkey.md) | string | The vertical key associated with the vertical results. |
 

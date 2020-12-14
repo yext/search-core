@@ -4,6 +4,8 @@
 
 ## Result.description property
 
+A description of the result.
+
 <b>Signature:</b>
 
 ```typescript

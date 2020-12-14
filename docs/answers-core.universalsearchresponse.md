@@ -4,7 +4,7 @@
 
 ## UniversalSearchResponse interface
 
-A representation of a response from a universal search
+A representation of a response from a universal search.
 
 <b>Signature:</b>
 
@@ -16,11 +16,11 @@ export interface UniversalSearchResponse
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [directAnswer?](./answers-core.universalsearchresponse.directanswer.md) | [DirectAnswer](./answers-core.directanswer.md) | <i>(Optional)</i> |
-|  [errors?](./answers-core.universalsearchresponse.errors.md) | [AnswersError](./answers-core.answerserror.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [locationBias?](./answers-core.universalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> |
-|  [queryId?](./answers-core.universalsearchresponse.queryid.md) | string | <i>(Optional)</i> |
-|  [searchIntents?](./answers-core.universalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [spellCheck?](./answers-core.universalsearchresponse.spellcheck.md) | [SpellCheck](./answers-core.spellcheck.md) | <i>(Optional)</i> |
-|  [verticalResults](./answers-core.universalsearchresponse.verticalresults.md) | [VerticalResults](./answers-core.verticalresults.md)<!-- -->\[\] |  |
+|  [directAnswer?](./answers-core.universalsearchresponse.directanswer.md) | [DirectAnswer](./answers-core.directanswer.md) | <i>(Optional)</i> A direct answer to a search. |
+|  [errors?](./answers-core.universalsearchresponse.errors.md) | [AnswersError](./answers-core.answerserror.md)<!-- -->\[\] | <i>(Optional)</i> An array of [AnswersError](./answers-core.answerserror.md)<!-- -->s from the API. |
+|  [locationBias?](./answers-core.universalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
+|  [queryId?](./answers-core.universalsearchresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
+|  [searchIntents?](./answers-core.universalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./answers-core.searchintent.md)<!-- -->s which represents requests from the API. |
+|  [spellCheck?](./answers-core.universalsearchresponse.spellcheck.md) | [SpellCheck](./answers-core.spellcheck.md) | <i>(Optional)</i> A spellcheck response from a search query. |
+|  [verticalResults](./answers-core.universalsearchresponse.verticalresults.md) | [VerticalResults](./answers-core.verticalresults.md)<!-- -->\[\] | An array of [VerticalResults](./answers-core.verticalresults.md) which represent the results for each vertical. |
 

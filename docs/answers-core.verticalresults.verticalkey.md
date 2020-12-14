@@ -4,6 +4,8 @@
 
 ## VerticalResults.verticalKey property
 
+The vertical key associated with the vertical results.
+
 <b>Signature:</b>
 
 ```typescript

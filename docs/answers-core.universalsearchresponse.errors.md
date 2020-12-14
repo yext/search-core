@@ -4,6 +4,8 @@
 
 ## UniversalSearchResponse.errors property
 
+An array of [AnswersError](./answers-core.answerserror.md)<!-- -->s from the API.
+
 <b>Signature:</b>
 
 ```typescript

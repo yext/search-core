@@ -4,6 +4,8 @@
 
 ## UniversalSearchResponse.locationBias property
 
+Information about the user's location.
+
 <b>Signature:</b>
 
 ```typescript

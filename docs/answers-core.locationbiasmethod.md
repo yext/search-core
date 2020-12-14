@@ -4,6 +4,8 @@
 
 ## LocationBiasMethod enum
 
+The method used to determine the location.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,7 +16,7 @@ export declare enum LocationBiasMethod
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  Device | <code>&quot;DEVICE&quot;</code> |  |
-|  Ip | <code>&quot;IP&quot;</code> |  |
-|  Unknown | <code>&quot;UNKNOWN&quot;</code> |  |
+|  Device | <code>&quot;DEVICE&quot;</code> | Location was supplied by the user's device. |
+|  Ip | <code>&quot;IP&quot;</code> | Location was determined by IP address. |
+|  Unknown | <code>&quot;UNKNOWN&quot;</code> | Location is unknown. |
 

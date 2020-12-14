@@ -4,6 +4,8 @@
 
 ## VerticalResults.appliedQueryFilters property
 
+A array of [AppliedQueryFilter](./answers-core.appliedqueryfilter.md)<!-- -->s which were applied to the vertical results.
+
 <b>Signature:</b>
 
 ```typescript

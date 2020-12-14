@@ -4,6 +4,8 @@
 
 ## DirectAnswer.fieldApiName property
 
+The field api name of the direct answer.
+
 <b>Signature:</b>
 
 ```typescript

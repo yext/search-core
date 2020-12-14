@@ -4,6 +4,8 @@
 
 ## VerticalSearchResponse.searchIntents property
 
+An array of [SearchIntent](./answers-core.searchintent.md)<!-- -->s.
+
 <b>Signature:</b>
 
 ```typescript

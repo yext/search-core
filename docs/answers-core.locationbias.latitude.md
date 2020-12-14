@@ -4,6 +4,8 @@
 
 ## LocationBias.latitude property
 
+The location's latitude.
+
 <b>Signature:</b>
 
 ```typescript

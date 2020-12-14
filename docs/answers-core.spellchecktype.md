@@ -4,6 +4,8 @@
 
 ## SpellCheckType enum
 
+Represents the type of spell check performed.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,7 +16,7 @@ export declare enum SpellCheckType
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  AutoCorrect | <code>&quot;AUTOCORRECT&quot;</code> |  |
-|  Combine | <code>&quot;COMBINE&quot;</code> |  |
-|  Suggest | <code>&quot;SUGGEST&quot;</code> |  |
+|  AutoCorrect | <code>&quot;AUTOCORRECT&quot;</code> | The API is autocorrecting the original query. |
+|  Combine | <code>&quot;COMBINE&quot;</code> | The API may be doing some combination of suggesting or autocorrecting. |
+|  Suggest | <code>&quot;SUGGEST&quot;</code> | The API is suggesting an alternative query. |
 

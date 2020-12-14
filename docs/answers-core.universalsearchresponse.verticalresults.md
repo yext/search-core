@@ -4,6 +4,8 @@
 
 ## UniversalSearchResponse.verticalResults property
 
+An array of [VerticalResults](./answers-core.verticalresults.md) which represent the results for each vertical.
+
 <b>Signature:</b>
 
 ```typescript

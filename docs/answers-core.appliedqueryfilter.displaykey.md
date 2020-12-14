@@ -4,8 +4,15 @@
 
 ## AppliedQueryFilter.displayKey property
 
+The display name of the filter key.
+
 <b>Signature:</b>
 
 ```typescript
 displayKey: string;
 ```
+
+## Example
+
+'Job Category'
+

@@ -4,8 +4,15 @@
 
 ## LocationBias.displayName property
 
+The name of the location.
+
 <b>Signature:</b>
 
 ```typescript
 displayName: string;
 ```
+
+## Example
+
+Arlington, Virginia.
+

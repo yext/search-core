@@ -15,11 +15,11 @@
 |  Enumeration | Description |
 |  --- | --- |
 |  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
-|  [LocationBiasMethod](./answers-core.locationbiasmethod.md) |  |
+|  [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location. |
 |  [QuerySource](./answers-core.querysource.md) | The source of the search request. |
-|  [SearchIntent](./answers-core.searchintent.md) |  |
-|  [Source](./answers-core.source.md) |  |
-|  [SpellCheckType](./answers-core.spellchecktype.md) |  |
+|  [SearchIntent](./answers-core.searchintent.md) | Represents intents from the Answers API. |
+|  [Source](./answers-core.source.md) | Represents the source of a [Result](./answers-core.result.md)<!-- -->. |
+|  [SpellCheckType](./answers-core.spellchecktype.md) | Represents the type of spell check performed. |
 
 ## Functions
 
@@ -33,32 +33,32 @@
 |  --- | --- |
 |  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
 |  [AnswersError](./answers-core.answerserror.md) | An error from the Answers Backend. |
-|  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API determined should be applied to the search |
+|  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutoCompleteResponse](./answers-core.autocompleteresponse.md) |  |
 |  [AutoCompleteResult](./answers-core.autocompleteresult.md) |  |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request which is used to bias the results. |
-|  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search |
-|  [Facet](./answers-core.facet.md) |  |
-|  [FacetOption](./answers-core.facetoption.md) |  |
+|  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search. |
+|  [Facet](./answers-core.facet.md) | Represents dynamic filter options from the Answers API. |
+|  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet. |
 |  [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) |  |
 |  [FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md) |  |
-|  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the answers API emphasized<!-- -->For example, if a user searches for 'pet' and a description field in the results contains the value 'A pet store', the API will likely match the word 'pet' |
-|  [LocationBias](./answers-core.locationbias.md) | Location information including how it was obtained |
+|  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the Answers API emphasized. |
+|  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | Shape of the QuestionSubmission api response |
-|  [Result](./answers-core.result.md) | An individual search result |
+|  [Result](./answers-core.result.md) | An individual search result. |
 |  [SearchParameterField](./answers-core.searchparameterfield.md) |  |
 |  [SearchParameters](./answers-core.searchparameters.md) |  |
 |  [SimpleFilter](./answers-core.simplefilter.md) | Represents a filter which compares values to a single field. |
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
-|  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query |
+|  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query. |
 |  [UniversalAutoCompleteRequest](./answers-core.universalautocompleterequest.md) | A domain model representation of an AutoComplete request. This model can be used for AutoComplete on vertical, universal, or filter search. |
 |  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
-|  [UniversalSearchResponse](./answers-core.universalsearchresponse.md) | A representation of a response from a universal search |
+|  [UniversalSearchResponse](./answers-core.universalsearchresponse.md) | A representation of a response from a universal search. |
 |  [VerticalAutoCompleteRequest](./answers-core.verticalautocompleterequest.md) |  |
-|  [VerticalResults](./answers-core.verticalresults.md) | A result from an individual vertical |
+|  [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical. |
 |  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
-|  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search |
+|  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search. |
 

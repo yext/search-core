@@ -4,6 +4,8 @@
 
 ## Facet.options property
 
+An array of [FacetOption](./answers-core.facetoption.md)<!-- -->s
+
 <b>Signature:</b>
 
 ```typescript

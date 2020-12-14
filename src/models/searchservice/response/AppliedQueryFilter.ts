@@ -1,10 +1,25 @@
 import { SimpleFilter } from '../request/SimpleFilter';
 
 /**
- * A filter that the Answers API determined should be applied to the search
+ * A filter that the Answers API applied to the search.
+ *
+ * @public
  */
 export interface AppliedQueryFilter {
+  /**
+   * The display name of the filter key.
+   *
+   * @example
+   * 'Job Category'
+   */
   displayKey: string;
+  /**
+   * The value used in the filter.
+   *
+   * @example
+   * 'Sales'
+   */
   displayValue: string;
+  /** The filter applied to the query results. */
   filter: SimpleFilter;
 }

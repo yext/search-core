@@ -4,6 +4,8 @@
 
 ## FacetOption.filter property
 
+The filter associated with this facet option.
+
 <b>Signature:</b>
 
 ```typescript

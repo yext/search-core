@@ -4,6 +4,8 @@
 
 ## VerticalResults.source property
 
+Represents the source of a [Result](./answers-core.result.md)<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript

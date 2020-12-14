@@ -4,8 +4,15 @@
 
 ## HighlightedValue.value property
 
+The value of the field which should be highlighted.
+
 <b>Signature:</b>
 
 ```typescript
 value: string;
 ```
+
+## Remarks
+
+No formatting is applied to this value. This is simply the value that the Answers API determined should be highlighted.
+

@@ -4,6 +4,8 @@
 
 ## VerticalSearchResponse.verticalResults property
 
+Represents results from a search vertical.
+
 <b>Signature:</b>
 
 ```typescript
