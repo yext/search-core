@@ -1,7 +1,7 @@
 /**
  * Options for a QuestionSubmission request
  */
-export default interface QuestionSubmissionRequest {
+export interface QuestionSubmissionRequest {
   email: string
   entityId: string
   name: string

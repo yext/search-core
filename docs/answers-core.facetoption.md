@@ -16,6 +16,6 @@ export interface FacetOption
 |  --- | --- | --- |
 |  [count](./answers-core.facetoption.count.md) | number |  |
 |  [displayName](./answers-core.facetoption.displayname.md) | string |  |
-|  [filter](./answers-core.facetoption.filter.md) | SimpleFilter |  |
+|  [filter](./answers-core.facetoption.filter.md) | [SimpleFilter](./answers-core.simplefilter.md) |  |
 |  [selected](./answers-core.facetoption.selected.md) | boolean |  |
 

@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export default interface Context 
+export interface Context 
 ```

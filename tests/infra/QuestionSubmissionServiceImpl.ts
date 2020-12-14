@@ -1,7 +1,7 @@
-import QuestionSubmissionServiceImpl from '../../src/infra/QuestionSubmissionServiceImpl';
-import HttpServiceMock from '../mocks/HttpServiceMock';
-import HttpService from '../../src/services/HttpService';
-import AnswersConfig from '../../src/models/core/AnswersConfig';
+import { QuestionSubmissionServiceImpl } from '../../src/infra/QuestionSubmissionServiceImpl';
+import { HttpServiceMock } from '../mocks/HttpServiceMock';
+import { HttpService } from '../../src/services/HttpService';
+import { AnswersConfig } from '../../src/models/core/AnswersConfig';
 
 const baseCoreConfig = {
   apiKey: 'anApiKey',

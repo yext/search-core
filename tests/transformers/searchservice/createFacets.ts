@@ -1,4 +1,4 @@
-import createFacets from '../../../src/transformers/searchservice/createFacets';
+import { createFacets } from '../../../src/transformers/searchservice/createFacets';
 
 it('createFacets', () => {
   const actualCoreResponse = createFacets([

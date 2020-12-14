@@ -1,18 +1,18 @@
-import SearchService from './services/SearchService';
-import UniversalSearchRequest from './models/searchservice/request/UniversalSearchRequest';
-import UniversalSearchResponse from './models/searchservice/response/UniversalSearchResponse';
-import VerticalSearchRequest from './models/searchservice/request/VerticalSearchRequest';
-import VerticalSearchResponse from './models/searchservice/response/VerticalSearchResponse';
+import { SearchService } from './services/SearchService';
+import { UniversalSearchRequest } from './models/searchservice/request/UniversalSearchRequest';
+import { UniversalSearchResponse } from './models/searchservice/response/UniversalSearchResponse';
+import { VerticalSearchRequest } from './models/searchservice/request/VerticalSearchRequest';
+import { VerticalSearchResponse } from './models/searchservice/response/VerticalSearchResponse';
 
-import QuestionSubmissionService from './services/QuestionSubmissionService';
-import QuestionSubmissionRequest from './models/questionsubmission/QuestionSubmissionRequest';
-import QuestionSubmissionResponse from './models/questionsubmission/QuestionSubmissionResponse';
+import { QuestionSubmissionService } from './services/QuestionSubmissionService';
+import { QuestionSubmissionRequest } from './models/questionsubmission/QuestionSubmissionRequest';
+import { QuestionSubmissionResponse } from './models/questionsubmission/QuestionSubmissionResponse';
 import { UniversalAutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest }
   from './models/autocompleteservice/AutoCompleteRequest';
 import { AutoCompleteResponse, FilterAutoCompleteResponse } from './models/autocompleteservice/AutoCompleteResponse';
 import { AutoCompleteService } from './services/AutoCompleteService';
 
-export default class AnswersCore {
+export class AnswersCore {
   constructor(
     private searchService: SearchService,
     private questionSubmissionService: QuestionSubmissionService,

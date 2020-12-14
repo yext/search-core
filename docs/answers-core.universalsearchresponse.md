@@ -9,18 +9,18 @@ A representation of a response from a universal search
 <b>Signature:</b>
 
 ```typescript
-export default interface UniversalSearchResponse 
+export interface UniversalSearchResponse 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [directAnswer?](./answers-core.universalsearchresponse.directanswer.md) | DirectAnswer | <i>(Optional)</i> |
-|  [errors?](./answers-core.universalsearchresponse.errors.md) | AnswersError\[\] | <i>(Optional)</i> |
-|  [locationBias?](./answers-core.universalsearchresponse.locationbias.md) | LocationBias | <i>(Optional)</i> |
+|  [directAnswer?](./answers-core.universalsearchresponse.directanswer.md) | [DirectAnswer](./answers-core.directanswer.md) | <i>(Optional)</i> |
+|  [errors?](./answers-core.universalsearchresponse.errors.md) | [AnswersError](./answers-core.answerserror.md)<!-- -->\[\] | <i>(Optional)</i> |
+|  [locationBias?](./answers-core.universalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> |
 |  [queryId?](./answers-core.universalsearchresponse.queryid.md) | string | <i>(Optional)</i> |
 |  [searchIntents?](./answers-core.universalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [spellCheck?](./answers-core.universalsearchresponse.spellcheck.md) | SpellCheck | <i>(Optional)</i> |
-|  [verticalResults](./answers-core.universalsearchresponse.verticalresults.md) | VerticalResults\[\] |  |
+|  [spellCheck?](./answers-core.universalsearchresponse.spellcheck.md) | [SpellCheck](./answers-core.spellcheck.md) | <i>(Optional)</i> |
+|  [verticalResults](./answers-core.universalsearchresponse.verticalresults.md) | [VerticalResults](./answers-core.verticalresults.md)<!-- -->\[\] |  |
 

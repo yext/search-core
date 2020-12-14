@@ -1,11 +1,11 @@
-import Result from '../../models/searchservice/response/Result';
+import { Result } from '../../models/searchservice/response/Result';
 import { Source } from '../../models/searchservice/response/Source';
-import HighlightedValueFactory from './HighlightedValueFactory';
+import { HighlightedValueFactory } from './HighlightedValueFactory';
 
 /**
  * A factory which creates results from different sources
  */
-export default class ResultsFactory {
+export class ResultsFactory {
   public static create(results: any, source: Source): Result[] {
     return results.map((result: any, index: number) => {
       result = {

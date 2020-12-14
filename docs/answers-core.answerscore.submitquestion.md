@@ -14,9 +14,9 @@ submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionRe
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | QuestionSubmissionRequest |  |
+|  request | [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) |  |
 
 <b>Returns:</b>
 
-Promise&lt;QuestionSubmissionResponse&gt;
+Promise&lt;[QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md)<!-- -->&gt;
 

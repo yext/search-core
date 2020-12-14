@@ -9,7 +9,7 @@ Location information including how it was obtained
 <b>Signature:</b>
 
 ```typescript
-export default interface LocationBias 
+export interface LocationBias 
 ```
 
 ## Properties

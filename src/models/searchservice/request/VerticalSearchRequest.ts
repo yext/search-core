@@ -1,16 +1,16 @@
-import CombinedFilter from './CombinedFilter';
-import SimpleFilter from './SimpleFilter';
-import Context from './Context';
-import Coordinates from './Coordinates';
+import { CombinedFilter } from './CombinedFilter';
+import { SimpleFilter } from './SimpleFilter';
+import { Context } from './Context';
+import { Coordinates } from './Coordinates';
 import { QueryTrigger } from './QueryTrigger';
-import SortBy from './SortBy';
+import { SortBy } from './SortBy';
 import { QuerySource } from './QuerySource';
 
 /**
  * VerticalSearchRequest represents the options available when constructing a vertical
  * search request
  */
-export default interface VerticalSearchRequest {
+export interface VerticalSearchRequest {
   query: string,
   verticalKey: string,
   context: Context,

@@ -1,9 +1,9 @@
-import SimpleFilter from './SimpleFilter';
+import { SimpleFilter } from './SimpleFilter';
 
 /**
  * Represents more than one filter that will be combined to refine results.
  */
-export default interface CombinedFilter {
+export interface CombinedFilter {
   filters: (SimpleFilter | CombinedFilter)[];
   combinator: FilterCombinator;
 }

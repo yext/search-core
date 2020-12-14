@@ -1,7 +1,7 @@
 /**
  * Represents static filters in the format that the Answers API expects
  */
-export default interface StaticFilters {
+export interface StaticFilters {
   [combinator: string]: (StaticFilters | Filter)[] | Filter | StaticFilters;
 }
 

@@ -1,11 +1,11 @@
 import { defaultEndpoints } from '../constants';
-import AnswersConfig from '../models/core/AnswersConfig';
-import HttpServiceImpl from './HttpServiceImpl';
+import { AnswersConfig } from '../models/core/AnswersConfig';
+import { HttpServiceImpl } from './HttpServiceImpl';
 
 /**
  * MasterSwitch checks if the front-end for the given experience should be temporarily disabled.
  */
-export default class MasterSwitchApi {
+export class MasterSwitchApi {
   private config: AnswersConfig;
   private endpoint: string;
 

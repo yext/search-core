@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export default interface Endpoints 
+export interface Endpoints 
 ```
 
 ## Properties

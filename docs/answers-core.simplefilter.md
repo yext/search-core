@@ -9,7 +9,7 @@ Represents a single filter comparing a value to a field
 <b>Signature:</b>
 
 ```typescript
-export default interface SimpleFilter 
+export interface SimpleFilter 
 ```
 
 ## Properties

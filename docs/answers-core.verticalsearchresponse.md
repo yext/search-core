@@ -9,19 +9,19 @@ A representation of a response from a vertical search
 <b>Signature:</b>
 
 ```typescript
-export default interface VerticalSearchResponse 
+export interface VerticalSearchResponse 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [allResultsForVertical?](./answers-core.verticalsearchresponse.allresultsforvertical.md) | VerticalSearchResponse | <i>(Optional)</i> |
-|  [alternativeVerticals?](./answers-core.verticalsearchresponse.alternativeverticals.md) | Readonly&lt;VerticalResults\[\]&gt; | <i>(Optional)</i> |
-|  [facets?](./answers-core.verticalsearchresponse.facets.md) | Readonly&lt;Facet\[\]&gt; | <i>(Optional)</i> |
-|  [locationBias?](./answers-core.verticalsearchresponse.locationbias.md) | LocationBias | <i>(Optional)</i> |
+|  [allResultsForVertical?](./answers-core.verticalsearchresponse.allresultsforvertical.md) | [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | <i>(Optional)</i> |
+|  [alternativeVerticals?](./answers-core.verticalsearchresponse.alternativeverticals.md) | Readonly&lt;[VerticalResults](./answers-core.verticalresults.md)<!-- -->\[\]&gt; | <i>(Optional)</i> |
+|  [facets?](./answers-core.verticalsearchresponse.facets.md) | Readonly&lt;[Facet](./answers-core.facet.md)<!-- -->\[\]&gt; | <i>(Optional)</i> |
+|  [locationBias?](./answers-core.verticalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> |
 |  [queryId](./answers-core.verticalsearchresponse.queryid.md) | string |  |
 |  [searchIntents?](./answers-core.verticalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [spellCheck?](./answers-core.verticalsearchresponse.spellcheck.md) | SpellCheck | <i>(Optional)</i> |
-|  [verticalResults](./answers-core.verticalsearchresponse.verticalresults.md) | VerticalResults |  |
+|  [spellCheck?](./answers-core.verticalsearchresponse.spellcheck.md) | [SpellCheck](./answers-core.spellcheck.md) | <i>(Optional)</i> |
+|  [verticalResults](./answers-core.verticalsearchresponse.verticalresults.md) | [VerticalResults](./answers-core.verticalresults.md) |  |
 

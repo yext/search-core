@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export default interface Facet 
+export interface Facet 
 ```
 
 ## Properties

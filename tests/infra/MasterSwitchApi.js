@@ -1,4 +1,4 @@
-import MasterSwitchApi from '../../src/infra/MasterSwitchApi';
+import { MasterSwitchApi } from '../../src/infra/MasterSwitchApi';
 
 describe('MasterSwitchApi', () => {
   let masterSwitchApi;

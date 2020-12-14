@@ -9,7 +9,7 @@ An individual search result
 <b>Signature:</b>
 
 ```typescript
-export default interface Result 
+export interface Result 
 ```
 
 ## Properties
@@ -20,7 +20,7 @@ export default interface Result
 |  [distance?](./answers-core.result.distance.md) | number | <i>(Optional)</i> |
 |  [distanceFromFilter?](./answers-core.result.distancefromfilter.md) | number | <i>(Optional)</i> |
 |  [entityType?](./answers-core.result.entitytype.md) | string | <i>(Optional)</i> |
-|  [highlightedValues?](./answers-core.result.highlightedvalues.md) | HighlightedValue\[\] | <i>(Optional)</i> |
+|  [highlightedValues?](./answers-core.result.highlightedvalues.md) | [HighlightedValue](./answers-core.highlightedvalue.md)<!-- -->\[\] | <i>(Optional)</i> |
 |  [id?](./answers-core.result.id.md) | string | <i>(Optional)</i> |
 |  [index?](./answers-core.result.index.md) | number | <i>(Optional)</i> |
 |  [link?](./answers-core.result.link.md) | string | <i>(Optional)</i> |

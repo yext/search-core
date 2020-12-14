@@ -1,4 +1,4 @@
-import serializeFacetFilters from '../../src/serializers/serializeFacetFilters';
+import { serializeFacetFilters } from '../../src/serializers/serializeFacetFilters';
 
 it('serializeFacetFilters serializes facets properly', () => {
   const actualSerializedFilters = serializeFacetFilters([

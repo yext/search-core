@@ -1,7 +1,7 @@
 /**
  * A spellcheck response from a search query
  */
-export default interface SpellCheck {
+export interface SpellCheck {
   originalQuery: string;
   correctedQuery: string;
   type: SpellCheckType;

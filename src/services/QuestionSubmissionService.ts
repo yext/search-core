@@ -1,6 +1,6 @@
-import QuestionSubmissionResponse from '../models/questionsubmission/QuestionSubmissionResponse';
-import QuestionSubmissionRequest from '../models/questionsubmission/QuestionSubmissionRequest';
+import { QuestionSubmissionResponse } from '../models/questionsubmission/QuestionSubmissionResponse';
+import { QuestionSubmissionRequest } from '../models/questionsubmission/QuestionSubmissionRequest';
 
-export default interface QuestionSubmissionService {
+export interface QuestionSubmissionService {
   submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>
 }

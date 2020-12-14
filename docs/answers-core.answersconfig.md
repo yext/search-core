@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export default interface AnswersConfig 
+export interface AnswersConfig 
 ```
 
 ## Properties
@@ -15,7 +15,7 @@ export default interface AnswersConfig
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [apiKey](./answers-core.answersconfig.apikey.md) | string |  |
-|  [endpoints?](./answers-core.answersconfig.endpoints.md) | Endpoints | <i>(Optional)</i> |
+|  [endpoints?](./answers-core.answersconfig.endpoints.md) | [Endpoints](./answers-core.endpoints.md) | <i>(Optional)</i> |
 |  [experienceKey](./answers-core.answersconfig.experiencekey.md) | string |  |
 |  [experienceVersion?](./answers-core.answersconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> |
 |  [locale](./answers-core.answersconfig.locale.md) | string |  |
