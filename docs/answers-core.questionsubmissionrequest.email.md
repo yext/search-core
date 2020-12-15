@@ -4,6 +4,8 @@
 
 ## QuestionSubmissionRequest.email property
 
+The email of the user that is submitting the question.
+
 <b>Signature:</b>
 
 ```typescript

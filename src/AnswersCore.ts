@@ -43,6 +43,11 @@ export class AnswersCore {
     return this.searchService.verticalSearch(request);
   }
 
+  /**
+   * Submits a custom question to the Answers API.
+   *
+   * @param request - Question submission request options
+   */
   submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse> {
     return this.questionSubmissionService.submitQuestion(request);
   }

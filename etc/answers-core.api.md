@@ -23,7 +23,6 @@ export class AnswersCore {
     // @internal
     constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutoCompleteService);
     filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse>;
-    // (undocumented)
     submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
     universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse>;
     universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
@@ -197,25 +196,17 @@ export enum QueryTrigger {
 
 // @public
 export interface QuestionSubmissionRequest {
-    // (undocumented)
     email: string;
-    // (undocumented)
     entityId: string;
-    // (undocumented)
     name: string;
-    // (undocumented)
     questionDescription?: string;
-    // (undocumented)
     questionText: string;
-    // (undocumented)
     sessionTrackingEnabled?: boolean;
 }
 
 // @public
 export interface QuestionSubmissionResponse {
-    // (undocumented)
     errors: AnswersError[];
-    // (undocumented)
     uuid: string;
 }
 

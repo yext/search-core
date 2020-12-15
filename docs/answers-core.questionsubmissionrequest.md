@@ -4,7 +4,7 @@
 
 ## QuestionSubmissionRequest interface
 
-Options for a QuestionSubmission request
+Options for a QuestionSubmission request.
 
 <b>Signature:</b>
 
@@ -16,10 +16,10 @@ export interface QuestionSubmissionRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [email](./answers-core.questionsubmissionrequest.email.md) | string |  |
-|  [entityId](./answers-core.questionsubmissionrequest.entityid.md) | string |  |
-|  [name](./answers-core.questionsubmissionrequest.name.md) | string |  |
-|  [questionDescription?](./answers-core.questionsubmissionrequest.questiondescription.md) | string | <i>(Optional)</i> |
-|  [questionText](./answers-core.questionsubmissionrequest.questiontext.md) | string |  |
-|  [sessionTrackingEnabled?](./answers-core.questionsubmissionrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> |
+|  [email](./answers-core.questionsubmissionrequest.email.md) | string | The email of the user that is submitting the question. |
+|  [entityId](./answers-core.questionsubmissionrequest.entityid.md) | string | The ID of the entity to associate with the question. |
+|  [name](./answers-core.questionsubmissionrequest.name.md) | string | The name of the user. |
+|  [questionDescription?](./answers-core.questionsubmissionrequest.questiondescription.md) | string | <i>(Optional)</i> Additional information about the question. |
+|  [questionText](./answers-core.questionsubmissionrequest.questiontext.md) | string | The question. |
+|  [sessionTrackingEnabled?](./answers-core.questionsubmissionrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 
