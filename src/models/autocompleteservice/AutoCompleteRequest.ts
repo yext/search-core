@@ -68,7 +68,7 @@ export interface SearchParameterField {
   /** The entityType to perform the autocomplete on. */
   entityType: string,
   /**
-   * Indicates whether or not to return the {@link AutoCompleteResult.relatedItem} associated with the oomplete result.
+   * Indicates whether or not to return the {@link AutoCompleteResult.relatedItem} associated with the autocomplete result.
    */
   fetchEntities: boolean
 }
