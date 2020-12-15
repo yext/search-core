@@ -7,7 +7,6 @@ export function createAutoCompleteResult(results: any): AutoCompleteResult {
     key: results.key,
     matchedSubstrings: results.matchedSubstrings || [],
     value: results.value,
-    shortValue: results.shortValue,
     relatedItem: results.relatedItem
   });
 }

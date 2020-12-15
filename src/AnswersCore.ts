@@ -47,14 +47,38 @@ export class AnswersCore {
     return this.questionSubmissionService.submitQuestion(request);
   }
 
+  /**
+   * Performs an autocomplete request across all verticals.
+   *
+   * @param request - Universal autocomplete request options
+   */
   universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
     return this.autoCompleteService.universalAutoComplete(request);
   }
 
+  /**
+   * Performs an autocomplete request for a single vertical.
+   *
+   * @param request - Vertical autocomplete request options
+   */
   verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse> {
     return this.autoCompleteService.verticalAutoComplete(request);
   }
 
+  /**
+   * Performs an autocomplete request against specified fields within a single vertical.
+   *
+   * @remarks
+   * This differs from the vertical autocomplete because the vertical autocomplete operates on all entity fields whereas
+   * filter autocomplete operates only on specified fields.
+   *
+   * @example
+   * A site has a 'products' vertical and would like a way to allow the user to narrow down the results by the product name.
+   * The site can add a second search bar powered by filter autocomplete which will include only product names as search
+   * suggestions.
+   *
+   * @param request - Universal autocomplete request options
+   */
   filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse> {
     return this.autoCompleteService.filterAutoComplete(request);
   }

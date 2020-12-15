@@ -1,28 +1,66 @@
 /**
-* A domain model representation of an AutoComplete request. This model can be used for
-* AutoComplete on vertical, universal, or filter search.
-*/
-
+ * Options for a universal autocomplete request.
+ *
+ * @public
+ */
 export interface UniversalAutoCompleteRequest {
+  /** The input string for autocomplete. */
   input: string,
+  /** Enables session tracking. */
   sessionTrackingEnabled?: boolean,
 }
 
+/**
+ * Options for a vertial autocomplete request.
+ *
+ * @public
+ */
 export interface VerticalAutoCompleteRequest extends UniversalAutoCompleteRequest {
+  /** Limits autocomplete suggestions to a single vertical. */
   verticalKey: string,
 }
 
+/**
+ * Options for a filter autocomplete request.
+ *
+ * @public
+ */
 export interface FilterAutoCompleteRequest extends VerticalAutoCompleteRequest {
+  /** {@inheritDoc SearchParameters} */
   searchParameters: SearchParameters
 }
 
+/**
+ * Options for a filter autocomplete request.
+ *
+ * @privateRemarks
+ * We may be able to remove this model and instead put these options in FilterAutcompleteRequest.
+ *
+ * @public
+ */
+export interface SearchParameters {
+  /**
+   * Determines whether or not the results of the {@link FilterAutocompleteResponse} are separated by field.
+   */
+  sectioned: boolean,
+  /** An array of {@link SearchParameterField} */
+  fields: SearchParameterField[];
+}
+
+/**
+ * Indicates which entity field to perform the autocomplete request on.
+ *
+ * @public
+ */
 export interface SearchParameterField {
+  /** The field to perform the autocomplete on. */
   fieldApiName: string,
+  /** The entityType to perform the autocomplete on. */
   entityType: string,
+  /**
+   * Indicates whether or not to return the {@link AutoCompleteResult.relatedItem} associated with the autcomplete result.
+   */
   fetchEntities: boolean
 }
 
-export interface SearchParameters {
-  sectioned: boolean,
-  fields: SearchParameterField[];
-}
+
