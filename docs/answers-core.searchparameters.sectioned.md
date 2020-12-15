@@ -4,7 +4,7 @@
 
 ## SearchParameters.sectioned property
 
-Determines whether or not the results of the  are separated by field.
+Determines whether or not the results of the [FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md) are separated by field.
 
 <b>Signature:</b>
 

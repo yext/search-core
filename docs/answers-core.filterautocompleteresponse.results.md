@@ -4,7 +4,7 @@
 
 ## FilterAutoCompleteResponse.results property
 
-An array of s.
+An array of [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->s.
 
 <b>Signature:</b>
 

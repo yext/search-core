@@ -7,7 +7,7 @@ import { SearchIntent } from '../searchservice/response/SearchIntent';
  * @public
  */
 export interface AutoCompleteResponse {
-  /** An array of {@link AutcCompleteResult}s. */
+  /** An array of {@link AutoCompleteResult}s. */
   results: AutoCompleteResult[];
   /** {@inheritDoc SearchIntent} */
   inputIntents: SearchIntent[];
@@ -32,11 +32,11 @@ export interface FilterAutoCompleteResponse {
   sections?: {
     /** A display label for the field. */
     label: string,
-    /** An array of {@link AutcCompleteResult}s. */
+    /** An array of {@link AutoCompleteResult}s. */
     results: AutoCompleteResult[];
   }[],
   /**
-   * An array of {@link AutcCompleteResult}s.
+   * An array of {@link AutoCompleteResult}s.
    *
    * @remarks
    * This property will be defined if sectioned is false.

@@ -1,5 +1,7 @@
 /**
  * Options for a QuestionSubmission request
+ *
+ * @public
  */
 export interface QuestionSubmissionRequest {
   email: string

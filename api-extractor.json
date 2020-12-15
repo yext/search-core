@@ -328,7 +328,7 @@
      */
     "extractorMessageReporting": {
       "default": {
-        "logLevel": "none"
+        "logLevel": "warning"
         // "addToApiReportFile": false
       }
 
@@ -349,7 +349,7 @@
      */
     "tsdocMessageReporting": {
       "default": {
-        "logLevel": "none"
+        "logLevel": "warning"
         // "addToApiReportFile": false
       }
 

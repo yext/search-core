@@ -40,7 +40,7 @@ export interface FilterAutoCompleteRequest extends VerticalAutoCompleteRequest {
  */
 export interface SearchParameters {
   /**
-   * Determines whether or not the results of the {@link FilterAutocompleteResponse} are separated by field.
+   * Determines whether or not the results of the {@link FilterAutoCompleteResponse} are separated by field.
    */
   sectioned: boolean,
   /** An array of {@link SearchParameterField} */
