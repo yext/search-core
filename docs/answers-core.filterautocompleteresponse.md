@@ -4,6 +4,8 @@
 
 ## FilterAutoCompleteResponse interface
 
+The response of a filter autocomplete request.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,9 +16,9 @@ export interface FilterAutoCompleteResponse
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [inputIntents](./answers-core.filterautocompleteresponse.inputintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] |  |
-|  [queryId?](./answers-core.filterautocompleteresponse.queryid.md) | string | <i>(Optional)</i> |
-|  [results?](./answers-core.filterautocompleteresponse.results.md) | [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [sectioned](./answers-core.filterautocompleteresponse.sectioned.md) | boolean |  |
-|  [sections?](./answers-core.filterautocompleteresponse.sections.md) | { label: string; results: [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->\[\]; }\[\] | <i>(Optional)</i> |
+|  [inputIntents](./answers-core.filterautocompleteresponse.inputintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | Represents intents from the Answers API. |
+|  [queryId?](./answers-core.filterautocompleteresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
+|  [results?](./answers-core.filterautocompleteresponse.results.md) | [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->\[\] | <i>(Optional)</i> An array of s. |
+|  [sectioned](./answers-core.filterautocompleteresponse.sectioned.md) | boolean | Indicates that the results are separated by field in the sections property. |
+|  [sections?](./answers-core.filterautocompleteresponse.sections.md) | { label: string; results: [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->\[\]; }\[\] | <i>(Optional)</i> Represents autocomplete results separated by field. |
 

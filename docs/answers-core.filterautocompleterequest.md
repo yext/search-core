@@ -4,6 +4,8 @@
 
 ## FilterAutoCompleteRequest interface
 
+Options for a filter autocomplete request.
+
 <b>Signature:</b>
 
 ```typescript
@@ -15,5 +17,5 @@ export interface FilterAutoCompleteRequest extends VerticalAutoCompleteRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [searchParameters](./answers-core.filterautocompleterequest.searchparameters.md) | [SearchParameters](./answers-core.searchparameters.md) |  |
+|  [searchParameters](./answers-core.filterautocompleterequest.searchparameters.md) | [SearchParameters](./answers-core.searchparameters.md) | Options for a filter autocomplete request. |
 

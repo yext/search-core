@@ -4,6 +4,8 @@
 
 ## AnswersCore.filterAutoComplete() method
 
+Performs an autocomplete request against specified fields within a single vertical.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,9 +16,17 @@ filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoComple
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) |  |
+|  request | [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) | Universal autocomplete request options |
 
 <b>Returns:</b>
 
 Promise&lt;[FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md)<!-- -->&gt;
+
+## Remarks
+
+This differs from the vertical autocomplete because the vertical autocomplete operates on all entity fields whereas filter autocomplete operates only on specified fields.
+
+## Example
+
+A site has a 'products' vertical and would like a way to allow the user to narrow down the results by the product name. The site can add a second search bar powered by filter autocomplete which will include only product names as search suggestions.
 

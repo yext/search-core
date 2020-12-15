@@ -4,6 +4,8 @@
 
 ## FilterAutoCompleteRequest.searchParameters property
 
+Options for a filter autocomplete request.
+
 <b>Signature:</b>
 
 ```typescript

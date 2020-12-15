@@ -4,6 +4,8 @@
 
 ## SearchParameterField interface
 
+Indicates which entity field to perform the autocomplete request on.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,7 +16,7 @@ export interface SearchParameterField
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [entityType](./answers-core.searchparameterfield.entitytype.md) | string |  |
-|  [fetchEntities](./answers-core.searchparameterfield.fetchentities.md) | boolean |  |
-|  [fieldApiName](./answers-core.searchparameterfield.fieldapiname.md) | string |  |
+|  [entityType](./answers-core.searchparameterfield.entitytype.md) | string | The entityType to perform the autocomplete on. |
+|  [fetchEntities](./answers-core.searchparameterfield.fetchentities.md) | boolean | Indicates whether or not to return the [AutoCompleteResult.relatedItem](./answers-core.autocompleteresult.relateditem.md) associated with the autcomplete result. |
+|  [fieldApiName](./answers-core.searchparameterfield.fieldapiname.md) | string | The field to perform the autocomplete on. |
 

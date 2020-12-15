@@ -4,8 +4,15 @@
 
 ## FilterAutoCompleteResponse.results property
 
+An array of s.
+
 <b>Signature:</b>
 
 ```typescript
 results?: AutoCompleteResult[];
 ```
+
+## Remarks
+
+This property will be defined if sectioned is false.
+

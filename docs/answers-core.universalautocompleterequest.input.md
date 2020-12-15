@@ -4,6 +4,8 @@
 
 ## UniversalAutoCompleteRequest.input property
 
+The input string for autocomplete.
+
 <b>Signature:</b>
 
 ```typescript

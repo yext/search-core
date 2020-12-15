@@ -22,14 +22,11 @@ export class AnswersCore {
     //
     // @internal
     constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutoCompleteService);
-    // (undocumented)
     filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse>;
     // (undocumented)
     submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
-    // (undocumented)
     universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse>;
     universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
-    // (undocumented)
     verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse>;
     verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
 }
@@ -47,35 +44,25 @@ export interface AppliedQueryFilter {
     filter: SimpleFilter;
 }
 
-// @public (undocumented)
+// @public
 export interface AutoCompleteResponse {
-    // (undocumented)
     inputIntents: SearchIntent[];
-    // (undocumented)
     queryId?: string;
-    // (undocumented)
     results: AutoCompleteResult[];
 }
 
-// @public (undocumented)
+// @public
 export interface AutoCompleteResult {
-    // (undocumented)
     filter?: SimpleFilter;
-    // (undocumented)
     key?: string;
-    // (undocumented)
     matchedSubstrings?: {
         length: number;
         offset: number;
     }[];
-    // (undocumented)
     relatedItem?: {
         data: Record<string, unknown>;
         highlightedFields: Record<string, unknown>;
     };
-    // (undocumented)
-    shortValue?: string;
-    // (undocumented)
     value: string;
 }
 
@@ -144,23 +131,17 @@ export interface FacetOption {
     selected: boolean;
 }
 
-// @public (undocumented)
+// @public
 export interface FilterAutoCompleteRequest extends VerticalAutoCompleteRequest {
-    // (undocumented)
     searchParameters: SearchParameters;
 }
 
-// @public (undocumented)
+// @public
 export interface FilterAutoCompleteResponse {
-    // (undocumented)
     inputIntents: SearchIntent[];
-    // (undocumented)
     queryId?: string;
-    // (undocumented)
     results?: AutoCompleteResult[];
-    // (undocumented)
     sectioned: boolean;
-    // (undocumented)
     sections?: {
         label: string;
         results: AutoCompleteResult[];
@@ -258,21 +239,16 @@ export enum SearchIntent {
     NearMe = "NEAR_ME"
 }
 
-// @public (undocumented)
+// @public
 export interface SearchParameterField {
-    // (undocumented)
     entityType: string;
-    // (undocumented)
     fetchEntities: boolean;
-    // (undocumented)
     fieldApiName: string;
 }
 
-// @public (undocumented)
+// @public
 export interface SearchParameters {
-    // (undocumented)
     fields: SearchParameterField[];
-    // (undocumented)
     sectioned: boolean;
 }
 
@@ -316,9 +292,7 @@ export enum SpellCheckType {
 
 // @public
 export interface UniversalAutoCompleteRequest {
-    // (undocumented)
     input: string;
-    // (undocumented)
     sessionTrackingEnabled?: boolean;
 }
 
@@ -346,9 +320,8 @@ export interface UniversalSearchResponse {
     verticalResults: VerticalResults[];
 }
 
-// @public (undocumented)
+// @public
 export interface VerticalAutoCompleteRequest extends UniversalAutoCompleteRequest {
-    // (undocumented)
     verticalKey: string;
 }
 

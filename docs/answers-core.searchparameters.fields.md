@@ -4,6 +4,8 @@
 
 ## SearchParameters.fields property
 
+An array of [SearchParameterField](./answers-core.searchparameterfield.md)
+
 <b>Signature:</b>
 
 ```typescript

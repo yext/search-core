@@ -4,6 +4,8 @@
 
 ## AnswersCore.universalAutoComplete() method
 
+Performs an autocomplete request across all verticals.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,7 +16,7 @@ universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoComple
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | [UniversalAutoCompleteRequest](./answers-core.universalautocompleterequest.md) |  |
+|  request | [UniversalAutoCompleteRequest](./answers-core.universalautocompleterequest.md) | Universal autocomplete request options |
 
 <b>Returns:</b>
 

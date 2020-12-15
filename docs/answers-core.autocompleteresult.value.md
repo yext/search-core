@@ -4,6 +4,8 @@
 
 ## AutoCompleteResult.value property
 
+The value of an autocomplete suggestion.
+
 <b>Signature:</b>
 
 ```typescript

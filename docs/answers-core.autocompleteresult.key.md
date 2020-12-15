@@ -4,8 +4,15 @@
 
 ## AutoCompleteResult.key property
 
+The fieldId which corresponds to the AutoCompleteResult value.
+
 <b>Signature:</b>
 
 ```typescript
 key?: string;
 ```
+
+## Remarks
+
+This property is only defined for filter autcomplete requests.
+

@@ -4,6 +4,8 @@
 
 ## VerticalAutoCompleteRequest interface
 
+Options for a vertial autocomplete request.
+
 <b>Signature:</b>
 
 ```typescript
@@ -15,5 +17,5 @@ export interface VerticalAutoCompleteRequest extends UniversalAutoCompleteReques
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [verticalKey](./answers-core.verticalautocompleterequest.verticalkey.md) | string |  |
+|  [verticalKey](./answers-core.verticalautocompleterequest.verticalkey.md) | string | Limits autocomplete suggestions to a single vertical. |
 

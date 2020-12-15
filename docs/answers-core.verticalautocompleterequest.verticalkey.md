@@ -4,6 +4,8 @@
 
 ## VerticalAutoCompleteRequest.verticalKey property
 
+Limits autocomplete suggestions to a single vertical.
+
 <b>Signature:</b>
 
 ```typescript

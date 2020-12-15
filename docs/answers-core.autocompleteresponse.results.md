@@ -4,6 +4,8 @@
 
 ## AutoCompleteResponse.results property
 
+An array of s.
+
 <b>Signature:</b>
 
 ```typescript

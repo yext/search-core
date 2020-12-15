@@ -4,6 +4,8 @@
 
 ## AutoCompleteResult.matchedSubstrings property
 
+An array of substrings which overlap with the autocomplete input.
+
 <b>Signature:</b>
 
 ```typescript
@@ -12,3 +14,8 @@ matchedSubstrings?: {
         offset: number;
     }[];
 ```
+
+## Remarks
+
+Offset indicates the index of the match, and the length indicates the number of characters of the match.
+

@@ -4,6 +4,8 @@
 
 ## AutoCompleteResult.relatedItem property
 
+An entity that corresponds to the autocomplete result.
+
 <b>Signature:</b>
 
 ```typescript

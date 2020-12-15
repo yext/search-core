@@ -4,6 +4,8 @@
 
 ## SearchParameterField.fetchEntities property
 
+Indicates whether or not to return the [AutoCompleteResult.relatedItem](./answers-core.autocompleteresult.relateditem.md) associated with the autcomplete result.
+
 <b>Signature:</b>
 
 ```typescript
