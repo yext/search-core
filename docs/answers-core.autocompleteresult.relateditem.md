@@ -17,5 +17,5 @@ relatedItem?: {
 
 ## Remarks
 
-This property is only defined if the corresponing [SearchParameterField.fetchEntities](./answers-core.searchparameterfield.fetchentities.md) is true.
+This property is only defined if the corresponding [SearchParameterField.fetchEntities](./answers-core.searchparameterfield.fetchentities.md) field is true.
 
