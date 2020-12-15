@@ -16,7 +16,7 @@ filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoComple
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) | Universal autocomplete request options |
+|  request | [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) | Filter autocomplete request options |
 
 <b>Returns:</b>
 

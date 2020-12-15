@@ -82,7 +82,7 @@ export class AnswersCore {
    * The site can add a second search bar powered by filter autocomplete which will include only product names as search
    * suggestions.
    *
-   * @param request - Universal autocomplete request options
+   * @param request - Filter autocomplete request options
    */
   filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse> {
     return this.autoCompleteService.filterAutoComplete(request);

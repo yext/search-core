@@ -41,7 +41,7 @@ export interface FilterAutoCompleteRequest {
 }
 
 /**
- * Options for a filter autocomplete request.
+ * Options for the fields which the filter autocomplete request runs on.
  *
  * @privateRemarks
  * We may be able to remove this model and instead put these options in FilterAutoCompleteRequest.
@@ -72,5 +72,3 @@ export interface SearchParameterField {
    */
   fetchEntities: boolean
 }
-
-

@@ -4,7 +4,7 @@
 
 ## SearchParameters interface
 
-Options for a filter autocomplete request.
+Options for the fields which the filter autocomplete request runs on.
 
 <b>Signature:</b>
 

@@ -17,7 +17,7 @@ export interface FilterAutoCompleteRequest
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [input](./answers-core.filterautocompleterequest.input.md) | string | The input string for autocomplete. |
-|  [searchParameters](./answers-core.filterautocompleterequest.searchparameters.md) | [SearchParameters](./answers-core.searchparameters.md) | Options for a filter autocomplete request. |
+|  [searchParameters](./answers-core.filterautocompleterequest.searchparameters.md) | [SearchParameters](./answers-core.searchparameters.md) | Options for the fields which the filter autocomplete request runs on. |
 |  [sessionTrackingEnabled?](./answers-core.filterautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [verticalKey](./answers-core.filterautocompleterequest.verticalkey.md) | string | The key for the vertical to get autocomplete suggestions from. |
 
