@@ -84,7 +84,7 @@ export interface AutoCompleteResult {
    * An entity that corresponds to the autocomplete result.
    *
    * @remarks
-   * This property is only defined if the corresponing {@link SearchParameterField.fetchEntities} is true.
+   * This property is only defined if the corresponding {@link SearchParameterField.fetchEntities} field is true.
    */
   relatedItem?: {
     /** Entity data which is synonymous to {@link Result.rawData}. */
