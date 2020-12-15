@@ -4,6 +4,8 @@
 
 ## SearchParameterField.entityType property
 
+The entityType to perform the autocomplete on.
+
 <b>Signature:</b>
 
 ```typescript

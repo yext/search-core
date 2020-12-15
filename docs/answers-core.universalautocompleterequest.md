@@ -4,7 +4,7 @@
 
 ## UniversalAutoCompleteRequest interface
 
-A domain model representation of an AutoComplete request. This model can be used for AutoComplete on vertical, universal, or filter search.
+Options for a universal autocomplete request.
 
 <b>Signature:</b>
 
@@ -16,6 +16,6 @@ export interface UniversalAutoCompleteRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [input](./answers-core.universalautocompleterequest.input.md) | string |  |
-|  [sessionTrackingEnabled?](./answers-core.universalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> |
+|  [input](./answers-core.universalautocompleterequest.input.md) | string | The input string for autocomplete. |
+|  [sessionTrackingEnabled?](./answers-core.universalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 

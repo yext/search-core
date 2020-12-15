@@ -4,6 +4,8 @@
 
 ## AutoCompleteResult.relatedItem property
 
+An entity that corresponds to the autocomplete result.
+
 <b>Signature:</b>
 
 ```typescript
@@ -12,3 +14,8 @@ relatedItem?: {
         highlightedFields: Record<string, unknown>;
     };
 ```
+
+## Remarks
+
+This property is only defined if the corresponding [SearchParameterField.fetchEntities](./answers-core.searchparameterfield.fetchentities.md) field is true.
+

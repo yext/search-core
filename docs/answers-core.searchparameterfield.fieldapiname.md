@@ -4,6 +4,8 @@
 
 ## SearchParameterField.fieldApiName property
 
+The fieldApiName to perform the autocomplete on.
+
 <b>Signature:</b>
 
 ```typescript

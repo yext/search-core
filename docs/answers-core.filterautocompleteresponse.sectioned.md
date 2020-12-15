@@ -4,6 +4,8 @@
 
 ## FilterAutoCompleteResponse.sectioned property
 
+Indicates that the results are separated by field in the sections property.
+
 <b>Signature:</b>
 
 ```typescript

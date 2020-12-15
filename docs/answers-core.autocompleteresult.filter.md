@@ -4,8 +4,15 @@
 
 ## AutoCompleteResult.filter property
 
+A filter applied to the autocomplete response.
+
 <b>Signature:</b>
 
 ```typescript
 filter?: SimpleFilter;
 ```
+
+## Remarks
+
+This property is only defined for filter autocomplete requests.
+

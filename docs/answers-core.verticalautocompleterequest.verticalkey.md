@@ -4,6 +4,8 @@
 
 ## VerticalAutoCompleteRequest.verticalKey property
 
+The key for the vertical to get autocomplete suggestions from.
+
 <b>Signature:</b>
 
 ```typescript

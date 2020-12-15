@@ -4,6 +4,8 @@
 
 ## AutoCompleteResult interface
 
+An autocomplete suggestion.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,10 +16,9 @@ export interface AutoCompleteResult
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [filter?](./answers-core.autocompleteresult.filter.md) | [SimpleFilter](./answers-core.simplefilter.md) | <i>(Optional)</i> |
-|  [key?](./answers-core.autocompleteresult.key.md) | string | <i>(Optional)</i> |
-|  [matchedSubstrings?](./answers-core.autocompleteresult.matchedsubstrings.md) | { length: number; offset: number; }\[\] | <i>(Optional)</i> |
-|  [relatedItem?](./answers-core.autocompleteresult.relateditem.md) | { data: Record&lt;string, unknown&gt;; highlightedFields: Record&lt;string, unknown&gt;; } | <i>(Optional)</i> |
-|  [shortValue?](./answers-core.autocompleteresult.shortvalue.md) | string | <i>(Optional)</i> |
-|  [value](./answers-core.autocompleteresult.value.md) | string |  |
+|  [filter?](./answers-core.autocompleteresult.filter.md) | [SimpleFilter](./answers-core.simplefilter.md) | <i>(Optional)</i> A filter applied to the autocomplete response. |
+|  [key?](./answers-core.autocompleteresult.key.md) | string | <i>(Optional)</i> The fieldId which corresponds to the AutoCompleteResult value. |
+|  [matchedSubstrings?](./answers-core.autocompleteresult.matchedsubstrings.md) | { length: number; offset: number; }\[\] | <i>(Optional)</i> An array of substrings which overlap with the autocomplete input. |
+|  [relatedItem?](./answers-core.autocompleteresult.relateditem.md) | { data: Record&lt;string, unknown&gt;; highlightedFields: Record&lt;string, unknown&gt;; } | <i>(Optional)</i> An entity that corresponds to the autocomplete result. |
+|  [value](./answers-core.autocompleteresult.value.md) | string | The value of an autocomplete suggestion. |
 

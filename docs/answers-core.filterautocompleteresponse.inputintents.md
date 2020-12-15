@@ -4,6 +4,8 @@
 
 ## FilterAutoCompleteResponse.inputIntents property
 
+Represents intents from the Answers API.
+
 <b>Signature:</b>
 
 ```typescript

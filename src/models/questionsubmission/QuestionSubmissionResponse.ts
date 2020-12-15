@@ -1,7 +1,7 @@
 import { AnswersError } from '../core/AnswersError';
 
 /**
- * A representation of a response from a question submission.
+ * A representation of a question submission response.
  *
  * @public
  */

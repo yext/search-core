@@ -4,11 +4,18 @@
 
 ## FilterAutoCompleteResponse.sections property
 
+Represents autocomplete results separated by field.
+
 <b>Signature:</b>
 
 ```typescript
-sections?: {
+sections: {
         label: string;
         results: AutoCompleteResult[];
     }[];
 ```
+
+## Remarks
+
+This array will only be populated if sectioned is true.
+

@@ -4,6 +4,8 @@
 
 ## AnswersCore.verticalAutoComplete() method
 
+Performs an autocomplete request for a single vertical.
+
 <b>Signature:</b>
 
 ```typescript
@@ -14,7 +16,7 @@ verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoComplete
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  request | [VerticalAutoCompleteRequest](./answers-core.verticalautocompleterequest.md) |  |
+|  request | [VerticalAutoCompleteRequest](./answers-core.verticalautocompleterequest.md) | Vertical autocomplete request options |
 
 <b>Returns:</b>
 

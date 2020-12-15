@@ -4,6 +4,8 @@
 
 ## FilterAutoCompleteResponse.queryId property
 
+The ID of the search query.
+
 <b>Signature:</b>
 
 ```typescript

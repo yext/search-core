@@ -4,16 +4,19 @@
 
 ## VerticalAutoCompleteRequest interface
 
+Options for a vertial autocomplete request.
+
 <b>Signature:</b>
 
 ```typescript
-export interface VerticalAutoCompleteRequest extends UniversalAutoCompleteRequest 
+export interface VerticalAutoCompleteRequest 
 ```
-<b>Extends:</b> [UniversalAutoCompleteRequest](./answers-core.universalautocompleterequest.md)
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [verticalKey](./answers-core.verticalautocompleterequest.verticalkey.md) | string |  |
+|  [input](./answers-core.verticalautocompleterequest.input.md) | string | The input string for autocomplete. |
+|  [sessionTrackingEnabled?](./answers-core.verticalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
+|  [verticalKey](./answers-core.verticalautocompleterequest.verticalkey.md) | string | The key for the vertical to get autocomplete suggestions from. |
 

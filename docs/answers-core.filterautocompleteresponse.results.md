@@ -4,8 +4,15 @@
 
 ## FilterAutoCompleteResponse.results property
 
+An array of [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->s.
+
 <b>Signature:</b>
 
 ```typescript
-results?: AutoCompleteResult[];
+results: AutoCompleteResult[];
 ```
+
+## Remarks
+
+This array will only be populated if sectioned is false.
+

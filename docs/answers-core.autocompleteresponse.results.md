@@ -4,6 +4,8 @@
 
 ## AutoCompleteResponse.results property
 
+An array of [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->s.
+
 <b>Signature:</b>
 
 ```typescript
