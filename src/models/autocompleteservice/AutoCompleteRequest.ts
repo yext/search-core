@@ -15,7 +15,11 @@ export interface UniversalAutoCompleteRequest {
  *
  * @public
  */
-export interface VerticalAutoCompleteRequest extends UniversalAutoCompleteRequest {
+export interface VerticalAutoCompleteRequest {
+  /** {@inheritDoc UniversalAutoCompleteRequest.input} */
+  input: string,
+  /** {@inheritDoc UniversalAutoCompleteRequest.sessionTrackingEnabled} */
+  sessionTrackingEnabled?: boolean,
   /** Limits autocomplete suggestions to a single vertical. */
   verticalKey: string,
 }
@@ -25,7 +29,13 @@ export interface VerticalAutoCompleteRequest extends UniversalAutoCompleteReques
  *
  * @public
  */
-export interface FilterAutoCompleteRequest extends VerticalAutoCompleteRequest {
+export interface FilterAutoCompleteRequest {
+  /** {@inheritDoc UniversalAutoCompleteRequest.input} */
+  input: string,
+  /** {@inheritDoc UniversalAutoCompleteRequest.sessionTrackingEnabled} */
+  sessionTrackingEnabled?: boolean,
+  /** {@inheritDoc VerticalAutoCompleteRequest.verticalKey} */
+  verticalKey: string,
   /** {@inheritDoc SearchParameters} */
   searchParameters: SearchParameters
 }

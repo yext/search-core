@@ -131,8 +131,11 @@ export interface FacetOption {
 }
 
 // @public
-export interface FilterAutoCompleteRequest extends VerticalAutoCompleteRequest {
+export interface FilterAutoCompleteRequest {
+    input: string;
     searchParameters: SearchParameters;
+    sessionTrackingEnabled?: boolean;
+    verticalKey: string;
 }
 
 // @public
@@ -312,7 +315,9 @@ export interface UniversalSearchResponse {
 }
 
 // @public
-export interface VerticalAutoCompleteRequest extends UniversalAutoCompleteRequest {
+export interface VerticalAutoCompleteRequest {
+    input: string;
+    sessionTrackingEnabled?: boolean;
     verticalKey: string;
 }
 

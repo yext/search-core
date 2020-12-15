@@ -9,13 +9,14 @@ Options for a vertial autocomplete request.
 <b>Signature:</b>
 
 ```typescript
-export interface VerticalAutoCompleteRequest extends UniversalAutoCompleteRequest 
+export interface VerticalAutoCompleteRequest 
 ```
-<b>Extends:</b> [UniversalAutoCompleteRequest](./answers-core.universalautocompleterequest.md)
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [input](./answers-core.verticalautocompleterequest.input.md) | string | The input string for autocomplete. |
+|  [sessionTrackingEnabled?](./answers-core.verticalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [verticalKey](./answers-core.verticalautocompleterequest.verticalkey.md) | string | Limits autocomplete suggestions to a single vertical. |
 
