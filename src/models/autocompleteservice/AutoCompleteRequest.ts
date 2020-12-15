@@ -20,7 +20,7 @@ export interface VerticalAutoCompleteRequest {
   input: string,
   /** {@inheritDoc UniversalAutoCompleteRequest.sessionTrackingEnabled} */
   sessionTrackingEnabled?: boolean,
-  /** Limits autocomplete suggestions to a single vertical. */
+  /** The key for the vertical to get autocomplete suggestions from. */
   verticalKey: string,
 }
 
@@ -44,7 +44,7 @@ export interface FilterAutoCompleteRequest {
  * Options for a filter autocomplete request.
  *
  * @privateRemarks
- * We may be able to remove this model and instead put these options in FilterAutcompleteRequest.
+ * We may be able to remove this model and instead put these options in FilterAutoCompleteRequest.
  *
  * @public
  */
@@ -63,12 +63,12 @@ export interface SearchParameters {
  * @public
  */
 export interface SearchParameterField {
-  /** The field to perform the autocomplete on. */
+  /** The fieldApiName to perform the autocomplete on. */
   fieldApiName: string,
   /** The entityType to perform the autocomplete on. */
   entityType: string,
   /**
-   * Indicates whether or not to return the {@link AutoCompleteResult.relatedItem} associated with the autcomplete result.
+   * Indicates whether or not to return the {@link AutoCompleteResult.relatedItem} associated with the oomplete result.
    */
   fetchEntities: boolean
 }

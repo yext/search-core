@@ -14,3 +14,8 @@ relatedItem?: {
         highlightedFields: Record<string, unknown>;
     };
 ```
+
+## Remarks
+
+This property is only defined if the corresponing [SearchParameterField.fetchEntities](./answers-core.searchparameterfield.fetchentities.md) is true.
+

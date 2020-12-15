@@ -4,7 +4,7 @@
 
 ## SearchParameterField.fieldApiName property
 
-The field to perform the autocomplete on.
+The fieldApiName to perform the autocomplete on.
 
 <b>Signature:</b>
 

@@ -18,5 +18,5 @@ export interface VerticalAutoCompleteRequest
 |  --- | --- | --- |
 |  [input](./answers-core.verticalautocompleterequest.input.md) | string | The input string for autocomplete. |
 |  [sessionTrackingEnabled?](./answers-core.verticalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
-|  [verticalKey](./answers-core.verticalautocompleterequest.verticalkey.md) | string | Limits autocomplete suggestions to a single vertical. |
+|  [verticalKey](./answers-core.verticalautocompleterequest.verticalkey.md) | string | The key for the vertical to get autocomplete suggestions from. |
 

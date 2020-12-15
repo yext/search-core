@@ -14,5 +14,5 @@ key?: string;
 
 ## Remarks
 
-This property is only defined for filter autcomplete requests.
+This property is only defined for filter autocomplete requests.
 

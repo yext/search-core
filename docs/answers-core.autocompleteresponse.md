@@ -4,7 +4,7 @@
 
 ## AutoCompleteResponse interface
 
-The response of a universal or vertical autcomplete request.
+The response of a universal or vertical autocomplete request.
 
 <b>Signature:</b>
 

@@ -9,7 +9,7 @@ Represents autocomplete results separated by field.
 <b>Signature:</b>
 
 ```typescript
-sections?: {
+sections: {
         label: string;
         results: AutoCompleteResult[];
     }[];
@@ -17,5 +17,5 @@ sections?: {
 
 ## Remarks
 
-This property will only be defined if sectioned is true.
+This array will only be populated if sectioned is true.
 

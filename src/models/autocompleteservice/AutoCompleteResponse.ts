@@ -2,7 +2,7 @@ import { SimpleFilter } from '../searchservice/request/SimpleFilter';
 import { SearchIntent } from '../searchservice/response/SearchIntent';
 
 /**
- * The response of a universal or vertical autcomplete request.
+ * The response of a universal or vertical autocomplete request.
  *
  * @public
  */
@@ -27,9 +27,9 @@ export interface FilterAutoCompleteResponse {
    * Represents autocomplete results separated by field.
    *
    * @remarks
-   * This property will only be defined if sectioned is true.
+   * This array will only be populated if sectioned is true.
    */
-  sections?: {
+  sections: {
     /** A display label for the field. */
     label: string,
     /** An array of {@link AutoCompleteResult}s. */
@@ -39,9 +39,9 @@ export interface FilterAutoCompleteResponse {
    * An array of {@link AutoCompleteResult}s.
    *
    * @remarks
-   * This property will be defined if sectioned is false.
+   * This array will only be populated if sectioned is false.
    */
-  results?: AutoCompleteResult[],
+  results: AutoCompleteResult[],
   /** {@inheritDoc SearchIntent} */
   inputIntents: SearchIntent[];
   /** {@inheritDoc AutoCompleteResponse.queryId} */
@@ -60,14 +60,14 @@ export interface AutoCompleteResult {
    * A filter applied to the autocomplete response.
    *
    * @remarks
-   * This property is only defined for filter autcomplete requests.
+   * This property is only defined for filter autocomplete requests.
    */
   filter?: SimpleFilter;
   /**
    * The fieldId which corresponds to the AutoCompleteResult value.
    *
    * @remarks
-   * This property is only defined for filter autcomplete requests.
+   * This property is only defined for filter autocomplete requests.
    */
   key?: string;
   /**
@@ -80,7 +80,12 @@ export interface AutoCompleteResult {
     length: number,
     offset: number
   }[];
-  /** An entity that corresponds to the autocomplete result. */
+  /**
+   * An entity that corresponds to the autocomplete result.
+   *
+   * @remarks
+   * This property is only defined if the corresponing {@link SearchParameterField.fetchEntities} is true.
+   */
   relatedItem?: {
     /** Entity data which is synonymous to {@link Result.rawData}. */
     data: Record<string, unknown>,

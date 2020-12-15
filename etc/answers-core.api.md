@@ -142,9 +142,9 @@ export interface FilterAutoCompleteRequest {
 export interface FilterAutoCompleteResponse {
     inputIntents: SearchIntent[];
     queryId?: string;
-    results?: AutoCompleteResult[];
+    results: AutoCompleteResult[];
     sectioned: boolean;
-    sections?: {
+    sections: {
         label: string;
         results: AutoCompleteResult[];
     }[];

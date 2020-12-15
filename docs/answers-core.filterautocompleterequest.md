@@ -19,5 +19,5 @@ export interface FilterAutoCompleteRequest
 |  [input](./answers-core.filterautocompleterequest.input.md) | string | The input string for autocomplete. |
 |  [searchParameters](./answers-core.filterautocompleterequest.searchparameters.md) | [SearchParameters](./answers-core.searchparameters.md) | Options for a filter autocomplete request. |
 |  [sessionTrackingEnabled?](./answers-core.filterautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
-|  [verticalKey](./answers-core.filterautocompleterequest.verticalkey.md) | string | Limits autocomplete suggestions to a single vertical. |
+|  [verticalKey](./answers-core.filterautocompleterequest.verticalkey.md) | string | The key for the vertical to get autocomplete suggestions from. |
 

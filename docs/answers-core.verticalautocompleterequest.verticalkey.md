@@ -4,7 +4,7 @@
 
 ## VerticalAutoCompleteRequest.verticalKey property
 
-Limits autocomplete suggestions to a single vertical.
+The key for the vertical to get autocomplete suggestions from.
 
 <b>Signature:</b>
 
