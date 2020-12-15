@@ -2,7 +2,7 @@ import { AutoCompleteResponse, FilterAutoCompleteResponse } from '../models/auto
 import { UniversalAutoCompleteRequest, FilterAutoCompleteRequest, VerticalAutoCompleteRequest } from '../models/autocompleteservice/AutoCompleteRequest';
 
 /**
- * A service for autocomplete requests
+ * A service for autocomplete requests.
  */
 export interface AutoCompleteService {
   universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse>;
