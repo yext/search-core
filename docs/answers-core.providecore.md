@@ -9,7 +9,7 @@ The entrypoint to the answers-core library.
 <b>Signature:</b>
 
 ```typescript
-export declare function provideCore(config: AnswersConfig): Promise<AnswersCore>;
+export declare function provideCore(config: AnswersConfig): AnswersCore;
 ```
 
 ## Parameters
@@ -20,9 +20,9 @@ export declare function provideCore(config: AnswersConfig): Promise<AnswersCore>
 
 <b>Returns:</b>
 
-Promise&lt;[AnswersCore](./answers-core.answerscore.md)<!-- -->&gt;
+[AnswersCore](./answers-core.answerscore.md)
 
 ## Remarks
 
-Returns a Promise containing an [AnswersCore](./answers-core.answerscore.md) instance. If the backend determines that the core should be disabled, this function returns a rejected promise.
+Returns an [AnswersCore](./answers-core.answerscore.md) instance.
 

@@ -183,7 +183,7 @@ export enum LocationBiasMethod {
 }
 
 // @public
-export function provideCore(config: AnswersConfig): Promise<AnswersCore>;
+export function provideCore(config: AnswersConfig): AnswersCore;
 
 // @public
 export enum QuerySource {
