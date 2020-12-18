@@ -5,10 +5,11 @@ import { HttpService } from '../../src/services/HttpService';
 import { AutoCompleteServiceImpl } from '../../src/infra/AutoCompleteServiceImpl';
 import mockAutoCompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutoCompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
-import mockAutoCompleteResponseWithEntities from '../fixtures/autocompleteresponsewithentities.json';
+import mockAutoCompleteResponseWithEntities from '../fixtures/autocompleteresponsewithfetchedentities.json';
 import { createAutoCompleteResponse, createFilterAutoCompleteResponse } from '../../src/transformers/autocompleteservice/createAutoCompleteResponse';
 import { defaultEndpoints } from '../../src/constants';
 import { SearchIntent } from '../../src/models/searchservice/response/SearchIntent';
+import { createAutoCompleteResult } from '../../src/transformers/autocompleteservice/createAutoCompleteResult';
 
 describe('AutoCompleteService', () => {
   const config: AnswersConfig = {
@@ -117,7 +118,7 @@ describe('AutoCompleteService', () => {
   });
 
   describe('AutoCompleteResponse', () => {
-    it('response without sections is parsed correctly', () => {
+    it('autocomplete response without sections is parsed correctly', () => {
       const expectedResponse = {
         inputIntents: [SearchIntent.NearMe],
         results: [
@@ -136,7 +137,7 @@ describe('AutoCompleteService', () => {
       expect(actualResponse).toEqual(expectedResponse);
     });
 
-    it('response with sections is parsed correctly', () => {
+    it('filter autocomplete response with sections is parsed correctly', () => {
       const expectedResponse = {
         sectioned: true,
         sections: [
@@ -169,7 +170,7 @@ describe('AutoCompleteService', () => {
       expect(actualResponse).toEqual(expectedResponse);
     });
 
-    it ('response with sections and entities fetched is parsed correctly', () => {
+    it ('filter autocomplete response with sections and entities fetched is parsed correctly', () => {
       const expectedResponse = {
         sectioned: true,
         sections: [
@@ -231,6 +232,147 @@ describe('AutoCompleteService', () => {
       };
       const actualResponse = createFilterAutoCompleteResponse(mockAutoCompleteResponseWithEntities);
       expect(actualResponse).toEqual(expectedResponse);
+    });
+
+    it('autocomplete response with no response property throws error', () => {
+      const dataWithNoResponse = {
+        noResponse: {
+          results: []
+        }
+      };
+      expect(() => {
+        createAutoCompleteResponse(dataWithNoResponse);
+      }).toThrow('The autocomplete data does not contain a response property');
+    });
+
+    it('filter autocomplete response with no response property throws error', () => {
+      const dataWithNoResponse = {
+        noResponse: {
+          results: []
+        }
+      };
+      expect(() => {
+        createFilterAutoCompleteResponse(dataWithNoResponse);
+      }).toThrow('The autocomplete data does not contain a response property');
+    });
+
+    it('autocomplete response with empty response property throws error', () => {
+      const dataWithEmptyResponse = {
+        response: {}
+      };
+      expect(() => {
+        createAutoCompleteResponse(dataWithEmptyResponse);
+      }).toThrow('The autocomplete response is empty');
+    });
+
+    it('filter autocomplete response with empty response property throws error', () => {
+      const dataWithEmptyResponse = {
+        response: {}
+      };
+      expect(() => {
+        createFilterAutoCompleteResponse(dataWithEmptyResponse);
+      }).toThrow('The autocomplete response is empty');
+    });
+  });
+
+  describe('AutoCompleteResult', () => {
+    it('result with no filter is parsed correctly', () => {
+      const resultWithNoFilter = {
+        key: 'key',
+        value: 'salesforce',
+        matchedSubstrings: [
+          {
+            offset: 0,
+            length: 10
+          }
+        ],
+        relatedItem: {
+          data: {
+            some: 'data'
+          },
+          highlightedFields: {
+            some: 'field'
+          }
+        }
+      };
+      const expectedResult = resultWithNoFilter;
+      const actualResult = createAutoCompleteResult(resultWithNoFilter);
+      expect(actualResult).toEqual(expectedResult);
+    });
+
+    it('result with no matched substrings is parsed correctly', () => {
+      const resultWithNoMatchedSubstrings = {
+        key: 'name',
+        value: 'Virginia Beach',
+        filter: {
+          name: {
+            $eq: 'Virginia Beach'
+          }
+        },
+        relatedItem: {
+          data: {
+            mock: 'data'
+          },
+          highlightedFields: {
+            mock: 'field'
+          }
+        }
+      };
+      const expectedResult = {
+        value: 'Virginia Beach',
+        matchedSubstrings: [],
+        filter: {
+          comparator: '$eq',
+          comparedValue: 'Virginia Beach',
+          fieldId: 'name'
+        },
+        key: 'name',
+        relatedItem: {
+          data: {
+            mock: 'data'
+          },
+          highlightedFields: {
+            mock: 'field'
+          }
+        }
+      };
+      const actualResult = createAutoCompleteResult(resultWithNoMatchedSubstrings);
+      expect(actualResult).toEqual(expectedResult);
+    });
+
+    it('result with no relatedItem property is parsed correctly', () => {
+      const resultWithNoRelatedItem = {
+        key: 'name',
+        value: 'Virginia Beach',
+        filter: {
+          name: {
+            $eq: 'Virginia Beach'
+          }
+        },
+        matchedSubstrings: [
+          {
+            offset: 0,
+            length: 8
+          }
+        ],
+      };
+      const expectedResult = {
+        value: 'Virginia Beach',
+        filter: {
+          comparator: '$eq',
+          comparedValue: 'Virginia Beach',
+          fieldId: 'name'
+        },
+        key: 'name',
+        matchedSubstrings: [
+          {
+            offset: 0,
+            length: 8
+          }
+        ]
+      };
+      const actualResult = createAutoCompleteResult(resultWithNoRelatedItem);
+      expect(actualResult).toEqual(expectedResult);
     });
   });
 });

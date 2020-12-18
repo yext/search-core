@@ -1,12 +1,12 @@
 import { AutoCompleteResult } from '../../models/autocompleteservice/AutoCompleteResponse';
 import { createSimpleFilter } from '../core/createSimpleFilter';
 
-export function createAutoCompleteResult(results: any): AutoCompleteResult {
+export function createAutoCompleteResult(result: any): AutoCompleteResult {
   return Object.freeze({
-    filter: results.filter && createSimpleFilter(results.filter),
-    key: results.key,
-    matchedSubstrings: results.matchedSubstrings || [],
-    value: results.value,
-    relatedItem: results.relatedItem
+    filter: result.filter && createSimpleFilter(result.filter),
+    key: result.key,
+    matchedSubstrings: result.matchedSubstrings || [],
+    value: result.value,
+    relatedItem: result.relatedItem
   });
 }
