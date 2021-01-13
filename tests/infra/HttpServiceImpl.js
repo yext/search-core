@@ -1,9 +1,16 @@
+import fetch from 'cross-fetch';
+
 import { HttpServiceImpl } from '../../src/infra/HttpServiceImpl';
 
+jest.mock('cross-fetch');
+
 describe('HttpServiceImpl', () => {
-    const httpServiceImpl = new HttpServiceImpl();
+  const httpServiceImpl = new HttpServiceImpl();
+  fetch.mockResolvedValue({
+    json: () => []
+  });
+
   it('can make get requests', async () => {
-    fetch.mockResponseOnce('{}');
     const queryParams = {
       aQuery: 'param'
     };
@@ -19,7 +26,6 @@ describe('HttpServiceImpl', () => {
   });
 
   it('can make post requests', async () => {
-    fetch.mockResponseOnce('{}');
     const jsonBody = {
       data: '123'
     };
