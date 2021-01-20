@@ -2,7 +2,8 @@
   "name": "@yext/answers-core",
   "version": "1.0.0",
   "description": "Javascript Networking Library for the Yext Answers API",
-  "main": "./dist/index.js",
+  "main": "./dist/commonjs/index.js",
+  "module": "./dist/esm/index.js",
   "types": "./dist/answers-core.d.ts",
   "engines": {
     "node": ">=0.12"
@@ -10,9 +11,11 @@
   "scripts": {
     "test": "npm run lint && jest",
     "lint": "eslint .",
-    "build": "tsc && npm run api-extractor && npm run generate-docs",
-    "build-ci": "tsc && npm run api-extractor-ci && npm run generate-docs",
-    "dev": "tsc --watch",
+    "tsc-cjs": "tsc -p tsconfig.cjs.json",
+    "tsc-esm": "tsc -p tsconfig.esm.json",
+    "build": "npm run tsc-cjs && npm run tsc-esm && npm run api-extractor && npm run generate-docs",
+    "build-ci": "npm run tsc-esm && npm run api-extractor-ci && npm run generate-docs",
+    "dev": "npm run tsc-esm -- --watch",
     "prepublishOnly": "npm run build",
     "api-extractor": "api-extractor run --local --verbose",
     "api-extractor-ci": "api-extractor run --verbose",
