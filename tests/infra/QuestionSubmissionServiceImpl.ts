@@ -21,14 +21,7 @@ const qaRequest = {
 const mockHttp = new HttpServiceMock();
 mockHttp.post.mockResolvedValue({
   meta: {
-    uuid: 'aUUID',
-    errors: [
-      {
-        code: 2246,
-        type: 'FATAL_ERROR',
-        message: 'Entity not found: 1234569'
-      }
-    ]
+    uuid: 'aUUID'
   },
   response: {}
 });
@@ -108,10 +101,6 @@ describe('Question submission', () => {
   it('parses the response correctly', () => {
     expect(response).toMatchObject({
       uuid: 'aUUID',
-      errors: [{
-        code: 2246,
-        message: 'Entity not found: 1234569'
-      }]
     });
   });
 });

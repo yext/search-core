@@ -13,6 +13,8 @@ import { VerticalSearchRequest } from '../models/searchservice/request/VerticalS
 import { VerticalSearchResponse } from '../models/searchservice/response/VerticalSearchResponse';
 import { serializeStaticFilters } from '../serializers/serializeStaticFilters';
 import { serializeFacetFilters } from '../serializers/serializeFacetFilters';
+import { ApiResponseValidator } from '../validation/ApiResponseValidator';
+import { ApiResponse } from '../models/answersapi/ApiResponse';
 
 /**
  * Represents the query params which may be sent in a universal search.
@@ -102,8 +104,8 @@ export class SearchServiceImpl implements SearchService {
       source: request.querySource || QuerySource.Standard
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const response = await this.httpService.get<any>(this.universalSearchEndpoint, queryParams);
+    const response = await this.httpService.get<ApiResponse>(this.universalSearchEndpoint, queryParams);
+    new ApiResponseValidator(response).validate();
 
     return createUniversalSearchResponse(response);
   }
@@ -134,8 +136,8 @@ export class SearchServiceImpl implements SearchService {
       source: request.querySource || QuerySource.Standard
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const response = await this.httpService.get<any>(this.verticalSearchEndpoint, queryParams);
+    const response = await this.httpService.get<ApiResponse>(this.verticalSearchEndpoint, queryParams);
+    new ApiResponseValidator(response).validate();
 
     return createVerticalSearchResponse(response);
   }

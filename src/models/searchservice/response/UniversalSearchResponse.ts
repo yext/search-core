@@ -3,7 +3,6 @@ import { SearchIntent } from './SearchIntent';
 import { DirectAnswer } from './DirectAnswer';
 import { SpellCheck } from './SpellCheck';
 import { LocationBias } from './LocationBias';
-import { AnswersError } from '../../core/AnswersError';
 
 /**
  * A representation of a response from a universal search.
@@ -23,6 +22,4 @@ export interface UniversalSearchResponse {
   spellCheck?: SpellCheck,
   /** {@inheritDoc LocationBias} */
   locationBias?: LocationBias,
-  /** An array of {@link AnswersError}s from the API. */
-  errors?: AnswersError[]
 }

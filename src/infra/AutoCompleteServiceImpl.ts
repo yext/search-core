@@ -8,6 +8,8 @@ import { AnswersConfig } from '../models/core/AnswersConfig';
 import { HttpService }from '../services/HttpService';
 import { AutoCompleteQueryParams } from '../models/autocompleteservice/autocompleteparams';
 import { AutoCompleteService } from '../services/AutoCompleteService';
+import { ApiResponseValidator } from '../validation/ApiResponseValidator';
+import { ApiResponse } from '../models/answersapi/ApiResponse';
 
 /**
  * Internal interface representing the query params which are sent for a vertical
@@ -64,12 +66,12 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rawUniversalAutocompleteResponse = await this.httpService.get<any>(
+    const response = await this.httpService.get<ApiResponse>(
       this.universalEndpoint,
       queryParams);
+    new ApiResponseValidator(response).validate();
 
-    return createAutoCompleteResponse(rawUniversalAutocompleteResponse);
+    return createAutoCompleteResponse(response);
   }
 
   /**
@@ -90,12 +92,12 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rawVerticalAutocompleteResponse = await this.httpService.get<any>(
+    const response = await this.httpService.get<ApiResponse>(
       this.verticalEndpoint,
       queryParams);
+    new ApiResponseValidator(response).validate();
 
-    return createAutoCompleteResponse(rawVerticalAutocompleteResponse);
+    return createAutoCompleteResponse(response);
   }
 
   /**
@@ -118,12 +120,12 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rawFilterAutocompleteResponse = await this.httpService.get<any>(
+    const response = await this.httpService.get<ApiResponse>(
       this.filterEndpoint,
       queryParams);
+    new ApiResponseValidator(response).validate();
 
-    return createFilterAutoCompleteResponse(rawFilterAutocompleteResponse);
+    return createFilterAutoCompleteResponse(response);
   }
 
   private getFilterSearchParams(searchParams: SearchParameters) {
