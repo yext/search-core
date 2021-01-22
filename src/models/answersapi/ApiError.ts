@@ -11,6 +11,7 @@ export class ApiError extends Error {
   /** The Answers API error type */
   public type: string;
 
+  /** @internal */
   constructor(message: string, code: number, type: string) {
     super(message);
 
