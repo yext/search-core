@@ -31,9 +31,12 @@ export class AnswersCore {
 }
 
 // @public
-export interface AnswersError {
+export class ApiError extends Error {
+    // @internal
+    constructor(message: string, code: number, type: string);
     code: number;
     message: string;
+    type: string;
 }
 
 // @public
@@ -209,7 +212,6 @@ export interface QuestionSubmissionRequest {
 
 // @public
 export interface QuestionSubmissionResponse {
-    errors: AnswersError[];
     uuid: string;
 }
 
@@ -306,7 +308,6 @@ export interface UniversalSearchRequest {
 // @public
 export interface UniversalSearchResponse {
     directAnswer?: DirectAnswer;
-    errors?: AnswersError[];
     locationBias?: LocationBias;
     queryId?: string;
     searchIntents?: SearchIntent[];
