@@ -17,7 +17,7 @@ export interface VerticalSearchRequest {
   /** The key associated with the vertical. */
   verticalKey: string,
   /** {@inheritDoc Context} */
-  context: Context,
+  context?: Context,
   /** The maximum number of results to include with a max of 50. */
   limit?: number,
   /** The result offset which allows for fetching more results with the same query. */

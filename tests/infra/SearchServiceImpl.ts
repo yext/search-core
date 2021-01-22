@@ -6,10 +6,9 @@ import { UniversalSearchRequest } from '../../src/models/searchservice/request/U
 import { HttpService } from '../../src/services/HttpService';
 import { QueryTrigger } from '../../src/models/searchservice/request/QueryTrigger';
 import { QuerySource } from '../../src/models/searchservice/request/QuerySource';
+import { VerticalSearchRequest } from '../../src/models/searchservice/request/VerticalSearchRequest';
 
 describe('SearchService', () => {
-  const mockHttpService = new HttpServiceMock();
-
   const configWithRequiredParams: AnswersConfig = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
@@ -17,6 +16,7 @@ describe('SearchService', () => {
   };
 
   describe('Universal Search', () => {
+    const mockHttpService = new HttpServiceMock();
     mockHttpService.get.mockResolvedValue(mockUniversalResponse);
     const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/query';
 
@@ -99,6 +99,38 @@ describe('SearchService', () => {
       );
       await searchService.universalSearch({query: 'test'});
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expect.anything());
+    });
+  });
+
+  describe('Vertical Search', ()=> {
+    const mockHttpService = new HttpServiceMock();
+    mockHttpService.get.mockResolvedValue({
+      response: {},
+      meta: {},
+    });
+    const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query';
+
+    it('Query params are correct when only required params are supplied', async () => {
+      const requestWithRequiredParams: VerticalSearchRequest = {
+        query: 'testQuery',
+        verticalKey: 'verticalKey'
+      };
+      const expectedQueryParams = {
+        api_key: 'testApiKey',
+        experienceKey: 'testExperienceKey',
+        verticalKey: 'verticalKey',
+        input: 'testQuery',
+        locale: 'en',
+        v: 20190101,
+        source: 'STANDARD',
+        sortBys: '[]',
+      };
+      const searchService = new SearchServiceImpl(
+        configWithRequiredParams,
+        mockHttpService as HttpService
+      );
+      await searchService.verticalSearch(requestWithRequiredParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
     });
   });
 });
