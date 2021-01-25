@@ -2,6 +2,10 @@ import { Facet, FacetOption } from '../../models/searchservice/response/Facet';
 import { createSimpleFilter } from '../core/createSimpleFilter';
 
 export function createFacets(facets: any): Readonly<Facet[]> {
+  if (!facets) {
+    return [];
+  }
+
   return Object.freeze(facets.map((facet: any) => ({
     fieldId: facet.fieldId,
     displayName: facet.displayName,

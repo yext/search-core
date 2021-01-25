@@ -333,7 +333,7 @@ export interface VerticalResults {
 
 // @public
 export interface VerticalSearchRequest {
-    context: Context;
+    context?: Context;
     coordinates?: Coordinates_2;
     facetFilters?: SimpleFilter[];
     limit?: number;

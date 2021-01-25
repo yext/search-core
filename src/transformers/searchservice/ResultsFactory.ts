@@ -7,6 +7,10 @@ import { HighlightedValueFactory } from './HighlightedValueFactory';
  */
 export class ResultsFactory {
   public static create(results: any, source: Source): Result[] {
+    if (!results) {
+      return [];
+    }
+
     return results.map((result: any, index: number) => {
       result = {
         ...result,
