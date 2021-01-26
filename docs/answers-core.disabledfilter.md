@@ -14,7 +14,7 @@ export interface DisabledFilter
 
 ## Remarks
 
-This should be used to indicate that a facet filter option is not selected.
+Used to indicate that a facet filter option is not selected.
 
 ## Properties
 
