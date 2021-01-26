@@ -2,6 +2,7 @@ import { QuestionSubmissionServiceImpl } from '../../src/infra/QuestionSubmissio
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { HttpService } from '../../src/services/HttpService';
 import { AnswersConfig } from '../../src/models/core/AnswersConfig';
+import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 
 const baseCoreConfig = {
   apiKey: 'anApiKey',
@@ -26,6 +27,8 @@ mockHttp.post.mockResolvedValue({
   response: {}
 });
 
+const apiResponseValidator = new ApiResponseValidator();
+
 describe('Question submission', () => {
   let qaService;
   let response;
@@ -33,7 +36,7 @@ describe('Question submission', () => {
   let actualHttpParams;
 
   beforeAll(async () => {
-    qaService = new QuestionSubmissionServiceImpl(baseCoreConfig, mockHttp as HttpService);
+    qaService = new QuestionSubmissionServiceImpl(baseCoreConfig, mockHttp as HttpService, apiResponseValidator);
     response = await qaService.submitQuestion(qaRequest);
     mockCalls = mockHttp.post.mock.calls;
     actualHttpParams = mockCalls[mockCalls.length - 1];
@@ -54,7 +57,7 @@ describe('Question submission', () => {
       }
     };
 
-    qaService = new QuestionSubmissionServiceImpl(coreConfig, mockHttp as HttpService);
+    qaService = new QuestionSubmissionServiceImpl(coreConfig, mockHttp as HttpService, apiResponseValidator);
     response = await qaService.submitQuestion(qaRequest);
     mockCalls = mockHttp.post.mock.calls;
     actualHttpParams = mockCalls[mockCalls.length - 1];

@@ -22,3 +22,7 @@ submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionRe
 
 Promise&lt;[QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md)<!-- -->&gt;
 
+## Remarks
+
+If rejected, the reason will be an [AnswersError](./answers-core.answerserror.md)<!-- -->.
+

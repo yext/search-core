@@ -22,3 +22,7 @@ verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
 
 Promise&lt;[VerticalSearchResponse](./answers-core.verticalsearchresponse.md)<!-- -->&gt;
 
+## Remarks
+
+If rejected, the reason will be an [AnswersError](./answers-core.answerserror.md)<!-- -->.
+

@@ -28,6 +28,9 @@ export class AnswersCore {
   /**
    * Performs an Answers search across all verticals.
    *
+   * @remarks
+   * If rejected, the reason will be an {@link AnswersError}.
+   *
    * @param request - Universal search request options
    */
   universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
@@ -36,6 +39,9 @@ export class AnswersCore {
 
   /**
    * Performs an Answers search for a single vertical.
+   *
+   * @remarks
+   * If rejected, the reason will be an {@link AnswersError}.
    *
    * @param request - Vertical search request options
    */
@@ -46,6 +52,9 @@ export class AnswersCore {
   /**
    * Submits a custom question to the Answers API.
    *
+   * @remarks
+   * If rejected, the reason will be an {@link AnswersError}.
+   *
    * @param request - Question submission request options
    */
   submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse> {
@@ -55,6 +64,9 @@ export class AnswersCore {
   /**
    * Performs an autocomplete request across all verticals.
    *
+   * @remarks
+   * If rejected, the reason will be an {@link AnswersError}.
+   *
    * @param request - Universal autocomplete request options
    */
   universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
@@ -63,6 +75,9 @@ export class AnswersCore {
 
   /**
    * Performs an autocomplete request for a single vertical.
+   *
+   * @remarks
+   * If rejected, the reason will be an {@link AnswersError}.
    *
    * @param request - Vertical autocomplete request options
    */
@@ -75,7 +90,7 @@ export class AnswersCore {
    *
    * @remarks
    * This differs from the vertical autocomplete because the vertical autocomplete operates on all entity fields whereas
-   * filter autocomplete operates only on specified fields.
+   * filter autocomplete operates only on specified fields. If rejected, the reason will be an {@link AnswersError}.
    *
    * @example
    * A site has a 'products' vertical and would like a way to allow the user to narrow down the results by the product name.

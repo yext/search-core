@@ -22,3 +22,7 @@ universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoComple
 
 Promise&lt;[AutoCompleteResponse](./answers-core.autocompleteresponse.md)<!-- -->&gt;
 
+## Remarks
+
+If rejected, the reason will be an [AnswersError](./answers-core.answerserror.md)<!-- -->.
+

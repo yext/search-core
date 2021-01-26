@@ -11,7 +11,7 @@ export class ApiResponseValidator {
     const validators = [
       this.validateResponseProp,
       this.validateMetaProp,
-      this.validateAnswersErrors
+      this.checkForApiErrors
     ];
 
     const validationResults = validators.map((validator) => {
@@ -34,7 +34,7 @@ export class ApiResponseValidator {
     }
   }
 
-  private validateAnswersErrors(response: ApiResponse): AnswersError | undefined {
+  private checkForApiErrors(response: ApiResponse): AnswersError | undefined {
     if(response.meta?.errors?.length >= 1){
       const error = response.meta.errors[0];
       return new AnswersError(error.message, error.code, error.type);

@@ -24,7 +24,7 @@ Promise&lt;[FilterAutoCompleteResponse](./answers-core.filterautocompleterespons
 
 ## Remarks
 
-This differs from the vertical autocomplete because the vertical autocomplete operates on all entity fields whereas filter autocomplete operates only on specified fields.
+This differs from the vertical autocomplete because the vertical autocomplete operates on all entity fields whereas filter autocomplete operates only on specified fields. If rejected, the reason will be an [AnswersError](./answers-core.answerserror.md)<!-- -->.
 
 ## Example
 
