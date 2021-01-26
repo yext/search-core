@@ -21,7 +21,8 @@ export function provideCore(config: AnswersConfig): AnswersCore {
   const apiResponseValidator = new ApiResponseValidator();
 
   const searchService = new SearchServiceImpl(config, httpService, apiResponseValidator);
-  const questionSubmissionService = new QuestionSubmissionServiceImpl(config, httpService, apiResponseValidator);
+  const questionSubmissionService = new QuestionSubmissionServiceImpl(
+    config, httpService, apiResponseValidator);
   const autoCompleteService = new AutoCompleteServiceImpl(config, httpService, apiResponseValidator);
 
   return new AnswersCore(searchService, questionSubmissionService, autoCompleteService);

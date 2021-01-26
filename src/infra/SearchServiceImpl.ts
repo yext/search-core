@@ -77,7 +77,11 @@ export class SearchServiceImpl implements SearchService {
   private verticalSearchEndpoint: string;
   private universalSearchEndpoint: string;
 
-  constructor(config: AnswersConfig, httpService: HttpService, apiResponseValidator: ApiResponseValidator) {
+  constructor(
+    config: AnswersConfig,
+    httpService: HttpService,
+    apiResponseValidator: ApiResponseValidator
+  ) {
     this.config = config;
     this.httpService = httpService;
     this.apiResponseValidator = apiResponseValidator;
@@ -106,7 +110,8 @@ export class SearchServiceImpl implements SearchService {
       source: request.querySource || QuerySource.Standard
     };
 
-    const response = await this.httpService.get<ApiResponse>(this.universalSearchEndpoint, queryParams);
+    const response =
+      await this.httpService.get<ApiResponse>(this.universalSearchEndpoint, queryParams);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -142,7 +147,8 @@ export class SearchServiceImpl implements SearchService {
       source: request.querySource || QuerySource.Standard
     };
 
-    const response = await this.httpService.get<ApiResponse>(this.verticalSearchEndpoint, queryParams);
+    const response =
+      await this.httpService.get<ApiResponse>(this.verticalSearchEndpoint, queryParams);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {

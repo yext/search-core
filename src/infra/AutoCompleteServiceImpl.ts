@@ -39,7 +39,11 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
   private verticalEndpoint: string;
   private filterEndpoint: string;
 
-  constructor(config: AnswersConfig, httpRequester: HttpService, apiResponseValidator: ApiResponseValidator) {
+  constructor(
+    config: AnswersConfig,
+    httpRequester: HttpService,
+    apiResponseValidator: ApiResponseValidator
+  ) {
     this.config = config;
     this.httpService = httpRequester;
     this.apiResponseValidator = apiResponseValidator;

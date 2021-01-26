@@ -18,7 +18,11 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
   private apiResponseValidator: ApiResponseValidator;
   private endpoint: string;
 
-  constructor(config: AnswersConfig, httpService: HttpService, apiResponseValidator: ApiResponseValidator ) {
+  constructor(
+    config: AnswersConfig,
+    httpService: HttpService,
+    apiResponseValidator: ApiResponseValidator
+  ) {
     this.config = config;
     this.httpService = httpService;
     this.apiResponseValidator = apiResponseValidator;
