@@ -4,10 +4,10 @@
 
 ## AnswersError.code property
 
-The error code.
+Answers API error code.
 
 <b>Signature:</b>
 
 ```typescript
-code: number;
+code?: number;
 ```

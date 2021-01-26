@@ -2,20 +2,28 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [AnswersError](./answers-core.answerserror.md)
 
-## AnswersError interface
+## AnswersError class
 
-An error from the Answers Backend.
+Represents an error
 
 <b>Signature:</b>
 
 ```typescript
-export interface AnswersError 
+export declare class AnswersError extends Error 
 ```
+<b>Extends:</b> Error
+
+## Remarks
+
+If the error originates from the Answer API, the code and type property will be present.
+
+The constructor for this class is marked as internal. Third-party code should not call the constructor directly or create subclasses that extend the `AnswersError` class.
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [code](./answers-core.answerserror.code.md) | number | The error code. |
-|  [message](./answers-core.answerserror.message.md) | string | The error message. |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [code?](./answers-core.answerserror.code.md) |  | number | <i>(Optional)</i> Answers API error code. |
+|  [message](./answers-core.answerserror.message.md) |  | string | The error message. |
+|  [type?](./answers-core.answerserror.type.md) |  | string | <i>(Optional)</i> Answers API error type. |
 

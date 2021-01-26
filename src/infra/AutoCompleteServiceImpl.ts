@@ -8,6 +8,8 @@ import { AnswersConfig } from '../models/core/AnswersConfig';
 import { HttpService }from '../services/HttpService';
 import { AutoCompleteQueryParams } from '../models/autocompleteservice/autocompleteparams';
 import { AutoCompleteService } from '../services/AutoCompleteService';
+import { ApiResponseValidator } from '../validation/ApiResponseValidator';
+import { ApiResponse } from '../models/answersapi/ApiResponse';
 
 /**
  * Internal interface representing the query params which are sent for a vertical
@@ -32,13 +34,19 @@ interface FilterAutoCompleteQueryParams extends AutoCompleteQueryParams {
 export class AutoCompleteServiceImpl implements AutoCompleteService {
   private config: AnswersConfig;
   private httpService: HttpService;
+  private apiResponseValidator;
   private universalEndpoint: string;
   private verticalEndpoint: string;
   private filterEndpoint: string;
 
-  constructor(config: AnswersConfig, httpRequester: HttpService) {
+  constructor(
+    config: AnswersConfig,
+    httpRequester: HttpService,
+    apiResponseValidator: ApiResponseValidator
+  ) {
     this.config = config;
     this.httpService = httpRequester;
+    this.apiResponseValidator = apiResponseValidator;
     this.universalEndpoint = this.config.endpoints?.universalAutoComplete
       ?? defaultEndpoints.universalAutoComplete;
     this.verticalEndpoint = this.config.endpoints?.verticalAutoComplete
@@ -64,12 +72,16 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rawUniversalAutocompleteResponse = await this.httpService.get<any>(
+    const response = await this.httpService.get<ApiResponse>(
       this.universalEndpoint,
       queryParams);
 
-    return createAutoCompleteResponse(rawUniversalAutocompleteResponse);
+    const validationResult = this.apiResponseValidator.validate(response);
+    if (validationResult instanceof Error) {
+      return Promise.reject(validationResult);
+    }
+
+    return createAutoCompleteResponse(response);
   }
 
   /**
@@ -90,12 +102,16 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rawVerticalAutocompleteResponse = await this.httpService.get<any>(
+    const response = await this.httpService.get<ApiResponse>(
       this.verticalEndpoint,
       queryParams);
 
-    return createAutoCompleteResponse(rawVerticalAutocompleteResponse);
+    const validationResult = this.apiResponseValidator.validate(response);
+    if (validationResult instanceof Error) {
+      return Promise.reject(validationResult);
+    }
+
+    return createAutoCompleteResponse(response);
   }
 
   /**
@@ -118,12 +134,16 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
       sessionTrackingEnabled: request.sessionTrackingEnabled
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const rawFilterAutocompleteResponse = await this.httpService.get<any>(
+    const response = await this.httpService.get<ApiResponse>(
       this.filterEndpoint,
       queryParams);
 
-    return createFilterAutoCompleteResponse(rawFilterAutocompleteResponse);
+    const validationResult = this.apiResponseValidator.validate(response);
+    if (validationResult instanceof Error) {
+      return Promise.reject(validationResult);
+    }
+
+    return createFilterAutoCompleteResponse(response);
   }
 
   private getFilterSearchParams(searchParams: SearchParameters) {

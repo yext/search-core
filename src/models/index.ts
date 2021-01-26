@@ -1,11 +1,13 @@
+// Answers API models
+export { AnswersError } from './answersapi/AnswersError';
+
+// Core models
+export { AnswersConfig } from './core/AnswersConfig';
+export { Endpoints } from './core/Endpoints';
+
 // Autocomplete service
 export * from './autocompleteservice/AutoCompleteRequest';
 export * from './autocompleteservice/AutoCompleteResponse';
-
-// Core models
-export { AnswersError } from './core/AnswersError';
-export { AnswersConfig } from './core/AnswersConfig';
-export { Endpoints } from './core/Endpoints';
 
 // Question submission service
 export { QuestionSubmissionRequest } from './questionsubmission/QuestionSubmissionRequest';

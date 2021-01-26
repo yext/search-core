@@ -9,6 +9,7 @@
 |  Class | Description |
 |  --- | --- |
 |  [AnswersCore](./answers-core.answerscore.md) | Provides methods for executing searches, submitting questions, and performing autocompletes. |
+|  [AnswersError](./answers-core.answerserror.md) | Represents an error |
 
 ## Enumerations
 
@@ -32,7 +33,6 @@
 |  Interface | Description |
 |  --- | --- |
 |  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
-|  [AnswersError](./answers-core.answerserror.md) | An error from the Answers Backend. |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutoCompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutoCompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |

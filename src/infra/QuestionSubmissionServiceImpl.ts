@@ -4,7 +4,8 @@ import { HttpService } from '../services/HttpService';
 import { AnswersConfig } from '../models/core/AnswersConfig';
 import { QuestionSubmissionRequest } from '../models/questionsubmission/QuestionSubmissionRequest';
 import { QuestionSubmissionResponse } from '../models/questionsubmission/QuestionSubmissionResponse';
-import { createAnswersError }from '../transformers/core/createAnswersError';
+import { ApiResponseValidator } from '../validation/ApiResponseValidator';
+import { ApiResponse } from '../models/answersapi/ApiResponse';
 
 /**
  * An implementation of QuestionSubmissionService which hits LiveAPI.
@@ -12,8 +13,19 @@ import { createAnswersError }from '../transformers/core/createAnswersError';
  * @internal
  */
 export class QuestionSubmissionServiceImpl implements QuestionSubmissionService {
+  private config: AnswersConfig;
+  private httpService: HttpService;
+  private apiResponseValidator: ApiResponseValidator;
   private endpoint: string;
-  constructor(private config: AnswersConfig, private httpService: HttpService) {
+
+  constructor(
+    config: AnswersConfig,
+    httpService: HttpService,
+    apiResponseValidator: ApiResponseValidator
+  ) {
+    this.config = config;
+    this.httpService = httpService;
+    this.apiResponseValidator = apiResponseValidator;
     this.endpoint = this.config.endpoints?.questionSubmission
       ?? defaultEndpoints.questionSubmission;
   }
@@ -42,20 +54,20 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
       }
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const data = await this.httpService.post<any>(
+    const response = await this.httpService.post<ApiResponse>(
       this.endpoint,
       queryParams,
       body,
       requestInit
     );
 
-    if (!data.meta) {
-      throw new Error('The question submission data does not contain a meta property');
+    const validationResult = this.apiResponseValidator.validate(response);
+    if (validationResult instanceof Error) {
+      return Promise.reject(validationResult);
     }
+
     return {
-      uuid: data.meta.uuid,
-      errors: data.meta.errors && data.meta.errors.map(createAnswersError)
+      uuid: response.meta.uuid
     };
   }
 }

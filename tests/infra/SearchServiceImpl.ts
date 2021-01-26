@@ -7,6 +7,7 @@ import { HttpService } from '../../src/services/HttpService';
 import { QueryTrigger } from '../../src/models/searchservice/request/QueryTrigger';
 import { QuerySource } from '../../src/models/searchservice/request/QuerySource';
 import { VerticalSearchRequest } from '../../src/models/searchservice/request/VerticalSearchRequest';
+import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 
 describe('SearchService', () => {
   const configWithRequiredParams: AnswersConfig = {
@@ -14,6 +15,8 @@ describe('SearchService', () => {
     experienceKey: 'testExperienceKey',
     locale: 'en'
   };
+
+  const apiResponseValidator = new ApiResponseValidator();
 
   describe('Universal Search', () => {
     const mockHttpService = new HttpServiceMock();
@@ -35,7 +38,8 @@ describe('SearchService', () => {
       };
       const searchService = new SearchServiceImpl(
         configWithRequiredParams,
-        mockHttpService as HttpService
+        mockHttpService as HttpService,
+        apiResponseValidator
       );
       await searchService.universalSearch(requestWithRequiredParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
@@ -80,7 +84,8 @@ describe('SearchService', () => {
       };
       const searchService: SearchServiceImpl = new SearchServiceImpl(
         configWithAllParams,
-        mockHttpService as HttpService
+        mockHttpService as HttpService,
+        apiResponseValidator
       );
       await searchService.universalSearch(requestWithAllParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
@@ -95,7 +100,8 @@ describe('SearchService', () => {
       };
       const searchService: SearchServiceImpl = new SearchServiceImpl(
         config,
-        mockHttpService as HttpService
+        mockHttpService as HttpService,
+        apiResponseValidator
       );
       await searchService.universalSearch({query: 'test'});
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expect.anything());
@@ -127,7 +133,8 @@ describe('SearchService', () => {
       };
       const searchService = new SearchServiceImpl(
         configWithRequiredParams,
-        mockHttpService as HttpService
+        mockHttpService as HttpService,
+        apiResponseValidator
       );
       await searchService.verticalSearch(requestWithRequiredParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);

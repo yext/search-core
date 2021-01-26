@@ -2,6 +2,7 @@ import { QuestionSubmissionServiceImpl } from '../../src/infra/QuestionSubmissio
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { HttpService } from '../../src/services/HttpService';
 import { AnswersConfig } from '../../src/models/core/AnswersConfig';
+import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 
 const baseCoreConfig = {
   apiKey: 'anApiKey',
@@ -21,17 +22,12 @@ const qaRequest = {
 const mockHttp = new HttpServiceMock();
 mockHttp.post.mockResolvedValue({
   meta: {
-    uuid: 'aUUID',
-    errors: [
-      {
-        code: 2246,
-        type: 'FATAL_ERROR',
-        message: 'Entity not found: 1234569'
-      }
-    ]
+    uuid: 'aUUID'
   },
   response: {}
 });
+
+const apiResponseValidator = new ApiResponseValidator();
 
 describe('Question submission', () => {
   let qaService;
@@ -40,7 +36,7 @@ describe('Question submission', () => {
   let actualHttpParams;
 
   beforeAll(async () => {
-    qaService = new QuestionSubmissionServiceImpl(baseCoreConfig, mockHttp as HttpService);
+    qaService = new QuestionSubmissionServiceImpl(baseCoreConfig, mockHttp as HttpService, apiResponseValidator);
     response = await qaService.submitQuestion(qaRequest);
     mockCalls = mockHttp.post.mock.calls;
     actualHttpParams = mockCalls[mockCalls.length - 1];
@@ -61,7 +57,7 @@ describe('Question submission', () => {
       }
     };
 
-    qaService = new QuestionSubmissionServiceImpl(coreConfig, mockHttp as HttpService);
+    qaService = new QuestionSubmissionServiceImpl(coreConfig, mockHttp as HttpService, apiResponseValidator);
     response = await qaService.submitQuestion(qaRequest);
     mockCalls = mockHttp.post.mock.calls;
     actualHttpParams = mockCalls[mockCalls.length - 1];
@@ -108,10 +104,6 @@ describe('Question submission', () => {
   it('parses the response correctly', () => {
     expect(response).toMatchObject({
       uuid: 'aUUID',
-      errors: [{
-        code: 2246,
-        message: 'Entity not found: 1234569'
-      }]
     });
   });
 });

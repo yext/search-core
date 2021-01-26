@@ -22,3 +22,7 @@ universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchRespons
 
 Promise&lt;[UniversalSearchResponse](./answers-core.universalsearchresponse.md)<!-- -->&gt;
 
+## Remarks
+
+If rejected, the reason will be an [AnswersError](./answers-core.answerserror.md)<!-- -->.
+
