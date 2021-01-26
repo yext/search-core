@@ -4,7 +4,7 @@ import { AnswersError } from '../../src/models/answersapi/AnswersError';
 
 const apiResponseValidator = new ApiResponseValidator();
 
-it('A response with a response property and no errors passes validation', () => {
+it('A response with no errors passes validation', () => {
   const response = {
     response: {},
     meta: {
@@ -14,7 +14,7 @@ it('A response with a response property and no errors passes validation', () => 
   };
   const validationResponse = apiResponseValidator.validate(response);
 
-  return expect(validationResponse instanceof Error).toBeFalsy();
+  return expect(validationResponse).toBeUndefined();
 });
 
 it('A response without a response property fails validation', () => {
@@ -26,7 +26,16 @@ it('A response without a response property fails validation', () => {
   } as ApiResponse;
   const validationResponse = apiResponseValidator.validate(response);
 
-  return expect(validationResponse instanceof AnswersError).toBeTruthy();
+  return expect(validationResponse).toBeInstanceOf(AnswersError);
+});
+
+it('A response without a meta property fails validation', () => {
+  const response = {
+    response: {}
+  } as ApiResponse;
+  const validationResponse = apiResponseValidator.validate(response);
+
+  return expect(validationResponse).toBeInstanceOf(AnswersError);
 });
 
 it('A response with an error fails validation', () => {
@@ -45,5 +54,5 @@ it('A response with an error fails validation', () => {
   };
   const validationResponse = apiResponseValidator.validate(response);
 
-  return expect(validationResponse).toBeTruthy();
+  return expect(validationResponse).toBeInstanceOf(AnswersError);
 });
