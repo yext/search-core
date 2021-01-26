@@ -1,5 +1,8 @@
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { ApiResponse } from '../../src/models/answersapi/ApiResponse';
+import { AnswersError } from '../../src/models/answersapi/AnswersError';
+
+const apiResponseValidator = new ApiResponseValidator();
 
 it('A response with a response property and no errors passes validation', () => {
   const response = {
@@ -9,9 +12,9 @@ it('A response with a response property and no errors passes validation', () => 
       errors: []
     }
   };
-  const validateResponse = () => new ApiResponseValidator(response).validate();
+  const validationResponse = apiResponseValidator.validate(response);
 
-  return expect(validateResponse).not.toThrow();
+  return expect(validationResponse instanceof Error).toBeFalsy();
 });
 
 it('A response without a response property fails validation', () => {
@@ -21,13 +24,13 @@ it('A response without a response property fails validation', () => {
       errors: []
     }
   } as ApiResponse;
-  const validateResponse = () => new ApiResponseValidator(response).validate();
+  const validationResponse = apiResponseValidator.validate(response);
 
-  return expect(validateResponse).toThrow();
+  return expect(validationResponse instanceof AnswersError).toBeTruthy();
 });
 
 it('A response with an error fails validation', () => {
-  const response = {
+  const response: ApiResponse = {
     response: {},
     meta: {
       uuid: 'test',
@@ -40,7 +43,7 @@ it('A response with an error fails validation', () => {
       ]
     }
   };
-  const validateResponse = () => new ApiResponseValidator(response).validate();
+  const validationResponse = apiResponseValidator.validate(response);
 
-  return expect(validateResponse).toThrow();
+  return expect(validationResponse).toBeTruthy();
 });

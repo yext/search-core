@@ -4,7 +4,7 @@
 
 ## AnswersError.message property
 
-The error message
+The error message.
 
 <b>Signature:</b>
 

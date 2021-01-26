@@ -7,36 +7,33 @@ import { AnswersError } from '../models/answersapi/AnswersError';
  * @internal
  */
 export class ApiResponseValidator {
-  public validate(response: ApiResponse): AnswersError | undefined {
-    const validators = [
+  public validate(apiResponse: ApiResponse): AnswersError | undefined {
+    const testFunctions = [
       this.validateResponseProp,
       this.validateMetaProp,
       this.checkForApiErrors
     ];
 
-    const validationResults = validators.map((validator) => {
-      return validator(response);
-    });
+    const testResults = testFunctions.map(testFn => testFn(apiResponse));
 
-    if (validationResults.length >= 1)
-      return validationResults[0];
+    return testResults.find(result => result instanceof AnswersError);
   }
 
-  private validateResponseProp(response: ApiResponse): AnswersError | undefined {
-    if (!response.response){
-      return new Error('Malformed Answers API response: missing response property.');
+  private validateResponseProp(apiResponse: ApiResponse): AnswersError | undefined {
+    if (!apiResponse.response){
+      return new AnswersError('Malformed Answers API response: missing response property.');
     }
   }
 
-  private validateMetaProp(response: ApiResponse): AnswersError | undefined {
-    if (!response.meta){
-      return new Error('Malformed Answers API response: missing meta property.');
+  private validateMetaProp(apiResponse: ApiResponse): AnswersError | undefined {
+    if (!apiResponse.meta){
+      return new AnswersError('Malformed Answers API response: missing meta property.');
     }
   }
 
-  private checkForApiErrors(response: ApiResponse): AnswersError | undefined {
-    if(response.meta?.errors?.length >= 1){
-      const error = response.meta.errors[0];
+  private checkForApiErrors(apiResponse: ApiResponse): AnswersError | undefined {
+    if(apiResponse.meta?.errors?.length >= 1){
+      const error = apiResponse.meta.errors[0];
       return new AnswersError(error.message, error.code, error.type);
     }
   }

@@ -4,7 +4,7 @@
 
 ## AnswersError.type property
 
-Answers API error type
+Answers API error type.
 
 <b>Signature:</b>
 

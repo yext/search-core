@@ -23,7 +23,7 @@ The constructor for this class is marked as internal. Third-party code should no
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [code?](./answers-core.answerserror.code.md) |  | number | <i>(Optional)</i> Answers API error code |
-|  [message](./answers-core.answerserror.message.md) |  | string | The error message |
-|  [type?](./answers-core.answerserror.type.md) |  | string | <i>(Optional)</i> Answers API error type |
+|  [code?](./answers-core.answerserror.code.md) |  | number | <i>(Optional)</i> Answers API error code. |
+|  [message](./answers-core.answerserror.message.md) |  | string | The error message. |
+|  [type?](./answers-core.answerserror.type.md) |  | string | <i>(Optional)</i> Answers API error type. |
 

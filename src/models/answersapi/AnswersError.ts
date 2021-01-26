@@ -7,11 +7,11 @@
  * @public
  */
 export class AnswersError extends Error {
-  /** The error message */
+  /** The error message. */
   public message: string;
-  /** Answers API error code */
+  /** Answers API error code. */
   public code?: number;
-  /** Answers API error type */
+  /** Answers API error type. */
   public type?: string;
 
   /** @internal */

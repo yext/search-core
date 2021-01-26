@@ -4,7 +4,7 @@
 
 ## AnswersError.code property
 
-Answers API error code
+Answers API error code.
 
 <b>Signature:</b>
 

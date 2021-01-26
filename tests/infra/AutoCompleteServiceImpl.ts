@@ -6,6 +6,7 @@ import { AutoCompleteServiceImpl } from '../../src/infra/AutoCompleteServiceImpl
 import mockAutoCompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutoCompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
 import { defaultEndpoints } from '../../src/constants';
+import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 
 describe('AutoCompleteService', () => {
   const config: AnswersConfig = {
@@ -15,6 +16,8 @@ describe('AutoCompleteService', () => {
   };
 
   const mockHttpService = new HttpServiceMock();
+
+  const apiResponseValidator = new ApiResponseValidator();
 
   describe('Universal AutoComplete', () => {
     const expectedUniversalUrl = defaultEndpoints.universalAutoComplete;
@@ -34,7 +37,8 @@ describe('AutoCompleteService', () => {
       };
       const autocompleteService = new AutoCompleteServiceImpl(
         config,
-        mockHttpService as HttpService
+        mockHttpService as HttpService,
+        apiResponseValidator
       );
       await autocompleteService.universalAutoComplete(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
@@ -61,7 +65,8 @@ describe('AutoCompleteService', () => {
       };
       const autocompleteService = new AutoCompleteServiceImpl(
         config,
-        mockHttpService as HttpService
+        mockHttpService as HttpService,
+        apiResponseValidator
       );
       await autocompleteService.verticalAutoComplete(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
@@ -106,7 +111,8 @@ describe('AutoCompleteService', () => {
       };
       const autocompleteService = new AutoCompleteServiceImpl(
         config,
-        mockHttpService as HttpService
+        mockHttpService as HttpService,
+        apiResponseValidator
       );
       await autocompleteService.filterAutoComplete(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams);
