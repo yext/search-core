@@ -34,13 +34,15 @@ interface FilterAutoCompleteQueryParams extends AutoCompleteQueryParams {
 export class AutoCompleteServiceImpl implements AutoCompleteService {
   private config: AnswersConfig;
   private httpService: HttpService;
+  private apiResponseValidator;
   private universalEndpoint: string;
   private verticalEndpoint: string;
   private filterEndpoint: string;
 
-  constructor(config: AnswersConfig, httpRequester: HttpService) {
+  constructor(config: AnswersConfig, httpRequester: HttpService, apiResponseValidator: ApiResponseValidator) {
     this.config = config;
     this.httpService = httpRequester;
+    this.apiResponseValidator = apiResponseValidator;
     this.universalEndpoint = this.config.endpoints?.universalAutoComplete
       ?? defaultEndpoints.universalAutoComplete;
     this.verticalEndpoint = this.config.endpoints?.verticalAutoComplete
@@ -69,7 +71,11 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
     const response = await this.httpService.get<ApiResponse>(
       this.universalEndpoint,
       queryParams);
-    new ApiResponseValidator(response).validate();
+
+    const validationResult = this.apiResponseValidator.validate(response);
+    if (validationResult instanceof Error) {
+      return Promise.reject(validationResult);
+    }
 
     return createAutoCompleteResponse(response);
   }
@@ -95,7 +101,11 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
     const response = await this.httpService.get<ApiResponse>(
       this.verticalEndpoint,
       queryParams);
-    new ApiResponseValidator(response).validate();
+
+    const validationResult = this.apiResponseValidator.validate(response);
+    if (validationResult instanceof Error) {
+      return Promise.reject(validationResult);
+    }
 
     return createAutoCompleteResponse(response);
   }
@@ -123,7 +133,11 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
     const response = await this.httpService.get<ApiResponse>(
       this.filterEndpoint,
       queryParams);
-    new ApiResponseValidator(response).validate();
+
+    const validationResult = this.apiResponseValidator.validate(response);
+    if (validationResult instanceof Error) {
+      return Promise.reject(validationResult);
+    }
 
     return createFilterAutoCompleteResponse(response);
   }

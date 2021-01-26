@@ -13,8 +13,15 @@ import { ApiResponse } from '../models/answersapi/ApiResponse';
  * @internal
  */
 export class QuestionSubmissionServiceImpl implements QuestionSubmissionService {
+  private config: AnswersConfig;
+  private httpService: HttpService;
+  private apiResponseValidator: ApiResponseValidator;
   private endpoint: string;
-  constructor(private config: AnswersConfig, private httpService: HttpService) {
+
+  constructor(config: AnswersConfig, httpService: HttpService, apiResponseValidator: ApiResponseValidator ) {
+    this.config = config;
+    this.httpService = httpService;
+    this.apiResponseValidator = apiResponseValidator;
     this.endpoint = this.config.endpoints?.questionSubmission
       ?? defaultEndpoints.questionSubmission;
   }
@@ -43,14 +50,17 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
       }
     };
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const response = await this.httpService.post<ApiResponse>(
       this.endpoint,
       queryParams,
       body,
       requestInit
     );
-    new ApiResponseValidator(response).validate();
+
+    const validationResult = this.apiResponseValidator.validate(response);
+    if (validationResult instanceof Error) {
+      return Promise.reject(validationResult);
+    }
 
     return {
       uuid: response.meta.uuid

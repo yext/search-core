@@ -4,6 +4,7 @@ import { QuestionSubmissionServiceImpl } from './infra/QuestionSubmissionService
 import { HttpServiceImpl } from './infra/HttpServiceImpl';
 import { AnswersConfig } from './models/core/AnswersConfig';
 import { AutoCompleteServiceImpl } from './infra/AutoCompleteServiceImpl';
+import { ApiResponseValidator } from './validation/ApiResponseValidator';
 
 /**
  * The entrypoint to the answers-core library.
@@ -17,9 +18,11 @@ import { AutoCompleteServiceImpl } from './infra/AutoCompleteServiceImpl';
  */
 export function provideCore(config: AnswersConfig): AnswersCore {
   const httpService = new HttpServiceImpl();
-  const searchService = new SearchServiceImpl(config, httpService);
-  const questionSubmissionService = new QuestionSubmissionServiceImpl(config, httpService);
-  const autoCompleteService = new AutoCompleteServiceImpl(config, httpService);
+  const apiResponseValidator = new ApiResponseValidator();
+
+  const searchService = new SearchServiceImpl(config, httpService, apiResponseValidator);
+  const questionSubmissionService = new QuestionSubmissionServiceImpl(config, httpService, apiResponseValidator);
+  const autoCompleteService = new AutoCompleteServiceImpl(config, httpService, apiResponseValidator);
 
   return new AnswersCore(searchService, questionSubmissionService, autoCompleteService);
 }

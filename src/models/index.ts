@@ -1,5 +1,5 @@
 // Answers API models
-export { ApiError } from './answersapi/ApiError';
+export { AnswersError } from './answersapi/AnswersError';
 
 // Core models
 export { AnswersConfig } from './core/AnswersConfig';

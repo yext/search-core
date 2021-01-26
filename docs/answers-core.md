@@ -9,7 +9,7 @@
 |  Class | Description |
 |  --- | --- |
 |  [AnswersCore](./answers-core.answerscore.md) | Provides methods for executing searches, submitting questions, and performing autocompletes. |
-|  [ApiError](./answers-core.apierror.md) | Represents an Error from the Answers API |
+|  [AnswersError](./answers-core.answerserror.md) | Represents an error |
 
 ## Enumerations
 

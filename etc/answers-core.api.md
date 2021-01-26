@@ -31,12 +31,12 @@ export class AnswersCore {
 }
 
 // @public
-export class ApiError extends Error {
+export class AnswersError extends Error {
     // @internal
-    constructor(message: string, code: number, type: string);
-    code: number;
+    constructor(message: string, code?: number, type?: string);
+    code?: number;
     message: string;
-    type: string;
+    type?: string;
 }
 
 // @public

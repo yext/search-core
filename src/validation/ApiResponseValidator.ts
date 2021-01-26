@@ -1,34 +1,43 @@
 import { ApiResponse } from '../models/answersapi/ApiResponse';
-import { ApiError } from '../models/answersapi/ApiError';
+import { AnswersError } from '../models/answersapi/AnswersError';
 
 /**
  * Determines whether or not an API response can be used to construct an answers-core response
  *
- * @remarks
- * Throws an error if the API response fails validation.
- *
  * @internal
  */
 export class ApiResponseValidator {
-  constructor(
-    private apiResponse: ApiResponse
-  ) {}
+  public validate(response: ApiResponse): AnswersError | undefined {
+    const validators = [
+      this.validateResponseProp,
+      this.validateMetaProp,
+      this.validateAnswersErrors
+    ];
 
-  validate(): void {
-    this.validateResponseProp();
-    this.validateApiErrors();
+    const validationResults = validators.map((validator) => {
+      return validator(response);
+    });
+
+    if (validationResults.length >= 1)
+      return validationResults[0];
   }
 
-  private validateResponseProp(): void {
-    if (!this.apiResponse.response){
-      throw new Error('Malformatted Answers API response: missing response property.');
+  private validateResponseProp(response: ApiResponse): AnswersError | undefined {
+    if (!response.response){
+      return new Error('Malformed Answers API response: missing response property.');
     }
   }
 
-  private validateApiErrors(): void {
-    if(this.apiResponse.meta?.errors?.length >= 1){
-      const error = this.apiResponse.meta.errors[0];
-      throw new ApiError(error.message, error.code, error.type);
+  private validateMetaProp(response: ApiResponse): AnswersError | undefined {
+    if (!response.meta){
+      return new Error('Malformed Answers API response: missing meta property.');
+    }
+  }
+
+  private validateAnswersErrors(response: ApiResponse): AnswersError | undefined {
+    if(response.meta?.errors?.length >= 1){
+      const error = response.meta.errors[0];
+      return new AnswersError(error.message, error.code, error.type);
     }
   }
 }

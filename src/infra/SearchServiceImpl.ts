@@ -73,12 +73,14 @@ interface VerticalSearchQueryParams extends QueryParams {
 export class SearchServiceImpl implements SearchService {
   private config: AnswersConfig;
   private httpService: HttpService;
+  private apiResponseValidator;
   private verticalSearchEndpoint: string;
   private universalSearchEndpoint: string;
 
-  constructor(config: AnswersConfig, httpService: HttpService) {
+  constructor(config: AnswersConfig, httpService: HttpService, apiResponseValidator: ApiResponseValidator) {
     this.config = config;
     this.httpService = httpService;
+    this.apiResponseValidator = apiResponseValidator;
     this.universalSearchEndpoint = config.endpoints?.universalSearch
       ?? defaultEndpoints.universalSearch;
     this.verticalSearchEndpoint = config.endpoints?.verticalSearch
@@ -105,7 +107,11 @@ export class SearchServiceImpl implements SearchService {
     };
 
     const response = await this.httpService.get<ApiResponse>(this.universalSearchEndpoint, queryParams);
-    new ApiResponseValidator(response).validate();
+
+    const validationResult = this.apiResponseValidator.validate(response);
+    if (validationResult instanceof Error) {
+      return Promise.reject(validationResult);
+    }
 
     return createUniversalSearchResponse(response);
   }
@@ -137,7 +143,11 @@ export class SearchServiceImpl implements SearchService {
     };
 
     const response = await this.httpService.get<ApiResponse>(this.verticalSearchEndpoint, queryParams);
-    new ApiResponseValidator(response).validate();
+
+    const validationResult = this.apiResponseValidator.validate(response);
+    if (validationResult instanceof Error) {
+      return Promise.reject(validationResult);
+    }
 
     return createVerticalSearchResponse(response);
   }
