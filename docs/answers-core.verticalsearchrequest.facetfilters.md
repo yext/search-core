@@ -9,5 +9,5 @@ The facet filters to apply to the search.
 <b>Signature:</b>
 
 ```typescript
-facetFilters?: SimpleFilter[];
+facetFilters?: (SimpleFilter | DisabledFilter)[];
 ```

@@ -20,6 +20,7 @@ export { Coordinates } from './searchservice/request/Coordinates';
 export { QuerySource } from './searchservice/request/QuerySource';
 export { QueryTrigger } from './searchservice/request/QueryTrigger';
 export { SimpleFilter } from './searchservice/request/SimpleFilter';
+export { DisabledFilter } from './searchservice/request/DisabledFilter';
 export { SortBy } from './searchservice/request/SortBy';
 export { UniversalSearchRequest } from './searchservice/request/UniversalSearchRequest';
 export { VerticalSearchRequest } from './searchservice/request/VerticalSearchRequest';

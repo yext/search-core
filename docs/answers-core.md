@@ -40,6 +40,7 @@
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request which is used to bias the results. |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search. |
+|  [DisabledFilter](./answers-core.disabledfilter.md) | Represents an unselected facet filter. |
 |  [Facet](./answers-core.facet.md) | Represents dynamic filter options from the Answers API. |
 |  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet. |
 |  [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) | Options for a filter autocomplete request. |

@@ -5,6 +5,7 @@ import { Coordinates } from './Coordinates';
 import { QueryTrigger } from './QueryTrigger';
 import { SortBy } from './SortBy';
 import { QuerySource } from './QuerySource';
+import { DisabledFilter } from './DisabledFilter';
 
 /**
  * Options which can be specified for a vertical search.
@@ -25,7 +26,7 @@ export interface VerticalSearchRequest {
   /** Indicates that faces should be retieved. */
   retrieveFacets?: boolean,
   /** The facet filters to apply to the search. */
-  facetFilters?: SimpleFilter[],
+  facetFilters?: (SimpleFilter | DisabledFilter)[],
   /** Skips spell checking if true. */
   skipSpellCheck?: boolean,
   /** {@inheritDoc Coordinates} */

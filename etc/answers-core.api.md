@@ -98,6 +98,12 @@ export interface DirectAnswer {
     verticalKey: string;
 }
 
+// @public
+export interface DisabledFilter {
+    disabled: true;
+    fieldId: string;
+}
+
 // Warning: (ae-internal-missing-underscore) The name "Endpoints" should be prefixed with an underscore because the declaration is marked as @internal
 //
 // @internal
@@ -336,7 +342,7 @@ export interface VerticalResults {
 export interface VerticalSearchRequest {
     context?: Context;
     coordinates?: Coordinates_2;
-    facetFilters?: SimpleFilter[];
+    facetFilters?: (SimpleFilter | DisabledFilter)[];
     limit?: number;
     offset?: number;
     query: string;
