@@ -16,5 +16,6 @@ export function createUniversalSearchResponse(data: any): Readonly<UniversalSear
     searchIntents: data.response.searchIntents,
     spellCheck: data.response.spellCheck && createSpellCheck(data.response.spellCheck),
     locationBias: data.response.locationBias && createLocationBias(data.response.locationBias),
+    uuid: data.meta.uuid
   });
 }

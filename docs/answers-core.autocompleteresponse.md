@@ -19,4 +19,5 @@ export interface AutoCompleteResponse
 |  [inputIntents](./answers-core.autocompleteresponse.inputintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | Represents intents from the Answers API. |
 |  [queryId?](./answers-core.autocompleteresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
 |  [results](./answers-core.autocompleteresponse.results.md) | [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->\[\] | An array of [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->s. |
+|  [uuid](./answers-core.autocompleteresponse.uuid.md) | string | A unique id which corresponds to the request. |
 

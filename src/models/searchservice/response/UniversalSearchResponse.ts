@@ -22,4 +22,6 @@ export interface UniversalSearchResponse {
   spellCheck?: SpellCheck,
   /** {@inheritDoc LocationBias} */
   locationBias?: LocationBias,
+  /** A unique id which corresponds to the request. */
+  uuid: string
 }

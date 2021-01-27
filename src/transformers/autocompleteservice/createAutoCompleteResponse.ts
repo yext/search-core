@@ -15,7 +15,8 @@ export function createAutoCompleteResponse(data: any): Readonly<AutoCompleteResp
   return Object.freeze({
     results: responseResults,
     queryId: response.queryId,
-    inputIntents: inputIntents || []
+    inputIntents: inputIntents || [],
+    uuid: data.meta.uuid
   });
 }
 
@@ -47,6 +48,7 @@ export function createFilterAutoCompleteResponse(data: any): Readonly<FilterAuto
     sections: sections,
     results: responseResults,
     queryId: response.queryId,
-    inputIntents: inputIntents || []
+    inputIntents: inputIntents || [],
+    uuid: data.meta.uuid
   });
 }
