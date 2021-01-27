@@ -51,6 +51,7 @@ export interface AutoCompleteResponse {
     inputIntents: SearchIntent[];
     queryId?: string;
     results: AutoCompleteResult[];
+    uuid: string;
 }
 
 // @public
@@ -151,6 +152,7 @@ export interface FilterAutoCompleteResponse {
         label: string;
         results: AutoCompleteResult[];
     }[];
+    uuid: string;
 }
 
 // @public
@@ -312,6 +314,7 @@ export interface UniversalSearchResponse {
     queryId?: string;
     searchIntents?: SearchIntent[];
     spellCheck?: SpellCheck;
+    uuid: string;
     verticalResults: VerticalResults[];
 }
 
@@ -361,6 +364,7 @@ export interface VerticalSearchResponse {
     queryId: string;
     searchIntents?: SearchIntent[];
     spellCheck?: SpellCheck;
+    uuid: string;
     verticalResults: VerticalResults;
 }
 

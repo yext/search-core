@@ -21,4 +21,5 @@ export interface FilterAutoCompleteResponse
 |  [results](./answers-core.filterautocompleteresponse.results.md) | [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->\[\] | An array of [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->s. |
 |  [sectioned](./answers-core.filterautocompleteresponse.sectioned.md) | boolean | Indicates that the results are separated by field in the sections property. |
 |  [sections](./answers-core.filterautocompleteresponse.sections.md) | { label: string; results: [AutoCompleteResult](./answers-core.autocompleteresult.md)<!-- -->\[\]; }\[\] | Represents autocomplete results separated by field. |
+|  [uuid](./answers-core.filterautocompleteresponse.uuid.md) | string | A unique id which corresponds to the request. |
 

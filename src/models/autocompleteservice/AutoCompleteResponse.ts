@@ -13,6 +13,8 @@ export interface AutoCompleteResponse {
   inputIntents: SearchIntent[];
   /** The ID of the search query. */
   queryId?: string;
+  /** A unique id which corresponds to the request. */
+  uuid: string;
 }
 
 /**
@@ -45,7 +47,9 @@ export interface FilterAutoCompleteResponse {
   /** {@inheritDoc SearchIntent} */
   inputIntents: SearchIntent[];
   /** {@inheritDoc AutoCompleteResponse.queryId} */
-  queryId?: string
+  queryId?: string,
+  /** A unique id which corresponds to the request. */
+  uuid: string;
 }
 
 /**

@@ -25,5 +25,7 @@ export interface VerticalSearchResponse {
   /** {@inheritDoc VerticalSearchResponse} */
   allResultsForVertical?: VerticalSearchResponse,
   /** The {@link VerticalResults} for each search vertical. */
-  alternativeVerticals?: Readonly<VerticalResults[]>
+  alternativeVerticals?: Readonly<VerticalResults[]>,
+  /** A unique id which corresponds to the request. */
+  uuid: string
 }
