@@ -9,5 +9,5 @@ An array of [Facet](./answers-core.facet.md)<!-- -->s associated with the search
 <b>Signature:</b>
 
 ```typescript
-facets?: Readonly<Facet[]>;
+facets?: Readonly<DisplayableFacet[]>;
 ```

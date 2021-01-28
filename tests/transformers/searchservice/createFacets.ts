@@ -43,21 +43,15 @@ it('createFacets', () => {
           displayName: 'Sales',
           count: 26,
           selected: true,
-          filter: {
-            fieldId: 'c_jobCategory',
-            comparator: '$eq',
-            comparedValue: 'Sales'
-          }
+          comparator: '$eq',
+          comparedValue: 'Sales'
         },
         {
           displayName: 'Client Success',
           count: 4,
           selected: true,
-          filter: {
-            fieldId: 'c_jobCategory',
-            comparator: '$eq',
-            comparedValue: 'Client Success'
-          }
+          comparator: '$eq',
+          comparedValue: 'Client Success'
         }
       ]
     },
@@ -69,11 +63,8 @@ it('createFacets', () => {
           displayName: 'Chicago',
           count: 18,
           selected: false,
-          filter: {
-            fieldId: 'c_jobLocationShortDescription',
-            comparator: '$eq',
-            comparedValue: 'Chicago'
-          }
+          comparator: '$eq',
+          comparedValue: 'Chicago'
         }
       ]
     }

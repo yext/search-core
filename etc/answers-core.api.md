@@ -98,6 +98,22 @@ export interface DirectAnswer {
     verticalKey: string;
 }
 
+// @public
+export interface DisplayableFacet extends Facet {
+    displayName: string;
+    fieldId: string;
+    options: DisplayableFacetOption[];
+}
+
+// @public
+export interface DisplayableFacetOption extends FacetOption {
+    comparator: string;
+    comparedValue: string | number | boolean;
+    count: number;
+    displayName: string;
+    selected: boolean;
+}
+
 // Warning: (ae-internal-missing-underscore) The name "Endpoints" should be prefixed with an underscore because the declaration is marked as @internal
 //
 // @internal
@@ -120,17 +136,14 @@ export interface Endpoints {
 
 // @public
 export interface Facet {
-    displayName: string;
     fieldId: string;
     options: FacetOption[];
 }
 
 // @public
 export interface FacetOption {
-    count: number;
-    displayName: string;
-    filter: SimpleFilter;
-    selected: boolean;
+    comparator: string;
+    comparedValue: string | number | boolean;
 }
 
 // @public
@@ -336,7 +349,7 @@ export interface VerticalResults {
 export interface VerticalSearchRequest {
     context?: Context;
     coordinates?: Coordinates_2;
-    facetFilters?: SimpleFilter[];
+    facets?: Facet[];
     limit?: number;
     offset?: number;
     query: string;
@@ -356,7 +369,7 @@ export interface VerticalSearchRequest {
 export interface VerticalSearchResponse {
     allResultsForVertical?: VerticalSearchResponse;
     alternativeVerticals?: Readonly<VerticalResults[]>;
-    facets?: Readonly<Facet[]>;
+    facets?: Readonly<DisplayableFacet[]>;
     locationBias?: LocationBias;
     queryId: string;
     searchIntents?: SearchIntent[];
