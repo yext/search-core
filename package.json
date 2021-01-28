@@ -11,6 +11,7 @@
   "scripts": {
     "test": "npm run lint && jest",
     "lint": "eslint .",
+    "tsc": "tsc",
     "tsc-cjs": "tsc -p tsconfig.cjs.json",
     "tsc-esm": "tsc -p tsconfig.esm.json",
     "build": "npm run tsc-cjs && npm run tsc-esm && npm run api-extractor && npm run generate-docs",
