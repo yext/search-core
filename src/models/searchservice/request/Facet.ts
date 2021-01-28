@@ -7,7 +7,7 @@ export interface Facet {
   /** The associated fieldId. */
   fieldId: string;
   /**
-   * An array of {@link FacetOption}s
+   * An array of {@link FacetOption}
    *
    * @remarks
    * To indicate that a facet should be disabled, supply an empty array

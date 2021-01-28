@@ -17,5 +17,5 @@ export interface Facet
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [fieldId](./answers-core.facet.fieldid.md) | string | The associated fieldId. |
-|  [options](./answers-core.facet.options.md) | [FacetOption](./answers-core.facetoption.md)<!-- -->\[\] | An array of [FacetOption](./answers-core.facetoption.md)<!-- -->s |
+|  [options](./answers-core.facet.options.md) | [FacetOption](./answers-core.facetoption.md)<!-- -->\[\] | An array of [FacetOption](./answers-core.facetoption.md) |
 

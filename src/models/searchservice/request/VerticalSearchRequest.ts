@@ -23,7 +23,7 @@ export interface VerticalSearchRequest {
   limit?: number,
   /** The result offset which allows for fetching more results with the same query. */
   offset?: number,
-  /** Indicates that facets should be retieved. */
+  /** Indicates that facets should be retrieved. */
   retrieveFacets?: boolean,
   /** The facet filters to apply to the search. */
   facets?: Facet[],

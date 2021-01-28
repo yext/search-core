@@ -4,7 +4,7 @@
 
 ## DisplayableFacetOption.displayName property
 
-The name of the facet option.
+The name of the facet option which is meant to be displayed to the end user.
 
 <b>Signature:</b>
 

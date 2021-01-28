@@ -25,7 +25,7 @@ export interface VerticalSearchRequest
 |  [querySource?](./answers-core.verticalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request. |
 |  [queryTrigger?](./answers-core.verticalsearchrequest.querytrigger.md) | QueryTrigger | <i>(Optional)</i> Indicates what triggered the query. |
 |  [referrerPageUrl?](./answers-core.verticalsearchrequest.referrerpageurl.md) | string | <i>(Optional)</i> The URl of the page which referred the user to the current page. |
-|  [retrieveFacets?](./answers-core.verticalsearchrequest.retrievefacets.md) | boolean | <i>(Optional)</i> Indicates that facets should be retieved. |
+|  [retrieveFacets?](./answers-core.verticalsearchrequest.retrievefacets.md) | boolean | <i>(Optional)</i> Indicates that facets should be retrieved. |
 |  [sessionTrackingEnabled?](./answers-core.verticalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [skipSpellCheck?](./answers-core.verticalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> Skips spell checking if true. |
 |  [sortBys?](./answers-core.verticalsearchrequest.sortbys.md) | [SortBy](./answers-core.sortby.md)<!-- -->\[\] | <i>(Optional)</i> Determines how results are sorted. \* |

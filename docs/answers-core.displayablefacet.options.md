@@ -4,15 +4,10 @@
 
 ## DisplayableFacet.options property
 
-An array of [FacetOption](./answers-core.facetoption.md)<!-- -->s
+An array of [DisplayableFacetOption](./answers-core.displayablefacetoption.md)
 
 <b>Signature:</b>
 
 ```typescript
 options: DisplayableFacetOption[];
 ```
-
-## Remarks
-
-To indicate that a facet should be disabled, supply an empty array
-

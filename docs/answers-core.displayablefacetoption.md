@@ -20,6 +20,6 @@ export interface DisplayableFacetOption extends FacetOption
 |  [comparator](./answers-core.displayablefacetoption.comparator.md) | string | The filter comparator. |
 |  [comparedValue](./answers-core.displayablefacetoption.comparedvalue.md) | string \| number \| boolean | The value to compare. |
 |  [count](./answers-core.displayablefacetoption.count.md) | number | The number of results associated with this facet option. |
-|  [displayName](./answers-core.displayablefacetoption.displayname.md) | string | The name of the facet option. |
+|  [displayName](./answers-core.displayablefacetoption.displayname.md) | string | The name of the facet option which is meant to be displayed to the end user. |
 |  [selected](./answers-core.displayablefacetoption.selected.md) | boolean | Whether or not the filter is selected in the search results. |
 

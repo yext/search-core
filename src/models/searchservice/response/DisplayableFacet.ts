@@ -8,7 +8,7 @@ import { Facet, FacetOption } from '../request/Facet';
 export interface DisplayableFacet extends Facet {
   /** {@inheritDoc Facet.fieldId} */
   fieldId: string;
-  /** {@inheritDoc Facet.options} */
+  /** An array of {@link DisplayableFacetOption} */
   options: DisplayableFacetOption[];
   /** The name of the facet which is meant to be displayed to the user. */
   displayName: string;
@@ -24,7 +24,7 @@ export interface DisplayableFacetOption extends FacetOption {
   comparator: string;
   /** {@inheritDoc FacetOption.comparedValue} */
   comparedValue: string | number | boolean;
-  /** The name of the facet option. */
+  /** The name of the facet option which is meant  to be displayed to the end user. */
   displayName: string;
   /** The number of results associated with this facet option. */
   count: number;
