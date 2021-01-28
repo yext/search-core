@@ -1,6 +1,6 @@
 import { serializeFacets } from '../../src/serializers/serializeFacets';
 
-it('serializeFacetOptions serializes facets properly', () => {
+it('serializeFacets serializes facets properly', () => {
   const actualSerializedFilters = serializeFacets([
     { fieldId: 'c_jobCategory', options: [
         { comparator: '$eq', comparedValue: 'Sales'},
@@ -25,7 +25,7 @@ it('serializeFacetOptions serializes facets properly', () => {
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
 
-it('serializeFacetFilters serializes disabled facets properly', () => {
+it('serializeFacets serializes disabled facets properly', () => {
   const actualSerializedFilters = serializeFacets([
     { fieldId: 'c_jobCategory', options: [] },
     { fieldId: 'c_jobLocationShortDescription', options: []},
@@ -38,7 +38,7 @@ it('serializeFacetFilters serializes disabled facets properly', () => {
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
 
-it('serializeFacetFilters serializes a mix of disabled and enabled filters properly', () => {
+it('serializeFacets serializes a mix of disabled and enabled filters properly', () => {
   const actualSerializedFilters = serializeFacets([
     { fieldId: 'c_jobCategory', options: [
         {comparator: '$eq', comparedValue: 'Sales' },
