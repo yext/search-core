@@ -42,7 +42,7 @@
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search. |
 |  [DisplayableFacet](./answers-core.displayablefacet.md) | A [Facet](./answers-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./answers-core.displayablefacetoption.md) | A [FacetOption](./answers-core.facetoption.md) with extra data meant to be displayed to the end user. |
-|  [Facet](./answers-core.facet.md) | Represents dynamic filter options from the Answers API. |
+|  [Facet](./answers-core.facet.md) | Represents dynamic filter options for the Answers API. |
 |  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet. |
 |  [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) | Options for a filter autocomplete request. |
 |  [FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md) | The response of a filter autocomplete request. |

@@ -1,5 +1,5 @@
 /**
- * Represents dynamic filter options from the Answers API.
+ * Represents dynamic filter options for the Answers API.
  *
  * @public
  */
