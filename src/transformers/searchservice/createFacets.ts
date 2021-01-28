@@ -1,7 +1,7 @@
-import { Facet, FacetOption } from '../../models/searchservice/response/Facet';
+import { DisplayableFacet, DisplayableFacetOption } from '../../models/searchservice/response/DisplayableFacet';
 import { createSimpleFilter } from '../core/createSimpleFilter';
 
-export function createFacets(facets: any): Readonly<Facet[]> {
+export function createFacets(facets: any): Readonly<DisplayableFacet[]> {
   if (!facets) {
     return [];
   }
@@ -13,11 +13,16 @@ export function createFacets(facets: any): Readonly<Facet[]> {
   })));
 }
 
-function createFacetOptions(options: any[]): FacetOption[] {
-  return options.map((option: any) => ({
-    displayName: option.displayName,
-    count: option.count,
-    selected: option.selected,
-    filter: createSimpleFilter(option.filter)
-  }));
+function createFacetOptions(options: any[]): DisplayableFacetOption[] {
+  return options.map((option: any) => {
+    const simpleFilter = createSimpleFilter(option.filter);
+
+    return {
+      displayName: option.displayName,
+      count: option.count,
+      selected: option.selected,
+      comparator: simpleFilter.comparator,
+      comparedValue: simpleFilter.comparedValue
+    };
+  });
 }

@@ -1,6 +1,6 @@
 import { VerticalResults } from './VerticalResults';
 import { SearchIntent } from './SearchIntent';
-import { Facet } from './Facet';
+import { DisplayableFacet } from './DisplayableFacet';
 import { LocationBias } from './LocationBias';
 import { SpellCheck } from './SpellCheck';
 
@@ -17,7 +17,7 @@ export interface VerticalSearchResponse {
   /** An array of {@link SearchIntent}s. */
   searchIntents?: SearchIntent[];
   /** An array of {@link Facet}s associated with the search results. */
-  facets?: Readonly<Facet[]>;
+  facets?: Readonly<DisplayableFacet[]>;
   /** {@inheritDoc SpellCheck} */
   spellCheck?: SpellCheck,
   /** {@inheritDoc LocationBias} */

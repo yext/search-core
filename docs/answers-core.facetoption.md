@@ -16,8 +16,6 @@ export interface FacetOption
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [count](./answers-core.facetoption.count.md) | number | The number of results associated with this facet option. |
-|  [displayName](./answers-core.facetoption.displayname.md) | string | The name of the facet option. |
-|  [filter](./answers-core.facetoption.filter.md) | [SimpleFilter](./answers-core.simplefilter.md) | The filter associated with this facet option. |
-|  [selected](./answers-core.facetoption.selected.md) | boolean | Whether or not the filter is selected in the search results. |
+|  [comparator](./answers-core.facetoption.comparator.md) | string | The filter comparator. |
+|  [comparedValue](./answers-core.facetoption.comparedvalue.md) | string \| number \| boolean | The value to compare. |
 

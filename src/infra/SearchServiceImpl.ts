@@ -12,7 +12,7 @@ import { AnswersConfig } from '../models/core/AnswersConfig';
 import { VerticalSearchRequest } from '../models/searchservice/request/VerticalSearchRequest';
 import { VerticalSearchResponse } from '../models/searchservice/response/VerticalSearchResponse';
 import { serializeStaticFilters } from '../serializers/serializeStaticFilters';
-import { serializeFacetFilters } from '../serializers/serializeFacetFilters';
+import { serializeFacets } from '../serializers/serializeFacets';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
 
@@ -137,7 +137,7 @@ export class SearchServiceImpl implements SearchService {
       limit: request.limit,
       offset: request.offset,
       retrieveFacets: request.retrieveFacets,
-      facetFilters: request.facetFilters && serializeFacetFilters(request.facetFilters),
+      facets: request.facets && serializeFacets(request.facets),
       skipSpellCheck: request.skipSpellCheck,
       queryTrigger: request.queryTrigger,
       sessionTrackingEnabled: request.sessionTrackingEnabled,

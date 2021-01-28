@@ -4,7 +4,7 @@
 
 ## Facet interface
 
-Represents dynamic filter options from the Answers API.
+Represents dynamic filter options for the Answers API.
 
 <b>Signature:</b>
 
@@ -16,7 +16,6 @@ export interface Facet
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [displayName](./answers-core.facet.displayname.md) | string | The name of the facet which is meant to be displayed to the user. |
 |  [fieldId](./answers-core.facet.fieldid.md) | string | The associated fieldId. |
-|  [options](./answers-core.facet.options.md) | [FacetOption](./answers-core.facetoption.md)<!-- -->\[\] | An array of [FacetOption](./answers-core.facetoption.md)<!-- -->s |
+|  [options](./answers-core.facet.options.md) | [FacetOption](./answers-core.facetoption.md)<!-- -->\[\] | An array of [FacetOption](./answers-core.facetoption.md) |
 

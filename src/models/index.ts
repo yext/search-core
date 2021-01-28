@@ -26,7 +26,8 @@ export { VerticalSearchRequest } from './searchservice/request/VerticalSearchReq
 
 export { AppliedQueryFilter } from './searchservice/response/AppliedQueryFilter';
 export { DirectAnswer } from './searchservice/response/DirectAnswer';
-export { Facet, FacetOption} from './searchservice/response/Facet';
+export { Facet, FacetOption} from './searchservice/request/Facet';
+export { DisplayableFacet, DisplayableFacetOption} from './searchservice/response/DisplayableFacet';
 export { HighlightedValue } from './searchservice/response/HighlightedValue';
 export { LocationBias, LocationBiasMethod } from './searchservice/response/LocationBias';
 export { Result } from './searchservice/response/Result';
