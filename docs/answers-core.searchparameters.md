@@ -17,5 +17,5 @@ export interface SearchParameters
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [fields](./answers-core.searchparameters.fields.md) | [SearchParameterField](./answers-core.searchparameterfield.md)<!-- -->\[\] | An array of [SearchParameterField](./answers-core.searchparameterfield.md) |
-|  [sectioned](./answers-core.searchparameters.sectioned.md) | boolean | Determines whether or not the results of the [FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md) are separated by field. |
+|  [sectioned](./answers-core.searchparameters.sectioned.md) | boolean | Determines whether or not the results of the [FilterAutocompleteResponse](./answers-core.filterautocompleteresponse.md) are separated by field. |
 

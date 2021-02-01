@@ -1,6 +1,6 @@
 import { QueryParams } from '../http/params';
 
-export interface AutoCompleteQueryParams extends QueryParams {
+export interface AutocompleteQueryParams extends QueryParams {
   input: string,
   experienceKey: string,
   api_key: string,

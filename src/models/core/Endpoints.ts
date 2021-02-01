@@ -8,7 +8,7 @@ export interface Endpoints {
   verticalSearch?: string,
   questionSubmission?: string,
   status?: string,
-  universalAutoComplete?: string,
-  verticalAutoComplete?: string,
-  filterAutoComplete?: string
+  universalAutocomplete?: string,
+  verticalAutocomplete?: string,
+  filterAutocomplete?: string
 }
