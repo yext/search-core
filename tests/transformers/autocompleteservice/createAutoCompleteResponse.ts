@@ -1,10 +1,10 @@
 import { SearchIntent } from '../../../src/models/searchservice/response/SearchIntent';
-import { createAutoCompleteResponse, createFilterAutoCompleteResponse } from '../../../src/transformers/autocompleteservice/createAutoCompleteResponse';
-import mockAutoCompleteResponse from '../../fixtures/autocompleteresponse.json';
-import mockAutoCompleteResponseWithSections from '../../fixtures/autocompleteresponsewithsections.json';
-import mockAutoCompleteResponseWithEntities from '../../fixtures/autocompleteresponsewithfetchedentities.json';
+import { createAutocompleteResponse, createFilterAutocompleteResponse } from '../../../src/transformers/autocompleteservice/createAutocompleteResponse';
+import mockAutocompleteResponse from '../../fixtures/autocompleteresponse.json';
+import mockAutocompleteResponseWithSections from '../../fixtures/autocompleteresponsewithsections.json';
+import mockAutocompleteResponseWithEntities from '../../fixtures/autocompleteresponsewithfetchedentities.json';
 
-describe('AutoCompleteResponse', () => {
+describe('AutocompleteResponse', () => {
   it('autocomplete response without sections is parsed correctly', () => {
     const expectedResponse = {
       inputIntents: [SearchIntent.NearMe],
@@ -21,7 +21,7 @@ describe('AutoCompleteResponse', () => {
       ],
       uuid: '266f5720-2829-46f0-808f-651075879692'
     };
-    const actualResponse = createAutoCompleteResponse(mockAutoCompleteResponse);
+    const actualResponse = createAutocompleteResponse(mockAutocompleteResponse);
     expect(actualResponse).toEqual(expectedResponse);
   });
 
@@ -55,7 +55,7 @@ describe('AutoCompleteResponse', () => {
       queryId: '42d5b709-3b9f-464a-b9b5-764467cbf540',
       uuid: '266f5720-2829-46f0-808f-651075879692'
     };
-    const actualResponse = createFilterAutoCompleteResponse(mockAutoCompleteResponseWithSections);
+    const actualResponse = createFilterAutocompleteResponse(mockAutocompleteResponseWithSections);
     expect(actualResponse).toEqual(expectedResponse);
   });
 
@@ -120,7 +120,7 @@ describe('AutoCompleteResponse', () => {
       queryId: '42d5b709-3b9f-464a-b9b5-764467cbf540',
       uuid: '266f5720-2829-46f0-808f-651075879692'
     };
-    const actualResponse = createFilterAutoCompleteResponse(mockAutoCompleteResponseWithEntities);
+    const actualResponse = createFilterAutocompleteResponse(mockAutocompleteResponseWithEntities);
     expect(actualResponse).toEqual(expectedResponse);
   });
 
@@ -131,7 +131,7 @@ describe('AutoCompleteResponse', () => {
       }
     };
     expect(() => {
-      createAutoCompleteResponse(dataWithNoResponse);
+      createAutocompleteResponse(dataWithNoResponse);
     }).toThrow('The autocomplete data does not contain a response property');
   });
 
@@ -142,7 +142,7 @@ describe('AutoCompleteResponse', () => {
       }
     };
     expect(() => {
-      createFilterAutoCompleteResponse(dataWithNoResponse);
+      createFilterAutocompleteResponse(dataWithNoResponse);
     }).toThrow('The autocomplete data does not contain a response property');
   });
 
@@ -151,7 +151,7 @@ describe('AutoCompleteResponse', () => {
       response: {}
     };
     expect(() => {
-      createAutoCompleteResponse(dataWithEmptyResponse);
+      createAutocompleteResponse(dataWithEmptyResponse);
     }).toThrow('The autocomplete response is empty');
   });
 
@@ -160,7 +160,7 @@ describe('AutoCompleteResponse', () => {
       response: {}
     };
     expect(() => {
-      createFilterAutoCompleteResponse(dataWithEmptyResponse);
+      createFilterAutocompleteResponse(dataWithEmptyResponse);
     }).toThrow('The autocomplete response is empty');
   });
 });

@@ -6,9 +6,9 @@ import { SearchIntent } from '../searchservice/response/SearchIntent';
  *
  * @public
  */
-export interface AutoCompleteResponse {
-  /** An array of {@link AutoCompleteResult}s. */
-  results: AutoCompleteResult[];
+export interface AutocompleteResponse {
+  /** An array of {@link AutocompleteResult}s. */
+  results: AutocompleteResult[];
   /** {@inheritDoc SearchIntent} */
   inputIntents: SearchIntent[];
   /** The ID of the search query. */
@@ -22,7 +22,7 @@ export interface AutoCompleteResponse {
  *
  * @public
  */
-export interface FilterAutoCompleteResponse {
+export interface FilterAutocompleteResponse {
   /** Indicates that the results are separated by field in the sections property. */
   sectioned: boolean,
   /**
@@ -34,19 +34,19 @@ export interface FilterAutoCompleteResponse {
   sections: {
     /** A display label for the field. */
     label: string,
-    /** An array of {@link AutoCompleteResult}s. */
-    results: AutoCompleteResult[];
+    /** An array of {@link AutocompleteResult}s. */
+    results: AutocompleteResult[];
   }[],
   /**
-   * An array of {@link AutoCompleteResult}s.
+   * An array of {@link AutocompleteResult}s.
    *
    * @remarks
    * This array will only be populated if sectioned is false.
    */
-  results: AutoCompleteResult[],
+  results: AutocompleteResult[],
   /** {@inheritDoc SearchIntent} */
   inputIntents: SearchIntent[];
-  /** {@inheritDoc AutoCompleteResponse.queryId} */
+  /** {@inheritDoc AutocompleteResponse.queryId} */
   queryId?: string,
   /** A unique id which corresponds to the request. */
   uuid: string;
@@ -57,7 +57,7 @@ export interface FilterAutoCompleteResponse {
  *
  * @public
  */
-export interface AutoCompleteResult {
+export interface AutocompleteResult {
   /** The value of an autocomplete suggestion. */
   value: string;
   /**
@@ -68,7 +68,7 @@ export interface AutoCompleteResult {
    */
   filter?: SimpleFilter;
   /**
-   * The fieldId which corresponds to the AutoCompleteResult value.
+   * The fieldId which corresponds to the AutocompleteResult value.
    *
    * @remarks
    * This property is only defined for filter autocomplete requests.
