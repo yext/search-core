@@ -1,11 +1,11 @@
-import { AutoCompleteResponse, FilterAutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
-import { UniversalAutoCompleteRequest, FilterAutoCompleteRequest, VerticalAutoCompleteRequest } from '../models/autocompleteservice/AutoCompleteRequest';
+import { AutocompleteResponse, FilterAutocompleteResponse } from '../models/autocompleteservice/AutocompleteResponse';
+import { UniversalAutocompleteRequest, FilterAutocompleteRequest, VerticalAutocompleteRequest } from '../models/autocompleteservice/AutocompleteRequest';
 
 /**
  * A service for autocomplete requests.
  */
-export interface AutoCompleteService {
-  universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse>;
-  verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse>;
-  filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse>;
+export interface AutocompleteService {
+  universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>;
+  verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse>;
+  filterAutocomplete(request: FilterAutocompleteRequest): Promise<FilterAutocompleteResponse>;
  }

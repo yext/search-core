@@ -7,10 +7,10 @@ import { VerticalSearchResponse } from './models/searchservice/response/Vertical
 import { QuestionSubmissionService } from './services/QuestionSubmissionService';
 import { QuestionSubmissionRequest } from './models/questionsubmission/QuestionSubmissionRequest';
 import { QuestionSubmissionResponse } from './models/questionsubmission/QuestionSubmissionResponse';
-import { UniversalAutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest }
-  from './models/autocompleteservice/AutoCompleteRequest';
-import { AutoCompleteResponse, FilterAutoCompleteResponse } from './models/autocompleteservice/AutoCompleteResponse';
-import { AutoCompleteService } from './services/AutoCompleteService';
+import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterAutocompleteRequest }
+  from './models/autocompleteservice/AutocompleteRequest';
+import { AutocompleteResponse, FilterAutocompleteResponse } from './models/autocompleteservice/AutocompleteResponse';
+import { AutocompleteService } from './services/AutocompleteService';
 
 /**
  * Provides methods for executing searches, submitting questions, and performing autocompletes.
@@ -22,7 +22,7 @@ export class AnswersCore {
   constructor(
     private searchService: SearchService,
     private questionSubmissionService: QuestionSubmissionService,
-    private autoCompleteService: AutoCompleteService
+    private autoCompleteService: AutocompleteService
   ) {}
 
   /**
@@ -69,8 +69,8 @@ export class AnswersCore {
    *
    * @param request - Universal autocomplete request options
    */
-  universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
-    return this.autoCompleteService.universalAutoComplete(request);
+  universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse> {
+    return this.autoCompleteService.universalAutocomplete(request);
   }
 
   /**
@@ -81,8 +81,8 @@ export class AnswersCore {
    *
    * @param request - Vertical autocomplete request options
    */
-  verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse> {
-    return this.autoCompleteService.verticalAutoComplete(request);
+  verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse> {
+    return this.autoCompleteService.verticalAutocomplete(request);
   }
 
   /**
@@ -99,7 +99,7 @@ export class AnswersCore {
    *
    * @param request - Filter autocomplete request options
    */
-  filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse> {
-    return this.autoCompleteService.filterAutoComplete(request);
+  filterAutocomplete(request: FilterAutocompleteRequest): Promise<FilterAutocompleteResponse> {
+    return this.autoCompleteService.filterAutocomplete(request);
   }
 }

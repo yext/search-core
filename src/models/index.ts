@@ -6,8 +6,8 @@ export { AnswersConfig } from './core/AnswersConfig';
 export { Endpoints } from './core/Endpoints';
 
 // Autocomplete service
-export * from './autocompleteservice/AutoCompleteRequest';
-export * from './autocompleteservice/AutoCompleteResponse';
+export * from './autocompleteservice/AutocompleteRequest';
+export * from './autocompleteservice/AutocompleteResponse';
 
 // Question submission service
 export { QuestionSubmissionRequest } from './questionsubmission/QuestionSubmissionRequest';

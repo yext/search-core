@@ -1,7 +1,7 @@
-import { createAutoCompleteResult } from '../../../src/transformers/autocompleteservice/createAutoCompleteResult';
+import { createAutocompleteResult } from '../../../src/transformers/autocompleteservice/createAutocompleteResult';
 
 
-describe('AutoCompleteResult', () => {
+describe('AutocompleteResult', () => {
   it('result with no filter is parsed correctly', () => {
     const resultWithNoFilter = {
       key: 'key',
@@ -22,7 +22,7 @@ describe('AutoCompleteResult', () => {
       }
     };
     const expectedResult = resultWithNoFilter;
-    const actualResult = createAutoCompleteResult(resultWithNoFilter);
+    const actualResult = createAutocompleteResult(resultWithNoFilter);
     expect(actualResult).toEqual(expectedResult);
   });
 
@@ -62,7 +62,7 @@ describe('AutoCompleteResult', () => {
         }
       }
     };
-    const actualResult = createAutoCompleteResult(resultWithNoMatchedSubstrings);
+    const actualResult = createAutocompleteResult(resultWithNoMatchedSubstrings);
     expect(actualResult).toEqual(expectedResult);
   });
 
@@ -97,7 +97,7 @@ describe('AutoCompleteResult', () => {
         }
       ]
     };
-    const actualResult = createAutoCompleteResult(resultWithNoRelatedItem);
+    const actualResult = createAutocompleteResult(resultWithNoRelatedItem);
     expect(actualResult).toEqual(expectedResult);
   });
 });

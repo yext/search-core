@@ -3,7 +3,7 @@
  *
  * @public
  */
-export interface UniversalAutoCompleteRequest {
+export interface UniversalAutocompleteRequest {
   /** The input string for autocomplete. */
   input: string,
   /** Enables session tracking. */
@@ -15,10 +15,10 @@ export interface UniversalAutoCompleteRequest {
  *
  * @public
  */
-export interface VerticalAutoCompleteRequest {
-  /** {@inheritDoc UniversalAutoCompleteRequest.input} */
+export interface VerticalAutocompleteRequest {
+  /** {@inheritDoc UniversalAutocompleteRequest.input} */
   input: string,
-  /** {@inheritDoc UniversalAutoCompleteRequest.sessionTrackingEnabled} */
+  /** {@inheritDoc UniversalAutocompleteRequest.sessionTrackingEnabled} */
   sessionTrackingEnabled?: boolean,
   /** The key for the vertical to get autocomplete suggestions from. */
   verticalKey: string,
@@ -29,12 +29,12 @@ export interface VerticalAutoCompleteRequest {
  *
  * @public
  */
-export interface FilterAutoCompleteRequest {
-  /** {@inheritDoc UniversalAutoCompleteRequest.input} */
+export interface FilterAutocompleteRequest {
+  /** {@inheritDoc UniversalAutocompleteRequest.input} */
   input: string,
-  /** {@inheritDoc UniversalAutoCompleteRequest.sessionTrackingEnabled} */
+  /** {@inheritDoc UniversalAutocompleteRequest.sessionTrackingEnabled} */
   sessionTrackingEnabled?: boolean,
-  /** {@inheritDoc VerticalAutoCompleteRequest.verticalKey} */
+  /** {@inheritDoc VerticalAutocompleteRequest.verticalKey} */
   verticalKey: string,
   /** {@inheritDoc SearchParameters} */
   searchParameters: SearchParameters
@@ -44,13 +44,13 @@ export interface FilterAutoCompleteRequest {
  * Options for the fields which the filter autocomplete request runs on.
  *
  * @privateRemarks
- * We may be able to remove this model and instead put these options in FilterAutoCompleteRequest.
+ * We may be able to remove this model and instead put these options in FilterAutocompleteRequest.
  *
  * @public
  */
 export interface SearchParameters {
   /**
-   * Determines whether or not the results of the {@link FilterAutoCompleteResponse} are separated by field.
+   * Determines whether or not the results of the {@link FilterAutocompleteResponse} are separated by field.
    */
   sectioned: boolean,
   /** An array of {@link SearchParameterField} */
@@ -68,7 +68,7 @@ export interface SearchParameterField {
   /** The entityType to perform the autocomplete on. */
   entityType: string,
   /**
-   * Indicates whether or not to return the {@link AutoCompleteResult.relatedItem} associated with the autocomplete result.
+   * Indicates whether or not to return the {@link AutocompleteResult.relatedItem} associated with the autocomplete result.
    */
   fetchEntities: boolean
 }

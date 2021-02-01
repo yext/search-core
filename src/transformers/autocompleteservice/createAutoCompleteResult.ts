@@ -1,7 +1,7 @@
-import { AutoCompleteResult } from '../../models/autocompleteservice/AutoCompleteResponse';
+import { AutocompleteResult } from '../../models/autocompleteservice/AutocompleteResponse';
 import { createSimpleFilter } from '../core/createSimpleFilter';
 
-export function createAutoCompleteResult(result: any): AutoCompleteResult {
+export function createAutocompleteResult(result: any): AutocompleteResult {
   return Object.freeze({
     filter: result.filter && createSimpleFilter(result.filter),
     key: result.key,

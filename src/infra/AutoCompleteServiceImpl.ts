@@ -1,13 +1,13 @@
-import { createAutoCompleteResponse, createFilterAutoCompleteResponse } from '../transformers/autocompleteservice/createAutoCompleteResponse';
-import { VerticalAutoCompleteRequest, FilterAutoCompleteRequest,
-  UniversalAutoCompleteRequest, SearchParameters, SearchParameterField }
-  from '../models/autocompleteservice/AutoCompleteRequest';
-import { AutoCompleteResponse, FilterAutoCompleteResponse } from '../models/autocompleteservice/AutoCompleteResponse';
+import { createAutocompleteResponse, createFilterAutocompleteResponse } from '../transformers/autocompleteservice/createAutocompleteResponse';
+import { VerticalAutocompleteRequest, FilterAutocompleteRequest,
+  UniversalAutocompleteRequest, SearchParameters, SearchParameterField }
+  from '../models/autocompleteservice/AutocompleteRequest';
+import { AutocompleteResponse, FilterAutocompleteResponse } from '../models/autocompleteservice/AutocompleteResponse';
 import { defaultApiVersion, defaultEndpoints } from '../constants';
 import { AnswersConfig } from '../models/core/AnswersConfig';
 import { HttpService }from '../services/HttpService';
-import { AutoCompleteQueryParams } from '../models/autocompleteservice/autocompleteparams';
-import { AutoCompleteService } from '../services/AutoCompleteService';
+import { AutocompleteQueryParams } from '../models/autocompleteservice/autocompleteparams';
+import { AutocompleteService } from '../services/AutocompleteService';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
 
@@ -15,7 +15,7 @@ import { ApiResponse } from '../models/answersapi/ApiResponse';
  * Internal interface representing the query params which are sent for a vertical
  * autocomplete request.
  */
-interface VerticalAutoCompleteQueryParams extends AutoCompleteQueryParams {
+interface VerticalAutocompleteQueryParams extends AutocompleteQueryParams {
   verticalKey?: string,
 }
 
@@ -23,7 +23,7 @@ interface VerticalAutoCompleteQueryParams extends AutoCompleteQueryParams {
  * Internal interface representing the query params which are sent for a filter
  * autocomplete request.
  */
-interface FilterAutoCompleteQueryParams extends AutoCompleteQueryParams {
+interface FilterAutocompleteQueryParams extends AutocompleteQueryParams {
   verticalKey?: string,
   search_parameters?: string
 }
@@ -31,7 +31,7 @@ interface FilterAutoCompleteQueryParams extends AutoCompleteQueryParams {
 /**
 * A service that performs query suggestions.
 */
-export class AutoCompleteServiceImpl implements AutoCompleteService {
+export class AutocompleteServiceImpl implements AutocompleteService {
   private config: AnswersConfig;
   private httpService: HttpService;
   private apiResponseValidator;
@@ -47,22 +47,22 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
     this.config = config;
     this.httpService = httpRequester;
     this.apiResponseValidator = apiResponseValidator;
-    this.universalEndpoint = this.config.endpoints?.universalAutoComplete
-      ?? defaultEndpoints.universalAutoComplete;
-    this.verticalEndpoint = this.config.endpoints?.verticalAutoComplete
-      ?? defaultEndpoints.verticalAutoComplete;
-    this.filterEndpoint = this.config.endpoints?.filterAutoComplete
-      ?? defaultEndpoints.filterAutoComplete;
+    this.universalEndpoint = this.config.endpoints?.universalAutocomplete
+      ?? defaultEndpoints.universalAutocomplete;
+    this.verticalEndpoint = this.config.endpoints?.verticalAutocomplete
+      ?? defaultEndpoints.verticalAutocomplete;
+    this.filterEndpoint = this.config.endpoints?.filterAutocomplete
+      ?? defaultEndpoints.filterAutocomplete;
   }
 
   /**
    * Retrieves query suggestions for universal.
    *
-   * @param {AutoCompleteRequest} request
-   * @returns {Promise<AutoCompleteResponse>}
+   * @param {AutocompleteRequest} request
+   * @returns {Promise<AutocompleteResponse>}
    */
-  async universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse> {
-    const queryParams: AutoCompleteQueryParams = {
+  async universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse> {
+    const queryParams: AutocompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
       api_key: this.config.apiKey,
@@ -81,17 +81,17 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
       return Promise.reject(validationResult);
     }
 
-    return createAutoCompleteResponse(response);
+    return createAutocompleteResponse(response);
   }
 
   /**
    * Retrieves query suggestions for a vertical.
    *
-   * @param {VerticalAutoCompleteRequest} request
-   * @returns {Promise<AutoCompleteResponse>}
+   * @param {VerticalAutocompleteRequest} request
+   * @returns {Promise<AutocompleteResponse>}
    */
-  async verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse> {
-    const queryParams: VerticalAutoCompleteQueryParams = {
+  async verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse> {
+    const queryParams: VerticalAutocompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
       api_key: this.config.apiKey,
@@ -111,18 +111,18 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
       return Promise.reject(validationResult);
     }
 
-    return createAutoCompleteResponse(response);
+    return createAutocompleteResponse(response);
   }
 
   /**
    * Retrieves query suggestions for filter search.
    *
-   * @param {FilterAutoCompleteRequest} request
-   * @returns {Promise<AutoCompleteResponse>}
+   * @param {FilterAutocompleteRequest} request
+   * @returns {Promise<AutocompleteResponse>}
    */
-  async filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse> {
+  async filterAutocomplete(request: FilterAutocompleteRequest): Promise<FilterAutocompleteResponse> {
     const searchParams = this.getFilterSearchParams(request.searchParameters);
-    const queryParams: FilterAutoCompleteQueryParams = {
+    const queryParams: FilterAutocompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
       api_key: this.config.apiKey,
@@ -143,7 +143,7 @@ export class AutoCompleteServiceImpl implements AutoCompleteService {
       return Promise.reject(validationResult);
     }
 
-    return createFilterAutoCompleteResponse(response);
+    return createFilterAutocompleteResponse(response);
   }
 
   private getFilterSearchParams(searchParams: SearchParameters) {
