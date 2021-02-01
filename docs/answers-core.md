@@ -45,7 +45,7 @@
 |  [Facet](./answers-core.facet.md) | Represents dynamic filter options for the Answers API. |
 |  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet. |
 |  [FilterSearchRequest](./answers-core.filtersearchrequest.md) | Options for a filtersearch request. |
-|  [FilterSearchResponse](./answers-core.filtersearchresponse.md) | The response of a filtersearch request. |
+|  [FilterSearchResponse](./answers-core.filtersearchresponse.md) | The response of a filtersearch |
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the Answers API emphasized. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |

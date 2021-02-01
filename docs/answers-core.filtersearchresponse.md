@@ -4,7 +4,7 @@
 
 ## FilterSearchResponse interface
 
-The response of a filtersearch request.
+The response of a filtersearch
 
 <b>Signature:</b>
 

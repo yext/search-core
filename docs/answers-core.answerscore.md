@@ -20,7 +20,7 @@ The constructor for this class is marked as internal. Third-party code should no
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [filterSearch(request)](./answers-core.answerscore.filtersearch.md) |  | Performs a filtersearch request against specified fields within a single vertical. |
+|  [filterSearch(request)](./answers-core.answerscore.filtersearch.md) |  | Performs an autocomplete request against specified fields within a single vertical. |
 |  [submitQuestion(request)](./answers-core.answerscore.submitquestion.md) |  | Submits a custom question to the Answers API. |
 |  [universalAutocomplete(request)](./answers-core.answerscore.universalautocomplete.md) |  | Performs an autocomplete request across all verticals. |
 |  [universalSearch(request)](./answers-core.answerscore.universalsearch.md) |  | Performs an Answers search across all verticals. |
