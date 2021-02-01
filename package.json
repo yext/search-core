@@ -2,9 +2,8 @@
   "name": "@yext/answers-core",
   "version": "1.0.0",
   "description": "Javascript Networking Library for the Yext Answers API",
-  "main": "./dist/commonjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/answers-core.d.ts",
+  "main": "./dist/bundle.js",
+  "types": "./dist/bundle.d.ts",
   "engines": {
     "node": ">=0.12"
   },
@@ -14,7 +13,7 @@
     "tsc": "tsc",
     "tsc-cjs": "tsc -p tsconfig.cjs.json",
     "tsc-esm": "tsc -p tsconfig.esm.json",
-    "build": "npm run tsc-cjs && npm run tsc-esm && npm run api-extractor && npm run generate-docs",
+    "build": "npm run tsc-cjs && npm run tsc-esm && npx webpack && npm run api-extractor && npm run generate-docs",
     "build-ci": "npm run tsc-cjs && npm run api-extractor-ci && npm run generate-docs",
     "dev": "npm run tsc-esm -- --watch",
     "prepublishOnly": "npm run build",
@@ -34,6 +33,7 @@
   "homepage": "https://github.com/yext/answers-core#readme",
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
     "@microsoft/api-documenter": "^7.11.3",
@@ -42,12 +42,18 @@
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
     "babel-jest": "^26.6.1",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.11.0",
     "jest": "^26.6.0",
     "jest-fetch-mock": "^3.0.3",
-    "typescript": "^4.0.3"
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.0.3",
+    "webpack": "^5.18.0",
+    "webpack-cli": "^4.4.0"
   },
   "dependencies": {
+    "@babel/runtime-corejs3": "^7.12.5",
+    "core-js": "^3.8.3",
     "cross-fetch": "^3.0.6"
   },
   "jest": {
