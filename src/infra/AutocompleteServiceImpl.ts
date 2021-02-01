@@ -1,6 +1,6 @@
 import { createAutocompleteResponse, createFilterSearchResponse } from '../transformers/autocompleteservice/createAutocompleteResponse';
 import { VerticalAutocompleteRequest, FilterSearchRequest,
-  UniversalAutocompleteRequest, SearchParameters, SearchParameterField }
+  UniversalAutocompleteRequest, SearchParameterField }
   from '../models/autocompleteservice/AutocompleteRequest';
 import { AutocompleteResponse, FilterSearchResponse } from '../models/autocompleteservice/AutocompleteResponse';
 import { defaultApiVersion, defaultEndpoints } from '../constants';
@@ -121,7 +121,10 @@ export class AutocompleteServiceImpl implements AutocompleteService {
    * @returns {Promise<AutocompleteResponse>}
    */
   async filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse> {
-    const searchParams = this.getFilterSearchParams(request.searchParameters);
+    const searchParams = {
+      sectioned: request.sectioned,
+      fields: this.transformSearchParameterFields(request.fields)
+    };
     const queryParams: FilterSearchQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
@@ -146,18 +149,13 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     return createFilterSearchResponse(response);
   }
 
-  private getFilterSearchParams(searchParams: SearchParameters) {
-    const convertedFields = searchParams.fields.map((field: SearchParameterField) => (
+  private transformSearchParameterFields(fields: SearchParameterField[]) {
+    return fields.map(({ fieldApiName, entityType, fetchEntities}) => (
       {
-        fieldId: field.fieldApiName,
-        entityTypeId: field.entityType,
-        shouldFetchEntities: field.fetchEntities
+        fieldId: fieldApiName,
+        entityTypeId: entityType,
+        shouldFetchEntities: fetchEntities
       }
     ));
-    const convertedSearchParams = {
-      sectioned: searchParams.sectioned,
-      fields: convertedFields
-    };
-    return convertedSearchParams;
   }
  }

@@ -36,22 +36,7 @@ export interface FilterSearchRequest {
   sessionTrackingEnabled?: boolean,
   /** {@inheritDoc VerticalAutocompleteRequest.verticalKey} */
   verticalKey: string,
-  /** {@inheritDoc SearchParameters} */
-  searchParameters: SearchParameters
-}
-
-/**
- * Options for the fields which the filtersearch request runs on.
- *
- * @privateRemarks
- * We may be able to remove this model and instead put these options in FilterSearchRequest.
- *
- * @public
- */
-export interface SearchParameters {
-  /**
-   * Determines whether or not the results of the {@link FilterSearchResponse} are separated by field.
-   */
+  /** Determines whether or not the results of the {@link FilterSearchResponse} are separated by field. */
   sectioned: boolean,
   /** An array of {@link SearchParameterField} */
   fields: SearchParameterField[];
