@@ -62,10 +62,7 @@ export interface AutocompleteResult {
         length: number;
         offset: number;
     }[];
-    relatedItem?: {
-        data: Record<string, unknown>;
-        highlightedFields: Record<string, unknown>;
-    };
+    relatedItem?: Result;
     value: string;
 }
 
@@ -243,7 +240,7 @@ export interface Result {
     link?: string;
     name?: string;
     rawData: Record<string, unknown>;
-    source: Source;
+    source?: Source;
 }
 
 // @public
