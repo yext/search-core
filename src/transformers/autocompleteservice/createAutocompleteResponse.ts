@@ -1,4 +1,4 @@
-import { AutocompleteResponse, AutocompleteResult, FilterAutocompleteResponse } from '../../models/autocompleteservice/AutocompleteResponse';
+import { AutocompleteResponse, AutocompleteResult, FilterSearchResponse } from '../../models/autocompleteservice/AutocompleteResponse';
 import { createAutocompleteResult } from './createAutocompleteResult';
 
 export function createAutocompleteResponse(data: any): Readonly<AutocompleteResponse> {
@@ -20,7 +20,7 @@ export function createAutocompleteResponse(data: any): Readonly<AutocompleteResp
   });
 }
 
-export function createFilterAutocompleteResponse(data: any): Readonly<FilterAutocompleteResponse> {
+export function createFilterSearchResponse(data: any): Readonly<FilterSearchResponse> {
   if (!data.response) {
     throw new Error('The autocomplete data does not contain a response property');
   }
@@ -32,7 +32,7 @@ export function createFilterAutocompleteResponse(data: any): Readonly<FilterAuto
   let isSectioned = false;
   let sections = [];
   let responseResults: AutocompleteResult[] = [];
-  // a filter autocomplete response may have a sections object
+  // a filtersearch response may have a sections object
   if (response.sections) {
     isSectioned = true;
     sections = response.sections.map((section: any) => ({

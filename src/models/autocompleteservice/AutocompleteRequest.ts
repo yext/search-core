@@ -25,11 +25,11 @@ export interface VerticalAutocompleteRequest {
 }
 
 /**
- * Options for a filter autocomplete request.
+ * Options for a filtersearch request.
  *
  * @public
  */
-export interface FilterAutocompleteRequest {
+export interface FilterSearchRequest {
   /** {@inheritDoc UniversalAutocompleteRequest.input} */
   input: string,
   /** {@inheritDoc UniversalAutocompleteRequest.sessionTrackingEnabled} */
@@ -41,16 +41,16 @@ export interface FilterAutocompleteRequest {
 }
 
 /**
- * Options for the fields which the filter autocomplete request runs on.
+ * Options for the fields which the filtersearch request runs on.
  *
  * @privateRemarks
- * We may be able to remove this model and instead put these options in FilterAutocompleteRequest.
+ * We may be able to remove this model and instead put these options in FilterSearchRequest.
  *
  * @public
  */
 export interface SearchParameters {
   /**
-   * Determines whether or not the results of the {@link FilterAutocompleteResponse} are separated by field.
+   * Determines whether or not the results of the {@link FilterSearchResponse} are separated by field.
    */
   sectioned: boolean,
   /** An array of {@link SearchParameterField} */

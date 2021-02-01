@@ -7,9 +7,9 @@ import { VerticalSearchResponse } from './models/searchservice/response/Vertical
 import { QuestionSubmissionService } from './services/QuestionSubmissionService';
 import { QuestionSubmissionRequest } from './models/questionsubmission/QuestionSubmissionRequest';
 import { QuestionSubmissionResponse } from './models/questionsubmission/QuestionSubmissionResponse';
-import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterAutocompleteRequest }
+import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterSearchRequest }
   from './models/autocompleteservice/AutocompleteRequest';
-import { AutocompleteResponse, FilterAutocompleteResponse } from './models/autocompleteservice/AutocompleteResponse';
+import { AutocompleteResponse, FilterSearchResponse } from './models/autocompleteservice/AutocompleteResponse';
 import { AutocompleteService } from './services/AutocompleteService';
 
 /**
@@ -90,16 +90,16 @@ export class AnswersCore {
    *
    * @remarks
    * This differs from the vertical autocomplete because the vertical autocomplete operates on all entity fields whereas
-   * filter autocomplete operates only on specified fields. If rejected, the reason will be an {@link AnswersError}.
+   * filtersearch operates only on specified fields. If rejected, the reason will be an {@link AnswersError}.
    *
    * @example
    * A site has a 'products' vertical and would like a way to allow the user to narrow down the results by the product name.
-   * The site can add a second search bar powered by filter autocomplete which will include only product names as search
+   * The site can add a second search bar powered by filtersearch which will include only product names as search
    * suggestions.
    *
-   * @param request - Filter autocomplete request options
+   * @param request - filtersearch request options
    */
-  filterAutocomplete(request: FilterAutocompleteRequest): Promise<FilterAutocompleteResponse> {
-    return this.autoCompleteService.filterAutocomplete(request);
+  filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse> {
+    return this.autoCompleteService.filterSearch(request);
   }
 }

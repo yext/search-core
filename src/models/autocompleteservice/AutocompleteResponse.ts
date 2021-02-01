@@ -18,11 +18,11 @@ export interface AutocompleteResponse {
 }
 
 /**
- * The response of a filter autocomplete request.
+ * The response of a filtersearch
  *
  * @public
  */
-export interface FilterAutocompleteResponse {
+export interface FilterSearchResponse {
   /** Indicates that the results are separated by field in the sections property. */
   sectioned: boolean,
   /**
@@ -64,14 +64,14 @@ export interface AutocompleteResult {
    * A filter applied to the autocomplete response.
    *
    * @remarks
-   * This property is only defined for filter autocomplete requests.
+   * This property is only defined for filtersearch.
    */
   filter?: SimpleFilter;
   /**
    * The fieldId which corresponds to the AutocompleteResult value.
    *
    * @remarks
-   * This property is only defined for filter autocomplete requests.
+   * This property is only defined for filtersearch.
    */
   key?: string;
   /**

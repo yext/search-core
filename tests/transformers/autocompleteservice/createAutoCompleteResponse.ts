@@ -1,5 +1,5 @@
 import { SearchIntent } from '../../../src/models/searchservice/response/SearchIntent';
-import { createAutocompleteResponse, createFilterAutocompleteResponse } from '../../../src/transformers/autocompleteservice/createAutocompleteResponse';
+import { createAutocompleteResponse, createFilterSearchResponse } from '../../../src/transformers/autocompleteservice/createAutocompleteResponse';
 import mockAutocompleteResponse from '../../fixtures/autocompleteresponse.json';
 import mockAutocompleteResponseWithSections from '../../fixtures/autocompleteresponsewithsections.json';
 import mockAutocompleteResponseWithEntities from '../../fixtures/autocompleteresponsewithfetchedentities.json';
@@ -25,7 +25,7 @@ describe('AutocompleteResponse', () => {
     expect(actualResponse).toEqual(expectedResponse);
   });
 
-  it('filter autocomplete response with sections is parsed correctly', () => {
+  it('filtersearch response with sections is parsed correctly', () => {
     const expectedResponse = {
       sectioned: true,
       sections: [
@@ -55,11 +55,11 @@ describe('AutocompleteResponse', () => {
       queryId: '42d5b709-3b9f-464a-b9b5-764467cbf540',
       uuid: '266f5720-2829-46f0-808f-651075879692'
     };
-    const actualResponse = createFilterAutocompleteResponse(mockAutocompleteResponseWithSections);
+    const actualResponse = createFilterSearchResponse(mockAutocompleteResponseWithSections);
     expect(actualResponse).toEqual(expectedResponse);
   });
 
-  it ('filter autocomplete response with sections and entities fetched is parsed correctly', () => {
+  it ('filtersearch response with sections and entities fetched is parsed correctly', () => {
     const expectedResponse = {
       sectioned: true,
       sections: [
@@ -120,7 +120,7 @@ describe('AutocompleteResponse', () => {
       queryId: '42d5b709-3b9f-464a-b9b5-764467cbf540',
       uuid: '266f5720-2829-46f0-808f-651075879692'
     };
-    const actualResponse = createFilterAutocompleteResponse(mockAutocompleteResponseWithEntities);
+    const actualResponse = createFilterSearchResponse(mockAutocompleteResponseWithEntities);
     expect(actualResponse).toEqual(expectedResponse);
   });
 
@@ -135,14 +135,14 @@ describe('AutocompleteResponse', () => {
     }).toThrow('The autocomplete data does not contain a response property');
   });
 
-  it('filter autocomplete response with no response property throws error', () => {
+  it('filtersearch response with no response property throws error', () => {
     const dataWithNoResponse = {
       noResponse: {
         results: []
       }
     };
     expect(() => {
-      createFilterAutocompleteResponse(dataWithNoResponse);
+      createFilterSearchResponse(dataWithNoResponse);
     }).toThrow('The autocomplete data does not contain a response property');
   });
 
@@ -155,12 +155,12 @@ describe('AutocompleteResponse', () => {
     }).toThrow('The autocomplete response is empty');
   });
 
-  it('filter autocomplete response with empty response property throws error', () => {
+  it('filtersearch response with empty response property throws error', () => {
     const dataWithEmptyResponse = {
       response: {}
     };
     expect(() => {
-      createFilterAutocompleteResponse(dataWithEmptyResponse);
+      createFilterSearchResponse(dataWithEmptyResponse);
     }).toThrow('The autocomplete response is empty');
   });
 });
