@@ -18,15 +18,15 @@ export interface AnswersConfig {
 export class AnswersCore {
     // Warning: (ae-forgotten-export) The symbol "SearchService" needs to be exported by the entry point index.d.ts
     // Warning: (ae-forgotten-export) The symbol "QuestionSubmissionService" needs to be exported by the entry point index.d.ts
-    // Warning: (ae-forgotten-export) The symbol "AutoCompleteService" needs to be exported by the entry point index.d.ts
+    // Warning: (ae-forgotten-export) The symbol "AutocompleteService" needs to be exported by the entry point index.d.ts
     //
     // @internal
-    constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutoCompleteService);
-    filterAutoComplete(request: FilterAutoCompleteRequest): Promise<FilterAutoCompleteResponse>;
+    constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService);
+    filterAutocomplete(request: FilterAutocompleteRequest): Promise<FilterAutocompleteResponse>;
     submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
-    universalAutoComplete(request: UniversalAutoCompleteRequest): Promise<AutoCompleteResponse>;
+    universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>;
     universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
-    verticalAutoComplete(request: VerticalAutoCompleteRequest): Promise<AutoCompleteResponse>;
+    verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse>;
     verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
 }
 
@@ -47,15 +47,15 @@ export interface AppliedQueryFilter {
 }
 
 // @public
-export interface AutoCompleteResponse {
+export interface AutocompleteResponse {
     inputIntents: SearchIntent[];
     queryId?: string;
-    results: AutoCompleteResult[];
+    results: AutocompleteResult[];
     uuid: string;
 }
 
 // @public
-export interface AutoCompleteResult {
+export interface AutocompleteResult {
     filter?: SimpleFilter;
     key?: string;
     matchedSubstrings?: {
@@ -120,17 +120,17 @@ export interface DisplayableFacetOption extends FacetOption {
 // @internal
 export interface Endpoints {
     // (undocumented)
-    filterAutoComplete?: string;
+    filterAutocomplete?: string;
     // (undocumented)
     questionSubmission?: string;
     // (undocumented)
     status?: string;
     // (undocumented)
-    universalAutoComplete?: string;
+    universalAutocomplete?: string;
     // (undocumented)
     universalSearch?: string;
     // (undocumented)
-    verticalAutoComplete?: string;
+    verticalAutocomplete?: string;
     // (undocumented)
     verticalSearch?: string;
 }
@@ -148,7 +148,7 @@ export interface FacetOption {
 }
 
 // @public
-export interface FilterAutoCompleteRequest {
+export interface FilterAutocompleteRequest {
     input: string;
     searchParameters: SearchParameters;
     sessionTrackingEnabled?: boolean;
@@ -156,14 +156,14 @@ export interface FilterAutoCompleteRequest {
 }
 
 // @public
-export interface FilterAutoCompleteResponse {
+export interface FilterAutocompleteResponse {
     inputIntents: SearchIntent[];
     queryId?: string;
-    results: AutoCompleteResult[];
+    results: AutocompleteResult[];
     sectioned: boolean;
     sections: {
         label: string;
-        results: AutoCompleteResult[];
+        results: AutocompleteResult[];
     }[];
     uuid: string;
 }
@@ -302,7 +302,7 @@ export enum SpellCheckType {
 }
 
 // @public
-export interface UniversalAutoCompleteRequest {
+export interface UniversalAutocompleteRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
 }
@@ -332,7 +332,7 @@ export interface UniversalSearchResponse {
 }
 
 // @public
-export interface VerticalAutoCompleteRequest {
+export interface VerticalAutocompleteRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
     verticalKey: string;
