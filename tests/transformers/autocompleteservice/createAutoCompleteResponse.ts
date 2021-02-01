@@ -59,7 +59,7 @@ describe('AutocompleteResponse', () => {
     expect(actualResponse).toEqual(expectedResponse);
   });
 
-  it ('filtersearch response with sections and entities fetched is parsed correctly', () => {
+  it('filtersearch response with sections and entities fetched is parsed correctly', () => {
     const expectedResponse = {
       sectioned: true,
       sections: [
@@ -81,16 +81,26 @@ describe('AutocompleteResponse', () => {
               },
               key: 'name',
               relatedItem: {
-                data: {
+                rawData: {
                   mock: 'data'
                 },
-                highlightedFields: {
-                  mock: 'field'
-                }
+                highlightedValues: [
+                  {
+                    fieldName: 'name',
+                    value: 'Virginia Beach',
+                    path: ['name'],
+                    matchedSubstrings: [
+                      {
+                        length: 8,
+                        offset: 0
+                      }
+                    ]
+                  }
+                ]
               }
             },
             {
-              value: 'Virginia Beach',
+              value: 'Virginia Beach2',
               matchedSubstrings: [
                 {
                   offset: 0,
@@ -99,17 +109,27 @@ describe('AutocompleteResponse', () => {
               ],
               filter: {
                 comparator: '$eq',
-                comparedValue: 'Virginia Beach',
-                fieldId: 'name'
+                comparedValue: 'Virginia Beach2',
+                fieldId: 'name2'
               },
               key: 'name',
               relatedItem: {
-                data: {
+                rawData: {
                   mock: 'data2'
                 },
-                highlightedFields: {
-                  mock: 'field2'
-                }
+                highlightedValues: [
+                  {
+                    fieldName: 'name2',
+                    value: 'Virginia Beach2',
+                    path: ['name2'],
+                    matchedSubstrings: [
+                      {
+                        length: 8,
+                        offset: 0
+                      }
+                    ]
+                  }
+                ]
               }
             }
           ]

@@ -21,7 +21,22 @@ describe('AutocompleteResult', () => {
         }
       }
     };
-    const expectedResult = resultWithNoFilter;
+    const expectedResult = {
+      key: 'key',
+      value: 'salesforce',
+      matchedSubstrings: [
+        {
+          offset: 0,
+          length: 10
+        }
+      ],
+      relatedItem: {
+        rawData: {
+          some: 'data'
+        },
+        highlightedValues: []
+      }
+    };
     const actualResult = createAutocompleteResult(resultWithNoFilter);
     expect(actualResult).toEqual(expectedResult);
   });
@@ -39,9 +54,7 @@ describe('AutocompleteResult', () => {
         data: {
           mock: 'data'
         },
-        highlightedFields: {
-          mock: 'field'
-        }
+        highlightedFields: {}
       }
     };
     const expectedResult = {
@@ -54,12 +67,10 @@ describe('AutocompleteResult', () => {
       },
       key: 'name',
       relatedItem: {
-        data: {
+        rawData: {
           mock: 'data'
         },
-        highlightedFields: {
-          mock: 'field'
-        }
+        highlightedValues: []
       }
     };
     const actualResult = createAutocompleteResult(resultWithNoMatchedSubstrings);
