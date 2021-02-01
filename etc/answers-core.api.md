@@ -155,8 +155,9 @@ export enum FilterCombinator {
 
 // @public
 export interface FilterSearchRequest {
+    fields: SearchParameterField[];
     input: string;
-    searchParameters: SearchParameters;
+    sectioned: boolean;
     sessionTrackingEnabled?: boolean;
     verticalKey: string;
 }
@@ -255,12 +256,6 @@ export interface SearchParameterField {
     entityType: string;
     fetchEntities: boolean;
     fieldApiName: string;
-}
-
-// @public
-export interface SearchParameters {
-    fields: SearchParameterField[];
-    sectioned: boolean;
 }
 
 // @public

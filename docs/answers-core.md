@@ -52,7 +52,6 @@
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | A representation of a question submission response. |
 |  [Result](./answers-core.result.md) | An individual search result. |
 |  [SearchParameterField](./answers-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
-|  [SearchParameters](./answers-core.searchparameters.md) | Options for the fields which the filtersearch request runs on. |
 |  [SimpleFilter](./answers-core.simplefilter.md) | Represents a filter which compares values to a single field. |
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query. |
