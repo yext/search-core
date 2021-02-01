@@ -32,5 +32,5 @@ module.exports = {
       }
     }
   ],
-  ignorePatterns: ['dist'],
+  ignorePatterns: ['dist', 'lib', 'webpack.config.js'],
 };
