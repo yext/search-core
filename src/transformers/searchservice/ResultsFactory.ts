@@ -34,9 +34,9 @@ export class ResultsFactory {
     });
   }
 
-  private static fromKnowledgeManager(result: any): Readonly<Result> {
+  private static fromKnowledgeManager(result: any): Result {
     const rawData = result.data ?? {};
-    return Object.freeze({
+    return {
       rawData: rawData,
       source: Source.KnowledgeManager,
       index: result.index,
@@ -48,54 +48,54 @@ export class ResultsFactory {
       distanceFromFilter: result.distanceFromFilter,
       highlightedValues: HighlightedValueFactory.create(result.highlightedFields),
       entityType: rawData.type
-    });
+    };
   }
 
-  private static fromGoogleCustomSearchEngine(result: any): Readonly<Result> {
-    return Object.freeze({
+  private static fromGoogleCustomSearchEngine(result: any): Result {
+    return {
       rawData: result,
       source: Source.Google,
       index: result.index,
       name: result.htmlTitle.replace(/(<([^>]+)>)/ig, ''),
       description: result.htmlSnippet,
       link: result.link
-    });
+    };
   }
 
-  private static fromBingCustomSearchEngine(result: any): Readonly<Result> {
-    return Object.freeze({
+  private static fromBingCustomSearchEngine(result: any): Result {
+    return {
       rawData: result,
       source: Source.Bing,
       index: result.index,
       name: result.name,
       description: result.snippet,
       link: result.url
-    });
+    };
   }
 
-  private static fromZendeskSearchEngine(result: any): Readonly<Result> {
-    return Object.freeze({
+  private static fromZendeskSearchEngine(result: any): Result {
+    return {
       rawData: result,
       source: Source.Zendesk,
       index: result.index,
       name: result.title,
       description: result.snippet,
       link: result.html_url
-    });
+    };
   }
 
-  private static fromAlgoliaSearchEngine(result: any): Readonly<Result> {
-    return Object.freeze({
+  private static fromAlgoliaSearchEngine(result: any): Result {
+    return {
       rawData: result,
       source: Source.Algolia,
       index: result.index,
       name: result.name,
       id: result.objectID
-    });
+    };
   }
 
-  private static fromGeneric(result: any): Readonly<Result> {
-    return Object.freeze({
+  private static fromGeneric(result: any): Result {
+    return {
       rawData: result,
       source: Source.Generic,
       index: result.index,
@@ -103,12 +103,12 @@ export class ResultsFactory {
       description: result.description, // Do we want to truncate this like in the SDK?
       link: result.website,
       id: result.id,
-    });
+    };
   }
 
-  public static fromDirectAnswer(result: any): Readonly<Result> {
+  public static fromDirectAnswer(result: any): Result {
     const rawData = result.fieldValues ?? {};
-    return Object.freeze({
+    return {
       rawData: rawData,
       source: Source.KnowledgeManager,
       name: rawData.name,
@@ -116,6 +116,6 @@ export class ResultsFactory {
       link: result.website,
       id: result.id,
       entityType: result.type,
-    });
+    };
   }
 }

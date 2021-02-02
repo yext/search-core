@@ -17,7 +17,7 @@ export interface VerticalSearchResponse {
   /** An array of {@link SearchIntent}s. */
   searchIntents?: SearchIntent[];
   /** An array of {@link Facet}s associated with the search results. */
-  facets?: Readonly<DisplayableFacet[]>;
+  facets?: DisplayableFacet[];
   /** {@inheritDoc SpellCheck} */
   spellCheck?: SpellCheck,
   /** {@inheritDoc LocationBias} */
@@ -25,7 +25,7 @@ export interface VerticalSearchResponse {
   /** {@inheritDoc VerticalSearchResponse} */
   allResultsForVertical?: VerticalSearchResponse,
   /** The {@link VerticalResults} for each search vertical. */
-  alternativeVerticals?: Readonly<VerticalResults[]>,
+  alternativeVerticals?: VerticalResults[],
   /** A unique id which corresponds to the request. */
   uuid: string
 }

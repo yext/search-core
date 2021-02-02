@@ -17,8 +17,8 @@ export interface VerticalSearchResponse
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [allResultsForVertical?](./answers-core.verticalsearchresponse.allresultsforvertical.md) | [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | <i>(Optional)</i> A representation of a response from a vertical search. |
-|  [alternativeVerticals?](./answers-core.verticalsearchresponse.alternativeverticals.md) | Readonly&lt;[VerticalResults](./answers-core.verticalresults.md)<!-- -->\[\]&gt; | <i>(Optional)</i> The [VerticalResults](./answers-core.verticalresults.md) for each search vertical. |
-|  [facets?](./answers-core.verticalsearchresponse.facets.md) | Readonly&lt;[DisplayableFacet](./answers-core.displayablefacet.md)<!-- -->\[\]&gt; | <i>(Optional)</i> An array of [Facet](./answers-core.facet.md)<!-- -->s associated with the search results. |
+|  [alternativeVerticals?](./answers-core.verticalsearchresponse.alternativeverticals.md) | [VerticalResults](./answers-core.verticalresults.md)<!-- -->\[\] | <i>(Optional)</i> The [VerticalResults](./answers-core.verticalresults.md) for each search vertical. |
+|  [facets?](./answers-core.verticalsearchresponse.facets.md) | [DisplayableFacet](./answers-core.displayablefacet.md)<!-- -->\[\] | <i>(Optional)</i> An array of [Facet](./answers-core.facet.md)<!-- -->s associated with the search results. |
 |  [locationBias?](./answers-core.verticalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
 |  [queryId](./answers-core.verticalsearchresponse.queryid.md) | string | The ID of the query. |
 |  [searchIntents?](./answers-core.verticalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./answers-core.searchintent.md)<!-- -->s. |

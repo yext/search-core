@@ -66,14 +66,14 @@ export class HighlightedValueFactory {
     matchedSubstrings: {
       length: number,
       offset: number
-    }[]): Readonly<HighlightedValue>
+    }[]): HighlightedValue
   {
-    return Object.freeze({
+    return {
       value: value,
       fieldName: fieldName,
       path: path,
       matchedSubstrings: matchedSubstrings
-    });
+    };
   }
 
   /**

@@ -4,12 +4,12 @@ import { createDirectAnswer } from './createDirectAnswer';
 import { createSpellCheck } from './createSpellCheck';
 import { createLocationBias } from './createLocationBias';
 
-export function createUniversalSearchResponse(data: any): Readonly<UniversalSearchResponse> {
+export function createUniversalSearchResponse(data: any): UniversalSearchResponse {
   const verticalResults = Array.isArray(data.response.modules)
     ? data.response.modules.map(createVerticalResults)
     : [];
 
-  return Object.freeze({
+  return {
     verticalResults: verticalResults,
     queryId: data.response.queryId,
     directAnswer: data.response.directAnswer && createDirectAnswer(data.response.directAnswer),
@@ -17,5 +17,5 @@ export function createUniversalSearchResponse(data: any): Readonly<UniversalSear
     spellCheck: data.response.spellCheck && createSpellCheck(data.response.spellCheck),
     locationBias: data.response.locationBias && createLocationBias(data.response.locationBias),
     uuid: data.meta.uuid
-  });
+  };
 }
