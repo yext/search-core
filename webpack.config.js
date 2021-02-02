@@ -32,16 +32,21 @@ module.exports = {
     extensions: [ '.tsx', '.ts', '.js' ],
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.legacy.js',
     path: path.resolve(__dirname, 'dist'),
     environment: {
       arrowFunction: false
     },
-    library: 'answersCore',
-    libraryTarget: 'umd'
+    library: {
+      type: 'umd'
+    }
   },
   mode: 'production',
   optimization: {
     minimize: false
   },
+  performance: {
+    maxEntrypointSize: 400000,
+    maxAssetSize: 400000
+  }
 };
