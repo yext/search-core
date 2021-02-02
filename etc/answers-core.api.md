@@ -240,7 +240,7 @@ export interface Result {
     link?: string;
     name?: string;
     rawData: Record<string, unknown>;
-    source?: Source;
+    source: Source;
 }
 
 // @public
