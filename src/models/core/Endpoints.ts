@@ -10,5 +10,5 @@ export interface Endpoints {
   status?: string,
   universalAutocomplete?: string,
   verticalAutocomplete?: string,
-  filterAutocomplete?: string
+  filterSearch?: string
 }
