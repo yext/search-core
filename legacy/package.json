@@ -1,0 +1,5 @@
+{
+  "name": "answers-core-legacy",
+  "browser": "../dist/bundle.legacy.js",
+  "types": "../dist/bundle.d.ts"
+}
