@@ -86,7 +86,7 @@ export class AnswersCore {
   }
 
   /**
-   * Performs an autocomplete request against specified fields within a single vertical.
+   * Performs a filtersearch request against specified fields within a single vertical.
    *
    * @remarks
    * This differs from the vertical autocomplete because the vertical autocomplete operates on all entity fields whereas
