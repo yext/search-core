@@ -4,7 +4,7 @@
 
 ## AnswersCore.filterSearch() method
 
-Performs an autocomplete request against specified fields within a single vertical.
+Performs a filtersearch request against specified fields within a single vertical.
 
 <b>Signature:</b>
 
