@@ -18,7 +18,7 @@ export interface AutocompleteResponse {
 }
 
 /**
- * The response of a filtersearch
+ * The response of a filtersearch request.
  *
  * @public
  */
