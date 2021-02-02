@@ -1,7 +1,7 @@
 const path = require('path');
 
 var babelOptions = {
-  presets: [['@babel/preset-env', { useBuiltIns: false, modules: 'commonjs', targets: {ie: 11}}]],
+  presets: [['@babel/preset-env', { modules: 'commonjs', targets: {ie: 11}}]],
   plugins: [
     ['@babel/transform-runtime', { corejs: 3, absoluteRuntime: true }]
   ]
