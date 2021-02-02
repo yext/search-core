@@ -10,6 +10,7 @@ var babelOptions = {
 module.exports = {
   entry: './src/index.ts',
   devtool: 'source-map',
+  target: ['web', 'es5'],
   module: {
     rules: [
       {
@@ -34,9 +35,6 @@ module.exports = {
   output: {
     filename: 'bundle.legacy.js',
     path: path.resolve(__dirname, 'dist'),
-    environment: {
-      arrowFunction: false
-    },
     library: {
       type: 'umd'
     }
