@@ -14,5 +14,5 @@ filter?: SimpleFilter;
 
 ## Remarks
 
-This property is only defined for filter autocomplete requests.
+This property is only defined for filtersearch.
 

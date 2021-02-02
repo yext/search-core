@@ -9,5 +9,5 @@ export const defaultEndpoints: Required<Endpoints> = {
   status: 'https://answersstatus.pagescdn.com',
   universalAutocomplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/autocomplete',
   verticalAutocomplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/vertical/autocomplete',
-  filterAutocomplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/filtersearch',
+  filterSearch: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/filtersearch',
 };

@@ -22,7 +22,7 @@ export class AnswersCore {
     //
     // @internal
     constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService);
-    filterAutocomplete(request: FilterAutocompleteRequest): Promise<FilterAutocompleteResponse>;
+    filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>;
     submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
     universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>;
     universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
@@ -120,7 +120,7 @@ export interface DisplayableFacetOption extends FacetOption {
 // @internal
 export interface Endpoints {
     // (undocumented)
-    filterAutocomplete?: string;
+    filterSearch?: string;
     // (undocumented)
     questionSubmission?: string;
     // (undocumented)
@@ -148,7 +148,13 @@ export interface FacetOption {
 }
 
 // @public
-export interface FilterAutocompleteRequest {
+export enum FilterCombinator {
+    AND = "$and",
+    OR = "$or"
+}
+
+// @public
+export interface FilterSearchRequest {
     input: string;
     searchParameters: SearchParameters;
     sessionTrackingEnabled?: boolean;
@@ -156,7 +162,7 @@ export interface FilterAutocompleteRequest {
 }
 
 // @public
-export interface FilterAutocompleteResponse {
+export interface FilterSearchResponse {
     inputIntents: SearchIntent[];
     queryId?: string;
     results: AutocompleteResult[];
@@ -166,12 +172,6 @@ export interface FilterAutocompleteResponse {
         results: AutocompleteResult[];
     }[];
     uuid: string;
-}
-
-// @public
-export enum FilterCombinator {
-    AND = "$and",
-    OR = "$or"
 }
 
 // @public

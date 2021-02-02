@@ -1,8 +1,8 @@
-import { createAutocompleteResponse, createFilterAutocompleteResponse } from '../transformers/autocompleteservice/createAutocompleteResponse';
-import { VerticalAutocompleteRequest, FilterAutocompleteRequest,
+import { createAutocompleteResponse, createFilterSearchResponse } from '../transformers/autocompleteservice/createAutocompleteResponse';
+import { VerticalAutocompleteRequest, FilterSearchRequest,
   UniversalAutocompleteRequest, SearchParameters, SearchParameterField }
   from '../models/autocompleteservice/AutocompleteRequest';
-import { AutocompleteResponse, FilterAutocompleteResponse } from '../models/autocompleteservice/AutocompleteResponse';
+import { AutocompleteResponse, FilterSearchResponse } from '../models/autocompleteservice/AutocompleteResponse';
 import { defaultApiVersion, defaultEndpoints } from '../constants';
 import { AnswersConfig } from '../models/core/AnswersConfig';
 import { HttpService }from '../services/HttpService';
@@ -23,7 +23,7 @@ interface VerticalAutocompleteQueryParams extends AutocompleteQueryParams {
  * Internal interface representing the query params which are sent for a filter
  * autocomplete request.
  */
-interface FilterAutocompleteQueryParams extends AutocompleteQueryParams {
+interface FilterSearchQueryParams extends AutocompleteQueryParams {
   verticalKey?: string,
   search_parameters?: string
 }
@@ -51,8 +51,8 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ?? defaultEndpoints.universalAutocomplete;
     this.verticalEndpoint = this.config.endpoints?.verticalAutocomplete
       ?? defaultEndpoints.verticalAutocomplete;
-    this.filterEndpoint = this.config.endpoints?.filterAutocomplete
-      ?? defaultEndpoints.filterAutocomplete;
+    this.filterEndpoint = this.config.endpoints?.filterSearch
+      ?? defaultEndpoints.filterSearch;
   }
 
   /**
@@ -117,12 +117,12 @@ export class AutocompleteServiceImpl implements AutocompleteService {
   /**
    * Retrieves query suggestions for filter search.
    *
-   * @param {FilterAutocompleteRequest} request
+   * @param {FilterSearchRequest} request
    * @returns {Promise<AutocompleteResponse>}
    */
-  async filterAutocomplete(request: FilterAutocompleteRequest): Promise<FilterAutocompleteResponse> {
+  async filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse> {
     const searchParams = this.getFilterSearchParams(request.searchParameters);
-    const queryParams: FilterAutocompleteQueryParams = {
+    const queryParams: FilterSearchQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
       api_key: this.config.apiKey,
@@ -143,7 +143,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       return Promise.reject(validationResult);
     }
 
-    return createFilterAutocompleteResponse(response);
+    return createFilterSearchResponse(response);
   }
 
   private getFilterSearchParams(searchParams: SearchParameters) {

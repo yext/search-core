@@ -1,6 +1,6 @@
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { AnswersConfig } from '../../src/models/core/AnswersConfig';
-import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterAutocompleteRequest, SearchParameters} from '../../src/models/autocompleteservice/AutocompleteRequest';
+import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterSearchRequest, SearchParameters} from '../../src/models/autocompleteservice/AutocompleteRequest';
 import { HttpService } from '../../src/services/HttpService';
 import { AutocompleteServiceImpl } from '../../src/infra/AutocompleteServiceImpl';
 import mockAutocompleteResponse from '../fixtures/autocompleteresponse.json';
@@ -73,8 +73,8 @@ describe('AutocompleteService', () => {
     });
   });
 
-  describe('Filter Autocomplete', () => {
-    const expectedFilterUrl = defaultEndpoints.filterAutocomplete;
+  describe('FilterSearch', () => {
+    const expectedFilterUrl = defaultEndpoints.filterSearch;
     it('query params are correct', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
       const searchParams: SearchParameters = {
@@ -93,7 +93,7 @@ describe('AutocompleteService', () => {
             shouldFetchEntities: false
           }]
       };
-      const request: FilterAutocompleteRequest = {
+      const request: FilterSearchRequest = {
         input: 'salesforce',
         sessionTrackingEnabled: false,
         verticalKey: 'verticalKey',
@@ -114,7 +114,7 @@ describe('AutocompleteService', () => {
         mockHttpService as HttpService,
         apiResponseValidator
       );
-      await autocompleteService.filterAutocomplete(request);
+      await autocompleteService.filterSearch(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams);
     });
   });
