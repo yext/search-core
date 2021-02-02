@@ -123,7 +123,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
   async filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse> {
     const searchParams = {
       sectioned: request.sectioned,
-      fields: this.transformSearchParameterFields(request.fields)
+      fields: this.serializeSearchParameterFields(request.fields)
     };
     const queryParams: FilterSearchQueryParams = {
       input: request.input,
@@ -149,7 +149,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     return createFilterSearchResponse(response);
   }
 
-  private transformSearchParameterFields(fields: SearchParameterField[]) {
+  private serializeSearchParameterFields(fields: SearchParameterField[]) {
     return fields.map(({ fieldApiName, entityType, fetchEntities}) => (
       {
         fieldId: fieldApiName,
