@@ -371,8 +371,8 @@ export interface VerticalSearchRequest {
 // @public
 export interface VerticalSearchResponse {
     allResultsForVertical?: VerticalSearchResponse;
-    alternativeVerticals?: Readonly<VerticalResults[]>;
-    facets?: Readonly<DisplayableFacet[]>;
+    alternativeVerticals?: VerticalResults[];
+    facets?: DisplayableFacet[];
     locationBias?: LocationBias;
     queryId: string;
     searchIntents?: SearchIntent[];

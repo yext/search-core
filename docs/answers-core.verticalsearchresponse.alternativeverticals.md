@@ -9,5 +9,5 @@ The [VerticalResults](./answers-core.verticalresults.md) for each search vertica
 <b>Signature:</b>
 
 ```typescript
-alternativeVerticals?: Readonly<VerticalResults[]>;
+alternativeVerticals?: VerticalResults[];
 ```

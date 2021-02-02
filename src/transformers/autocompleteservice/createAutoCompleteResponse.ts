@@ -1,7 +1,7 @@
 import { AutoCompleteResponse, AutoCompleteResult, FilterAutoCompleteResponse } from '../../models/autocompleteservice/AutoCompleteResponse';
 import { createAutoCompleteResult } from './createAutoCompleteResult';
 
-export function createAutoCompleteResponse(data: any): Readonly<AutoCompleteResponse> {
+export function createAutoCompleteResponse(data: any): AutoCompleteResponse {
   if (!data.response) {
     throw new Error('The autocomplete data does not contain a response property');
   }
@@ -12,15 +12,15 @@ export function createAutoCompleteResponse(data: any): Readonly<AutoCompleteResp
   const response = data.response;
   const responseResults = response.results.map(createAutoCompleteResult);
   const inputIntents = response.input ? response.input.queryIntents : [];
-  return Object.freeze({
+  return {
     results: responseResults,
     queryId: response.queryId,
     inputIntents: inputIntents || [],
     uuid: data.meta.uuid
-  });
+  };
 }
 
-export function createFilterAutoCompleteResponse(data: any): Readonly<FilterAutoCompleteResponse> {
+export function createFilterAutoCompleteResponse(data: any): FilterAutoCompleteResponse {
   if (!data.response) {
     throw new Error('The autocomplete data does not contain a response property');
   }
@@ -43,12 +43,12 @@ export function createFilterAutoCompleteResponse(data: any): Readonly<FilterAuto
     responseResults = response.results.map(createAutoCompleteResult);
   }
   const inputIntents = response.input ? response.input.queryIntents : [];
-  return Object.freeze({
+  return {
     sectioned: isSectioned,
     sections: sections,
     results: responseResults,
     queryId: response.queryId,
     inputIntents: inputIntents || [],
     uuid: data.meta.uuid
-  });
+  };
 }

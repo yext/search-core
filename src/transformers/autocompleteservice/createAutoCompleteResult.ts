@@ -2,11 +2,11 @@ import { AutoCompleteResult } from '../../models/autocompleteservice/AutoComplet
 import { createSimpleFilter } from '../core/createSimpleFilter';
 
 export function createAutoCompleteResult(result: any): AutoCompleteResult {
-  return Object.freeze({
+  return {
     filter: result.filter && createSimpleFilter(result.filter),
     key: result.key,
     matchedSubstrings: result.matchedSubstrings || [],
     value: result.value,
     relatedItem: result.relatedItem
-  });
+  };
 }

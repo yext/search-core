@@ -4,12 +4,12 @@ import { createLocationBias } from './createLocationBias';
 import { createSpellCheck } from './createSpellCheck';
 import { createVerticalResults } from './createVerticalResults';
 
-export function createVerticalSearchResponse(data: any): Readonly<VerticalSearchResponse> {
+export function createVerticalSearchResponse(data: any): VerticalSearchResponse {
   if (!data.response){
     throw new Error('The search data does not contain a response property');
   }
 
-  return Object.freeze({
+  return {
     verticalResults: createVerticalResults(data.response),
     queryId: data.response.queryId,
     searchIntents: data.response.searchIntents,
@@ -21,5 +21,5 @@ export function createVerticalSearchResponse(data: any): Readonly<VerticalSearch
     alternativeVerticals: data.response.alternativeVerticals && data.response.alternativeVerticals.modules
       && data.response.alternativeVerticals.modules.map(createVerticalResults),
     uuid: data.meta.uuid
-  });
+  };
 }
