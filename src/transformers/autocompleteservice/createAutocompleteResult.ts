@@ -1,21 +1,17 @@
 import { AutocompleteResult } from '../../models/autocompleteservice/AutocompleteResponse';
-import { Result } from '../../models/searchservice/response/Result';
+import { Source } from '../../models/searchservice/response/Source';
 import { createSimpleFilter } from '../core/createSimpleFilter';
-import { HighlightedValueFactory } from '../searchservice/HighlightedValueFactory';
+import { ResultsFactory } from '../searchservice/ResultsFactory';
 
 export function createAutocompleteResult(result: any): AutocompleteResult {
+  const relatedItem = result.relatedItem
+    ? ResultsFactory.create([result.relatedItem], Source.KnowledgeManager)[0]
+    : result.relatedItem;
   return Object.freeze({
     filter: result.filter && createSimpleFilter(result.filter),
     key: result.key,
     matchedSubstrings: result.matchedSubstrings || [],
     value: result.value,
-    relatedItem: result.relatedItem ? createRelatedItem(result.relatedItem) : result.relatedItem
+    relatedItem: relatedItem
   });
-}
-
-function createRelatedItem(relatedItem: { data: any, highlightedFields: any }): Result {
-  return {
-    rawData: relatedItem.data,
-    highlightedValues: HighlightedValueFactory.create(relatedItem.highlightedFields)
-  };
 }

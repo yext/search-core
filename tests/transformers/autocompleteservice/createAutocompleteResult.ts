@@ -34,6 +34,8 @@ describe('AutocompleteResult', () => {
         rawData: {
           some: 'data'
         },
+        index: 1,
+        source: 'KNOWLEDGE_MANAGER',
         highlightedValues: []
       }
     };
@@ -70,6 +72,8 @@ describe('AutocompleteResult', () => {
         rawData: {
           mock: 'data'
         },
+        index: 1,
+        source: 'KNOWLEDGE_MANAGER',
         highlightedValues: []
       }
     };

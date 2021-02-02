@@ -10,7 +10,7 @@ export interface Result {
   /** Raw entity profile data in the shape of key-value pairs. */
   rawData: Record<string, unknown>;
   /** {@inheritDoc Source}*/
-  source?: Source;
+  source: Source;
   /** The index of the result among the other results in the search. */
   index?: number;
   /** The name of the result. */

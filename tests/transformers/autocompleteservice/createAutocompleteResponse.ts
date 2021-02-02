@@ -84,6 +84,8 @@ describe('AutocompleteResponse', () => {
                 rawData: {
                   mock: 'data'
                 },
+                index: 1,
+                source: 'KNOWLEDGE_MANAGER',
                 highlightedValues: [
                   {
                     fieldName: 'name',
@@ -117,6 +119,8 @@ describe('AutocompleteResponse', () => {
                 rawData: {
                   mock: 'data2'
                 },
+                index: 1,
+                source: 'KNOWLEDGE_MANAGER',
                 highlightedValues: [
                   {
                     fieldName: 'name2',
