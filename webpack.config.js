@@ -1,16 +1,24 @@
 const path = require('path');
 
 var babelOptions = {
-  presets: [['@babel/preset-env', { modules: 'commonjs', targets: {ie: 11}}]],
+  presets: [
+    ['@babel/preset-env', { modules: 'commonjs', targets: {ie: 11} }]
+  ],
   plugins: [
     ['@babel/transform-runtime', { corejs: 3, absoluteRuntime: true }]
   ]
 };
 
 module.exports = {
+  mode: 'production',
   entry: './src/index.ts',
-  devtool: 'source-map',
-  target: ['web', 'es5'],
+  output: {
+    filename: 'bundle.legacy.js',
+    path: path.resolve(__dirname, 'dist'),
+    library: {
+      type: 'umd'
+    }
+  },
   module: {
     rules: [
       {
@@ -32,19 +40,13 @@ module.exports = {
   resolve: {
     extensions: [ '.ts', '.js' ],
   },
-  output: {
-    filename: 'bundle.legacy.js',
-    path: path.resolve(__dirname, 'dist'),
-    library: {
-      type: 'umd'
-    }
-  },
-  mode: 'production',
-  optimization: {
-    minimize: false
-  },
   performance: {
     maxEntrypointSize: 400000,
     maxAssetSize: 400000
-  }
+  },
+  devtool: 'source-map',
+  target: ['web', 'es5'],
+  optimization: {
+    minimize: false
+  },
 };
