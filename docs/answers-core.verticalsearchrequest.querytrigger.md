@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.queryTrigger property
 
-Indicates what triggered the query.
+Describes the ways a search can be executed besides user input.
 
 <b>Signature:</b>
 
@@ -14,5 +14,5 @@ queryTrigger?: QueryTrigger;
 
 ## Remarks
 
-These values will likely change to be more relevant to the Answers Core.
+Used for search analytics. If a user supplied the search query, do not include a QueryTrigger.
 

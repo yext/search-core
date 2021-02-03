@@ -1,14 +1,19 @@
 /**
- * Indicates what triggered the query.
+ * Describes the ways a search can be executed besides user input.
  *
  * @remarks
- * These values will likely change to be more relevant to the Answers Core.
+ * Used for search analytics. If a user supplied the search query, do not include a QueryTrigger.
  *
- * @alpha
+ * @example
+ * An answers site may be configured to perform a search for 'What services do you offer?' when the page
+ * loads. Because that query is a default query rather than a user-supplied query, the Initialize QueryTrigger
+ * should be included in the request.
+ *
+ * @public
  */
 export enum QueryTrigger {
-  /** Indicates that query was triggered by a default initial search. */
+  /** Indicates that the query was triggered by a default initial search. */
   Initialize = 'initialize',
-  /** Indicates that the query was triggered by a search query in the URL params. */
-  QueryParameter = 'query-parameter'
+  /** Indicates that the query was suggested by a {@link SpellCheck} response. */
+  Suggest = 'suggest'
 }
