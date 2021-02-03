@@ -14,5 +14,5 @@ queryTrigger?: QueryTrigger;
 
 ## Remarks
 
-Used for search analytics. If a user initiated a search, do not supply a QueryTrigger.
+Used for search analytics. If a user typed the search, do not supply a QueryTrigger.
 

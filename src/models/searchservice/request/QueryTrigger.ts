@@ -2,17 +2,18 @@
  * Indicates what triggered the search.
  *
  * @remarks
- * Used for search analytics. If a user initiated a search, do not supply a QueryTrigger.
+ * Used for search analytics. If a user typed the search, do not supply a QueryTrigger.
  *
  * @example
  * An answers site may be configured to perform a search for 'What services do you offer?' when the page
  * loads. Because that query is a default query rather than a user-suppied query, the Initialize QueryTrigger
- * should be supplied in the request. If a user were to manually type a query, then a QueryTrigger should not
- * be supplied in the request.
+ * should be supplied in the request.
  *
  * @public
  */
 export enum QueryTrigger {
   /** Indicates that the query was triggered by a default initial search. */
-  Initialize = 'initialize'
+  Initialize = 'initialize',
+  /** Indicates that the query was suggested by a {@link SpellCheck} response. */
+  Suggest = 'suggest'
 }

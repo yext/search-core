@@ -211,7 +211,8 @@ export enum QuerySource {
 
 // @public
 export enum QueryTrigger {
-    Initialize = "initialize"
+    Initialize = "initialize",
+    Suggest = "suggest"
 }
 
 // @public

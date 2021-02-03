@@ -17,12 +17,13 @@ export declare enum QueryTrigger
 |  Member | Value | Description |
 |  --- | --- | --- |
 |  Initialize | <code>&quot;initialize&quot;</code> | Indicates that the query was triggered by a default initial search. |
+|  Suggest | <code>&quot;suggest&quot;</code> | Indicates that the query was suggested by a [SpellCheck](./answers-core.spellcheck.md) response. |
 
 ## Remarks
 
-Used for search analytics. If a user initiated a search, do not supply a QueryTrigger.
+Used for search analytics. If a user typed the search, do not supply a QueryTrigger.
 
 ## Example
 
-An answers site may be configured to perform a search for 'What services do you offer?' when the page loads. Because that query is a default query rather than a user-suppied query, the Initialize QueryTrigger should be supplied in the request. If a user were to manually type a query, then a QueryTrigger should not be supplied in the request.
+An answers site may be configured to perform a search for 'What services do you offer?' when the page loads. Because that query is a default query rather than a user-suppied query, the Initialize QueryTrigger should be supplied in the request.
 
