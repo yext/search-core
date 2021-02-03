@@ -4,7 +4,7 @@
 
 ## QueryTrigger enum
 
-Indicates what triggered the search.
+Indicates that a search query was not supplied by a user.
 
 <b>Signature:</b>
 
@@ -21,9 +21,9 @@ export declare enum QueryTrigger
 
 ## Remarks
 
-Used for search analytics. If a user typed the search, do not supply a QueryTrigger.
+Used for search analytics. If a user supplied the search query, do not include a QueryTrigger.
 
 ## Example
 
-An answers site may be configured to perform a search for 'What services do you offer?' when the page loads. Because that query is a default query rather than a user-suppied query, the Initialize QueryTrigger should be supplied in the request.
+An answers site may be configured to perform a search for 'What services do you offer?' when the page loads. Because that query is a default query rather than a user-supplied query, the Initialize QueryTrigger should be included in the request.
 

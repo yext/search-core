@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.queryTrigger property
 
-Indicates what triggered the search.
+Indicates that a search query was not supplied by a user.
 
 <b>Signature:</b>
 
@@ -14,5 +14,5 @@ queryTrigger?: QueryTrigger;
 
 ## Remarks
 
-Used for search analytics. If a user typed the search, do not supply a QueryTrigger.
+Used for search analytics. If a user supplied the search query, do not include a QueryTrigger.
 

@@ -20,7 +20,7 @@ export interface UniversalSearchRequest
 |  [coordinates?](./answers-core.universalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> The coordinates of the user making the request which is used to bias the results. |
 |  [query](./answers-core.universalsearchrequest.query.md) | string | The search query. |
 |  [querySource?](./answers-core.universalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request. |
-|  [queryTrigger?](./answers-core.universalsearchrequest.querytrigger.md) | [QueryTrigger](./answers-core.querytrigger.md) | <i>(Optional)</i> Indicates what triggered the search. |
+|  [queryTrigger?](./answers-core.universalsearchrequest.querytrigger.md) | [QueryTrigger](./answers-core.querytrigger.md) | <i>(Optional)</i> Indicates that a search query was not supplied by a user. |
 |  [referrerPageUrl?](./answers-core.universalsearchrequest.referrerpageurl.md) | string | <i>(Optional)</i> The URl of the page which referred the user to the current page. |
 |  [sessionTrackingEnabled?](./answers-core.universalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [skipSpellCheck?](./answers-core.universalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> Disables spellcheck if true. |
