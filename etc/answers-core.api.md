@@ -209,10 +209,9 @@ export enum QuerySource {
     Standard = "STANDARD"
 }
 
-// @alpha
+// @public
 export enum QueryTrigger {
-    Initialize = "initialize",
-    QueryParameter = "query-parameter"
+    Initialize = "initialize"
 }
 
 // @public
@@ -313,7 +312,6 @@ export interface UniversalSearchRequest {
     coordinates?: Coordinates_2;
     query: string;
     querySource?: QuerySource;
-    // Warning: (ae-incompatible-release-tags) The symbol "queryTrigger" is marked as @public, but its signature references "QueryTrigger" which is marked as @alpha
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;
     sessionTrackingEnabled?: boolean;
@@ -357,7 +355,6 @@ export interface VerticalSearchRequest {
     offset?: number;
     query: string;
     querySource?: QuerySource;
-    // Warning: (ae-incompatible-release-tags) The symbol "queryTrigger" is marked as @public, but its signature references "QueryTrigger" which is marked as @alpha
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;
     retrieveFacets?: boolean;

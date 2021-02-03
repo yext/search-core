@@ -4,7 +4,7 @@
 
 ## UniversalSearchRequest.queryTrigger property
 
-Indicates what triggered the query.
+Indicates what triggered the search.
 
 <b>Signature:</b>
 
@@ -14,5 +14,5 @@ queryTrigger?: QueryTrigger;
 
 ## Remarks
 
-These values will likely change to be more relevant to the Answers Core.
+Used for search analytics. If a user initiated a search, do not supply a QueryTrigger.
 
