@@ -18,7 +18,7 @@
 |  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location. |
 |  [QuerySource](./answers-core.querysource.md) | The source of the search request. |
-|  [QueryTrigger](./answers-core.querytrigger.md) | Indicates that a search query was not supplied by a user. |
+|  [QueryTrigger](./answers-core.querytrigger.md) | Describes the ways a search can be executed besides user input. |
 |  [SearchIntent](./answers-core.searchintent.md) | Represents intents from the Answers API. |
 |  [Source](./answers-core.source.md) | Represents the source of a [Result](./answers-core.result.md)<!-- -->. |
 |  [SpellCheckType](./answers-core.spellchecktype.md) | Represents the type of spell check performed. |

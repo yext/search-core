@@ -1,5 +1,5 @@
 /**
- * Indicates that a search query was not supplied by a user.
+ * Describes the ways a search can be executed besides user input.
  *
  * @remarks
  * Used for search analytics. If a user supplied the search query, do not include a QueryTrigger.

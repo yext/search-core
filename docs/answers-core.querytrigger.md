@@ -4,7 +4,7 @@
 
 ## QueryTrigger enum
 
-Indicates that a search query was not supplied by a user.
+Describes the ways a search can be executed besides user input.
 
 <b>Signature:</b>
 
