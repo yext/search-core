@@ -56,7 +56,7 @@ core.verticalSearch({
 }).then(results => {
   // Do something with the search results
 }).catch(err => {
-  // Handle thrown by the core library
+  // Handle errors thrown by the core library
 });
 ```
 
