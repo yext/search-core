@@ -45,7 +45,7 @@ const core = provideCore({
 });
 ```
 
-To use the ES5 bundle, which is compatible with browsers like Internet Explorer 11 out of the box, import from `@yext/answers-core/legacy` instead.
+To use the ES5 bundle, import from `@yext/answers-core/legacy` instead. This bundle supports browsers like Internet Explorer 11 out of the box.
 
 ```js
 import { provideCore } from '@yext/answers-core/legacy';
