@@ -13,14 +13,14 @@
 
 Answers Core is a networking library for interacting with the Yext Answers API.
 
+[Full Documentation](https://github.com/yext/answers-core/blob/master/docs/answers-core.md)
+
 ## Features
 
 - Works in both the **browser** and **Node.js**
 - 100% **TypeScript**, with detailed request and response models
 - Compatible with both **CommonJS** and **ES6** imports
 - Offers a ponyfilled ES5 bundle which doesn't pollute the global namespace
-
-[Full Documentation](https://github.com/yext/answers-core/blob/master/docs/answers-core.md)
 
 ## Getting Started
 
