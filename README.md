@@ -36,6 +36,7 @@ The apiKey and experienceKey will come from your Answers experience on yext.com.
 
 ```js
 import { provideCore } from '@yext/answers-core';
+
 const core = provideCore({
   apiKey: '<your api key>',
   experienceKey: '<one of your experience keys>',
