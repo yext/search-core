@@ -8,10 +8,12 @@
     <img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" alt="License"/>
   </a>
 </div>
+<br>
+
+Answers Core is a networking library for interacting with the Yext Answers API.
 
 ## ⭐ Features
 
-- Thin & **minimal low-level HTTP client** to interact with the Yext Answers API
 - Works in both the **browser** and **Node.js**
 - **UMD compatible**, you can use it with any module loader
 - 100% **TypeScript**, with detailed request and response models
@@ -27,6 +29,8 @@ npm install @yext/answers-core
 
 Next, import and initialize the core library in your application.
 
+The apiKey and experienceKey will come from your Answers experience on yext.com. You can signup for a free trial at [https://www.yext.com/free-trial/](https://www.yext.com/free-trial/).
+
 ```js
 import { provideCore } from '@yext/answers-core';
 const core = provideCore({
@@ -41,12 +45,6 @@ If you want to use the ES5 version, which is compatible with browsers like Inter
 
 ```js
 import { provideCore } from '@yext/answers-core/legacy';
-const core = provideCore({
-  apiKey: '<your api key>',
-  experienceKey: '<one of your experience keys>',
-  locale: 'en',
-  experienceVersion: 'PRODUCTION',
-});
 ```
 
 Now that the core is initialized, let's run a search on an "FAQs" vertical.
