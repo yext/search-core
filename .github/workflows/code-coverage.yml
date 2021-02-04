@@ -1,0 +1,28 @@
+# This workflow will add a code coverage comment to a PR
+
+name: Run Tests
+
+on: pull_request
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [15.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build-ci
+    - run: npx jest --coverage
+    - name: code coverage comment
+      uses: romeovs/lcov-reporter-action@v0.2.11
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        lcov-file: ./coverage/lcov.info
