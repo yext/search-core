@@ -1,6 +1,6 @@
 # This workflow will add a code coverage comment to a PR
 
-name: Run Tests
+name: Code Coverage
 
 on: pull_request
 
