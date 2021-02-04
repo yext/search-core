@@ -1,5 +1,7 @@
 # Answers Core
 
+<a href="https://github.com/yext/answers-core/blob/master/docs/answers-core.md">Full Documentation</a>
+
 <div>
   <a href="https://npmjs.org/package/@yext/answers-core">
     <img src="https://img.shields.io/npm/v/@yext/answers-core" alt="NPM version"/>
@@ -10,16 +12,14 @@
 </div>
 <br>
 
-Answers Core is a networking library for interacting with the Yext Answers API.
-
-## ⭐ Features
+Answers Core is a networking library for interacting with the Yext Answers API. 
 
 - Works in both the **browser** and **Node.js**
-- **UMD compatible**, you can use it with any module loader
 - 100% **TypeScript**, with detailed request and response models
-- Offers both **ES6** and **ES5** versions
+- Compatible with both **CommonJS** and **ES6** imports
+- Offers a ponyfilled ES5 bundle, that will not pollute the global namespace
 
-## 💡 Getting Started
+## Getting Started
 
 First, install Answers-core via [npm](https://www.npmjs.com/get-npm):
 
@@ -41,7 +41,7 @@ const core = provideCore({
 });
 ```
 
-If you want to use the ES5 version, which is compatible with browsers like Internet Explorer 11 out of the box, import from `@yext/answers-core/legacy` instead.
+To use the ES5 bundle, which is compatible with browsers like Internet Explorer 11 out of the box, import from `@yext/answers-core/legacy` instead.
 
 ```js
 import { provideCore } from '@yext/answers-core/legacy';
@@ -55,11 +55,13 @@ core.verticalSearch({
   query: 'What is Yext Answers?',
 }).then(results => {
   // Do something with the search results
+}).catch(err => {
+  // Handle errors from the backend or thrown by the core library
 });
 ```
 
 And that's it! See **[our documentation](https://github.com/yext/answers-core/tree/master/docs/answers-core.answerscore.md)** for a full list of supported API calls.
 
-## 📄 License
+## License
 
 Yext Answers-core is an open-sourced library licensed under the [BSD-3 License](https://github.com/yext/answers-core/blob/master/LICENSE).
