@@ -5,7 +5,7 @@ name: Code Coverage
 on: pull_request
 
 jobs:
-  tests:
+  code-coverage:
     runs-on: ubuntu-latest
 
     strategy:
