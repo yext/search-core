@@ -4,9 +4,6 @@
   <a href="https://npmjs.org/package/@yext/answers-core">
     <img src="https://img.shields.io/npm/v/@yext/answers-core" alt="NPM version"/>
   </a>
-  <a href="https://github.com/yext/answers-core/actions">
-    <img src="https://github.com/yext/answers-core/workflows/Run%20Tests/badge.svg" alt="Run Tests Workflow"/>
-  </a>
   <a href="https://github.com/yext/answers-core/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" alt="License"/>
   </a>
