@@ -1,5 +1,6 @@
 import { SimpleFilter } from '../searchservice/request/SimpleFilter';
 import { SearchIntent } from '../searchservice/response/SearchIntent';
+import { Result } from '../searchservice/response/Result';
 
 /**
  * The response of a universal or vertical autocomplete request.
@@ -90,25 +91,5 @@ export interface AutocompleteResult {
    * @remarks
    * This property is only defined if the corresponding {@link SearchParameterField.fetchEntities} field is true.
    */
-  relatedItem?: {
-    /** Entity data which is synonymous to {@link Result.rawData}. */
-    data: Record<string, unknown>,
-    /**
-     * Represents field values or substrings of field values emphasized by the Answers API.
-     *
-     * @remarks
-     * This property is similar to {@link HighlightedValue} except the data is shaped differently.
-     *
-     * @example
-     * ```
-     * {
-     *   name: {
-     *     value: "Virginia Beach",
-     *     matchedSubstrings: [{offset: 0, length: 8}]
-     *   }
-     * }
-     * ```
-     */
-    highlightedFields: Record<string, unknown>
-  };
+  relatedItem?: Result
 }

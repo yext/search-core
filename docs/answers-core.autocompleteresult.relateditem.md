@@ -9,10 +9,7 @@ An entity that corresponds to the autocomplete result.
 <b>Signature:</b>
 
 ```typescript
-relatedItem?: {
-        data: Record<string, unknown>;
-        highlightedFields: Record<string, unknown>;
-    };
+relatedItem?: Result;
 ```
 
 ## Remarks

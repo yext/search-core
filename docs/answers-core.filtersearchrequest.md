@@ -16,8 +16,9 @@ export interface FilterSearchRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [fields](./answers-core.filtersearchrequest.fields.md) | [SearchParameterField](./answers-core.searchparameterfield.md)<!-- -->\[\] | An array of [SearchParameterField](./answers-core.searchparameterfield.md) |
 |  [input](./answers-core.filtersearchrequest.input.md) | string | The input string for autocomplete. |
-|  [searchParameters](./answers-core.filtersearchrequest.searchparameters.md) | [SearchParameters](./answers-core.searchparameters.md) | Options for the fields which the filtersearch request runs on. |
+|  [sectioned](./answers-core.filtersearchrequest.sectioned.md) | boolean | Determines whether or not the results of the [FilterSearchResponse](./answers-core.filtersearchresponse.md) are separated by field. |
 |  [sessionTrackingEnabled?](./answers-core.filtersearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [verticalKey](./answers-core.filtersearchrequest.verticalkey.md) | string | The key for the vertical to get autocomplete suggestions from. |
 

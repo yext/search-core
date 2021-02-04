@@ -1,6 +1,10 @@
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { AnswersConfig } from '../../src/models/core/AnswersConfig';
-import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterSearchRequest, SearchParameters} from '../../src/models/autocompleteservice/AutocompleteRequest';
+import {
+  UniversalAutocompleteRequest,
+  VerticalAutocompleteRequest,
+  FilterSearchRequest
+} from '../../src/models/autocompleteservice/AutocompleteRequest';
 import { HttpService } from '../../src/services/HttpService';
 import { AutocompleteServiceImpl } from '../../src/infra/AutocompleteServiceImpl';
 import mockAutocompleteResponse from '../fixtures/autocompleteresponse.json';
@@ -77,27 +81,24 @@ describe('AutocompleteService', () => {
     const expectedFilterUrl = defaultEndpoints.filterSearch;
     it('query params are correct', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
-      const searchParams: SearchParameters = {
-        sectioned: false,
-          fields: [{
-            fieldApiName: 'field',
-            entityType: 'location',
-            fetchEntities: false
-          }]
-      };
       const convertedSearchParams = {
         sectioned: false,
-          fields: [{
-            fieldId: 'field',
-            entityTypeId: 'location',
-            shouldFetchEntities: false
-          }]
+        fields: [{
+          fieldId: 'field',
+          entityTypeId: 'location',
+          shouldFetchEntities: false
+        }]
       };
       const request: FilterSearchRequest = {
         input: 'salesforce',
         sessionTrackingEnabled: false,
         verticalKey: 'verticalKey',
-        searchParameters: searchParams
+        sectioned: false,
+        fields: [{
+          fieldApiName: 'field',
+          entityType: 'location',
+          fetchEntities: false
+        }]
       };
       const expectedQueryParams = {
         input: 'salesforce',
