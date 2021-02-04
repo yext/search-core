@@ -7,7 +7,7 @@
   <a href="https://github.com/yext/answers-core/actions">
     <img src="https://github.com/yext/answers-core/workflows/Run%20Tests/badge.svg" alt="Run Tests Workflow"/>
   </a>
-  <a href="LICENSE">
+  <a href="https://github.com/yext/answers-core/blob/master/LICENSE">
     <img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" alt="License"/>
   </a>
 </div>
@@ -51,8 +51,8 @@ core.verticalSearch({
 });
 ```
 
-See **[our documentation](docs/answers-core.answerscore.md)** for a full list of supported API calls.
+See **[our documentation](https://github.com/yext/answers-core/tree/master/docs/answers-core.answerscore.md)** for a full list of supported API calls.
 
 ## 📄 License
 
-Yext Answers-core is an open-sourced library licensed under the [BSD-3 License](LICENSE.txt).
+Yext Answers-core is an open-sourced library licensed under the [BSD-3 License](https://github.com/yext/answers-core/blob/master/LICENSE).
