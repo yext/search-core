@@ -17,7 +17,7 @@ Answers Core is a networking library for interacting with the Yext Answers API.
 - Works in both the **browser** and **Node.js**
 - 100% **TypeScript**, with detailed request and response models
 - Compatible with both **CommonJS** and **ES6** imports
-- Offers a ponyfilled ES5 bundle, that will not pollute the global namespace
+- Offers a ponyfilled ES5 bundle, that doesn't pollute the global namespace
 
 ## Getting Started
 
