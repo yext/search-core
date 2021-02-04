@@ -73,9 +73,10 @@ export interface CombinedFilter {
 }
 
 // @public
-export type Context = string | number | boolean | null | {
-    [property: string]: Context;
-} | Context[];
+export interface Context {
+    // (undocumented)
+    [property: string]: string | number | boolean | null | JsonObject | JsonObject[];
+}
 
 // @public
 interface Coordinates_2 {
@@ -182,6 +183,11 @@ export interface HighlightedValue {
     path: string[];
     value: string;
 }
+
+// @public
+export type JsonObject = string | number | boolean | null | {
+    [property: string]: JsonObject;
+} | JsonObject[];
 
 // @public
 export interface LocationBias {

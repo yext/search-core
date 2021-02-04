@@ -2,20 +2,17 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [Context](./answers-core.context.md)
 
-## Context type
+## Context interface
 
 Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-export declare type Context = string | number | boolean | null | {
-    [property: string]: Context;
-} | Context[];
+export interface Context 
 ```
-<b>References:</b> [Context](./answers-core.context.md)
 
 ## Remarks
 
-Context may be any valid JSON object.
+Must be a valid JSON object.
 
