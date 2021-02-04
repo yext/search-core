@@ -1,7 +1,7 @@
-import { createAutoCompleteResult } from '../../../src/transformers/autocompleteservice/createAutoCompleteResult';
+import { createAutocompleteResult } from '../../../src/transformers/autocompleteservice/createAutocompleteResult';
 
 
-describe('AutoCompleteResult', () => {
+describe('AutocompleteResult', () => {
   it('result with no filter is parsed correctly', () => {
     const resultWithNoFilter = {
       key: 'key',
@@ -21,8 +21,25 @@ describe('AutoCompleteResult', () => {
         }
       }
     };
-    const expectedResult = resultWithNoFilter;
-    const actualResult = createAutoCompleteResult(resultWithNoFilter);
+    const expectedResult = {
+      key: 'key',
+      value: 'salesforce',
+      matchedSubstrings: [
+        {
+          offset: 0,
+          length: 10
+        }
+      ],
+      relatedItem: {
+        rawData: {
+          some: 'data'
+        },
+        index: 1,
+        source: 'KNOWLEDGE_MANAGER',
+        highlightedValues: []
+      }
+    };
+    const actualResult = createAutocompleteResult(resultWithNoFilter);
     expect(actualResult).toEqual(expectedResult);
   });
 
@@ -39,9 +56,7 @@ describe('AutoCompleteResult', () => {
         data: {
           mock: 'data'
         },
-        highlightedFields: {
-          mock: 'field'
-        }
+        highlightedFields: {}
       }
     };
     const expectedResult = {
@@ -54,15 +69,15 @@ describe('AutoCompleteResult', () => {
       },
       key: 'name',
       relatedItem: {
-        data: {
+        rawData: {
           mock: 'data'
         },
-        highlightedFields: {
-          mock: 'field'
-        }
+        index: 1,
+        source: 'KNOWLEDGE_MANAGER',
+        highlightedValues: []
       }
     };
-    const actualResult = createAutoCompleteResult(resultWithNoMatchedSubstrings);
+    const actualResult = createAutocompleteResult(resultWithNoMatchedSubstrings);
     expect(actualResult).toEqual(expectedResult);
   });
 
@@ -97,7 +112,7 @@ describe('AutoCompleteResult', () => {
         }
       ]
     };
-    const actualResult = createAutoCompleteResult(resultWithNoRelatedItem);
+    const actualResult = createAutocompleteResult(resultWithNoRelatedItem);
     expect(actualResult).toEqual(expectedResult);
   });
 });

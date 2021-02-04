@@ -28,16 +28,24 @@
                 "mock": "data"
               },
               "highlightedFields": {
-                "mock": "field"
+                "name": {
+                  "value": "Virginia Beach",  
+                  "matchedSubstrings": [
+                    {
+                      "offset": 0,
+                      "length": 8
+                    }
+                  ]
+                }
               }
             }
           },
           {
             "key": "name",
-            "value": "Virginia Beach",
+            "value": "Virginia Beach2",
             "filter": {
-              "name": {
-                "$eq": "Virginia Beach"
+              "name2": {
+                "$eq": "Virginia Beach2"
               }
             },
             "matchedSubstrings": [
@@ -51,7 +59,15 @@
                 "mock": "data2"
               },
               "highlightedFields": {
-                "mock": "field2"
+                "name2": {
+                  "value": "Virginia Beach2",  
+                  "matchedSubstrings": [
+                    {
+                      "offset": 0,
+                      "length": 8
+                    }
+                  ]
+                }
               }
             }
           }

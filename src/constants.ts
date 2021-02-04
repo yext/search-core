@@ -7,7 +7,7 @@ export const defaultEndpoints: Required<Endpoints> = {
   verticalSearch: 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query',
   questionSubmission: 'https://api.yext.com/v2/accounts/me/createQuestion',
   status: 'https://answersstatus.pagescdn.com',
-  universalAutoComplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/autocomplete',
-  verticalAutoComplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/vertical/autocomplete',
-  filterAutoComplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/filtersearch',
+  universalAutocomplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/autocomplete',
+  verticalAutocomplete: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/vertical/autocomplete',
+  filterSearch: 'https://liveapi-cached.yext.com/v2/accounts/me/answers/filtersearch',
 };

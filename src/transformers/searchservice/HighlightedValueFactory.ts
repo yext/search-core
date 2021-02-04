@@ -42,8 +42,7 @@ export class HighlightedValueFactory {
       currentPath.push(fieldName);
 
       if (this.isChildHighlightedField(highlightedField)) {
-        const value = highlightedField.value;
-        const matchedSubstrings = highlightedField.matchedSubstrings;
+        const { value, matchedSubstrings } = highlightedField;
 
         const highlightedValue = this.from(value, fieldName, currentPath, matchedSubstrings);
         highlightedValues.push(highlightedValue);

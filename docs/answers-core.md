@@ -35,8 +35,8 @@
 |  --- | --- |
 |  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
-|  [AutoCompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
-|  [AutoCompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |
+|  [AutocompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
+|  [AutocompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request which is used to bias the results. |
@@ -45,22 +45,21 @@
 |  [DisplayableFacetOption](./answers-core.displayablefacetoption.md) | A [FacetOption](./answers-core.facetoption.md) with extra data meant to be displayed to the end user. |
 |  [Facet](./answers-core.facet.md) | Represents dynamic filter options for the Answers API. |
 |  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet. |
-|  [FilterAutoCompleteRequest](./answers-core.filterautocompleterequest.md) | Options for a filter autocomplete request. |
-|  [FilterAutoCompleteResponse](./answers-core.filterautocompleteresponse.md) | The response of a filter autocomplete request. |
+|  [FilterSearchRequest](./answers-core.filtersearchrequest.md) | Options for a filtersearch request. |
+|  [FilterSearchResponse](./answers-core.filtersearchresponse.md) | The response of a filtersearch request. |
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the Answers API emphasized. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | A representation of a question submission response. |
 |  [Result](./answers-core.result.md) | An individual search result. |
 |  [SearchParameterField](./answers-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
-|  [SearchParameters](./answers-core.searchparameters.md) | Options for the fields which the filter autocomplete request runs on. |
 |  [SimpleFilter](./answers-core.simplefilter.md) | Represents a filter which compares values to a single field. |
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query. |
-|  [UniversalAutoCompleteRequest](./answers-core.universalautocompleterequest.md) | Options for a universal autocomplete request. |
+|  [UniversalAutocompleteRequest](./answers-core.universalautocompleterequest.md) | Options for a universal autocomplete request. |
 |  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
 |  [UniversalSearchResponse](./answers-core.universalsearchresponse.md) | A representation of a response from a universal search. |
-|  [VerticalAutoCompleteRequest](./answers-core.verticalautocompleterequest.md) | Options for a vertial autocomplete request. |
+|  [VerticalAutocompleteRequest](./answers-core.verticalautocompleterequest.md) | Options for a vertial autocomplete request. |
 |  [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical. |
 |  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
 |  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search. |

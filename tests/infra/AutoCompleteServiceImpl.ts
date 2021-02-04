@@ -1,14 +1,18 @@
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { AnswersConfig } from '../../src/models/core/AnswersConfig';
-import { UniversalAutoCompleteRequest, VerticalAutoCompleteRequest, FilterAutoCompleteRequest, SearchParameters} from '../../src/models/autocompleteservice/AutoCompleteRequest';
+import {
+  UniversalAutocompleteRequest,
+  VerticalAutocompleteRequest,
+  FilterSearchRequest
+} from '../../src/models/autocompleteservice/AutocompleteRequest';
 import { HttpService } from '../../src/services/HttpService';
-import { AutoCompleteServiceImpl } from '../../src/infra/AutoCompleteServiceImpl';
-import mockAutoCompleteResponse from '../fixtures/autocompleteresponse.json';
-import mockAutoCompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
+import { AutocompleteServiceImpl } from '../../src/infra/AutocompleteServiceImpl';
+import mockAutocompleteResponse from '../fixtures/autocompleteresponse.json';
+import mockAutocompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
 import { defaultEndpoints } from '../../src/constants';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 
-describe('AutoCompleteService', () => {
+describe('AutocompleteService', () => {
   const config: AnswersConfig = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
@@ -19,11 +23,11 @@ describe('AutoCompleteService', () => {
 
   const apiResponseValidator = new ApiResponseValidator();
 
-  describe('Universal AutoComplete', () => {
-    const expectedUniversalUrl = defaultEndpoints.universalAutoComplete;
+  describe('Universal Autocomplete', () => {
+    const expectedUniversalUrl = defaultEndpoints.universalAutocomplete;
     it('query params are correct', async () => {
-      mockHttpService.get.mockResolvedValue(mockAutoCompleteResponse);
-      const request: UniversalAutoCompleteRequest = {
+      mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
+      const request: UniversalAutocompleteRequest = {
         input: '',
         sessionTrackingEnabled: false
       };
@@ -35,21 +39,21 @@ describe('AutoCompleteService', () => {
         locale: 'en',
         sessionTrackingEnabled: false
       };
-      const autocompleteService = new AutoCompleteServiceImpl(
+      const autocompleteService = new AutocompleteServiceImpl(
         config,
         mockHttpService as HttpService,
         apiResponseValidator
       );
-      await autocompleteService.universalAutoComplete(request);
+      await autocompleteService.universalAutocomplete(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
     });
   });
 
-  describe('Vertical AutoComplete', () => {
-    const expectedVerticalUrl = defaultEndpoints.verticalAutoComplete;
+  describe('Vertical Autocomplete', () => {
+    const expectedVerticalUrl = defaultEndpoints.verticalAutocomplete;
     it('query params are correct', async () => {
-      mockHttpService.get.mockResolvedValue(mockAutoCompleteResponse);
-      const request: VerticalAutoCompleteRequest = {
+      mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
+      const request: VerticalAutocompleteRequest = {
         input: 'salesforce',
         sessionTrackingEnabled: false,
         verticalKey: 'verticalKey'
@@ -63,41 +67,38 @@ describe('AutoCompleteService', () => {
         sessionTrackingEnabled: false,
         verticalKey: 'verticalKey'
       };
-      const autocompleteService = new AutoCompleteServiceImpl(
+      const autocompleteService = new AutocompleteServiceImpl(
         config,
         mockHttpService as HttpService,
         apiResponseValidator
       );
-      await autocompleteService.verticalAutoComplete(request);
+      await autocompleteService.verticalAutocomplete(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
     });
   });
 
-  describe('Filter AutoComplete', () => {
-    const expectedFilterUrl = defaultEndpoints.filterAutoComplete;
+  describe('FilterSearch', () => {
+    const expectedFilterUrl = defaultEndpoints.filterSearch;
     it('query params are correct', async () => {
-      mockHttpService.get.mockResolvedValue(mockAutoCompleteResponseWithSections);
-      const searchParams: SearchParameters = {
-        sectioned: false,
-          fields: [{
-            fieldApiName: 'field',
-            entityType: 'location',
-            fetchEntities: false
-          }]
-      };
+      mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
       const convertedSearchParams = {
         sectioned: false,
-          fields: [{
-            fieldId: 'field',
-            entityTypeId: 'location',
-            shouldFetchEntities: false
-          }]
+        fields: [{
+          fieldId: 'field',
+          entityTypeId: 'location',
+          shouldFetchEntities: false
+        }]
       };
-      const request: FilterAutoCompleteRequest = {
+      const request: FilterSearchRequest = {
         input: 'salesforce',
         sessionTrackingEnabled: false,
         verticalKey: 'verticalKey',
-        searchParameters: searchParams
+        sectioned: false,
+        fields: [{
+          fieldApiName: 'field',
+          entityType: 'location',
+          fetchEntities: false
+        }]
       };
       const expectedQueryParams = {
         input: 'salesforce',
@@ -109,12 +110,12 @@ describe('AutoCompleteService', () => {
         verticalKey: 'verticalKey',
         search_parameters: JSON.stringify(convertedSearchParams)
       };
-      const autocompleteService = new AutoCompleteServiceImpl(
+      const autocompleteService = new AutocompleteServiceImpl(
         config,
         mockHttpService as HttpService,
         apiResponseValidator
       );
-      await autocompleteService.filterAutoComplete(request);
+      await autocompleteService.filterSearch(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams);
     });
   });

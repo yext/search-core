@@ -1,14 +1,15 @@
 import { SimpleFilter } from '../searchservice/request/SimpleFilter';
 import { SearchIntent } from '../searchservice/response/SearchIntent';
+import { Result } from '../searchservice/response/Result';
 
 /**
  * The response of a universal or vertical autocomplete request.
  *
  * @public
  */
-export interface AutoCompleteResponse {
-  /** An array of {@link AutoCompleteResult}s. */
-  results: AutoCompleteResult[];
+export interface AutocompleteResponse {
+  /** An array of {@link AutocompleteResult}s. */
+  results: AutocompleteResult[];
   /** {@inheritDoc SearchIntent} */
   inputIntents: SearchIntent[];
   /** The ID of the search query. */
@@ -18,11 +19,11 @@ export interface AutoCompleteResponse {
 }
 
 /**
- * The response of a filter autocomplete request.
+ * The response of a filtersearch request.
  *
  * @public
  */
-export interface FilterAutoCompleteResponse {
+export interface FilterSearchResponse {
   /** Indicates that the results are separated by field in the sections property. */
   sectioned: boolean,
   /**
@@ -34,19 +35,19 @@ export interface FilterAutoCompleteResponse {
   sections: {
     /** A display label for the field. */
     label: string,
-    /** An array of {@link AutoCompleteResult}s. */
-    results: AutoCompleteResult[];
+    /** An array of {@link AutocompleteResult}s. */
+    results: AutocompleteResult[];
   }[],
   /**
-   * An array of {@link AutoCompleteResult}s.
+   * An array of {@link AutocompleteResult}s.
    *
    * @remarks
    * This array will only be populated if sectioned is false.
    */
-  results: AutoCompleteResult[],
+  results: AutocompleteResult[],
   /** {@inheritDoc SearchIntent} */
   inputIntents: SearchIntent[];
-  /** {@inheritDoc AutoCompleteResponse.queryId} */
+  /** {@inheritDoc AutocompleteResponse.queryId} */
   queryId?: string,
   /** A unique id which corresponds to the request. */
   uuid: string;
@@ -57,21 +58,21 @@ export interface FilterAutoCompleteResponse {
  *
  * @public
  */
-export interface AutoCompleteResult {
+export interface AutocompleteResult {
   /** The value of an autocomplete suggestion. */
   value: string;
   /**
    * A filter applied to the autocomplete response.
    *
    * @remarks
-   * This property is only defined for filter autocomplete requests.
+   * This property is only defined for filtersearch.
    */
   filter?: SimpleFilter;
   /**
-   * The fieldId which corresponds to the AutoCompleteResult value.
+   * The fieldId which corresponds to the AutocompleteResult value.
    *
    * @remarks
-   * This property is only defined for filter autocomplete requests.
+   * This property is only defined for filtersearch.
    */
   key?: string;
   /**
@@ -90,25 +91,5 @@ export interface AutoCompleteResult {
    * @remarks
    * This property is only defined if the corresponding {@link SearchParameterField.fetchEntities} field is true.
    */
-  relatedItem?: {
-    /** Entity data which is synonymous to {@link Result.rawData}. */
-    data: Record<string, unknown>,
-    /**
-     * Represents field values or substrings of field values emphasized by the Answers API.
-     *
-     * @remarks
-     * This property is similar to {@link HighlightedValue} except the data is shaped differently.
-     *
-     * @example
-     * ```
-     * {
-     *   name: {
-     *     value: "Virginia Beach",
-     *     matchedSubstrings: [{offset: 0, length: 8}]
-     *   }
-     * }
-     * ```
-     */
-    highlightedFields: Record<string, unknown>
-  };
+  relatedItem?: Result
 }
