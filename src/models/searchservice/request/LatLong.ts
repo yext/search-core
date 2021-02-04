@@ -1,12 +1,13 @@
 /**
- * The coordinates of the user making the request which is used to bias the results.
+ * The latitude and longitude of the user making the request.
+ * Used to bias the results.
  *
  * @remarks
  * If omitted from a request, Yext will attempt to determine the location.
  *
  * @public
  */
-export interface Coordinates {
+export interface LatLong {
   /**
    * Latitude formatted as a decimal degree number.
    *

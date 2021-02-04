@@ -100,7 +100,7 @@ export class SearchServiceImpl implements SearchService {
       api_key: this.config.apiKey,
       v: defaultApiVersion,
       version: this.config.experienceVersion,
-      location: request.coordinates?.toString(),
+      location: request.latLong?.toString(),
       locale: this.config.locale,
       skipSpellCheck: request.skipSpellCheck,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
@@ -131,7 +131,7 @@ export class SearchServiceImpl implements SearchService {
       version: this.config.experienceVersion,
       locale: this.config.locale,
       input: request.query,
-      location: request.coordinates?.toString(),
+      location: request.latLong?.toString(),
       verticalKey: request.verticalKey,
       filters: request.staticFilters && serializeStaticFilters(request.staticFilters),
       limit: request.limit,
@@ -162,8 +162,8 @@ export class SearchServiceImpl implements SearchService {
    * Injects toString() methods into the request objects that require them
    */
   private injectToStringMethods(request: UniversalSearchRequest): void {
-    if (request.coordinates) {
-      request.coordinates.toString = function() {
+    if (request.latLong) {
+      request.latLong.toString = function() {
         return `${this.latitude},${this.longitude}`;
       };
     }

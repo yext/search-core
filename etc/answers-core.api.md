@@ -78,14 +78,6 @@ export interface Context {
 }
 
 // @public
-interface Coordinates_2 {
-    latitude: string;
-    longitude: string;
-}
-
-export { Coordinates_2 as Coordinates }
-
-// @public
 export interface DirectAnswer {
     entityName: string;
     fieldApiName: string;
@@ -181,6 +173,12 @@ export interface HighlightedValue {
     }[];
     path: string[];
     value: string;
+}
+
+// @public
+export interface LatLong {
+    latitude: string;
+    longitude: string;
 }
 
 // @public
@@ -302,7 +300,7 @@ export interface UniversalAutocompleteRequest {
 // @public
 export interface UniversalSearchRequest {
     context?: Context;
-    coordinates?: Coordinates_2;
+    latLong?: LatLong;
     query: string;
     querySource?: QuerySource;
     queryTrigger?: QueryTrigger;
@@ -342,8 +340,8 @@ export interface VerticalResults {
 // @public
 export interface VerticalSearchRequest {
     context?: Context;
-    coordinates?: Coordinates_2;
     facets?: Facet[];
+    latLong?: LatLong;
     limit?: number;
     offset?: number;
     query: string;
