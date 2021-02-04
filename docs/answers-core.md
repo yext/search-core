@@ -38,7 +38,6 @@
 |  [AutocompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
-|  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request which is used to bias the results. |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search. |
 |  [DisplayableFacet](./answers-core.displayablefacet.md) | A [Facet](./answers-core.facet.md) which contains extra fields meant to be displayed to the end user. |
@@ -63,4 +62,10 @@
 |  [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical. |
 |  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
 |  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search. |
+
+## Type Aliases
+
+|  Type Alias | Description |
+|  --- | --- |
+|  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 

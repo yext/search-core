@@ -73,9 +73,9 @@ export interface CombinedFilter {
 }
 
 // @public
-export interface Context {
-    [property: string]: string | boolean;
-}
+export type Context = string | number | boolean | null | {
+    [property: string]: Context;
+} | Context[];
 
 // @public
 interface Coordinates_2 {
