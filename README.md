@@ -1,6 +1,5 @@
 # Answers Core
 
-<a href="https://github.com/yext/answers-core/blob/master/docs/answers-core.md">Full Documentation</a>
 
 <div>
   <a href="https://npmjs.org/package/@yext/answers-core">
@@ -12,12 +11,16 @@
 </div>
 <br>
 
-Answers Core is a networking library for interacting with the Yext Answers API. 
+Answers Core is a networking library for interacting with the Yext Answers API.
+
+## Features
 
 - Works in both the **browser** and **Node.js**
 - 100% **TypeScript**, with detailed request and response models
 - Compatible with both **CommonJS** and **ES6** imports
 - Offers a ponyfilled ES5 bundle which doesn't pollute the global namespace
+
+[Full Documentation](https://github.com/yext/answers-core/blob/master/docs/answers-core.md")
 
 ## Getting Started
 
