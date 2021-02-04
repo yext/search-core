@@ -20,7 +20,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build-ci
-    - run: npx jest --coverage
+    - run: npx jest --collectCoverageFrom="src/**" --coverage
     - name: code coverage comment
       uses: romeovs/lcov-reporter-action@v0.2.11
       with:
