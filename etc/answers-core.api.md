@@ -81,7 +81,6 @@ export enum Comparator {
 
 // @public
 export type Context = any;
-}
 
 // @public
 interface Coordinates_2 {
