@@ -31,7 +31,7 @@ export enum LocationBiasMethod {
    * Location was supplied by the user's device.
    *
    * @remarks
-   * This location bias method is set when a latLong is supplied in search requests.
+   * This location bias method is set when coordinates are supplied in search requests.
    * */
   Device = 'DEVICE',
   /**

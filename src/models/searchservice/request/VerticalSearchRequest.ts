@@ -30,7 +30,7 @@ export interface VerticalSearchRequest {
   /** Skips spell checking if true. */
   skipSpellCheck?: boolean,
   /** {@inheritDoc LatLong} */
-  latLong?: LatLong,
+  coordinates?: LatLong,
   /** {@inheritDoc QueryTrigger} */
   queryTrigger?: QueryTrigger,
   /** Enables session tracking. */

@@ -18,7 +18,7 @@ export interface UniversalSearchRequest {
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean;
   /** {@inheritDoc LatLong} */
-  latLong?: LatLong;
+  coordinates?: LatLong;
   /** {@inheritDoc Context} */
   context?: Context;
   /**

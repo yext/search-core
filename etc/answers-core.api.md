@@ -300,7 +300,7 @@ export interface UniversalAutocompleteRequest {
 // @public
 export interface UniversalSearchRequest {
     context?: Context;
-    latLong?: LatLong;
+    coordinates?: LatLong;
     query: string;
     querySource?: QuerySource;
     queryTrigger?: QueryTrigger;
@@ -340,8 +340,8 @@ export interface VerticalResults {
 // @public
 export interface VerticalSearchRequest {
     context?: Context;
+    coordinates?: LatLong;
     facets?: Facet[];
-    latLong?: LatLong;
     limit?: number;
     offset?: number;
     query: string;
