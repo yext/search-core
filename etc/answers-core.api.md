@@ -76,7 +76,10 @@ export interface CombinedFilter {
 export enum Comparator {
     Equals = "$eq",
     GreaterThan = "$gt",
-    LessThan = "$lt"
+    GreaterThanOrEqualTo = "$ge",
+    LessThan = "$lt",
+    LessThanOrEqualTo = "$le",
+    NotEquals = "!$eq"
 }
 
 // @public
