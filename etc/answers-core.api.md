@@ -73,7 +73,15 @@ export interface CombinedFilter {
 }
 
 // @public
+export enum Comparator {
+    Equals = "$eq",
+    GreaterThan = "$gt",
+    LessThan = "$lt"
+}
+
+// @public
 export type Context = any;
+}
 
 // @public
 interface Coordinates_2 {
@@ -103,7 +111,7 @@ export interface DisplayableFacet extends Facet {
 
 // @public
 export interface DisplayableFacetOption extends FacetOption {
-    comparator: string;
+    comparator: Comparator;
     comparedValue: string | number | boolean;
     count: number;
     displayName: string;
@@ -138,7 +146,7 @@ export interface Facet {
 
 // @public
 export interface FacetOption {
-    comparator: string;
+    comparator: Comparator;
     comparedValue: string | number | boolean;
 }
 
@@ -255,7 +263,7 @@ export interface SearchParameterField {
 
 // @public
 export interface SimpleFilter {
-    comparator: string;
+    comparator: Comparator;
     comparedValue: string | number | boolean;
     fieldId: string;
 }

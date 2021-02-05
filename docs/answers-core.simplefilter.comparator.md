@@ -4,15 +4,10 @@
 
 ## SimpleFilter.comparator property
 
-The filter comparator.
+A filter's method of comparison.
 
 <b>Signature:</b>
 
 ```typescript
-comparator: string;
+comparator: Comparator;
 ```
-
-## Example
-
-'$eq'
-
