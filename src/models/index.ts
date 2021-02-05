@@ -23,7 +23,6 @@ export { SimpleFilter } from './searchservice/request/SimpleFilter';
 export { SortBy } from './searchservice/request/SortBy';
 export { UniversalSearchRequest } from './searchservice/request/UniversalSearchRequest';
 export { VerticalSearchRequest } from './searchservice/request/VerticalSearchRequest';
-export { JsonObject } from './searchservice/request/JsonObject';
 
 export { AppliedQueryFilter } from './searchservice/response/AppliedQueryFilter';
 export { DirectAnswer } from './searchservice/response/DirectAnswer';

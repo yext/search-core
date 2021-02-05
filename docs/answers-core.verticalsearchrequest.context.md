@@ -14,5 +14,5 @@ context?: Context;
 
 ## Remarks
 
-Must be a valid JSON object.
+May be any valid JSON object
 
