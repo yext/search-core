@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Used to trigger Answers {@link https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/ | Query Rules}.
  *
@@ -6,10 +7,4 @@
  *
  * @public
  */
-export type Context =
-  | { [property: string]: Context }
-  | Context[]
-  | string
-  | number
-  | boolean
-  | null;
+export type Context = any;

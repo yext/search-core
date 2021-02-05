@@ -9,11 +9,8 @@ Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answer
 <b>Signature:</b>
 
 ```typescript
-export declare type Context = {
-    [property: string]: Context;
-} | Context[] | string | number | boolean | null;
+export declare type Context = any;
 ```
-<b>References:</b> [Context](./answers-core.context.md)
 
 ## Remarks
 
