@@ -12,11 +12,15 @@ Represents a criterion that can be used to sort results.
 export interface SortBy 
 ```
 
+## Remarks
+
+Overrides the sort options that are configured on the experience configuration.
+
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [direction](./answers-core.sortby.direction.md) | 'ASC' \| 'DESC' | Direction to sort by. |
-|  [field](./answers-core.sortby.field.md) | string | The field name to sort by. Required only if SortBy type is 'FIELD'. |
-|  [type](./answers-core.sortby.type.md) | 'FIELD' \| 'ENTITY\_DISTANCE' \| 'RELEVANCE' | The type of sort. |
+|  [direction](./answers-core.sortby.direction.md) | [Direction](./answers-core.direction.md) | The direction of a sort. |
+|  [field](./answers-core.sortby.field.md) | string | The field name to sort by. Required only if SortBy type is [SortType.Field](./answers-core.sorttype.field.md)<!-- -->. |
+|  [type](./answers-core.sortby.type.md) | [SortType](./answers-core.sorttype.md) | The method of sorting. |
 

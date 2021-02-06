@@ -4,10 +4,10 @@
 
 ## SortBy.direction property
 
-Direction to sort by.
+The direction of a sort.
 
 <b>Signature:</b>
 
 ```typescript
-direction: 'ASC' | 'DESC';
+direction: Direction;
 ```
