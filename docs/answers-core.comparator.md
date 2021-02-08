@@ -20,6 +20,6 @@ export declare enum Comparator
 |  GreaterThan | <code>&quot;$gt&quot;</code> | A greater than comparison. |
 |  GreaterThanOrEqualTo | <code>&quot;$ge&quot;</code> | A greater than or equal to comparison. |
 |  LessThan | <code>&quot;$lt&quot;</code> | A less than comparison. |
-|  LessThanOrEqualTo | <code>&quot;$le&quot;</code> | A less or equal to comparison. |
+|  LessThanOrEqualTo | <code>&quot;$le&quot;</code> | A less than or equal to comparison. |
 |  NotEquals | <code>&quot;!$eq&quot;</code> | A not equals comparison. |
 

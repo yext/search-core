@@ -26,7 +26,7 @@ export enum Comparator {
    */
   LessThan = '$lt',
   /**
-   * A less or equal to comparison.
+   * A less than or equal to comparison.
    *
    * @remarks
    * Compatible with integer, float, date, datetime, and time fields.
