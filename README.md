@@ -5,7 +5,7 @@
   <a href="https://npmjs.org/package/@yext/answers-core">
     <img src="https://img.shields.io/npm/v/@yext/answers-core" alt="NPM version"/>
   </a>
-  <a href="https://github.com/yext/answers-core/blob/master/LICENSE">
+  <a href="./LICENSE">
     <img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" alt="License"/>
   </a>
 </div>
@@ -13,7 +13,7 @@
 
 Answers Core is a networking library for interacting with the Yext Answers API.
 
-[Full Documentation](https://github.com/yext/answers-core/blob/master/docs/answers-core.md)
+[Full Documentation](./docs/answers-core.md)
 
 ## Features
 
@@ -64,8 +64,8 @@ core.verticalSearch({
 });
 ```
 
-And that's it! See **[our documentation](https://github.com/yext/answers-core/tree/master/docs/answers-core.answerscore.md)** for a full list of supported API calls.
+And that's it! See **[our documentation](./docs/answers-core.answerscore.md)** for a full list of supported API calls.
 
 ## License
 
-Yext Answers-core is an open-sourced library licensed under the [BSD-3 License](https://github.com/yext/answers-core/blob/master/LICENSE).
+Yext Answers-core is an open-sourced library licensed under the [BSD-3 License](./LICENSE).
