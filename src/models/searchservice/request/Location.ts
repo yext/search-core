@@ -7,7 +7,7 @@
  *
  * @public
  */
-export interface LatLong {
+export interface Location {
   /**
    * Latitude formatted as a decimal degree number.
    *

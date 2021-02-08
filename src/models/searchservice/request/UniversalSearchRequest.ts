@@ -1,5 +1,5 @@
 import { Context } from './Context';
-import { LatLong } from './LatLong';
+import { Location } from './Location';
 import { QueryTrigger } from './QueryTrigger';
 import { QuerySource } from './QuerySource';
 
@@ -17,8 +17,8 @@ export interface UniversalSearchRequest {
   skipSpellCheck?: boolean;
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean;
-  /** {@inheritDoc LatLong} */
-  coordinates?: LatLong;
+  /** {@inheritDoc Location} */
+  location?: Location;
   /** {@inheritDoc Context} */
   context?: Context;
   /**

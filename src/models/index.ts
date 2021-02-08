@@ -16,7 +16,7 @@ export { QuestionSubmissionResponse } from './questionsubmission/QuestionSubmiss
 // Search service
 export { CombinedFilter, FilterCombinator } from './searchservice/request/CombinedFilter';
 export { Context } from './searchservice/request/Context';
-export { LatLong } from './searchservice/request/LatLong';
+export { Location } from './searchservice/request/Location';
 export { QuerySource } from './searchservice/request/QuerySource';
 export { QueryTrigger } from './searchservice/request/QueryTrigger';
 export { SimpleFilter } from './searchservice/request/SimpleFilter';

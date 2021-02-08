@@ -51,9 +51,9 @@ describe('SearchService', () => {
         queryTrigger: QueryTrigger.Initialize,
         skipSpellCheck: true,
         sessionTrackingEnabled: true,
-        coordinates: {
-          latitude: '40',
-          longitude: '40'
+        location: {
+          latitude: 40,
+          longitude: 40
         },
         context: {
           key: 'value'
