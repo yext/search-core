@@ -4,10 +4,10 @@
 
 ## SortBy.field property
 
-The field name to sort by. Required only if SortBy type is 'FIELD'.
+The field name to sort by. Required if the SortBy type is [SortType.Field](./answers-core.sorttype.field.md)<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-field: string;
+field?: string;
 ```

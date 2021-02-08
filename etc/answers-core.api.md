@@ -105,6 +105,12 @@ export interface DirectAnswer {
 }
 
 // @public
+export enum Direction {
+    Ascending = "ASC",
+    Descending = "DESC"
+}
+
+// @public
 export interface DisplayableFacet extends Facet {
     displayName: string;
     fieldId: string;
@@ -272,9 +278,16 @@ export interface SimpleFilter {
 
 // @public
 export interface SortBy {
-    direction: 'ASC' | 'DESC';
-    field: string;
-    type: 'FIELD' | 'ENTITY_DISTANCE' | 'RELEVANCE';
+    direction?: Direction;
+    field?: string;
+    type: SortType;
+}
+
+// @public
+export enum SortType {
+    EntityDistance = "ENTITY_DISTANCE",
+    Field = "FIELD",
+    Relevance = "RELEVANCE"
 }
 
 // @public
