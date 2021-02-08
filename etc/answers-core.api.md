@@ -174,10 +174,12 @@ export interface HighlightedValue {
 }
 
 // @public
-export interface LatLong {
+interface Location_2 {
     latitude: string;
     longitude: string;
 }
+
+export { Location_2 as Location }
 
 // @public
 export interface LocationBias {
@@ -298,7 +300,7 @@ export interface UniversalAutocompleteRequest {
 // @public
 export interface UniversalSearchRequest {
     context?: Context;
-    coordinates?: LatLong;
+    location?: Location_2;
     query: string;
     querySource?: QuerySource;
     queryTrigger?: QueryTrigger;
@@ -338,9 +340,9 @@ export interface VerticalResults {
 // @public
 export interface VerticalSearchRequest {
     context?: Context;
-    coordinates?: LatLong;
     facets?: Facet[];
     limit?: number;
+    location?: Location_2;
     offset?: number;
     query: string;
     querySource?: QuerySource;
