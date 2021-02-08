@@ -1,15 +1,10 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Used to trigger Answers {@link https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/ | Query Rules}.
  *
  * @remarks
- * Context may be any object.
- *
- * @privateRemarks
- * TODO: Update the type to make this a generic object.
+ * May be any valid JSON object
  *
  * @public
  */
-export interface Context {
-  /** Context keys and values */
-  [property: string]: string | boolean;
-}
+export type Context = any;

@@ -105,7 +105,7 @@ export class SearchServiceImpl implements SearchService {
       skipSpellCheck: request.skipSpellCheck,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       queryTrigger: request.queryTrigger,
-      context: request.context?.toString(),
+      context: JSON.stringify(request.context || undefined),
       referrerPageUrl: request.referrerPageUrl,
       source: request.querySource || QuerySource.Standard
     };
@@ -142,7 +142,7 @@ export class SearchServiceImpl implements SearchService {
       queryTrigger: request.queryTrigger,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       sortBys: JSON.stringify(request.sortBys || []),
-      context: request.context?.toString(),
+      context: JSON.stringify(request.context || undefined),
       referrerPageUrl: request.referrerPageUrl,
       source: request.querySource || QuerySource.Standard
     };
@@ -165,11 +165,6 @@ export class SearchServiceImpl implements SearchService {
     if (request.location) {
       request.location.toString = function() {
         return `${this.latitude},${this.longitude}`;
-      };
-    }
-    if (request.context) {
-      request.context.toString = function() {
-        return JSON.stringify(this);
       };
     }
   }

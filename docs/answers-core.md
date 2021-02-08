@@ -38,7 +38,7 @@
 |  [AutocompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
-|  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
+|  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request which is used to bias the results. |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search. |
 |  [DisplayableFacet](./answers-core.displayablefacet.md) | A [Facet](./answers-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./answers-core.displayablefacetoption.md) | A [FacetOption](./answers-core.facetoption.md) with extra data meant to be displayed to the end user. |
@@ -47,7 +47,6 @@
 |  [FilterSearchRequest](./answers-core.filtersearchrequest.md) | Options for a filtersearch request. |
 |  [FilterSearchResponse](./answers-core.filtersearchresponse.md) | The response of a filtersearch request. |
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the Answers API emphasized. |
-|  [LatLong](./answers-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | A representation of a question submission response. |
@@ -63,4 +62,10 @@
 |  [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical. |
 |  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
 |  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search. |
+
+## Type Aliases
+
+|  Type Alias | Description |
+|  --- | --- |
+|  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 
