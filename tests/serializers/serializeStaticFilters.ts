@@ -1,3 +1,4 @@
+import { Comparator } from '../../src/models/searchservice/common/Comparator';
 import { FilterCombinator } from '../../src/models/searchservice/request/CombinedFilter';
 import { serializeStaticFilters } from '../../src/serializers/serializeStaticFilters';
 
@@ -7,12 +8,12 @@ it('serializeStaticFilters works with multiple levels of nesting', () => {
       {
         filters:
           [
-            { fieldId: 'c_Region', comparator: '$eq', comparedValue: 'APAC' },
-            { fieldId: 'c_Region', comparator: '$eq', comparedValue: 'EMEA' }
+            { fieldId: 'c_Region', comparator: Comparator.Equals, comparedValue: 'APAC' },
+            { fieldId: 'c_Region', comparator: Comparator.Equals, comparedValue: 'EMEA' }
           ],
         combinator: FilterCombinator.OR
       },
-      { fieldId: 'builtin.entityType', comparator: '$eq', comparedValue: 'Publication' },
+      { fieldId: 'builtin.entityType', comparator: Comparator.Equals, comparedValue: 'Publication' },
     ],
     combinator: FilterCombinator.AND
   });
@@ -34,8 +35,8 @@ it('serializeStaticFilters works with multiple levels of nesting', () => {
 it('serializeStaticFilters works with a simple Combined Filter', () => {
   const actualSerializedFilters = serializeStaticFilters({
     filters: [
-      { fieldId: 'c_Region', comparator: '$eq', comparedValue: 'APAC' },
-      { fieldId: 'c_Region', comparator: '$eq', comparedValue: 'EMEA' }
+      { fieldId: 'c_Region', comparator: Comparator.Equals, comparedValue: 'APAC' },
+      { fieldId: 'c_Region', comparator: Comparator.Equals, comparedValue: 'EMEA' }
     ],
     combinator: FilterCombinator.OR
   });
@@ -52,7 +53,7 @@ it('serializeStaticFilters works with a simple Combined Filter', () => {
 it('serializeStaticFilters works with only a Simple Filter', () => {
   const actualSerializedFilters = serializeStaticFilters({
     fieldId: 'c_Region',
-    comparator: '$eq',
+    comparator: Comparator.Equals,
     comparedValue: 'APAC'
   });
 

@@ -73,6 +73,16 @@ export interface CombinedFilter {
 }
 
 // @public
+export enum Comparator {
+    Equals = "$eq",
+    GreaterThan = "$gt",
+    GreaterThanOrEqualTo = "$ge",
+    LessThan = "$lt",
+    LessThanOrEqualTo = "$le",
+    NotEquals = "!$eq"
+}
+
+// @public
 export type Context = any;
 
 // @public
@@ -109,7 +119,7 @@ export interface DisplayableFacet extends Facet {
 
 // @public
 export interface DisplayableFacetOption extends FacetOption {
-    comparator: string;
+    comparator: Comparator;
     comparedValue: string | number | boolean;
     count: number;
     displayName: string;
@@ -144,7 +154,7 @@ export interface Facet {
 
 // @public
 export interface FacetOption {
-    comparator: string;
+    comparator: Comparator;
     comparedValue: string | number | boolean;
 }
 
@@ -261,7 +271,7 @@ export interface SearchParameterField {
 
 // @public
 export interface SimpleFilter {
-    comparator: string;
+    comparator: Comparator;
     comparedValue: string | number | boolean;
     fieldId: string;
 }
