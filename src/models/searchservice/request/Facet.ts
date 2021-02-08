@@ -1,3 +1,5 @@
+import { Comparator } from '../common/Comparator';
+
 /**
  * Represents dynamic filter options for the Answers API.
  *
@@ -21,13 +23,8 @@ export interface Facet {
  * @public
  */
 export interface FacetOption {
-  /**
-   * The filter comparator.
-   *
-   * @example
-   * '$eq'
-   */
-  comparator: string;
+  /** {@inheritDoc Comparator} */
+  comparator: Comparator;
   /**
    * The value to compare.
    *

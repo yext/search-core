@@ -1,3 +1,5 @@
+import { Comparator } from '../common/Comparator';
+
 /**
  * Represents a filter which compares values to a single field.
  *
@@ -11,13 +13,8 @@ export interface SimpleFilter {
    * 'c_jobCategory'
    */
   fieldId: string;
-  /**
-   * The filter comparator.
-   *
-   * @example
-   * '$eq'
-   */
-  comparator: string;
+  /** {@inheritDoc Comparator} */
+  comparator: Comparator;
   /**
    * The value to compare.
    *

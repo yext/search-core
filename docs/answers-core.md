@@ -15,6 +15,7 @@
 
 |  Enumeration | Description |
 |  --- | --- |
+|  [Comparator](./answers-core.comparator.md) | A filter's method of comparison. |
 |  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location. |
 |  [QuerySource](./answers-core.querysource.md) | The source of the search request. |
