@@ -268,8 +268,8 @@ export interface SimpleFilter {
 
 // @public
 export interface SortBy {
-    direction: Direction;
-    field: string;
+    direction?: Direction;
+    field?: string;
     type: SortType;
 }
 

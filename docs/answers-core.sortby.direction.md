@@ -4,10 +4,10 @@
 
 ## SortBy.direction property
 
-The direction of a sort.
+The direction of the sort. Required if the SortBy type is [SortType.Field](./answers-core.sorttype.field.md)<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-direction: Direction;
+direction?: Direction;
 ```

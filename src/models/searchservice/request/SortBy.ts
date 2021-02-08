@@ -11,8 +11,8 @@ import { Direction } from './Direction';
 export interface SortBy {
   /** {@inheritDoc SortType} */
   type: SortType;
-  /** The field name to sort by. Required only if SortBy type is {@link SortType.Field}. */
-  field: string;
-  /** {@inheritDoc Direction} */
-  direction: Direction;
+  /** The field name to sort by. Required if the SortBy type is {@link SortType.Field}. */
+  field?: string;
+  /** The direction of the sort. Required if the SortBy type is {@link SortType.Field}. */
+  direction?: Direction;
 }
