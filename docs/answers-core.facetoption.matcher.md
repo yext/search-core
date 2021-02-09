@@ -4,7 +4,7 @@
 
 ## FacetOption.matcher property
 
-A Matcher is the operation by which a [Filter](./answers-core.filter.md) filters by.
+A Matcher is a filtering operation.
 
 <b>Signature:</b>
 

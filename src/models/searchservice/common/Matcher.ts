@@ -1,5 +1,5 @@
 /**
- * A Matcher is the operation by which a {@link Filter} filters by.
+ * A Matcher is a filtering operation.
  *
  * @public
  */
