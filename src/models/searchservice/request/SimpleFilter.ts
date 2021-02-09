@@ -30,7 +30,7 @@ export interface SimpleFilter {
  * @public
  */
 export interface NearFilterValue {
-  /** The radius around the latitude and longitude. */
+  /** The radius (in meters) around the latitude and longitude. */
   radius: number,
   /** The latitude of the location. */
   lat: number,
