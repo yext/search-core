@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 export const HttpServiceMock = jest.fn(() => ({
   get: jest.fn<Promise<unknown>, unknown[]>(
     function get<T>(): Promise<T> {
