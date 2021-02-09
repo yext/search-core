@@ -9,5 +9,5 @@ An array of filters applied to the search.
 <b>Signature:</b>
 
 ```typescript
-filters: (SimpleFilter | CombinedFilter)[];
+filters: (Filter | CombinedFilter)[];
 ```

@@ -5,7 +5,7 @@ import { Comparator } from '../common/Comparator';
  *
  * @public
  */
-export interface SimpleFilter {
+export interface Filter {
   /**
    * The fieldId to apply the filter against.
    *

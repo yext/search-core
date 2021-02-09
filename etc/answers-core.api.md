@@ -43,7 +43,7 @@ export class AnswersError extends Error {
 export interface AppliedQueryFilter {
     displayKey: string;
     displayValue: string;
-    filter: SimpleFilter;
+    filter: Filter;
 }
 
 // @public
@@ -56,7 +56,7 @@ export interface AutocompleteResponse {
 
 // @public
 export interface AutocompleteResult {
-    filter?: SimpleFilter;
+    filter?: Filter;
     key?: string;
     matchedSubstrings?: {
         length: number;
@@ -69,7 +69,7 @@ export interface AutocompleteResult {
 // @public
 export interface CombinedFilter {
     combinator: FilterCombinator;
-    filters: (SimpleFilter | CombinedFilter)[];
+    filters: (Filter | CombinedFilter)[];
 }
 
 // @public
@@ -148,6 +148,13 @@ export interface Facet {
 export interface FacetOption {
     comparator: Comparator;
     comparedValue: string | number | boolean;
+}
+
+// @public
+export interface Filter {
+    comparator: Comparator;
+    comparedValue: string | number | boolean;
+    fieldId: string;
 }
 
 // @public
@@ -268,13 +275,6 @@ export interface SearchParameterField {
 }
 
 // @public
-export interface SimpleFilter {
-    comparator: Comparator;
-    comparedValue: string | number | boolean;
-    fieldId: string;
-}
-
-// @public
 export interface SortBy {
     direction?: Direction;
     field?: string;
@@ -374,7 +374,7 @@ export interface VerticalSearchRequest {
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
     sortBys?: SortBy[];
-    staticFilters?: CombinedFilter | SimpleFilter;
+    staticFilters?: CombinedFilter | Filter;
     verticalKey: string;
 }
 

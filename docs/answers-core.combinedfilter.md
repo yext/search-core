@@ -17,5 +17,5 @@ export interface CombinedFilter
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [combinator](./answers-core.combinedfilter.combinator.md) | [FilterCombinator](./answers-core.filtercombinator.md) | The logical operator used to combine the filters. |
-|  [filters](./answers-core.combinedfilter.filters.md) | ([SimpleFilter](./answers-core.simplefilter.md) \| [CombinedFilter](./answers-core.combinedfilter.md)<!-- -->)\[\] | An array of filters applied to the search. |
+|  [filters](./answers-core.combinedfilter.filters.md) | ([Filter](./answers-core.filter.md) \| [CombinedFilter](./answers-core.combinedfilter.md)<!-- -->)\[\] | An array of filters applied to the search. |
 

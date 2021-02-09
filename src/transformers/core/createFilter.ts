@@ -1,7 +1,7 @@
-import { SimpleFilter } from '../../models/searchservice/request/SimpleFilter';
+import { Filter } from '../../models/searchservice/request/Filter';
 import { Comparator } from '../../models/searchservice/common/Comparator';
 
-export function createSimpleFilter(filter: any): SimpleFilter {
+export function createFilter(filter: any): Filter {
   const fieldId = Object.keys(filter)[0];
   const comparator = Object.keys(filter[fieldId])[0];
 

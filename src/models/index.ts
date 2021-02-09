@@ -20,7 +20,7 @@ export { Context } from './searchservice/request/Context';
 export { LatLong } from './searchservice/request/LatLong';
 export { QuerySource } from './searchservice/request/QuerySource';
 export { QueryTrigger } from './searchservice/request/QueryTrigger';
-export { SimpleFilter } from './searchservice/request/SimpleFilter';
+export { Filter } from './searchservice/request/Filter';
 export { SortBy } from './searchservice/request/SortBy';
 export { UniversalSearchRequest } from './searchservice/request/UniversalSearchRequest';
 export { VerticalSearchRequest } from './searchservice/request/VerticalSearchRequest';
