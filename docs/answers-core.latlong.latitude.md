@@ -14,5 +14,5 @@ latitude: number;
 
 ## Example
 
-`"40.741895"`
+`40.741895`
 

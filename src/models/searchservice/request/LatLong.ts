@@ -12,14 +12,14 @@ export interface LatLong {
    * Latitude formatted as a decimal degree number.
    *
    * @example
-   * `"40.741895"`
+   * `40.741895`
    */
   latitude: number;
   /**
    * Longitude formatted as a decimal degree number.
    *
    * @example
-   * `"-73.989308"`
+   * `-73.989308`
    */
   longitude: number;
 }

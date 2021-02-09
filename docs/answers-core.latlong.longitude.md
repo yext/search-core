@@ -14,5 +14,5 @@ longitude: number;
 
 ## Example
 
-`"-73.989308"`
+`-73.989308`
 
