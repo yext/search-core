@@ -16,7 +16,7 @@ export interface Filter
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [comparator](./answers-core.filter.comparator.md) | [Comparator](./answers-core.comparator.md) | A filter's method of comparison. |
-|  [comparedValue](./answers-core.filter.comparedvalue.md) | string \| number \| boolean | The value to compare. |
 |  [fieldId](./answers-core.filter.fieldid.md) | string | The fieldId to apply the filter against. |
+|  [matcher](./answers-core.filter.matcher.md) | [Matcher](./answers-core.matcher.md) | A Matcher is the operation by which a [Filter](./answers-core.filter.md) filters by. |
+|  [value](./answers-core.filter.value.md) | string \| number \| boolean | The value to compare. |
 

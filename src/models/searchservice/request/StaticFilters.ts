@@ -13,5 +13,5 @@ export interface StaticFilters {
  * @internal
  */
 export interface Filter {
-  [comparator: string]: string | number | boolean
+  [matcher: string]: string | number | boolean
 }

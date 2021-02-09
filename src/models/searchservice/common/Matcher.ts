@@ -1,46 +1,46 @@
 /**
- * A filter's method of comparison.
+ * A Matcher is the operation by which a {@link Filter} filters by.
  *
  * @public
  */
-export enum Comparator {
+export enum Matcher {
   /**
-   * An equals comparison.
+   * An equals matcher.
    *
    * @remarks
    * Compatible with all field types.
    */
   Equals = '$eq',
   /**
-   * A not equals comparison.
+   * A not equals matcher.
    *
    * @remarks
    * Compatible with all field types.
    */
   NotEquals = '!$eq',
   /**
-   * A less than comparison.
+   * A less than matcher.
    *
    * @remarks
    * Compatible with integer, float, date, datetime, and time fields.
    */
   LessThan = '$lt',
   /**
-   * A less than or equal to comparison.
+   * A less than or equal to matcher.
    *
    * @remarks
    * Compatible with integer, float, date, datetime, and time fields.
    */
   LessThanOrEqualTo = '$le',
   /**
-   * A greater than comparison.
+   * A greater than matcher.
    *
    * @remarks
    * Compatible with integer, float, date, datetime, and time fields.
    */
   GreaterThan = '$gt',
   /**
-   * A greater than or equal to comparison.
+   * A greater than or equal to matcher.
    *
    * @remarks
    * Compatible with integer, float, date, datetime, and time fields.

@@ -15,10 +15,10 @@
 
 |  Enumeration | Description |
 |  --- | --- |
-|  [Comparator](./answers-core.comparator.md) | A filter's method of comparison. |
 |  [Direction](./answers-core.direction.md) | The direction of a sort. |
 |  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location. |
+|  [Matcher](./answers-core.matcher.md) | A Matcher is the operation by which a [Filter](./answers-core.filter.md) filters by. |
 |  [QuerySource](./answers-core.querysource.md) | The source of the search request. |
 |  [QueryTrigger](./answers-core.querytrigger.md) | Describes the ways a search can be executed besides user input. |
 |  [SearchIntent](./answers-core.searchintent.md) | Represents intents from the Answers API. |

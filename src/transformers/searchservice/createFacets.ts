@@ -21,8 +21,8 @@ function createFacetOptions(options: any[]): DisplayableFacetOption[] {
       displayName: option.displayName,
       count: option.count,
       selected: option.selected,
-      comparator: filter.comparator,
-      comparedValue: filter.comparedValue
+      matcher: filter.matcher,
+      value: filter.value
     };
   });
 }

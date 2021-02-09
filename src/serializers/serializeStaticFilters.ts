@@ -28,7 +28,7 @@ function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilter
 export function shapeFilterForApi(filter: Filter): StaticFilters {
   return {
     [filter.fieldId]: {
-      [filter.comparator]: filter.comparedValue
+      [filter.matcher]: filter.value
     }
   };
 }

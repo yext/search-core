@@ -16,6 +16,6 @@ export interface FacetOption
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [comparator](./answers-core.facetoption.comparator.md) | [Comparator](./answers-core.comparator.md) | A filter's method of comparison. |
-|  [comparedValue](./answers-core.facetoption.comparedvalue.md) | string \| number \| boolean | The value to compare. |
+|  [matcher](./answers-core.facetoption.matcher.md) | [Matcher](./answers-core.matcher.md) | A Matcher is the operation by which a [Filter](./answers-core.filter.md) filters by. |
+|  [value](./answers-core.facetoption.value.md) | string \| number \| boolean | The value to compare. |
 

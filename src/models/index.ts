@@ -14,7 +14,7 @@ export { QuestionSubmissionRequest } from './questionsubmission/QuestionSubmissi
 export { QuestionSubmissionResponse } from './questionsubmission/QuestionSubmissionResponse';
 
 // Search service
-export { Comparator } from './searchservice/common/Comparator';
+export { Matcher } from './searchservice/common/Matcher';
 export { CombinedFilter, FilterCombinator } from './searchservice/request/CombinedFilter';
 export { Context } from './searchservice/request/Context';
 export { LatLong } from './searchservice/request/LatLong';

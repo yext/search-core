@@ -41,8 +41,8 @@ describe('AutocompleteResponse', () => {
                 }
               ],
               filter: {
-                comparator: '$eq',
-                comparedValue: 'Virginia Beach',
+                matcher: '$eq',
+                value: 'Virginia Beach',
                 fieldId: 'name'
               },
               key: 'name'
@@ -75,8 +75,8 @@ describe('AutocompleteResponse', () => {
                 }
               ],
               filter: {
-                comparator: '$eq',
-                comparedValue: 'Virginia Beach',
+                matcher: '$eq',
+                value: 'Virginia Beach',
                 fieldId: 'name'
               },
               key: 'name',
@@ -110,8 +110,8 @@ describe('AutocompleteResponse', () => {
                 }
               ],
               filter: {
-                comparator: '$eq',
-                comparedValue: 'Virginia Beach2',
+                matcher: '$eq',
+                value: 'Virginia Beach2',
                 fieldId: 'name2'
               },
               key: 'name',

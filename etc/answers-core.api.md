@@ -73,16 +73,6 @@ export interface CombinedFilter {
 }
 
 // @public
-export enum Comparator {
-    Equals = "$eq",
-    GreaterThan = "$gt",
-    GreaterThanOrEqualTo = "$ge",
-    LessThan = "$lt",
-    LessThanOrEqualTo = "$le",
-    NotEquals = "!$eq"
-}
-
-// @public
 export type Context = any;
 
 // @public
@@ -111,11 +101,11 @@ export interface DisplayableFacet extends Facet {
 
 // @public
 export interface DisplayableFacetOption extends FacetOption {
-    comparator: Comparator;
-    comparedValue: string | number | boolean;
     count: number;
     displayName: string;
+    matcher: Matcher;
     selected: boolean;
+    value: string | number | boolean;
 }
 
 // Warning: (ae-internal-missing-underscore) The name "Endpoints" should be prefixed with an underscore because the declaration is marked as @internal
@@ -146,15 +136,15 @@ export interface Facet {
 
 // @public
 export interface FacetOption {
-    comparator: Comparator;
-    comparedValue: string | number | boolean;
+    matcher: Matcher;
+    value: string | number | boolean;
 }
 
 // @public
 export interface Filter {
-    comparator: Comparator;
-    comparedValue: string | number | boolean;
     fieldId: string;
+    matcher: Matcher;
+    value: string | number | boolean;
 }
 
 // @public
@@ -215,6 +205,16 @@ export enum LocationBiasMethod {
     Device = "DEVICE",
     Ip = "IP",
     Unknown = "UNKNOWN"
+}
+
+// @public
+export enum Matcher {
+    Equals = "$eq",
+    GreaterThan = "$gt",
+    GreaterThanOrEqualTo = "$ge",
+    LessThan = "$lt",
+    LessThanOrEqualTo = "$le",
+    NotEquals = "!$eq"
 }
 
 // @public

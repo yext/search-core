@@ -1,4 +1,4 @@
-import { Comparator } from '../common/Comparator';
+import { Matcher } from '../common/Matcher';
 
 /**
  * Represents a filter which compares values to a single field.
@@ -13,13 +13,13 @@ export interface Filter {
    * 'c_jobCategory'
    */
   fieldId: string;
-  /** {@inheritDoc Comparator} */
-  comparator: Comparator;
+  /** {@inheritDoc Matcher} */
+  matcher: Matcher;
   /**
    * The value to compare.
    *
    * @example
    * 'Sales'
    */
-  comparedValue: string | number | boolean;
+  value: string | number | boolean;
 }

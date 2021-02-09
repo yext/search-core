@@ -22,8 +22,8 @@ it('createAppliedQueryFilter correctly transforms appliedQueryFilters', () => {
     displayValue: 'Sales',
     filter: {
       fieldId: 'c_jobCategory',
-      comparator: '$eq',
-      comparedValue: 'Sales'
+      matcher: '$eq',
+      value: 'Sales'
     },
   });
 });
