@@ -20,6 +20,6 @@ export function createVerticalSearchResponse(data: any): VerticalSearchResponse 
       && createVerticalSearchResponse({ response: data.response.allResultsForVertical }),
     alternativeVerticals: data.response.alternativeVerticals && data.response.alternativeVerticals.modules
       && data.response.alternativeVerticals.modules.map(createVerticalResults),
-    uuid: data.meta.uuid
+    uuid: data.meta?.uuid
   };
 }
