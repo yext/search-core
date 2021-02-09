@@ -109,10 +109,13 @@ describe('SearchService', () => {
   });
 
   describe('Vertical Search', ()=> {
-    const mockHttpService = new HttpServiceMock();
-    mockHttpService.get.mockResolvedValue({
-      response: {},
-      meta: {},
+    let mockHttpService;
+    beforeEach(() => {
+      mockHttpService = new HttpServiceMock();
+      mockHttpService.get.mockResolvedValue({
+        response: {},
+        meta: {},
+      });
     });
     const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query';
 
@@ -138,6 +141,40 @@ describe('SearchService', () => {
       );
       await searchService.verticalSearch(requestWithRequiredParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
+    });
+
+    it('Passes locationRadius = 0 correctly, despite it being a falsy value', async () => {
+      const request = {
+        query: 'testQuery',
+        verticalKey: 'verticalKey',
+        locationRadius: 0.0
+      };
+      const searchService = new SearchServiceImpl(
+        configWithRequiredParams,
+        mockHttpService as HttpService,
+        apiResponseValidator
+      );
+      await searchService.verticalSearch(request);
+      const actualQueryParams = mockHttpService.get.mock.calls[0][1];
+      const actualLocationRadius = (actualQueryParams as { locationRadius: string }).locationRadius;
+      expect(actualLocationRadius).toEqual('0');
+    });
+
+    it('Passes locationRadius with decimal correctly', async () => {
+      const request = {
+        query: 'testQuery',
+        verticalKey: 'verticalKey',
+        locationRadius: 1.23
+      };
+      const searchService = new SearchServiceImpl(
+        configWithRequiredParams,
+        mockHttpService as HttpService,
+        apiResponseValidator
+      );
+      await searchService.verticalSearch(request);
+      const actualQueryParams = mockHttpService.get.mock.calls[0][1];
+      const actualLocationRadius = (actualQueryParams as { locationRadius: string }).locationRadius;
+      expect(actualLocationRadius).toEqual('1.23');
     });
   });
 });

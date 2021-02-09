@@ -62,7 +62,8 @@ interface VerticalSearchQueryParams extends QueryParams {
   sortBys?: string,
   context?: string,
   referrerPageUrl?: string,
-  source?: QuerySource
+  source?: QuerySource,
+  locationRadius?: string
 }
 
 /**
@@ -73,7 +74,7 @@ interface VerticalSearchQueryParams extends QueryParams {
 export class SearchServiceImpl implements SearchService {
   private config: AnswersConfig;
   private httpService: HttpService;
-  private apiResponseValidator;
+  private apiResponseValidator: ApiResponseValidator;
   private verticalSearchEndpoint: string;
   private universalSearchEndpoint: string;
 
@@ -144,7 +145,8 @@ export class SearchServiceImpl implements SearchService {
       sortBys: JSON.stringify(request.sortBys || []),
       context: JSON.stringify(request.context || undefined),
       referrerPageUrl: request.referrerPageUrl,
-      source: request.querySource || QuerySource.Standard
+      source: request.querySource || QuerySource.Standard,
+      locationRadius: request.locationRadius?.toString()
     };
 
     const response =
