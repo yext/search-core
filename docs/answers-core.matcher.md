@@ -21,5 +21,6 @@ export declare enum Matcher
 |  GreaterThanOrEqualTo | <code>&quot;$ge&quot;</code> | A greater than or equal to matcher. |
 |  LessThan | <code>&quot;$lt&quot;</code> | A less than matcher. |
 |  LessThanOrEqualTo | <code>&quot;$le&quot;</code> | A less than or equal to matcher. |
+|  Near | <code>&quot;$near&quot;</code> | A comparison of whether an entity is within a certain radius of a certain location. |
 |  NotEquals | <code>&quot;!$eq&quot;</code> | A not equals matcher. |
 

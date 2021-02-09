@@ -25,7 +25,7 @@ export interface Filter {
 }
 
 /**
- * A filter value for a $near {@link Comparator} filter.
+ * A filter value for a filter with a $near {@link Matcher}.
  *
  * @public
  */

@@ -18,5 +18,5 @@ export interface Filter
 |  --- | --- | --- |
 |  [fieldId](./answers-core.filter.fieldid.md) | string | The fieldId to apply the filter against. |
 |  [matcher](./answers-core.filter.matcher.md) | [Matcher](./answers-core.matcher.md) | A Matcher is the operation by which a [Filter](./answers-core.filter.md) filters by. |
-|  [value](./answers-core.filter.value.md) | string \| number \| boolean | The value to compare. |
+|  [value](./answers-core.filter.value.md) | string \| number \| boolean \| [NearFilterValue](./answers-core.nearfiltervalue.md) | The value to compare. |
 

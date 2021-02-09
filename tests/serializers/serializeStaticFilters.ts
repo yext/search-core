@@ -64,8 +64,8 @@ it('serializeStaticFilters works with only a Simple Filter', () => {
 it('serializeStaticFilters works with a $near Simple filter', () => {
   const actualSerializedFilters = serializeStaticFilters({
     fieldId: 'builtin.location',
-    comparator: Comparator.Near,
-    comparedValue: {
+    matcher: Matcher.Near,
+    value: {
       lat: 1,
       lng: 2,
       radius: 3

@@ -43,7 +43,7 @@ export class AnswersError extends Error {
 export interface AppliedQueryFilter {
     displayKey: string;
     displayValue: string;
-    filter: SimpleFilter;
+    filter: Filter;
 }
 
 // @public
@@ -56,7 +56,7 @@ export interface AutocompleteResponse {
 
 // @public
 export interface AutocompleteResult {
-    filter?: SimpleFilter;
+    filter?: Filter;
     key?: string;
     matchedSubstrings?: {
         length: number;
@@ -69,18 +69,7 @@ export interface AutocompleteResult {
 // @public
 export interface CombinedFilter {
     combinator: FilterCombinator;
-    filters: (SimpleFilter | CombinedFilter)[];
-}
-
-// @public
-export enum Comparator {
-    Equals = "$eq",
-    GreaterThan = "$gt",
-    GreaterThanOrEqualTo = "$ge",
-    LessThan = "$lt",
-    LessThanOrEqualTo = "$le",
-    Near = "$near",
-    NotEquals = "!$eq"
+    filters: (Filter | CombinedFilter)[];
 }
 
 // @public
@@ -112,11 +101,11 @@ export interface DisplayableFacet extends Facet {
 
 // @public
 export interface DisplayableFacetOption extends FacetOption {
-    comparator: Comparator;
-    comparedValue: string | number | boolean;
     count: number;
     displayName: string;
+    matcher: Matcher;
     selected: boolean;
+    value: string | number | boolean;
 }
 
 // Warning: (ae-internal-missing-underscore) The name "Endpoints" should be prefixed with an underscore because the declaration is marked as @internal
@@ -147,8 +136,15 @@ export interface Facet {
 
 // @public
 export interface FacetOption {
-    comparator: Comparator;
-    comparedValue: string | number | boolean;
+    matcher: Matcher;
+    value: string | number | boolean;
+}
+
+// @public
+export interface Filter {
+    fieldId: string;
+    matcher: Matcher;
+    value: string | number | boolean | NearFilterValue;
 }
 
 // @public
@@ -209,6 +205,17 @@ export enum LocationBiasMethod {
     Device = "DEVICE",
     Ip = "IP",
     Unknown = "UNKNOWN"
+}
+
+// @public
+export enum Matcher {
+    Equals = "$eq",
+    GreaterThan = "$gt",
+    GreaterThanOrEqualTo = "$ge",
+    LessThan = "$lt",
+    LessThanOrEqualTo = "$le",
+    Near = "$near",
+    NotEquals = "!$eq"
 }
 
 // @public
@@ -273,13 +280,6 @@ export interface SearchParameterField {
     entityType: string;
     fetchEntities: boolean;
     fieldApiName: string;
-}
-
-// @public
-export interface SimpleFilter {
-    comparator: Comparator;
-    comparedValue: string | number | boolean | NearFilterValue;
-    fieldId: string;
 }
 
 // @public
@@ -382,7 +382,7 @@ export interface VerticalSearchRequest {
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
     sortBys?: SortBy[];
-    staticFilters?: CombinedFilter | SimpleFilter;
+    staticFilters?: CombinedFilter | Filter;
     verticalKey: string;
 }
 
