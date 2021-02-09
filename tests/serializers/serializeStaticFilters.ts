@@ -60,3 +60,26 @@ it('serializeStaticFilters works with only a Simple Filter', () => {
   const expectedSerializedFilters = { c_Region: { $eq: 'APAC' } };
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
+
+it('serializeStaticFilters works with a $near Simple filter', () => {
+  const actualSerializedFilters = serializeStaticFilters({
+    fieldId: 'builtin.location',
+    comparator: Comparator.Near,
+    comparedValue: {
+      lat: 1,
+      lng: 2,
+      radius: 3
+    }
+  });
+
+  const expectedSerializedFilters = {
+    'builtin.location': {
+      $near: {
+        lat: 1,
+        lng: 2,
+        radius: 3
+      }
+    }
+  };
+  expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
+});

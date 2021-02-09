@@ -79,6 +79,7 @@ export enum Comparator {
     GreaterThanOrEqualTo = "$ge",
     LessThan = "$lt",
     LessThanOrEqualTo = "$le",
+    Near = "$near",
     NotEquals = "!$eq"
 }
 
@@ -211,6 +212,13 @@ export enum LocationBiasMethod {
 }
 
 // @public
+export interface NearFilterValue {
+    lat: number;
+    lng: number;
+    radius: number;
+}
+
+// @public
 export function provideCore(config: AnswersConfig): AnswersCore;
 
 // @public
@@ -270,7 +278,7 @@ export interface SearchParameterField {
 // @public
 export interface SimpleFilter {
     comparator: Comparator;
-    comparedValue: string | number | boolean;
+    comparedValue: string | number | boolean | NearFilterValue;
     fieldId: string;
 }
 

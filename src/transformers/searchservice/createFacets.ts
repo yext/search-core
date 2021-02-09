@@ -22,7 +22,7 @@ function createFacetOptions(options: any[]): DisplayableFacetOption[] {
       count: option.count,
       selected: option.selected,
       comparator: simpleFilter.comparator,
-      comparedValue: simpleFilter.comparedValue
+      comparedValue: simpleFilter.comparedValue as string | number | boolean
     };
   });
 }

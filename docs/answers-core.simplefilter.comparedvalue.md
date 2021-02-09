@@ -9,7 +9,7 @@ The value to compare.
 <b>Signature:</b>
 
 ```typescript
-comparedValue: string | number | boolean;
+comparedValue: string | number | boolean | NearFilterValue;
 ```
 
 ## Example
