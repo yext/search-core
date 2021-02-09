@@ -1,7 +1,7 @@
 import { CombinedFilter } from './CombinedFilter';
 import { SimpleFilter } from './SimpleFilter';
 import { Context } from './Context';
-import { Location } from './Location';
+import { LatLong } from './LatLong';
 import { QueryTrigger } from './QueryTrigger';
 import { SortBy } from './SortBy';
 import { QuerySource } from './QuerySource';
@@ -29,8 +29,8 @@ export interface VerticalSearchRequest {
   facets?: Facet[],
   /** Skips spell checking if true. */
   skipSpellCheck?: boolean,
-  /** {@inheritDoc Location} */
-  location?: Location,
+  /** {@inheritDoc LatLong} */
+  location?: LatLong,
   /** {@inheritDoc QueryTrigger} */
   queryTrigger?: QueryTrigger,
   /** Enables session tracking. */

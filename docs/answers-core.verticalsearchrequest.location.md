@@ -9,7 +9,7 @@ The latitude and longitude of the user making the request. Used to bias the resu
 <b>Signature:</b>
 
 ```typescript
-location?: Location;
+location?: LatLong;
 ```
 
 ## Remarks

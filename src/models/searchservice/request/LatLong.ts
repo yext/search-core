@@ -7,19 +7,19 @@
  *
  * @public
  */
-export interface Location {
+export interface LatLong {
   /**
    * Latitude formatted as a decimal degree number.
    *
    * @example
    * `"40.741895"`
    */
-  latitude: string;
+  latitude: number;
   /**
    * Longitude formatted as a decimal degree number.
    *
    * @example
    * `"-73.989308"`
    */
-  longitude: string;
+  longitude: number;
 }

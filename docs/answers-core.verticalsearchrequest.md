@@ -19,7 +19,7 @@ export interface VerticalSearchRequest
 |  [context?](./answers-core.verticalsearchrequest.context.md) | [Context](./answers-core.context.md) | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [facets?](./answers-core.verticalsearchrequest.facets.md) | [Facet](./answers-core.facet.md)<!-- -->\[\] | <i>(Optional)</i> The facet filters to apply to the search. |
 |  [limit?](./answers-core.verticalsearchrequest.limit.md) | number | <i>(Optional)</i> The maximum number of results to include with a max of 50. |
-|  [location?](./answers-core.verticalsearchrequest.location.md) | Location | <i>(Optional)</i> The latitude and longitude of the user making the request. Used to bias the results. |
+|  [location?](./answers-core.verticalsearchrequest.location.md) | [LatLong](./answers-core.latlong.md) | <i>(Optional)</i> The latitude and longitude of the user making the request. Used to bias the results. |
 |  [offset?](./answers-core.verticalsearchrequest.offset.md) | number | <i>(Optional)</i> The result offset which allows for fetching more results with the same query. |
 |  [query](./answers-core.verticalsearchrequest.query.md) | string | The search query. |
 |  [querySource?](./answers-core.verticalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request. |
