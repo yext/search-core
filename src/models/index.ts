@@ -17,7 +17,7 @@ export { QuestionSubmissionResponse } from './questionsubmission/QuestionSubmiss
 export { Comparator } from './searchservice/common/Comparator';
 export { CombinedFilter, FilterCombinator } from './searchservice/request/CombinedFilter';
 export { Context } from './searchservice/request/Context';
-export { Coordinates } from './searchservice/request/Coordinates';
+export { LatLong } from './searchservice/request/LatLong';
 export { QuerySource } from './searchservice/request/QuerySource';
 export { QueryTrigger } from './searchservice/request/QueryTrigger';
 export { SimpleFilter } from './searchservice/request/SimpleFilter';
