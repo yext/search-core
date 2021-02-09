@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.locationRadius property
 
-Radius (in meters) to filter the vertical search with.
+Radius (in meters) to filter the vertical search by.
 
 <b>Signature:</b>
 
