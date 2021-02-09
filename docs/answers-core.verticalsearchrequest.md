@@ -20,6 +20,7 @@ export interface VerticalSearchRequest
 |  [facets?](./answers-core.verticalsearchrequest.facets.md) | [Facet](./answers-core.facet.md)<!-- -->\[\] | <i>(Optional)</i> The facet filters to apply to the search. |
 |  [limit?](./answers-core.verticalsearchrequest.limit.md) | number | <i>(Optional)</i> The maximum number of results to include with a max of 50. |
 |  [location?](./answers-core.verticalsearchrequest.location.md) | [LatLong](./answers-core.latlong.md) | <i>(Optional)</i> The latitude and longitude of the user making the request. Used to bias the results. |
+|  [locationRadius?](./answers-core.verticalsearchrequest.locationradius.md) | number | <i>(Optional)</i> Radius (in meters) to filter the vertical search by. |
 |  [offset?](./answers-core.verticalsearchrequest.offset.md) | number | <i>(Optional)</i> The result offset which allows for fetching more results with the same query. |
 |  [query](./answers-core.verticalsearchrequest.query.md) | string | The search query. |
 |  [querySource?](./answers-core.verticalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request. |

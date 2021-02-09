@@ -364,6 +364,7 @@ export interface VerticalSearchRequest {
     facets?: Facet[];
     limit?: number;
     location?: LatLong;
+    locationRadius?: number;
     offset?: number;
     query: string;
     querySource?: QuerySource;
