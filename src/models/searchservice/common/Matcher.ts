@@ -45,5 +45,12 @@ export enum Matcher {
    * @remarks
    * Compatible with integer, float, date, datetime, and time fields.
    */
-  GreaterThanOrEqualTo = '$ge'
+  GreaterThanOrEqualTo = '$ge',
+  /**
+   * A comparison of whether an entity is within a certain radius of a certain location.
+   *
+   * @remarks
+   * Only compatible with the builtin.location field.
+   */
+  Near = '$near'
 }
