@@ -17,6 +17,6 @@ export interface SimpleFilter
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [comparator](./answers-core.simplefilter.comparator.md) | [Comparator](./answers-core.comparator.md) | A filter's method of comparison. |
-|  [comparedValue](./answers-core.simplefilter.comparedvalue.md) | string \| number \| boolean | The value to compare. |
+|  [comparedValue](./answers-core.simplefilter.comparedvalue.md) | string \| number \| boolean \| [NearFilterValue](./answers-core.nearfiltervalue.md) | The value to compare. |
 |  [fieldId](./answers-core.simplefilter.fieldid.md) | string | The fieldId to apply the filter against. |
 

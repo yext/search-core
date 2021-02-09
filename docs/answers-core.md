@@ -51,6 +51,7 @@
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the Answers API emphasized. |
 |  [LatLong](./answers-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
+|  [NearFilterValue](./answers-core.nearfiltervalue.md) | A filter value for a $near [Comparator](./answers-core.comparator.md) filter. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | A representation of a question submission response. |
 |  [Result](./answers-core.result.md) | An individual search result. |
