@@ -18,5 +18,5 @@ export interface NearFilterValue
 |  --- | --- | --- |
 |  [lat](./answers-core.nearfiltervalue.lat.md) | number | The latitude of the location. |
 |  [lng](./answers-core.nearfiltervalue.lng.md) | number | The longitude of the location. |
-|  [radius](./answers-core.nearfiltervalue.radius.md) | number | The radius around the latitude and longitude. |
+|  [radius](./answers-core.nearfiltervalue.radius.md) | number | The radius (in meters) around the latitude and longitude. |
 

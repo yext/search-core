@@ -4,7 +4,7 @@
 
 ## NearFilterValue.radius property
 
-The radius around the latitude and longitude.
+The radius (in meters) around the latitude and longitude.
 
 <b>Signature:</b>
 
