@@ -14,13 +14,13 @@ export { QuestionSubmissionRequest } from './questionsubmission/QuestionSubmissi
 export { QuestionSubmissionResponse } from './questionsubmission/QuestionSubmissionResponse';
 
 // Search service
-export { Comparator } from './searchservice/common/Comparator';
+export { Matcher } from './searchservice/common/Matcher';
 export { CombinedFilter, FilterCombinator } from './searchservice/request/CombinedFilter';
 export { Context } from './searchservice/request/Context';
 export { LatLong } from './searchservice/request/LatLong';
 export { QuerySource } from './searchservice/request/QuerySource';
 export { QueryTrigger } from './searchservice/request/QueryTrigger';
-export { SimpleFilter, NearFilterValue } from './searchservice/request/SimpleFilter';
+export { Filter, NearFilterValue } from './searchservice/request/Filter';
 export { SortBy } from './searchservice/request/SortBy';
 export { UniversalSearchRequest } from './searchservice/request/UniversalSearchRequest';
 export { VerticalSearchRequest } from './searchservice/request/VerticalSearchRequest';

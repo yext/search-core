@@ -9,7 +9,7 @@ A filter applied to the autocomplete response.
 <b>Signature:</b>
 
 ```typescript
-filter?: SimpleFilter;
+filter?: Filter;
 ```
 
 ## Remarks

@@ -1,9 +1,9 @@
 /**
- * A filter's method of comparison.
+ * A Matcher is a filtering operation.
  *
  * @public
  */
-export enum Comparator {
+export enum Matcher {
   /**
    * An equals comparison.
    *

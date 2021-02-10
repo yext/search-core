@@ -1,4 +1,4 @@
-import { Comparator } from '../../src/models/searchservice/common/Comparator';
+import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { FilterCombinator } from '../../src/models/searchservice/request/CombinedFilter';
 import { serializeStaticFilters } from '../../src/serializers/serializeStaticFilters';
 
@@ -8,12 +8,12 @@ it('serializeStaticFilters works with multiple levels of nesting', () => {
       {
         filters:
           [
-            { fieldId: 'c_Region', comparator: Comparator.Equals, comparedValue: 'APAC' },
-            { fieldId: 'c_Region', comparator: Comparator.Equals, comparedValue: 'EMEA' }
+            { fieldId: 'c_Region', matcher: Matcher.Equals, value: 'APAC' },
+            { fieldId: 'c_Region', matcher: Matcher.Equals, value: 'EMEA' }
           ],
         combinator: FilterCombinator.OR
       },
-      { fieldId: 'builtin.entityType', comparator: Comparator.Equals, comparedValue: 'Publication' },
+      { fieldId: 'builtin.entityType', matcher: Matcher.Equals, value: 'Publication' },
     ],
     combinator: FilterCombinator.AND
   });
@@ -35,8 +35,8 @@ it('serializeStaticFilters works with multiple levels of nesting', () => {
 it('serializeStaticFilters works with a simple Combined Filter', () => {
   const actualSerializedFilters = serializeStaticFilters({
     filters: [
-      { fieldId: 'c_Region', comparator: Comparator.Equals, comparedValue: 'APAC' },
-      { fieldId: 'c_Region', comparator: Comparator.Equals, comparedValue: 'EMEA' }
+      { fieldId: 'c_Region', matcher: Matcher.Equals, value: 'APAC' },
+      { fieldId: 'c_Region', matcher: Matcher.Equals, value: 'EMEA' }
     ],
     combinator: FilterCombinator.OR
   });
@@ -53,8 +53,8 @@ it('serializeStaticFilters works with a simple Combined Filter', () => {
 it('serializeStaticFilters works with only a Simple Filter', () => {
   const actualSerializedFilters = serializeStaticFilters({
     fieldId: 'c_Region',
-    comparator: Comparator.Equals,
-    comparedValue: 'APAC'
+    matcher: Matcher.Equals,
+    value: 'APAC'
   });
 
   const expectedSerializedFilters = { c_Region: { $eq: 'APAC' } };
@@ -64,8 +64,8 @@ it('serializeStaticFilters works with only a Simple Filter', () => {
 it('serializeStaticFilters works with a $near Simple filter', () => {
   const actualSerializedFilters = serializeStaticFilters({
     fieldId: 'builtin.location',
-    comparator: Comparator.Near,
-    comparedValue: {
+    matcher: Matcher.Near,
+    value: {
       lat: 1,
       lng: 2,
       radius: 3

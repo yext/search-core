@@ -4,7 +4,7 @@
 
 ## NearFilterValue interface
 
-A filter value for a $near [Comparator](./answers-core.comparator.md) filter.
+A filter value for a filter with a $near [Matcher](./answers-core.matcher.md)<!-- -->.
 
 <b>Signature:</b>
 

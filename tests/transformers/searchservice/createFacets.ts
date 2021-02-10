@@ -43,15 +43,15 @@ it('createFacets', () => {
           displayName: 'Sales',
           count: 26,
           selected: true,
-          comparator: '$eq',
-          comparedValue: 'Sales'
+          matcher: '$eq',
+          value: 'Sales'
         },
         {
           displayName: 'Client Success',
           count: 4,
           selected: true,
-          comparator: '$eq',
-          comparedValue: 'Client Success'
+          matcher: '$eq',
+          value: 'Client Success'
         }
       ]
     },
@@ -63,8 +63,8 @@ it('createFacets', () => {
           displayName: 'Chicago',
           count: 18,
           selected: false,
-          comparator: '$eq',
-          comparedValue: 'Chicago'
+          matcher: '$eq',
+          value: 'Chicago'
         }
       ]
     }

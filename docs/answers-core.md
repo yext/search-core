@@ -15,10 +15,10 @@
 
 |  Enumeration | Description |
 |  --- | --- |
-|  [Comparator](./answers-core.comparator.md) | A filter's method of comparison. |
 |  [Direction](./answers-core.direction.md) | The direction of a sort. |
 |  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location. |
+|  [Matcher](./answers-core.matcher.md) | A Matcher is a filtering operation. |
 |  [QuerySource](./answers-core.querysource.md) | The source of the search request. |
 |  [QueryTrigger](./answers-core.querytrigger.md) | Describes the ways a search can be executed besides user input. |
 |  [SearchIntent](./answers-core.searchintent.md) | Represents intents from the Answers API. |
@@ -46,17 +46,17 @@
 |  [DisplayableFacetOption](./answers-core.displayablefacetoption.md) | A [FacetOption](./answers-core.facetoption.md) with extra data meant to be displayed to the end user. |
 |  [Facet](./answers-core.facet.md) | Represents dynamic filter options for the Answers API. |
 |  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet. |
+|  [Filter](./answers-core.filter.md) | Represents a filter which compares values to a single field. |
 |  [FilterSearchRequest](./answers-core.filtersearchrequest.md) | Options for a filtersearch request. |
 |  [FilterSearchResponse](./answers-core.filtersearchresponse.md) | The response of a filtersearch request. |
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the Answers API emphasized. |
 |  [LatLong](./answers-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
-|  [NearFilterValue](./answers-core.nearfiltervalue.md) | A filter value for a $near [Comparator](./answers-core.comparator.md) filter. |
+|  [NearFilterValue](./answers-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./answers-core.matcher.md)<!-- -->. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | A representation of a question submission response. |
 |  [Result](./answers-core.result.md) | An individual search result. |
 |  [SearchParameterField](./answers-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
-|  [SimpleFilter](./answers-core.simplefilter.md) | Represents a filter which compares values to a single field. |
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query. |
 |  [UniversalAutocompleteRequest](./answers-core.universalautocompleterequest.md) | Options for a universal autocomplete request. |

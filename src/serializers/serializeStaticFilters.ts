@@ -1,14 +1,14 @@
 import { CombinedFilter } from '../models/searchservice/request/CombinedFilter';
-import { SimpleFilter } from '../models/searchservice/request/SimpleFilter';
+import { Filter } from '../models/searchservice/request/Filter';
 import { StaticFilters } from '../models/searchservice/request/StaticFilters';
 
 export function serializeStaticFilters(
-  filter: CombinedFilter | SimpleFilter): string | undefined {
+  filter: CombinedFilter | Filter): string | undefined {
   if (isCombinedFilter(filter)) {
     return JSON.stringify(shapeCombinedFilterForApi(filter));
   }
 
-  return JSON.stringify(shapeSimpleFilterForApi(filter));
+  return JSON.stringify(shapeFilterForApi(filter));
 }
 
 function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilters {
@@ -17,7 +17,7 @@ function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilter
     if (isCombinedFilter(filter)) {
       shapedFilters.push(shapeCombinedFilterForApi(filter));
     } else {
-      shapedFilters.push(shapeSimpleFilterForApi(filter));
+      shapedFilters.push(shapeFilterForApi(filter));
     }
   }
   return shapedFilters.length === 1
@@ -25,15 +25,15 @@ function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilter
     : { [combinedFilter.combinator]: shapedFilters };
 }
 
-export function shapeSimpleFilterForApi(filter: SimpleFilter): StaticFilters {
+export function shapeFilterForApi(filter: Filter): StaticFilters {
   return {
     [filter.fieldId]: {
-      [filter.comparator]: filter.comparedValue
+      [filter.matcher]: filter.value
     }
   };
 }
 
-function isCombinedFilter(filter: CombinedFilter | SimpleFilter): filter is CombinedFilter {
+function isCombinedFilter(filter: CombinedFilter | Filter): filter is CombinedFilter {
   return ((filter as CombinedFilter).filters !== undefined)
     && ((filter as CombinedFilter).combinator !== undefined);
 }

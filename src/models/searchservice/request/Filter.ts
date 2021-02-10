@@ -1,11 +1,11 @@
-import { Comparator } from '../common/Comparator';
+import { Matcher } from '../common/Matcher';
 
 /**
  * Represents a filter which compares values to a single field.
  *
  * @public
  */
-export interface SimpleFilter {
+export interface Filter {
   /**
    * The fieldId to apply the filter against.
    *
@@ -13,19 +13,19 @@ export interface SimpleFilter {
    * 'c_jobCategory'
    */
   fieldId: string;
-  /** {@inheritDoc Comparator} */
-  comparator: Comparator;
+  /** {@inheritDoc Matcher} */
+  matcher: Matcher;
   /**
    * The value to compare.
    *
    * @example
    * 'Sales'
    */
-  comparedValue: string | number | boolean | NearFilterValue;
+  value: string | number | boolean | NearFilterValue;
 }
 
 /**
- * A filter value for a $near {@link Comparator} filter.
+ * A filter value for a filter with a $near {@link Matcher}.
  *
  * @public
  */

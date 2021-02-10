@@ -1,5 +1,5 @@
 import { DisplayableFacet, DisplayableFacetOption } from '../../models/searchservice/response/DisplayableFacet';
-import { createSimpleFilter } from '../core/createSimpleFilter';
+import { createFilter } from '../core/createFilter';
 
 export function createFacets(facets: any): DisplayableFacet[] {
   if (!facets) {
@@ -15,14 +15,14 @@ export function createFacets(facets: any): DisplayableFacet[] {
 
 function createFacetOptions(options: any[]): DisplayableFacetOption[] {
   return options.map((option: any) => {
-    const simpleFilter = createSimpleFilter(option.filter);
+    const filter = createFilter(option.filter);
 
     return {
       displayName: option.displayName,
       count: option.count,
       selected: option.selected,
-      comparator: simpleFilter.comparator,
-      comparedValue: simpleFilter.comparedValue as string | number | boolean
+      matcher: filter.matcher,
+      value: filter.value as string | number | boolean
     };
   });
 }

@@ -1,4 +1,4 @@
-import { SimpleFilter } from './SimpleFilter';
+import { Filter } from './Filter';
 
 /**
  * Represents multiple filters that will be combined to refine results.
@@ -7,7 +7,7 @@ import { SimpleFilter } from './SimpleFilter';
  */
 export interface CombinedFilter {
   /** An array of filters applied to the search. */
-  filters: (SimpleFilter | CombinedFilter)[];
+  filters: (Filter | CombinedFilter)[];
   /** The logical operator used to combine the filters. */
   combinator: FilterCombinator;
 }

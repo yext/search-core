@@ -1,4 +1,4 @@
-import { SimpleFilter } from '../request/SimpleFilter';
+import { Filter } from '../request/Filter';
 
 /**
  * A filter that the Answers API applied to the search.
@@ -21,5 +21,5 @@ export interface AppliedQueryFilter {
    */
   displayValue: string;
   /** The filter applied to the query results. */
-  filter: SimpleFilter;
+  filter: Filter;
 }

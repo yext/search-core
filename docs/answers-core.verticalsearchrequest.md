@@ -30,6 +30,6 @@ export interface VerticalSearchRequest
 |  [sessionTrackingEnabled?](./answers-core.verticalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [skipSpellCheck?](./answers-core.verticalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> Skips spell checking if true. |
 |  [sortBys?](./answers-core.verticalsearchrequest.sortbys.md) | [SortBy](./answers-core.sortby.md)<!-- -->\[\] | <i>(Optional)</i> Determines how results are sorted. \* |
-|  [staticFilters?](./answers-core.verticalsearchrequest.staticfilters.md) | [CombinedFilter](./answers-core.combinedfilter.md) \| [SimpleFilter](./answers-core.simplefilter.md) | <i>(Optional)</i> The static filters to apply to the search. |
+|  [staticFilters?](./answers-core.verticalsearchrequest.staticfilters.md) | [CombinedFilter](./answers-core.combinedfilter.md) \| [Filter](./answers-core.filter.md) | <i>(Optional)</i> The static filters to apply to the search. |
 |  [verticalKey](./answers-core.verticalsearchrequest.verticalkey.md) | string | The key associated with the vertical. |
 

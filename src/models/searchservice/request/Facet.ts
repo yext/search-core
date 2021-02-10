@@ -1,4 +1,4 @@
-import { Comparator } from '../common/Comparator';
+import { Matcher } from '../common/Matcher';
 
 /**
  * Represents dynamic filter options for the Answers API.
@@ -23,13 +23,13 @@ export interface Facet {
  * @public
  */
 export interface FacetOption {
-  /** {@inheritDoc Comparator} */
-  comparator: Comparator;
+  /** {@inheritDoc Matcher} */
+  matcher: Matcher;
   /**
    * The value to compare.
    *
    * @example
    * 'Sales'
    */
-  comparedValue: string | number | boolean;
+  value: string | number | boolean;
 }
