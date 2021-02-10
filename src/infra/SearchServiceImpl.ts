@@ -138,7 +138,7 @@ export class SearchServiceImpl implements SearchService {
       limit: request.limit,
       offset: request.offset,
       retrieveFacets: request.retrieveFacets,
-      facets: request.facets && serializeFacets(request.facets),
+      facetFilters: request.facets && serializeFacets(request.facets),
       skipSpellCheck: request.skipSpellCheck,
       queryTrigger: request.queryTrigger,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
