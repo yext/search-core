@@ -63,8 +63,8 @@ describe('AutocompleteResult', () => {
       value: 'Virginia Beach',
       matchedSubstrings: [],
       filter: {
-        comparator: '$eq',
-        comparedValue: 'Virginia Beach',
+        matcher: '$eq',
+        value: 'Virginia Beach',
         fieldId: 'name'
       },
       key: 'name',
@@ -100,8 +100,8 @@ describe('AutocompleteResult', () => {
     const expectedResult = {
       value: 'Virginia Beach',
       filter: {
-        comparator: '$eq',
-        comparedValue: 'Virginia Beach',
+        matcher: '$eq',
+        value: 'Virginia Beach',
         fieldId: 'name'
       },
       key: 'name',

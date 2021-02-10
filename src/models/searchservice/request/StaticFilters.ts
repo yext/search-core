@@ -1,3 +1,5 @@
+import { NearFilterValue } from './Filter';
+
 /**
  * Represents static filters in the format that the Answers API expects.
  *
@@ -13,5 +15,5 @@ export interface StaticFilters {
  * @internal
  */
 export interface Filter {
-  [comparator: string]: string | number | boolean
+  [matcher: string]: string | number | boolean | NearFilterValue
 }

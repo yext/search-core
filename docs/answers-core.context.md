@@ -2,17 +2,17 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [Context](./answers-core.context.md)
 
-## Context interface
+## Context type
 
 Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-export interface Context 
+export declare type Context = any;
 ```
 
 ## Remarks
 
-Context may be any object.
+May be any valid JSON object
 

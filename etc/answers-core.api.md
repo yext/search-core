@@ -43,7 +43,7 @@ export class AnswersError extends Error {
 export interface AppliedQueryFilter {
     displayKey: string;
     displayValue: string;
-    filter: SimpleFilter;
+    filter: Filter;
 }
 
 // @public
@@ -56,7 +56,7 @@ export interface AutocompleteResponse {
 
 // @public
 export interface AutocompleteResult {
-    filter?: SimpleFilter;
+    filter?: Filter;
     key?: string;
     matchedSubstrings?: {
         length: number;
@@ -69,21 +69,11 @@ export interface AutocompleteResult {
 // @public
 export interface CombinedFilter {
     combinator: FilterCombinator;
-    filters: (SimpleFilter | CombinedFilter)[];
+    filters: (Filter | CombinedFilter)[];
 }
 
 // @public
-export interface Context {
-    [property: string]: string | boolean;
-}
-
-// @public
-interface Coordinates_2 {
-    latitude: string;
-    longitude: string;
-}
-
-export { Coordinates_2 as Coordinates }
+export type Context = any;
 
 // @public
 export interface DirectAnswer {
@@ -97,6 +87,12 @@ export interface DirectAnswer {
 }
 
 // @public
+export enum Direction {
+    Ascending = "ASC",
+    Descending = "DESC"
+}
+
+// @public
 export interface DisplayableFacet extends Facet {
     displayName: string;
     fieldId: string;
@@ -105,11 +101,11 @@ export interface DisplayableFacet extends Facet {
 
 // @public
 export interface DisplayableFacetOption extends FacetOption {
-    comparator: string;
-    comparedValue: string | number | boolean;
     count: number;
     displayName: string;
+    matcher: Matcher;
     selected: boolean;
+    value: string | number | boolean;
 }
 
 // Warning: (ae-internal-missing-underscore) The name "Endpoints" should be prefixed with an underscore because the declaration is marked as @internal
@@ -140,8 +136,15 @@ export interface Facet {
 
 // @public
 export interface FacetOption {
-    comparator: string;
-    comparedValue: string | number | boolean;
+    matcher: Matcher;
+    value: string | number | boolean;
+}
+
+// @public
+export interface Filter {
+    fieldId: string;
+    matcher: Matcher;
+    value: string | number | boolean | NearFilterValue;
 }
 
 // @public
@@ -184,6 +187,12 @@ export interface HighlightedValue {
 }
 
 // @public
+export interface LatLong {
+    latitude: number;
+    longitude: number;
+}
+
+// @public
 export interface LocationBias {
     displayName: string;
     latitude: number;
@@ -196,6 +205,24 @@ export enum LocationBiasMethod {
     Device = "DEVICE",
     Ip = "IP",
     Unknown = "UNKNOWN"
+}
+
+// @public
+export enum Matcher {
+    Equals = "$eq",
+    GreaterThan = "$gt",
+    GreaterThanOrEqualTo = "$ge",
+    LessThan = "$lt",
+    LessThanOrEqualTo = "$le",
+    Near = "$near",
+    NotEquals = "!$eq"
+}
+
+// @public
+export interface NearFilterValue {
+    lat: number;
+    lng: number;
+    radius: number;
 }
 
 // @public
@@ -256,17 +283,17 @@ export interface SearchParameterField {
 }
 
 // @public
-export interface SimpleFilter {
-    comparator: string;
-    comparedValue: string | number | boolean;
-    fieldId: string;
+export interface SortBy {
+    direction?: Direction;
+    field?: string;
+    type: SortType;
 }
 
 // @public
-export interface SortBy {
-    direction: 'ASC' | 'DESC';
-    field: string;
-    type: 'FIELD' | 'ENTITY_DISTANCE' | 'RELEVANCE';
+export enum SortType {
+    EntityDistance = "ENTITY_DISTANCE",
+    Field = "FIELD",
+    Relevance = "RELEVANCE"
 }
 
 // @public
@@ -302,7 +329,7 @@ export interface UniversalAutocompleteRequest {
 // @public
 export interface UniversalSearchRequest {
     context?: Context;
-    coordinates?: Coordinates_2;
+    location?: LatLong;
     query: string;
     querySource?: QuerySource;
     queryTrigger?: QueryTrigger;
@@ -342,9 +369,10 @@ export interface VerticalResults {
 // @public
 export interface VerticalSearchRequest {
     context?: Context;
-    coordinates?: Coordinates_2;
     facets?: Facet[];
     limit?: number;
+    location?: LatLong;
+    locationRadius?: number;
     offset?: number;
     query: string;
     querySource?: QuerySource;
@@ -354,7 +382,7 @@ export interface VerticalSearchRequest {
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
     sortBys?: SortBy[];
-    staticFilters?: CombinedFilter | SimpleFilter;
+    staticFilters?: CombinedFilter | Filter;
     verticalKey: string;
 }
 

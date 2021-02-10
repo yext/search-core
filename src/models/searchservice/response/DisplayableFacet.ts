@@ -1,4 +1,5 @@
 import { Facet, FacetOption } from '../request/Facet';
+import { Matcher } from '../common/Matcher';
 
 /**
  * A {@link Facet} which contains extra fields meant to be displayed to the end user.
@@ -20,10 +21,10 @@ export interface DisplayableFacet extends Facet {
  * @public
  */
 export interface DisplayableFacetOption extends FacetOption {
-  /** {@inheritDoc FacetOption.comparator} */
-  comparator: string;
-  /** {@inheritDoc FacetOption.comparedValue} */
-  comparedValue: string | number | boolean;
+  /** {@inheritDoc Matcher} */
+  matcher: Matcher;
+  /** {@inheritDoc FacetOption.value} */
+  value: string | number | boolean;
   /** The name of the facet option which is meant  to be displayed to the end user. */
   displayName: string;
   /** The number of results associated with this facet option. */

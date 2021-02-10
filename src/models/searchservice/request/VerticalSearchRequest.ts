@@ -1,7 +1,7 @@
 import { CombinedFilter } from './CombinedFilter';
-import { SimpleFilter } from './SimpleFilter';
+import { Filter } from './Filter';
 import { Context } from './Context';
-import { Coordinates } from './Coordinates';
+import { LatLong } from './LatLong';
 import { QueryTrigger } from './QueryTrigger';
 import { SortBy } from './SortBy';
 import { QuerySource } from './QuerySource';
@@ -29,18 +29,20 @@ export interface VerticalSearchRequest {
   facets?: Facet[],
   /** Skips spell checking if true. */
   skipSpellCheck?: boolean,
-  /** {@inheritDoc Coordinates} */
-  coordinates?: Coordinates,
+  /** {@inheritDoc LatLong} */
+  location?: LatLong,
   /** {@inheritDoc QueryTrigger} */
   queryTrigger?: QueryTrigger,
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean,
   /** The static filters to apply to the search. */
-  staticFilters?: CombinedFilter | SimpleFilter,
+  staticFilters?: CombinedFilter | Filter,
   /** Determines how results are sorted. **/
   sortBys?: SortBy[],
   /** {@inheritdoc UniversalSearchRequest.referrerPageUrl} */
   referrerPageUrl?: string,
   /** {@inheritDoc QuerySource} */
-  querySource?: QuerySource
+  querySource?: QuerySource,
+  /** The radius (in meters) to filter the vertical search by. */
+  locationRadius?: number
 }

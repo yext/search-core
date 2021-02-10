@@ -17,9 +17,10 @@ export interface VerticalSearchRequest
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [context?](./answers-core.verticalsearchrequest.context.md) | [Context](./answers-core.context.md) | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [coordinates?](./answers-core.verticalsearchrequest.coordinates.md) | Coordinates | <i>(Optional)</i> The coordinates of the user making the request which is used to bias the results. |
 |  [facets?](./answers-core.verticalsearchrequest.facets.md) | [Facet](./answers-core.facet.md)<!-- -->\[\] | <i>(Optional)</i> The facet filters to apply to the search. |
 |  [limit?](./answers-core.verticalsearchrequest.limit.md) | number | <i>(Optional)</i> The maximum number of results to include with a max of 50. |
+|  [location?](./answers-core.verticalsearchrequest.location.md) | [LatLong](./answers-core.latlong.md) | <i>(Optional)</i> The latitude and longitude of the user making the request. Used to bias the results. |
+|  [locationRadius?](./answers-core.verticalsearchrequest.locationradius.md) | number | <i>(Optional)</i> The radius (in meters) to filter the vertical search by. |
 |  [offset?](./answers-core.verticalsearchrequest.offset.md) | number | <i>(Optional)</i> The result offset which allows for fetching more results with the same query. |
 |  [query](./answers-core.verticalsearchrequest.query.md) | string | The search query. |
 |  [querySource?](./answers-core.verticalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request. |
@@ -29,6 +30,6 @@ export interface VerticalSearchRequest
 |  [sessionTrackingEnabled?](./answers-core.verticalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [skipSpellCheck?](./answers-core.verticalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> Skips spell checking if true. |
 |  [sortBys?](./answers-core.verticalsearchrequest.sortbys.md) | [SortBy](./answers-core.sortby.md)<!-- -->\[\] | <i>(Optional)</i> Determines how results are sorted. \* |
-|  [staticFilters?](./answers-core.verticalsearchrequest.staticfilters.md) | [CombinedFilter](./answers-core.combinedfilter.md) \| [SimpleFilter](./answers-core.simplefilter.md) | <i>(Optional)</i> The static filters to apply to the search. |
+|  [staticFilters?](./answers-core.verticalsearchrequest.staticfilters.md) | [CombinedFilter](./answers-core.combinedfilter.md) \| [Filter](./answers-core.filter.md) | <i>(Optional)</i> The static filters to apply to the search. |
 |  [verticalKey](./answers-core.verticalsearchrequest.verticalkey.md) | string | The key associated with the vertical. |
 

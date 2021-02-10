@@ -1,14 +1,15 @@
+import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { serializeFacets } from '../../src/serializers/serializeFacets';
 
 it('serializeFacets serializes facets properly', () => {
   const actualSerializedFilters = serializeFacets([
     { fieldId: 'c_jobCategory', options: [
-        { comparator: '$eq', comparedValue: 'Sales'},
-        { comparator: '$eq', comparedValue: 'Client Success' },
-        { comparator: '$eq', comparedValue: 'Finance' }]},
+        { matcher: Matcher.Equals, value: 'Sales'},
+        { matcher: Matcher.Equals, value: 'Client Success' },
+        { matcher: Matcher.Equals, value: 'Finance' }]},
     { fieldId: 'c_jobLocationShortDescription', options: [
-        { comparator: '$eq', comparedValue: 'New York'},
-        { comparator: '$eq', comparedValue: 'Chicago'}]},
+        { matcher: Matcher.Equals, value: 'New York'},
+        { matcher: Matcher.Equals, value: 'Chicago'}]},
   ]);
 
   const expectedSerializedFilters = {
@@ -41,8 +42,8 @@ it('serializeFacets serializes disabled facets properly', () => {
 it('serializeFacets serializes a mix of disabled and enabled filters properly', () => {
   const actualSerializedFilters = serializeFacets([
     { fieldId: 'c_jobCategory', options: [
-        {comparator: '$eq', comparedValue: 'Sales' },
-        {comparator: '$eq', comparedValue: 'Client Success'}]},
+        {matcher: Matcher.Equals, value: 'Sales' },
+        {matcher: Matcher.Equals, value: 'Client Success'}]},
     { fieldId: 'c_jobLocationShortDescription', options: []},
   ]);
 

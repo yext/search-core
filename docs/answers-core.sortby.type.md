@@ -4,10 +4,10 @@
 
 ## SortBy.type property
 
-The type of sort.
+The method of sorting.
 
 <b>Signature:</b>
 
 ```typescript
-type: 'FIELD' | 'ENTITY_DISTANCE' | 'RELEVANCE';
+type: SortType;
 ```

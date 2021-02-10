@@ -17,9 +17,9 @@ export interface DisplayableFacetOption extends FacetOption
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [comparator](./answers-core.displayablefacetoption.comparator.md) | string | The filter comparator. |
-|  [comparedValue](./answers-core.displayablefacetoption.comparedvalue.md) | string \| number \| boolean | The value to compare. |
 |  [count](./answers-core.displayablefacetoption.count.md) | number | The number of results associated with this facet option. |
 |  [displayName](./answers-core.displayablefacetoption.displayname.md) | string | The name of the facet option which is meant to be displayed to the end user. |
+|  [matcher](./answers-core.displayablefacetoption.matcher.md) | [Matcher](./answers-core.matcher.md) | A Matcher is a filtering operation. |
 |  [selected](./answers-core.displayablefacetoption.selected.md) | boolean | Whether or not the filter is selected in the search results. |
+|  [value](./answers-core.displayablefacetoption.value.md) | string \| number \| boolean | The value to compare. |
 

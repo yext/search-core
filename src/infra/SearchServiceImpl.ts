@@ -62,7 +62,8 @@ interface VerticalSearchQueryParams extends QueryParams {
   sortBys?: string,
   context?: string,
   referrerPageUrl?: string,
-  source?: QuerySource
+  source?: QuerySource,
+  locationRadius?: string
 }
 
 /**
@@ -73,7 +74,7 @@ interface VerticalSearchQueryParams extends QueryParams {
 export class SearchServiceImpl implements SearchService {
   private config: AnswersConfig;
   private httpService: HttpService;
-  private apiResponseValidator;
+  private apiResponseValidator: ApiResponseValidator;
   private verticalSearchEndpoint: string;
   private universalSearchEndpoint: string;
 
@@ -100,12 +101,12 @@ export class SearchServiceImpl implements SearchService {
       api_key: this.config.apiKey,
       v: defaultApiVersion,
       version: this.config.experienceVersion,
-      location: request.coordinates?.toString(),
+      location: request.location?.toString(),
       locale: this.config.locale,
       skipSpellCheck: request.skipSpellCheck,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       queryTrigger: request.queryTrigger,
-      context: request.context?.toString(),
+      context: JSON.stringify(request.context || undefined),
       referrerPageUrl: request.referrerPageUrl,
       source: request.querySource || QuerySource.Standard
     };
@@ -131,7 +132,7 @@ export class SearchServiceImpl implements SearchService {
       version: this.config.experienceVersion,
       locale: this.config.locale,
       input: request.query,
-      location: request.coordinates?.toString(),
+      location: request.location?.toString(),
       verticalKey: request.verticalKey,
       filters: request.staticFilters && serializeStaticFilters(request.staticFilters),
       limit: request.limit,
@@ -142,9 +143,10 @@ export class SearchServiceImpl implements SearchService {
       queryTrigger: request.queryTrigger,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       sortBys: JSON.stringify(request.sortBys || []),
-      context: request.context?.toString(),
+      context: JSON.stringify(request.context || undefined),
       referrerPageUrl: request.referrerPageUrl,
-      source: request.querySource || QuerySource.Standard
+      source: request.querySource || QuerySource.Standard,
+      locationRadius: request.locationRadius?.toString()
     };
 
     const response =
@@ -162,14 +164,9 @@ export class SearchServiceImpl implements SearchService {
    * Injects toString() methods into the request objects that require them
    */
   private injectToStringMethods(request: UniversalSearchRequest): void {
-    if (request.coordinates) {
-      request.coordinates.toString = function() {
+    if (request.location) {
+      request.location.toString = function() {
         return `${this.latitude},${this.longitude}`;
-      };
-    }
-    if (request.context) {
-      request.context.toString = function() {
-        return JSON.stringify(this);
       };
     }
   }

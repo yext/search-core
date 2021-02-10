@@ -15,11 +15,14 @@
 
 |  Enumeration | Description |
 |  --- | --- |
+|  [Direction](./answers-core.direction.md) | The direction of a sort. |
 |  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location. |
+|  [Matcher](./answers-core.matcher.md) | A Matcher is a filtering operation. |
 |  [QuerySource](./answers-core.querysource.md) | The source of the search request. |
 |  [QueryTrigger](./answers-core.querytrigger.md) | Describes the ways a search can be executed besides user input. |
 |  [SearchIntent](./answers-core.searchintent.md) | Represents intents from the Answers API. |
+|  [SortType](./answers-core.sorttype.md) | The method of sorting. |
 |  [Source](./answers-core.source.md) | Represents the source of a [Result](./answers-core.result.md)<!-- -->. |
 |  [SpellCheckType](./answers-core.spellchecktype.md) | Represents the type of spell check performed. |
 
@@ -38,22 +41,22 @@
 |  [AutocompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
-|  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [Coordinates\_2](./answers-core.coordinates_2.md) | The coordinates of the user making the request which is used to bias the results. |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search. |
 |  [DisplayableFacet](./answers-core.displayablefacet.md) | A [Facet](./answers-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./answers-core.displayablefacetoption.md) | A [FacetOption](./answers-core.facetoption.md) with extra data meant to be displayed to the end user. |
 |  [Facet](./answers-core.facet.md) | Represents dynamic filter options for the Answers API. |
 |  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet. |
+|  [Filter](./answers-core.filter.md) | Represents a filter which compares values to a single field. |
 |  [FilterSearchRequest](./answers-core.filtersearchrequest.md) | Options for a filtersearch request. |
 |  [FilterSearchResponse](./answers-core.filtersearchresponse.md) | The response of a filtersearch request. |
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | Represents field values or substrings of field values that the Answers API emphasized. |
+|  [LatLong](./answers-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
+|  [NearFilterValue](./answers-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./answers-core.matcher.md)<!-- -->. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | A representation of a question submission response. |
 |  [Result](./answers-core.result.md) | An individual search result. |
 |  [SearchParameterField](./answers-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
-|  [SimpleFilter](./answers-core.simplefilter.md) | Represents a filter which compares values to a single field. |
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query. |
 |  [UniversalAutocompleteRequest](./answers-core.universalautocompleterequest.md) | Options for a universal autocomplete request. |
@@ -63,4 +66,10 @@
 |  [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical. |
 |  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
 |  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search. |
+
+## Type Aliases
+
+|  Type Alias | Description |
+|  --- | --- |
+|  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 

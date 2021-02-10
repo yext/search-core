@@ -1,4 +1,4 @@
-import { SimpleFilter } from '../searchservice/request/SimpleFilter';
+import { Filter } from '../searchservice/request/Filter';
 import { SearchIntent } from '../searchservice/response/SearchIntent';
 import { Result } from '../searchservice/response/Result';
 
@@ -67,7 +67,7 @@ export interface AutocompleteResult {
    * @remarks
    * This property is only defined for filtersearch.
    */
-  filter?: SimpleFilter;
+  filter?: Filter;
   /**
    * The fieldId which corresponds to the AutocompleteResult value.
    *

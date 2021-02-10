@@ -14,20 +14,23 @@ export { QuestionSubmissionRequest } from './questionsubmission/QuestionSubmissi
 export { QuestionSubmissionResponse } from './questionsubmission/QuestionSubmissionResponse';
 
 // Search service
+export { Matcher } from './searchservice/common/Matcher';
 export { CombinedFilter, FilterCombinator } from './searchservice/request/CombinedFilter';
 export { Context } from './searchservice/request/Context';
-export { Coordinates } from './searchservice/request/Coordinates';
+export { LatLong } from './searchservice/request/LatLong';
 export { QuerySource } from './searchservice/request/QuerySource';
 export { QueryTrigger } from './searchservice/request/QueryTrigger';
-export { SimpleFilter } from './searchservice/request/SimpleFilter';
+export { Filter, NearFilterValue } from './searchservice/request/Filter';
 export { SortBy } from './searchservice/request/SortBy';
 export { UniversalSearchRequest } from './searchservice/request/UniversalSearchRequest';
 export { VerticalSearchRequest } from './searchservice/request/VerticalSearchRequest';
+export { SortType } from './searchservice/request/SortType';
+export { Direction } from './searchservice/request/Direction';
 
 export { AppliedQueryFilter } from './searchservice/response/AppliedQueryFilter';
 export { DirectAnswer } from './searchservice/response/DirectAnswer';
-export { Facet, FacetOption} from './searchservice/request/Facet';
-export { DisplayableFacet, DisplayableFacetOption} from './searchservice/response/DisplayableFacet';
+export { Facet, FacetOption } from './searchservice/request/Facet';
+export { DisplayableFacet, DisplayableFacetOption } from './searchservice/response/DisplayableFacet';
 export { HighlightedValue } from './searchservice/response/HighlightedValue';
 export { LocationBias, LocationBiasMethod } from './searchservice/response/LocationBias';
 export { Result } from './searchservice/response/Result';

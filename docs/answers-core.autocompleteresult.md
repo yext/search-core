@@ -16,7 +16,7 @@ export interface AutocompleteResult
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [filter?](./answers-core.autocompleteresult.filter.md) | [SimpleFilter](./answers-core.simplefilter.md) | <i>(Optional)</i> A filter applied to the autocomplete response. |
+|  [filter?](./answers-core.autocompleteresult.filter.md) | [Filter](./answers-core.filter.md) | <i>(Optional)</i> A filter applied to the autocomplete response. |
 |  [key?](./answers-core.autocompleteresult.key.md) | string | <i>(Optional)</i> The fieldId which corresponds to the AutocompleteResult value. |
 |  [matchedSubstrings?](./answers-core.autocompleteresult.matchedsubstrings.md) | { length: number; offset: number; }\[\] | <i>(Optional)</i> An array of substrings which overlap with the autocomplete input. |
 |  [relatedItem?](./answers-core.autocompleteresult.relateditem.md) | [Result](./answers-core.result.md) | <i>(Optional)</i> An entity that corresponds to the autocomplete result. |
