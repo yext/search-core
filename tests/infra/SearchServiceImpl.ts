@@ -8,12 +8,22 @@ import { QueryTrigger } from '../../src/models/searchservice/request/QueryTrigge
 import { QuerySource } from '../../src/models/searchservice/request/QuerySource';
 import { VerticalSearchRequest } from '../../src/models/searchservice/request/VerticalSearchRequest';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
+import { Matcher } from '../../src/models/searchservice/common/Matcher';
+import { Direction } from '../../src/models/searchservice/request/Direction';
+import { SortType } from '../../src/models/searchservice/request/SortType';
 
 describe('SearchService', () => {
   const configWithRequiredParams: AnswersConfig = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en'
+  };
+
+  const configWithAllParams: AnswersConfig = {
+    apiKey: 'testApiKey',
+    experienceKey: 'testExperienceKey',
+    locale: 'es',
+    experienceVersion: 'PRODUCTION'
   };
 
   const apiResponseValidator = new ApiResponseValidator();
@@ -60,12 +70,6 @@ describe('SearchService', () => {
         },
         referrerPageUrl: 'yext.com',
         querySource: QuerySource.Standard
-      };
-      const configWithAllParams: AnswersConfig = {
-        apiKey: 'testApiKey',
-        experienceKey: 'testExperienceKey',
-        locale: 'es',
-        experienceVersion: 'PRODUCTION'
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
@@ -136,10 +140,80 @@ describe('SearchService', () => {
       };
       const searchService = new SearchServiceImpl(
         configWithRequiredParams,
-        mockHttpService as HttpService,
+      mockHttpService as HttpService,
         apiResponseValidator
       );
       await searchService.verticalSearch(requestWithRequiredParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
+    });
+
+    it('Query params are correct when all required params are supplied', async () => {
+      const requestWithAllParams: VerticalSearchRequest = {
+        context: {
+          key: 'value'
+        },
+        facets: [{
+          fieldId: 'c_awards',
+          options: [{
+            matcher: Matcher.Equals,
+            value: 'Impact Award'
+          }]
+        }],
+        limit: 10,
+        location: {
+          latitude: 40,
+          longitude: 40
+        },
+        locationRadius: 100,
+        offset: 10,
+        query: 'testQuery',
+        querySource: QuerySource.Standard,
+        queryTrigger: QueryTrigger.Initialize,
+        referrerPageUrl: 'yext.com',
+        retrieveFacets: true,
+        sessionTrackingEnabled: true,
+        skipSpellCheck: true,
+        sortBys: [{
+          direction: Direction.Ascending,
+          field: 'name',
+          type: SortType.Field
+        }],
+        staticFilters: {
+            fieldId: 'city',
+            matcher: Matcher.NotEquals,
+            value: 'Arlington'
+        },
+        verticalKey: 'verticalKey'
+      };
+      const expectedQueryParams = {
+        api_key: 'testApiKey',
+        context: '{\"key\":\"value\"}',
+        experienceKey: 'testExperienceKey',
+        facetFilters: '{\"c_awards\":[{\"c_awards\":{\"$eq\":\"Impact Award\"}}]}',
+        filters: '{\"city\":{\"!$eq\":\"Arlington\"}}',
+        input: 'testQuery',
+        limit: 10,
+        locale: 'es',
+        location: '40,40',
+        locationRadius: '100',
+        offset: 10,
+        queryTrigger: 'initialize',
+        referrerPageUrl: 'yext.com',
+        retrieveFacets: true,
+        sessionTrackingEnabled: true,
+        skipSpellCheck: true,
+        sortBys: '[{\"direction\":\"ASC\",\"field\":\"name\",\"type\":\"FIELD\"}]',
+        source: 'STANDARD',
+        v: 20190101,
+        version: 'PRODUCTION',
+        verticalKey: 'verticalKey',
+      };
+      const searchService = new SearchServiceImpl(
+        configWithAllParams,
+        mockHttpService as HttpService,
+        apiResponseValidator
+      );
+      await searchService.verticalSearch(requestWithAllParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
     });
 
