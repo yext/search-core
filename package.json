@@ -5,6 +5,11 @@
   "main": "./lib/commonjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./dist/bundle.d.ts",
+  "files": [
+    "dist",
+    "legacy",
+    "lib"
+  ],
   "engines": {
     "node": ">=0.12"
   },
