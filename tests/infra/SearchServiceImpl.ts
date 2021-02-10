@@ -1,5 +1,4 @@
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
-import mockUniversalResponse from '../fixtures/liveapiuniversalresponse.json';
 import { SearchServiceImpl } from '../../src/infra/SearchServiceImpl';
 import { AnswersConfig } from '../../src/models/core/AnswersConfig';
 import { UniversalSearchRequest } from '../../src/models/searchservice/request/UniversalSearchRequest';
@@ -28,11 +27,32 @@ describe('SearchService', () => {
 
   const apiResponseValidator = new ApiResponseValidator();
 
-  describe('Universal Search', () => {
-    const mockHttpService = new HttpServiceMock();
-    mockHttpService.get.mockResolvedValue(mockUniversalResponse);
-    const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/query';
+  let mockHttpService;
+  let searchServiceWithRequiredParams;
+  let searchServiceWithAllParams;
 
+  beforeEach(() => {
+    mockHttpService = new HttpServiceMock();
+    mockHttpService.get.mockResolvedValue({
+      response: {},
+      meta: {},
+    });
+
+    searchServiceWithRequiredParams = new SearchServiceImpl(
+      configWithRequiredParams,
+      mockHttpService as HttpService,
+      apiResponseValidator
+    );
+
+    searchServiceWithAllParams = new SearchServiceImpl(
+      configWithAllParams,
+      mockHttpService as HttpService,
+      apiResponseValidator
+    );
+  });
+
+  describe('Universal Search', () => {
+    const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/query';
 
     it('Query params are correct when only required params are supplied', async () => {
       const requestWithRequiredParams: UniversalSearchRequest = {
@@ -46,12 +66,7 @@ describe('SearchService', () => {
         v: 20190101,
         source: 'STANDARD'
       };
-      const searchService = new SearchServiceImpl(
-        configWithRequiredParams,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
-      await searchService.universalSearch(requestWithRequiredParams);
+      await searchServiceWithRequiredParams.universalSearch(requestWithRequiredParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
     });
 
@@ -73,7 +88,7 @@ describe('SearchService', () => {
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
-        context: '{\"key\":\"value\"}',
+        context: JSON.stringify({ key:'value' }),
         experienceKey: 'testExperienceKey',
         input: 'testQuery',
         locale: 'es',
@@ -86,20 +101,16 @@ describe('SearchService', () => {
         version: 'PRODUCTION',
         source: 'STANDARD'
       };
-      const searchService: SearchServiceImpl = new SearchServiceImpl(
-        configWithAllParams,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
-      await searchService.universalSearch(requestWithAllParams);
+      await searchServiceWithAllParams.universalSearch(requestWithAllParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
     });
 
     it('A custom universal search service endpoint may be supplied', async () => {
+      const customUrl = 'http://custom.endpoint.com/api';
       const config: AnswersConfig = {
         ...configWithRequiredParams,
         endpoints: {
-          universalSearch: 'http://custom.endpoint.com/api'
+          universalSearch: customUrl
         }
       };
       const searchService: SearchServiceImpl = new SearchServiceImpl(
@@ -108,20 +119,13 @@ describe('SearchService', () => {
         apiResponseValidator
       );
       await searchService.universalSearch({query: 'test'});
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expect.anything());
+      expect(mockHttpService.get).toHaveBeenCalledWith(customUrl, expect.anything());
     });
   });
 
   describe('Vertical Search', ()=> {
-    let mockHttpService;
-    beforeEach(() => {
-      mockHttpService = new HttpServiceMock();
-      mockHttpService.get.mockResolvedValue({
-        response: {},
-        meta: {},
-      });
-    });
     const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query';
+
 
     it('Query params are correct when only required params are supplied', async () => {
       const requestWithRequiredParams: VerticalSearchRequest = {
@@ -138,16 +142,11 @@ describe('SearchService', () => {
         source: 'STANDARD',
         sortBys: '[]',
       };
-      const searchService = new SearchServiceImpl(
-        configWithRequiredParams,
-      mockHttpService as HttpService,
-        apiResponseValidator
-      );
-      await searchService.verticalSearch(requestWithRequiredParams);
+      await searchServiceWithRequiredParams.verticalSearch(requestWithRequiredParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
     });
 
-    it('Query params are correct when all required params are supplied', async () => {
+    it('Query params are correct when all possible params are supplied', async () => {
       const requestWithAllParams: VerticalSearchRequest = {
         context: {
           key: 'value'
@@ -187,10 +186,16 @@ describe('SearchService', () => {
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
-        context: '{\"key\":\"value\"}',
+        context: JSON.stringify({key: 'value'}),
         experienceKey: 'testExperienceKey',
-        facetFilters: '{\"c_awards\":[{\"c_awards\":{\"$eq\":\"Impact Award\"}}]}',
-        filters: '{\"city\":{\"!$eq\":\"Arlington\"}}',
+        facetFilters: JSON.stringify({
+          c_awards:[{
+            c_awards: { $eq:'Impact Award' }
+          }]
+        }),
+        filters: JSON.stringify({
+          city:{['!$eq']: 'Arlington'}
+        }),
         input: 'testQuery',
         limit: 10,
         locale: 'es',
@@ -202,18 +207,17 @@ describe('SearchService', () => {
         retrieveFacets: true,
         sessionTrackingEnabled: true,
         skipSpellCheck: true,
-        sortBys: '[{\"direction\":\"ASC\",\"field\":\"name\",\"type\":\"FIELD\"}]',
+        sortBys: JSON.stringify([{
+          direction:'ASC',
+          field:'name',
+          type: 'FIELD'
+        }]),
         source: 'STANDARD',
         v: 20190101,
         version: 'PRODUCTION',
         verticalKey: 'verticalKey',
       };
-      const searchService = new SearchServiceImpl(
-        configWithAllParams,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
-      await searchService.verticalSearch(requestWithAllParams);
+      await searchServiceWithAllParams.verticalSearch(requestWithAllParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
     });
 
@@ -223,12 +227,7 @@ describe('SearchService', () => {
         verticalKey: 'verticalKey',
         locationRadius: 0.0
       };
-      const searchService = new SearchServiceImpl(
-        configWithRequiredParams,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
-      await searchService.verticalSearch(request);
+      await searchServiceWithRequiredParams.verticalSearch(request);
       const actualQueryParams = mockHttpService.get.mock.calls[0][1];
       const actualLocationRadius = (actualQueryParams as { locationRadius: string }).locationRadius;
       expect(actualLocationRadius).toEqual('0');
@@ -240,12 +239,7 @@ describe('SearchService', () => {
         verticalKey: 'verticalKey',
         locationRadius: 1.23
       };
-      const searchService = new SearchServiceImpl(
-        configWithRequiredParams,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
-      await searchService.verticalSearch(request);
+      await searchServiceWithRequiredParams.verticalSearch(request);
       const actualQueryParams = mockHttpService.get.mock.calls[0][1];
       const actualLocationRadius = (actualQueryParams as { locationRadius: string }).locationRadius;
       expect(actualLocationRadius).toEqual('1.23');
