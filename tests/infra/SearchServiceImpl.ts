@@ -27,9 +27,7 @@ describe('SearchService', () => {
 
   const apiResponseValidator = new ApiResponseValidator();
 
-  let mockHttpService;
-  let searchServiceWithRequiredParams;
-  let searchServiceWithAllParams;
+  let mockHttpService, searchServiceWithRequiredParams, searchServiceWithAllParams;
 
   beforeEach(() => {
     mockHttpService = new HttpServiceMock();
