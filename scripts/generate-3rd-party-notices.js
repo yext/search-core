@@ -14,6 +14,9 @@ const outputPath = 'THIRD-PARTY-NOTICES';
 
 generateLicenseFile(projectDir, outputPath);
 
+// This script is based on tobysmith568/Generate-License-File from
+// https://github.com/tobysmith568/Generate-License-File/blob/42dcb8d61fbaaf5d01c15b81c83a92fe190def3e/src/main.ts
+
 /**
  * Scans the project found at the given path and creates a license file at the given output location
  * @param path A path to a directory containing a package.json
