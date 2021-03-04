@@ -20,13 +20,14 @@
     "tsc-esm": "tsc -p tsconfig.esm.json",
     "tsc": "npm run tsc-cjs && npm run tsc-esm",
     "build-legacy-bundle": "npx webpack",
-    "build": "npm run tsc && npm run build-legacy-bundle && npm run api-extractor && npm run generate-docs",
+    "build": "npm run tsc && npm run build-legacy-bundle && npm run api-extractor && npm run generate-docs && npm run generate-3rd-party-licenses",
     "build-ci": "npm run tsc-cjs && npm run api-extractor-ci && npm run generate-docs",
     "dev": "npm run tsc-esm -- --watch",
     "prepublishOnly": "npm run build",
     "api-extractor": "api-extractor run --local --verbose",
     "api-extractor-ci": "api-extractor run --verbose",
-    "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs && rm -rf temp"
+    "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs && rm -rf temp",
+    "generate-3rd-party-licenses": "generate-license-file --input package.json --output 3rd-party-licenses.txt"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "babel-jest": "^26.6.1",
     "babel-loader": "^8.2.2",
     "eslint": "^7.11.0",
+    "generate-license-file": "^1.1.0",
     "jest": "^26.6.0",
     "jest-fetch-mock": "^3.0.3",
     "ts-loader": "^8.0.14",
