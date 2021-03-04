@@ -20,14 +20,13 @@
     "tsc-esm": "tsc -p tsconfig.esm.json",
     "tsc": "npm run tsc-cjs && npm run tsc-esm",
     "build-legacy-bundle": "npx webpack",
-    "build": "npm run tsc && npm run build-legacy-bundle && npm run api-extractor && npm run generate-docs && npm run generate-3rd-party-licenses",
+    "build": "npm run tsc && npm run build-legacy-bundle && npm run api-extractor && npm run generate-docs",
     "build-ci": "npm run tsc-cjs && npm run api-extractor-ci && npm run generate-docs",
     "dev": "npm run tsc-esm -- --watch",
     "prepublishOnly": "npm run build",
     "api-extractor": "api-extractor run --local --verbose",
     "api-extractor-ci": "api-extractor run --verbose",
-    "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs && rm -rf temp",
-    "generate-3rd-party-licenses": "generate-license-file --input package.json --output 3rd-party-licenses.txt"
+    "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs && rm -rf temp && node scripts/generate-3rd-party-notices.js"
   },
   "repository": {
     "type": "git",

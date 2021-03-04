@@ -22,5 +22,4 @@ jobs:
     - run: npm ci
     - run: npm run build-ci
     - run: ./scripts/validate-docs.sh
-    - run: ./scripts/validate-licenses.sh
     - run: npm test
