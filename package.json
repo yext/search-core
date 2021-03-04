@@ -61,8 +61,7 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.12.5",
-    "cross-fetch": "^3.0.6",
-    "lodash": "^4.17.21"
+    "cross-fetch": "^3.0.6"
   },
   "jest": {
     "bail": 0,
