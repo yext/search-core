@@ -1,8 +1,8 @@
-The following NPM package is included in this product:
+The following NPM packages may be included in this product:
 
  - @babel/runtime-corejs3@7.12.5
 
-This package contains the following license and notice below:
+These packages each contain the following license and notice below:
 
 MIT License
 
@@ -29,11 +29,11 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 -----------
 
-The following NPM package is included in this product:
+The following NPM packages may be included in this product:
 
  - core-js-pure@3.8.3
 
-This package contains the following license and notice below:
+These packages each contain the following license and notice below:
 
 Copyright (c) 2014-2021 Denis Pushkarev
 
@@ -57,11 +57,11 @@ THE SOFTWARE.
 
 -----------
 
-The following NPM package is included in this product:
+The following NPM packages may be included in this product:
 
  - cross-fetch@3.0.6
 
-This package contains the following license and notice below:
+These packages each contain the following license and notice below:
 
 The MIT License (MIT)
 
@@ -87,11 +87,11 @@ SOFTWARE.
 
 -----------
 
-The following NPM package is included in this product:
+The following NPM packages may be included in this product:
 
  - node-fetch@2.6.1
 
-This package contains the following license and notice below:
+These packages each contain the following license and notice below:
 
 The MIT License (MIT)
 
@@ -117,11 +117,11 @@ SOFTWARE.
 
 -----------
 
-The following NPM package is included in this product:
+The following NPM packages may be included in this product:
 
  - regenerator-runtime@0.13.7
 
-This package contains the following license and notice below:
+These packages each contain the following license and notice below:
 
 MIT License
 
@@ -147,3 +147,4 @@ SOFTWARE.
 
 -----------
 
+This file was generated with generate-license-file! https://www.npmjs.com/package/generate-license-file
