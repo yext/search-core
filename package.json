@@ -1,7 +1,7 @@
 {
   "name": "@yext/answers-core",
   "version": "1.0.0",
-  "description": "Javascript Networking Library for the Yext Answers API",
+  "description": "Typescript Networking Library for the Yext Answers API",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/esm/index.js",
   "types": "./dist/bundle.d.ts",
@@ -26,7 +26,8 @@
     "prepublishOnly": "npm run build",
     "api-extractor": "api-extractor run --local --verbose",
     "api-extractor-ci": "api-extractor run --verbose",
-    "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs && rm -rf temp"
+    "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs && rm -rf temp && npm run generate-notices",
+    "generate-notices": "generate-license-file --input package.json --output THIRD-PARTY-NOTICES && node ./scripts/remove-core-license.js"
   },
   "repository": {
     "type": "git",
@@ -51,6 +52,7 @@
     "babel-jest": "^26.6.1",
     "babel-loader": "^8.2.2",
     "eslint": "^7.11.0",
+    "generate-license-file": "^1.1.0",
     "jest": "^26.6.0",
     "jest-fetch-mock": "^3.0.3",
     "ts-loader": "^8.0.14",
