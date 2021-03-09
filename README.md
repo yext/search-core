@@ -69,3 +69,7 @@ And that's it! See **[our documentation](./docs/answers-core.answerscore.md)** f
 ## License
 
 Yext Answers-core is an open-sourced library licensed under the [BSD-3 License](./LICENSE).
+
+## Third Party Licenses
+
+The licenses of our 3rd party dependencies are collected here: [THIRD-PARTY-NOTICES](./THIRD-PARTY-NOTICES).
