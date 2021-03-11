@@ -9,5 +9,5 @@
 <b>Signature:</b>
 
 ```typescript
-type: 'FIELD_VALUE';
+type: DirectAnswerType.FieldValue;
 ```

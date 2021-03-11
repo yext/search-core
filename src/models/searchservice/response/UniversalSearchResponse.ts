@@ -1,6 +1,7 @@
 import { VerticalResults } from './VerticalResults';
 import { SearchIntent } from './SearchIntent';
-import { FeaturedSnippetDirectAnswer, FieldValueDirectAnswer } from './DirectAnswer';
+import { FeaturedSnippetDirectAnswer } from './FeaturedSnippetDirectAnswer';
+import { FieldValueDirectAnswer } from './FieldValueDirectAnswer';
 import { SpellCheck } from './SpellCheck';
 import { LocationBias } from './LocationBias';
 

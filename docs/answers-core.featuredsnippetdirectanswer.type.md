@@ -9,5 +9,5 @@
 <b>Signature:</b>
 
 ```typescript
-type: 'FEATURED_SNIPPET';
+type: DirectAnswerType.FeaturedSnippet;
 ```

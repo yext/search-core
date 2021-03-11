@@ -78,7 +78,7 @@ export type Context = any;
 // @public
 export interface DirectAnswer {
     relatedResult: Result;
-    type: DirectAnswerType | string;
+    type: DirectAnswerType;
     value: string;
     verticalKey: string;
 }
@@ -148,7 +148,7 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
     relatedResult: Result;
     // Warning: (ae-forgotten-export) The symbol "Snippet" needs to be exported by the entry point index.d.ts
     snippet: Snippet;
-    type: 'FEATURED_SNIPPET';
+    type: DirectAnswerType.FeaturedSnippet;
     value: string;
     verticalKey: string;
 }
@@ -160,7 +160,7 @@ export interface FieldValueDirectAnswer extends DirectAnswer {
     fieldName: string;
     fieldType: string;
     relatedResult: Result;
-    type: 'FIELD_VALUE';
+    type: DirectAnswerType.FieldValue;
     value: string;
     verticalKey: string;
 }

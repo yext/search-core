@@ -9,5 +9,5 @@ The [DirectAnswerType](./answers-core.directanswertype.md)<!-- -->.
 <b>Signature:</b>
 
 ```typescript
-type: DirectAnswerType | string;
+type: DirectAnswerType;
 ```

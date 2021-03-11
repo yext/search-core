@@ -19,7 +19,7 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer
 |  --- | --- | --- |
 |  [relatedResult](./answers-core.featuredsnippetdirectanswer.relatedresult.md) | [Result](./answers-core.result.md) | The entity associated with the direct answer. |
 |  [snippet](./answers-core.featuredsnippetdirectanswer.snippet.md) | Snippet | The snippet where the direct answer was found. |
-|  [type](./answers-core.featuredsnippetdirectanswer.type.md) | 'FEATURED\_SNIPPET' | [DirectAnswerType](./answers-core.directanswertype.md)<!-- -->.FeaturedSnippet. |
+|  [type](./answers-core.featuredsnippetdirectanswer.type.md) | [DirectAnswerType.FeaturedSnippet](./answers-core.directanswertype.featuredsnippet.md) | [DirectAnswerType](./answers-core.directanswertype.md)<!-- -->.FeaturedSnippet. |
 |  [value](./answers-core.featuredsnippetdirectanswer.value.md) | string | The result of the direct answer. |
 |  [verticalKey](./answers-core.featuredsnippetdirectanswer.verticalkey.md) | string | The vertical key of the direct answer. |
 
