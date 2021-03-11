@@ -28,7 +28,12 @@ export { SortType } from './searchservice/request/SortType';
 export { Direction } from './searchservice/request/Direction';
 
 export { AppliedQueryFilter } from './searchservice/response/AppliedQueryFilter';
-export { DirectAnswer } from './searchservice/response/DirectAnswer';
+export {
+  DirectAnswer,
+  FieldValueDirectAnswer,
+  FeaturedSnippetDirectAnswer
+} from './searchservice/response/DirectAnswer';
+export { DirectAnswerType } from './searchservice/response/DirectAnswerType';
 export { Facet, FacetOption } from './searchservice/request/Facet';
 export { DisplayableFacet, DisplayableFacetOption } from './searchservice/response/DisplayableFacet';
 export { HighlightedValue } from './searchservice/response/HighlightedValue';

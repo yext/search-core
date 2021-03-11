@@ -9,5 +9,5 @@ A direct answer to a search.
 <b>Signature:</b>
 
 ```typescript
-directAnswer?: DirectAnswer;
+directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer;
 ```

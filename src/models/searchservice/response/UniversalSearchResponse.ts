@@ -1,6 +1,6 @@
 import { VerticalResults } from './VerticalResults';
 import { SearchIntent } from './SearchIntent';
-import { DirectAnswer } from './DirectAnswer';
+import { FeaturedSnippetDirectAnswer, FieldValueDirectAnswer } from './DirectAnswer';
 import { SpellCheck } from './SpellCheck';
 import { LocationBias } from './LocationBias';
 
@@ -15,7 +15,7 @@ export interface UniversalSearchResponse {
   /** The ID of the search query. */
   queryId?: string,
   /** {@inheritDoc DirectAnswer} */
-  directAnswer?: DirectAnswer,
+  directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer,
   /** An array of {@link SearchIntent}s which represents requests from the API. */
   searchIntents?: SearchIntent[],
   /** {@inheritDoc SpellCheck} */

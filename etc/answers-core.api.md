@@ -77,13 +77,16 @@ export type Context = any;
 
 // @public
 export interface DirectAnswer {
-    entityName: string;
-    fieldApiName: string;
-    fieldName: string;
-    fieldType: string;
     relatedResult: Result;
+    type: DirectAnswerType;
     value: string;
     verticalKey: string;
+}
+
+// @public
+export enum DirectAnswerType {
+    FeaturedSnippet = "FEATURED_SNIPPET",
+    FieldValue = "FIELD_VALUE"
 }
 
 // @public
@@ -138,6 +141,31 @@ export interface Facet {
 export interface FacetOption {
     matcher: Matcher;
     value: string | number | boolean;
+}
+
+// @public
+export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
+    documentText: string;
+    matchedSubstrings: {
+        offset: number;
+        length: number;
+    }[];
+    relatedResult: Result;
+    type: DirectAnswerType.FeaturedSnippet;
+    value: string;
+    verticalKey: string;
+}
+
+// @public
+export interface FieldValueDirectAnswer extends DirectAnswer {
+    entityName: string;
+    fieldApiName: string;
+    fieldName: string;
+    fieldType: string;
+    relatedResult: Result;
+    type: DirectAnswerType.FieldValue;
+    value: string;
+    verticalKey: string;
 }
 
 // @public
@@ -340,7 +368,7 @@ export interface UniversalSearchRequest {
 
 // @public
 export interface UniversalSearchResponse {
-    directAnswer?: DirectAnswer;
+    directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer;
     locationBias?: LocationBias;
     queryId?: string;
     searchIntents?: SearchIntent[];
