@@ -9,5 +9,5 @@ The type of direct answer.
 <b>Signature:</b>
 
 ```typescript
-type: DirectAnswerType;
+type: DirectAnswerType | string;
 ```

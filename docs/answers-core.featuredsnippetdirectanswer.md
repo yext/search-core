@@ -17,10 +17,9 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [documentText](./answers-core.featuredsnippetdirectanswer.documenttext.md) | string | The document text which the featured snippet came from. |
-|  [matchedSubstrings](./answers-core.featuredsnippetdirectanswer.matchedsubstrings.md) | { offset: number; length: number; }\[\] | The locations in the document text of the featured snippet. |
 |  [relatedResult](./answers-core.featuredsnippetdirectanswer.relatedresult.md) | [Result](./answers-core.result.md) | The entity associated with the direct answer. |
-|  [type](./answers-core.featuredsnippetdirectanswer.type.md) | [DirectAnswerType.FeaturedSnippet](./answers-core.directanswertype.featuredsnippet.md) | Indicates that the type is a FeaturedSnippetDirectAnswer |
+|  [snippet](./answers-core.featuredsnippetdirectanswer.snippet.md) | Snippet | The snippet where the direct answer was found |
+|  [type](./answers-core.featuredsnippetdirectanswer.type.md) | 'FEATURED\_SNIPPET' | Indicates that the type is a FeaturedSnippetDirectAnswer. |
 |  [value](./answers-core.featuredsnippetdirectanswer.value.md) | string | The result of the direct answer. |
 |  [verticalKey](./answers-core.featuredsnippetdirectanswer.verticalkey.md) | string | The vertical key of the direct answer. |
 

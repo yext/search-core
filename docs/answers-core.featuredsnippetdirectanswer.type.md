@@ -4,10 +4,10 @@
 
 ## FeaturedSnippetDirectAnswer.type property
 
-Indicates that the type is a FeaturedSnippetDirectAnswer
+Indicates that the type is a FeaturedSnippetDirectAnswer.
 
 <b>Signature:</b>
 
 ```typescript
-type: DirectAnswerType.FeaturedSnippet;
+type: 'FEATURED_SNIPPET';
 ```

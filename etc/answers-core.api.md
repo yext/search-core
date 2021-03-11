@@ -78,7 +78,7 @@ export type Context = any;
 // @public
 export interface DirectAnswer {
     relatedResult: Result;
-    type: DirectAnswerType;
+    type: DirectAnswerType | string;
     value: string;
     verticalKey: string;
 }
@@ -145,13 +145,10 @@ export interface FacetOption {
 
 // @public
 export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
-    documentText: string;
-    matchedSubstrings: {
-        offset: number;
-        length: number;
-    }[];
     relatedResult: Result;
-    type: DirectAnswerType.FeaturedSnippet;
+    // Warning: (ae-forgotten-export) The symbol "Snippet" needs to be exported by the entry point index.d.ts
+    snippet: Snippet;
+    type: 'FEATURED_SNIPPET';
     value: string;
     verticalKey: string;
 }
@@ -163,7 +160,7 @@ export interface FieldValueDirectAnswer extends DirectAnswer {
     fieldName: string;
     fieldType: string;
     relatedResult: Result;
-    type: DirectAnswerType.FieldValue;
+    type: 'FIELD_VALUE';
     value: string;
     verticalKey: string;
 }

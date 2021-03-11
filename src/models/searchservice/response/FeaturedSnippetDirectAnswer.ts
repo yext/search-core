@@ -16,7 +16,7 @@ export interface FeaturedSnippetDirectAnswer {
   /** The vertical key of the direct answer. */
   verticalKey: string;
   /** The document text which the direct answer came from. */
-  documentText: string;
+  snippet: string;
   /** The locations in the document text of the direct answer. */
   matchedSubstrings: {offset: number, length: number}[];
 }

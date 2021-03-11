@@ -4,10 +4,10 @@
 
 ## FieldValueDirectAnswer.type property
 
-Indicates that the type is a FieldValueDirectAnswer
+Indicates that the type is a FieldValueDirectAnswer.
 
 <b>Signature:</b>
 
 ```typescript
-type: DirectAnswerType.FieldValue;
+type: 'FIELD_VALUE';
 ```

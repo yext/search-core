@@ -22,7 +22,7 @@ export interface FieldValueDirectAnswer extends DirectAnswer
 |  [fieldName](./answers-core.fieldvaluedirectanswer.fieldname.md) | string | The field name of the direct answer. |
 |  [fieldType](./answers-core.fieldvaluedirectanswer.fieldtype.md) | string | The field type of the direct answer. |
 |  [relatedResult](./answers-core.fieldvaluedirectanswer.relatedresult.md) | [Result](./answers-core.result.md) | The entity associated with the direct answer. |
-|  [type](./answers-core.fieldvaluedirectanswer.type.md) | [DirectAnswerType.FieldValue](./answers-core.directanswertype.fieldvalue.md) | Indicates that the type is a FieldValueDirectAnswer |
+|  [type](./answers-core.fieldvaluedirectanswer.type.md) | 'FIELD\_VALUE' | Indicates that the type is a FieldValueDirectAnswer. |
 |  [value](./answers-core.fieldvaluedirectanswer.value.md) | string | The result of the direct answer. |
 |  [verticalKey](./answers-core.fieldvaluedirectanswer.verticalkey.md) | string | The vertical key of the direct answer. |
 

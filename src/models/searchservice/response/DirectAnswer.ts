@@ -1,5 +1,6 @@
 import { Result } from './Result';
 import { DirectAnswerType } from './DirectAnswerType';
+import { Snippet } from './Snippet';
 
 /**
  * A direct answer to a search.
@@ -8,7 +9,7 @@ import { DirectAnswerType } from './DirectAnswerType';
  */
 export interface DirectAnswer {
   /** The type of direct answer. */
-  type: DirectAnswerType;
+  type: DirectAnswerType | string;
   /** The result of the direct answer. */
   value: string;
   /** The entity associated with the direct answer. */
@@ -23,18 +24,16 @@ export interface DirectAnswer {
  * @public
  */
 export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
-  /** Indicates that the type is a FeaturedSnippetDirectAnswer */
-  type: DirectAnswerType.FeaturedSnippet;
+  /** Indicates that the type is a FeaturedSnippetDirectAnswer. */
+  type: 'FEATURED_SNIPPET';
   /** {@inheritDoc DirectAnswer.value} */
   value: string;
   /** {@inheritDoc DirectAnswer.relatedResult} */
   relatedResult: Result;
   /** {@inheritDoc DirectAnswer.verticalKey} */
   verticalKey: string;
-  /** The document text which the featured snippet came from. */
-  documentText: string;
-  /** The locations in the document text of the featured snippet. */
-  matchedSubstrings: {offset: number, length: number}[];
+  /** The snippet where the direct answer was found */
+  snippet: Snippet;
 }
 
 /**
@@ -43,8 +42,8 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
  * @public
  */
 export interface FieldValueDirectAnswer extends DirectAnswer {
-  /** Indicates that the type is a FieldValueDirectAnswer */
-  type: DirectAnswerType.FieldValue;
+  /** Indicates that the type is a FieldValueDirectAnswer. */
+  type: 'FIELD_VALUE';
   /** {@inheritDoc DirectAnswer.value} */
   value: string;
   /** {@inheritDoc DirectAnswer.relatedResult} */

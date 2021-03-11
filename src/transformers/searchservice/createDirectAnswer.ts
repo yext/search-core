@@ -22,8 +22,7 @@ export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | Fie
       value: data.answer.value,
       relatedResult: ResultsFactory.fromDirectAnswer(data.relatedItem.data),
       verticalKey: data.relatedItem.verticalConfigId,
-      documentText: data.answer.snippet.value,
-      matchedSubstrings: data.answer.snippet.matchedSubstrings
+      snippet: data.answer.snippet,
     };
   }
 }
