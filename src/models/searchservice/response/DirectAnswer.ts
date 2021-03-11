@@ -24,7 +24,7 @@ export interface DirectAnswer {
  * @public
  */
 export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
-  /** Indicates that the {@link DirectAnswerType} is FeaturedSnippet. */
+  /** {@link DirectAnswerType}.FeaturedSnippet. */
   type: 'FEATURED_SNIPPET';
   /** {@inheritDoc DirectAnswer.value} */
   value: string;
@@ -32,7 +32,7 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
   relatedResult: Result;
   /** {@inheritDoc DirectAnswer.verticalKey} */
   verticalKey: string;
-  /** The snippet where the direct answer was found */
+  /** The snippet where the direct answer was found. */
   snippet: Snippet;
 }
 
@@ -42,7 +42,7 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
  * @public
  */
 export interface FieldValueDirectAnswer extends DirectAnswer {
-  /** Indicates that the {@link DirectAnswerType} is FieldValue. */
+  /** {@link DirectAnswerType}.FieldValue. */
   type: 'FIELD_VALUE';
   /** {@inheritDoc DirectAnswer.value} */
   value: string;

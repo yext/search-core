@@ -4,7 +4,7 @@
 
 ## FeaturedSnippetDirectAnswer.snippet property
 
-The snippet where the direct answer was found
+The snippet where the direct answer was found.
 
 <b>Signature:</b>
 

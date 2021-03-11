@@ -4,7 +4,7 @@
 
 ## FieldValueDirectAnswer.type property
 
-Indicates that the [DirectAnswerType](./answers-core.directanswertype.md) is FieldValue.
+[DirectAnswerType](./answers-core.directanswertype.md)<!-- -->.FieldValue.
 
 <b>Signature:</b>
 

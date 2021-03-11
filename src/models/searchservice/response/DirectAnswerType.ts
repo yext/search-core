@@ -4,8 +4,8 @@
  * @public
  */
 export enum DirectAnswerType {
-  /** Indicates that the DirectAnswer is a {@link FeaturedSnippetDirectAnswer} */
+  /** Indicates that the DirectAnswer is a {@link FeaturedSnippetDirectAnswer}. */
   FeaturedSnippet = 'FEATURED_SNIPPET',
-  /** Indicates that the DirectAnswer is a {@link FieldValueDirectAnswer} */
+  /** Indicates that the DirectAnswer is a {@link FieldValueDirectAnswer}. */
   FieldValue = 'FIELD_VALUE'
 }

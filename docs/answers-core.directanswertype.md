@@ -16,6 +16,6 @@ export declare enum DirectAnswerType
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  FeaturedSnippet | <code>&quot;FEATURED_SNIPPET&quot;</code> | Indicates that the DirectAnswer is a [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) |
-|  FieldValue | <code>&quot;FIELD_VALUE&quot;</code> | Indicates that the DirectAnswer is a [FieldValueDirectAnswer](./answers-core.fieldvaluedirectanswer.md) |
+|  FeaturedSnippet | <code>&quot;FEATURED_SNIPPET&quot;</code> | Indicates that the DirectAnswer is a [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md)<!-- -->. |
+|  FieldValue | <code>&quot;FIELD_VALUE&quot;</code> | Indicates that the DirectAnswer is a [FieldValueDirectAnswer](./answers-core.fieldvaluedirectanswer.md)<!-- -->. |
 
