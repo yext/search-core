@@ -23,6 +23,7 @@ export interface VerticalSearchRequest
 |  [locationRadius?](./answers-core.verticalsearchrequest.locationradius.md) | number | <i>(Optional)</i> The radius (in meters) to filter the vertical search by. |
 |  [offset?](./answers-core.verticalsearchrequest.offset.md) | number | <i>(Optional)</i> The result offset which allows for fetching more results with the same query. |
 |  [query](./answers-core.verticalsearchrequest.query.md) | string | The search query. |
+|  [queryId?](./answers-core.verticalsearchrequest.queryid.md) | string | <i>(Optional)</i> The queryId for the query, if this is a repeat query. |
 |  [querySource?](./answers-core.verticalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request. |
 |  [queryTrigger?](./answers-core.verticalsearchrequest.querytrigger.md) | [QueryTrigger](./answers-core.querytrigger.md) | <i>(Optional)</i> Describes the ways a search can be executed besides user input. |
 |  [referrerPageUrl?](./answers-core.verticalsearchrequest.referrerpageurl.md) | string | <i>(Optional)</i> The URl of the page which referred the user to the current page. |

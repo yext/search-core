@@ -375,6 +375,7 @@ export interface VerticalSearchRequest {
     locationRadius?: number;
     offset?: number;
     query: string;
+    queryId?: string;
     querySource?: QuerySource;
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;
