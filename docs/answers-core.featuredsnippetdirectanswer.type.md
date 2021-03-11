@@ -4,7 +4,7 @@
 
 ## FeaturedSnippetDirectAnswer.type property
 
-Indicates that the type is a FeaturedSnippetDirectAnswer.
+Indicates that the [DirectAnswerType](./answers-core.directanswertype.md) is FeaturedSnippet.
 
 <b>Signature:</b>
 

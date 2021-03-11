@@ -8,7 +8,7 @@ import { Snippet } from './Snippet';
  * @public
  */
 export interface DirectAnswer {
-  /** The type of direct answer. */
+  /** The {@link DirectAnswerType}. */
   type: DirectAnswerType | string;
   /** The result of the direct answer. */
   value: string;
@@ -24,7 +24,7 @@ export interface DirectAnswer {
  * @public
  */
 export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
-  /** Indicates that the type is a FeaturedSnippetDirectAnswer. */
+  /** Indicates that the {@link DirectAnswerType} is FeaturedSnippet. */
   type: 'FEATURED_SNIPPET';
   /** {@inheritDoc DirectAnswer.value} */
   value: string;
@@ -42,7 +42,7 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
  * @public
  */
 export interface FieldValueDirectAnswer extends DirectAnswer {
-  /** Indicates that the type is a FieldValueDirectAnswer. */
+  /** Indicates that the {@link DirectAnswerType} is FieldValue. */
   type: 'FIELD_VALUE';
   /** {@inheritDoc DirectAnswer.value} */
   value: string;

@@ -4,7 +4,7 @@
 
 ## DirectAnswer.type property
 
-The type of direct answer.
+The [DirectAnswerType](./answers-core.directanswertype.md)<!-- -->.
 
 <b>Signature:</b>
 

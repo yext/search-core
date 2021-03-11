@@ -17,7 +17,7 @@ export interface DirectAnswer
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [relatedResult](./answers-core.directanswer.relatedresult.md) | [Result](./answers-core.result.md) | The entity associated with the direct answer. |
-|  [type](./answers-core.directanswer.type.md) | [DirectAnswerType](./answers-core.directanswertype.md) \| string | The type of direct answer. |
+|  [type](./answers-core.directanswer.type.md) | [DirectAnswerType](./answers-core.directanswertype.md) \| string | The [DirectAnswerType](./answers-core.directanswertype.md)<!-- -->. |
 |  [value](./answers-core.directanswer.value.md) | string | The result of the direct answer. |
 |  [verticalKey](./answers-core.directanswer.verticalkey.md) | string | The vertical key of the direct answer. |
 
