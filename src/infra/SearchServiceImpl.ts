@@ -63,7 +63,8 @@ interface VerticalSearchQueryParams extends QueryParams {
   context?: string,
   referrerPageUrl?: string,
   source?: QuerySource,
-  locationRadius?: string
+  locationRadius?: string,
+  queryId?: string
 }
 
 /**
@@ -146,7 +147,8 @@ export class SearchServiceImpl implements SearchService {
       context: JSON.stringify(request.context || undefined),
       referrerPageUrl: request.referrerPageUrl,
       source: request.querySource || QuerySource.Standard,
-      locationRadius: request.locationRadius?.toString()
+      locationRadius: request.locationRadius?.toString(),
+      queryId: request.queryId
     };
 
     const response =

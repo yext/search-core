@@ -44,5 +44,7 @@ export interface VerticalSearchRequest {
   /** {@inheritDoc QuerySource} */
   querySource?: QuerySource,
   /** The radius (in meters) to filter the vertical search by. */
-  locationRadius?: number
+  locationRadius?: number,
+  /** The queryId for the query, if this is a repeat query. */
+  queryId?: string
 }
