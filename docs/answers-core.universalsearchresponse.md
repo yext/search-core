@@ -16,7 +16,7 @@ export interface UniversalSearchResponse
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [directAnswer?](./answers-core.universalsearchresponse.directanswer.md) | [DirectAnswer](./answers-core.directanswer.md) | <i>(Optional)</i> A direct answer to a search. |
+|  [directAnswer?](./answers-core.universalsearchresponse.directanswer.md) | [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) \| [FieldValueDirectAnswer](./answers-core.fieldvaluedirectanswer.md) | <i>(Optional)</i> A direct answer to a search. |
 |  [locationBias?](./answers-core.universalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
 |  [queryId?](./answers-core.universalsearchresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
 |  [searchIntents?](./answers-core.universalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./answers-core.searchintent.md)<!-- -->s which represents requests from the API. |
