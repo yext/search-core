@@ -37,12 +37,17 @@ export class HighlightedValueFactory {
 
     const highlightedValues: HighlightedValue[] = [];
 
-    Object.entries(data).forEach(([fieldName, highlightedField]) => {
+    Object.entries(data).forEach(([fieldName, highlightedFieldData]) => {
       const currentPath = [...path];
       currentPath.push(fieldName);
 
-      if (this.isChildHighlightedField(highlightedField)) {
-        const { value, matchedSubstrings } = highlightedField;
+      if (Array.isArray(highlightedFieldData)) {
+        const highlightedValuesFromArray = highlightedFieldData.map(({ value, matchedSubstrings }) => {
+          return this.from(value, fieldName, currentPath, matchedSubstrings);
+        });
+        highlightedValues.push(...highlightedValuesFromArray);
+      } else if (this.isChildHighlightedField(highlightedFieldData)) {
+        const { value, matchedSubstrings } = highlightedFieldData;
 
         const highlightedValue = this.from(value, fieldName, currentPath, matchedSubstrings);
         highlightedValues.push(highlightedValue);
