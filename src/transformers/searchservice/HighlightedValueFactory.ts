@@ -34,29 +34,22 @@ export class HighlightedValueFactory {
     if (typeof data !== 'object' || data === null){
       return [];
     }
+    if (this.isChildHighlightedField(data)) {
+      return [ this.from(data.value, path[path.length - 1], path, data.matchedSubstrings) ];
+    }
 
     const highlightedValues: HighlightedValue[] = [];
-
-    Object.entries(data).forEach(([fieldName, highlightedFieldData]) => {
-      const currentPath = [...path];
-      currentPath.push(fieldName);
-
-      if (Array.isArray(highlightedFieldData)) {
-        const highlightedValuesFromArray = highlightedFieldData.map(({ value, matchedSubstrings }) => {
-          return this.from(value, fieldName, currentPath, matchedSubstrings);
-        });
-        highlightedValues.push(...highlightedValuesFromArray);
-      } else if (this.isChildHighlightedField(highlightedFieldData)) {
-        const { value, matchedSubstrings } = highlightedFieldData;
-
-        const highlightedValue = this.from(value, fieldName, currentPath, matchedSubstrings);
-        highlightedValues.push(highlightedValue);
-      } else {
+    if (Array.isArray(data)) {
+      data.forEach(d => {
+        highlightedValues.push(...this.createRecursively(d, path));
+      });
+    } else {
+      Object.keys(data).forEach(fieldName => {
+        const currentPath = [...path, fieldName];
         const nestedHighlightedValues = this.createRecursively(data[fieldName], currentPath);
         highlightedValues.push(...nestedHighlightedValues);
-      }
-    });
-
+      });
+    }
     return highlightedValues;
   }
 
