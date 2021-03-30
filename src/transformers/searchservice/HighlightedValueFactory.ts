@@ -35,7 +35,8 @@ export class HighlightedValueFactory {
       return [];
     }
     if (this.isChildHighlightedField(data)) {
-      return [ this.from(data.value, path[path.length - 1], path, data.matchedSubstrings) ];
+      const fieldName = path[path.length - 1];
+      return [ this.from(data.value, fieldName, path, data.matchedSubstrings) ];
     }
 
     const highlightedValues: HighlightedValue[] = [];
