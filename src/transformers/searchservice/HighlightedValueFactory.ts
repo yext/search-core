@@ -44,9 +44,9 @@ export class HighlightedValueFactory {
         highlightedValues.push(...this.createRecursively(d, path));
       });
     } else {
-      Object.keys(data).forEach(fieldName => {
+      Object.entries(data).forEach(([fieldName, highlightedField]) => {
         const currentPath = [...path, fieldName];
-        const nestedHighlightedValues = this.createRecursively(data[fieldName], currentPath);
+        const nestedHighlightedValues = this.createRecursively(highlightedField, currentPath);
         highlightedValues.push(...nestedHighlightedValues);
       });
     }
