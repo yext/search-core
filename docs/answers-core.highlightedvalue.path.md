@@ -26,3 +26,15 @@ In the knowledge graph a field may be nested in a structure such as:
 ```
 The associated path would then be `['description', 'featured']`
 
+If there are multiple highlighted values for a single field, they will have the same path.
+
+```
+{
+  description: {
+    featured: ['The offical answers engine', 'gives you answers']
+  }
+}
+
+```
+The associated path for both values would be `['description', 'featured']`<!-- -->.
+
