@@ -158,4 +158,4 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       }
     ));
   }
- }
+}
