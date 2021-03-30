@@ -131,38 +131,67 @@ it('Highlighted fields with arrays', () => {
   expect(actualHighlightedValues).toMatchObject(expectedHighlightedValues);
 });
 
-it('Highlighted fields with arbitrarily nested arrays', () => {
+it('Highlighted fields with arbitrarily placed arrays', () => {
   const liveApiData = {
     featured: {
-      languages: [
+      pie: [
         {
-          superDuper: [
+          value: 'apple',
+          matchedSubstrings: [
             {
-              value: 'super',
-              matchedSubstrings: []
-            },
-            {
-              value: 'deeduper',
-              matchedSubstrings: []
+              offset: 0,
+              length: 7
             }
-          ],
+          ]
         },
         {
-          reallyAwesome: {
-            value: 'Spanish',
-            matchedSubstrings: [
-              {
-                offset: 0,
-                length: 7
-              }
-            ]
-          }
+          value: 'cherry',
+          matchedSubstrings: [
+            {
+              offset: 1,
+              length: 2
+            }
+          ]
         }
-      ]
+      ],
+      languages: {
+        superDuper: [
+          {
+            value: 'super',
+            matchedSubstrings: []
+          },
+          {
+            value: 'deeduper',
+            matchedSubstrings: []
+          }
+        ],
+      }
     }
   };
 
   const expectedHighlightedValues = [
+    {
+      fieldName: 'pie',
+      value: 'apple',
+      path: ['featured', 'pie'],
+      matchedSubstrings: [
+        {
+          offset: 0,
+          length: 7
+        }
+      ]
+    },
+    {
+      fieldName: 'pie',
+      value: 'cherry',
+      path: ['featured', 'pie'],
+      matchedSubstrings: [
+        {
+          offset: 1,
+          length: 2
+        }
+      ]
+    },
     {
       fieldName: 'superDuper',
       value: 'super',
@@ -174,17 +203,6 @@ it('Highlighted fields with arbitrarily nested arrays', () => {
       value: 'deeduper',
       path: ['featured', 'languages', 'superDuper'],
       matchedSubstrings: []
-    },
-    {
-      fieldName: 'reallyAwesome',
-      value: 'Spanish',
-      path: ['featured', 'languages', 'reallyAwesome'],
-      matchedSubstrings: [
-        {
-          offset: 0,
-          length: 7
-        }
-      ]
     }
   ];
   const actualHighlightedValues = HighlightedValueFactory.create(liveApiData);
