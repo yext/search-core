@@ -1,5 +1,15 @@
-import { HighlightedFieldLeaf } from '../../models/searchservice/response/HighlightedFieldLeaf';
 import { HighlightedValue } from '../../models/searchservice/response/HighlightedValue';
+
+/**
+ * A highlighted field object from the API that does not contain nested fields
+ */
+ interface ChildHighlightedField {
+  value: string,
+  matchedSubstrings: {
+    length: number,
+    offset: number
+  }[]
+}
 
 /**
  * Responsible for constructing {@link HighlightedValue}s
@@ -36,7 +46,7 @@ export class HighlightedValueFactory {
     if (typeof data !== 'object' || data === null){
       return [];
     }
-    if (this.isHighlightedFieldLeaf(data)) {
+    if (this.isChildHighlightedField(data)) {
       return [ this.from(data.value, fieldName, path, data.matchedSubstrings) ];
     }
 
@@ -81,8 +91,8 @@ export class HighlightedValueFactory {
    *
    * @param field
    */
-  private static isHighlightedFieldLeaf(field: unknown): field is HighlightedFieldLeaf {
-    return (field as HighlightedFieldLeaf).value !== undefined &&
-      (field as HighlightedFieldLeaf).matchedSubstrings !== undefined;
+  private static isChildHighlightedField(field: unknown): field is ChildHighlightedField {
+    return (field as ChildHighlightedField).value !== undefined &&
+      (field as ChildHighlightedField).matchedSubstrings !== undefined;
   }
 }
