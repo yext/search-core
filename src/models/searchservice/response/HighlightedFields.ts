@@ -8,7 +8,7 @@ import { HighlightedFieldLeaf } from './HighlightedFieldLeaf';
  * the API will likely match the word 'pet'.
  *
  * @example
- * ```
+ * ```js
  * {
  *   name: {
  *     value: 'Yext',

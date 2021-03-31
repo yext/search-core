@@ -19,7 +19,7 @@ If a user searches for 'pet' and a description field in the results contains the
 ## Example 2
 
 
-```
+```js
 {
   name: {
     value: 'Yext',
