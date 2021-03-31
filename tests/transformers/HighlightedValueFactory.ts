@@ -3,7 +3,7 @@ import { HighlightedValueFactory } from '../../src/transformers/searchservice/Hi
 it('Non-nested highlighted fields', () => {
   const liveApiData = {
     name: {
-      value:'Bob loves FAQs',
+      value: 'Bob loves FAQs',
       matchedSubstrings: [
         {
           offset: 0,
@@ -43,7 +43,7 @@ it('Nested highlighted fields', () => {
   const liveApiData = {
     featured: {
       name: {
-        value:'Bob loves FAQs',
+        value: 'Bob loves FAQs',
         matchedSubstrings: [
           {
             offset: 0,
@@ -88,19 +88,71 @@ it('Nested highlighted fields', () => {
   expect(actualHighlightedValues).toMatchObject(expectedHighlightedValues);
 });
 
-it('Highlighted fields with arrays', () => {
+it('Highlighted fields with arbitrarily nested arrays', () => {
   const liveApiData = {
-    languages: [
+    c_nestedTextLists: [
       {
-        value: 'English',
-        matchedSubstrings: []
+        fruits: [
+          {
+            value: 'apple',
+            matchedSubstrings: [
+              {
+                offset: 0,
+                length: 4
+              }
+            ]
+          },
+          {
+            value: 'pear',
+            matchedSubstrings: []
+          }
+        ],
+        struct: {
+          pastas: [
+            {
+              value: 'spaghetti',
+              matchedSubstrings: []
+            },
+            {
+              value: 'linguini',
+              matchedSubstrings: [
+                {
+                  offset: 0,
+                  length: 4
+                }
+              ]
+            }
+          ],
+          sandwiches: [
+            {
+              value: 'sub',
+              matchedSubstrings: [
+                {
+                  offset: 0,
+                  length: 4
+                }
+              ]
+            },
+            {
+              value: 'borger',
+              matchedSubstrings: []
+            },
+            {
+              value: 'america dog',
+              matchedSubstrings: []
+            }
+          ]
+        }
       },
       {
-        value: 'Spanish',
-        matchedSubstrings: [
+        vegetables: [
           {
-            offset: 0,
-            length: 7
+            value: 'carrot',
+            matchedSubstrings: []
+          },
+          {
+            value: 'celery',
+            matchedSubstrings: []
           }
         ]
       }
@@ -109,99 +161,72 @@ it('Highlighted fields with arrays', () => {
 
   const expectedHighlightedValues = [
     {
-      fieldName: 'languages',
-      value: 'English',
-      path: ['languages'],
-      matchedSubstrings: []
-    },
-    {
-      fieldName: 'languages',
-      value: 'Spanish',
-      path: ['languages'],
-      matchedSubstrings: [
-        {
-          offset: 0,
-          length: 7
-        }
-      ]
-    }
-  ];
-
-  const actualHighlightedValues = HighlightedValueFactory.create(liveApiData);
-  expect(actualHighlightedValues).toMatchObject(expectedHighlightedValues);
-});
-
-it('Highlighted fields with arbitrarily placed arrays', () => {
-  const liveApiData = {
-    featured: {
-      pie: [
-        {
-          value: 'apple',
-          matchedSubstrings: [
-            {
-              offset: 0,
-              length: 7
-            }
-          ]
-        },
-        {
-          value: 'cherry',
-          matchedSubstrings: [
-            {
-              offset: 1,
-              length: 2
-            }
-          ]
-        }
-      ],
-      languages: {
-        superDuper: [
-          {
-            value: 'super',
-            matchedSubstrings: []
-          },
-          {
-            value: 'deeduper',
-            matchedSubstrings: []
-          }
-        ],
-      }
-    }
-  };
-
-  const expectedHighlightedValues = [
-    {
-      fieldName: 'pie',
+      fieldName: 'fruits',
       value: 'apple',
-      path: ['featured', 'pie'],
+      path: ['c_nestedTextLists', 0, 'fruits', 0],
       matchedSubstrings: [
         {
           offset: 0,
-          length: 7
+          length: 4
         }
       ]
     },
     {
-      fieldName: 'pie',
-      value: 'cherry',
-      path: ['featured', 'pie'],
-      matchedSubstrings: [
-        {
-          offset: 1,
-          length: 2
-        }
-      ]
-    },
-    {
-      fieldName: 'superDuper',
-      value: 'super',
-      path: ['featured', 'languages', 'superDuper'],
+      fieldName: 'fruits',
+      value: 'pear',
+      path: ['c_nestedTextLists', 0, 'fruits', 1],
       matchedSubstrings: []
     },
     {
-      fieldName: 'superDuper',
-      value: 'deeduper',
-      path: ['featured', 'languages', 'superDuper'],
+      fieldName: 'pastas',
+      value: 'spaghetti',
+      path: ['c_nestedTextLists', 0, 'struct', 'pastas', 0],
+      matchedSubstrings: []
+    },
+    {
+      fieldName: 'pastas',
+      value: 'linguini',
+      path: ['c_nestedTextLists', 0, 'struct', 'pastas', 1],
+      matchedSubstrings: [
+        {
+          offset: 0,
+          length: 4
+        }
+      ]
+    },
+    {
+      fieldName: 'sandwiches',
+      value: 'sub',
+      path: ['c_nestedTextLists', 0, 'struct', 'sandwiches', 0],
+      matchedSubstrings: [
+        {
+          offset: 0,
+          length: 4
+        }
+      ]
+    },
+    {
+      fieldName: 'sandwiches',
+      value: 'borger',
+      path: ['c_nestedTextLists', 0, 'struct', 'sandwiches', 1],
+      matchedSubstrings: []
+    },
+    {
+      fieldName: 'sandwiches',
+      value: 'america dog',
+      path: ['c_nestedTextLists', 0, 'struct', 'sandwiches', 2],
+      matchedSubstrings: []
+    },
+    {
+      fieldName: 'vegetables',
+      value: 'carrot',
+      path: ['c_nestedTextLists', 1, 'vegetables', 0],
+      matchedSubstrings: []
+    },
+    {
+      fieldName: 'vegetables',
+      value: 'celery',
+      path: ['c_nestedTextLists', 1, 'vegetables', 1],
       matchedSubstrings: []
     }
   ];

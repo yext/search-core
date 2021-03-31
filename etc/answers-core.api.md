@@ -207,7 +207,7 @@ export interface HighlightedValue {
         length: number;
         offset: number;
     }[];
-    path: string[];
+    path: (string | number)[];
     value: string;
 }
 

@@ -9,7 +9,7 @@ Represents the nested field structure of the highlighted value.
 <b>Signature:</b>
 
 ```typescript
-path: string[];
+path: (string | number)[];
 ```
 
 ## Example
@@ -26,7 +26,7 @@ In the knowledge graph a field may be nested in a structure such as:
 ```
 The associated path would then be `['description', 'featured']`
 
-If there are multiple highlighted values for a single field, they will have the same path.
+If there are highlighted values in an array, their index in the array will be represented in path as a number.
 
 ```
 {
@@ -36,5 +36,5 @@ If there are multiple highlighted values for a single field, they will have the 
 }
 
 ```
-The associated path for both values would be `['description', 'featured']`<!-- -->.
+The associated path for 'gives you answers' would be `['description', 'featured', 1]`<!-- -->.
 

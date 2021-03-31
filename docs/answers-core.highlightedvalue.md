@@ -22,6 +22,6 @@ If a user searches for 'pet' and a description field in the results contains the
 |  --- | --- | --- |
 |  [fieldName](./answers-core.highlightedvalue.fieldname.md) | string | The field name of the highlighted value. |
 |  [matchedSubstrings](./answers-core.highlightedvalue.matchedsubstrings.md) | { length: number; offset: number; }\[\] | An array of substring matches which correspond to the highlighting. |
-|  [path](./answers-core.highlightedvalue.path.md) | string\[\] | Represents the nested field structure of the highlighted value. |
+|  [path](./answers-core.highlightedvalue.path.md) | (string \| number)\[\] | Represents the nested field structure of the highlighted value. |
 |  [value](./answers-core.highlightedvalue.value.md) | string | The value of the field which should be highlighted. |
 

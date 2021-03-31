@@ -1,15 +1,5 @@
+import { HighlightedFieldLeaf } from '../../models/searchservice/response/HighlightedFieldLeaf';
 import { HighlightedValue } from '../../models/searchservice/response/HighlightedValue';
-
-/**
- * A highlighted field object from the API that does not contain nested fields
- */
-interface ChildHighlightedField {
-  value: string,
-  matchedSubstrings: {
-    length: number,
-    offset: number
-  }[]
-}
 
 /**
  * Responsible for constructing {@link HighlightedValue}s
@@ -21,7 +11,15 @@ export class HighlightedValueFactory {
    * @param data The raw highlightedFields data from the knowledge graph
    */
   public static create(data: any): HighlightedValue[]{
-    return this.createRecursively(data);
+    if (typeof data !== 'object' || data === null){
+      return [];
+    }
+    const highlightedValues: HighlightedValue[] = [];
+    Object.entries(data).forEach(([currentFieldName, highlightedField]) => {
+      highlightedValues.push(
+        ...this.createRecursively(highlightedField, [currentFieldName], currentFieldName));
+    });
+    return highlightedValues;
   }
 
   /**
@@ -30,24 +28,28 @@ export class HighlightedValueFactory {
    * @param data The raw highlightedFields data from the knowledge graph
    * @param path The path to the current field which reflects its nested structure
    */
-  private static createRecursively(data: any, path: string[] = []): HighlightedValue[]{
+  private static createRecursively(
+    data: any,
+    path: (string|number)[],
+    fieldName: string): HighlightedValue[]
+{
     if (typeof data !== 'object' || data === null){
       return [];
     }
-    if (this.isChildHighlightedField(data)) {
-      const fieldName = path[path.length - 1];
+    if (this.isHighlightedFieldLeaf(data)) {
       return [ this.from(data.value, fieldName, path, data.matchedSubstrings) ];
     }
 
     const highlightedValues: HighlightedValue[] = [];
     if (Array.isArray(data)) {
-      data.forEach(d => {
-        highlightedValues.push(...this.createRecursively(d, path));
+      data.forEach((highlightedField, index) => {
+        highlightedValues.push(...this.createRecursively(highlightedField, [...path, index], fieldName));
       });
     } else {
-      Object.entries(data).forEach(([fieldName, highlightedField]) => {
-        const currentPath = [...path, fieldName];
-        const nestedHighlightedValues = this.createRecursively(highlightedField, currentPath);
+      Object.entries(data).forEach(([currentFieldName, highlightedField]) => {
+        const currentPath = [...path, currentFieldName];
+        const nestedHighlightedValues =
+          this.createRecursively(highlightedField, currentPath, currentFieldName);
         highlightedValues.push(...nestedHighlightedValues);
       });
     }
@@ -60,7 +62,7 @@ export class HighlightedValueFactory {
   private static from(
     value: string,
     fieldName: string,
-    path: string[],
+    path: (string|number)[],
     matchedSubstrings: {
       length: number,
       offset: number
@@ -79,8 +81,8 @@ export class HighlightedValueFactory {
    *
    * @param field
    */
-  private static isChildHighlightedField(field: unknown): field is ChildHighlightedField {
-    return (field as ChildHighlightedField).value !== undefined &&
-      (field as ChildHighlightedField).matchedSubstrings !== undefined;
+  private static isHighlightedFieldLeaf(field: unknown): field is HighlightedFieldLeaf {
+    return (field as HighlightedFieldLeaf).value !== undefined &&
+      (field as HighlightedFieldLeaf).matchedSubstrings !== undefined;
   }
 }
