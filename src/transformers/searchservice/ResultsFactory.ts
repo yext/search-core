@@ -1,6 +1,5 @@
 import { Result } from '../../models/searchservice/response/Result';
 import { Source } from '../../models/searchservice/response/Source';
-import { HighlightedValueFactory } from './HighlightedValueFactory';
 
 /**
  * A factory which creates results from different sources
@@ -46,7 +45,7 @@ export class ResultsFactory {
       id: rawData.id,
       distance: result.distance,
       distanceFromFilter: result.distanceFromFilter,
-      highlightedValues: HighlightedValueFactory.create(result.highlightedFields),
+      highlightedFields: result.highlightedFields,
       entityType: rawData.type
     };
   }
