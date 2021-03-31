@@ -1,4 +1,4 @@
-import { HighlightedFieldLeaf } from './HighlightedFieldLeaf';
+import { HighlightedValue } from './HighlightedValue';
 
 /**
  * A mapping of the values emphasized by the Answers API.
@@ -35,7 +35,7 @@ import { HighlightedFieldLeaf } from './HighlightedFieldLeaf';
 export interface HighlightedFields {
   /**
    * A mapping of a field to either an array of HighlightedFields, HighlightedFields for
-   * this field's subfields, or a {@link HighlightedFieldLeaf} for the field.
+   * this field's subfields, or a {@link HighlightedValue} for the field.
    */
-  [fieldId: string]: HighlightedFields[] | HighlightedFields | HighlightedFieldLeaf
+  [fieldId: string]: HighlightedValue | HighlightedValue[] | HighlightedFields | HighlightedFields[]
 }

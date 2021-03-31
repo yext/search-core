@@ -201,17 +201,17 @@ export interface FilterSearchResponse {
 }
 
 // @public
-export interface HighlightedFieldLeaf {
+export interface HighlightedFields {
+    [fieldId: string]: HighlightedValue | HighlightedValue[] | HighlightedFields | HighlightedFields[];
+}
+
+// @public
+export interface HighlightedValue {
     matchedSubstrings: {
         length: number;
         offset: number;
     }[];
     value: string;
-}
-
-// @public
-export interface HighlightedFields {
-    [fieldId: string]: HighlightedFields[] | HighlightedFields | HighlightedFieldLeaf;
 }
 
 // @public
