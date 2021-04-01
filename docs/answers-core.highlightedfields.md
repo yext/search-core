@@ -17,7 +17,7 @@ export declare type HighlightedFields = {
 
 ## Remarks
 
-Only fields that have been marked as highlighted will be present - which may not be all fields of the corresponding [Result](./answers-core.result.md)<!-- -->'s rawData. Fields that are present will match the structure and order of the rawData.
+Only fields that have been marked as highlighted will be present - which may not be all fields of the corresponding [Result](./answers-core.result.md)<!-- -->'s rawData. Fields that are present will match the rawData's structure and order.
 
 ## Example
 
