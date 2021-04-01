@@ -14,7 +14,7 @@ export interface HighlightedFields
 
 ## Remarks
 
-The structure of HighlightedFields matches the structure of the corresponding rawData of a [Result](./answers-core.result.md)<!-- -->.
+Only fields that have been marked as highlighted will be present - which may not be all fields of the corresponding [Result](./answers-core.result.md)<!-- -->'s rawData. The fields the are present will match structure and order of the rawData.
 
 ## Example
 

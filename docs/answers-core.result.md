@@ -20,7 +20,7 @@ export interface Result
 |  [distance?](./answers-core.result.distance.md) | number | <i>(Optional)</i> The distance from the user to the result in meters. |
 |  [distanceFromFilter?](./answers-core.result.distancefromfilter.md) | number | <i>(Optional)</i> The distance from a [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) location to the result in meters. |
 |  [entityType?](./answers-core.result.entitytype.md) | string | <i>(Optional)</i> The entity type of the result |
-|  [highlightedFields?](./answers-core.result.highlightedfields.md) | [HighlightedFields](./answers-core.highlightedfields.md) | <i>(Optional)</i> A tree of [highlighted fields](./answers-core.highlightedfields.md) emphasized by the api. |
+|  [highlightedFields?](./answers-core.result.highlightedfields.md) | [HighlightedFields](./answers-core.highlightedfields.md) | <i>(Optional)</i> The [highlighted fields](./answers-core.highlightedfields.md) emphasized by the api. |
 |  [id?](./answers-core.result.id.md) | string | <i>(Optional)</i> The result ID which depends on the Result Source. |
 |  [index?](./answers-core.result.index.md) | number | <i>(Optional)</i> The index of the result among the other results in the search. |
 |  [link?](./answers-core.result.link.md) | string | <i>(Optional)</i> A hyperlink associated with the result. |

@@ -4,7 +4,9 @@ import { HighlightedValue } from './HighlightedValue';
  * A mapping of the values emphasized by the Answers API.
  *
  * @remarks
- * The structure of HighlightedFields matches the structure of the corresponding rawData of a {@link Result}.
+ * Only fields that have been marked as highlighted will be present - which may not be
+ * all fields of the corresponding {@link Result}'s rawData.
+ * The fields the are present will match structure and order of the rawData.
  *
  * @example
  * If a user searches for 'apple' and a description field in the results contains the value 'apple pie',

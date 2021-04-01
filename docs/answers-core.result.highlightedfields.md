@@ -4,7 +4,7 @@
 
 ## Result.highlightedFields property
 
-A tree of [highlighted fields](./answers-core.highlightedfields.md) emphasized by the api.
+The [highlighted fields](./answers-core.highlightedfields.md) emphasized by the api.
 
 <b>Signature:</b>
 

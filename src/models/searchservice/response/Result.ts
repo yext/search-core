@@ -35,7 +35,7 @@ export interface Result {
    * distanceFromFilter value will be from the search result to 'New York'.
    */
   distanceFromFilter?: number;
-  /** A tree of {@link HighlightedFields | highlighted fields} emphasized by the api. */
+  /** The {@link HighlightedFields | highlighted fields} emphasized by the api. */
   highlightedFields?: HighlightedFields,
   /** The entity type of the result */
   entityType?: string;
