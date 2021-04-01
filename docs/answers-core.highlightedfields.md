@@ -18,13 +18,16 @@ Only fields that have been marked as highlighted will be present - which may not
 
 ## Example
 
-If a user searches for 'apple' and a description field in the results contains the value 'apple pie', the API will likely match the word 'apple'.
+If a user searches for 'apple', the API will likely match fields that contain the word 'apple'.
 
 ```js
 {
-  name: {
-    value: 'Johnny Appleseed',
-    matchedSubstrings: [{ offset: 7, length: 5}]
+  description: {
+    value: 'likes apple pie and green apples',
+    matchedSubstrings: [
+      { offset: 6, length: 5 },
+      { offset: 26, length: 5 }
+    ]
   },
   c_favoriteFruits: [
     {
@@ -36,6 +39,12 @@ If a user searches for 'apple' and a description field in the results contains t
         {
           value: 'Upton Pyne Apple',
           matchedSubstrings: [{ offset: 11, length: 5}]
+        }
+      ],
+      pears: [
+        {
+          value: 'Callery Pear',
+          matchedSubstrings: []
         }
       ]
     }
