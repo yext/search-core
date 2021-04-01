@@ -12,6 +12,10 @@ A mapping of the values emphasized by the Answers API.
 export interface HighlightedFields 
 ```
 
+## Remarks
+
+The structure of HighlightedFields matches the structure of the corresponding rawData of a [Result](./answers-core.result.md)<!-- -->.
+
 ## Example 1
 
 If a user searches for 'pet' and a description field in the results contains the value 'A pet store', the API will likely match the word 'pet'.
