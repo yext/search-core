@@ -75,5 +75,5 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [HighlightedFields](./answers-core.highlightedfields.md) | A mapping of the values emphasized by the Answers API. |
+|  [HighlightedFields](./answers-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Answers API |
 
