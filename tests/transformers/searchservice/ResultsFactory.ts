@@ -22,7 +22,7 @@ it('properly transforms Knowledge Graph results', () => {
     distance: 36032,
     distanceFromFilter: 3821,
     entityType: 'ce_person',
-    highlightedValues: [],
+    highlightedFields: {},
     id: 'Employee-2116',
     index: 1,
     link: 'http://www.test.com',
