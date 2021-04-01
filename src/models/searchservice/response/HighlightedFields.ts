@@ -6,7 +6,7 @@ import { HighlightedValue } from './HighlightedValue';
  * @remarks
  * Only fields that have been marked as highlighted will be present - which may not be
  * all fields of the corresponding {@link Result}'s rawData.
- * Fields that are present will match structure and order of the rawData.
+ * Fields that are present will match the structure and order of the rawData.
  *
  * @example
  * If a user searches for 'apple', the API will likely match fields that contain
