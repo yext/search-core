@@ -1,5 +1,5 @@
 /**
- * A field value and the substring matches marked as emphasized by the Answers API.
+ * A field value and its substring matches as emphasized by the Answers API.
  *
  * @public
  */

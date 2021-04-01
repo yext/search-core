@@ -6,7 +6,7 @@ import { HighlightedValue } from './HighlightedValue';
  * @remarks
  * Only fields that have been marked as highlighted will be present - which may not be
  * all fields of the corresponding {@link Result}'s rawData.
- * The fields the are present will match structure and order of the rawData.
+ * Fields that are present will match structure and order of the rawData.
  *
  * @example
  * If a user searches for 'apple', the API will likely match fields that contain
@@ -46,7 +46,7 @@ import { HighlightedValue } from './HighlightedValue';
  *
  * @public
  */
-export interface HighlightedFields {
+export type HighlightedFields = {
   /**
    * A mapping of a field to either an array of HighlightedFields, HighlightedFields for
    * this field's subfields, or a {@link HighlightedValue} for the field.
@@ -55,4 +55,4 @@ export interface HighlightedFields {
    * HighlightedFields is an object of arbitrary shape which contains {@link HighlightedValue} objects.
    */
   [fieldId: string]: HighlightedValue | HighlightedValue[] | HighlightedFields | HighlightedFields[]
-}
+};

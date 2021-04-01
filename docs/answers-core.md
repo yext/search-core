@@ -52,8 +52,7 @@
 |  [Filter](./answers-core.filter.md) | Represents a filter which compares values to a single field. |
 |  [FilterSearchRequest](./answers-core.filtersearchrequest.md) | Options for a filtersearch request. |
 |  [FilterSearchResponse](./answers-core.filtersearchresponse.md) | The response of a filtersearch request. |
-|  [HighlightedFields](./answers-core.highlightedfields.md) | A mapping of the values emphasized by the Answers API. |
-|  [HighlightedValue](./answers-core.highlightedvalue.md) | A field value and the substring matches marked as emphasized by the Answers API. |
+|  [HighlightedValue](./answers-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Answers API. |
 |  [LatLong](./answers-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
 |  [NearFilterValue](./answers-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./answers-core.matcher.md)<!-- -->. |
@@ -76,4 +75,5 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
+|  [HighlightedFields](./answers-core.highlightedfields.md) | A mapping of the values emphasized by the Answers API. |
 

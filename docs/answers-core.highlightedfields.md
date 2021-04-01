@@ -2,19 +2,22 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [HighlightedFields](./answers-core.highlightedfields.md)
 
-## HighlightedFields interface
+## HighlightedFields type
 
 A mapping of the values emphasized by the Answers API.
 
 <b>Signature:</b>
 
 ```typescript
-export interface HighlightedFields 
+export declare type HighlightedFields = {
+    [fieldId: string]: HighlightedValue | HighlightedValue[] | HighlightedFields | HighlightedFields[];
+};
 ```
+<b>References:</b> [HighlightedValue](./answers-core.highlightedvalue.md)<!-- -->, [HighlightedFields](./answers-core.highlightedfields.md)
 
 ## Remarks
 
-Only fields that have been marked as highlighted will be present - which may not be all fields of the corresponding [Result](./answers-core.result.md)<!-- -->'s rawData. The fields the are present will match structure and order of the rawData.
+Only fields that have been marked as highlighted will be present - which may not be all fields of the corresponding [Result](./answers-core.result.md)<!-- -->'s rawData. Fields that are present will match structure and order of the rawData.
 
 ## Example
 

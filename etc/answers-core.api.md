@@ -201,9 +201,9 @@ export interface FilterSearchResponse {
 }
 
 // @public
-export interface HighlightedFields {
+export type HighlightedFields = {
     [fieldId: string]: HighlightedValue | HighlightedValue[] | HighlightedFields | HighlightedFields[];
-}
+};
 
 // @public
 export interface HighlightedValue {
