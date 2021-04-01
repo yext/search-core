@@ -7,27 +7,27 @@ import { HighlightedValue } from './HighlightedValue';
  * The structure of HighlightedFields matches the structure of the corresponding rawData of a {@link Result}.
  *
  * @example
- * If a user searches for 'pet' and a description field in the results contains the value 'A pet store',
- * the API will likely match the word 'pet'.
+ * If a user searches for 'apple' and a description field in the results contains the value 'apple pie',
+ * the API will likely match the word 'apple'.
  *
- * @example
  * ```js
  * {
  *   name: {
- *     value: 'Yext',
- *     matchedSubstrings: [{ offset: 0, length: 4}]
+ *     value: 'Johnny Appleseed',
+ *     matchedSubstrings: [{ offset: 7, length: 5}]
  *   },
- *   c_food: [
+ *   c_favoriteFruits: [
  *     {
- *       fruits: [
- *       {
- *         value: 'apple',
- *         matchedSubstrings: []
- *       },
- *       {
- *         value: 'pear',
- *         matchedSubstrings: []
- *       }
+ *       apples: [
+ *         {
+ *           value: 'Granny Smith',
+ *           matchedSubstrings: []
+ *         },
+ *         {
+ *           value: 'Upton Pyne Apple',
+ *           matchedSubstrings: [{ offset: 11, length: 5}]
+ *         }
+ *       ]
  *     }
  *   ]
  * }
