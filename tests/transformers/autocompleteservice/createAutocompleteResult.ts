@@ -36,7 +36,9 @@ describe('AutocompleteResult', () => {
         },
         index: 1,
         source: 'KNOWLEDGE_MANAGER',
-        highlightedValues: []
+        highlightedFields: {
+          some: 'field'
+        }
       }
     };
     const actualResult = createAutocompleteResult(resultWithNoFilter);
@@ -74,7 +76,7 @@ describe('AutocompleteResult', () => {
         },
         index: 1,
         source: 'KNOWLEDGE_MANAGER',
-        highlightedValues: []
+        highlightedFields: {}
       }
     };
     const actualResult = createAutocompleteResult(resultWithNoMatchedSubstrings);

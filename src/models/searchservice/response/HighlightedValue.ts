@@ -1,30 +1,9 @@
 /**
- * Represents field values or substrings of field values that the Answers API emphasized.
- *
- * @example
- * If a user searches for 'pet' and a description field in the results contains the value 'A pet store',
- * the API will likely match the word 'pet'.
+ * A field value and its substring matches as emphasized by the Answers API.
  *
  * @public
  */
-export interface HighlightedValue {
-  /** The field name of the highlighted value. */
-  fieldName: string,
-  /**
-   * Represents the nested field structure of the highlighted value.
-   *
-   * @example
-   * In the knowledge graph a field may be nested in a structure such as:
-   * ```
-   * {
-   *   description: {
-   *     featured: 'The offical answers engine'
-   *   }
-   * }
-   * ```
-   * The associated path would then be `['description', 'featured']`
-   */
-  path: string[],
+ export interface HighlightedValue {
   /**
    * The value of the field which should be highlighted.
    *

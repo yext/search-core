@@ -34,6 +34,7 @@ export { FeaturedSnippetDirectAnswer } from './searchservice/response/FeaturedSn
 export { DirectAnswerType } from './searchservice/response/DirectAnswerType';
 export { Facet, FacetOption } from './searchservice/request/Facet';
 export { DisplayableFacet, DisplayableFacetOption } from './searchservice/response/DisplayableFacet';
+export { HighlightedFields } from './searchservice/response/HighlightedFields';
 export { HighlightedValue } from './searchservice/response/HighlightedValue';
 export { LocationBias, LocationBiasMethod } from './searchservice/response/LocationBias';
 export { Result } from './searchservice/response/Result';

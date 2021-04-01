@@ -201,13 +201,16 @@ export interface FilterSearchResponse {
 }
 
 // @public
+export type HighlightedFields = {
+    [fieldId: string]: HighlightedValue | HighlightedValue[] | HighlightedFields | HighlightedFields[];
+};
+
+// @public
 export interface HighlightedValue {
-    fieldName: string;
     matchedSubstrings: {
         length: number;
         offset: number;
     }[];
-    path: string[];
     value: string;
 }
 
@@ -286,7 +289,7 @@ export interface Result {
     distance?: number;
     distanceFromFilter?: number;
     entityType?: string;
-    highlightedValues?: HighlightedValue[];
+    highlightedFields?: HighlightedFields;
     id?: string;
     index?: number;
     link?: string;
