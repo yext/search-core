@@ -66,9 +66,9 @@ core.verticalSearch({
 ```
 
 ### Explanation of Builds
-- The ESM (ES6) build will be used automatically by module loaders that support it (e.g. Webpack). It can be specified directly by importing `@yext/answers-core/lib/esm`
+- The ESM (ES6) build will be used automatically by module bundles that support it (e.g. Webpack). It can be specified directly by importing `@yext/answers-core/lib/esm`
 - The CommonJS build will be used automatically by Node, but it can be specified directly by importing `@yext/answers-core/lib/commonjs`
-- The Legacy (UMD) bundle should be used for supporting IE11 out of the box. It is compiled to ES5 and it contains the necessary ponyfills for IE11. If your application already contains polyfills, we recommend bundling one of the other builds in order to prevent your application from including duplicate polyfills. This bundle can be specified by importing from `@yext/answers-core/legacy`
+- The Legacy (UMD) bundle should be used for supporting IE11 out of the box. It is compiled to ES5 and it contains the necessary ponyfills for IE11. If your application already contains polyfills, we recommend bundling one of the other builds in order to prevent your application from including duplicate polyfills. This bundle can be specified by importing `@yext/answers-core/legacy`
 
 
 And that's it! See **[our documentation](./docs/answers-core.answerscore.md)** for a full list of supported API calls.
