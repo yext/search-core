@@ -77,13 +77,16 @@ export type Context = any;
 
 // @public
 export interface DirectAnswer {
-    entityName: string;
-    fieldApiName: string;
-    fieldName: string;
-    fieldType: string;
     relatedResult: Result;
+    type: DirectAnswerType;
     value: string;
     verticalKey: string;
+}
+
+// @public
+export enum DirectAnswerType {
+    FeaturedSnippet = "FEATURED_SNIPPET",
+    FieldValue = "FIELD_VALUE"
 }
 
 // @public
@@ -141,6 +144,28 @@ export interface FacetOption {
 }
 
 // @public
+export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
+    relatedResult: Result;
+    // Warning: (ae-forgotten-export) The symbol "Snippet" needs to be exported by the entry point index.d.ts
+    snippet: Snippet;
+    type: DirectAnswerType.FeaturedSnippet;
+    value: string;
+    verticalKey: string;
+}
+
+// @public
+export interface FieldValueDirectAnswer extends DirectAnswer {
+    entityName: string;
+    fieldApiName: string;
+    fieldName: string;
+    fieldType: string;
+    relatedResult: Result;
+    type: DirectAnswerType.FieldValue;
+    value: string;
+    verticalKey: string;
+}
+
+// @public
 export interface Filter {
     fieldId: string;
     matcher: Matcher;
@@ -176,13 +201,16 @@ export interface FilterSearchResponse {
 }
 
 // @public
+export type HighlightedFields = {
+    [fieldId: string]: HighlightedValue | HighlightedValue[] | HighlightedFields | HighlightedFields[];
+};
+
+// @public
 export interface HighlightedValue {
-    fieldName: string;
     matchedSubstrings: {
         length: number;
         offset: number;
     }[];
-    path: string[];
     value: string;
 }
 
@@ -261,7 +289,7 @@ export interface Result {
     distance?: number;
     distanceFromFilter?: number;
     entityType?: string;
-    highlightedValues?: HighlightedValue[];
+    highlightedFields?: HighlightedFields;
     id?: string;
     index?: number;
     link?: string;
@@ -340,7 +368,7 @@ export interface UniversalSearchRequest {
 
 // @public
 export interface UniversalSearchResponse {
-    directAnswer?: DirectAnswer;
+    directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer;
     locationBias?: LocationBias;
     queryId?: string;
     searchIntents?: SearchIntent[];
@@ -375,6 +403,7 @@ export interface VerticalSearchRequest {
     locationRadius?: number;
     offset?: number;
     query: string;
+    queryId?: string;
     querySource?: QuerySource;
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;

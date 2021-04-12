@@ -1,6 +1,5 @@
 import { Result } from '../../models/searchservice/response/Result';
 import { Source } from '../../models/searchservice/response/Source';
-import { HighlightedValueFactory } from './HighlightedValueFactory';
 
 /**
  * A factory which creates results from different sources
@@ -12,97 +11,99 @@ export class ResultsFactory {
     }
 
     return results.map((result: any, index: number) => {
-      result = {
-        ...result,
-        index: index + 1
-      };
+      const resultIndex = index + 1;
 
       switch (source) {
         case Source.KnowledgeManager:
-          return this.fromKnowledgeManager(result);
+          return this.fromKnowledgeManager(result, resultIndex);
         case Source.Google:
-          return this.fromGoogleCustomSearchEngine(result);
+          return this.fromGoogleCustomSearchEngine(result, resultIndex);
         case Source.Bing:
-          return this.fromBingCustomSearchEngine(result);
+          return this.fromBingCustomSearchEngine(result, resultIndex);
         case Source.Zendesk:
-          return this.fromZendeskSearchEngine(result);
+          return this.fromZendeskSearchEngine(result, resultIndex);
         case Source.Algolia:
-          return this.fromAlgoliaSearchEngine(result);
+          return this.fromAlgoliaSearchEngine(result, resultIndex);
         default:
-          return this.fromGeneric(result);
+          return this.fromGeneric(result, resultIndex);
       }
     });
   }
 
-  private static fromKnowledgeManager(result: any): Result {
-    const rawData = result.data ?? {};
+  private static fromKnowledgeManager(result: any, index: number): Result {
+    const rawData = result.data ?? result;
     return {
       rawData: rawData,
       source: Source.KnowledgeManager,
-      index: result.index,
+      index: index,
       name: rawData.name,
       description: rawData.description,
       link: rawData.website,
       id: rawData.id,
       distance: result.distance,
       distanceFromFilter: result.distanceFromFilter,
-      highlightedValues: HighlightedValueFactory.create(result.highlightedFields),
+      highlightedFields: result.highlightedFields,
       entityType: rawData.type
     };
   }
 
-  private static fromGoogleCustomSearchEngine(result: any): Result {
+  private static fromGoogleCustomSearchEngine(result: any, index: number): Result {
+    const rawData = result.data ?? result;
     return {
-      rawData: result,
+      rawData: rawData,
       source: Source.Google,
-      index: result.index,
-      name: result.htmlTitle.replace(/(<([^>]+)>)/ig, ''),
-      description: result.htmlSnippet,
-      link: result.link
+      index: index,
+      name: rawData.htmlTitle.replace(/(<([^>]+)>)/ig, ''),
+      description: rawData.htmlSnippet,
+      link: rawData.link
     };
   }
 
-  private static fromBingCustomSearchEngine(result: any): Result {
+  private static fromBingCustomSearchEngine(result: any, index: number): Result {
+    const rawData = result.data ?? result;
     return {
-      rawData: result,
+      rawData: rawData,
       source: Source.Bing,
-      index: result.index,
-      name: result.name,
-      description: result.snippet,
-      link: result.url
+      index: index,
+      name: rawData.name,
+      description: rawData.snippet,
+      link: rawData.url
     };
   }
 
-  private static fromZendeskSearchEngine(result: any): Result {
+  private static fromZendeskSearchEngine(result: any, index: number): Result {
+    const rawData = result.data ?? result;
     return {
-      rawData: result,
+      rawData: rawData,
       source: Source.Zendesk,
-      index: result.index,
-      name: result.title,
-      description: result.snippet,
-      link: result.html_url
+      index: index,
+      name: rawData.title,
+      description: rawData.snippet,
+      link: rawData.html_url
     };
   }
 
-  private static fromAlgoliaSearchEngine(result: any): Result {
+  private static fromAlgoliaSearchEngine(result: any, index: number): Result {
+    const rawData = result.data ?? result;
     return {
-      rawData: result,
+      rawData: rawData,
       source: Source.Algolia,
-      index: result.index,
-      name: result.name,
-      id: result.objectID
+      index: index,
+      name: rawData.name,
+      id: rawData.objectID
     };
   }
 
-  private static fromGeneric(result: any): Result {
+  private static fromGeneric(result: any, index: number): Result {
+    const rawData = result.data ?? result;
     return {
-      rawData: result,
+      rawData: rawData,
       source: Source.Generic,
-      index: result.index,
-      name: result.name,
-      description: result.description, // Do we want to truncate this like in the SDK?
-      link: result.website,
-      id: result.id,
+      index: index,
+      name: rawData.name,
+      description: rawData.description, // Do we want to truncate this like in the SDK?
+      link: rawData.website,
+      id: rawData.id
     };
   }
 

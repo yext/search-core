@@ -24,6 +24,8 @@ Answers Core is a networking library for interacting with the Yext Answers API.
 
 ## Getting Started
 
+For a full getting started walk through, view our [official Hitchhiker Guide](https://hitchhikers.yext.com/guides/answers-core-getting-started/).
+
 First, install Answers-core via [npm](https://www.npmjs.com/get-npm):
 
 ```bash
@@ -45,11 +47,10 @@ const core = provideCore({
 });
 ```
 
-To use the ES5 bundle, import from `@yext/answers-core/legacy` instead. This bundle supports browsers like Internet Explorer 11 out of the box.
-
+To use the library with Node, use the following import instead:
 ```js
-import { provideCore } from '@yext/answers-core/legacy';
-```
+const { provideCore } = require('@yext/answers-core');
+``` 
 
 Now that the core is initialized, let's run a search on an "FAQs" vertical.
 
@@ -63,6 +64,12 @@ core.verticalSearch({
   // Handle errors thrown by the core library
 });
 ```
+
+### Explanation of Builds
+- The ESM (ES6) build will be used automatically by module bundlers that support it (e.g. Webpack). It can be specified directly by importing `@yext/answers-core/lib/esm`
+- The CommonJS build will be used automatically by Node, but it can be specified directly by importing `@yext/answers-core/lib/commonjs`
+- The Legacy (UMD) bundle should be used for supporting IE11 out of the box. It is compiled to ES5 and it contains the necessary ponyfills for IE11. If your application already contains polyfills, we recommend bundling one of the other builds in order to prevent your application from including duplicate polyfills. This bundle can be specified by importing `@yext/answers-core/legacy`
+
 
 And that's it! See **[our documentation](./docs/answers-core.answerscore.md)** for a full list of supported API calls.
 

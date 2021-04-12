@@ -124,7 +124,6 @@ describe('SearchService', () => {
   describe('Vertical Search', ()=> {
     const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query';
 
-
     it('Query params are correct when only required params are supplied', async () => {
       const requestWithRequiredParams: VerticalSearchRequest = {
         query: 'testQuery',
@@ -164,6 +163,7 @@ describe('SearchService', () => {
         locationRadius: 100,
         offset: 10,
         query: 'testQuery',
+        queryId: '260cc620-7421-44dd-afe8-07d50361e389',
         querySource: QuerySource.Standard,
         queryTrigger: QueryTrigger.Initialize,
         referrerPageUrl: 'yext.com',
@@ -200,6 +200,7 @@ describe('SearchService', () => {
         location: '40,40',
         locationRadius: '100',
         offset: 10,
+        queryId: '260cc620-7421-44dd-afe8-07d50361e389',
         queryTrigger: 'initialize',
         referrerPageUrl: 'yext.com',
         retrieveFacets: true,

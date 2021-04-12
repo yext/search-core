@@ -1,4 +1,4 @@
-import { HighlightedValue } from './HighlightedValue';
+import { HighlightedFields } from './HighlightedFields';
 import { Source } from './Source';
 
 /**
@@ -35,8 +35,8 @@ export interface Result {
    * distanceFromFilter value will be from the search result to 'New York'.
    */
   distanceFromFilter?: number;
-  /** An array of {@link HighlightedValue | highlighted values} associated with the result. */
-  highlightedValues?: HighlightedValue[];
+  /** The {@link HighlightedFields | highlighted fields} emphasized by the api. */
+  highlightedFields?: HighlightedFields,
   /** The entity type of the result */
   entityType?: string;
 }

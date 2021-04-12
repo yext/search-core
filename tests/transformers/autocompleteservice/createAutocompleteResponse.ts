@@ -86,11 +86,9 @@ describe('AutocompleteResponse', () => {
                 },
                 index: 1,
                 source: 'KNOWLEDGE_MANAGER',
-                highlightedValues: [
-                  {
-                    fieldName: 'name',
+                highlightedFields: {
+                  name: {
                     value: 'Virginia Beach',
-                    path: ['name'],
                     matchedSubstrings: [
                       {
                         length: 8,
@@ -98,7 +96,7 @@ describe('AutocompleteResponse', () => {
                       }
                     ]
                   }
-                ]
+                }
               }
             },
             {
@@ -121,11 +119,9 @@ describe('AutocompleteResponse', () => {
                 },
                 index: 1,
                 source: 'KNOWLEDGE_MANAGER',
-                highlightedValues: [
-                  {
-                    fieldName: 'name2',
+                highlightedFields: {
+                  name2: {
                     value: 'Virginia Beach2',
-                    path: ['name2'],
                     matchedSubstrings: [
                       {
                         length: 8,
@@ -133,7 +129,7 @@ describe('AutocompleteResponse', () => {
                       }
                     ]
                   }
-                ]
+                }
               }
             }
           ]
