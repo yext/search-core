@@ -176,9 +176,9 @@ describe('SearchService', () => {
           type: SortType.Field
         }],
         staticFilters: {
-            fieldId: 'city',
-            matcher: Matcher.NotEquals,
-            value: 'Arlington'
+          fieldId: 'city',
+          matcher: Matcher.NotEquals,
+          value: 'Arlington'
         },
         verticalKey: 'verticalKey'
       };

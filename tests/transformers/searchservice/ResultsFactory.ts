@@ -3,19 +3,19 @@ import { Source } from '../../../src/models/searchservice/response/Source';
 
 it('properly transforms Knowledge Graph results', () => {
   const kgData = [{
-      data: {
-        id: 'Employee-2116',
-        type: 'ce_person',
-        website: 'http://www.test.com',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
-        name: 'Bob Smith',
-        firstName: 'Bob',
-        lastName: 'Smith',
-      },
-      highlightedFields: {},
-      distance: 36032,
-      distanceFromFilter: 3821
-    }
+    data: {
+      id: 'Employee-2116',
+      type: 'ce_person',
+      website: 'http://www.test.com',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
+      name: 'Bob Smith',
+      firstName: 'Bob',
+      lastName: 'Smith',
+    },
+    highlightedFields: {},
+    distance: 36032,
+    distanceFromFilter: 3821
+  }
   ];
   const expectedResults = [{
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
@@ -56,13 +56,13 @@ it('properly transforms Zendesk results', () => {
     index: 1,
     link: 'https://help.yext.com/',
     name: 'Add Custom Schema.org Markup',
-      rawData: {
-       html_url: 'https://help.yext.com/',
-       id: 8273729837,
-       snippet: 'Enter the Preview link into the text box.',
-       title: 'Add Custom Schema.org Markup',
-     },
-     source: 'ZENDESK',
+    rawData: {
+      html_url: 'https://help.yext.com/',
+      id: 8273729837,
+      snippet: 'Enter the Preview link into the text box.',
+      title: 'Add Custom Schema.org Markup',
+    },
+    source: 'ZENDESK',
   }];
 
   const actualResults = ResultsFactory.create(zendeskData, Source.Zendesk);

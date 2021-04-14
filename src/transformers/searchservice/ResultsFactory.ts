@@ -14,18 +14,18 @@ export class ResultsFactory {
       const resultIndex = index + 1;
 
       switch (source) {
-        case Source.KnowledgeManager:
-          return this.fromKnowledgeManager(result, resultIndex);
-        case Source.Google:
-          return this.fromGoogleCustomSearchEngine(result, resultIndex);
-        case Source.Bing:
-          return this.fromBingCustomSearchEngine(result, resultIndex);
-        case Source.Zendesk:
-          return this.fromZendeskSearchEngine(result, resultIndex);
-        case Source.Algolia:
-          return this.fromAlgoliaSearchEngine(result, resultIndex);
-        default:
-          return this.fromGeneric(result, resultIndex);
+      case Source.KnowledgeManager:
+        return this.fromKnowledgeManager(result, resultIndex);
+      case Source.Google:
+        return this.fromGoogleCustomSearchEngine(result, resultIndex);
+      case Source.Bing:
+        return this.fromBingCustomSearchEngine(result, resultIndex);
+      case Source.Zendesk:
+        return this.fromZendeskSearchEngine(result, resultIndex);
+      case Source.Algolia:
+        return this.fromAlgoliaSearchEngine(result, resultIndex);
+      default:
+        return this.fromGeneric(result, resultIndex);
       }
     });
   }
