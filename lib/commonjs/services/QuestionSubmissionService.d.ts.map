@@ -1,0 +1,1 @@
+{"version":3,"file":"QuestionSubmissionService.d.ts","sourceRoot":"","sources":["../../../src/services/QuestionSubmissionService.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,0BAA0B,EAAE,MAAM,yDAAyD,CAAC;AACrG,OAAO,EAAE,yBAAyB,EAAE,MAAM,wDAAwD,CAAC;AAEnG;;;;GAIG;AACH,MAAM,WAAW,yBAAyB;IACxC,cAAc,CAAC,OAAO,EAAE,yBAAyB,GAAG,OAAO,CAAC,0BAA0B,CAAC,CAAA;CACxF"}

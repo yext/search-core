@@ -1,5 +1,3 @@
 node_modules/
-dist/
-lib/
 temp/
 .DS_Store

@@ -1,0 +1,1 @@
+{"version":3,"file":"HighlightedValue.d.ts","sourceRoot":"","sources":["../../../../../src/models/searchservice/response/HighlightedValue.ts"],"names":[],"mappings":"AAAA;;;;GAIG;AACF,MAAM,WAAW,gBAAgB;IAChC;;;;;OAKG;IACH,KAAK,EAAE,MAAM,CAAC;IACd;;;;;;;;;OASG;IACH,iBAAiB,EAAE;QACjB,MAAM,EAAE,MAAM,CAAC;QACf,MAAM,EAAE,MAAM,CAAA;KACf,EAAE,CAAA;CACJ"}

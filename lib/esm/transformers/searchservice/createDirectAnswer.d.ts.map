@@ -1,0 +1,1 @@
+{"version":3,"file":"createDirectAnswer.d.ts","sourceRoot":"","sources":["../../../../src/transformers/searchservice/createDirectAnswer.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,2BAA2B,EAAE,MAAM,iEAAiE,CAAC;AAC9G,OAAO,EAAE,sBAAsB,EAAE,MAAM,4DAA4D,CAAC;AAIpG,wBAAgB,kBAAkB,CAAC,IAAI,EAAE,GAAG,GAAG,2BAA2B,GAAG,sBAAsB,CAyBlG"}

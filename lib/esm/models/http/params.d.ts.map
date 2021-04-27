@@ -1,0 +1,1 @@
+{"version":3,"file":"params.d.ts","sourceRoot":"","sources":["../../../../src/models/http/params.ts"],"names":[],"mappings":"AAAA,MAAM,WAAW,WAAW;IAC1B,CAAC,GAAG,EAAE,MAAM,GAAG,MAAM,GAAG,MAAM,GAAG,OAAO,GAAG,SAAS,CAAA;CACrD;AAED,MAAM,WAAW,oBAAoB;IACnC,CAAC,GAAG,EAAE,MAAM,GAAG,MAAM,GAAG,MAAM,GAAG,OAAO,CAAA;CACzC"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"Snippet.d.ts","sourceRoot":"","sources":["../../../../../src/models/searchservice/response/Snippet.ts"],"names":[],"mappings":"AAAA;;;;GAIG;AACH,MAAM,WAAW,OAAO;IACtB,iCAAiC;IACjC,KAAK,EAAE,MAAM,CAAC;IACd,0FAA0F;IAC1F,iBAAiB,EAAE;QAAC,MAAM,EAAE,MAAM,CAAC;QAAC,MAAM,EAAE,MAAM,CAAA;KAAC,EAAE,CAAC;CACvD"}

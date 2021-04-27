@@ -1,0 +1,1 @@
+{"version":3,"file":"createSpellCheck.js","sourceRoot":"","sources":["../../../../src/transformers/searchservice/createSpellCheck.ts"],"names":[],"mappings":"AAEA,MAAM,UAAU,gBAAgB,CAAC,IAAS;IACxC,OAAO;QACL,aAAa,EAAE,IAAI,CAAC,aAAa;QACjC,cAAc,EAAE,IAAI,CAAC,cAAc,CAAC,KAAK;QACzC,IAAI,EAAE,IAAI,CAAC,IAAI;KAChB,CAAC;AACJ,CAAC"}
