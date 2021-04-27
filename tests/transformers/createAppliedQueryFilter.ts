@@ -11,7 +11,11 @@ it('createAppliedQueryFilter correctly transforms appliedQueryFilters', () => {
             $eq: 'Sales'
           }
         },
-        type: 'FIELD_VALUE'
+        type: 'FIELD_VALUE',
+        details: {
+          latitutde: 10, 
+          longitutde: 20
+        }
       }
     ],
   };
@@ -25,5 +29,9 @@ it('createAppliedQueryFilter correctly transforms appliedQueryFilters', () => {
       matcher: '$eq',
       value: 'Sales'
     },
+    details: {
+      latitutde: 10,
+      longitutde: 20
+    }
   });
 });

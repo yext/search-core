@@ -22,4 +22,6 @@ export interface AppliedQueryFilter {
   displayValue: string;
   /** The filter applied to the query results. */
   filter: Filter;
+
+  details: any;
 }

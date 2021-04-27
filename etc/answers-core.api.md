@@ -41,6 +41,8 @@ export class AnswersError extends Error {
 
 // @public
 export interface AppliedQueryFilter {
+    // (undocumented)
+    details: any;
     displayKey: string;
     displayValue: string;
     filter: Filter;
