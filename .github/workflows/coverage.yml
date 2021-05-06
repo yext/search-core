@@ -10,7 +10,7 @@ on:
   pull_request:
 
 jobs:
-  coverage:
+  Coveralls:
     runs-on: ubuntu-latest
 
     strategy:
