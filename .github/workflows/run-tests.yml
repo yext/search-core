@@ -22,4 +22,8 @@ jobs:
     - run: npm ci
     - run: npm run build-ci
     - run: ./scripts/validate-docs.sh
-    - run: npm test
+    - run: npm test -- --coverage
+    - name: Coveralls
+      uses: coverallsapp/github-action@master
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
