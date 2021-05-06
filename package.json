@@ -66,6 +66,7 @@
   },
   "jest": {
     "bail": 0,
+    "collectCoverageFrom": ["src/**/*.ts"],
     "verbose": true,
     "moduleFileExtensions": [
       "js",

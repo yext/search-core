@@ -8,6 +8,9 @@
   <a href="./LICENSE">
     <img src="https://img.shields.io/badge/License-BSD%203--Clause-blue.svg" alt="License"/>
   </a>
+  <a href='https://coveralls.io/github/yext/answers-core?branch=master'>
+    <img src='https://coveralls.io/repos/github/yext/answers-core/badge.svg?branch=master' alt='Coverage Status' />
+  </a>
 </div>
 <br>
 
