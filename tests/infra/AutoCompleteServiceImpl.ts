@@ -129,21 +129,16 @@ describe('additionalQueryParams are passed through', () => {
       jsLibVersion: 'LIB_VERSION'
     }
   };
-  const mockHttpService = new HttpServiceMock();
-  const apiResponseValidator = new ApiResponseValidator();
+  let mockHttpService, apiResponseValidator;
+  beforeEach(() => {
+    mockHttpService = new HttpServiceMock();
+    apiResponseValidator = new ApiResponseValidator();
+  });
 
   it('Universal Autocomplete', async () => {
     mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
     const request: UniversalAutocompleteRequest = {
       input: ''
-    };
-    const expectedQueryParams = {
-      input: '',
-      experienceKey: 'testExperienceKey',
-      api_key: 'testApiKey',
-      v: 20190101,
-      locale: 'en',
-      jsLibVersion: 'LIB_VERSION'
     };
     const autocompleteService = new AutocompleteServiceImpl(
       config,
@@ -151,7 +146,10 @@ describe('additionalQueryParams are passed through', () => {
       apiResponseValidator
     );
     await autocompleteService.universalAutocomplete(request);
-    expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
+      jsLibVersion: 'LIB_VERSION'
+    }));
   });
 
   it('Vertical Autocomplete', async () => {
@@ -160,53 +158,25 @@ describe('additionalQueryParams are passed through', () => {
       input: 'salesforce',
       verticalKey: 'verticalKey'
     };
-    const expectedQueryParams = {
-      input: 'salesforce',
-      experienceKey: 'testExperienceKey',
-      api_key: 'testApiKey',
-      v: 20190101,
-      locale: 'en',
-      verticalKey: 'verticalKey',
-      jsLibVersion: 'LIB_VERSION'
-    };
     const autocompleteService = new AutocompleteServiceImpl(
       config,
       mockHttpService as HttpService,
       apiResponseValidator
     );
     await autocompleteService.verticalAutocomplete(request);
-    expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
+      jsLibVersion: 'LIB_VERSION'
+    }));
   });
 
   it('FilterSearch', async () => {
     mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
-    const convertedSearchParams = {
-      sectioned: false,
-      fields: [{
-        fieldId: 'field',
-        entityTypeId: 'location',
-        shouldFetchEntities: false
-      }]
-    };
     const request: FilterSearchRequest = {
       input: 'salesforce',
       verticalKey: 'verticalKey',
       sectioned: false,
-      fields: [{
-        fieldApiName: 'field',
-        entityType: 'location',
-        fetchEntities: false
-      }]
-    };
-    const expectedQueryParams = {
-      input: 'salesforce',
-      experienceKey: 'testExperienceKey',
-      api_key: 'testApiKey',
-      v: 20190101,
-      locale: 'en',
-      verticalKey: 'verticalKey',
-      search_parameters: JSON.stringify(convertedSearchParams),
-      jsLibVersion: 'LIB_VERSION'
+      fields: []
     };
     const autocompleteService = new AutocompleteServiceImpl(
       config,
@@ -214,6 +184,9 @@ describe('additionalQueryParams are passed through', () => {
       apiResponseValidator
     );
     await autocompleteService.filterSearch(request);
-    expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
+      jsLibVersion: 'LIB_VERSION'
+    }));
   });
 });

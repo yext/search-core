@@ -274,17 +274,11 @@ describe('additionalQueryParams are passed through', () => {
     const request: UniversalSearchRequest = {
       query: 'testQuery'
     };
-    const expectedQueryParams = {
-      api_key: 'testApiKey',
-      experienceKey: 'testExperienceKey',
-      input: 'testQuery',
-      locale: 'en',
-      v: 20190101,
-      source: 'STANDARD',
-      jsLibVersion: 'LIB_VERSION'
-    };
     await searchService.universalSearch(request);
-    expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
+      jsLibVersion: 'LIB_VERSION'
+    }));
   });
 
   it('verticalSearch', async () => {
@@ -292,18 +286,11 @@ describe('additionalQueryParams are passed through', () => {
       query: 'testQuery',
       verticalKey: 'verticalKey'
     };
-    const expectedQueryParams = {
-      api_key: 'testApiKey',
-      experienceKey: 'testExperienceKey',
-      verticalKey: 'verticalKey',
-      input: 'testQuery',
-      locale: 'en',
-      v: 20190101,
-      source: 'STANDARD',
-      sortBys: '[]',
-      jsLibVersion: 'LIB_VERSION'
-    };
+
     await searchService.verticalSearch(request);
-    expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
+      jsLibVersion: 'LIB_VERSION'
+    }));
   });
 });
