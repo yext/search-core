@@ -107,3 +107,24 @@ describe('Question submission', () => {
     });
   });
 });
+
+it('additionalQueryParams are passed through', async () => {
+  const coreConfig = {
+    ...baseCoreConfig,
+    additionalQueryParams: {
+      jsLibVersion: 'LIB_VERSION'
+    }
+  };
+  const qaService = new QuestionSubmissionServiceImpl(coreConfig, mockHttp as HttpService, apiResponseValidator);
+  await qaService.submitQuestion(qaRequest);
+  const mockCalls = mockHttp.post.mock.calls;
+  const actualHttpParams = mockCalls[mockCalls.length - 1];
+  const expectedQueryParams = {
+    api_key: 'anApiKey',
+    sessionTrackingEnabled: true,
+    v: 20190101,
+    jsLibVersion: 'LIB_VERSION'
+  };
+  const actualQueryParams = actualHttpParams[1];
+  expect(expectedQueryParams).toEqual(actualQueryParams);
+});

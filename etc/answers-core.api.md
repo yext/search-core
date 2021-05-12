@@ -6,6 +6,10 @@
 
 // @public
 export interface AnswersConfig {
+    // @internal
+    additionalQueryParams?: {
+        [key: string]: string | number | boolean;
+    };
     apiKey: string;
     // @internal
     endpoints?: Endpoints;

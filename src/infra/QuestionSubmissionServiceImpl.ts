@@ -34,7 +34,8 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
     const queryParams = {
       v: defaultApiVersion,
       api_key: this.config.apiKey,
-      sessionTrackingEnabled: request.sessionTrackingEnabled
+      sessionTrackingEnabled: request.sessionTrackingEnabled,
+      ...this.config?.additionalQueryParams
     };
 
     const body = {

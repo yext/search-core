@@ -11,6 +11,9 @@ import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Direction } from '../../src/models/searchservice/request/Direction';
 import { SortType } from '../../src/models/searchservice/request/SortType';
 
+const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query';
+const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/query';
+
 describe('SearchService', () => {
   const configWithRequiredParams: AnswersConfig = {
     apiKey: 'testApiKey',
@@ -50,8 +53,6 @@ describe('SearchService', () => {
   });
 
   describe('Universal Search', () => {
-    const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/query';
-
     it('Query params are correct when only required params are supplied', async () => {
       const requestWithRequiredParams: UniversalSearchRequest = {
         query: 'testQuery'
@@ -122,8 +123,6 @@ describe('SearchService', () => {
   });
 
   describe('Vertical Search', ()=> {
-    const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query';
-
     it('Query params are correct when only required params are supplied', async () => {
       const requestWithRequiredParams: VerticalSearchRequest = {
         query: 'testQuery',
@@ -243,5 +242,68 @@ describe('SearchService', () => {
       const actualLocationRadius = (actualQueryParams as { locationRadius: string }).locationRadius;
       expect(actualLocationRadius).toEqual('1.23');
     });
+  });
+});
+
+describe('additionalQueryParams are passed through', () => {
+  const coreConfig: AnswersConfig = {
+    apiKey: 'testApiKey',
+    experienceKey: 'testExperienceKey',
+    locale: 'en',
+    additionalQueryParams: {
+      jsLibVersion: 'LIB_VERSION'
+    }
+  };
+
+  let mockHttpService, apiResponseValidator, searchService;
+  beforeEach(() => {
+    mockHttpService = new HttpServiceMock();
+    mockHttpService.get.mockResolvedValue({
+      response: {},
+      meta: {},
+    });
+    apiResponseValidator = new ApiResponseValidator();
+    searchService = new SearchServiceImpl(
+      coreConfig,
+      mockHttpService as HttpService,
+      apiResponseValidator
+    );
+  });
+
+  it('universalSearch', async () => {
+    const request: UniversalSearchRequest = {
+      query: 'testQuery'
+    };
+    const expectedQueryParams = {
+      api_key: 'testApiKey',
+      experienceKey: 'testExperienceKey',
+      input: 'testQuery',
+      locale: 'en',
+      v: 20190101,
+      source: 'STANDARD',
+      jsLibVersion: 'LIB_VERSION'
+    };
+    await searchService.universalSearch(request);
+    expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+  });
+
+  it('verticalSearch', async () => {
+    const request: VerticalSearchRequest = {
+      query: 'testQuery',
+      verticalKey: 'verticalKey'
+    };
+    const expectedQueryParams = {
+      api_key: 'testApiKey',
+      experienceKey: 'testExperienceKey',
+      verticalKey: 'verticalKey',
+      input: 'testQuery',
+      locale: 'en',
+      v: 20190101,
+      source: 'STANDARD',
+      sortBys: '[]',
+      jsLibVersion: 'LIB_VERSION'
+    };
+    await searchService.verticalSearch(request);
+    expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
   });
 });
