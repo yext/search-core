@@ -11,9 +11,6 @@ import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Direction } from '../../src/models/searchservice/request/Direction';
 import { SortType } from '../../src/models/searchservice/request/SortType';
 
-const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query';
-const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/query';
-
 describe('SearchService', () => {
   const configWithRequiredParams: AnswersConfig = {
     apiKey: 'testApiKey',
@@ -53,6 +50,8 @@ describe('SearchService', () => {
   });
 
   describe('Universal Search', () => {
+    const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/query';
+
     it('Query params are correct when only required params are supplied', async () => {
       const requestWithRequiredParams: UniversalSearchRequest = {
         query: 'testQuery'
@@ -123,6 +122,8 @@ describe('SearchService', () => {
   });
 
   describe('Vertical Search', ()=> {
+    const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query';
+
     it('Query params are correct when only required params are supplied', async () => {
       const requestWithRequiredParams: VerticalSearchRequest = {
         query: 'testQuery',

@@ -12,10 +12,6 @@ import mockAutocompleteResponseWithSections from '../fixtures/autocompleterespon
 import { defaultEndpoints } from '../../src/constants';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 
-const expectedVerticalUrl = defaultEndpoints.verticalAutocomplete;
-const expectedUniversalUrl = defaultEndpoints.universalAutocomplete;
-const expectedFilterUrl = defaultEndpoints.filterSearch;
-
 describe('AutocompleteService', () => {
   const config: AnswersConfig = {
     apiKey: 'testApiKey',
@@ -26,6 +22,7 @@ describe('AutocompleteService', () => {
   const apiResponseValidator = new ApiResponseValidator();
 
   describe('Universal Autocomplete', () => {
+    const expectedUniversalUrl = defaultEndpoints.universalAutocomplete;
     it('query params are correct', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
       const request: UniversalAutocompleteRequest = {
@@ -51,6 +48,7 @@ describe('AutocompleteService', () => {
   });
 
   describe('Vertical Autocomplete', () => {
+    const expectedVerticalUrl = defaultEndpoints.verticalAutocomplete;
     it('query params are correct', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
       const request: VerticalAutocompleteRequest = {
@@ -78,6 +76,7 @@ describe('AutocompleteService', () => {
   });
 
   describe('FilterSearch', () => {
+    const expectedFilterUrl = defaultEndpoints.filterSearch;
     it('query params are correct', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
       const convertedSearchParams = {
@@ -129,22 +128,22 @@ describe('additionalQueryParams are passed through', () => {
       jsLibVersion: 'LIB_VERSION'
     }
   };
-  let mockHttpService, apiResponseValidator;
+  let mockHttpService, apiResponseValidator, autocompleteService;
   beforeEach(() => {
     mockHttpService = new HttpServiceMock();
-    apiResponseValidator = new ApiResponseValidator();
-  });
-
-  it('Universal Autocomplete', async () => {
     mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
-    const request: UniversalAutocompleteRequest = {
-      input: ''
-    };
-    const autocompleteService = new AutocompleteServiceImpl(
+    apiResponseValidator = new ApiResponseValidator();
+    autocompleteService = new AutocompleteServiceImpl(
       config,
       mockHttpService as HttpService,
       apiResponseValidator
     );
+  });
+
+  it('Universal Autocomplete', async () => {
+    const request: UniversalAutocompleteRequest = {
+      input: 'salesforce'
+    };
     await autocompleteService.universalAutocomplete(request);
     expect(mockHttpService.get).toHaveBeenCalledTimes(1);
     expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
@@ -153,16 +152,10 @@ describe('additionalQueryParams are passed through', () => {
   });
 
   it('Vertical Autocomplete', async () => {
-    mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
     const request: VerticalAutocompleteRequest = {
       input: 'salesforce',
       verticalKey: 'verticalKey'
     };
-    const autocompleteService = new AutocompleteServiceImpl(
-      config,
-      mockHttpService as HttpService,
-      apiResponseValidator
-    );
     await autocompleteService.verticalAutocomplete(request);
     expect(mockHttpService.get).toHaveBeenCalledTimes(1);
     expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
@@ -171,18 +164,12 @@ describe('additionalQueryParams are passed through', () => {
   });
 
   it('FilterSearch', async () => {
-    mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
     const request: FilterSearchRequest = {
       input: 'salesforce',
       verticalKey: 'verticalKey',
       sectioned: false,
       fields: []
     };
-    const autocompleteService = new AutocompleteServiceImpl(
-      config,
-      mockHttpService as HttpService,
-      apiResponseValidator
-    );
     await autocompleteService.filterSearch(request);
     expect(mockHttpService.get).toHaveBeenCalledTimes(1);
     expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
