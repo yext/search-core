@@ -4,7 +4,7 @@
 
 ## AnswersConfig.endpoints property
 
-URLs to various Answers services.
+Overrides for the URLs which are used when making requests to the Answers API.
 
 <b>Signature:</b>
 
