@@ -1,5 +1,6 @@
 {
   "name": "answers-core-internal",
-  "main": "../lib/esm/index.js",
+  "main": "./lib/commonjs/index.js",
+  "module": "./lib/esm/index.js",
   "types": "../dist/bundle-internal.d.ts"
 }
