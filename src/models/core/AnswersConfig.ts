@@ -25,7 +25,7 @@ export interface AnswersConfig {
   /**
    * {@inheritDoc Endpoints}
    *
-   * @internal
+   * @public
    */
   endpoints?: Endpoints,
   /**

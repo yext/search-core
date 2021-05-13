@@ -45,6 +45,7 @@
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search. |
 |  [DisplayableFacet](./answers-core.displayablefacet.md) | A [Facet](./answers-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./answers-core.displayablefacetoption.md) | A [FacetOption](./answers-core.facetoption.md) with extra data meant to be displayed to the end user. |
+|  [Endpoints](./answers-core.endpoints.md) | URLs to various Answers services. |
 |  [Facet](./answers-core.facet.md) | Represents dynamic filter options for the Answers API. |
 |  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet. |
 |  [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) | A direct answer which was found within a document. |

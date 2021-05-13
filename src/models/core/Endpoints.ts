@@ -1,7 +1,7 @@
 /**
  * URLs to various Answers services.
  *
- * @internal
+ * @public
  */
 export interface Endpoints {
   universalSearch?: string,
