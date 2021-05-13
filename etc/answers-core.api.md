@@ -11,7 +11,6 @@ export interface AnswersConfig {
         [key: string]: string | number | boolean;
     };
     apiKey: string;
-    // @internal
     endpoints?: Endpoints;
     experienceKey: string;
     experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
@@ -115,9 +114,7 @@ export interface DisplayableFacetOption extends FacetOption {
     value: string | number | boolean;
 }
 
-// Warning: (ae-internal-missing-underscore) The name "Endpoints" should be prefixed with an underscore because the declaration is marked as @internal
-//
-// @internal
+// @public
 export interface Endpoints {
     // (undocumented)
     filterSearch?: string;
