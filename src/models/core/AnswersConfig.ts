@@ -31,7 +31,7 @@ export interface AnswersConfig {
   /**
    * Additional query params added on to every request.
    *
-   * @internal
+   * @alpha
    */
   additionalQueryParams?: {
     [key: string]: string | number | boolean

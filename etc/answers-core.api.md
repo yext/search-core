@@ -6,7 +6,7 @@
 
 // @public
 export interface AnswersConfig {
-    // @internal
+    // @alpha
     additionalQueryParams?: {
         [key: string]: string | number | boolean;
     };
