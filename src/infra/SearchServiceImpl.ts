@@ -109,7 +109,8 @@ export class SearchServiceImpl implements SearchService {
       queryTrigger: request.queryTrigger,
       context: JSON.stringify(request.context || undefined),
       referrerPageUrl: request.referrerPageUrl,
-      source: request.querySource || QuerySource.Standard
+      source: request.querySource || QuerySource.Standard,
+      ...this.config?.additionalQueryParams
     };
 
     const response =
@@ -148,7 +149,8 @@ export class SearchServiceImpl implements SearchService {
       referrerPageUrl: request.referrerPageUrl,
       source: request.querySource || QuerySource.Standard,
       locationRadius: request.locationRadius?.toString(),
-      queryId: request.queryId
+      queryId: request.queryId,
+      ...this.config?.additionalQueryParams
     };
 
     const response =

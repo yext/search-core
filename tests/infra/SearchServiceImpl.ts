@@ -245,3 +245,53 @@ describe('SearchService', () => {
     });
   });
 });
+
+describe('additionalQueryParams are passed through', () => {
+  const coreConfig: AnswersConfig = {
+    apiKey: 'testApiKey',
+    experienceKey: 'testExperienceKey',
+    locale: 'en',
+    additionalQueryParams: {
+      jsLibVersion: 'LIB_VERSION'
+    }
+  };
+
+  let mockHttpService, apiResponseValidator, searchService;
+  beforeEach(() => {
+    mockHttpService = new HttpServiceMock();
+    mockHttpService.get.mockResolvedValue({
+      response: {},
+      meta: {},
+    });
+    apiResponseValidator = new ApiResponseValidator();
+    searchService = new SearchServiceImpl(
+      coreConfig,
+      mockHttpService as HttpService,
+      apiResponseValidator
+    );
+  });
+
+  it('universalSearch', async () => {
+    const request: UniversalSearchRequest = {
+      query: 'testQuery'
+    };
+    await searchService.universalSearch(request);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
+      jsLibVersion: 'LIB_VERSION'
+    }));
+  });
+
+  it('verticalSearch', async () => {
+    const request: VerticalSearchRequest = {
+      query: 'testQuery',
+      verticalKey: 'verticalKey'
+    };
+
+    await searchService.verticalSearch(request);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
+      jsLibVersion: 'LIB_VERSION'
+    }));
+  });
+});

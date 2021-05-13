@@ -25,7 +25,15 @@ export interface AnswersConfig {
   /**
    * {@inheritDoc Endpoints}
    *
-   * @internal
+   * @public
    */
-  endpoints?: Endpoints
+  endpoints?: Endpoints,
+  /**
+   * Additional query params added on to every request.
+   *
+   * @alpha
+   */
+  additionalQueryParams?: {
+    [key: string]: string | number | boolean
+  }
 }
