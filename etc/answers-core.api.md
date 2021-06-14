@@ -83,7 +83,7 @@ export interface DirectAnswer {
     fieldType: string;
     relatedResult: Result;
     type: DirectAnswerType;
-    value: string;
+    value?: string;
     verticalKey: string;
 }
 

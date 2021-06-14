@@ -11,3 +11,8 @@ The result of the direct answer.
 ```typescript
 value: string;
 ```
+
+## Remarks
+
+A value will not be present if the [DirectAnswer.fieldType](./answers-core.directanswer.fieldtype.md) is 'rich\_text'.
+
