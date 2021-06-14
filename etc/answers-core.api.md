@@ -147,7 +147,6 @@ export interface FacetOption {
 // @public
 export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
     relatedResult: Result;
-    // Warning: (ae-forgotten-export) The symbol "Snippet" needs to be exported by the entry point index.d.ts
     snippet: Snippet;
     type: DirectAnswerType.FeaturedSnippet;
     value: string;
@@ -309,6 +308,15 @@ export interface SearchParameterField {
     entityType: string;
     fetchEntities: boolean;
     fieldApiName: string;
+}
+
+// @public
+export interface Snippet {
+    matchedSubstrings: {
+        offset: number;
+        length: number;
+    }[];
+    value: string;
 }
 
 // @public
