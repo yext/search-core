@@ -17,6 +17,14 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
   relatedResult: Result;
   /** {@inheritDoc DirectAnswer.verticalKey} */
   verticalKey: string;
+  /** {@inheritDoc DirectAnswer.entityName} */
+  entityName: string;
+  /** {@inheritDoc DirectAnswer.fieldName} */
+  fieldName: string;
+  /** {@inheritDoc DirectAnswer.fieldApiName} */
+  fieldApiName: string;
+  /** {@inheritDoc DirectAnswer.fieldType} */
+  fieldType: string;
   /** The snippet where the direct answer was found. */
   snippet: Snippet;
 }

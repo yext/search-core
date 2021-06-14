@@ -80,6 +80,10 @@ export type Context = any;
 
 // @public
 export interface DirectAnswer {
+    entityName: string;
+    fieldApiName: string;
+    fieldName: string;
+    fieldType: string;
     relatedResult: Result;
     type: DirectAnswerType;
     value: string;
@@ -146,6 +150,10 @@ export interface FacetOption {
 
 // @public
 export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
+    entityName: string;
+    fieldApiName: string;
+    fieldName: string;
+    fieldType: string;
     relatedResult: Result;
     // Warning: (ae-forgotten-export) The symbol "Snippet" needs to be exported by the entry point index.d.ts
     snippet: Snippet;
