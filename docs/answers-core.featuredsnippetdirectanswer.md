@@ -17,9 +17,6 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [entityName](./answers-core.featuredsnippetdirectanswer.entityname.md) | string | The name of the entity that direct answer came from. |
-|  [fieldApiName](./answers-core.featuredsnippetdirectanswer.fieldapiname.md) | string | The field api name of the direct answer. |
-|  [fieldName](./answers-core.featuredsnippetdirectanswer.fieldname.md) | string | The field name of the direct answer. |
 |  [fieldType](./answers-core.featuredsnippetdirectanswer.fieldtype.md) | string | The field type of the direct answer. |
 |  [relatedResult](./answers-core.featuredsnippetdirectanswer.relatedresult.md) | [Result](./answers-core.result.md) | The entity associated with the direct answer. |
 |  [snippet](./answers-core.featuredsnippetdirectanswer.snippet.md) | Snippet | The snippet where the direct answer was found. |

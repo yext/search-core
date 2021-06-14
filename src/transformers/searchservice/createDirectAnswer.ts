@@ -11,16 +11,16 @@ export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | Fie
     value: data.answer.value,
     relatedResult: ResultsFactory.fromDirectAnswer(data.relatedItem.data),
     verticalKey: data.relatedItem.verticalConfigId,
-    entityName: data.answer.entityName,
-    fieldName: data.answer.fieldName,
-    fieldApiName: data.answer.fieldApiName,
     fieldType: data.answer.fieldType
   };
 
   if (isFieldValueDirectAnswer) {
     return {
       type: DirectAnswerType.FieldValue,
-      ...commonDirectAnswerData
+      ...commonDirectAnswerData,
+      entityName: data.answer.entityName,
+      fieldName: data.answer.fieldName,
+      fieldApiName: data.answer.fieldApiName,
     };
   } else if (isFeaturedSnippetDirectAnswer) {
     return {

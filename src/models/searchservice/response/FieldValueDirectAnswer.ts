@@ -16,12 +16,12 @@ export interface FieldValueDirectAnswer extends DirectAnswer {
   relatedResult: Result;
   /** {@inheritDoc DirectAnswer.verticalKey} */
   verticalKey: string;
-  /** {@inheritDoc DirectAnswer.entityName} */
-  entityName: string;
-  /** {@inheritDoc DirectAnswer.fieldName} */
-  fieldName: string;
-  /** {@inheritDoc DirectAnswer.fieldApiName} */
-  fieldApiName: string;
   /** {@inheritDoc DirectAnswer.fieldType} */
   fieldType: string;
+  /** The name of the entity that direct answer came from. */
+  entityName: string;
+  /** The field name of the direct answer. */
+  fieldName: string;
+  /** The field api name of the direct answer. */
+  fieldApiName: string;
 }

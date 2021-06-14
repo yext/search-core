@@ -16,9 +16,6 @@ export interface DirectAnswer
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [entityName](./answers-core.directanswer.entityname.md) | string | The name of the entity that direct answer came from. |
-|  [fieldApiName](./answers-core.directanswer.fieldapiname.md) | string | The field api name of the direct answer. |
-|  [fieldName](./answers-core.directanswer.fieldname.md) | string | The field name of the direct answer. |
 |  [fieldType](./answers-core.directanswer.fieldtype.md) | string | The field type of the direct answer. |
 |  [relatedResult](./answers-core.directanswer.relatedresult.md) | [Result](./answers-core.result.md) | The entity associated with the direct answer. |
 |  [type](./answers-core.directanswer.type.md) | [DirectAnswerType](./answers-core.directanswertype.md) | The [DirectAnswerType](./answers-core.directanswertype.md)<!-- -->. |
