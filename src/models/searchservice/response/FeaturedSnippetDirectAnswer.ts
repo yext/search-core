@@ -12,11 +12,13 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
   /** {@link DirectAnswerType}.FeaturedSnippet. */
   type: DirectAnswerType.FeaturedSnippet;
   /** {@inheritDoc DirectAnswer.value} */
-  value: string;
+  value?: string;
   /** {@inheritDoc DirectAnswer.relatedResult} */
   relatedResult: Result;
   /** {@inheritDoc DirectAnswer.verticalKey} */
   verticalKey: string;
+  /** {@inheritDoc DirectAnswer.fieldType} */
+  fieldType: string;
   /** The snippet where the direct answer was found. */
   snippet: Snippet;
 }

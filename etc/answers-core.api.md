@@ -80,9 +80,10 @@ export type Context = any;
 
 // @public
 export interface DirectAnswer {
+    fieldType: string;
     relatedResult: Result;
     type: DirectAnswerType;
-    value: string;
+    value?: string;
     verticalKey: string;
 }
 
@@ -146,10 +147,11 @@ export interface FacetOption {
 
 // @public
 export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
+    fieldType: string;
     relatedResult: Result;
     snippet: Snippet;
     type: DirectAnswerType.FeaturedSnippet;
-    value: string;
+    value?: string;
     verticalKey: string;
 }
 
