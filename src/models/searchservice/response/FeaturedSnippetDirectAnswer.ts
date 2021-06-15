@@ -12,7 +12,7 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
   /** {@link DirectAnswerType}.FeaturedSnippet. */
   type: DirectAnswerType.FeaturedSnippet;
   /** {@inheritDoc DirectAnswer.value} */
-  value: string;
+  value?: string;
   /** {@inheritDoc DirectAnswer.relatedResult} */
   relatedResult: Result;
   /** {@inheritDoc DirectAnswer.verticalKey} */

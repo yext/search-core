@@ -9,7 +9,7 @@ The result of the direct answer.
 <b>Signature:</b>
 
 ```typescript
-value: string;
+value?: string;
 ```
 
 ## Remarks

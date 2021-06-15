@@ -152,7 +152,7 @@ export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
     // Warning: (ae-forgotten-export) The symbol "Snippet" needs to be exported by the entry point index.d.ts
     snippet: Snippet;
     type: DirectAnswerType.FeaturedSnippet;
-    value: string;
+    value?: string;
     verticalKey: string;
 }
 
