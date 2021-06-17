@@ -18,7 +18,6 @@ export interface VerticalSearchResponse
 |  --- | --- | --- |
 |  [allResultsForVertical?](./answers-core.verticalsearchresponse.allresultsforvertical.md) | [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | <i>(Optional)</i> A representation of a response from a vertical search. |
 |  [alternativeVerticals?](./answers-core.verticalsearchresponse.alternativeverticals.md) | [VerticalResults](./answers-core.verticalresults.md)<!-- -->\[\] | <i>(Optional)</i> The [VerticalResults](./answers-core.verticalresults.md) for each search vertical. |
-|  [directAnswer?](./answers-core.verticalsearchresponse.directanswer.md) | [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) \| [FieldValueDirectAnswer](./answers-core.fieldvaluedirectanswer.md) | <i>(Optional)</i> A direct answer to a search. |
 |  [facets?](./answers-core.verticalsearchresponse.facets.md) | [DisplayableFacet](./answers-core.displayablefacet.md)<!-- -->\[\] | <i>(Optional)</i> An array of [Facet](./answers-core.facet.md)<!-- -->s associated with the search results. |
 |  [locationBias?](./answers-core.verticalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
 |  [queryId](./answers-core.verticalsearchresponse.queryid.md) | string | The ID of the query. |
