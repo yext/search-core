@@ -1,5 +1,7 @@
 import { VerticalResults } from './VerticalResults';
 import { SearchIntent } from './SearchIntent';
+import { FeaturedSnippetDirectAnswer } from './FeaturedSnippetDirectAnswer';
+import { FieldValueDirectAnswer } from './FieldValueDirectAnswer';
 import { DisplayableFacet } from './DisplayableFacet';
 import { LocationBias } from './LocationBias';
 import { SpellCheck } from './SpellCheck';
@@ -14,6 +16,8 @@ export interface VerticalSearchResponse {
   verticalResults: VerticalResults;
   /** The ID of the query. */
   queryId: string;
+  /** {@inheritDoc DirectAnswer} */
+  directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer,
   /** An array of {@link SearchIntent}s. */
   searchIntents?: SearchIntent[];
   /** An array of {@link Facet}s associated with the search results. */
