@@ -3,7 +3,7 @@
  *
  * @public
  */
- export interface HighlightedValue {
+export interface HighlightedValue {
   /**
    * The value of the field which should be highlighted.
    *

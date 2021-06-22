@@ -6,8 +6,11 @@
 
 // @public
 export interface AnswersConfig {
+    // @alpha
+    additionalQueryParams?: {
+        [key: string]: string | number | boolean;
+    };
     apiKey: string;
-    // @internal
     endpoints?: Endpoints;
     experienceKey: string;
     experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
@@ -77,9 +80,10 @@ export type Context = any;
 
 // @public
 export interface DirectAnswer {
+    fieldType: string;
     relatedResult: Result;
     type: DirectAnswerType;
-    value: string;
+    value?: string;
     verticalKey: string;
 }
 
@@ -111,9 +115,7 @@ export interface DisplayableFacetOption extends FacetOption {
     value: string | number | boolean;
 }
 
-// Warning: (ae-internal-missing-underscore) The name "Endpoints" should be prefixed with an underscore because the declaration is marked as @internal
-//
-// @internal
+// @public
 export interface Endpoints {
     // (undocumented)
     filterSearch?: string;
@@ -145,11 +147,11 @@ export interface FacetOption {
 
 // @public
 export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
+    fieldType: string;
     relatedResult: Result;
-    // Warning: (ae-forgotten-export) The symbol "Snippet" needs to be exported by the entry point index.d.ts
     snippet: Snippet;
     type: DirectAnswerType.FeaturedSnippet;
-    value: string;
+    value?: string;
     verticalKey: string;
 }
 
@@ -308,6 +310,15 @@ export interface SearchParameterField {
     entityType: string;
     fetchEntities: boolean;
     fieldApiName: string;
+}
+
+// @public
+export interface Snippet {
+    matchedSubstrings: {
+        offset: number;
+        length: number;
+    }[];
+    value: string;
 }
 
 // @public

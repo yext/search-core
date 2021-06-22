@@ -69,7 +69,8 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       v: defaultApiVersion,
       version: this.config.experienceVersion,
       locale: this.config.locale,
-      sessionTrackingEnabled: request.sessionTrackingEnabled
+      sessionTrackingEnabled: request.sessionTrackingEnabled,
+      ...this.config?.additionalQueryParams
     };
 
     const response = await this.httpService.get<ApiResponse>(
@@ -99,7 +100,8 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       version: this.config.experienceVersion,
       locale: this.config.locale,
       verticalKey: request.verticalKey,
-      sessionTrackingEnabled: request.sessionTrackingEnabled
+      sessionTrackingEnabled: request.sessionTrackingEnabled,
+      ...this.config?.additionalQueryParams
     };
 
     const response = await this.httpService.get<ApiResponse>(
@@ -134,7 +136,8 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       locale: this.config.locale,
       search_parameters: JSON.stringify(searchParams),
       verticalKey: request.verticalKey,
-      sessionTrackingEnabled: request.sessionTrackingEnabled
+      sessionTrackingEnabled: request.sessionTrackingEnabled,
+      ...this.config?.additionalQueryParams
     };
 
     const response = await this.httpService.get<ApiResponse>(
@@ -158,4 +161,4 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       }
     ));
   }
- }
+}

@@ -19,23 +19,19 @@ const qaRequest = {
   sessionTrackingEnabled: true
 };
 
-const mockHttp = new HttpServiceMock();
-mockHttp.post.mockResolvedValue({
-  meta: {
-    uuid: 'aUUID'
-  },
-  response: {}
-});
-
 const apiResponseValidator = new ApiResponseValidator();
 
 describe('Question submission', () => {
-  let qaService;
-  let response;
-  let mockCalls;
-  let actualHttpParams;
+  let mockHttp, qaService, response, mockCalls, actualHttpParams;
 
   beforeAll(async () => {
+    mockHttp = new HttpServiceMock();
+    mockHttp.post.mockResolvedValue({
+      meta: {
+        uuid: 'aUUID'
+      },
+      response: {}
+    });
     qaService = new QuestionSubmissionServiceImpl(baseCoreConfig, mockHttp as HttpService, apiResponseValidator);
     response = await qaService.submitQuestion(qaRequest);
     mockCalls = mockHttp.post.mock.calls;
@@ -106,4 +102,27 @@ describe('Question submission', () => {
       uuid: 'aUUID',
     });
   });
+});
+
+it('additionalQueryParams are passed through', async () => {
+  const coreConfig = {
+    ...baseCoreConfig,
+    additionalQueryParams: {
+      jsLibVersion: 'LIB_VERSION'
+    }
+  };
+  const mockHttp = new HttpServiceMock();
+  mockHttp.post.mockResolvedValue({
+    meta: {
+      uuid: 'aUUID'
+    },
+    response: {}
+  });
+  const qaService = new QuestionSubmissionServiceImpl(coreConfig, mockHttp as HttpService, apiResponseValidator);
+  await qaService.submitQuestion(qaRequest);
+  const mockCalls = mockHttp.post.mock.calls;
+  const actualQueryParams = mockCalls[0][1];
+  expect(actualQueryParams).toEqual(expect.objectContaining({
+    jsLibVersion: 'LIB_VERSION'
+  }));
 });
