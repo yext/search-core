@@ -223,6 +223,12 @@ export interface LatLong {
 }
 
 // @public
+export interface Limit {
+    // (undocumented)
+    [verticalKey: string]: number;
+}
+
+// @public
 export interface LocationBias {
     displayName: string;
     latitude: number;
@@ -368,10 +374,6 @@ export interface UniversalAutocompleteRequest {
 // @public
 export interface UniversalSearchRequest {
     context?: Context;
-    // Warning: (ae-forgotten-export) The symbol "Limit" needs to be exported by the entry point index.d.ts
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@yext/answers-core" does not have an export "Limit"
-    //
-    // (undocumented)
     limit?: Limit;
     location?: LatLong;
     query: string;
