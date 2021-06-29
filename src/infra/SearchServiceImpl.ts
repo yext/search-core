@@ -102,7 +102,7 @@ export class SearchServiceImpl implements SearchService {
       api_key: this.config.apiKey,
       v: defaultApiVersion,
       version: this.config.experienceVersion,
-      limit: JSON.stringify(request.limit||undefined),
+      limit: JSON.stringify(request.limit || undefined),
       location: request.location?.toString(),
       locale: this.config.locale,
       skipSpellCheck: request.skipSpellCheck,

@@ -83,13 +83,13 @@ describe('SearchService', () => {
         },
         referrerPageUrl: 'yext.com',
         querySource: QuerySource.Standard,
-        limit: {people: 17}
+        limit: { people: 17 }
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
         context: JSON.stringify({ key:'value' }),
         experienceKey: 'testExperienceKey',
-        limit: JSON.stringify({people: 17}),
+        limit: JSON.stringify({ people: 17 }),
         input: 'testQuery',
         locale: 'es',
         location: '40,40',

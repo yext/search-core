@@ -47,5 +47,4 @@ export interface VerticalSearchRequest {
   locationRadius?: number,
   /** The queryId for the query, if this is a repeat query. */
   queryId?: string
-
 }
