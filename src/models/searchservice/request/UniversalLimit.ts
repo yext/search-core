@@ -3,7 +3,6 @@
  * Each limit can be set from 1-50, inclusive.
  *
  * @example
- * Example object:
  * {
  *    people: 5
  *    locations: 10

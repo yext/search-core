@@ -14,5 +14,5 @@ export interface UniversalLimit
 
 ## Example
 
-Example object: { people: 5 locations: 10 events: 8 }
+{ people: 5 locations: 10 events: 8 }
 
