@@ -4,8 +4,8 @@
  *
  * @example
  * {
- *    people: 5
- *    locations: 10
+ *    people: 5,
+ *    locations: 10,
  *    events: 8
  * }
  *
