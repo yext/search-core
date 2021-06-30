@@ -2,7 +2,7 @@ import { Context } from './Context';
 import { LatLong } from './LatLong';
 import { QueryTrigger } from './QueryTrigger';
 import { QuerySource } from './QuerySource';
-import { Limit } from './Limit';
+import { UniversalLimit } from './UniversalLimit';
 
 /**
  * Options which can be specified for a universal search.
@@ -32,6 +32,6 @@ export interface UniversalSearchRequest {
   referrerPageUrl?: string;
   /** {@inheritDoc QuerySource} */
   querySource?: QuerySource;
-  /** {@inheritDoc Limit} */
-  limit?: Limit;
+  /** {@inheritDoc UniversalLimit} */
+  limit?: UniversalLimit;
 }
