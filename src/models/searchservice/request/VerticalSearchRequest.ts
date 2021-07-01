@@ -33,7 +33,7 @@ export interface VerticalSearchRequest {
   location?: LatLong,
   /** {@inheritDoc QueryTrigger} */
   queryTrigger?: QueryTrigger,
-  /** The session ID */
+  /** Used to track session state when cookies are blocked. */
   sessionId?: string,
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean,
