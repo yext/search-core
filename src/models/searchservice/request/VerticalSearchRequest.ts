@@ -33,6 +33,8 @@ export interface VerticalSearchRequest {
   location?: LatLong,
   /** {@inheritDoc QueryTrigger} */
   queryTrigger?: QueryTrigger,
+  /** The session ID */
+  sessionId?: string,
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean,
   /** The static filters to apply to the search. */

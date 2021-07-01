@@ -16,6 +16,8 @@ export interface UniversalSearchRequest {
   queryTrigger?: QueryTrigger;
   /** Disables spellcheck if true. */
   skipSpellCheck?: boolean;
+  /** The session ID*/
+  sessionId?: string;
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean;
   /** {@inheritDoc LatLong} */
