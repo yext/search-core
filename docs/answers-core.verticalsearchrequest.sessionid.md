@@ -4,7 +4,7 @@
 
 ## VerticalSearchRequest.sessionId property
 
-The session ID
+Used to track session state when cookies are blocked.
 
 <b>Signature:</b>
 
