@@ -16,7 +16,7 @@ export interface UniversalSearchRequest {
   queryTrigger?: QueryTrigger;
   /** Disables spellcheck if true. */
   skipSpellCheck?: boolean;
-  /** Used to track session state when cookies are blocked. */
+  /** Used to track session states when cookies are blocked. */
   sessionId?: string;
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean;
