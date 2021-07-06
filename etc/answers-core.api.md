@@ -380,6 +380,7 @@ export interface UniversalSearchRequest {
     querySource?: QuerySource;
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;
+    sessionId?: string;
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
 }
@@ -426,6 +427,7 @@ export interface VerticalSearchRequest {
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;
     retrieveFacets?: boolean;
+    sessionId?: string;
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
     sortBys?: SortBy[];

@@ -23,6 +23,7 @@ export interface UniversalSearchRequest
 |  [querySource?](./answers-core.universalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request. |
 |  [queryTrigger?](./answers-core.universalsearchrequest.querytrigger.md) | [QueryTrigger](./answers-core.querytrigger.md) | <i>(Optional)</i> Describes the ways a search can be executed besides user input. |
 |  [referrerPageUrl?](./answers-core.universalsearchrequest.referrerpageurl.md) | string | <i>(Optional)</i> The URl of the page which referred the user to the current page. |
+|  [sessionId?](./answers-core.universalsearchrequest.sessionid.md) | string | <i>(Optional)</i> Used to track session state when cookies are blocked. |
 |  [sessionTrackingEnabled?](./answers-core.universalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [skipSpellCheck?](./answers-core.universalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> Disables spellcheck if true. |
 
