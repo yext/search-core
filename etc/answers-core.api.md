@@ -377,7 +377,7 @@ export interface UniversalSearchRequest {
     limit?: UniversalLimit;
     location?: LatLong;
     query: string;
-    querySource?: QuerySource;
+    querySource?: QuerySource | string;
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;
     sessionId?: string;
@@ -423,7 +423,7 @@ export interface VerticalSearchRequest {
     offset?: number;
     query: string;
     queryId?: string;
-    querySource?: QuerySource;
+    querySource?: QuerySource | string;
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;
     retrieveFacets?: boolean;

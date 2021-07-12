@@ -34,7 +34,7 @@ interface UniversalSearchQueryParams extends QueryParams {
   queryTrigger?: QueryTrigger,
   context?: string;
   referrerPageUrl?: string,
-  source?: QuerySource
+  source?: QuerySource | string
 }
 
 /**
@@ -62,7 +62,7 @@ interface VerticalSearchQueryParams extends QueryParams {
   sortBys?: string,
   context?: string,
   referrerPageUrl?: string,
-  source?: QuerySource,
+  source?: QuerySource | string,
   locationRadius?: string,
   queryId?: string
 }
