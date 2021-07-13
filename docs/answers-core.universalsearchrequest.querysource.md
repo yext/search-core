@@ -9,5 +9,5 @@ The source of the search request.
 <b>Signature:</b>
 
 ```typescript
-querySource?: QuerySource;
+querySource?: QuerySource | string;
 ```

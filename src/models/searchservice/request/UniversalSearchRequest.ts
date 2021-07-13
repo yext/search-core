@@ -33,7 +33,7 @@ export interface UniversalSearchRequest {
    */
   referrerPageUrl?: string;
   /** {@inheritDoc QuerySource} */
-  querySource?: QuerySource;
+  querySource?: QuerySource | string;
   /** {@inheritDoc UniversalLimit} */
   limit?: UniversalLimit;
 }

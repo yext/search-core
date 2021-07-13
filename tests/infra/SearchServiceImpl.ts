@@ -123,6 +123,17 @@ describe('SearchService', () => {
       await searchService.universalSearch({query: 'test'});
       expect(mockHttpService.get).toHaveBeenCalledWith(customUrl, expect.anything());
     });
+
+    it('An arbitrary string may be supplied as a querySource', async () => {
+      await searchServiceWithRequiredParams.universalSearch({
+        query: 'test',
+        querySource: 'CUSTOM_SOURCE'
+      });
+      const expectedQueryParams = expect.objectContaining({
+        source: 'CUSTOM_SOURCE'
+      });
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+    });
   });
 
   describe('Vertical Search', ()=> {

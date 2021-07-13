@@ -44,7 +44,7 @@ export interface VerticalSearchRequest {
   /** {@inheritdoc UniversalSearchRequest.referrerPageUrl} */
   referrerPageUrl?: string,
   /** {@inheritDoc QuerySource} */
-  querySource?: QuerySource,
+  querySource?: QuerySource | string,
   /** The radius (in meters) to filter the vertical search by. */
   locationRadius?: number,
   /** The queryId for the query, if this is a repeat query. */
