@@ -439,6 +439,7 @@ export interface VerticalSearchRequest {
 export interface VerticalSearchResponse {
     allResultsForVertical?: VerticalSearchResponse;
     alternativeVerticals?: VerticalResults[];
+    directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer;
     facets?: DisplayableFacet[];
     locationBias?: LocationBias;
     queryId: string;
