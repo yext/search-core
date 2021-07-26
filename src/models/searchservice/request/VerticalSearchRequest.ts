@@ -33,6 +33,8 @@ export interface VerticalSearchRequest {
   location?: LatLong,
   /** {@inheritDoc QueryTrigger} */
   queryTrigger?: QueryTrigger,
+  /** Used to track session state when cookies are blocked. */
+  sessionId?: string,
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean,
   /** The static filters to apply to the search. */
@@ -42,7 +44,7 @@ export interface VerticalSearchRequest {
   /** {@inheritdoc UniversalSearchRequest.referrerPageUrl} */
   referrerPageUrl?: string,
   /** {@inheritDoc QuerySource} */
-  querySource?: QuerySource,
+  querySource?: QuerySource | string,
   /** The radius (in meters) to filter the vertical search by. */
   locationRadius?: number,
   /** The queryId for the query, if this is a repeat query. */

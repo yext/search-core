@@ -366,13 +366,21 @@ export interface UniversalAutocompleteRequest {
 }
 
 // @public
+export interface UniversalLimit {
+    // (undocumented)
+    [verticalKey: string]: number;
+}
+
+// @public
 export interface UniversalSearchRequest {
     context?: Context;
+    limit?: UniversalLimit;
     location?: LatLong;
     query: string;
-    querySource?: QuerySource;
+    querySource?: QuerySource | string;
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;
+    sessionId?: string;
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
 }
@@ -415,10 +423,11 @@ export interface VerticalSearchRequest {
     offset?: number;
     query: string;
     queryId?: string;
-    querySource?: QuerySource;
+    querySource?: QuerySource | string;
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;
     retrieveFacets?: boolean;
+    sessionId?: string;
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
     sortBys?: SortBy[];

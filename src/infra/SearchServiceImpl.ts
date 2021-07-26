@@ -34,7 +34,7 @@ interface UniversalSearchQueryParams extends QueryParams {
   queryTrigger?: QueryTrigger,
   context?: string;
   referrerPageUrl?: string,
-  source?: QuerySource
+  source?: QuerySource | string
 }
 
 /**
@@ -62,7 +62,7 @@ interface VerticalSearchQueryParams extends QueryParams {
   sortBys?: string,
   context?: string,
   referrerPageUrl?: string,
-  source?: QuerySource,
+  source?: QuerySource | string,
   locationRadius?: string,
   queryId?: string
 }
@@ -102,9 +102,11 @@ export class SearchServiceImpl implements SearchService {
       api_key: this.config.apiKey,
       v: defaultApiVersion,
       version: this.config.experienceVersion,
+      limit: JSON.stringify(request.limit || undefined),
       location: request.location?.toString(),
       locale: this.config.locale,
       skipSpellCheck: request.skipSpellCheck,
+      session_id: request.sessionId,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       queryTrigger: request.queryTrigger,
       context: JSON.stringify(request.context || undefined),
@@ -143,6 +145,7 @@ export class SearchServiceImpl implements SearchService {
       facetFilters: request.facets && serializeFacets(request.facets),
       skipSpellCheck: request.skipSpellCheck,
       queryTrigger: request.queryTrigger,
+      session_id: request.sessionId,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       sortBys: JSON.stringify(request.sortBys || []),
       context: JSON.stringify(request.context || undefined),
@@ -167,7 +170,7 @@ export class SearchServiceImpl implements SearchService {
   /**
    * Injects toString() methods into the request objects that require them
    */
-  private injectToStringMethods(request: UniversalSearchRequest): void {
+  private injectToStringMethods(request: UniversalSearchRequest|VerticalSearchRequest): void {
     if (request.location) {
       request.location.toString = function() {
         return `${this.latitude},${this.longitude}`;
