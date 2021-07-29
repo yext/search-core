@@ -86,17 +86,6 @@ describe('Question submission', () => {
     expect(expectedBodyParams).toEqual(actualBodyParams);
   });
 
-  it('passed the right req init', () => {
-    const expectedReqInit = {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      mode: 'cors'
-    };
-    const actualReqInit = actualHttpParams[3];
-    expect(actualReqInit).toEqual(expectedReqInit);
-  });
-
   it('parses the response correctly', () => {
     expect(response).toMatchObject({
       uuid: 'aUUID',

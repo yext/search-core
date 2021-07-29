@@ -48,18 +48,10 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
       site: 'FIRSTPARTY'
     };
 
-    const requestInit = {
-      mode: 'cors' as RequestMode,
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    };
-
     const response = await this.httpService.post<ApiResponse>(
       this.endpoint,
       queryParams,
-      body,
-      requestInit
+      body
     );
 
     const validationResult = this.apiResponseValidator.validate(response);
