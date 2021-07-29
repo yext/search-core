@@ -1,4 +1,4 @@
-import fetch from 'cross-fetch';
+import crossFetch from 'cross-fetch';
 import { addParamsToURL, sanitizeQueryParams } from '../utils/urlutils';
 import { QueryParams } from '../models/http/params';
 import { HttpService } from '../services/HttpService';
@@ -22,14 +22,11 @@ export class HttpServiceImpl implements HttpService {
   get<T>(
     url: string,
     queryParams: QueryParams,
-    options?: RequestInit,
   ): Promise<T> {
-    const reqInitWithMethod = {
+    return this.fetch(url, queryParams, {
       method: RequestMethods.GET,
-      ...options
-    };
-    return this.fetch(url, queryParams, reqInitWithMethod)
-      .then(res => res.json());
+      credentials: 'include'
+    }).then(res => res.json());
   }
 
   /**
@@ -38,16 +35,17 @@ export class HttpServiceImpl implements HttpService {
   post<T>(
     url: string,
     queryParams: QueryParams,
-    body: QueryParams,
-    reqInit: RequestInit
+    body: QueryParams
   ): Promise<T> {
     const sanitizedBodyParams = sanitizeQueryParams(body);
-    const reqInitWithMethodAndBody = {
+    return this.fetch(url, queryParams, {
       method: RequestMethods.POST,
       body: JSON.stringify(sanitizedBodyParams),
-      ...reqInit
-    };
-    return this.fetch(url, queryParams, reqInitWithMethodAndBody)
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
       .then(res => res.json());
   }
 
@@ -60,6 +58,9 @@ export class HttpServiceImpl implements HttpService {
     reqInit: RequestInit
   ): Promise<Response> {
     const urlWithParams = addParamsToURL(url, queryParams);
-    return fetch(urlWithParams, reqInit);
+    if (window.fetch) {
+      return window.fetch(urlWithParams, reqInit);
+    }
+    return crossFetch(urlWithParams, reqInit);
   }
 }

@@ -14,13 +14,10 @@ describe('HttpServiceImpl', () => {
     const queryParams = {
       aQuery: 'param'
     };
-    const reqInit = {
-      credentials: 'omit'
-    };
-    await httpServiceImpl.get('http://yext.com', queryParams, reqInit);
+    await httpServiceImpl.get('http://yext.com', queryParams);
     const expectedReqInit = {
       method: 'get',
-      credentials: 'omit'
+      credentials: 'include'
     };
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);
   });
@@ -32,14 +29,14 @@ describe('HttpServiceImpl', () => {
     const queryParams = {
       aQuery: 'param'
     };
-    const reqInit = {
-      credentials: 'include'
-    };
-    await httpServiceImpl.post('http://yext.com', queryParams, jsonBody, reqInit);
+    await httpServiceImpl.post('http://yext.com', queryParams, jsonBody);
     const expectedReqInit = {
       method: 'post',
       body: '{\"data\":\"123\"}',
-      credentials: 'include'
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      }
     };
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);
   });
