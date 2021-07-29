@@ -1,4 +1,4 @@
-import fetch from 'cross-fetch';
+import crossFetch from 'cross-fetch';
 import { addParamsToURL, sanitizeQueryParams } from '../utils/urlutils';
 import { QueryParams } from '../models/http/params';
 import { HttpService } from '../services/HttpService';
@@ -58,6 +58,9 @@ export class HttpServiceImpl implements HttpService {
     reqInit: RequestInit
   ): Promise<Response> {
     const urlWithParams = addParamsToURL(url, queryParams);
-    return fetch(urlWithParams, reqInit);
+    if (window.fetch) {
+      return window.fetch(urlWithParams, reqInit);
+    }
+    return crossFetch(urlWithParams, reqInit);
   }
 }
