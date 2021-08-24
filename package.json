@@ -1,6 +1,6 @@
 {
   "name": "@yext/answers-core",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Typescript Networking Library for the Yext Answers API",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/esm/index.js",
@@ -54,7 +54,6 @@
     "eslint": "^7.11.0",
     "generate-license-file": "^1.1.0",
     "jest": "^26.6.0",
-    "jest-fetch-mock": "^3.0.3",
     "ts-loader": "^8.0.14",
     "typescript": "^4.0.3",
     "webpack": "^5.18.0",
@@ -62,7 +61,7 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.12.5",
-    "cross-fetch": "^3.0.6"
+    "cross-fetch": "^3.1.4"
   },
   "jest": {
     "bail": 0,
@@ -74,15 +73,11 @@
       "js",
       "ts"
     ],
-    "setupFilesAfterEnv": [
-      "./tests/setup/setup.js"
-    ],
     "moduleDirectories": [
       "node_modules",
       "<rootDir>"
     ],
     "testPathIgnorePatterns": [
-      "./tests/setup/setup.js",
       "./tests/mocks/*"
     ],
     "testMatch": [

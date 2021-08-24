@@ -1,17 +1,15 @@
 import { VerticalSearchResponse } from '../../models/searchservice/response/VerticalSearchResponse';
+import { createDirectAnswer } from './createDirectAnswer';
 import { createFacets } from './createFacets';
 import { createLocationBias } from './createLocationBias';
 import { createSpellCheck } from './createSpellCheck';
 import { createVerticalResults } from './createVerticalResults';
 
 export function createVerticalSearchResponse(data: any): VerticalSearchResponse {
-  if (!data.response){
-    throw new Error('The search data does not contain a response property');
-  }
-
   return {
     verticalResults: createVerticalResults(data.response),
     queryId: data.response.queryId,
+    directAnswer: data.response.directAnswer && createDirectAnswer(data.response.directAnswer),
     searchIntents: data.response.searchIntents,
     facets: createFacets(data.response.facets),
     spellCheck: data.response.spellCheck && createSpellCheck(data.response.spellCheck),

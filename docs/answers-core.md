@@ -65,6 +65,7 @@
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query. |
 |  [UniversalAutocompleteRequest](./answers-core.universalautocompleterequest.md) | Options for a universal autocomplete request. |
+|  [UniversalLimit](./answers-core.universallimit.md) | The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
 |  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
 |  [UniversalSearchResponse](./answers-core.universalsearchresponse.md) | A representation of a response from a universal search. |
 |  [VerticalAutocompleteRequest](./answers-core.verticalautocompleterequest.md) | Options for a vertial autocomplete request. |

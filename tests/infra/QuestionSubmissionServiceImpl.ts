@@ -39,7 +39,7 @@ describe('Question submission', () => {
   });
 
   it('uses the production endpoint by default', () => {
-    const expectedUrl = 'https://api.yext.com/v2/accounts/me/createQuestion';
+    const expectedUrl = 'https://liveapi.yext.com/v2/accounts/me/createQuestion';
     const actualUrl = actualHttpParams[0];
     expect(expectedUrl).toEqual(actualUrl);
   });
@@ -84,17 +84,6 @@ describe('Question submission', () => {
     };
     const actualBodyParams = actualHttpParams[2];
     expect(expectedBodyParams).toEqual(actualBodyParams);
-  });
-
-  it('passed the right req init', () => {
-    const expectedReqInit = {
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      mode: 'cors'
-    };
-    const actualReqInit = actualHttpParams[3];
-    expect(actualReqInit).toEqual(expectedReqInit);
   });
 
   it('parses the response correctly', () => {

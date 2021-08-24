@@ -2,6 +2,7 @@ import { Context } from './Context';
 import { LatLong } from './LatLong';
 import { QueryTrigger } from './QueryTrigger';
 import { QuerySource } from './QuerySource';
+import { UniversalLimit } from './UniversalLimit';
 
 /**
  * Options which can be specified for a universal search.
@@ -15,6 +16,8 @@ export interface UniversalSearchRequest {
   queryTrigger?: QueryTrigger;
   /** Disables spellcheck if true. */
   skipSpellCheck?: boolean;
+  /** Used to track session state when cookies are blocked. */
+  sessionId?: string;
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean;
   /** {@inheritDoc LatLong} */
@@ -30,5 +33,7 @@ export interface UniversalSearchRequest {
    */
   referrerPageUrl?: string;
   /** {@inheritDoc QuerySource} */
-  querySource?: QuerySource;
+  querySource?: QuerySource | string;
+  /** {@inheritDoc UniversalLimit} */
+  limit?: UniversalLimit;
 }

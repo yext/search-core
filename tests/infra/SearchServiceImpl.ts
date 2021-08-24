@@ -73,6 +73,7 @@ describe('SearchService', () => {
         query: 'testQuery',
         queryTrigger: QueryTrigger.Initialize,
         skipSpellCheck: true,
+        sessionId: '8ad0cb51-82f6-4ad9-bc62-b358115fde30',
         sessionTrackingEnabled: true,
         location: {
           latitude: 40,
@@ -82,17 +83,20 @@ describe('SearchService', () => {
           key: 'value'
         },
         referrerPageUrl: 'yext.com',
-        querySource: QuerySource.Standard
+        querySource: QuerySource.Standard,
+        limit: { people: 17 }
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
         context: JSON.stringify({ key:'value' }),
         experienceKey: 'testExperienceKey',
+        limit: JSON.stringify({ people: 17 }),
         input: 'testQuery',
         locale: 'es',
         location: '40,40',
         queryTrigger: 'initialize',
         referrerPageUrl: 'yext.com',
+        session_id: '8ad0cb51-82f6-4ad9-bc62-b358115fde30',
         sessionTrackingEnabled: true,
         skipSpellCheck: true,
         v: 20190101,
@@ -118,6 +122,17 @@ describe('SearchService', () => {
       );
       await searchService.universalSearch({query: 'test'});
       expect(mockHttpService.get).toHaveBeenCalledWith(customUrl, expect.anything());
+    });
+
+    it('An arbitrary string may be supplied as a querySource', async () => {
+      await searchServiceWithRequiredParams.universalSearch({
+        query: 'test',
+        querySource: 'CUSTOM_SOURCE'
+      });
+      const expectedQueryParams = expect.objectContaining({
+        source: 'CUSTOM_SOURCE'
+      });
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
     });
   });
 
@@ -168,6 +183,7 @@ describe('SearchService', () => {
         queryTrigger: QueryTrigger.Initialize,
         referrerPageUrl: 'yext.com',
         retrieveFacets: true,
+        sessionId: '8ad0cb51-82f6-4ad9-bc62-b358115fde30',
         sessionTrackingEnabled: true,
         skipSpellCheck: true,
         sortBys: [{
@@ -204,6 +220,7 @@ describe('SearchService', () => {
         queryTrigger: 'initialize',
         referrerPageUrl: 'yext.com',
         retrieveFacets: true,
+        session_id: '8ad0cb51-82f6-4ad9-bc62-b358115fde30',
         sessionTrackingEnabled: true,
         skipSpellCheck: true,
         sortBys: JSON.stringify([{

@@ -24,10 +24,11 @@ export interface VerticalSearchRequest
 |  [offset?](./answers-core.verticalsearchrequest.offset.md) | number | <i>(Optional)</i> The result offset which allows for fetching more results with the same query. |
 |  [query](./answers-core.verticalsearchrequest.query.md) | string | The search query. |
 |  [queryId?](./answers-core.verticalsearchrequest.queryid.md) | string | <i>(Optional)</i> The queryId for the query, if this is a repeat query. |
-|  [querySource?](./answers-core.verticalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) | <i>(Optional)</i> The source of the search request. |
+|  [querySource?](./answers-core.verticalsearchrequest.querysource.md) | [QuerySource](./answers-core.querysource.md) \| string | <i>(Optional)</i> The source of the search request. |
 |  [queryTrigger?](./answers-core.verticalsearchrequest.querytrigger.md) | [QueryTrigger](./answers-core.querytrigger.md) | <i>(Optional)</i> Describes the ways a search can be executed besides user input. |
 |  [referrerPageUrl?](./answers-core.verticalsearchrequest.referrerpageurl.md) | string | <i>(Optional)</i> The URl of the page which referred the user to the current page. |
 |  [retrieveFacets?](./answers-core.verticalsearchrequest.retrievefacets.md) | boolean | <i>(Optional)</i> Indicates that facets should be retrieved. |
+|  [sessionId?](./answers-core.verticalsearchrequest.sessionid.md) | string | <i>(Optional)</i> Used to track session state when cookies are blocked. |
 |  [sessionTrackingEnabled?](./answers-core.verticalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [skipSpellCheck?](./answers-core.verticalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> Skips spell checking if true. |
 |  [sortBys?](./answers-core.verticalsearchrequest.sortbys.md) | [SortBy](./answers-core.sortby.md)<!-- -->\[\] | <i>(Optional)</i> Determines how results are sorted. \* |
