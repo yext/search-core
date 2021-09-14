@@ -15,6 +15,7 @@ import { serializeStaticFilters } from '../serializers/serializeStaticFilters';
 import { serializeFacets } from '../serializers/serializeFacets';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
+import { LatLong } from '../models/searchservice/request/LatLong';
 
 /**
  * Represents the query params which may be sent in a universal search.
@@ -94,8 +95,6 @@ export class SearchServiceImpl implements SearchService {
   }
 
   async universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {
-    this.injectToStringMethods(request);
-
     const queryParams: UniversalSearchQueryParams = {
       input: request.query,
       experienceKey: this.config.experienceKey,
@@ -103,7 +102,7 @@ export class SearchServiceImpl implements SearchService {
       v: defaultApiVersion,
       version: this.config.experienceVersion,
       limit: JSON.stringify(request.limit || undefined),
-      location: request.location?.toString(),
+      location: this.stringifyLatLong(request.location),
       locale: this.config.locale,
       skipSpellCheck: request.skipSpellCheck,
       session_id: request.sessionId,
@@ -127,8 +126,6 @@ export class SearchServiceImpl implements SearchService {
   }
 
   async verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse> {
-    this.injectToStringMethods(request);
-
     const queryParams: VerticalSearchQueryParams = {
       experienceKey: this.config.experienceKey,
       api_key: this.config.apiKey,
@@ -136,7 +133,7 @@ export class SearchServiceImpl implements SearchService {
       version: this.config.experienceVersion,
       locale: this.config.locale,
       input: request.query,
-      location: request.location?.toString(),
+      location: this.stringifyLatLong(request.location),
       verticalKey: request.verticalKey,
       filters: request.staticFilters && serializeStaticFilters(request.staticFilters),
       limit: request.limit,
@@ -168,13 +165,12 @@ export class SearchServiceImpl implements SearchService {
   }
 
   /**
-   * Injects toString() methods into the request objects that require them
+   * Converts a {@link LatLong} into the format the Answers API expects.
    */
-  private injectToStringMethods(request: UniversalSearchRequest|VerticalSearchRequest): void {
-    if (request.location) {
-      request.location.toString = function() {
-        return `${this.latitude},${this.longitude}`;
-      };
+  private stringifyLatLong(latLong: LatLong | undefined): string | undefined {
+    if (!latLong) {
+      return undefined;
     }
+    return `${latLong.latitude},${latLong.longitude}`;
   }
 }
