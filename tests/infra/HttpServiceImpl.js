@@ -50,6 +50,7 @@ describe('HttpServiceImpl', () => {
       nodeQuery: 'param'
     };
     await httpServiceImpl.get('http://yext.com', queryParams);
+    windowSpy.mockRestore();
 
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?nodeQuery=param', expect.anything());
   });
