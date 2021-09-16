@@ -40,4 +40,18 @@ describe('HttpServiceImpl', () => {
     };
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);
   });
+
+  it('is compatible with node', async () => {
+    // Simulate a node environment where the window is undefined
+    const windowSpy = jest.spyOn(window, 'window', 'get');
+    windowSpy.mockImplementation(() => undefined);
+
+    const queryParams = {
+      nodeQuery: 'param'
+    };
+    await httpServiceImpl.get('http://yext.com', queryParams);
+    windowSpy.mockRestore();
+
+    expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?nodeQuery=param', expect.anything());
+  });
 });
