@@ -58,7 +58,7 @@ export class HttpServiceImpl implements HttpService {
     reqInit: RequestInit
   ): Promise<Response> {
     const urlWithParams = addParamsToURL(url, queryParams);
-    if (window.fetch) {
+    if (typeof(window) !== 'undefined' && window.fetch) {
       return window.fetch(urlWithParams, reqInit);
     }
     return crossFetch(urlWithParams, reqInit);
