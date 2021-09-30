@@ -89,13 +89,14 @@ export class AnswersCore {
    * Performs a filtersearch request against specified fields within a single vertical.
    *
    * @remarks
-   * This differs from the vertical autocomplete because the vertical autocomplete operates on all entity fields whereas
-   * filtersearch operates only on specified fields. If rejected, the reason will be an {@link AnswersError}.
+   * This differs from the vertical autocomplete because the vertical autocomplete
+   * operates on all entity fields whereas filtersearch operates only on specified fields.
+   * If rejected, the reason will be an {@link AnswersError}.
    *
    * @example
-   * A site has a 'products' vertical and would like a way to allow the user to narrow down the results by the product name.
-   * The site can add a second search bar powered by filtersearch which will include only product names as search
-   * suggestions.
+   * A site has a 'products' vertical and would like a way to allow the user to narrow down
+   * the results by the product name. The site can add a second search bar powered by filtersearch
+   * which will include only product names as search suggestions.
    *
    * @param request - filtersearch request options
    */
