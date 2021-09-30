@@ -32,7 +32,8 @@ describe('Question submission', () => {
       },
       response: {}
     });
-    qaService = new QuestionSubmissionServiceImpl(baseCoreConfig, mockHttp as HttpService, apiResponseValidator);
+    qaService = new QuestionSubmissionServiceImpl(
+      baseCoreConfig, mockHttp as HttpService, apiResponseValidator);
     response = await qaService.submitQuestion(qaRequest);
     mockCalls = mockHttp.post.mock.calls;
     actualHttpParams = mockCalls[mockCalls.length - 1];
@@ -107,7 +108,8 @@ it('additionalQueryParams are passed through', async () => {
     },
     response: {}
   });
-  const qaService = new QuestionSubmissionServiceImpl(coreConfig, mockHttp as HttpService, apiResponseValidator);
+  const qaService = new QuestionSubmissionServiceImpl(
+    coreConfig, mockHttp as HttpService, apiResponseValidator);
   await qaService.submitQuestion(qaRequest);
   const mockCalls = mockHttp.post.mock.calls;
   const actualQueryParams = mockCalls[0][1];
