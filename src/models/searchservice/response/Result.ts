@@ -27,12 +27,13 @@ export interface Result {
    * The distance from a {@link AppliedQueryFilter} location to the result in meters.
    *
    * @remarks
-   * The filter may be an inferred from the search query, or it may be specified explicitly through a facet or static filter
-   * on a {@link VerticalSearchRequest}.
+   * The filter may be an inferred from the search query, or it may be specified
+   * explicitly through a facet or static filter on a {@link VerticalSearchRequest}.
    *
    * @example
-   * If a user searches for 'Offices in New York' and the VerticalResults contain an `AppliedQueryFilter` for 'New York', the
-   * distanceFromFilter value will be from the search result to 'New York'.
+   * If a user searches for 'Offices in New York' and the VerticalResults contain an
+   * `AppliedQueryFilter` for 'New York', the distanceFromFilter value will be from
+   * the search result to 'New York'.
    */
   distanceFromFilter?: number;
   /** The {@link HighlightedFields | highlighted fields} emphasized by the api. */

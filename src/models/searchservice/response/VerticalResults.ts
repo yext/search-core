@@ -18,8 +18,8 @@ export interface VerticalResults {
    * The total number of results within the vertical.
    *
    * @remarks
-   * This number may be higher than the number of results in the results array since the API limits the number of results
-   * returned in each request.
+   * This number may be higher than the number of results in the results array
+   * since the API limits the number of results returned in each request.
   */
   resultsCount: number;
   /** {@inheritDoc Source} */
