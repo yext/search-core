@@ -2,6 +2,7 @@ import { Endpoints } from './Endpoints';
 
 /**
  * The main configuration options for {@link AnswersCore}.
+ * @public
  */
 export interface BaseAnswersConfig {
   /** The api key of the answers experience. */
@@ -40,16 +41,18 @@ export interface BaseAnswersConfig {
 
 
 /**
- * The main configuration options {@link BaseAnswersConfig} for {@link AnswersCore}
+ * The main configuration options for {@link AnswersCore}
  * that requires apiKey
+ * @public
  */
 export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
   apiKey: string
 }
 
 /**
- * The main configuration options {@link BaseAnswersConfig} for {@link AnswersCore}
+ * The main configuration options for {@link AnswersCore}
  * that requires token
+ * @public
  */
 export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
   token: string
@@ -57,8 +60,8 @@ export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
 
 /**
  * The main configuration options for {@link AnswersCore}
- * that requires either apiKey {@link ApiKeyRequiredAnswersConfig}
- * or token {@link TokenRequiredAnswersConfig}.
+ * that requires either apiKey ({@link ApiKeyRequiredAnswersConfig})
+ * or token ({@link TokenRequiredAnswersConfig}).
  *
  * @public
  */

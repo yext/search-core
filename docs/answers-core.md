@@ -37,7 +37,7 @@
 
 |  Interface | Description |
 |  --- | --- |
-|  [ApiKeyRequiredAnswersConfig](./answers-core.apikeyrequiredanswersconfig.md) | The main configuration options [BaseAnswersConfig](./answers-core.baseanswersconfig.md) for [AnswersCore](./answers-core.answerscore.md) that requires apiKey |
+|  [ApiKeyRequiredAnswersConfig](./answers-core.apikeyrequiredanswersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires apiKey |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutocompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |
@@ -65,7 +65,7 @@
 |  [Snippet](./answers-core.snippet.md) | The section of text where a [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) was found. |
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query. |
-|  [TokenRequiredAnswersConfig](./answers-core.tokenrequiredanswersconfig.md) | The main configuration options [BaseAnswersConfig](./answers-core.baseanswersconfig.md) for [AnswersCore](./answers-core.answerscore.md) that requires token |
+|  [TokenRequiredAnswersConfig](./answers-core.tokenrequiredanswersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires token |
 |  [UniversalAutocompleteRequest](./answers-core.universalautocompleterequest.md) | Options for a universal autocomplete request. |
 |  [UniversalLimit](./answers-core.universallimit.md) | The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
 |  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
