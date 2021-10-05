@@ -2,7 +2,11 @@
 export { AnswersError } from './answersapi/AnswersError';
 
 // Core models
-export { AnswersConfig, ApiKeyRequiredAnswersConfig, TokenRequiredAnswersConfig } from './core/AnswersConfig';
+export { AnswersConfig,
+  ApiKeyRequiredAnswersConfig,
+  TokenRequiredAnswersConfig,
+  BaseAnswersConfig
+} from './core/AnswersConfig';
 export { Endpoints } from './core/Endpoints';
 
 // Autocomplete service

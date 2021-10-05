@@ -32,8 +32,6 @@ export class AnswersError extends Error {
     type?: string;
 }
 
-// Warning: (ae-forgotten-export) The symbol "BaseAnswersConfig" needs to be exported by the entry point index.d.ts
-//
 // @public
 export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
     // (undocumented)
@@ -65,6 +63,20 @@ export interface AutocompleteResult {
     }[];
     relatedItem?: Result;
     value: string;
+}
+
+// @public
+export interface BaseAnswersConfig {
+    // @alpha
+    additionalQueryParams?: {
+        [key: string]: string | number | boolean;
+    };
+    apiKey?: string;
+    endpoints?: Endpoints;
+    experienceKey: string;
+    experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
+    locale: string;
+    token?: string;
 }
 
 // @public
