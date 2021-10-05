@@ -2,8 +2,7 @@
  * Information used to associate requests with a particular user.
  *
  * @remarks
- * Visitor information is included with every request with the exception of the
- * {@link AnswersCore.questionSubmission} requests.
+ * Visitor information is included with every request with the exception of question submission requests.
  *
  * @public
  */

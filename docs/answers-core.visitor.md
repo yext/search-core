@@ -14,7 +14,7 @@ export interface Visitor
 
 ## Remarks
 
-Visitor information is included with every request with the exception of the  requests.
+Visitor information is included with every request with the exception of question submission requests.
 
 ## Properties
 
