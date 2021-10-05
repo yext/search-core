@@ -2,23 +2,12 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [AnswersConfig](./answers-core.answersconfig.md)
 
-## AnswersConfig interface
+## AnswersConfig type
 
-The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->.
+The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires either apiKey or token.
 
 <b>Signature:</b>
 
 ```typescript
-export interface AnswersConfig 
+export declare type AnswersConfig = ApiKeyRequiredAnswersConfig | TokenRequiredAnswersConfig;
 ```
-
-## Properties
-
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [apiKey](./answers-core.answersconfig.apikey.md) | string | The api key of the answers experience. |
-|  [endpoints?](./answers-core.answersconfig.endpoints.md) | [Endpoints](./answers-core.endpoints.md) | <i>(Optional)</i> Overrides for the URLs which are used when making requests to the Answers API. |
-|  [experienceKey](./answers-core.answersconfig.experiencekey.md) | string | The experience key of the answers experience. |
-|  [experienceVersion?](./answers-core.answersconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the answers experience configuration. |
-|  [locale](./answers-core.answersconfig.locale.md) | string | The locale of the answers experience. |
-

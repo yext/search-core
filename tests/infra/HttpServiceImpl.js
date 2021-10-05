@@ -22,6 +22,23 @@ describe('HttpServiceImpl', () => {
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);
   });
 
+  it('can make get requests with authToken', async () => {
+    const queryParams = {
+      aQuery: 'param'
+    };
+    const authToken = '123.456.789';
+
+    await httpServiceImpl.get('http://yext.com', queryParams, authToken);
+    const expectedReqInit = {
+      method: 'get',
+      credentials: 'include',
+      headers: {
+        Authorization: `Bearer ${authToken}`
+      }
+    };
+    expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);
+  });
+
   it('can make post requests', async () => {
     const jsonBody = {
       data: '123'
@@ -36,6 +53,28 @@ describe('HttpServiceImpl', () => {
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
+      }
+    };
+    expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);
+  });
+
+  it('can make post requests with authToken', async () => {
+    const jsonBody = {
+      data: '123'
+    };
+    const queryParams = {
+      aQuery: 'param'
+    };
+    const authToken = '123.456.789';
+
+    await httpServiceImpl.post('http://yext.com', queryParams, jsonBody, authToken);
+    const expectedReqInit = {
+      method: 'post',
+      body: '{\"data\":\"123\"}',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${authToken}`
       }
     };
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);

@@ -18,103 +18,154 @@ describe('AutocompleteService', () => {
     experienceKey: 'testExperienceKey',
     locale: 'en',
   };
+
+  const configWithToken: AnswersConfig = {
+    token: 'testToken',
+    experienceKey: 'testExperienceKey',
+    locale: 'en',
+  };
+
   const mockHttpService = new HttpServiceMock();
   const apiResponseValidator = new ApiResponseValidator();
 
   describe('Universal Autocomplete', () => {
     const expectedUniversalUrl = defaultEndpoints.universalAutocomplete;
-    it('query params are correct', async () => {
+    const request: UniversalAutocompleteRequest = {
+      input: '',
+      sessionTrackingEnabled: false
+    };
+    const expectedQueryParams = {
+      input: '',
+      experienceKey: 'testExperienceKey',
+      api_key: 'testApiKey',
+      v: 20190101,
+      locale: 'en',
+      sessionTrackingEnabled: false
+    };
+
+    it('query params are correct with apiKey', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
-      const request: UniversalAutocompleteRequest = {
-        input: '',
-        sessionTrackingEnabled: false
-      };
-      const expectedQueryParams = {
-        input: '',
-        experienceKey: 'testExperienceKey',
-        api_key: 'testApiKey',
-        v: 20190101,
-        locale: 'en',
-        sessionTrackingEnabled: false
-      };
       const autocompleteService = new AutocompleteServiceImpl(
         config,
         mockHttpService as HttpService,
         apiResponseValidator
       );
       await autocompleteService.universalAutocomplete(request);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, undefined);
+    });
+
+    it('query params are correct with token', async () => {
+      mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
+      const autocompleteService = new AutocompleteServiceImpl(
+        configWithToken,
+        mockHttpService as HttpService,
+        apiResponseValidator
+      );
+
+      const { ...expectedParams } = expectedQueryParams;
+      delete expectedParams.api_key;
+      await autocompleteService.universalAutocomplete(request);
+      expect(mockHttpService.get)
+        .toHaveBeenCalledWith(expectedUniversalUrl, expectedParams, 'testToken');
     });
   });
 
   describe('Vertical Autocomplete', () => {
     const expectedVerticalUrl = defaultEndpoints.verticalAutocomplete;
-    it('query params are correct', async () => {
+    const request: VerticalAutocompleteRequest = {
+      input: 'salesforce',
+      sessionTrackingEnabled: false,
+      verticalKey: 'verticalKey'
+    };
+    const expectedQueryParams = {
+      input: 'salesforce',
+      experienceKey: 'testExperienceKey',
+      api_key: 'testApiKey',
+      v: 20190101,
+      locale: 'en',
+      sessionTrackingEnabled: false,
+      verticalKey: 'verticalKey'
+    };
+
+    it('query params are correct with apiKey', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
-      const request: VerticalAutocompleteRequest = {
-        input: 'salesforce',
-        sessionTrackingEnabled: false,
-        verticalKey: 'verticalKey'
-      };
-      const expectedQueryParams = {
-        input: 'salesforce',
-        experienceKey: 'testExperienceKey',
-        api_key: 'testApiKey',
-        v: 20190101,
-        locale: 'en',
-        sessionTrackingEnabled: false,
-        verticalKey: 'verticalKey'
-      };
       const autocompleteService = new AutocompleteServiceImpl(
         config,
         mockHttpService as HttpService,
         apiResponseValidator
       );
       await autocompleteService.verticalAutocomplete(request);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams, undefined);
+    });
+
+    it('query params are correct with token', async () => {
+      mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
+      const autocompleteService = new AutocompleteServiceImpl(
+        configWithToken,
+        mockHttpService as HttpService,
+        apiResponseValidator
+      );
+
+      const { ...expectedParams } = expectedQueryParams;
+      delete expectedParams.api_key;
+      await autocompleteService.verticalAutocomplete(request);
+      expect(mockHttpService.get)
+        .toHaveBeenCalledWith(expectedVerticalUrl, expectedParams, 'testToken');
     });
   });
 
   describe('FilterSearch', () => {
     const expectedFilterUrl = defaultEndpoints.filterSearch;
+    const convertedSearchParams = {
+      sectioned: false,
+      fields: [{
+        fieldId: 'field',
+        entityTypeId: 'location',
+        shouldFetchEntities: false
+      }]
+    };
+    const request: FilterSearchRequest = {
+      input: 'salesforce',
+      sessionTrackingEnabled: false,
+      verticalKey: 'verticalKey',
+      sectioned: false,
+      fields: [{
+        fieldApiName: 'field',
+        entityType: 'location',
+        fetchEntities: false
+      }]
+    };
+    const expectedQueryParams = {
+      input: 'salesforce',
+      experienceKey: 'testExperienceKey',
+      api_key: 'testApiKey',
+      v: 20190101,
+      locale: 'en',
+      sessionTrackingEnabled: false,
+      verticalKey: 'verticalKey',
+      search_parameters: JSON.stringify(convertedSearchParams)
+    };
+
     it('query params are correct', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
-      const convertedSearchParams = {
-        sectioned: false,
-        fields: [{
-          fieldId: 'field',
-          entityTypeId: 'location',
-          shouldFetchEntities: false
-        }]
-      };
-      const request: FilterSearchRequest = {
-        input: 'salesforce',
-        sessionTrackingEnabled: false,
-        verticalKey: 'verticalKey',
-        sectioned: false,
-        fields: [{
-          fieldApiName: 'field',
-          entityType: 'location',
-          fetchEntities: false
-        }]
-      };
-      const expectedQueryParams = {
-        input: 'salesforce',
-        experienceKey: 'testExperienceKey',
-        api_key: 'testApiKey',
-        v: 20190101,
-        locale: 'en',
-        sessionTrackingEnabled: false,
-        verticalKey: 'verticalKey',
-        search_parameters: JSON.stringify(convertedSearchParams)
-      };
       const autocompleteService = new AutocompleteServiceImpl(
         config,
         mockHttpService as HttpService,
         apiResponseValidator
       );
       await autocompleteService.filterSearch(request);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams, undefined);
+    });
+
+    it('query params are correct', async () => {
+      mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
+      const autocompleteService = new AutocompleteServiceImpl(
+        config,
+        mockHttpService as HttpService,
+        apiResponseValidator
+      );
+      await autocompleteService.filterSearch(request);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams, undefined);
     });
   });
 });

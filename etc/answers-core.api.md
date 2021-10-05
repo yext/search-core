@@ -4,18 +4,11 @@
 
 ```ts
 
+// Warning: (ae-forgotten-export) The symbol "ApiKeyRequiredAnswersConfig" needs to be exported by the entry point index.d.ts
+// Warning: (ae-forgotten-export) The symbol "TokenRequiredAnswersConfig" needs to be exported by the entry point index.d.ts
+//
 // @public
-export interface AnswersConfig {
-    // @alpha
-    additionalQueryParams?: {
-        [key: string]: string | number | boolean;
-    };
-    apiKey: string;
-    endpoints?: Endpoints;
-    experienceKey: string;
-    experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
-    locale: string;
-}
+export type AnswersConfig = ApiKeyRequiredAnswersConfig | TokenRequiredAnswersConfig;
 
 // @public
 export class AnswersCore {

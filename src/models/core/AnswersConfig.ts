@@ -2,12 +2,12 @@ import { Endpoints } from './Endpoints';
 
 /**
  * The main configuration options for {@link AnswersCore}.
- *
- * @public
  */
-export interface AnswersConfig {
+interface BaseAnswersConfig {
   /** The api key of the answers experience. */
-  apiKey: string,
+  apiKey?: string,
+  /** The authentication token of the answers experience. */
+  token?: string,
   /** The experience key of the answers experience. */
   experienceKey: string,
   /** The locale of the answers experience. */
@@ -37,3 +37,28 @@ export interface AnswersConfig {
     [key: string]: string | number | boolean
   }
 }
+
+
+/**
+ * The main configuration options for {@link AnswersCore}
+ * that requires apiKey
+ */
+interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
+  apiKey: string
+}
+
+/**
+ * The main configuration options for {@link AnswersCore}
+ * that requires token
+ */
+interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
+  token: string
+}
+
+/**
+ * The main configuration options for {@link AnswersCore}
+ * that requires either apiKey or token.
+ *
+ * @public
+ */
+export type AnswersConfig = ApiKeyRequiredAnswersConfig | TokenRequiredAnswersConfig;
