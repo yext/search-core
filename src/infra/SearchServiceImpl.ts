@@ -35,7 +35,8 @@ interface UniversalSearchQueryParams extends QueryParams {
   queryTrigger?: QueryTrigger,
   context?: string;
   referrerPageUrl?: string,
-  source?: QuerySource | string
+  source?: QuerySource | string,
+  visitor?: string
 }
 
 /**
@@ -65,7 +66,8 @@ interface VerticalSearchQueryParams extends QueryParams {
   referrerPageUrl?: string,
   source?: QuerySource | string,
   locationRadius?: string,
-  queryId?: string
+  queryId?: string,
+  visitor?: string
 }
 
 /**
@@ -111,6 +113,7 @@ export class SearchServiceImpl implements SearchService {
       context: JSON.stringify(request.context || undefined),
       referrerPageUrl: request.referrerPageUrl,
       source: request.querySource || QuerySource.Standard,
+      visitor: JSON.stringify(this.config.visitor || undefined),
       ...this.config?.additionalQueryParams
     };
 
@@ -150,6 +153,7 @@ export class SearchServiceImpl implements SearchService {
       source: request.querySource || QuerySource.Standard,
       locationRadius: request.locationRadius?.toString(),
       queryId: request.queryId,
+      visitor: JSON.stringify(this.config.visitor || undefined),
       ...this.config?.additionalQueryParams
     };
 

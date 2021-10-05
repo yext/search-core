@@ -4,6 +4,7 @@ export { AnswersError } from './answersapi/AnswersError';
 // Core models
 export { AnswersConfig } from './core/AnswersConfig';
 export { Endpoints } from './core/Endpoints';
+export { Visitor } from './core/Visitor';
 
 // Autocomplete service
 export * from './autocompleteservice/AutocompleteRequest';
