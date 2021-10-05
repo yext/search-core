@@ -4,7 +4,7 @@
 
 ## ApiKeyRequiredAnswersConfig interface
 
-The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires apiKey
+Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, following [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires apiKey.
 
 <b>Signature:</b>
 

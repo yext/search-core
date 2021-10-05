@@ -1,7 +1,7 @@
 import { Endpoints } from './Endpoints';
 
 /**
- * The main configuration options for {@link AnswersCore}.
+ * The base configuration options for {@link AnswersCore}.
  * @public
  */
 export interface BaseAnswersConfig {
@@ -41,8 +41,8 @@ export interface BaseAnswersConfig {
 
 
 /**
- * The main configuration options for {@link AnswersCore}
- * that requires apiKey
+ * Configuration options for {@link AnswersCore}, following {@link BaseAnswersConfig},
+ * but requires apiKey.
  * @public
  */
 export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
@@ -50,8 +50,8 @@ export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
 }
 
 /**
- * The main configuration options for {@link AnswersCore}
- * that requires token
+ * Configuration options for {@link AnswersCore}, following {@link BaseAnswersConfig},
+ * but requires token.
  * @public
  */
 export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {

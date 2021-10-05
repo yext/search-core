@@ -4,7 +4,7 @@
 
 ## BaseAnswersConfig interface
 
-The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->.
+The base configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->.
 
 <b>Signature:</b>
 

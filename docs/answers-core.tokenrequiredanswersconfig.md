@@ -4,7 +4,7 @@
 
 ## TokenRequiredAnswersConfig interface
 
-The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires token
+Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, following [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires token.
 
 <b>Signature:</b>
 
