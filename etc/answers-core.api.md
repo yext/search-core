@@ -4,9 +4,6 @@
 
 ```ts
 
-// Warning: (ae-forgotten-export) The symbol "ApiKeyRequiredAnswersConfig" needs to be exported by the entry point index.d.ts
-// Warning: (ae-forgotten-export) The symbol "TokenRequiredAnswersConfig" needs to be exported by the entry point index.d.ts
-//
 // @public
 export type AnswersConfig = ApiKeyRequiredAnswersConfig | TokenRequiredAnswersConfig;
 
@@ -33,6 +30,14 @@ export class AnswersError extends Error {
     code?: number;
     message: string;
     type?: string;
+}
+
+// Warning: (ae-forgotten-export) The symbol "BaseAnswersConfig" needs to be exported by the entry point index.d.ts
+//
+// @public
+export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
+    // (undocumented)
+    apiKey: string;
 }
 
 // @public
@@ -350,6 +355,12 @@ export enum SpellCheckType {
     AutoCorrect = "AUTOCORRECT",
     Combine = "COMBINE",
     Suggest = "SUGGEST"
+}
+
+// @public
+export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
+    // (undocumented)
+    token: string;
 }
 
 // @public

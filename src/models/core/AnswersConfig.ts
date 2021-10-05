@@ -43,7 +43,7 @@ interface BaseAnswersConfig {
  * The main configuration options for {@link AnswersCore}
  * that requires apiKey
  */
-interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
+export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
   apiKey: string
 }
 
@@ -51,13 +51,14 @@ interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
  * The main configuration options for {@link AnswersCore}
  * that requires token
  */
-interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
+export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
   token: string
 }
 
 /**
  * The main configuration options for {@link AnswersCore}
- * that requires either apiKey or token.
+ * that requires either apiKey {@link ApiKeyRequiredAnswersConfig}
+ * or token {@link TokenRequiredAnswersConfig}.
  *
  * @public
  */
