@@ -9,7 +9,7 @@ The type of visitor
 <b>Signature:</b>
 
 ```typescript
-idMethod: string;
+idMethod?: string;
 ```
 
 ## Example

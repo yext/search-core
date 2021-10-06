@@ -21,5 +21,5 @@ Visitor information is included with every request with the exception of questio
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [id](./answers-core.visitor.id.md) | string | The ID associated with the user |
-|  [idMethod](./answers-core.visitor.idmethod.md) | string | The type of visitor |
+|  [idMethod?](./answers-core.visitor.idmethod.md) | string | <i>(Optional)</i> The type of visitor |
 

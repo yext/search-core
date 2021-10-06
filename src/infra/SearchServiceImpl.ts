@@ -103,17 +103,17 @@ export class SearchServiceImpl implements SearchService {
       api_key: this.config.apiKey,
       v: defaultApiVersion,
       version: this.config.experienceVersion,
-      limit: JSON.stringify(request.limit || undefined),
+      limit: JSON.stringify(request.limit),
       location: this.stringifyLatLong(request.location),
       locale: this.config.locale,
       skipSpellCheck: request.skipSpellCheck,
       session_id: request.sessionId,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       queryTrigger: request.queryTrigger,
-      context: JSON.stringify(request.context || undefined),
+      context: JSON.stringify(request.context),
       referrerPageUrl: request.referrerPageUrl,
       source: request.querySource || QuerySource.Standard,
-      visitor: JSON.stringify(this.config.visitor || undefined),
+      visitor: JSON.stringify(this.config.visitor),
       ...this.config?.additionalQueryParams
     };
 
@@ -148,12 +148,12 @@ export class SearchServiceImpl implements SearchService {
       session_id: request.sessionId,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       sortBys: JSON.stringify(request.sortBys || []),
-      context: JSON.stringify(request.context || undefined),
+      context: JSON.stringify(request.context),
       referrerPageUrl: request.referrerPageUrl,
       source: request.querySource || QuerySource.Standard,
       locationRadius: request.locationRadius?.toString(),
       queryId: request.queryId,
-      visitor: JSON.stringify(this.config.visitor || undefined),
+      visitor: JSON.stringify(this.config.visitor),
       ...this.config?.additionalQueryParams
     };
 

@@ -453,7 +453,7 @@ export interface VerticalSearchResponse {
 // @public
 export interface Visitor {
     id: string;
-    idMethod: string;
+    idMethod?: string;
 }
 
 
