@@ -4,10 +4,13 @@
 
 ## ApiKeyRequiredAnswersConfig.token property
 
-The authentication token of the answers experience.
-
 <b>Signature:</b>
 
 ```typescript
 token?: never;
 ```
+
+## Remarks
+
+token should not be provided along with apiKey
+
