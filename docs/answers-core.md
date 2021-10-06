@@ -79,7 +79,7 @@
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires either apiKey ([AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md)<!-- -->) or token ([AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md)<!-- -->). |
+|  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires either apiKey ([AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md)<!-- -->) or token ([AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md)<!-- -->) in addition to the options specified in [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->. |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [HighlightedFields](./answers-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Answers API |
 
