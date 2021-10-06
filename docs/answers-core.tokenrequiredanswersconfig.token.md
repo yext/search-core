@@ -4,6 +4,8 @@
 
 ## TokenRequiredAnswersConfig.token property
 
+The authentication token of the answers experience.
+
 <b>Signature:</b>
 
 ```typescript

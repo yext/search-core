@@ -65,7 +65,7 @@
 |  [Snippet](./answers-core.snippet.md) | The section of text where a [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) was found. |
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query. |
-|  [TokenRequiredAnswersConfig](./answers-core.tokenrequiredanswersconfig.md) | The base configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
+|  [TokenRequiredAnswersConfig](./answers-core.tokenrequiredanswersconfig.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, following [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires token. |
 |  [UniversalAutocompleteRequest](./answers-core.universalautocompleterequest.md) | Options for a universal autocomplete request. |
 |  [UniversalLimit](./answers-core.universallimit.md) | The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
 |  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |

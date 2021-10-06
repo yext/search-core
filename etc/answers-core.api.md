@@ -371,9 +371,7 @@ export enum SpellCheckType {
 
 // @public
 export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
-    // (undocumented)
     apiKey?: never;
-    // (undocumented)
     token: string;
 }
 
