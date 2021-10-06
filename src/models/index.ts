@@ -4,8 +4,8 @@ export { AnswersError } from './answersapi/AnswersError';
 // Core models
 export {
   AnswersConfig,
-  ApiKeyRequiredAnswersConfig,
-  TokenRequiredAnswersConfig,
+  AnswersConfigWithToken,
+  AnswersConfigWithApiKey,
   BaseAnswersConfig
 } from './core/AnswersConfig';
 export { Endpoints } from './core/Endpoints';

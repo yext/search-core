@@ -37,7 +37,8 @@
 
 |  Interface | Description |
 |  --- | --- |
-|  [ApiKeyRequiredAnswersConfig](./answers-core.apikeyrequiredanswersconfig.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, following [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires apiKey. |
+|  [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, following [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires apiKey. |
+|  [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, following [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires token. |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutocompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |
@@ -65,7 +66,6 @@
 |  [Snippet](./answers-core.snippet.md) | The section of text where a [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) was found. |
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query. |
-|  [TokenRequiredAnswersConfig](./answers-core.tokenrequiredanswersconfig.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, following [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires token. |
 |  [UniversalAutocompleteRequest](./answers-core.universalautocompleterequest.md) | Options for a universal autocomplete request. |
 |  [UniversalLimit](./answers-core.universallimit.md) | The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
 |  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
@@ -79,7 +79,7 @@
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires either apiKey ([ApiKeyRequiredAnswersConfig](./answers-core.apikeyrequiredanswersconfig.md)<!-- -->) or token ([TokenRequiredAnswersConfig](./answers-core.tokenrequiredanswersconfig.md)<!-- -->). |
+|  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires either apiKey ([AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md)<!-- -->) or token ([AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md)<!-- -->). |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [HighlightedFields](./answers-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Answers API |
 

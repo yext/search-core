@@ -45,7 +45,7 @@ export interface BaseAnswersConfig {
  * but requires apiKey.
  * @public
  */
-export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
+export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
   /**
    * {@inheritDoc BaseAnswersConfig.apiKey}
    */
@@ -61,7 +61,7 @@ export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
  * but requires token.
  * @public
  */
-export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
+export interface AnswersConfigWithToken extends BaseAnswersConfig {
   /**
    * {@inheritDoc BaseAnswersConfig.token}
    */
@@ -74,9 +74,9 @@ export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
 
 /**
  * The main configuration options for {@link AnswersCore}
- * that requires either apiKey ({@link ApiKeyRequiredAnswersConfig})
- * or token ({@link TokenRequiredAnswersConfig}).
+ * that requires either apiKey ({@link AnswersConfigWithApiKey})
+ * or token ({@link AnswersConfigWithToken}).
  *
  * @public
  */
-export type AnswersConfig = ApiKeyRequiredAnswersConfig | TokenRequiredAnswersConfig;
+export type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;

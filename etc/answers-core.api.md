@@ -5,7 +5,19 @@
 ```ts
 
 // @public
-export type AnswersConfig = ApiKeyRequiredAnswersConfig | TokenRequiredAnswersConfig;
+export type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;
+
+// @public
+export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
+    apiKey: string;
+    token?: never;
+}
+
+// @public
+export interface AnswersConfigWithToken extends BaseAnswersConfig {
+    apiKey?: never;
+    token: string;
+}
 
 // @public
 export class AnswersCore {
@@ -30,12 +42,6 @@ export class AnswersError extends Error {
     code?: number;
     message: string;
     type?: string;
-}
-
-// @public
-export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
-    apiKey: string;
-    token?: never;
 }
 
 // @public
@@ -367,12 +373,6 @@ export enum SpellCheckType {
     AutoCorrect = "AUTOCORRECT",
     Combine = "COMBINE",
     Suggest = "SUGGEST"
-}
-
-// @public
-export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
-    apiKey?: never;
-    token: string;
 }
 
 // @public

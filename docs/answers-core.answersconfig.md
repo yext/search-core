@@ -4,12 +4,12 @@
 
 ## AnswersConfig type
 
-The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires either apiKey ([ApiKeyRequiredAnswersConfig](./answers-core.apikeyrequiredanswersconfig.md)<!-- -->) or token ([TokenRequiredAnswersConfig](./answers-core.tokenrequiredanswersconfig.md)<!-- -->).
+The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires either apiKey ([AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md)<!-- -->) or token ([AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md)<!-- -->).
 
 <b>Signature:</b>
 
 ```typescript
-export declare type AnswersConfig = ApiKeyRequiredAnswersConfig | TokenRequiredAnswersConfig;
+export declare type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;
 ```
-<b>References:</b> [ApiKeyRequiredAnswersConfig](./answers-core.apikeyrequiredanswersconfig.md)<!-- -->, [TokenRequiredAnswersConfig](./answers-core.tokenrequiredanswersconfig.md)
+<b>References:</b> [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md)<!-- -->, [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md)
 
