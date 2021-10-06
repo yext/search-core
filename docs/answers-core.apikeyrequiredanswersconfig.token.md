@@ -4,13 +4,10 @@
 
 ## ApiKeyRequiredAnswersConfig.token property
 
+token should NOT be provided along with apiKey
+
 <b>Signature:</b>
 
 ```typescript
 token?: never;
 ```
-
-## Remarks
-
-token should not be provided along with apiKey
-

@@ -17,6 +17,6 @@ export interface TokenRequiredAnswersConfig extends BaseAnswersConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [apiKey?](./answers-core.tokenrequiredanswersconfig.apikey.md) | never | <i>(Optional)</i> |
+|  [apiKey?](./answers-core.tokenrequiredanswersconfig.apikey.md) | never | <i>(Optional)</i> apiKey should NOT be provided along with token |
 |  [token](./answers-core.tokenrequiredanswersconfig.token.md) | string | The authentication token of the answers experience. |
 

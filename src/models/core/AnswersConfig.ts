@@ -51,8 +51,7 @@ export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
    */
   apiKey: string,
   /**
-   * @remarks
-   * token should not be provided along with apiKey
+   * token should NOT be provided along with apiKey
    */
   token?: never
 }
@@ -68,8 +67,7 @@ export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
    */
   token: string,
   /**
-   * @remarks
-   * apiKey should not be provided along with token
+   * apiKey should NOT be provided along with token
    */
   apiKey?: never
 }

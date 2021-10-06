@@ -35,7 +35,6 @@ export class AnswersError extends Error {
 // @public
 export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
     apiKey: string;
-    // (undocumented)
     token?: never;
 }
 
@@ -372,7 +371,6 @@ export enum SpellCheckType {
 
 // @public
 export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
-    // (undocumented)
     apiKey?: never;
     token: string;
 }
