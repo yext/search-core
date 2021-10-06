@@ -12,18 +12,10 @@ import { Direction } from '../../src/models/searchservice/request/Direction';
 import { SortType } from '../../src/models/searchservice/request/SortType';
 
 describe('SearchService', () => {
-  const configWithRequiredParams: AnswersConfig = {
+  const configWithRequiredApiKey: AnswersConfig = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en'
-  };
-
-  const configWithAllParams: AnswersConfig = {
-    token: 'testToken',
-    apiKey: 'testApiKey',
-    experienceKey: 'testExperienceKey',
-    locale: 'es',
-    experienceVersion: 'PRODUCTION'
   };
 
   const configWithRequiredToken: AnswersConfig = {
@@ -32,10 +24,17 @@ describe('SearchService', () => {
     locale: 'en'
   };
 
+  const configWithAllParams: AnswersConfig = {
+    apiKey: 'testApiKey',
+    experienceKey: 'testExperienceKey',
+    locale: 'es',
+    experienceVersion: 'PRODUCTION'
+  };
+
   const apiResponseValidator = new ApiResponseValidator();
 
   let mockHttpService,
-    searchServiceWithRequiredParams,
+    searchServiceWithRequiredApiKey,
     searchServiceWithAllParams,
     searchServiceWithRequiredToken;
 
@@ -46,8 +45,8 @@ describe('SearchService', () => {
       meta: {},
     });
 
-    searchServiceWithRequiredParams = new SearchServiceImpl(
-      configWithRequiredParams,
+    searchServiceWithRequiredApiKey = new SearchServiceImpl(
+      configWithRequiredApiKey,
       mockHttpService as HttpService,
       apiResponseValidator
     );
@@ -80,7 +79,7 @@ describe('SearchService', () => {
         v: 20190101,
         source: 'STANDARD'
       };
-      await searchServiceWithRequiredParams.universalSearch(requestWithRequiredParams);
+      await searchServiceWithRequiredApiKey.universalSearch(requestWithRequiredParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, undefined);
     });
 
@@ -137,13 +136,13 @@ describe('SearchService', () => {
       };
       await searchServiceWithAllParams.universalSearch(requestWithAllParams);
       expect(mockHttpService.get)
-        .toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, 'testToken');
+        .toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, undefined);
     });
 
     it('A custom universal search service endpoint may be supplied', async () => {
       const customUrl = 'http://custom.endpoint.com/api';
       const config: AnswersConfig = {
-        ...configWithRequiredParams,
+        ...configWithRequiredApiKey,
         endpoints: {
           universalSearch: customUrl
         }
@@ -158,7 +157,7 @@ describe('SearchService', () => {
     });
 
     it('An arbitrary string may be supplied as a querySource', async () => {
-      await searchServiceWithRequiredParams.universalSearch({
+      await searchServiceWithRequiredApiKey.universalSearch({
         query: 'test',
         querySource: 'CUSTOM_SOURCE'
       });
@@ -187,7 +186,7 @@ describe('SearchService', () => {
         source: 'STANDARD',
         sortBys: '[]',
       };
-      await searchServiceWithRequiredParams.verticalSearch(requestWithRequiredParams);
+      await searchServiceWithRequiredApiKey.verticalSearch(requestWithRequiredParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams, undefined);
     });
 
@@ -285,7 +284,7 @@ describe('SearchService', () => {
         verticalKey: 'verticalKey',
       };
       await searchServiceWithAllParams.verticalSearch(requestWithAllParams);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams, 'testToken');
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams, undefined);
     });
 
     it('Passes locationRadius = 0 correctly, despite it being a falsy value', async () => {
@@ -294,7 +293,7 @@ describe('SearchService', () => {
         verticalKey: 'verticalKey',
         locationRadius: 0.0
       };
-      await searchServiceWithRequiredParams.verticalSearch(request);
+      await searchServiceWithRequiredApiKey.verticalSearch(request);
       const actualQueryParams = mockHttpService.get.mock.calls[0][1];
       const actualLocationRadius = (actualQueryParams as { locationRadius: string }).locationRadius;
       expect(actualLocationRadius).toEqual('0');
@@ -306,7 +305,7 @@ describe('SearchService', () => {
         verticalKey: 'verticalKey',
         locationRadius: 1.23
       };
-      await searchServiceWithRequiredParams.verticalSearch(request);
+      await searchServiceWithRequiredApiKey.verticalSearch(request);
       const actualQueryParams = mockHttpService.get.mock.calls[0][1];
       const actualLocationRadius = (actualQueryParams as { locationRadius: string }).locationRadius;
       expect(actualLocationRadius).toEqual('1.23');

@@ -2,7 +2,8 @@
 export { AnswersError } from './answersapi/AnswersError';
 
 // Core models
-export { AnswersConfig,
+export {
+  AnswersConfig,
   ApiKeyRequiredAnswersConfig,
   TokenRequiredAnswersConfig,
   BaseAnswersConfig

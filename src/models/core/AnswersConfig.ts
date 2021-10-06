@@ -46,7 +46,8 @@ export interface BaseAnswersConfig {
  * @public
  */
 export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
-  apiKey: string
+  apiKey: string,
+  token?: never
 }
 
 /**
@@ -55,7 +56,8 @@ export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
  * @public
  */
 export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {
-  token: string
+  token: string,
+  apiKey?: never
 }
 
 /**
