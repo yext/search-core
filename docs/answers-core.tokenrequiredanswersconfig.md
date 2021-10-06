@@ -4,7 +4,7 @@
 
 ## TokenRequiredAnswersConfig interface
 
-Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, following [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires token.
+The base configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->.
 
 <b>Signature:</b>
 
@@ -17,5 +17,6 @@ export interface TokenRequiredAnswersConfig extends BaseAnswersConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [apiKey?](./answers-core.tokenrequiredanswersconfig.apikey.md) | never | <i>(Optional)</i> |
 |  [token](./answers-core.tokenrequiredanswersconfig.token.md) | string |  |
 

@@ -46,13 +46,20 @@ export interface BaseAnswersConfig {
  * @public
  */
 export interface ApiKeyRequiredAnswersConfig extends BaseAnswersConfig {
+  /**
+   * {@inheritDoc BaseAnswersConfig.apiKey}
+   */
   apiKey: string,
+  /**
+   * {@inheritDoc BaseAnswersConfig.token}
+   */
   token?: never
 }
 
 /**
  * Configuration options for {@link AnswersCore}, following {@link BaseAnswersConfig},
  * but requires token.
+ * {@inheritDoc BaseAnswersConfig}
  * @public
  */
 export interface TokenRequiredAnswersConfig extends BaseAnswersConfig {

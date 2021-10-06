@@ -27,8 +27,7 @@ export class HttpServiceImpl implements HttpService {
     return this.fetch(url, queryParams, {
       method: RequestMethods.GET,
       credentials: 'include',
-      ...(authToken &&
-      { headers: { Authorization: `Bearer ${authToken}` }}),
+      ...(authToken && { headers: { Authorization: `Bearer ${authToken}` }}),
     }).then(res => res.json());
   }
 

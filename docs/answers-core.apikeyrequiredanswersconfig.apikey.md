@@ -4,6 +4,8 @@
 
 ## ApiKeyRequiredAnswersConfig.apiKey property
 
+The api key of the answers experience.
+
 <b>Signature:</b>
 
 ```typescript
