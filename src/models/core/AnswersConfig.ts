@@ -41,8 +41,8 @@ export interface BaseAnswersConfig {
 
 
 /**
- * Configuration options for {@link AnswersCore}, following {@link BaseAnswersConfig},
- * but requires apiKey.
+ * Configuration options for {@link AnswersCore}, which includes the
+ * options from {@link BaseAnswersConfig}, but requires apiKey.
  * @public
  */
 export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
@@ -57,8 +57,8 @@ export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
 }
 
 /**
- * Configuration options for {@link AnswersCore}, following {@link BaseAnswersConfig},
- * but requires token.
+ * Configuration options for {@link AnswersCore}, which includes the
+ * options from {@link BaseAnswersConfig}, but requires token.
  * @public
  */
 export interface AnswersConfigWithToken extends BaseAnswersConfig {
