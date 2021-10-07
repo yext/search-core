@@ -17,6 +17,10 @@ describe('AutocompleteService', () => {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en',
+    visitor: {
+      id: '123',
+      idMethod: 'YEXT_AUTH'
+    }
   };
   const mockHttpService = new HttpServiceMock();
   const apiResponseValidator = new ApiResponseValidator();
@@ -35,7 +39,11 @@ describe('AutocompleteService', () => {
         api_key: 'testApiKey',
         v: 20190101,
         locale: 'en',
-        sessionTrackingEnabled: false
+        sessionTrackingEnabled: false,
+        visitor: JSON.stringify({
+          id: '123',
+          idMethod: 'YEXT_AUTH'
+        })
       };
       const autocompleteService = new AutocompleteServiceImpl(
         config,
@@ -63,7 +71,11 @@ describe('AutocompleteService', () => {
         v: 20190101,
         locale: 'en',
         sessionTrackingEnabled: false,
-        verticalKey: 'verticalKey'
+        verticalKey: 'verticalKey',
+        visitor: JSON.stringify({
+          id: '123',
+          idMethod: 'YEXT_AUTH'
+        })
       };
       const autocompleteService = new AutocompleteServiceImpl(
         config,
@@ -106,7 +118,11 @@ describe('AutocompleteService', () => {
         locale: 'en',
         sessionTrackingEnabled: false,
         verticalKey: 'verticalKey',
-        search_parameters: JSON.stringify(convertedSearchParams)
+        search_parameters: JSON.stringify(convertedSearchParams),
+        visitor: JSON.stringify({
+          id: '123',
+          idMethod: 'YEXT_AUTH'
+        })
       };
       const autocompleteService = new AutocompleteServiceImpl(
         config,

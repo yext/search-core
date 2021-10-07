@@ -22,7 +22,11 @@ describe('SearchService', () => {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'es',
-    experienceVersion: 'PRODUCTION'
+    experienceVersion: 'PRODUCTION',
+    visitor: {
+      id: '123',
+      idMethod: 'YEXT_AUTH'
+    }
   };
 
   const apiResponseValidator = new ApiResponseValidator();
@@ -84,7 +88,7 @@ describe('SearchService', () => {
         },
         referrerPageUrl: 'yext.com',
         querySource: QuerySource.Standard,
-        limit: { people: 17 }
+        limit: { people: 17 },
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
@@ -101,7 +105,11 @@ describe('SearchService', () => {
         skipSpellCheck: true,
         v: 20190101,
         version: 'PRODUCTION',
-        source: 'STANDARD'
+        source: 'STANDARD',
+        visitor: JSON.stringify({
+          id: '123',
+          idMethod: 'YEXT_AUTH'
+        })
       };
       await searchServiceWithAllParams.universalSearch(requestWithAllParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
@@ -232,6 +240,10 @@ describe('SearchService', () => {
         v: 20190101,
         version: 'PRODUCTION',
         verticalKey: 'verticalKey',
+        visitor: JSON.stringify({
+          id: '123',
+          idMethod: 'YEXT_AUTH'
+        })
       };
       await searchServiceWithAllParams.verticalSearch(requestWithAllParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);

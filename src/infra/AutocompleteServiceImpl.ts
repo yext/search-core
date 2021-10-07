@@ -70,6 +70,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       version: this.config.experienceVersion,
       locale: this.config.locale,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
+      visitor: JSON.stringify(this.config.visitor),
       ...this.config?.additionalQueryParams
     };
 
@@ -101,6 +102,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       locale: this.config.locale,
       verticalKey: request.verticalKey,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
+      visitor: JSON.stringify(this.config.visitor),
       ...this.config?.additionalQueryParams
     };
 
@@ -137,6 +139,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       search_parameters: JSON.stringify(searchParams),
       verticalKey: request.verticalKey,
       sessionTrackingEnabled: request.sessionTrackingEnabled,
+      visitor: JSON.stringify(this.config.visitor),
       ...this.config?.additionalQueryParams
     };
 
