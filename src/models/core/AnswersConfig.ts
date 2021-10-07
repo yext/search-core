@@ -1,4 +1,5 @@
 import { Endpoints } from './Endpoints';
+import { Visitor } from './Visitor';
 
 /**
  * The main configuration options for {@link AnswersCore}.
@@ -22,6 +23,8 @@ export interface AnswersConfig {
    * Examples: 'PRODUCTION', 42
    */
   experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number,
+  /** {@inheritDoc Visitor} */
+  visitor?: Visitor,
   /**
    * {@inheritDoc Endpoints}
    *

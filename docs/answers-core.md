@@ -72,6 +72,7 @@
 |  [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical. |
 |  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
 |  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search. |
+|  [Visitor](./answers-core.visitor.md) | Information used to associate requests with a particular user. |
 
 ## Type Aliases
 
