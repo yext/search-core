@@ -6,7 +6,7 @@
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
-    "declarationMap": true,
+    "declarationMap": false,
     "sourceMap": true
   },
   "include": [
