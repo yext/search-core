@@ -1,6 +1,7 @@
 const path = require('path');
 
 module.exports = [{
+  mode: 'development',
   entry: './src/ts/index.ts',
   module: {
     rules: [
@@ -20,6 +21,7 @@ module.exports = [{
     libraryTarget: 'window'
   },
 }, {
+  mode: 'development',
   entry: './src/js/index.js',
   resolve: {
     extensions: [ '.js' ]

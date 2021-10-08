@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "testing of the answers-core",
   "private": "true",
-  "dependencies": {
-    "@yext/answers-core": "file:../.."
-  },
   "devDependencies": {
     "ts-loader": "^8.0.11",
     "typescript": "^4.0.5",
@@ -15,7 +12,8 @@
   "scripts": {
     "build": "npx webpack",
     "dev": "npx webpack --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "npm link .."
   },
   "author": "",
   "license": "ISC"
