@@ -1,8 +1,8 @@
-### Answers Core Test Site
+# Answers Core Test Site
 
 This is a barebones site for testing answers-core
 
-#### Instructions
+## Instructions
 
 1. `npm run dev` for the answers-core src
 2. `npm install` in the test-site
