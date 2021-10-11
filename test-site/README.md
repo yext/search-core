@@ -1,6 +1,6 @@
 ### Answers Core Test Site
 
-This is a barebones site for testing the answers-core
+This is a barebones site for testing answers-core
 
 #### Instructions
 
@@ -8,4 +8,4 @@ This is a barebones site for testing the answers-core
 2. `npm install` in the test-site
 3. `npm run dev` in the test-site
 
-This will build both an index.html, and js-index.html that use answers-core.
+This will build both an index.html and a js-index.html that use answers-core.
