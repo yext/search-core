@@ -9,6 +9,7 @@ export {
   BaseAnswersConfig
 } from './core/AnswersConfig';
 export { Endpoints } from './core/Endpoints';
+export { Visitor } from './core/Visitor';
 
 // Autocomplete service
 export * from './autocompleteservice/AutocompleteRequest';

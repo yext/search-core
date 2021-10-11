@@ -83,6 +83,7 @@ export interface BaseAnswersConfig {
     experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
     locale: string;
     token?: string;
+    visitor?: Visitor;
 }
 
 // @public
@@ -463,6 +464,12 @@ export interface VerticalSearchResponse {
     spellCheck?: SpellCheck;
     uuid: string;
     verticalResults: VerticalResults;
+}
+
+// @public
+export interface Visitor {
+    id: string;
+    idMethod?: string;
 }
 
 

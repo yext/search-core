@@ -22,4 +22,5 @@ export interface BaseAnswersConfig
 |  [experienceVersion?](./answers-core.baseanswersconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the answers experience configuration. |
 |  [locale](./answers-core.baseanswersconfig.locale.md) | string | The locale of the answers experience. |
 |  [token?](./answers-core.baseanswersconfig.token.md) | string | <i>(Optional)</i> The authentication token of the answers experience. |
+|  [visitor?](./answers-core.baseanswersconfig.visitor.md) | [Visitor](./answers-core.visitor.md) | <i>(Optional)</i> Information used to associate requests with a particular user. |
 

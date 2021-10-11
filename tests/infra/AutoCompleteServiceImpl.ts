@@ -17,6 +17,10 @@ describe('AutocompleteService', () => {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en',
+    visitor: {
+      id: '123',
+      idMethod: 'YEXT_AUTH'
+    }
   };
 
   const configWithToken: AnswersConfig = {
@@ -45,6 +49,22 @@ describe('AutocompleteService', () => {
 
     it('query params are correct with apiKey', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
+      const request: UniversalAutocompleteRequest = {
+        input: '',
+        sessionTrackingEnabled: false
+      };
+      const expectedQueryParams = {
+        input: '',
+        experienceKey: 'testExperienceKey',
+        api_key: 'testApiKey',
+        v: 20190101,
+        locale: 'en',
+        sessionTrackingEnabled: false,
+        visitor: JSON.stringify({
+          id: '123',
+          idMethod: 'YEXT_AUTH'
+        })
+      };
       const autocompleteService = new AutocompleteServiceImpl(
         config,
         mockHttpService as HttpService,
@@ -89,6 +109,24 @@ describe('AutocompleteService', () => {
 
     it('query params are correct with apiKey', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
+      const request: VerticalAutocompleteRequest = {
+        input: 'salesforce',
+        sessionTrackingEnabled: false,
+        verticalKey: 'verticalKey'
+      };
+      const expectedQueryParams = {
+        input: 'salesforce',
+        experienceKey: 'testExperienceKey',
+        api_key: 'testApiKey',
+        v: 20190101,
+        locale: 'en',
+        sessionTrackingEnabled: false,
+        verticalKey: 'verticalKey',
+        visitor: JSON.stringify({
+          id: '123',
+          idMethod: 'YEXT_AUTH'
+        })
+      };
       const autocompleteService = new AutocompleteServiceImpl(
         config,
         mockHttpService as HttpService,
@@ -116,49 +154,41 @@ describe('AutocompleteService', () => {
 
   describe('FilterSearch', () => {
     const expectedFilterUrl = defaultEndpoints.filterSearch;
-    const convertedSearchParams = {
-      sectioned: false,
-      fields: [{
-        fieldId: 'field',
-        entityTypeId: 'location',
-        shouldFetchEntities: false
-      }]
-    };
-    const request: FilterSearchRequest = {
-      input: 'salesforce',
-      sessionTrackingEnabled: false,
-      verticalKey: 'verticalKey',
-      sectioned: false,
-      fields: [{
-        fieldApiName: 'field',
-        entityType: 'location',
-        fetchEntities: false
-      }]
-    };
-    const expectedQueryParams = {
-      input: 'salesforce',
-      experienceKey: 'testExperienceKey',
-      api_key: 'testApiKey',
-      v: 20190101,
-      locale: 'en',
-      sessionTrackingEnabled: false,
-      verticalKey: 'verticalKey',
-      search_parameters: JSON.stringify(convertedSearchParams)
-    };
-
     it('query params are correct', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
-      const autocompleteService = new AutocompleteServiceImpl(
-        config,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
-      await autocompleteService.filterSearch(request);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams, undefined);
-    });
-
-    it('query params are correct', async () => {
-      mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
+      const convertedSearchParams = {
+        sectioned: false,
+        fields: [{
+          fieldId: 'field',
+          entityTypeId: 'location',
+          shouldFetchEntities: false
+        }]
+      };
+      const request: FilterSearchRequest = {
+        input: 'salesforce',
+        sessionTrackingEnabled: false,
+        verticalKey: 'verticalKey',
+        sectioned: false,
+        fields: [{
+          fieldApiName: 'field',
+          entityType: 'location',
+          fetchEntities: false
+        }]
+      };
+      const expectedQueryParams = {
+        input: 'salesforce',
+        experienceKey: 'testExperienceKey',
+        api_key: 'testApiKey',
+        v: 20190101,
+        locale: 'en',
+        sessionTrackingEnabled: false,
+        verticalKey: 'verticalKey',
+        search_parameters: JSON.stringify(convertedSearchParams),
+        visitor: JSON.stringify({
+          id: '123',
+          idMethod: 'YEXT_AUTH'
+        })
+      };
       const autocompleteService = new AutocompleteServiceImpl(
         config,
         mockHttpService as HttpService,
