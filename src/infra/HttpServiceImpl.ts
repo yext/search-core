@@ -26,6 +26,7 @@ export class HttpServiceImpl implements HttpService {
   ): Promise<T> {
     return this.fetch(url, queryParams, {
       method: RequestMethods.GET,
+      mode: 'cors',
       credentials: 'include',
       ...(authToken && { headers: { Authorization: `Bearer ${authToken}` }}),
     }).then(res => res.json());
@@ -45,6 +46,7 @@ export class HttpServiceImpl implements HttpService {
       method: RequestMethods.POST,
       body: JSON.stringify(sanitizedBodyParams),
       mode: 'cors',
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
         ...(authToken && { Authorization: `Bearer ${authToken}`}),

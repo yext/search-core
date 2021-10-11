@@ -17,6 +17,7 @@ describe('HttpServiceImpl', () => {
     await httpServiceImpl.get('http://yext.com', queryParams);
     const expectedReqInit = {
       method: 'get',
+      mode: 'cors',
       credentials: 'include'
     };
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);
@@ -31,6 +32,7 @@ describe('HttpServiceImpl', () => {
     await httpServiceImpl.get('http://yext.com', queryParams, authToken);
     const expectedReqInit = {
       method: 'get',
+      mode: 'cors',
       credentials: 'include',
       headers: {
         Authorization: `Bearer ${authToken}`
@@ -51,6 +53,7 @@ describe('HttpServiceImpl', () => {
       method: 'post',
       body: '{\"data\":\"123\"}',
       mode: 'cors',
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json'
       }
@@ -72,6 +75,7 @@ describe('HttpServiceImpl', () => {
       method: 'post',
       body: '{\"data\":\"123\"}',
       mode: 'cors',
+      credentials: 'include',
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${authToken}`
