@@ -76,10 +76,9 @@ export interface AnswersConfigWithToken extends BaseAnswersConfig {
 }
 
 /**
- * The main configuration options for {@link AnswersCore}
- * that requires either apiKey ({@link AnswersConfigWithApiKey})
- * or token ({@link AnswersConfigWithToken}) in addition to the
- * options specified in {@link BaseAnswersConfig}.
+ * The main configuration options for {@link AnswersCore}.
+ * For a full description of the options, see {@link BaseAnswersConfig}.
+ * The config requires either an apiKey or a token.
  *
  * @public
  */

@@ -4,7 +4,7 @@
 
 ## AnswersConfig type
 
-The main configuration options for [AnswersCore](./answers-core.answerscore.md) that requires either apiKey ([AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md)<!-- -->) or token ([AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md)<!-- -->) in addition to the options specified in [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->.
+The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->. The config requires either an apiKey or a token.
 
 <b>Signature:</b>
 
