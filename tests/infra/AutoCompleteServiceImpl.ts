@@ -22,12 +22,32 @@ describe('AutocompleteService', () => {
       idMethod: 'YEXT_AUTH'
     }
   };
+
+  const configWithToken: AnswersConfig = {
+    token: 'testToken',
+    experienceKey: 'testExperienceKey',
+    locale: 'en',
+  };
+
   const mockHttpService = new HttpServiceMock();
   const apiResponseValidator = new ApiResponseValidator();
 
   describe('Universal Autocomplete', () => {
     const expectedUniversalUrl = defaultEndpoints.universalAutocomplete;
-    it('query params are correct', async () => {
+    const request: UniversalAutocompleteRequest = {
+      input: '',
+      sessionTrackingEnabled: false
+    };
+    const expectedQueryParams = {
+      input: '',
+      experienceKey: 'testExperienceKey',
+      api_key: 'testApiKey',
+      v: 20190101,
+      locale: 'en',
+      sessionTrackingEnabled: false
+    };
+
+    it('query params are correct with apiKey', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
       const request: UniversalAutocompleteRequest = {
         input: '',
@@ -51,13 +71,43 @@ describe('AutocompleteService', () => {
         apiResponseValidator
       );
       await autocompleteService.universalAutocomplete(request);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, undefined);
+    });
+
+    it('query params are correct with token', async () => {
+      mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
+      const autocompleteService = new AutocompleteServiceImpl(
+        configWithToken,
+        mockHttpService as HttpService,
+        apiResponseValidator
+      );
+
+      const { ...expectedParams } = expectedQueryParams;
+      delete expectedParams.api_key;
+      await autocompleteService.universalAutocomplete(request);
+      expect(mockHttpService.get)
+        .toHaveBeenCalledWith(expectedUniversalUrl, expectedParams, 'testToken');
     });
   });
 
   describe('Vertical Autocomplete', () => {
     const expectedVerticalUrl = defaultEndpoints.verticalAutocomplete;
-    it('query params are correct', async () => {
+    const request: VerticalAutocompleteRequest = {
+      input: 'salesforce',
+      sessionTrackingEnabled: false,
+      verticalKey: 'verticalKey'
+    };
+    const expectedQueryParams = {
+      input: 'salesforce',
+      experienceKey: 'testExperienceKey',
+      api_key: 'testApiKey',
+      v: 20190101,
+      locale: 'en',
+      sessionTrackingEnabled: false,
+      verticalKey: 'verticalKey'
+    };
+
+    it('query params are correct with apiKey', async () => {
       mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
       const request: VerticalAutocompleteRequest = {
         input: 'salesforce',
@@ -83,7 +133,22 @@ describe('AutocompleteService', () => {
         apiResponseValidator
       );
       await autocompleteService.verticalAutocomplete(request);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams, undefined);
+    });
+
+    it('query params are correct with token', async () => {
+      mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
+      const autocompleteService = new AutocompleteServiceImpl(
+        configWithToken,
+        mockHttpService as HttpService,
+        apiResponseValidator
+      );
+
+      const { ...expectedParams } = expectedQueryParams;
+      delete expectedParams.api_key;
+      await autocompleteService.verticalAutocomplete(request);
+      expect(mockHttpService.get)
+        .toHaveBeenCalledWith(expectedVerticalUrl, expectedParams, 'testToken');
     });
   });
 
@@ -130,7 +195,7 @@ describe('AutocompleteService', () => {
         apiResponseValidator
       );
       await autocompleteService.filterSearch(request);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams, undefined);
     });
   });
 });

@@ -22,10 +22,13 @@ export class HttpServiceImpl implements HttpService {
   get<T>(
     url: string,
     queryParams: QueryParams,
+    authToken?: string,
   ): Promise<T> {
     return this.fetch(url, queryParams, {
       method: RequestMethods.GET,
-      credentials: 'include'
+      mode: 'cors',
+      credentials: 'include',
+      ...(authToken && { headers: { Authorization: `Bearer ${authToken}` }}),
     }).then(res => res.json());
   }
 
@@ -35,15 +38,18 @@ export class HttpServiceImpl implements HttpService {
   post<T>(
     url: string,
     queryParams: QueryParams,
-    body: QueryParams
+    body: QueryParams,
+    authToken?: string
   ): Promise<T> {
     const sanitizedBodyParams = sanitizeQueryParams(body);
     return this.fetch(url, queryParams, {
       method: RequestMethods.POST,
       body: JSON.stringify(sanitizedBodyParams),
       mode: 'cors',
+      credentials: 'include',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        ...(authToken && { Authorization: `Bearer ${authToken}`}),
       }
     })
       .then(res => res.json());

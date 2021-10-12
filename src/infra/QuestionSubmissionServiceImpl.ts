@@ -51,7 +51,8 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
     const response = await this.httpService.post<ApiResponse>(
       this.endpoint,
       queryParams,
-      body
+      body,
+      this.config.token
     );
 
     const validationResult = this.apiResponseValidator.validate(response);

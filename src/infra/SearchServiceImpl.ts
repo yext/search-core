@@ -25,7 +25,7 @@ import { LatLong } from '../models/searchservice/request/LatLong';
 interface UniversalSearchQueryParams extends QueryParams {
   input: string,
   experienceKey: string,
-  api_key: string,
+  api_key?: string,
   v: number,
   version?: string | number,
   location?: string,
@@ -46,7 +46,7 @@ interface UniversalSearchQueryParams extends QueryParams {
  */
 interface VerticalSearchQueryParams extends QueryParams {
   experienceKey: string,
-  api_key: string,
+  api_key?: string,
   v: number,
   version?: string | number,
   locale?: string,
@@ -118,7 +118,11 @@ export class SearchServiceImpl implements SearchService {
     };
 
     const response =
-      await this.httpService.get<ApiResponse>(this.universalSearchEndpoint, queryParams);
+      await this.httpService.get<ApiResponse>(
+        this.universalSearchEndpoint,
+        queryParams,
+        this.config.token
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -158,7 +162,11 @@ export class SearchServiceImpl implements SearchService {
     };
 
     const response =
-      await this.httpService.get<ApiResponse>(this.verticalSearchEndpoint, queryParams);
+      await this.httpService.get<ApiResponse>(
+        this.verticalSearchEndpoint,
+        queryParams,
+        this.config.token
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
