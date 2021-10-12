@@ -2,7 +2,12 @@
 export { AnswersError } from './answersapi/AnswersError';
 
 // Core models
-export { AnswersConfig } from './core/AnswersConfig';
+export {
+  AnswersConfig,
+  AnswersConfigWithToken,
+  AnswersConfigWithApiKey,
+  BaseAnswersConfig
+} from './core/AnswersConfig';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';
 

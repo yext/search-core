@@ -76,7 +76,8 @@ export class AutocompleteServiceImpl implements AutocompleteService {
 
     const response = await this.httpService.get<ApiResponse>(
       this.universalEndpoint,
-      queryParams);
+      queryParams,
+      this.config.token);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -108,7 +109,8 @@ export class AutocompleteServiceImpl implements AutocompleteService {
 
     const response = await this.httpService.get<ApiResponse>(
       this.verticalEndpoint,
-      queryParams);
+      queryParams,
+      this.config.token);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -145,7 +147,8 @@ export class AutocompleteServiceImpl implements AutocompleteService {
 
     const response = await this.httpService.get<ApiResponse>(
       this.filterEndpoint,
-      queryParams);
+      queryParams,
+      this.config.token);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {

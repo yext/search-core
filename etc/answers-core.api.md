@@ -5,17 +5,18 @@
 ```ts
 
 // @public
-export interface AnswersConfig {
-    // @alpha
-    additionalQueryParams?: {
-        [key: string]: string | number | boolean;
-    };
+export type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;
+
+// @public
+export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
     apiKey: string;
-    endpoints?: Endpoints;
-    experienceKey: string;
-    experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
-    locale: string;
-    visitor?: Visitor;
+    token?: never;
+}
+
+// @public
+export interface AnswersConfigWithToken extends BaseAnswersConfig {
+    apiKey?: never;
+    token: string;
 }
 
 // @public
@@ -68,6 +69,21 @@ export interface AutocompleteResult {
     }[];
     relatedItem?: Result;
     value: string;
+}
+
+// @public
+export interface BaseAnswersConfig {
+    // @alpha
+    additionalQueryParams?: {
+        [key: string]: string | number | boolean;
+    };
+    apiKey?: string;
+    endpoints?: Endpoints;
+    experienceKey: string;
+    experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
+    locale: string;
+    token?: string;
+    visitor?: Visitor;
 }
 
 // @public
