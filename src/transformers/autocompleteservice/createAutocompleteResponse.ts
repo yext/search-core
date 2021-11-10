@@ -1,4 +1,4 @@
-import { AutocompleteResponse, AutocompleteResult, FilterSearchResponse } from '../../models/autocompleteservice/AutocompleteResponse';
+import { AutocompleteResponse, FilterSearchResponse } from '../../models/autocompleteservice/AutocompleteResponse';
 import { createAutocompleteResult } from './createAutocompleteResult';
 
 export function createAutocompleteResponse(data: any): AutocompleteResponse {
@@ -29,26 +29,16 @@ export function createFilterSearchResponse(data: any): FilterSearchResponse {
   }
 
   const response = data.response;
-  let isSectioned = false;
-  let sections = [];
-  let responseResults: AutocompleteResult[] = [];
-  // a filtersearch response may have a sections object
-  if (response.sections) {
-    isSectioned = true;
-    sections = response.sections.map((section: any) => ({
-      label: section.label,
-      results: section.results.map(createAutocompleteResult)
-    }));
-  } else {
-    responseResults = response.results.map(createAutocompleteResult);
-  }
-  const inputIntents = response.input ? response.input.queryIntents : [];
+  const sections = response.sections.map((section: any) => ({
+    label: section.label,
+    results: section.results.map(createAutocompleteResult)
+  }));
+
   return {
-    sectioned: isSectioned,
     sections: sections,
-    results: responseResults,
     queryId: response.queryId,
-    inputIntents: inputIntents || [],
+    businessId: response.businessId,
+    failedVerticals: response.failedVerticals || [],
     uuid: data.meta.uuid
   };
 }

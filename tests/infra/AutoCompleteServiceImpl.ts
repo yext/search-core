@@ -245,6 +245,13 @@ describe('additionalQueryParams are passed through', () => {
   });
 
   it('FilterSearch', async () => {
+    mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
+    apiResponseValidator = new ApiResponseValidator();
+    autocompleteService = new AutocompleteServiceImpl(
+      config,
+      mockHttpService as HttpService,
+      apiResponseValidator
+    );
     const request: FilterSearchRequest = {
       input: 'salesforce',
       verticalKey: 'verticalKey',

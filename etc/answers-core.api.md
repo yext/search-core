@@ -208,12 +208,19 @@ export interface FilterSearchRequest {
 
 // @public
 export interface FilterSearchResponse {
-    inputIntents: SearchIntent[];
+    businessId?: string;
+    failedVerticals: {
+        verticalConfigId: string;
+        errorType: ErrorType;
+        details: {
+            responseCode: number;
+            description: string;
+        };
+        queryDurationMillis: number;
+    }[];
     queryId?: string;
-    results: AutocompleteResult[];
-    sectioned: boolean;
     sections: {
-        label: string;
+        label?: string;
         results: AutocompleteResult[];
     }[];
     uuid: string;
@@ -472,6 +479,10 @@ export interface Visitor {
     idMethod?: string;
 }
 
+
+// Warnings were encountered during analysis:
+//
+// src/models/autocompleteservice/AutocompleteResponse.ts:50:7 - (ae-forgotten-export) The symbol "ErrorType" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 
