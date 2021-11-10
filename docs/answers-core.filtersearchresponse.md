@@ -17,7 +17,7 @@ export interface FilterSearchResponse
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [businessId?](./answers-core.filtersearchresponse.businessid.md) | string | <i>(Optional)</i> ID of the account associated with this Answers experience |
-|  [failedVerticals](./answers-core.filtersearchresponse.failedverticals.md) | { verticalConfigId: string; errorType: ErrorType; details: { responseCode: number; description: string; }; queryDurationMillis: number; }\[\] | Contains error information when one or more verticals fail to return results. |
+|  [failedVerticals](./answers-core.filtersearchresponse.failedverticals.md) | { verticalConfigId: string; errorType: [ErrorType](./answers-core.errortype.md)<!-- -->; details: { responseCode: number; description: string; }; queryDurationMillis: number; }\[\] | Contains error information when one or more verticals fail to return results. |
 |  [queryId?](./answers-core.filtersearchresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
 |  [sections](./answers-core.filtersearchresponse.sections.md) | { label?: string; results: [AutocompleteResult](./answers-core.autocompleteresult.md)<!-- -->\[\]; }\[\] | Represents autocomplete results separated by field. |
 |  [uuid](./answers-core.filtersearchresponse.uuid.md) | string | A unique id which corresponds to the request. |

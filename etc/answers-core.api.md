@@ -151,6 +151,14 @@ export interface Endpoints {
 }
 
 // @public
+export enum ErrorType {
+    BackendError = "BACKEND_ERROR",
+    InvalidConfig = "INVALID_CONFIG",
+    InvalidQuery = "INVALID_QUERY",
+    Timeout = "TIMEOUT"
+}
+
+// @public
 export interface Facet {
     fieldId: string;
     options: FacetOption[];
@@ -479,10 +487,6 @@ export interface Visitor {
     idMethod?: string;
 }
 
-
-// Warnings were encountered during analysis:
-//
-// src/models/autocompleteservice/AutocompleteResponse.ts:50:7 - (ae-forgotten-export) The symbol "ErrorType" needs to be exported by the entry point index.d.ts
 
 // (No @packageDocumentation comment for this package)
 
