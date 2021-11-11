@@ -151,14 +151,6 @@ export interface Endpoints {
 }
 
 // @public
-export enum ErrorType {
-    BackendError = "BACKEND_ERROR",
-    InvalidConfig = "INVALID_CONFIG",
-    InvalidQuery = "INVALID_QUERY",
-    Timeout = "TIMEOUT"
-}
-
-// @public
 export interface Facet {
     fieldId: string;
     options: FacetOption[];
@@ -217,15 +209,6 @@ export interface FilterSearchRequest {
 // @public
 export interface FilterSearchResponse {
     businessId?: string;
-    failedVerticals: {
-        verticalConfigId: string;
-        errorType: ErrorType;
-        details: {
-            responseCode: number;
-            description: string;
-        };
-        queryDurationMillis: number;
-    }[];
     queryId?: string;
     sections: {
         label?: string;

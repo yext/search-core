@@ -50,7 +50,6 @@ describe('AutocompleteResponse', () => {
         }
       ],
       businessId: 2287528,
-      failedVerticals: [],
       queryId: '42d5b709-3b9f-464a-b9b5-764467cbf540',
       uuid: '266f5720-2829-46f0-808f-651075879692'
     };
@@ -134,7 +133,6 @@ describe('AutocompleteResponse', () => {
         }
       ],
       businessId: 2287528,
-      failedVerticals: [],
       queryId: '42d5b709-3b9f-464a-b9b5-764467cbf540',
       uuid: '266f5720-2829-46f0-808f-651075879692'
     };

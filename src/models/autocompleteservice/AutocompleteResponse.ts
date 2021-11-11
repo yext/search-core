@@ -1,7 +1,6 @@
 import { Filter } from '../searchservice/request/Filter';
 import { SearchIntent } from '../searchservice/response/SearchIntent';
 import { Result } from '../searchservice/response/Result';
-import { ErrorType } from '../../models/searchservice/response/ErrorType';
 
 /**
  * The response of a universal or vertical autocomplete request.
@@ -41,22 +40,6 @@ export interface FilterSearchResponse {
     label?: string,
     /** An array of {@link AutocompleteResult}s. */
     results: AutocompleteResult[];
-  }[],
-  /** Contains error information when one or more verticals fail to return results. */
-  failedVerticals: {
-    /** a key that uniquely identifies the vertical. */
-    verticalConfigId: string,
-    /** type of error causing the failure. */
-    errorType: ErrorType,
-    /** additional information related to the error. */
-    details: {
-      /** An HTTP response status code indicating the completion status of the request. */
-      responseCode: number,
-      /** Message explaining the error. */
-      description: string
-    },
-    /** The duration of the query in milliseconds. */
-    queryDurationMillis: number
   }[],
   /** ID of the account associated with this Answers experience */
   businessId?: string,
