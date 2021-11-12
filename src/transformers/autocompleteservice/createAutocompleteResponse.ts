@@ -1,4 +1,5 @@
-import { AutocompleteResponse, AutocompleteResult, FilterSearchResponse } from '../../models/autocompleteservice/AutocompleteResponse';
+import { AnswersError } from '../../models/answersapi/AnswersError';
+import { AutocompleteResponse, FilterSearchResponse } from '../../models/autocompleteservice/AutocompleteResponse';
 import { createAutocompleteResult } from './createAutocompleteResult';
 
 export function createAutocompleteResponse(data: any): AutocompleteResponse {
@@ -29,26 +30,19 @@ export function createFilterSearchResponse(data: any): FilterSearchResponse {
   }
 
   const response = data.response;
-  let isSectioned = false;
-  let sections = [];
-  let responseResults: AutocompleteResult[] = [];
-  // a filtersearch response may have a sections object
-  if (response.sections) {
-    isSectioned = true;
-    sections = response.sections.map((section: any) => ({
-      label: section.label,
-      results: section.results.map(createAutocompleteResult)
-    }));
-  } else {
-    responseResults = response.results.map(createAutocompleteResult);
+  if (response.failedVerticals && response.failedVerticals.length != 0) {
+    const error = response.failedVerticals[0];
+    throw new AnswersError(error.details.description, error.details.responseCode, error.errorType);
   }
-  const inputIntents = response.input ? response.input.queryIntents : [];
+  const sections = response.sections.map((section: any) => ({
+    label: section.label,
+    results: section.results.map(createAutocompleteResult)
+  }));
+
   return {
-    sectioned: isSectioned,
     sections: sections,
-    results: responseResults,
     queryId: response.queryId,
-    inputIntents: inputIntents || [],
+    businessId: response.businessId,
     uuid: data.meta.uuid
   };
 }
