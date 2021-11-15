@@ -8,5 +8,6 @@ export interface AutocompleteQueryParams extends QueryParams {
   version?: string | number,
   locale?: string,
   sessionTrackingEnabled?: boolean,
-  visitor?: string
+  visitorId?: string,
+  visitorIdMethod?: string,
 }
