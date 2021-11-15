@@ -37,9 +37,8 @@
 
 |  Interface | Description |
 |  --- | --- |
-|  [AnswersConfig](./answers-core.answersconfig.md) | The base configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
-|  [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from , but requires apiKey. |
-|  [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from , but requires token. |
+|  [AnswersConfig](./answers-core.answersconfig.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
+|  [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [AnswersConfig](./answers-core.answersconfig.md)<!-- -->, but requires token instead of apiKey. |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutocompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |

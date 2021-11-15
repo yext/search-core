@@ -65,7 +65,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     const queryParams: AutocompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
-      api_key: this.config.apiKey,
+      ...('apiKey' in this.config && { api_key: this.config.apiKey }),
       v: defaultApiVersion,
       version: this.config.experienceVersion,
       locale: this.config.locale,
@@ -74,10 +74,9 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ...this.config?.additionalQueryParams
     };
 
-    const response = await this.httpService.get<ApiResponse>(
-      this.universalEndpoint,
-      queryParams,
-      this.config.token);
+    const response = 'token' in this.config
+      ? await this.httpService.get<ApiResponse>(this.universalEndpoint, queryParams, this.config.token)
+      : await this.httpService.get<ApiResponse>(this.universalEndpoint, queryParams);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -97,7 +96,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     const queryParams: VerticalAutocompleteQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
-      api_key: this.config.apiKey,
+      ...('apiKey' in this.config && { api_key: this.config.apiKey }),
       v: defaultApiVersion,
       version: this.config.experienceVersion,
       locale: this.config.locale,
@@ -107,10 +106,9 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ...this.config?.additionalQueryParams
     };
 
-    const response = await this.httpService.get<ApiResponse>(
-      this.verticalEndpoint,
-      queryParams,
-      this.config.token);
+    const response = 'token' in this.config
+      ? await this.httpService.get<ApiResponse>(this.verticalEndpoint, queryParams, this.config.token)
+      : await this.httpService.get<ApiResponse>(this.verticalEndpoint, queryParams);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -134,7 +132,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     const queryParams: FilterSearchQueryParams = {
       input: request.input,
       experienceKey: this.config.experienceKey,
-      api_key: this.config.apiKey,
+      ...('apiKey' in this.config && { api_key: this.config.apiKey }),
       v: defaultApiVersion,
       version: this.config.experienceVersion,
       locale: this.config.locale,
@@ -145,10 +143,9 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ...this.config?.additionalQueryParams
     };
 
-    const response = await this.httpService.get<ApiResponse>(
-      this.filterEndpoint,
-      queryParams,
-      this.config.token);
+    const response = 'token' in this.config
+      ? await this.httpService.get<ApiResponse>(this.filterEndpoint, queryParams, this.config.token)
+      : await this.httpService.get<ApiResponse>(this.filterEndpoint, queryParams);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {

@@ -100,7 +100,7 @@ export class SearchServiceImpl implements SearchService {
     const queryParams: UniversalSearchQueryParams = {
       input: request.query,
       experienceKey: this.config.experienceKey,
-      api_key: this.config.apiKey,
+      ...('apiKey' in this.config && { api_key: this.config.apiKey }),
       v: defaultApiVersion,
       version: this.config.experienceVersion,
       limit: JSON.stringify(request.limit),
@@ -117,11 +117,11 @@ export class SearchServiceImpl implements SearchService {
       ...this.config?.additionalQueryParams
     };
 
-    const response =
-      await this.httpService.get<ApiResponse>(
-        this.universalSearchEndpoint,
-        queryParams
-      );
+    //TODO: check why does didn't pass token before. do we have test for that
+
+    const response = 'token' in this.config
+      ? await this.httpService.get<ApiResponse>(this.universalSearchEndpoint, queryParams, this.config.token)
+      : await this.httpService.get<ApiResponse>(this.universalSearchEndpoint, queryParams);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -134,7 +134,7 @@ export class SearchServiceImpl implements SearchService {
   async verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse> {
     const queryParams: VerticalSearchQueryParams = {
       experienceKey: this.config.experienceKey,
-      api_key: this.config.apiKey,
+      ...('apiKey' in this.config && { api_key: this.config.apiKey }),
       v: defaultApiVersion,
       version: this.config.experienceVersion,
       locale: this.config.locale,
@@ -160,12 +160,9 @@ export class SearchServiceImpl implements SearchService {
       ...this.config?.additionalQueryParams
     };
 
-    const response =
-      await this.httpService.get<ApiResponse>(
-        this.verticalSearchEndpoint,
-        queryParams,
-        this.config.token
-      );
+    const response = 'token' in this.config
+      ? await this.httpService.get<ApiResponse>(this.verticalSearchEndpoint, queryParams, this.config.token)
+      : await this.httpService.get<ApiResponse>(this.verticalSearchEndpoint, queryParams);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {

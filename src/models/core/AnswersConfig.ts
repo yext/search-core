@@ -2,7 +2,7 @@ import { Endpoints } from './Endpoints';
 import { Visitor } from './Visitor';
 
 /**
- * The base configuration options for {@link AnswersCore}.
+ * Configuration options for {@link AnswersCore}.
  * @public
  */
 export interface AnswersConfig {
@@ -42,20 +42,10 @@ export interface AnswersConfig {
 
 /**
  * Configuration options for {@link AnswersCore}, which includes the
- * options from {@link BaseAnswersConfig}, but requires token.
+ * options from {@link AnswersConfig}, but requires token instead of apiKey.
  * @public
  */
 export interface AnswersConfigWithToken extends Omit<AnswersConfig,'apiKey'> {
-  /**
-   * {@inheritDoc BaseAnswersConfig.token}
-   */
-  token: string,
+  /** The authentication token of the answers experience. */
+  token: string
 }
-
-/**
- * The main configuration options for {@link AnswersCore}.
- * For a full description of the options, see {@link BaseAnswersConfig}.
- * The config requires either an apiKey or a token.
- *
- * @public
- */

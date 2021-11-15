@@ -19,19 +19,7 @@ export interface AnswersConfig {
 }
 
 // @public
-export interface AnswersConfigWithApiKey extends AnswersConfig {
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@yext/answers-core" does not have an export "BaseAnswersConfig"
-    //
-    // (undocumented)
-    apiKey: string;
-    token?: never;
-}
-
-// @public
-export interface AnswersConfigWithToken extends AnswersConfig {
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@yext/answers-core" does not have an export "BaseAnswersConfig"
-    //
-    // (undocumented)
+export interface AnswersConfigWithToken extends Omit<AnswersConfig, 'apiKey'> {
     token: string;
 }
 
