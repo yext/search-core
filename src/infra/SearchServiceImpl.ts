@@ -113,7 +113,8 @@ export class SearchServiceImpl implements SearchService {
       context: JSON.stringify(request.context),
       referrerPageUrl: request.referrerPageUrl,
       source: request.querySource || QuerySource.Standard,
-      visitor: JSON.stringify(this.config.visitor),
+      visitorId: this.config.visitor?.id,
+      visitorIdMethod: this.config.visitor?.idMethod,
       ...this.config?.additionalQueryParams
     };
 
@@ -157,7 +158,8 @@ export class SearchServiceImpl implements SearchService {
       source: request.querySource || QuerySource.Standard,
       locationRadius: request.locationRadius?.toString(),
       queryId: request.queryId,
-      visitor: JSON.stringify(this.config.visitor),
+      visitorId: this.config.visitor?.id,
+      visitorIdMethod: this.config.visitor?.idMethod,
       ...this.config?.additionalQueryParams
     };
 
