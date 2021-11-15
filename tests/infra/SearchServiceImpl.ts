@@ -137,10 +137,8 @@ describe('SearchService', () => {
         v: 20190101,
         version: 'PRODUCTION',
         source: 'STANDARD',
-        visitor: JSON.stringify({
-          id: '123',
-          idMethod: 'YEXT_AUTH'
-        })
+        visitorId: '123',
+        visitorIdMethod: 'YEXT_AUTH'
       };
       await searchServiceWithAllParams.universalSearch(requestWithAllParams);
       expect(mockHttpService.get)
@@ -290,10 +288,8 @@ describe('SearchService', () => {
         v: 20190101,
         version: 'PRODUCTION',
         verticalKey: 'verticalKey',
-        visitor: JSON.stringify({
-          id: '123',
-          idMethod: 'YEXT_AUTH'
-        })
+        visitorId: '123',
+        visitorIdMethod: 'YEXT_AUTH'
       };
       await searchServiceWithAllParams.verticalSearch(requestWithAllParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams, undefined);

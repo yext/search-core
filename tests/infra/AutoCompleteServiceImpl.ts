@@ -62,10 +62,8 @@ describe('AutocompleteService', () => {
         v: 20190101,
         locale: 'en',
         sessionTrackingEnabled: false,
-        visitor: JSON.stringify({
-          id: '123',
-          idMethod: 'YEXT_AUTH'
-        })
+        visitorId: '123',
+        visitorIdMethod: 'YEXT_AUTH'
       };
       const autocompleteService = new AutocompleteServiceImpl(
         config,
@@ -124,10 +122,8 @@ describe('AutocompleteService', () => {
         locale: 'en',
         sessionTrackingEnabled: false,
         verticalKey: 'verticalKey',
-        visitor: JSON.stringify({
-          id: '123',
-          idMethod: 'YEXT_AUTH'
-        })
+        visitorId: '123',
+        visitorIdMethod: 'YEXT_AUTH'
       };
       const autocompleteService = new AutocompleteServiceImpl(
         config,
@@ -186,10 +182,8 @@ describe('AutocompleteService', () => {
         sessionTrackingEnabled: false,
         verticalKey: 'verticalKey',
         search_parameters: JSON.stringify(convertedSearchParams),
-        visitor: JSON.stringify({
-          id: '123',
-          idMethod: 'YEXT_AUTH'
-        })
+        visitorId: '123',
+        visitorIdMethod: 'YEXT_AUTH'
       };
       const autocompleteService = new AutocompleteServiceImpl(
         config,
