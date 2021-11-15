@@ -5,8 +5,6 @@ export { AnswersError } from './answersapi/AnswersError';
 export {
   AnswersConfig,
   AnswersConfigWithToken,
-  AnswersConfigWithApiKey,
-  BaseAnswersConfig
 } from './core/AnswersConfig';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';

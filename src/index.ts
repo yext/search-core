@@ -2,7 +2,7 @@ import { AnswersCore } from './AnswersCore';
 import { SearchServiceImpl } from './infra/SearchServiceImpl';
 import { QuestionSubmissionServiceImpl } from './infra/QuestionSubmissionServiceImpl';
 import { HttpServiceImpl } from './infra/HttpServiceImpl';
-import { AnswersConfig } from './models/core/AnswersConfig';
+import { AnswersConfig, AnswersConfigWithToken } from './models/core/AnswersConfig';
 import { AutocompleteServiceImpl } from './infra/AutocompleteServiceImpl';
 import { ApiResponseValidator } from './validation/ApiResponseValidator';
 
@@ -16,11 +16,7 @@ import { ApiResponseValidator } from './validation/ApiResponseValidator';
  *
  * @public
  */
-export function provideCore(config: AnswersConfig): AnswersCore {
-  if (config.apiKey && config.token) {
-    throw new Error('Both apiKey and token are present. Only one authentication method should be provided');
-  }
-
+export function provideCore(config: AnswersConfig | AnswersConfigWithToken): AnswersCore {
   const httpService = new HttpServiceImpl();
   const apiResponseValidator = new ApiResponseValidator();
 

@@ -1,7 +1,7 @@
 import { defaultApiVersion, defaultEndpoints } from '../constants';
 import { QuestionSubmissionService } from '../services/QuestionSubmissionService';
 import { HttpService } from '../services/HttpService';
-import { AnswersConfig } from '../models/core/AnswersConfig';
+import { AnswersConfig, AnswersConfigWithToken } from '../models/core/AnswersConfig';
 import { QuestionSubmissionRequest } from '../models/questionsubmission/QuestionSubmissionRequest';
 import { QuestionSubmissionResponse } from '../models/questionsubmission/QuestionSubmissionResponse';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
@@ -13,13 +13,13 @@ import { ApiResponse } from '../models/answersapi/ApiResponse';
  * @internal
  */
 export class QuestionSubmissionServiceImpl implements QuestionSubmissionService {
-  private config: AnswersConfig;
+  private config: AnswersConfig | AnswersConfigWithToken;
   private httpService: HttpService;
   private apiResponseValidator: ApiResponseValidator;
   private endpoint: string;
 
   constructor(
-    config: AnswersConfig,
+    config: AnswersConfig | AnswersConfigWithToken,
     httpService: HttpService,
     apiResponseValidator: ApiResponseValidator
   ) {

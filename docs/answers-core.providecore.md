@@ -9,14 +9,14 @@ The entrypoint to the answers-core library.
 <b>Signature:</b>
 
 ```typescript
-export declare function provideCore(config: AnswersConfig): AnswersCore;
+export declare function provideCore(config: AnswersConfig | AnswersConfigWithToken): AnswersCore;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | [AnswersConfig](./answers-core.answersconfig.md) | The answers-core config |
+|  config | [AnswersConfig](./answers-core.answersconfig.md) \| [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md) | The answers-core config |
 
 <b>Returns:</b>
 

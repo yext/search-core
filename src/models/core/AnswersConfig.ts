@@ -5,11 +5,9 @@ import { Visitor } from './Visitor';
  * The base configuration options for {@link AnswersCore}.
  * @public
  */
-export interface BaseAnswersConfig {
+export interface AnswersConfig {
   /** The api key of the answers experience. */
-  apiKey?: string,
-  /** The authentication token of the answers experience. */
-  token?: string,
+  apiKey: string,
   /** The experience key of the answers experience. */
   experienceKey: string,
   /** The locale of the answers experience. */
@@ -42,37 +40,16 @@ export interface BaseAnswersConfig {
   }
 }
 
-
-/**
- * Configuration options for {@link AnswersCore}, which includes the
- * options from {@link BaseAnswersConfig}, but requires apiKey.
- * @public
- */
-export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
-  /**
-   * {@inheritDoc BaseAnswersConfig.apiKey}
-   */
-  apiKey: string,
-  /**
-   * token should NOT be provided along with apiKey
-   */
-  token?: never
-}
-
 /**
  * Configuration options for {@link AnswersCore}, which includes the
  * options from {@link BaseAnswersConfig}, but requires token.
  * @public
  */
-export interface AnswersConfigWithToken extends BaseAnswersConfig {
+export interface AnswersConfigWithToken extends Omit<AnswersConfig,'apiKey'> {
   /**
    * {@inheritDoc BaseAnswersConfig.token}
    */
   token: string,
-  /**
-   * apiKey should NOT be provided along with token
-   */
-  apiKey?: never
 }
 
 /**
@@ -82,4 +59,3 @@ export interface AnswersConfigWithToken extends BaseAnswersConfig {
  *
  * @public
  */
-export type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;

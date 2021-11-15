@@ -4,19 +4,18 @@
 
 ## AnswersConfigWithToken interface
 
-Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires token.
+Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from , but requires token.
 
 <b>Signature:</b>
 
 ```typescript
-export interface AnswersConfigWithToken extends BaseAnswersConfig 
+export interface AnswersConfigWithToken extends AnswersConfig 
 ```
-<b>Extends:</b> [BaseAnswersConfig](./answers-core.baseanswersconfig.md)
+<b>Extends:</b> [AnswersConfig](./answers-core.answersconfig.md)
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [apiKey?](./answers-core.answersconfigwithtoken.apikey.md) | never | <i>(Optional)</i> apiKey should NOT be provided along with token |
-|  [token](./answers-core.answersconfigwithtoken.token.md) | string | The authentication token of the answers experience. |
+|  [token](./answers-core.answersconfigwithtoken.token.md) | string |  |
 

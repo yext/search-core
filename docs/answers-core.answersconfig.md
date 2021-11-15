@@ -2,14 +2,24 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [AnswersConfig](./answers-core.answersconfig.md)
 
-## AnswersConfig type
+## AnswersConfig interface
 
-The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->. The config requires either an apiKey or a token.
+The base configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-export declare type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;
+export interface AnswersConfig 
 ```
-<b>References:</b> [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md)<!-- -->, [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md)
+
+## Properties
+
+|  Property | Type | Description |
+|  --- | --- | --- |
+|  [apiKey](./answers-core.answersconfig.apikey.md) | string | The api key of the answers experience. |
+|  [endpoints?](./answers-core.answersconfig.endpoints.md) | [Endpoints](./answers-core.endpoints.md) | <i>(Optional)</i> Overrides for the URLs which are used when making requests to the Answers API. |
+|  [experienceKey](./answers-core.answersconfig.experiencekey.md) | string | The experience key of the answers experience. |
+|  [experienceVersion?](./answers-core.answersconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the answers experience configuration. |
+|  [locale](./answers-core.answersconfig.locale.md) | string | The locale of the answers experience. |
+|  [visitor?](./answers-core.answersconfig.visitor.md) | [Visitor](./answers-core.visitor.md) | <i>(Optional)</i> Information used to associate requests with a particular user. |
 

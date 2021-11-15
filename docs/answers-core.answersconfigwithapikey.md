@@ -4,19 +4,19 @@
 
 ## AnswersConfigWithApiKey interface
 
-Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires apiKey.
+Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from , but requires apiKey.
 
 <b>Signature:</b>
 
 ```typescript
-export interface AnswersConfigWithApiKey extends BaseAnswersConfig 
+export interface AnswersConfigWithApiKey extends AnswersConfig 
 ```
-<b>Extends:</b> [BaseAnswersConfig](./answers-core.baseanswersconfig.md)
+<b>Extends:</b> [AnswersConfig](./answers-core.answersconfig.md)
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [apiKey](./answers-core.answersconfigwithapikey.apikey.md) | string | The api key of the answers experience. |
+|  [apiKey](./answers-core.answersconfigwithapikey.apikey.md) | string |  |
 |  [token?](./answers-core.answersconfigwithapikey.token.md) | never | <i>(Optional)</i> token should NOT be provided along with apiKey |
 

@@ -5,17 +5,33 @@
 ```ts
 
 // @public
-export type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;
+export interface AnswersConfig {
+    // @alpha
+    additionalQueryParams?: {
+        [key: string]: string | number | boolean;
+    };
+    apiKey: string;
+    endpoints?: Endpoints;
+    experienceKey: string;
+    experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
+    locale: string;
+    visitor?: Visitor;
+}
 
 // @public
-export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
+export interface AnswersConfigWithApiKey extends AnswersConfig {
+    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@yext/answers-core" does not have an export "BaseAnswersConfig"
+    //
+    // (undocumented)
     apiKey: string;
     token?: never;
 }
 
 // @public
-export interface AnswersConfigWithToken extends BaseAnswersConfig {
-    apiKey?: never;
+export interface AnswersConfigWithToken extends AnswersConfig {
+    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@yext/answers-core" does not have an export "BaseAnswersConfig"
+    //
+    // (undocumented)
     token: string;
 }
 
@@ -69,21 +85,6 @@ export interface AutocompleteResult {
     }[];
     relatedItem?: Result;
     value: string;
-}
-
-// @public
-export interface BaseAnswersConfig {
-    // @alpha
-    additionalQueryParams?: {
-        [key: string]: string | number | boolean;
-    };
-    apiKey?: string;
-    endpoints?: Endpoints;
-    experienceKey: string;
-    experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
-    locale: string;
-    token?: string;
-    visitor?: Visitor;
 }
 
 // @public
@@ -273,7 +274,7 @@ export interface NearFilterValue {
 }
 
 // @public
-export function provideCore(config: AnswersConfig): AnswersCore;
+export function provideCore(config: AnswersConfig | AnswersConfigWithToken): AnswersCore;
 
 // @public
 export enum QuerySource {
