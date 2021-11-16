@@ -1,6 +1,6 @@
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { SearchServiceImpl } from '../../src/infra/SearchServiceImpl';
-import { AnswersConfig, AnswersConfigWithToken } from '../../src/models/core/AnswersConfig';
+import { AnswersConfig } from '../../src/models/core/AnswersConfig';
 import { UniversalSearchRequest } from '../../src/models/searchservice/request/UniversalSearchRequest';
 import { HttpService } from '../../src/services/HttpService';
 import { QueryTrigger } from '../../src/models/searchservice/request/QueryTrigger';
@@ -18,7 +18,7 @@ describe('SearchService', () => {
     locale: 'en'
   };
 
-  const configWithRequiredToken: AnswersConfigWithToken = {
+  const configWithRequiredToken: AnswersConfig = {
     token: 'testToken',
     experienceKey: 'testExperienceKey',
     locale: 'en'

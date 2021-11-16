@@ -1,5 +1,5 @@
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
-import { AnswersConfig, AnswersConfigWithToken } from '../../src/models/core/AnswersConfig';
+import { AnswersConfig } from '../../src/models/core/AnswersConfig';
 import {
   UniversalAutocompleteRequest,
   VerticalAutocompleteRequest,
@@ -23,7 +23,7 @@ describe('AutocompleteService', () => {
     }
   };
 
-  const configWithToken: AnswersConfigWithToken = {
+  const configWithToken: AnswersConfig = {
     token: 'testToken',
     experienceKey: 'testExperienceKey',
     locale: 'en',

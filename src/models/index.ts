@@ -4,7 +4,9 @@ export { AnswersError } from './answersapi/AnswersError';
 // Core models
 export {
   AnswersConfig,
-  AnswersConfigWithToken,
+  BaseAnswersConfig,
+  AnswersConfigWithApiKey,
+  AnswersConfigWithToken
 } from './core/AnswersConfig';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';

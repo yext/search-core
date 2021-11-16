@@ -5,21 +5,17 @@
 ```ts
 
 // @public
-export interface AnswersConfig {
-    // @alpha
-    additionalQueryParams?: {
-        [key: string]: string | number | boolean;
-    };
+export type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;
+
+// @public
+export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
     apiKey: string;
-    endpoints?: Endpoints;
-    experienceKey: string;
-    experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
-    locale: string;
-    visitor?: Visitor;
+    token?: never;
 }
 
 // @public
-export interface AnswersConfigWithToken extends Omit<AnswersConfig, 'apiKey'> {
+export interface AnswersConfigWithToken extends BaseAnswersConfig {
+    apiKey?: never;
     token: string;
 }
 
@@ -73,6 +69,19 @@ export interface AutocompleteResult {
     }[];
     relatedItem?: Result;
     value: string;
+}
+
+// @public
+export interface BaseAnswersConfig {
+    // @alpha
+    additionalQueryParams?: {
+        [key: string]: string | number | boolean;
+    };
+    endpoints?: Endpoints;
+    experienceKey: string;
+    experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
+    locale: string;
+    visitor?: Visitor;
 }
 
 // @public
@@ -262,7 +271,7 @@ export interface NearFilterValue {
 }
 
 // @public
-export function provideCore(config: AnswersConfig | AnswersConfigWithToken): AnswersCore;
+export function provideCore(config: AnswersConfig): AnswersCore;
 
 // @public
 export enum QuerySource {

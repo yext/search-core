@@ -2,7 +2,7 @@ import { AnswersCore } from './AnswersCore';
 import { SearchServiceImpl } from './infra/SearchServiceImpl';
 import { QuestionSubmissionServiceImpl } from './infra/QuestionSubmissionServiceImpl';
 import { HttpServiceImpl } from './infra/HttpServiceImpl';
-import { AnswersConfig, AnswersConfigWithToken } from './models/core/AnswersConfig';
+import { AnswersConfig } from './models/core/AnswersConfig';
 import { AutocompleteServiceImpl } from './infra/AutocompleteServiceImpl';
 import { ApiResponseValidator } from './validation/ApiResponseValidator';
 
@@ -16,7 +16,7 @@ import { ApiResponseValidator } from './validation/ApiResponseValidator';
  *
  * @public
  */
-export function provideCore(config: AnswersConfig | AnswersConfigWithToken): AnswersCore {
+export function provideCore(config: AnswersConfig): AnswersCore {
   const httpService = new HttpServiceImpl();
   const apiResponseValidator = new ApiResponseValidator();
 
