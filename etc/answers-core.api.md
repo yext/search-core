@@ -206,12 +206,10 @@ export interface FilterSearchRequest {
 
 // @public
 export interface FilterSearchResponse {
-    inputIntents: SearchIntent[];
+    businessId?: string;
     queryId?: string;
-    results: AutocompleteResult[];
-    sectioned: boolean;
     sections: {
-        label: string;
+        label?: string;
         results: AutocompleteResult[];
     }[];
     uuid: string;

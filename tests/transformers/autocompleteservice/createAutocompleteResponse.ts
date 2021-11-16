@@ -27,7 +27,6 @@ describe('AutocompleteResponse', () => {
 
   it('filtersearch response with sections is parsed correctly', () => {
     const expectedResponse = {
-      sectioned: true,
       sections: [
         {
           label: 'Name',
@@ -50,8 +49,7 @@ describe('AutocompleteResponse', () => {
           ]
         }
       ],
-      results: [],
-      inputIntents: [],
+      businessId: 2287528,
       queryId: '42d5b709-3b9f-464a-b9b5-764467cbf540',
       uuid: '266f5720-2829-46f0-808f-651075879692'
     };
@@ -61,7 +59,6 @@ describe('AutocompleteResponse', () => {
 
   it('filtersearch response with sections and entities fetched is parsed correctly', () => {
     const expectedResponse = {
-      sectioned: true,
       sections: [
         {
           label: 'Name',
@@ -135,8 +132,7 @@ describe('AutocompleteResponse', () => {
           ]
         }
       ],
-      results: [],
-      inputIntents: [],
+      businessId: 2287528,
       queryId: '42d5b709-3b9f-464a-b9b5-764467cbf540',
       uuid: '266f5720-2829-46f0-808f-651075879692'
     };

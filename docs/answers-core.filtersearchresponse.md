@@ -16,10 +16,8 @@ export interface FilterSearchResponse
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [inputIntents](./answers-core.filtersearchresponse.inputintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | Represents intents from the Answers API. |
+|  [businessId?](./answers-core.filtersearchresponse.businessid.md) | string | <i>(Optional)</i> ID of the account associated with this Answers experience |
 |  [queryId?](./answers-core.filtersearchresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
-|  [results](./answers-core.filtersearchresponse.results.md) | [AutocompleteResult](./answers-core.autocompleteresult.md)<!-- -->\[\] | An array of [AutocompleteResult](./answers-core.autocompleteresult.md)<!-- -->s. |
-|  [sectioned](./answers-core.filtersearchresponse.sectioned.md) | boolean | Indicates that the results are separated by field in the sections property. |
-|  [sections](./answers-core.filtersearchresponse.sections.md) | { label: string; results: [AutocompleteResult](./answers-core.autocompleteresult.md)<!-- -->\[\]; }\[\] | Represents autocomplete results separated by field. |
+|  [sections](./answers-core.filtersearchresponse.sections.md) | { label?: string; results: [AutocompleteResult](./answers-core.autocompleteresult.md)<!-- -->\[\]; }\[\] | Represents autocomplete results separated by field. |
 |  [uuid](./answers-core.filtersearchresponse.uuid.md) | string | A unique id which corresponds to the request. |
 
