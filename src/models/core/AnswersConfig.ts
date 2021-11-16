@@ -6,10 +6,6 @@ import { Visitor } from './Visitor';
  * @public
  */
 export interface BaseAnswersConfig {
-  /** The api key of the answers experience. */
-  apiKey?: string,
-  /** The authentication token of the answers experience. */
-  token?: string,
   /** The experience key of the answers experience. */
   experienceKey: string,
   /** The locale of the answers experience. */
@@ -42,19 +38,16 @@ export interface BaseAnswersConfig {
   }
 }
 
-
 /**
  * Configuration options for {@link AnswersCore}, which includes the
  * options from {@link BaseAnswersConfig}, but requires apiKey.
  * @public
  */
 export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
-  /**
-   * {@inheritDoc BaseAnswersConfig.apiKey}
-   */
+  /** The api key of the answers experience which will be sent as a query param. */
   apiKey: string,
   /**
-   * token should NOT be provided along with apiKey
+   * token should NOT be provided along with apiKey.
    */
   token?: never
 }
@@ -66,11 +59,12 @@ export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
  */
 export interface AnswersConfigWithToken extends BaseAnswersConfig {
   /**
-   * {@inheritDoc BaseAnswersConfig.token}
+   * The authentication token of the answers experience
+   * which will be passed in the Auth header as a Bearer token.
    */
   token: string,
   /**
-   * apiKey should NOT be provided along with token
+   * apiKey should NOT be provided along with token.
    */
   apiKey?: never
 }

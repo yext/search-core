@@ -71,7 +71,7 @@ describe('AutocompleteService', () => {
         apiResponseValidator
       );
       await autocompleteService.universalAutocomplete(request);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, undefined);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
     });
 
     it('query params are correct with token', async () => {
@@ -131,7 +131,7 @@ describe('AutocompleteService', () => {
         apiResponseValidator
       );
       await autocompleteService.verticalAutocomplete(request);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams, undefined);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
     });
 
     it('query params are correct with token', async () => {
@@ -191,7 +191,7 @@ describe('AutocompleteService', () => {
         apiResponseValidator
       );
       await autocompleteService.filterSearch(request);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams, undefined);
+      expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams);
     });
 
     it('handle failed verticals in response', () => {

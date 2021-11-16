@@ -16,11 +16,9 @@ export interface BaseAnswersConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [apiKey?](./answers-core.baseanswersconfig.apikey.md) | string | <i>(Optional)</i> The api key of the answers experience. |
 |  [endpoints?](./answers-core.baseanswersconfig.endpoints.md) | [Endpoints](./answers-core.endpoints.md) | <i>(Optional)</i> Overrides for the URLs which are used when making requests to the Answers API. |
 |  [experienceKey](./answers-core.baseanswersconfig.experiencekey.md) | string | The experience key of the answers experience. |
 |  [experienceVersion?](./answers-core.baseanswersconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the answers experience configuration. |
 |  [locale](./answers-core.baseanswersconfig.locale.md) | string | The locale of the answers experience. |
-|  [token?](./answers-core.baseanswersconfig.token.md) | string | <i>(Optional)</i> The authentication token of the answers experience. |
 |  [visitor?](./answers-core.baseanswersconfig.visitor.md) | [Visitor](./answers-core.visitor.md) | <i>(Optional)</i> Information used to associate requests with a particular user. |
 
