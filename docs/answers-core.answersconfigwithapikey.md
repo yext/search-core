@@ -17,6 +17,6 @@ export interface AnswersConfigWithApiKey extends BaseAnswersConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [apiKey](./answers-core.answersconfigwithapikey.apikey.md) | string | The api key of the answers experience. |
+|  [apiKey](./answers-core.answersconfigwithapikey.apikey.md) | string | The api key of the answers experience which will be sent as a query param |
 |  [token?](./answers-core.answersconfigwithapikey.token.md) | never | <i>(Optional)</i> token should NOT be provided along with apiKey |
 

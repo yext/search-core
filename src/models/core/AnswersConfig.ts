@@ -44,7 +44,7 @@ export interface BaseAnswersConfig {
  * @public
  */
 export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
-  /** The api key of the answers experience. */
+  /** The api key of the answers experience which will be sent as a query param */
   apiKey: string,
   /**
    * token should NOT be provided along with apiKey
@@ -58,7 +58,10 @@ export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
  * @public
  */
 export interface AnswersConfigWithToken extends BaseAnswersConfig {
-  /** The authentication token of the answers experience. */
+  /**
+   * The authentication token of the answers experience
+   * which will be passed in the Auth header as a Bearer token.
+   */
   token: string,
   /**
    * apiKey should NOT be provided along with token
