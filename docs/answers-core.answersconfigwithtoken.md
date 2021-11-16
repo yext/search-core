@@ -17,6 +17,6 @@ export interface AnswersConfigWithToken extends BaseAnswersConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [apiKey?](./answers-core.answersconfigwithtoken.apikey.md) | never | <i>(Optional)</i> apiKey should NOT be provided along with token |
+|  [apiKey?](./answers-core.answersconfigwithtoken.apikey.md) | never | <i>(Optional)</i> apiKey should NOT be provided along with token. |
 |  [token](./answers-core.answersconfigwithtoken.token.md) | string | The authentication token of the answers experience which will be passed in the Auth header as a Bearer token. |
 

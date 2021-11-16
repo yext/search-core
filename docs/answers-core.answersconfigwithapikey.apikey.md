@@ -4,7 +4,7 @@
 
 ## AnswersConfigWithApiKey.apiKey property
 
-The api key of the answers experience which will be sent as a query param
+The api key of the answers experience which will be sent as a query param.
 
 <b>Signature:</b>
 
