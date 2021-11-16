@@ -44,10 +44,10 @@ export interface BaseAnswersConfig {
  * @public
  */
 export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
-  /** The api key of the answers experience which will be sent as a query param */
+  /** The api key of the answers experience which will be sent as a query param. */
   apiKey: string,
   /**
-   * token should NOT be provided along with apiKey
+   * token should NOT be provided along with apiKey.
    */
   token?: never
 }
@@ -64,7 +64,7 @@ export interface AnswersConfigWithToken extends BaseAnswersConfig {
    */
   token: string,
   /**
-   * apiKey should NOT be provided along with token
+   * apiKey should NOT be provided along with token.
    */
   apiKey?: never
 }
