@@ -77,12 +77,10 @@ export interface BaseAnswersConfig {
     additionalQueryParams?: {
         [key: string]: string | number | boolean;
     };
-    apiKey?: string;
     endpoints?: Endpoints;
     experienceKey: string;
     experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
     locale: string;
-    token?: string;
     visitor?: Visitor;
 }
 

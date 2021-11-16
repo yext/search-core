@@ -4,7 +4,7 @@
 
 ## AnswersConfigWithToken.apiKey property
 
-apiKey should NOT be provided along with token
+apiKey should NOT be provided along with token.
 
 <b>Signature:</b>
 

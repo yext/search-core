@@ -17,10 +17,9 @@ import { ApiResponseValidator } from './validation/ApiResponseValidator';
  * @public
  */
 export function provideCore(config: AnswersConfig): AnswersCore {
-  if (config.apiKey && config.token) {
+  if ('apiKey' in config && 'token' in config) {
     throw new Error('Both apiKey and token are present. Only one authentication method should be provided');
   }
-
   const httpService = new HttpServiceImpl();
   const apiResponseValidator = new ApiResponseValidator();
 

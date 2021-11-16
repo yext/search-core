@@ -33,7 +33,7 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
   async submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse> {
     const queryParams = {
       v: defaultApiVersion,
-      api_key: this.config.apiKey,
+      ...('apiKey' in this.config && { api_key: this.config.apiKey }),
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       ...this.config?.additionalQueryParams
     };
@@ -48,12 +48,9 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
       site: 'FIRSTPARTY'
     };
 
-    const response = await this.httpService.post<ApiResponse>(
-      this.endpoint,
-      queryParams,
-      body,
-      this.config.token
-    );
+    const response = 'token' in this.config
+      ? await this.httpService.post<ApiResponse>(this.endpoint, queryParams, body, this.config.token)
+      : await this.httpService.post<ApiResponse>(this.endpoint, queryParams, body);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
