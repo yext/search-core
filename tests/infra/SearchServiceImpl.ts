@@ -120,6 +120,7 @@ describe('SearchService', () => {
         referrerPageUrl: 'yext.com',
         querySource: QuerySource.Standard,
         limit: { people: 17 },
+        restrictVerticals: ['people', 'KM']
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
@@ -138,7 +139,8 @@ describe('SearchService', () => {
         version: 'PRODUCTION',
         source: 'STANDARD',
         visitorId: '123',
-        visitorIdMethod: 'YEXT_AUTH'
+        visitorIdMethod: 'YEXT_AUTH',
+        restrictVerticals: 'people,KM'
       };
       await searchServiceWithAllParams.universalSearch(requestWithAllParams);
       expect(mockHttpService.get)

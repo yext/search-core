@@ -393,6 +393,7 @@ export interface UniversalSearchRequest {
     querySource?: QuerySource | string;
     queryTrigger?: QueryTrigger;
     referrerPageUrl?: string;
+    restrictVerticals?: string[];
     sessionId?: string;
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
