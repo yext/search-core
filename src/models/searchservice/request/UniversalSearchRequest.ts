@@ -37,5 +37,7 @@ export interface UniversalSearchRequest {
   /** {@inheritDoc UniversalLimit} */
   limit?: UniversalLimit;
   /** If included, the response will only include these verticals. */
-  restrictVerticals?: string[]
+  restrictVerticals?: string[];
+  /** Used to track related autocomplete and query search for the purpose of search term aggregation.*/
+  autocompleteSessionId?: string
 }

@@ -16,6 +16,7 @@ export interface UniversalAutocompleteRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [autocompleteSessionId?](./answers-core.universalautocompleterequest.autocompletesessionid.md) | string | <i>(Optional)</i> Used to track related autocomplete and query search for the purpose of search term aggregation. |
 |  [input](./answers-core.universalautocompleterequest.input.md) | string | The input string for autocomplete. |
 |  [sessionTrackingEnabled?](./answers-core.universalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 

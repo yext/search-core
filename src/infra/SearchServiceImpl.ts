@@ -37,7 +37,8 @@ interface UniversalSearchQueryParams extends QueryParams {
   referrerPageUrl?: string,
   source?: QuerySource | string,
   visitor?: string
-  restrictVerticals?: string
+  restrictVerticals?: string,
+  autocompleteSessionId?: string
 }
 
 /**
@@ -68,7 +69,8 @@ interface VerticalSearchQueryParams extends QueryParams {
   source?: QuerySource | string,
   locationRadius?: string,
   queryId?: string,
-  visitor?: string
+  visitor?: string,
+  autocompleteSessionId?: string
 }
 
 /**
@@ -117,6 +119,7 @@ export class SearchServiceImpl implements SearchService {
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
       restrictVerticals: request.restrictVerticals && request.restrictVerticals.join(','),
+      autocompleteSessionId: request.autocompleteSessionId,
       ...this.config?.additionalQueryParams
     };
 
@@ -159,6 +162,7 @@ export class SearchServiceImpl implements SearchService {
       queryId: request.queryId,
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
+      autocompleteSessionId: request.autocompleteSessionId,
       ...this.config?.additionalQueryParams
     };
 

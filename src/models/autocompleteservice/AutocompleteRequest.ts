@@ -8,6 +8,8 @@ export interface UniversalAutocompleteRequest {
   input: string,
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean,
+  /** Used to track related autocomplete and query search for the purpose of search term aggregation.*/
+  autocompleteSessionId?: string
 }
 
 /**
@@ -22,6 +24,8 @@ export interface VerticalAutocompleteRequest {
   sessionTrackingEnabled?: boolean,
   /** The key for the vertical to get autocomplete suggestions from. */
   verticalKey: string,
+  /** Used to track related autocomplete and query search for the purpose of search term aggregation.*/
+  autocompleteSessionId?: string
 }
 
 /**

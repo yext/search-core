@@ -10,4 +10,5 @@ export interface AutocompleteQueryParams extends QueryParams {
   sessionTrackingEnabled?: boolean,
   visitorId?: string,
   visitorIdMethod?: string,
+  autocompleteSessionId?: string
 }

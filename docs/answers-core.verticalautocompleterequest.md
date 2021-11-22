@@ -16,6 +16,7 @@ export interface VerticalAutocompleteRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [autocompleteSessionId?](./answers-core.verticalautocompleterequest.autocompletesessionid.md) | string | <i>(Optional)</i> Used to track related autocomplete and query search for the purpose of search term aggregation. |
 |  [input](./answers-core.verticalautocompleterequest.input.md) | string | The input string for autocomplete. |
 |  [sessionTrackingEnabled?](./answers-core.verticalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [verticalKey](./answers-core.verticalautocompleterequest.verticalkey.md) | string | The key for the vertical to get autocomplete suggestions from. |
