@@ -36,4 +36,6 @@ export interface UniversalSearchRequest {
   querySource?: QuerySource | string;
   /** {@inheritDoc UniversalLimit} */
   limit?: UniversalLimit;
+  /** If included, the response will only include these verticals. */
+  restrictVerticals?: string[]
 }

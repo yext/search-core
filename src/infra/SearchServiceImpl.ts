@@ -37,6 +37,7 @@ interface UniversalSearchQueryParams extends QueryParams {
   referrerPageUrl?: string,
   source?: QuerySource | string,
   visitor?: string
+  restrictVerticals?: string
 }
 
 /**
@@ -115,6 +116,7 @@ export class SearchServiceImpl implements SearchService {
       source: request.querySource || QuerySource.Standard,
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
+      restrictVerticals: request.restrictVerticals && request.restrictVerticals.join(','),
       ...this.config?.additionalQueryParams
     };
 
