@@ -49,6 +49,6 @@ export interface VerticalSearchRequest {
   locationRadius?: number,
   /** The queryId for the query, if this is a repeat query. */
   queryId?: string,
-  /** Used to track related autocomplete and query search for the purpose of search term aggregation.*/
+  /** {@inheritDoc UniversalSearchRequest.autocompleteSessionId} */
   autocompleteSessionId?: string
 }
