@@ -256,7 +256,8 @@ describe('SearchService', () => {
           matcher: Matcher.NotEquals,
           value: 'Arlington'
         },
-        verticalKey: 'verticalKey'
+        verticalKey: 'verticalKey',
+        autocompleteSessionId: 'some-autocomplete-session-id-123'
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
@@ -293,7 +294,8 @@ describe('SearchService', () => {
         version: 'PRODUCTION',
         verticalKey: 'verticalKey',
         visitorId: '123',
-        visitorIdMethod: 'YEXT_AUTH'
+        visitorIdMethod: 'YEXT_AUTH',
+        autocompleteSessionId: 'some-autocomplete-session-id-123'
       };
       await searchServiceWithAllParams.verticalSearch(requestWithAllParams);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);

@@ -48,5 +48,7 @@ export interface VerticalSearchRequest {
   /** The radius (in meters) to filter the vertical search by. */
   locationRadius?: number,
   /** The queryId for the query, if this is a repeat query. */
-  queryId?: string
+  queryId?: string,
+  /** {@inheritDoc UniversalSearchRequest.autocompleteSessionId} */
+  autocompleteSessionId?: string
 }

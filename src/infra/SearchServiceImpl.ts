@@ -69,7 +69,8 @@ interface VerticalSearchQueryParams extends QueryParams {
   source?: QuerySource | string,
   locationRadius?: string,
   queryId?: string,
-  visitor?: string
+  visitor?: string,
+  autocompleteSessionId?: string
 }
 
 /**
@@ -161,6 +162,7 @@ export class SearchServiceImpl implements SearchService {
       queryId: request.queryId,
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
+      autocompleteSessionId: request.autocompleteSessionId,
       ...this.config?.additionalQueryParams
     };
 

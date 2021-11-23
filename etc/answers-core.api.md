@@ -430,6 +430,7 @@ export interface VerticalResults {
 
 // @public
 export interface VerticalSearchRequest {
+    autocompleteSessionId?: string;
     context?: Context;
     facets?: Facet[];
     limit?: number;
