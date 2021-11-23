@@ -10,6 +10,7 @@ import { AutocompleteServiceImpl } from '../../src/infra/AutocompleteServiceImpl
 import mockAutocompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutocompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
 import mockAutocompleteResponseWithFailedVerticals from '../fixtures/autocompleteresponsewithfailedverticals.json';
+import mockAutocompleteResponseWithVerticalKeys from '../fixtures/autocompleteresponsewithverticalkeys.json';
 import { defaultEndpoints } from '../../src/constants';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { AnswersError } from '../../src/models/answersapi/AnswersError';
@@ -33,6 +34,18 @@ describe('AutocompleteService', () => {
 
   const mockHttpService = new HttpServiceMock();
   const apiResponseValidator = new ApiResponseValidator();
+  function createMockAutocompleteService(params?: { response?: unknown, answersConfig?: AnswersConfig }) {
+    const {
+      response = mockAutocompleteResponse,
+      answersConfig = config
+    } = params || {};
+    mockHttpService.get.mockResolvedValue(response);
+    return new AutocompleteServiceImpl(
+      answersConfig,
+      mockHttpService as HttpService,
+      apiResponseValidator
+    );
+  }
 
   describe('Universal Autocomplete', () => {
     const expectedUniversalUrl = defaultEndpoints.universalAutocomplete;
@@ -50,7 +63,6 @@ describe('AutocompleteService', () => {
     };
 
     it('query params are correct with apiKey', async () => {
-      mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
       const request: UniversalAutocompleteRequest = {
         input: '',
         sessionTrackingEnabled: false
@@ -65,28 +77,29 @@ describe('AutocompleteService', () => {
         visitorId: '123',
         visitorIdMethod: 'YEXT_AUTH'
       };
-      const autocompleteService = new AutocompleteServiceImpl(
-        config,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
+      const autocompleteService = createMockAutocompleteService();
       await autocompleteService.universalAutocomplete(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
     });
 
     it('query params are correct with token', async () => {
-      mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
-      const autocompleteService = new AutocompleteServiceImpl(
-        configWithToken,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
+      const autocompleteService = createMockAutocompleteService({ answersConfig: configWithToken });
 
-      const { ...expectedParams } = expectedQueryParams;
-      delete expectedParams.api_key;
+      const { api_key: _, ...expectedParams } = expectedQueryParams;
       await autocompleteService.universalAutocomplete(request);
       expect(mockHttpService.get)
         .toHaveBeenCalledWith(expectedUniversalUrl, expectedParams, 'testToken');
+    });
+
+    it('passes verticalKeys to the results ', async () => {
+      const autocompleteService = createMockAutocompleteService({
+        response: mockAutocompleteResponseWithVerticalKeys
+      });
+      const res = await autocompleteService.universalAutocomplete(request);
+      expect(res.results).toHaveLength(1);
+      expect(res.results[0]).toEqual(expect.objectContaining({
+        verticalKeys: ['vendors', 'partners']
+      }));
     });
   });
 
@@ -108,7 +121,6 @@ describe('AutocompleteService', () => {
     };
 
     it('query params are correct with apiKey', async () => {
-      mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
       const request: VerticalAutocompleteRequest = {
         input: 'salesforce',
         sessionTrackingEnabled: false,
@@ -125,25 +137,15 @@ describe('AutocompleteService', () => {
         visitorId: '123',
         visitorIdMethod: 'YEXT_AUTH'
       };
-      const autocompleteService = new AutocompleteServiceImpl(
-        config,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
+      const autocompleteService = createMockAutocompleteService();
       await autocompleteService.verticalAutocomplete(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
     });
 
     it('query params are correct with token', async () => {
-      mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
-      const autocompleteService = new AutocompleteServiceImpl(
-        configWithToken,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
+      const autocompleteService = createMockAutocompleteService({ answersConfig: configWithToken });
 
-      const { ...expectedParams } = expectedQueryParams;
-      delete expectedParams.api_key;
+      const { api_key: _, ...expectedParams } = expectedQueryParams;
       await autocompleteService.verticalAutocomplete(request);
       expect(mockHttpService.get)
         .toHaveBeenCalledWith(expectedVerticalUrl, expectedParams, 'testToken');
@@ -153,7 +155,6 @@ describe('AutocompleteService', () => {
   describe('FilterSearch', () => {
     const expectedFilterUrl = defaultEndpoints.filterSearch;
     it('query params are correct', async () => {
-      mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
       const convertedSearchParams = {
         sectioned: false,
         fields: [{
@@ -185,17 +186,14 @@ describe('AutocompleteService', () => {
         visitorId: '123',
         visitorIdMethod: 'YEXT_AUTH'
       };
-      const autocompleteService = new AutocompleteServiceImpl(
-        config,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
+      const autocompleteService = createMockAutocompleteService({
+        response: mockAutocompleteResponseWithSections
+      });
       await autocompleteService.filterSearch(request);
       expect(mockHttpService.get).toHaveBeenCalledWith(expectedFilterUrl, expectedQueryParams);
     });
 
     it('handle failed verticals in response', () => {
-      mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithFailedVerticals);
       const request: FilterSearchRequest = {
         input: 'salesforce',
         sessionTrackingEnabled: false,
@@ -207,11 +205,9 @@ describe('AutocompleteService', () => {
           fetchEntities: false
         }]
       };
-      const autocompleteService = new AutocompleteServiceImpl(
-        config,
-        mockHttpService as HttpService,
-        apiResponseValidator
-      );
+      const autocompleteService = createMockAutocompleteService({
+        response: mockAutocompleteResponseWithFailedVerticals
+      });
       expect(async () => await autocompleteService.filterSearch(request))
         .rejects.toThrow({
           message: 'Something went wrong.',
