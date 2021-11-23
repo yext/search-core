@@ -69,8 +69,7 @@ interface VerticalSearchQueryParams extends QueryParams {
   source?: QuerySource | string,
   locationRadius?: string,
   queryId?: string,
-  visitor?: string,
-  autocompleteSessionId?: string
+  visitor?: string
 }
 
 /**
