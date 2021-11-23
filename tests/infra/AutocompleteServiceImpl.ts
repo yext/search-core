@@ -13,6 +13,7 @@ import mockAutocompleteResponseWithFailedVerticals from '../fixtures/autocomplet
 import mockAutocompleteResponseWithVerticalKeys from '../fixtures/autocompleteresponsewithverticalkeys.json';
 import { defaultEndpoints } from '../../src/constants';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
+import { ApiResponse } from '../../src/models/answersapi/ApiResponse';
 import { AnswersError } from '../../src/models/answersapi/AnswersError';
 
 describe('AutocompleteService', () => {
@@ -34,7 +35,7 @@ describe('AutocompleteService', () => {
 
   const mockHttpService = new HttpServiceMock();
   const apiResponseValidator = new ApiResponseValidator();
-  function createMockAutocompleteService(params?: { response?: unknown, answersConfig?: AnswersConfig }) {
+  function createMockAutocompleteService(params?: { response?: ApiResponse, answersConfig?: AnswersConfig }) {
     const {
       response = mockAutocompleteResponse,
       answersConfig = config
