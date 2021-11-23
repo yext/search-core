@@ -42,8 +42,8 @@ export interface UniversalSearchRequest {
    * Used to track related autocomplete and search requests for the purpose of search term aggregation.
    *
    * @remarks
-   * The number of searches may be impacted due to usage of autocomplete. This id allows for better analytics
-   * as it helps group multiple autocomplete requests and link them with a final search term.
+   * If you elect to display information such as entities in autocomplete using the universal
+   * search endpoint, this id allows for grouping of said requests.
    */
   autocompleteSessionId?: string
 }

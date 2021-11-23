@@ -38,8 +38,7 @@ describe('AutocompleteService', () => {
     const expectedUniversalUrl = defaultEndpoints.universalAutocomplete;
     const request: UniversalAutocompleteRequest = {
       input: '',
-      sessionTrackingEnabled: false,
-      autocompleteSessionId: 'some-autocomplete-session-id-123'
+      sessionTrackingEnabled: false
     };
     const expectedQueryParams = {
       input: '',
@@ -47,8 +46,7 @@ describe('AutocompleteService', () => {
       api_key: 'testApiKey',
       v: 20190101,
       locale: 'en',
-      sessionTrackingEnabled: false,
-      autocompleteSessionId: 'some-autocomplete-session-id-123'
+      sessionTrackingEnabled: false
     };
 
     it('query params are correct with apiKey', async () => {
@@ -97,8 +95,7 @@ describe('AutocompleteService', () => {
     const request: VerticalAutocompleteRequest = {
       input: 'salesforce',
       sessionTrackingEnabled: false,
-      verticalKey: 'verticalKey',
-      autocompleteSessionId: 'some-autocomplete-session-id-123'
+      verticalKey: 'verticalKey'
     };
     const expectedQueryParams = {
       input: 'salesforce',
@@ -107,8 +104,7 @@ describe('AutocompleteService', () => {
       v: 20190101,
       locale: 'en',
       sessionTrackingEnabled: false,
-      verticalKey: 'verticalKey',
-      autocompleteSessionId: 'some-autocomplete-session-id-123'
+      verticalKey: 'verticalKey'
     };
 
     it('query params are correct with apiKey', async () => {

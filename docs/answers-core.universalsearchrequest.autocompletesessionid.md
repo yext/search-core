@@ -14,5 +14,5 @@ autocompleteSessionId?: string;
 
 ## Remarks
 
-The number of searches may be impacted due to usage of autocomplete. This id allows for better analytics as it helps group multiple autocomplete requests and link them with a final search term.
+If you elect to display information such as entities in autocomplete using the universal search endpoint, this id allows for grouping of said requests.
 

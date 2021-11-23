@@ -162,7 +162,6 @@ export class SearchServiceImpl implements SearchService {
       queryId: request.queryId,
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
-      autocompleteSessionId: request.autocompleteSessionId,
       ...this.config?.additionalQueryParams
     };
 

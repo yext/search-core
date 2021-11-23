@@ -374,7 +374,6 @@ export enum SpellCheckType {
 
 // @public
 export interface UniversalAutocompleteRequest {
-    autocompleteSessionId?: string;
     input: string;
     sessionTrackingEnabled?: boolean;
 }
@@ -414,7 +413,6 @@ export interface UniversalSearchResponse {
 
 // @public
 export interface VerticalAutocompleteRequest {
-    autocompleteSessionId?: string;
     input: string;
     sessionTrackingEnabled?: boolean;
     verticalKey: string;
@@ -432,7 +430,6 @@ export interface VerticalResults {
 
 // @public
 export interface VerticalSearchRequest {
-    autocompleteSessionId?: string;
     context?: Context;
     facets?: Facet[];
     limit?: number;
