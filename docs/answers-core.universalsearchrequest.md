@@ -16,7 +16,7 @@ export interface UniversalSearchRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [autocompleteSessionId?](./answers-core.universalsearchrequest.autocompletesessionid.md) | string | <i>(Optional)</i> Used to track related autocomplete and query search for the purpose of search term aggregation. |
+|  [autocompleteSessionId?](./answers-core.universalsearchrequest.autocompletesessionid.md) | string | <i>(Optional)</i> Used to track related autocomplete and search requests for the purpose of search term aggregation. |
 |  [context?](./answers-core.universalsearchrequest.context.md) | [Context](./answers-core.context.md) | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [limit?](./answers-core.universalsearchrequest.limit.md) | [UniversalLimit](./answers-core.universallimit.md) | <i>(Optional)</i> The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
 |  [location?](./answers-core.universalsearchrequest.location.md) | [LatLong](./answers-core.latlong.md) | <i>(Optional)</i> The latitude and longitude of the user making the request. Used to bias the results. |

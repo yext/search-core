@@ -16,7 +16,7 @@ export interface VerticalSearchRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [autocompleteSessionId?](./answers-core.verticalsearchrequest.autocompletesessionid.md) | string | <i>(Optional)</i> Used to track related autocomplete and query search for the purpose of search term aggregation. |
+|  [autocompleteSessionId?](./answers-core.verticalsearchrequest.autocompletesessionid.md) | string | <i>(Optional)</i> Used to track related autocomplete and search requests for the purpose of search term aggregation. |
 |  [context?](./answers-core.verticalsearchrequest.context.md) | [Context](./answers-core.context.md) | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [facets?](./answers-core.verticalsearchrequest.facets.md) | [Facet](./answers-core.facet.md)<!-- -->\[\] | <i>(Optional)</i> The facet filters to apply to the search. |
 |  [limit?](./answers-core.verticalsearchrequest.limit.md) | number | <i>(Optional)</i> The maximum number of results to include with a max of 50. |

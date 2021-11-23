@@ -38,6 +38,12 @@ export interface UniversalSearchRequest {
   limit?: UniversalLimit;
   /** If included, the response will only include these verticals. */
   restrictVerticals?: string[];
-  /** Used to track related autocomplete and query search for the purpose of search term aggregation.*/
+  /**
+   * Used to track related autocomplete and search requests for the purpose of search term aggregation.
+   *
+   * @remarks
+   * The number of searches may be impacted due to usage of autocomplete. This id allows for better analytics
+   * as it helps group multiple autocomplete requests and link them with a final search term.
+   */
   autocompleteSessionId?: string
 }
