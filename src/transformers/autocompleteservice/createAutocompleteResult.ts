@@ -12,6 +12,7 @@ export function createAutocompleteResult(result: any): AutocompleteResult {
     key: result.key,
     matchedSubstrings: result.matchedSubstrings || [],
     value: result.value,
-    relatedItem: relatedItem
+    relatedItem: relatedItem,
+    verticalKeys: result.verticalKeys
   };
 }

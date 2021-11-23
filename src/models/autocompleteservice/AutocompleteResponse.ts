@@ -89,4 +89,9 @@ export interface AutocompleteResult {
    * {@link SearchParameterField.fetchEntities} field is true.
    */
   relatedItem?: Result
+  /**
+   * Any vertical keys associated with a prompt.
+   * This only shows up on universal autocomplete requests.
+   **/
+  verticalKeys?: string[]
 }

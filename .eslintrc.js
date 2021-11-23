@@ -23,6 +23,7 @@ module.exports = {
     }],
     '@typescript-eslint/semi': ['error'],
     '@typescript-eslint/type-annotation-spacing': ['error'],
+    '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '^_' }],
   },
   overrides: [
     {

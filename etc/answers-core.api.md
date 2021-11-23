@@ -69,6 +69,7 @@ export interface AutocompleteResult {
     }[];
     relatedItem?: Result;
     value: string;
+    verticalKeys?: string[];
 }
 
 // @public
