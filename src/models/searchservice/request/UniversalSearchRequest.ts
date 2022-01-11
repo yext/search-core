@@ -37,5 +37,13 @@ export interface UniversalSearchRequest {
   /** {@inheritDoc UniversalLimit} */
   limit?: UniversalLimit;
   /** If included, the response will only include these verticals. */
-  restrictVerticals?: string[]
+  restrictVerticals?: string[];
+  /**
+   * Used to track related autocomplete and search requests for the purpose of search term aggregation.
+   *
+   * @remarks
+   * If you elect to display information such as entities in autocomplete using the universal
+   * search endpoint, this id allows for grouping of said requests.
+   */
+  autocompleteSessionId?: string
 }

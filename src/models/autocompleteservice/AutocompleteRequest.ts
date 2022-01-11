@@ -7,7 +7,7 @@ export interface UniversalAutocompleteRequest {
   /** The input string for autocomplete. */
   input: string,
   /** Enables session tracking. */
-  sessionTrackingEnabled?: boolean,
+  sessionTrackingEnabled?: boolean
 }
 
 /**
@@ -21,7 +21,7 @@ export interface VerticalAutocompleteRequest {
   /** {@inheritDoc UniversalAutocompleteRequest.sessionTrackingEnabled} */
   sessionTrackingEnabled?: boolean,
   /** The key for the vertical to get autocomplete suggestions from. */
-  verticalKey: string,
+  verticalKey: string
 }
 
 /**

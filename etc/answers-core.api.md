@@ -387,6 +387,7 @@ export interface UniversalLimit {
 
 // @public
 export interface UniversalSearchRequest {
+    autocompleteSessionId?: string;
     context?: Context;
     limit?: UniversalLimit;
     location?: LatLong;
@@ -430,6 +431,7 @@ export interface VerticalResults {
 
 // @public
 export interface VerticalSearchRequest {
+    autocompleteSessionId?: string;
     context?: Context;
     facets?: Facet[];
     limit?: number;
