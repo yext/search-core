@@ -12,7 +12,8 @@ const universalRequest: UniversalSearchRequest = {
     latitude: 0.0,
     longitude: 0.0,
   },
-  referrerPageUrl: 'www.google.com/answers/not/ads'
+  referrerPageUrl: 'www.google.com/answers/not/ads',
+  restrictVerticals: ['faq', 'links']
 };
 
 export default universalRequest;

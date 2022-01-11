@@ -21,4 +21,5 @@ export interface AutocompleteResult
 |  [matchedSubstrings?](./answers-core.autocompleteresult.matchedsubstrings.md) | { length: number; offset: number; }\[\] | <i>(Optional)</i> An array of substrings which overlap with the autocomplete input. |
 |  [relatedItem?](./answers-core.autocompleteresult.relateditem.md) | [Result](./answers-core.result.md) | <i>(Optional)</i> An entity that corresponds to the autocomplete result. |
 |  [value](./answers-core.autocompleteresult.value.md) | string | The value of an autocomplete suggestion. |
+|  [verticalKeys?](./answers-core.autocompleteresult.verticalkeys.md) | string\[\] | <i>(Optional)</i> Any vertical keys associated with a prompt. This only shows up on universal autocomplete requests. |
 
