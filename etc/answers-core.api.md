@@ -274,6 +274,7 @@ export function provideCore(config: AnswersConfig): AnswersCore;
 
 // @public
 export enum QuerySource {
+    Autocomplete = "AUTOCOMPLETE",
     Overlay = "OVERLAY",
     Standard = "STANDARD"
 }
