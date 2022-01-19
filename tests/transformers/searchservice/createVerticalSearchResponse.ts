@@ -97,3 +97,27 @@ it('handle direct answers in vertical search', () => {
     }
   });
 });
+
+it('can handle queryRulesActionsData', () => {
+  const actions = [
+    {
+      key: 'TRACKING_INFO',
+      data: {
+        apiUrl: 'http://www.test.com'
+      }
+    },
+    {
+      key: 'CUSTOM_DATA',
+      error: 'Failed to retrieve data'
+    }
+  ];
+  const rawResponse = {
+    response: {
+      queryRulesActionsData: actions
+    }
+  };
+  const transformedResponse = createVerticalSearchResponse(rawResponse);
+  expect(transformedResponse).toMatchObject({
+    queryRulesActionsData: actions
+  });
+});

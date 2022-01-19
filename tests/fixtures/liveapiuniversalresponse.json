@@ -254,6 +254,18 @@
       "longitude": -70.123456,
       "locationDisplayName": "Virginia, United States",
       "accuracy": "IP"
-    }
+    },
+    "queryRulesActionsData": [
+      {
+        "key": "TRACKING_INFO",
+        "data": {
+          "apiUrl": "http://www.test.com"
+        }
+      },
+      {
+        "key": "CUSTOM_DATA",
+        "error": "Failed to retrieve data"
+      }
+    ]
   }
 }
