@@ -59,6 +59,7 @@
 |  [LatLong](./answers-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
 |  [NearFilterValue](./answers-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./answers-core.matcher.md)<!-- -->. |
+|  [QueryRulesActionsData](./answers-core.queryrulesactionsdata.md) | Data returned from the Answers query rules system. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | A representation of a question submission response. |
 |  [Result](./answers-core.result.md) | An individual search result. |
