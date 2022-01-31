@@ -9,5 +9,9 @@ Any errors returned from the query rule.
 <b>Signature:</b>
 
 ```typescript
-errors?: string;
+errors?: {
+        uuid: string;
+        type: string;
+        message?: string;
+    }[];
 ```

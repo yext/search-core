@@ -275,7 +275,11 @@ export function provideCore(config: AnswersConfig): AnswersCore;
 // @public
 export interface QueryRulesActionsData {
     data?: Record<string, unknown>;
-    errors?: string;
+    errors?: {
+        uuid: string;
+        type: string;
+        message?: string;
+    }[];
     key: string;
 }
 

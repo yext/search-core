@@ -15,5 +15,18 @@ export interface QueryRulesActionsData {
   /**
    * Any errors returned from the query rule.
    */
-  errors?: string
+  errors?: {
+    /**
+     * The unique identifier of the function invocation that resulted in this error.
+     */
+    uuid: string,
+    /**
+     * The type of the error.
+     */
+    type: string,
+    /**
+     * A message describing the error.
+     */
+    message?: string
+  }[]
 }
