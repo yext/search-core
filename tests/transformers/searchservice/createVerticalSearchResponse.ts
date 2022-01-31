@@ -108,7 +108,11 @@ it('can handle queryRulesActionsData', () => {
     },
     {
       key: 'CUSTOM_DATA',
-      error: 'Failed to retrieve data'
+      errors: [{
+        uuid: '0',
+        type: 'TIMEOUT',
+        message: 'Failed to retrieve data.'
+      }]
     }
   ];
   const rawResponse = {
