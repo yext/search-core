@@ -273,6 +273,17 @@ export interface NearFilterValue {
 export function provideCore(config: AnswersConfig): AnswersCore;
 
 // @public
+export interface QueryRulesActionsData {
+    data?: Record<string, unknown>;
+    errors?: {
+        uuid: string;
+        type: string;
+        message?: string;
+    }[];
+    key: string;
+}
+
+// @public
 export enum QuerySource {
     Autocomplete = "AUTOCOMPLETE",
     Overlay = "OVERLAY",
@@ -406,6 +417,7 @@ export interface UniversalSearchResponse {
     directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer;
     locationBias?: LocationBias;
     queryId?: string;
+    queryRulesActionsData?: QueryRulesActionsData[];
     searchIntents?: SearchIntent[];
     spellCheck?: SpellCheck;
     uuid: string;
@@ -459,6 +471,7 @@ export interface VerticalSearchResponse {
     facets?: DisplayableFacet[];
     locationBias?: LocationBias;
     queryId: string;
+    queryRulesActionsData?: QueryRulesActionsData[];
     searchIntents?: SearchIntent[];
     spellCheck?: SpellCheck;
     uuid: string;

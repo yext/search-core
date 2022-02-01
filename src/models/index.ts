@@ -44,6 +44,7 @@ export { DisplayableFacet, DisplayableFacetOption } from './searchservice/respon
 export { HighlightedFields } from './searchservice/response/HighlightedFields';
 export { HighlightedValue } from './searchservice/response/HighlightedValue';
 export { LocationBias, LocationBiasMethod } from './searchservice/response/LocationBias';
+export { QueryRulesActionsData } from './searchservice/response/QueryRulesActionsData';
 export { Result } from './searchservice/response/Result';
 export { SearchIntent } from './searchservice/response/SearchIntent';
 export { Source } from './searchservice/response/Source';

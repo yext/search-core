@@ -22,6 +22,7 @@ export interface VerticalSearchResponse
 |  [facets?](./answers-core.verticalsearchresponse.facets.md) | [DisplayableFacet](./answers-core.displayablefacet.md)<!-- -->\[\] | <i>(Optional)</i> An array of [Facet](./answers-core.facet.md)<!-- -->s associated with the search results. |
 |  [locationBias?](./answers-core.verticalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
 |  [queryId](./answers-core.verticalsearchresponse.queryid.md) | string | The ID of the query. |
+|  [queryRulesActionsData?](./answers-core.verticalsearchresponse.queryrulesactionsdata.md) | [QueryRulesActionsData](./answers-core.queryrulesactionsdata.md)<!-- -->\[\] | <i>(Optional)</i> Data returned from the Answers query rules system. |
 |  [searchIntents?](./answers-core.verticalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./answers-core.searchintent.md)<!-- -->s. |
 |  [spellCheck?](./answers-core.verticalsearchresponse.spellcheck.md) | [SpellCheck](./answers-core.spellcheck.md) | <i>(Optional)</i> A spellcheck response from a search query. |
 |  [uuid](./answers-core.verticalsearchresponse.uuid.md) | string | A unique id which corresponds to the request. |
