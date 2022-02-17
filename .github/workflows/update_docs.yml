@@ -1,6 +1,6 @@
 name: Check and Update Repo's documenation
 
-on: [push, pull_request]
+on: pull_request
 
 jobs:
   tests:
