@@ -40,7 +40,7 @@ export interface BaseAnswersConfig {
 
 /**
  * Configuration options for {@link AnswersCore}, which includes the
- * options from {@link BaseAnswersConfig}, but requires apiKey. TEST
+ * options from {@link BaseAnswersConfig}, but requires apiKey.
  * @public
  */
 export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
