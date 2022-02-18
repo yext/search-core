@@ -56,7 +56,3 @@ export { Snippet } from './searchservice/response/Snippet';
 
 // Search service common models
 export { Matcher } from './searchservice/common/Matcher';
-
-export interface TestType {
-  test: string
-}
