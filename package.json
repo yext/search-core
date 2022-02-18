@@ -21,7 +21,7 @@
     "tsc-esm": "tsc -p tsconfig.esm.json",
     "tsc": "npm run tsc-cjs && npm run tsc-esm",
     "build-legacy-bundle": "npx webpack",
-    "build": "npm run tsc && npm run build-legacy-bundle && npm run api-extractor && ./scripts/setup-lib-types.sh && npm run generate-docs",
+    "build": "rm -rf lib && npm run tsc && npm run build-legacy-bundle && npm run api-extractor && ./scripts/setup-lib-types.sh && npm run generate-docs",
     "build-ci": "npm run tsc-cjs && npm run api-extractor && npm run generate-docs",
     "dev": "npm run tsc-esm -- --watch",
     "prepublishOnly": "npm run build",
