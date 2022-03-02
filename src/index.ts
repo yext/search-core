@@ -33,3 +33,4 @@ export function provideCore(config: AnswersConfig): AnswersCore {
 
 export { AnswersCore };
 export * from './models';
+export * from './services';
