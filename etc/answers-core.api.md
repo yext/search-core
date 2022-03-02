@@ -21,11 +21,6 @@ export interface AnswersConfigWithToken extends BaseAnswersConfig {
 
 // @public
 export class AnswersCore {
-    // Warning: (ae-forgotten-export) The symbol "SearchService" needs to be exported by the entry point index.d.ts
-    // Warning: (ae-forgotten-export) The symbol "QuestionSubmissionService" needs to be exported by the entry point index.d.ts
-    // Warning: (ae-forgotten-export) The symbol "AutocompleteService" needs to be exported by the entry point index.d.ts
-    //
-    // @internal
     constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService);
     filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>;
     submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
@@ -70,6 +65,13 @@ export interface AutocompleteResult {
     relatedItem?: Result;
     value: string;
     verticalKeys?: string[];
+}
+
+// @public
+export interface AutocompleteService {
+    filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>;
+    universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>;
+    verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse>;
 }
 
 // @public
@@ -312,6 +314,11 @@ export interface QuestionSubmissionResponse {
 }
 
 // @public
+export interface QuestionSubmissionService {
+    submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
+}
+
+// @public
 export interface Result {
     description?: string;
     distance?: number;
@@ -336,6 +343,12 @@ export interface SearchParameterField {
     entityType: string;
     fetchEntities: boolean;
     fieldApiName: string;
+}
+
+// @public
+export interface SearchService {
+    universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
+    verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
 }
 
 // @public

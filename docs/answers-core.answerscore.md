@@ -12,9 +12,11 @@ Provides methods for executing searches, submitting questions, and performing au
 export declare class AnswersCore 
 ```
 
-## Remarks
+## Constructors
 
-The constructor for this class is marked as internal. Third-party code should not call the constructor directly or create subclasses that extend the `AnswersCore` class.
+|  Constructor | Modifiers | Description |
+|  --- | --- | --- |
+|  [(constructor)(searchService, questionSubmissionService, autoCompleteService)](./answers-core.answerscore._constructor_.md) |  | Constructs a new instance of the <code>AnswersCore</code> class |
 
 ## Methods
 
