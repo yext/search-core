@@ -53,7 +53,7 @@ describe('HttpServiceImpl', () => {
       method: 'post',
       body: '{\"data\":\"123\"}',
       mode: 'cors',
-      credentials: 'include',
+      credentials: undefined,
       headers: {
         'Content-Type': 'application/json'
       }

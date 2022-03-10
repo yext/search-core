@@ -46,7 +46,7 @@ export class HttpServiceImpl implements HttpService {
       method: RequestMethods.POST,
       body: JSON.stringify(sanitizedBodyParams),
       mode: 'cors',
-      credentials: 'include',
+      ...(authToken && { credentials: 'include' }),
       headers: {
         'Content-Type': 'application/json',
         ...(authToken && { Authorization: `Bearer ${authToken}`}),
