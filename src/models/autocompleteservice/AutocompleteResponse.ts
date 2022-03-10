@@ -24,25 +24,29 @@ export interface AutocompleteResponse {
  * @public
  */
 export interface FilterSearchResponse {
+  /** Indicates that the results are separated by field in the sections property. */
+  sectioned: boolean,
   /**
    * Represents autocomplete results separated by field.
    *
    * @remarks
-   * If sectioned is true, the matching filters will be returned in a separate section per field.
-   * By default, they are all returned in the same section.
+   * This array will only be populated if sectioned is true.
    */
   sections: {
-    /** A display label for the field.
-     *
-     * @remarks
-     * When sectioned is false, there's no label since all filters wil be returned in same section.
-     */
-    label?: string,
+    /** A display label for the field. */
+    label: string,
     /** An array of {@link AutocompleteResult}s. */
     results: AutocompleteResult[];
   }[],
-  /** ID of the account associated with this Answers experience */
-  businessId?: string,
+  /**
+   * An array of {@link AutocompleteResult}s.
+   *
+   * @remarks
+   * This array will only be populated if sectioned is false.
+   */
+  results: AutocompleteResult[],
+  /** {@inheritDoc SearchIntent} */
+  inputIntents: SearchIntent[];
   /** {@inheritDoc AutocompleteResponse.queryId} */
   queryId?: string,
   /** A unique id which corresponds to the request. */
