@@ -1,6 +1,6 @@
 {
   "name": "@yext/answers-core",
-  "version": "1.6.0-beta.3",
+  "version": "1.6.0-beta.4",
   "description": "Typescript Networking Library for the Yext Answers API",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/esm/index.js",
@@ -44,7 +44,7 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
-    "@microsoft/api-documenter": "^7.11.3",
+    "@microsoft/api-documenter": "^7.13.76",
     "@microsoft/api-extractor": "^7.12.0",
     "@types/jest": "^26.0.15",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.12.5",
-    "cross-fetch": "^3.1.4"
+    "cross-fetch": "^3.1.5"
   },
   "jest": {
     "bail": 0,
