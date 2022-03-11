@@ -16,6 +16,7 @@ import { serializeFacets } from '../serializers/serializeFacets';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
 import { LatLong } from '../models/searchservice/request/LatLong';
+import { getSdkClients } from '../utils/getSdkClients';
 
 /**
  * Represents the query params which may be sent in a universal search.
@@ -120,9 +121,8 @@ export class SearchServiceImpl implements SearchService {
       ...this.config?.additionalQueryParams
     };
 
-    const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.universalSearchEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.universalSearchEndpoint, queryParams);
+    const response = await this.httpService.get<ApiResponse>(
+      this.universalSearchEndpoint, queryParams, getSdkClients(request.customSdkClients), this.config.token);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -162,9 +162,8 @@ export class SearchServiceImpl implements SearchService {
       ...this.config?.additionalQueryParams
     };
 
-    const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.verticalSearchEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.verticalSearchEndpoint, queryParams);
+    const response = await this.httpService.get<ApiResponse>(
+      this.verticalSearchEndpoint, queryParams, getSdkClients(request.customSdkClients), this.config.token);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {

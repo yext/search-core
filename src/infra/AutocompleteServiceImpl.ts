@@ -10,6 +10,7 @@ import { AutocompleteQueryParams } from '../models/autocompleteservice/Autocompl
 import { AutocompleteService } from '../services/AutocompleteService';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
+import { getSdkClients } from '../utils/getSdkClients';
 
 /**
  * Internal interface representing the query params which are sent for a vertical
@@ -69,9 +70,8 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ...this.config?.additionalQueryParams
     };
 
-    const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.universalEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.universalEndpoint, queryParams);
+    const response = await this.httpService.get<ApiResponse>(
+      this.universalEndpoint, queryParams, getSdkClients(request.customSdkClients), this.config.token);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -96,9 +96,8 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ...this.config?.additionalQueryParams
     };
 
-    const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.verticalEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.verticalEndpoint, queryParams);
+    const response = await this.httpService.get<ApiResponse>(
+      this.verticalEndpoint, queryParams, getSdkClients(request.customSdkClients), this.config.token);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -128,9 +127,8 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ...this.config?.additionalQueryParams
     };
 
-    const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.filterEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.filterEndpoint, queryParams);
+    const response = await this.httpService.get<ApiResponse>(
+      this.filterEndpoint, queryParams, getSdkClients(request.customSdkClients), this.config.token);
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {

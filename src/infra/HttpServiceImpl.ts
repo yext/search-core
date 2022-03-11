@@ -22,13 +22,17 @@ export class HttpServiceImpl implements HttpService {
   get<T>(
     url: string,
     queryParams: QueryParams,
+    sdkClients: Record<string, string>,
     authToken?: string,
   ): Promise<T> {
-    return this.fetch(url, queryParams, {
+    return fetch(url, queryParams, {
       method: RequestMethods.GET,
       mode: 'cors',
       credentials: 'include',
-      ...(authToken && { headers: { Authorization: `Bearer ${authToken}` }}),
+      headers: {
+        'SDK-Client': formatAsHttpHeader(sdkClients),
+        ...(authToken && { Authorization: `Bearer ${authToken}` }),
+      }
     }).then(res => res.json());
   }
 
@@ -39,34 +43,43 @@ export class HttpServiceImpl implements HttpService {
     url: string,
     queryParams: QueryParams,
     body: QueryParams,
+    sdkClients: Record<string, string>,
     authToken?: string
   ): Promise<T> {
     const sanitizedBodyParams = sanitizeQueryParams(body);
-    return this.fetch(url, queryParams, {
+    return fetch(url, queryParams, {
       method: RequestMethods.POST,
       body: JSON.stringify(sanitizedBodyParams),
       mode: 'cors',
       ...(authToken && { credentials: 'include' }),
       headers: {
+        'SDK-Client': formatAsHttpHeader(sdkClients),
         'Content-Type': 'application/json',
         ...(authToken && { Authorization: `Bearer ${authToken}`}),
       }
     })
       .then(res => res.json());
   }
+}
 
-  /**
-   * Perform a fetch, using the polyfill if needed.
-   */
-  private fetch(
-    url: string,
-    queryParams: QueryParams,
-    reqInit: RequestInit
-  ): Promise<Response> {
-    const urlWithParams = addParamsToURL(url, queryParams);
-    if (typeof(window) !== 'undefined' && window.fetch) {
-      return window.fetch(urlWithParams, reqInit);
-    }
-    return crossFetch(urlWithParams, reqInit);
+/**
+ * Perform a fetch, using the polyfill if needed.
+ */
+function fetch(
+  url: string,
+  queryParams: QueryParams,
+  reqInit: RequestInit
+): Promise<Response> {
+  const urlWithParams = addParamsToURL(url, queryParams);
+  if (typeof(window) !== 'undefined' && window.fetch) {
+    return window.fetch(urlWithParams, reqInit);
   }
+  return crossFetch(urlWithParams, reqInit);
+}
+
+function formatAsHttpHeader(jsonHeader: Record<string, string>) {
+  return Object.keys(jsonHeader).reduce((combinedHeader, currentKey) => {
+    const httpFormattedHeader = `${currentKey}=${jsonHeader[currentKey]}`;
+    return combinedHeader ? `${combinedHeader}, ${httpFormattedHeader}` : httpFormattedHeader;
+  }, '');
 }

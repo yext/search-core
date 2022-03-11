@@ -10,6 +10,7 @@ export {
 } from './core/AnswersConfig';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';
+export { CustomSdkClients } from './core/SdkClients';
 
 // Autocomplete service
 export * from './autocompleteservice/AutocompleteRequest';
