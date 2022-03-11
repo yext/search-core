@@ -4,8 +4,13 @@ import { QuestionSubmissionRequest } from '../models/questionsubmission/Question
 /**
  * Submits a custom question to the Answers API.
  *
- * @internal
+ * @public
  */
 export interface QuestionSubmissionService {
+  /**
+   * Submits a question to be answered.
+   *
+   * @param request - The question, as well as the contact info of the submitter.
+   */
   submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>
 }

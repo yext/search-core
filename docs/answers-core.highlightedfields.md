@@ -53,6 +53,5 @@ If a user searches for 'apple', the API will likely match fields that contain th
     }
   ]
 }
-
 ```
 

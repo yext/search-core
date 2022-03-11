@@ -16,6 +16,7 @@ export declare enum QuerySource
 
 |  Member | Value | Description |
 |  --- | --- | --- |
+|  Autocomplete | <code>&quot;AUTOCOMPLETE&quot;</code> | Indicates that the query was initiated from visual autocomplete. |
 |  Overlay | <code>&quot;OVERLAY&quot;</code> | Indicates that the query was initaited from an Answers Overlay. |
 |  Standard | <code>&quot;STANDARD&quot;</code> | Indicates that the query was initiated from a standard Answers integration. |
 

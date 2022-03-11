@@ -11,5 +11,9 @@ export enum QuerySource {
   /**
    * Indicates that the query was initaited from an Answers Overlay.
    */
-  Overlay = 'OVERLAY'
+  Overlay = 'OVERLAY',
+  /**
+   * Indicates that the query was initiated from visual autocomplete.
+   */
+  Autocomplete = 'AUTOCOMPLETE'
 }

@@ -20,7 +20,7 @@ Overrides the sort options that are configured on the experience configuration.
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [direction?](./answers-core.sortby.direction.md) | [Direction](./answers-core.direction.md) | <i>(Optional)</i> The direction of the sort. Required if the SortBy type is [SortType.Field](./answers-core.sorttype.field.md)<!-- -->. |
-|  [field?](./answers-core.sortby.field.md) | string | <i>(Optional)</i> The field name to sort by. Required if the SortBy type is [SortType.Field](./answers-core.sorttype.field.md)<!-- -->. |
+|  [direction?](./answers-core.sortby.direction.md) | [Direction](./answers-core.direction.md) | <i>(Optional)</i> The direction of the sort. Required if the SortBy type is [SortType.Field](./answers-core.sorttype.md)<!-- -->. |
+|  [field?](./answers-core.sortby.field.md) | string | <i>(Optional)</i> The field name to sort by. Required if the SortBy type is [SortType.Field](./answers-core.sorttype.md)<!-- -->. |
 |  [type](./answers-core.sortby.type.md) | [SortType](./answers-core.sorttype.md) | The method of sorting. |
 

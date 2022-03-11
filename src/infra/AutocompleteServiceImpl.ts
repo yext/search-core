@@ -55,12 +55,6 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ?? defaultEndpoints.filterSearch;
   }
 
-  /**
-   * Retrieves query suggestions for universal.
-   *
-   * @param {AutocompleteRequest} request
-   * @returns {Promise<AutocompleteResponse>}
-   */
   async universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse> {
     const queryParams: AutocompleteQueryParams = {
       input: request.input,
@@ -87,12 +81,6 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     return createAutocompleteResponse(response);
   }
 
-  /**
-   * Retrieves query suggestions for a vertical.
-   *
-   * @param {VerticalAutocompleteRequest} request
-   * @returns {Promise<AutocompleteResponse>}
-   */
   async verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse> {
     const queryParams: VerticalAutocompleteQueryParams = {
       input: request.input,
@@ -120,12 +108,6 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     return createAutocompleteResponse(response);
   }
 
-  /**
-   * Retrieves query suggestions for filter search.
-   *
-   * @param {FilterSearchRequest} request
-   * @returns {Promise<AutocompleteResponse>}
-   */
   async filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse> {
     const searchParams = {
       sectioned: request.sectioned,

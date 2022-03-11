@@ -1,6 +1,6 @@
 {
   "name": "@yext/answers-core",
-  "version": "1.5.2",
+  "version": "1.6.0-beta.4",
   "description": "Typescript Networking Library for the Yext Answers API",
   "main": "./lib/commonjs/index.js",
   "module": "./lib/esm/index.js",
@@ -8,7 +8,8 @@
   "files": [
     "dist",
     "legacy",
-    "lib"
+    "lib",
+    "src"
   ],
   "engines": {
     "node": ">=12"
@@ -20,12 +21,11 @@
     "tsc-esm": "tsc -p tsconfig.esm.json",
     "tsc": "npm run tsc-cjs && npm run tsc-esm",
     "build-legacy-bundle": "npx webpack",
-    "build": "npm run tsc && npm run build-legacy-bundle && npm run api-extractor && ./scripts/setup-lib-types.sh && npm run generate-docs",
-    "build-ci": "npm run tsc-cjs && npm run api-extractor-ci && npm run generate-docs",
+    "build": "rm -rf lib && npm run tsc && npm run build-legacy-bundle && npm run api-extractor && ./scripts/setup-lib-types.sh && npm run generate-docs",
+    "build-ci": "npm run tsc-cjs && npm run api-extractor && npm run generate-docs",
     "dev": "npm run tsc-esm -- --watch",
     "prepublishOnly": "npm run build",
     "api-extractor": "api-extractor run --local --verbose",
-    "api-extractor-ci": "api-extractor run --verbose",
     "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs && rm -rf temp && npm run generate-notices",
     "generate-notices": "generate-license-file --input package.json --output THIRD-PARTY-NOTICES --overwrite"
   },
@@ -44,7 +44,7 @@
     "@babel/plugin-transform-runtime": "^7.12.10",
     "@babel/preset-env": "^7.12.1",
     "@babel/preset-typescript": "^7.12.1",
-    "@microsoft/api-documenter": "^7.11.3",
+    "@microsoft/api-documenter": "^7.13.76",
     "@microsoft/api-extractor": "^7.12.0",
     "@types/jest": "^26.0.15",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.12.5",
-    "cross-fetch": "^3.1.4"
+    "cross-fetch": "^3.1.5"
   },
   "jest": {
     "bail": 0,

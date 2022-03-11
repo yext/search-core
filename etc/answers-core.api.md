@@ -21,11 +21,6 @@ export interface AnswersConfigWithToken extends BaseAnswersConfig {
 
 // @public
 export class AnswersCore {
-    // Warning: (ae-forgotten-export) The symbol "SearchService" needs to be exported by the entry point index.d.ts
-    // Warning: (ae-forgotten-export) The symbol "QuestionSubmissionService" needs to be exported by the entry point index.d.ts
-    // Warning: (ae-forgotten-export) The symbol "AutocompleteService" needs to be exported by the entry point index.d.ts
-    //
-    // @internal
     constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService);
     filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>;
     submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
@@ -70,6 +65,13 @@ export interface AutocompleteResult {
     relatedItem?: Result;
     value: string;
     verticalKeys?: string[];
+}
+
+// @public
+export interface AutocompleteService {
+    filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>;
+    universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>;
+    verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse>;
 }
 
 // @public
@@ -275,7 +277,19 @@ export interface NearFilterValue {
 export function provideCore(config: AnswersConfig): AnswersCore;
 
 // @public
+export interface QueryRulesActionsData {
+    data?: Record<string, unknown>;
+    errors?: {
+        uuid: string;
+        type: string;
+        message?: string;
+    }[];
+    key: string;
+}
+
+// @public
 export enum QuerySource {
+    Autocomplete = "AUTOCOMPLETE",
     Overlay = "OVERLAY",
     Standard = "STANDARD"
 }
@@ -299,6 +313,11 @@ export interface QuestionSubmissionRequest {
 // @public
 export interface QuestionSubmissionResponse {
     uuid: string;
+}
+
+// @public
+export interface QuestionSubmissionService {
+    submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
 }
 
 // @public
@@ -326,6 +345,12 @@ export interface SearchParameterField {
     entityType: string;
     fetchEntities: boolean;
     fieldApiName: string;
+}
+
+// @public
+export interface SearchService {
+    universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
+    verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
 }
 
 // @public
@@ -407,6 +432,7 @@ export interface UniversalSearchResponse {
     directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer;
     locationBias?: LocationBias;
     queryId?: string;
+    queryRulesActionsData?: QueryRulesActionsData[];
     searchIntents?: SearchIntent[];
     spellCheck?: SpellCheck;
     uuid: string;
@@ -460,6 +486,7 @@ export interface VerticalSearchResponse {
     facets?: DisplayableFacet[];
     locationBias?: LocationBias;
     queryId: string;
+    queryRulesActionsData?: QueryRulesActionsData[];
     searchIntents?: SearchIntent[];
     spellCheck?: SpellCheck;
     uuid: string;

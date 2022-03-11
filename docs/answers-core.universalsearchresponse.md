@@ -19,6 +19,7 @@ export interface UniversalSearchResponse
 |  [directAnswer?](./answers-core.universalsearchresponse.directanswer.md) | [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) \| [FieldValueDirectAnswer](./answers-core.fieldvaluedirectanswer.md) | <i>(Optional)</i> A direct answer to a search. |
 |  [locationBias?](./answers-core.universalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
 |  [queryId?](./answers-core.universalsearchresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
+|  [queryRulesActionsData?](./answers-core.universalsearchresponse.queryrulesactionsdata.md) | [QueryRulesActionsData](./answers-core.queryrulesactionsdata.md)<!-- -->\[\] | <i>(Optional)</i> Data returned from the Answers query rules system. |
 |  [searchIntents?](./answers-core.universalsearchresponse.searchintents.md) | [SearchIntent](./answers-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./answers-core.searchintent.md)<!-- -->s which represents requests from the API. |
 |  [spellCheck?](./answers-core.universalsearchresponse.spellcheck.md) | [SpellCheck](./answers-core.spellcheck.md) | <i>(Optional)</i> A spellcheck response from a search query. |
 |  [uuid](./answers-core.universalsearchresponse.uuid.md) | string | A unique id which corresponds to the request. |

@@ -5,6 +5,7 @@ import { FieldValueDirectAnswer } from './FieldValueDirectAnswer';
 import { DisplayableFacet } from './DisplayableFacet';
 import { LocationBias } from './LocationBias';
 import { SpellCheck } from './SpellCheck';
+import { QueryRulesActionsData } from './QueryRulesActionsData';
 
 /**
  * A representation of a response from a vertical search.
@@ -31,5 +32,7 @@ export interface VerticalSearchResponse {
   /** The {@link VerticalResults} for each search vertical. */
   alternativeVerticals?: VerticalResults[],
   /** A unique id which corresponds to the request. */
-  uuid: string
+  uuid: string,
+  /** {@inheritDoc QueryRulesActionsData} */
+  queryRulesActionsData?: QueryRulesActionsData[]
 }
