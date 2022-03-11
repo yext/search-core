@@ -16,23 +16,23 @@ export class ApiResponseValidator {
 
     const testResults = testFunctions.map(testFn => testFn(apiResponse));
 
-    return testResults.find(result => result instanceof AnswersError);
+    return testResults.find(result => result);
   }
 
   private validateResponseProp(apiResponse: ApiResponse): AnswersError | undefined {
-    if (!apiResponse.response){
+    if (!apiResponse.response) {
       return new AnswersError('Malformed Answers API response: missing response property.');
     }
   }
 
   private validateMetaProp(apiResponse: ApiResponse): AnswersError | undefined {
-    if (!apiResponse.meta){
+    if (!apiResponse.meta) {
       return new AnswersError('Malformed Answers API response: missing meta property.');
     }
   }
 
   private checkForApiErrors(apiResponse: ApiResponse): AnswersError | undefined {
-    if(apiResponse.meta?.errors?.length >= 1){
+    if (apiResponse.meta?.errors?.length >= 1) {
       const error = apiResponse.meta.errors[0];
       return new AnswersError(error.message, error.code, error.type);
     }
