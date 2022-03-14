@@ -22,7 +22,7 @@ export class HttpServiceImpl implements HttpService {
   get<T>(
     url: string,
     queryParams: QueryParams,
-    sdkClients: Record<string, string>,
+    clientSdk: Record<string, string>,
     authToken?: string,
   ): Promise<T> {
     return fetch(url, queryParams, {
@@ -30,7 +30,7 @@ export class HttpServiceImpl implements HttpService {
       mode: 'cors',
       credentials: 'include',
       headers: {
-        'SDK-Client': formatAsHttpHeader(sdkClients),
+        'Client-SDK': formatAsHttpHeader(clientSdk),
         ...(authToken && { Authorization: `Bearer ${authToken}` }),
       }
     }).then(res => res.json());
@@ -43,7 +43,7 @@ export class HttpServiceImpl implements HttpService {
     url: string,
     queryParams: QueryParams,
     body: QueryParams,
-    sdkClients: Record<string, string>,
+    clientSdk: Record<string, string>,
     authToken?: string
   ): Promise<T> {
     const sanitizedBodyParams = sanitizeQueryParams(body);
@@ -53,7 +53,7 @@ export class HttpServiceImpl implements HttpService {
       mode: 'cors',
       ...(authToken && { credentials: 'include' }),
       headers: {
-        'SDK-Client': formatAsHttpHeader(sdkClients),
+        'Client-SDK': formatAsHttpHeader(clientSdk),
         'Content-Type': 'application/json',
         ...(authToken && { Authorization: `Bearer ${authToken}`}),
       }

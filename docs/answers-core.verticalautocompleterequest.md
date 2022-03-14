@@ -16,7 +16,7 @@ export interface VerticalAutocompleteRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [customSdkClients?](./answers-core.verticalautocompleterequest.customsdkclients.md) | [CustomSdkClients](./answers-core.customsdkclients.md) | <i>(Optional)</i> Additional agents to add to the SDK-Clients HTTP header. |
+|  [customClientSdk?](./answers-core.verticalautocompleterequest.customclientsdk.md) | [CustomClientSdk](./answers-core.customclientsdk.md) | <i>(Optional)</i> Additional agents to add to the Client-SDK HTTP header. |
 |  [input](./answers-core.verticalautocompleterequest.input.md) | string | The input string for autocomplete. |
 |  [sessionTrackingEnabled?](./answers-core.verticalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [verticalKey](./answers-core.verticalautocompleterequest.verticalkey.md) | string | The key for the vertical to get autocomplete suggestions from. |

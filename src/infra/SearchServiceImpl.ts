@@ -16,7 +16,7 @@ import { serializeFacets } from '../serializers/serializeFacets';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
 import { LatLong } from '../models/searchservice/request/LatLong';
-import { getSdkClients } from '../utils/getSdkClients';
+import { getClientSdk } from '../utils/getClientSdk';
 
 /**
  * Represents the query params which may be sent in a universal search.
@@ -125,13 +125,13 @@ export class SearchServiceImpl implements SearchService {
       ? await this.httpService.get<ApiResponse>(
         this.universalSearchEndpoint,
         queryParams,
-        getSdkClients(request.customSdkClients),
+        getClientSdk(request.customClientSdk),
         this.config.token
       )
       : await this.httpService.get<ApiResponse>(
         this.universalSearchEndpoint,
         queryParams,
-        getSdkClients(request.customSdkClients)
+        getClientSdk(request.customClientSdk)
       );
 
     const validationResult = this.apiResponseValidator.validate(response);
@@ -176,13 +176,13 @@ export class SearchServiceImpl implements SearchService {
       ? await this.httpService.get<ApiResponse>(
         this.verticalSearchEndpoint,
         queryParams,
-        getSdkClients(request.customSdkClients),
+        getClientSdk(request.customClientSdk),
         this.config.token
       )
       : await this.httpService.get<ApiResponse>(
         this.verticalSearchEndpoint,
         queryParams,
-        getSdkClients(request.customSdkClients)
+        getClientSdk(request.customClientSdk)
       );
 
     const validationResult = this.apiResponseValidator.validate(response);

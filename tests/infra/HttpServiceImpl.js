@@ -6,7 +6,7 @@ jest.mock('cross-fetch');
 
 describe('HttpServiceImpl', () => {
   const httpServiceImpl = new HttpServiceImpl();
-  const sdkClients = {
+  const clientSdk = {
     ANSWERS_CORE: '123'
   };
   fetch.mockResolvedValue({
@@ -17,13 +17,13 @@ describe('HttpServiceImpl', () => {
     const queryParams = {
       aQuery: 'param'
     };
-    await httpServiceImpl.get('http://yext.com', queryParams, sdkClients);
+    await httpServiceImpl.get('http://yext.com', queryParams, clientSdk);
     const expectedReqInit = {
       method: 'get',
       mode: 'cors',
       credentials: 'include',
       headers: {
-        'SDK-Client': 'ANSWERS_CORE=123'
+        'Client-SDK': 'ANSWERS_CORE=123'
       }
     };
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);
@@ -35,13 +35,13 @@ describe('HttpServiceImpl', () => {
     };
     const authToken = '123.456.789';
 
-    await httpServiceImpl.get('http://yext.com', queryParams, sdkClients, authToken);
+    await httpServiceImpl.get('http://yext.com', queryParams, clientSdk, authToken);
     const expectedReqInit = {
       method: 'get',
       mode: 'cors',
       credentials: 'include',
       headers: {
-        'SDK-Client': 'ANSWERS_CORE=123',
+        'Client-SDK': 'ANSWERS_CORE=123',
         Authorization: `Bearer ${authToken}`
       }
     };
@@ -55,14 +55,14 @@ describe('HttpServiceImpl', () => {
     const queryParams = {
       aQuery: 'param'
     };
-    await httpServiceImpl.post('http://yext.com', queryParams, jsonBody, sdkClients);
+    await httpServiceImpl.post('http://yext.com', queryParams, jsonBody, clientSdk);
     const expectedReqInit = {
       method: 'post',
       body: '{\"data\":\"123\"}',
       mode: 'cors',
       credentials: undefined,
       headers: {
-        'SDK-Client': 'ANSWERS_CORE=123',
+        'Client-SDK': 'ANSWERS_CORE=123',
         'Content-Type': 'application/json'
       }
     };
@@ -78,14 +78,14 @@ describe('HttpServiceImpl', () => {
     };
     const authToken = '123.456.789';
 
-    await httpServiceImpl.post('http://yext.com', queryParams, jsonBody, sdkClients, authToken);
+    await httpServiceImpl.post('http://yext.com', queryParams, jsonBody, clientSdk, authToken);
     const expectedReqInit = {
       method: 'post',
       body: '{\"data\":\"123\"}',
       mode: 'cors',
       credentials: 'include',
       headers: {
-        'SDK-Client': 'ANSWERS_CORE=123',
+        'Client-SDK': 'ANSWERS_CORE=123',
         'Content-Type': 'application/json',
         Authorization: `Bearer ${authToken}`
       }
@@ -101,28 +101,28 @@ describe('HttpServiceImpl', () => {
     const queryParams = {
       nodeQuery: 'param'
     };
-    await httpServiceImpl.get('http://yext.com', queryParams, sdkClients);
+    await httpServiceImpl.get('http://yext.com', queryParams, clientSdk);
     windowSpy.mockRestore();
 
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?nodeQuery=param', expect.anything());
   });
 
 
-  it('can make request with custom SDK client', async () => {
+  it('can make request with custom client SDK', async () => {
     const queryParams = {
       aQuery: 'param'
     };
-    const customSdkClients = {
-      ...sdkClients,
+    const customClientSdk = {
+      ...clientSdk,
       CUSTOM_TEST_SITE: 'test'
     };
-    await httpServiceImpl.get('http://yext.com', queryParams, customSdkClients);
+    await httpServiceImpl.get('http://yext.com', queryParams, customClientSdk);
     const expectedReqInit = {
       method: 'get',
       mode: 'cors',
       credentials: 'include',
       headers: {
-        'SDK-Client': 'ANSWERS_CORE=123, CUSTOM_TEST_SITE=test'
+        'Client-SDK': 'ANSWERS_CORE=123, CUSTOM_TEST_SITE=test'
       }
     };
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);

@@ -1,4 +1,4 @@
-import { CustomSdkClients } from '../core/SdkClients';
+import { CustomClientSdk } from '../core/ClientSdk';
 
 /**
  * Options for a QuestionSubmission request.
@@ -18,7 +18,7 @@ export interface QuestionSubmissionRequest {
   questionDescription?: string
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean
-  /** {@inheritDoc CustomSdkClients} */
-  customSdkClients?: CustomSdkClients
+  /** {@inheritDoc CustomClientSdk} */
+  customClientSdk?: CustomClientSdk
 }
 

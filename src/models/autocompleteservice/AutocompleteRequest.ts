@@ -1,4 +1,4 @@
-import { CustomSdkClients } from '../core/SdkClients';
+import { CustomClientSdk } from '../core/ClientSdk';
 
 /**
  * Options for a universal autocomplete request.
@@ -10,8 +10,8 @@ export interface UniversalAutocompleteRequest {
   input: string,
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean,
-  /** {@inheritDoc CustomSdkClients} */
-  customSdkClients?: CustomSdkClients
+  /** {@inheritDoc CustomClientSdk} */
+  customClientSdk?: CustomClientSdk
 }
 
 /**
@@ -26,8 +26,8 @@ export interface VerticalAutocompleteRequest {
   sessionTrackingEnabled?: boolean,
   /** The key for the vertical to get autocomplete suggestions from. */
   verticalKey: string,
-  /** {@inheritDoc CustomSdkClients} */
-  customSdkClients?: CustomSdkClients
+  /** {@inheritDoc CustomClientSdk} */
+  customClientSdk?: CustomClientSdk
 }
 
 /**
@@ -46,8 +46,8 @@ export interface FilterSearchRequest {
   sectioned: boolean,
   /** An array of {@link SearchParameterField} */
   fields: SearchParameterField[];
-  /** {@inheritDoc CustomSdkClients} */
-  customSdkClients?: CustomSdkClients
+  /** {@inheritDoc CustomClientSdk} */
+  customClientSdk?: CustomClientSdk
 }
 
 /**
@@ -60,8 +60,8 @@ export interface SearchParameterField {
   fieldApiName: string,
   /** The entityType to perform the autocomplete on. */
   entityType: string,
-  /** {@inheritDoc CustomSdkClients} */
-  customSdkClients?: CustomSdkClients
+  /** {@inheritDoc CustomClientSdk} */
+  customClientSdk?: CustomClientSdk
   /**
    * Indicates whether or not to return the {@link AutocompleteResult.relatedItem}
    * associated with the autocomplete result.

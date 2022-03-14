@@ -6,7 +6,7 @@ import { QueryTrigger } from './QueryTrigger';
 import { SortBy } from './SortBy';
 import { QuerySource } from './QuerySource';
 import { Facet } from './Facet';
-import { CustomSdkClients } from '../../core/SdkClients';
+import { CustomClientSdk } from '../../core/ClientSdk';
 
 /**
  * Options which can be specified for a vertical search.
@@ -50,6 +50,6 @@ export interface VerticalSearchRequest {
   locationRadius?: number,
   /** The queryId for the query, if this is a repeat query. */
   queryId?: string,
-  /** {@inheritDoc CustomSdkClients} */
-  customSdkClients?: CustomSdkClients
+  /** {@inheritDoc CustomClientSdk} */
+  customClientSdk?: CustomClientSdk
 }

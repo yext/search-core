@@ -16,8 +16,5 @@
     "postinstall": "npm link .."
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@yext/answers-core": "file:.."
-  }
+  "license": "ISC"
 }

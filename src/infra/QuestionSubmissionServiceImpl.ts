@@ -6,7 +6,7 @@ import { QuestionSubmissionRequest } from '../models/questionsubmission/Question
 import { QuestionSubmissionResponse } from '../models/questionsubmission/QuestionSubmissionResponse';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
-import { getSdkClients } from '../utils/getSdkClients';
+import { getClientSdk } from '../utils/getClientSdk';
 
 /**
  * An implementation of QuestionSubmissionService which hits LiveAPI.
@@ -54,14 +54,14 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
         this.endpoint,
         queryParams,
         body,
-        getSdkClients(request.customSdkClients),
+        getClientSdk(request.customClientSdk),
         this.config.token
       )
       : await this.httpService.post<ApiResponse>(
         this.endpoint,
         queryParams,
         body,
-        getSdkClients(request.customSdkClients)
+        getClientSdk(request.customClientSdk)
       );
 
     const validationResult = this.apiResponseValidator.validate(response);

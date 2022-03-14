@@ -1,4 +1,4 @@
-import { SdkClients } from '../models/core/SdkClients';
+import { ClientSdk } from '../models/core/ClientSdk';
 import { QueryParams } from '../models/http/params';
 
 /**
@@ -8,7 +8,7 @@ export interface HttpService {
   get<T>(
     url: string,
     queryParams: QueryParams,
-    sdkClients: SdkClients,
+    clientSdk: ClientSdk,
     authToken?: string
   ): Promise<T>;
 
@@ -16,7 +16,7 @@ export interface HttpService {
     url: string,
     queryParams: QueryParams,
     body: QueryParams,
-    sdkClients: SdkClients,
+    clientSdk: ClientSdk,
     authToken?: string
   ): Promise<T>;
 }

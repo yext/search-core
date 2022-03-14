@@ -6,7 +6,7 @@ const questionRequest: QuestionSubmissionRequest = {
   name: 'bob',
   questionText: 'wow wow wow!',
   sessionTrackingEnabled: true,
-  customSdkClients: {
+  customClientSdk: {
     CORE_TEST_SITE: 'test'
   }
 };

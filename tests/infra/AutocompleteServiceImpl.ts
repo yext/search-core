@@ -13,7 +13,7 @@ import mockAutocompleteResponseWithVerticalKeys from '../fixtures/autocompletere
 import { defaultEndpoints } from '../../src/constants';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { ApiResponse } from '../../src/models/answersapi/ApiResponse';
-import { getSdkClients } from '../../src/utils/getSdkClients';
+import { getClientSdk } from '../../src/utils/getClientSdk';
 
 describe('AutocompleteService', () => {
   const config: AnswersConfig = {
@@ -73,7 +73,7 @@ describe('AutocompleteService', () => {
       const autocompleteService = createMockAutocompleteService();
       await autocompleteService.universalAutocomplete(request);
       expect(mockHttpService.get).toHaveBeenLastCalledWith(
-        expectedUniversalUrl, expectedQueryParams, getSdkClients());
+        expectedUniversalUrl, expectedQueryParams, getClientSdk());
     });
 
     it('query params are correct with token', async () => {
@@ -90,7 +90,7 @@ describe('AutocompleteService', () => {
       const { api_key: _, ...expectedParams } = expectedQueryParams;
       await autocompleteService.universalAutocomplete(request);
       expect(mockHttpService.get)
-        .toHaveBeenLastCalledWith(expectedUniversalUrl, expectedParams, getSdkClients(), 'testToken');
+        .toHaveBeenLastCalledWith(expectedUniversalUrl, expectedParams, getClientSdk(), 'testToken');
     });
 
     it('passes verticalKeys to the results ', async () => {
@@ -104,18 +104,18 @@ describe('AutocompleteService', () => {
       }));
     });
 
-    it('passes custom SDK client', async () => {
-      const customSdkClients = {
+    it('passes custom client SDK', async () => {
+      const customClientSdk = {
         CUSTOM_TEST_SITE: 'test'
       };
       const requestWithClient: UniversalAutocompleteRequest = {
         ...request,
-        customSdkClients
+        customClientSdk
       };
       const autocompleteService = createMockAutocompleteService();
       await autocompleteService.universalAutocomplete(requestWithClient);
       expect(mockHttpService.get).toHaveBeenLastCalledWith(
-        expectedUniversalUrl, expectedQueryParams, expect.objectContaining(customSdkClients));
+        expectedUniversalUrl, expectedQueryParams, expect.objectContaining(customClientSdk));
     });
   });
 
@@ -156,7 +156,7 @@ describe('AutocompleteService', () => {
       const autocompleteService = createMockAutocompleteService();
       await autocompleteService.verticalAutocomplete(request);
       expect(mockHttpService.get).toHaveBeenLastCalledWith(
-        expectedVerticalUrl, expectedQueryParams, getSdkClients());
+        expectedVerticalUrl, expectedQueryParams, getClientSdk());
     });
 
     it('query params are correct with token', async () => {
@@ -165,7 +165,7 @@ describe('AutocompleteService', () => {
       const { api_key: _, ...expectedParams } = expectedQueryParams;
       await autocompleteService.verticalAutocomplete(request);
       expect(mockHttpService.get)
-        .toHaveBeenLastCalledWith(expectedVerticalUrl, expectedParams, getSdkClients(), 'testToken');
+        .toHaveBeenLastCalledWith(expectedVerticalUrl, expectedParams, getClientSdk(), 'testToken');
     });
   });
 
@@ -208,7 +208,7 @@ describe('AutocompleteService', () => {
       });
       await autocompleteService.filterSearch(request);
       expect(mockHttpService.get).toHaveBeenLastCalledWith(
-        expectedFilterUrl, expectedQueryParams, getSdkClients());
+        expectedFilterUrl, expectedQueryParams, getClientSdk());
     });
   });
 });
