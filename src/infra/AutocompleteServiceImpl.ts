@@ -70,8 +70,18 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ...this.config?.additionalQueryParams
     };
 
-    const response = await this.httpService.get<ApiResponse>(
-      this.universalEndpoint, queryParams, getSdkClients(request.customSdkClients), this.config.token);
+    const response = 'token' in this.config
+      ? await this.httpService.get<ApiResponse>(
+        this.universalEndpoint,
+        queryParams,
+        getSdkClients(request.customSdkClients),
+        this.config.token
+      )
+      : await this.httpService.get<ApiResponse>(
+        this.universalEndpoint,
+        queryParams,
+        getSdkClients(request.customSdkClients)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -96,8 +106,18 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ...this.config?.additionalQueryParams
     };
 
-    const response = await this.httpService.get<ApiResponse>(
-      this.verticalEndpoint, queryParams, getSdkClients(request.customSdkClients), this.config.token);
+    const response = 'token' in this.config
+      ? await this.httpService.get<ApiResponse>(
+        this.verticalEndpoint,
+        queryParams,
+        getSdkClients(request.customSdkClients),
+        this.config.token
+      )
+      : await this.httpService.get<ApiResponse>(
+        this.verticalEndpoint,
+        queryParams,
+        getSdkClients(request.customSdkClients)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -127,8 +147,18 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ...this.config?.additionalQueryParams
     };
 
-    const response = await this.httpService.get<ApiResponse>(
-      this.filterEndpoint, queryParams, getSdkClients(request.customSdkClients), this.config.token);
+    const response = 'token' in this.config
+      ? await this.httpService.get<ApiResponse>(
+        this.filterEndpoint,
+        queryParams,
+        getSdkClients(request.customSdkClients),
+        this.config.token
+      )
+      : await this.httpService.get<ApiResponse>(
+        this.filterEndpoint,
+        queryParams,
+        getSdkClients(request.customSdkClients)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {

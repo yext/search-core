@@ -10,6 +10,7 @@ import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator'
 import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Direction } from '../../src/models/searchservice/request/Direction';
 import { SortType } from '../../src/models/searchservice/request/SortType';
+import { getSdkClients } from '../../src/utils/getSdkClients';
 
 describe('SearchService', () => {
   const configWithRequiredApiKey: AnswersConfig = {
@@ -84,7 +85,8 @@ describe('SearchService', () => {
         source: 'STANDARD'
       };
       await searchServiceWithRequiredApiKey.universalSearch(requestWithRequiredParams);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(
+        expectedUniversalUrl, expectedQueryParams, getSdkClients());
     });
 
     it('Query params are correct when only required params (without apikey) are supplied', async () => {
@@ -100,7 +102,7 @@ describe('SearchService', () => {
       };
       await searchServiceWithRequiredToken.universalSearch(requestWithRequiredParams);
       expect(mockHttpService.get)
-        .toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, 'testToken');
+        .toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, getSdkClients(), 'testToken');
     });
 
     it('Query params are correct when all possible params are supplied', async () => {
@@ -144,7 +146,7 @@ describe('SearchService', () => {
       };
       await searchServiceWithAllParams.universalSearch(requestWithAllParams);
       expect(mockHttpService.get)
-        .toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+        .toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, getSdkClients());
     });
 
     it('A custom universal search service endpoint may be supplied', async () => {
@@ -161,7 +163,7 @@ describe('SearchService', () => {
         apiResponseValidator
       );
       await searchService.universalSearch({query: 'test'});
-      expect(mockHttpService.get).toHaveBeenCalledWith(customUrl, expect.anything());
+      expect(mockHttpService.get).toHaveBeenCalledWith(customUrl, expect.anything(), getSdkClients());
     });
 
     it('An arbitrary string may be supplied as a querySource', async () => {
@@ -172,7 +174,20 @@ describe('SearchService', () => {
       const expectedQueryParams = expect.objectContaining({
         source: 'CUSTOM_SOURCE'
       });
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(
+        expectedUniversalUrl, expectedQueryParams, getSdkClients());
+    });
+
+    it('A custom SDK client may be supplied', async () => {
+      const customSdkClients = {
+        CUSTOM_TEST_SITE: 'test'
+      };
+      await searchServiceWithRequiredApiKey.universalSearch({
+        query: 'test',
+        customSdkClients
+      });
+      expect(mockHttpService.get).toHaveBeenLastCalledWith(
+        expectedUniversalUrl, expect.anything(), expect.objectContaining(customSdkClients));
     });
   });
 
@@ -195,7 +210,8 @@ describe('SearchService', () => {
         sortBys: '[]',
       };
       await searchServiceWithRequiredApiKey.verticalSearch(requestWithRequiredParams);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(
+        expectedVerticalUrl, expectedQueryParams, getSdkClients());
     });
 
     it('Query params are correct when only required params (without apiKey) are supplied', async () => {
@@ -213,7 +229,8 @@ describe('SearchService', () => {
         sortBys: '[]',
       };
       await searchServiceWithRequiredToken.verticalSearch(requestWithRequiredParams);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams, 'testToken');
+      expect(mockHttpService.get).toHaveBeenCalledWith(
+        expectedVerticalUrl, expectedQueryParams, getSdkClients(), 'testToken');
     });
 
     it('Query params are correct when all possible params are supplied', async () => {
@@ -294,7 +311,8 @@ describe('SearchService', () => {
         visitorIdMethod: 'YEXT_AUTH'
       };
       await searchServiceWithAllParams.verticalSearch(requestWithAllParams);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(
+        expectedVerticalUrl, expectedQueryParams, getSdkClients());
     });
 
     it('Passes locationRadius = 0 correctly, despite it being a falsy value', async () => {

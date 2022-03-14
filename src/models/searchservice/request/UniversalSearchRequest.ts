@@ -10,7 +10,7 @@ import { CustomSdkClients } from '../../core/SdkClients';
  *
  * @public
  */
-export interface UniversalSearchRequest{
+export interface UniversalSearchRequest {
   /** The search query. */
   query: string;
   /** {@inheritDoc QueryTrigger} */

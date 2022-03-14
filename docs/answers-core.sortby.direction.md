@@ -4,7 +4,7 @@
 
 ## SortBy.direction property
 
-The direction of the sort. Required if the SortBy type is [SortType.Field](./answers-core.sorttype.field.md)<!-- -->.
+The direction of the sort. Required if the SortBy type is [SortType.Field](./answers-core.sorttype.md)<!-- -->.
 
 <b>Signature:</b>
 

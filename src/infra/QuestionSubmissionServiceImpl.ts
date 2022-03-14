@@ -49,8 +49,20 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
       site: 'FIRSTPARTY'
     };
 
-    const response = await this.httpService.post<ApiResponse>(
-      this.endpoint, queryParams, body, getSdkClients(request.customSdkClients), this.config.token);
+    const response = 'token' in this.config
+      ? await this.httpService.post<ApiResponse>(
+        this.endpoint,
+        queryParams,
+        body,
+        getSdkClients(request.customSdkClients),
+        this.config.token
+      )
+      : await this.httpService.post<ApiResponse>(
+        this.endpoint,
+        queryParams,
+        body,
+        getSdkClients(request.customSdkClients)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
