@@ -1,9 +1,11 @@
 import { SdkClients, CustomSdkClients } from '../models/core/SdkClients';
-import { version } from '../../package.json';
+import packageJson from '../../package.json';
+
+const { version } = packageJson;
 
 export function getSdkClients(sdkClients?: CustomSdkClients): SdkClients {
   return {
     ...sdkClients,
-    ANSWERS_CORE: '123'
+    ANSWERS_CORE: version
   };
 }

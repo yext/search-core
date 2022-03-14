@@ -5,8 +5,8 @@ import questionRequest from './requests/questionRequest';
 import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchRequest } from './requests/autocompleteRequests';
 
 const coreConfig: AnswersConfig = {
-  apiKey: 'df4b24f4075800e5e9705090c54c6c13',
-  experienceKey: 'rosetest',
+  apiKey: '2d8c550071a64ea23e263118a2b0680b',
+  experienceKey: 'slanswers',
   locale: 'en',
   experienceVersion: 'PRODUCTION',
 };

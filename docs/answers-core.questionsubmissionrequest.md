@@ -16,6 +16,7 @@ export interface QuestionSubmissionRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [customSdkClients?](./answers-core.questionsubmissionrequest.customsdkclients.md) | [CustomSdkClients](./answers-core.customsdkclients.md) | <i>(Optional)</i> Additional agents to add to the SDK-Clients HTTP header. |
 |  [email](./answers-core.questionsubmissionrequest.email.md) | string | The email of the user that is submitting the question. |
 |  [entityId](./answers-core.questionsubmissionrequest.entityid.md) | string | The ID of the entity to associate with the question. |
 |  [name](./answers-core.questionsubmissionrequest.name.md) | string | The name of the user. |

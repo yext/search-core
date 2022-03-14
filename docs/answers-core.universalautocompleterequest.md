@@ -16,6 +16,7 @@ export interface UniversalAutocompleteRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [customSdkClients?](./answers-core.universalautocompleterequest.customsdkclients.md) | [CustomSdkClients](./answers-core.customsdkclients.md) | <i>(Optional)</i> Additional agents to add to the SDK-Clients HTTP header. |
 |  [input](./answers-core.universalautocompleterequest.input.md) | string | The input string for autocomplete. |
 |  [sessionTrackingEnabled?](./answers-core.universalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 

@@ -97,6 +97,11 @@ export interface CombinedFilter {
 export type Context = any;
 
 // @public
+export type CustomSdkClients = Record<string, string> & {
+    ANSWERS_CORE?: never;
+};
+
+// @public
 export interface DirectAnswer {
     fieldType: string;
     relatedResult: Result;
@@ -200,6 +205,7 @@ export enum FilterCombinator {
 
 // @public
 export interface FilterSearchRequest {
+    customSdkClients?: CustomSdkClients;
     fields: SearchParameterField[];
     input: string;
     sectioned: boolean;
@@ -302,6 +308,7 @@ export enum QueryTrigger {
 
 // @public
 export interface QuestionSubmissionRequest {
+    customSdkClients?: CustomSdkClients;
     email: string;
     entityId: string;
     name: string;
@@ -342,6 +349,7 @@ export enum SearchIntent {
 
 // @public
 export interface SearchParameterField {
+    customSdkClients?: CustomSdkClients;
     entityType: string;
     fetchEntities: boolean;
     fieldApiName: string;
@@ -402,6 +410,7 @@ export enum SpellCheckType {
 
 // @public
 export interface UniversalAutocompleteRequest {
+    customSdkClients?: CustomSdkClients;
     input: string;
     sessionTrackingEnabled?: boolean;
 }
@@ -415,6 +424,7 @@ export interface UniversalLimit {
 // @public
 export interface UniversalSearchRequest {
     context?: Context;
+    customSdkClients?: CustomSdkClients;
     limit?: UniversalLimit;
     location?: LatLong;
     query: string;
@@ -441,6 +451,7 @@ export interface UniversalSearchResponse {
 
 // @public
 export interface VerticalAutocompleteRequest {
+    customSdkClients?: CustomSdkClients;
     input: string;
     sessionTrackingEnabled?: boolean;
     verticalKey: string;
@@ -459,6 +470,7 @@ export interface VerticalResults {
 // @public
 export interface VerticalSearchRequest {
     context?: Context;
+    customSdkClients?: CustomSdkClients;
     facets?: Facet[];
     limit?: number;
     location?: LatLong;

@@ -16,6 +16,7 @@ export interface SearchParameterField
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [customSdkClients?](./answers-core.searchparameterfield.customsdkclients.md) | [CustomSdkClients](./answers-core.customsdkclients.md) | <i>(Optional)</i> Additional agents to add to the SDK-Clients HTTP header. |
 |  [entityType](./answers-core.searchparameterfield.entitytype.md) | string | The entityType to perform the autocomplete on. |
 |  [fetchEntities](./answers-core.searchparameterfield.fetchentities.md) | boolean | Indicates whether or not to return the [AutocompleteResult.relatedItem](./answers-core.autocompleteresult.relateditem.md) associated with the autocomplete result. |
 |  [fieldApiName](./answers-core.searchparameterfield.fieldapiname.md) | string | The fieldApiName to perform the autocomplete on. |
