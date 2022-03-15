@@ -9,8 +9,9 @@ Options which can be specified for a vertical search.
 <b>Signature:</b>
 
 ```typescript
-export interface VerticalSearchRequest 
+export interface VerticalSearchRequest extends AnswersRequest 
 ```
+<b>Extends:</b> [AnswersRequest](./answers-core.answersrequest.md)
 
 ## Properties
 

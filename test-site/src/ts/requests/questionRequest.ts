@@ -5,7 +5,10 @@ const questionRequest: QuestionSubmissionRequest = {
   entityId: 'Org-1',
   name: 'bob',
   questionText: 'wow wow wow!',
-  sessionTrackingEnabled: true
+  sessionTrackingEnabled: true,
+  customClientSdk: {
+    CORE_TEST_SITE: 'test'
+  }
 };
 
 export default questionRequest;

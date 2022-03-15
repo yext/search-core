@@ -10,6 +10,7 @@ import { AutocompleteQueryParams } from '../models/autocompleteservice/Autocompl
 import { AutocompleteService } from '../services/AutocompleteService';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
+import { getClientSdk } from '../utils/getClientSdk';
 
 /**
  * Internal interface representing the query params which are sent for a vertical
@@ -70,8 +71,17 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     };
 
     const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.universalEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.universalEndpoint, queryParams);
+      ? await this.httpService.get<ApiResponse>(
+        this.universalEndpoint,
+        queryParams,
+        getClientSdk(request.customClientSdk),
+        this.config.token
+      )
+      : await this.httpService.get<ApiResponse>(
+        this.universalEndpoint,
+        queryParams,
+        getClientSdk(request.customClientSdk)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -97,8 +107,17 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     };
 
     const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.verticalEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.verticalEndpoint, queryParams);
+      ? await this.httpService.get<ApiResponse>(
+        this.verticalEndpoint,
+        queryParams,
+        getClientSdk(request.customClientSdk),
+        this.config.token
+      )
+      : await this.httpService.get<ApiResponse>(
+        this.verticalEndpoint,
+        queryParams,
+        getClientSdk(request.customClientSdk)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -129,8 +148,17 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     };
 
     const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.filterEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.filterEndpoint, queryParams);
+      ? await this.httpService.get<ApiResponse>(
+        this.filterEndpoint,
+        queryParams,
+        getClientSdk(request.customClientSdk),
+        this.config.token
+      )
+      : await this.httpService.get<ApiResponse>(
+        this.filterEndpoint,
+        queryParams,
+        getClientSdk(request.customClientSdk)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {

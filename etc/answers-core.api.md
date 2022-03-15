@@ -40,6 +40,11 @@ export class AnswersError extends Error {
 }
 
 // @public
+export interface AnswersRequest {
+    customClientSdk?: CustomClientSdk;
+}
+
+// @public
 export interface AppliedQueryFilter {
     displayKey: string;
     displayValue: string;
@@ -95,6 +100,12 @@ export interface CombinedFilter {
 
 // @public
 export type Context = any;
+
+// @public
+export interface CustomClientSdk {
+    [agent: string]: string | undefined;
+    ANSWERS_CORE?: never;
+}
 
 // @public
 export interface DirectAnswer {
@@ -199,7 +210,7 @@ export enum FilterCombinator {
 }
 
 // @public
-export interface FilterSearchRequest {
+export interface FilterSearchRequest extends AnswersRequest {
     fields: SearchParameterField[];
     input: string;
     sectioned: boolean;
@@ -301,7 +312,7 @@ export enum QueryTrigger {
 }
 
 // @public
-export interface QuestionSubmissionRequest {
+export interface QuestionSubmissionRequest extends AnswersRequest {
     email: string;
     entityId: string;
     name: string;
@@ -401,7 +412,7 @@ export enum SpellCheckType {
 }
 
 // @public
-export interface UniversalAutocompleteRequest {
+export interface UniversalAutocompleteRequest extends AnswersRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
 }
@@ -413,7 +424,7 @@ export interface UniversalLimit {
 }
 
 // @public
-export interface UniversalSearchRequest {
+export interface UniversalSearchRequest extends AnswersRequest {
     context?: Context;
     limit?: UniversalLimit;
     location?: LatLong;
@@ -440,7 +451,7 @@ export interface UniversalSearchResponse {
 }
 
 // @public
-export interface VerticalAutocompleteRequest {
+export interface VerticalAutocompleteRequest extends AnswersRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
     verticalKey: string;
@@ -457,7 +468,7 @@ export interface VerticalResults {
 }
 
 // @public
-export interface VerticalSearchRequest {
+export interface VerticalSearchRequest extends AnswersRequest {
     context?: Context;
     facets?: Facet[];
     limit?: number;

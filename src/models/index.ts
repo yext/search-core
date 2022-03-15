@@ -8,8 +8,10 @@ export {
   AnswersConfigWithApiKey,
   AnswersConfigWithToken
 } from './core/AnswersConfig';
+export { AnswersRequest } from './core/AnswersRequest';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';
+export { CustomClientSdk } from './core/ClientSdk';
 
 // Autocomplete service
 export * from './autocompleteservice/AutocompleteRequest';

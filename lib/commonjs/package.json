@@ -1,0 +1,5 @@
+{
+  "name": "answers-core-commonjs",
+  "main": "../../dist/commonjs/src",
+  "types": "../../dist/bundle.d.ts"
+}

@@ -1,0 +1,5 @@
+{
+  "name": "answers-core-esm",
+  "module": "../../dist/esm/src",
+  "types": "../../dist/bundle.d.ts"
+}

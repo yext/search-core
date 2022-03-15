@@ -10,7 +10,10 @@ const verticalRequest: VerticalSearchRequest = {
     entityId: '3942',
     randomize: true,
   },
-  referrerPageUrl: 'www.google.com/answers/not/ads'
+  referrerPageUrl: 'www.google.com/answers/not/ads',
+  customClientSdk: {
+    CORE_TEST_SITE: 'test'
+  }
 };
 
 export default verticalRequest;

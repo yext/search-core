@@ -3,13 +3,14 @@ import { LatLong } from './LatLong';
 import { QueryTrigger } from './QueryTrigger';
 import { QuerySource } from './QuerySource';
 import { UniversalLimit } from './UniversalLimit';
+import { AnswersRequest } from '../../core/AnswersRequest';
 
 /**
  * Options which can be specified for a universal search.
  *
  * @public
  */
-export interface UniversalSearchRequest {
+export interface UniversalSearchRequest extends AnswersRequest {
   /** The search query. */
   query: string;
   /** {@inheritDoc QueryTrigger} */

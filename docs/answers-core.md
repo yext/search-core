@@ -39,12 +39,14 @@
 |  --- | --- |
 |  [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires apiKey. |
 |  [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires token. |
+|  [AnswersRequest](./answers-core.answersrequest.md) | Options for an Answers API request. |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutocompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |
 |  [AutocompleteService](./answers-core.autocompleteservice.md) | A service for autocomplete requests. |
 |  [BaseAnswersConfig](./answers-core.baseanswersconfig.md) | The base configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
+|  [CustomClientSdk](./answers-core.customclientsdk.md) | Additional agents and their versions used to create the Answers experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search. |
 |  [DisplayableFacet](./answers-core.displayablefacet.md) | A [Facet](./answers-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./answers-core.displayablefacetoption.md) | A [FacetOption](./answers-core.facetoption.md) with extra data meant to be displayed to the end user. |

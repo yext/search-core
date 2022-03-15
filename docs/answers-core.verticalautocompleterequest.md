@@ -9,8 +9,9 @@ Options for a vertial autocomplete request.
 <b>Signature:</b>
 
 ```typescript
-export interface VerticalAutocompleteRequest 
+export interface VerticalAutocompleteRequest extends AnswersRequest 
 ```
+<b>Extends:</b> [AnswersRequest](./answers-core.answersrequest.md)
 
 ## Properties
 

@@ -22,13 +22,17 @@ export class HttpServiceImpl implements HttpService {
   get<T>(
     url: string,
     queryParams: QueryParams,
+    clientSdk: Record<string, string>,
     authToken?: string,
   ): Promise<T> {
-    return this.fetch(url, queryParams, {
+    return fetch(url, queryParams, {
       method: RequestMethods.GET,
       mode: 'cors',
       credentials: 'include',
-      ...(authToken && { headers: { Authorization: `Bearer ${authToken}` }}),
+      headers: {
+        'Client-SDK': formatAsHttpHeader(clientSdk),
+        ...(authToken && { Authorization: `Bearer ${authToken}` }),
+      }
     }).then(res => res.json());
   }
 
@@ -39,34 +43,56 @@ export class HttpServiceImpl implements HttpService {
     url: string,
     queryParams: QueryParams,
     body: QueryParams,
+    clientSdk: Record<string, string>,
     authToken?: string
   ): Promise<T> {
     const sanitizedBodyParams = sanitizeQueryParams(body);
-    return this.fetch(url, queryParams, {
+    return fetch(url, queryParams, {
       method: RequestMethods.POST,
       body: JSON.stringify(sanitizedBodyParams),
       mode: 'cors',
       ...(authToken && { credentials: 'include' }),
       headers: {
+        'Client-SDK': formatAsHttpHeader(clientSdk),
         'Content-Type': 'application/json',
         ...(authToken && { Authorization: `Bearer ${authToken}`}),
       }
     })
       .then(res => res.json());
   }
+}
 
-  /**
-   * Perform a fetch, using the polyfill if needed.
-   */
-  private fetch(
-    url: string,
-    queryParams: QueryParams,
-    reqInit: RequestInit
-  ): Promise<Response> {
-    const urlWithParams = addParamsToURL(url, queryParams);
-    if (typeof(window) !== 'undefined' && window.fetch) {
-      return window.fetch(urlWithParams, reqInit);
-    }
-    return crossFetch(urlWithParams, reqInit);
+/**
+ * Perform a fetch, using the polyfill if needed.
+ */
+function fetch(
+  url: string,
+  queryParams: QueryParams,
+  reqInit: RequestInit
+): Promise<Response> {
+  const urlWithParams = addParamsToURL(url, queryParams);
+  if (typeof(window) !== 'undefined' && window.fetch) {
+    return window.fetch(urlWithParams, reqInit);
   }
+  return crossFetch(urlWithParams, reqInit);
+}
+
+/**
+ * Converts the JSON representing the Client-SDK agents into the expected HTTP header format.
+ *
+ * @example
+ * Input clientSdk:
+ * {
+ *   ANSWERS_CORE: '123',
+ *   CUSTOM_AGENT: '456'
+ * }
+ *
+ * Output HTTP header:
+ * 'ANSWERS_CORE=123, CUSTOM_AGENT=456'
+ */
+function formatAsHttpHeader(clientSdk: Record<string, string>) {
+  return Object.keys(clientSdk).reduce((combinedHeader, currentKey) => {
+    const httpFormattedHeader = `${currentKey}=${clientSdk[currentKey]}`;
+    return combinedHeader ? `${combinedHeader}, ${httpFormattedHeader}` : httpFormattedHeader;
+  }, '');
 }

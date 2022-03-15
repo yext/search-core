@@ -13,7 +13,10 @@ const universalRequest: UniversalSearchRequest = {
     longitude: 0.0,
   },
   referrerPageUrl: 'www.google.com/answers/not/ads',
-  restrictVerticals: ['faq', 'links']
+  restrictVerticals: ['faq', 'links'],
+  customClientSdk: {
+    CORE_TEST_SITE: 'test'
+  }
 };
 
 export default universalRequest;
