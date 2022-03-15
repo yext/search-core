@@ -77,12 +77,27 @@ function fetch(
   return crossFetch(urlWithParams, reqInit);
 }
 
-function formatAsHttpHeader(jsonHeader: Record<string, string>) {
-  return Object.keys(jsonHeader).reduce((combinedHeader, currentKey) => {
-    if (!jsonHeader[currentKey]) {
+/**
+ * Converts the JSON representing the Client-SDK agents into the format of an HTTP header.
+ * Agents that have an undefined version are excluded from the returned header.
+ *
+ * @example
+ * Input clientSdk:
+ * {
+ *   ANSWERS_CORE: '123',
+ *   UNDEFINED_AGENT: undefined,
+ *   CUSTOM_AGENT: '456'
+ * }
+ *
+ * Output HTTP header:
+ * 'ANSWERS_CORE=123, CUSTOM_AGENT=456'
+ */
+function formatAsHttpHeader(clientSdk: Record<string, string>) {
+  return Object.keys(clientSdk).reduce((combinedHeader, currentKey) => {
+    if (!clientSdk[currentKey]) {
       return combinedHeader;
     }
-    const httpFormattedHeader = `${currentKey}=${jsonHeader[currentKey]}`;
+    const httpFormattedHeader = `${currentKey}=${clientSdk[currentKey]}`;
     return combinedHeader ? `${combinedHeader}, ${httpFormattedHeader}` : httpFormattedHeader;
   }, '');
 }
