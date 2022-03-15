@@ -79,13 +79,11 @@ function fetch(
 
 /**
  * Converts the JSON representing the Client-SDK agents into the expected HTTP header format.
- * Agents that have an undefined version are excluded from the returned header.
  *
  * @example
  * Input clientSdk:
  * {
  *   ANSWERS_CORE: '123',
- *   UNDEFINED_AGENT: undefined,
  *   CUSTOM_AGENT: '456'
  * }
  *
@@ -94,9 +92,6 @@ function fetch(
  */
 function formatAsHttpHeader(clientSdk: Record<string, string>) {
   return Object.keys(clientSdk).reduce((combinedHeader, currentKey) => {
-    if (!clientSdk[currentKey]) {
-      return combinedHeader;
-    }
     const httpFormattedHeader = `${currentKey}=${clientSdk[currentKey]}`;
     return combinedHeader ? `${combinedHeader}, ${httpFormattedHeader}` : httpFormattedHeader;
   }, '');

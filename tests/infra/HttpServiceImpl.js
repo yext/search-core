@@ -1,6 +1,7 @@
 import fetch from 'cross-fetch';
 
 import { HttpServiceImpl } from '../../src/infra/HttpServiceImpl';
+import { getClientSdk } from '../../src/utils/getClientSdk';
 
 jest.mock('cross-fetch');
 
@@ -108,16 +109,17 @@ describe('HttpServiceImpl', () => {
   });
 
 
-  it('makes request with custom client SDK, but only when defined', async () => {
+  it('makes request with custom client SDK, but only when not falsy', async () => {
     const queryParams = {
       aQuery: 'param'
     };
     const customClientSdk = {
       ...clientSdk,
       UNDEFINED_AGENT: undefined,
+      EMPTY_STRING: '',
       CUSTOM_TEST_SITE: 'test'
     };
-    await httpServiceImpl.get('http://yext.com', queryParams, customClientSdk);
+    await httpServiceImpl.get('http://yext.com', queryParams, getClientSdk(customClientSdk));
     const expectedReqInit = {
       method: 'get',
       mode: 'cors',
