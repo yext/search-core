@@ -9,15 +9,15 @@ Options which can be specified for a universal search.
 <b>Signature:</b>
 
 ```typescript
-export interface UniversalSearchRequest 
+export interface UniversalSearchRequest extends AnswersRequest 
 ```
+<b>Extends:</b> [AnswersRequest](./answers-core.answersrequest.md)
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [context?](./answers-core.universalsearchrequest.context.md) | [Context](./answers-core.context.md) | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [customClientSdk?](./answers-core.universalsearchrequest.customclientsdk.md) | [CustomClientSdk](./answers-core.customclientsdk.md) | <i>(Optional)</i> Additional agents to add to the Client-SDK HTTP header. |
 |  [limit?](./answers-core.universalsearchrequest.limit.md) | [UniversalLimit](./answers-core.universallimit.md) | <i>(Optional)</i> The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
 |  [location?](./answers-core.universalsearchrequest.location.md) | [LatLong](./answers-core.latlong.md) | <i>(Optional)</i> The latitude and longitude of the user making the request. Used to bias the results. |
 |  [query](./answers-core.universalsearchrequest.query.md) | string | The search query. |

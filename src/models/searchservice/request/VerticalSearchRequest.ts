@@ -6,14 +6,14 @@ import { QueryTrigger } from './QueryTrigger';
 import { SortBy } from './SortBy';
 import { QuerySource } from './QuerySource';
 import { Facet } from './Facet';
-import { CustomClientSdk } from '../../core/ClientSdk';
+import { AnswersRequest } from '../../core/AnswersRequest';
 
 /**
  * Options which can be specified for a vertical search.
  *
  * @public
  */
-export interface VerticalSearchRequest {
+export interface VerticalSearchRequest extends AnswersRequest {
   /** The search query. */
   query: string,
   /** The key associated with the vertical. */
@@ -49,7 +49,5 @@ export interface VerticalSearchRequest {
   /** The radius (in meters) to filter the vertical search by. */
   locationRadius?: number,
   /** The queryId for the query, if this is a repeat query. */
-  queryId?: string,
-  /** {@inheritDoc CustomClientSdk} */
-  customClientSdk?: CustomClientSdk
+  queryId?: string
 }

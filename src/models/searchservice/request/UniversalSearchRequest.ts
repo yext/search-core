@@ -3,14 +3,14 @@ import { LatLong } from './LatLong';
 import { QueryTrigger } from './QueryTrigger';
 import { QuerySource } from './QuerySource';
 import { UniversalLimit } from './UniversalLimit';
-import { CustomClientSdk } from '../../core/ClientSdk';
+import { AnswersRequest } from '../../core/AnswersRequest';
 
 /**
  * Options which can be specified for a universal search.
  *
  * @public
  */
-export interface UniversalSearchRequest {
+export interface UniversalSearchRequest extends AnswersRequest {
   /** The search query. */
   query: string;
   /** {@inheritDoc QueryTrigger} */
@@ -38,7 +38,5 @@ export interface UniversalSearchRequest {
   /** {@inheritDoc UniversalLimit} */
   limit?: UniversalLimit;
   /** If included, the response will only include these verticals. */
-  restrictVerticals?: string[],
-  /** {@inheritDoc CustomClientSdk} */
-  customClientSdk?: CustomClientSdk
+  restrictVerticals?: string[]
 }

@@ -9,14 +9,14 @@ Options for a QuestionSubmission request.
 <b>Signature:</b>
 
 ```typescript
-export interface QuestionSubmissionRequest 
+export interface QuestionSubmissionRequest extends AnswersRequest 
 ```
+<b>Extends:</b> [AnswersRequest](./answers-core.answersrequest.md)
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [customClientSdk?](./answers-core.questionsubmissionrequest.customclientsdk.md) | [CustomClientSdk](./answers-core.customclientsdk.md) | <i>(Optional)</i> Additional agents to add to the Client-SDK HTTP header. |
 |  [email](./answers-core.questionsubmissionrequest.email.md) | string | The email of the user that is submitting the question. |
 |  [entityId](./answers-core.questionsubmissionrequest.entityid.md) | string | The ID of the entity to associate with the question. |
 |  [name](./answers-core.questionsubmissionrequest.name.md) | string | The name of the user. |

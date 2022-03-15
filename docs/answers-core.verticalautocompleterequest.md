@@ -9,14 +9,14 @@ Options for a vertial autocomplete request.
 <b>Signature:</b>
 
 ```typescript
-export interface VerticalAutocompleteRequest 
+export interface VerticalAutocompleteRequest extends AnswersRequest 
 ```
+<b>Extends:</b> [AnswersRequest](./answers-core.answersrequest.md)
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [customClientSdk?](./answers-core.verticalautocompleterequest.customclientsdk.md) | [CustomClientSdk](./answers-core.customclientsdk.md) | <i>(Optional)</i> Additional agents to add to the Client-SDK HTTP header. |
 |  [input](./answers-core.verticalautocompleterequest.input.md) | string | The input string for autocomplete. |
 |  [sessionTrackingEnabled?](./answers-core.verticalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [verticalKey](./answers-core.verticalautocompleterequest.verticalkey.md) | string | The key for the vertical to get autocomplete suggestions from. |

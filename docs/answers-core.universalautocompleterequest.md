@@ -9,14 +9,14 @@ Options for a universal autocomplete request.
 <b>Signature:</b>
 
 ```typescript
-export interface UniversalAutocompleteRequest 
+export interface UniversalAutocompleteRequest extends AnswersRequest 
 ```
+<b>Extends:</b> [AnswersRequest](./answers-core.answersrequest.md)
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [customClientSdk?](./answers-core.universalautocompleterequest.customclientsdk.md) | [CustomClientSdk](./answers-core.customclientsdk.md) | <i>(Optional)</i> Additional agents to add to the Client-SDK HTTP header. |
 |  [input](./answers-core.universalautocompleterequest.input.md) | string | The input string for autocomplete. |
 |  [sessionTrackingEnabled?](./answers-core.universalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 

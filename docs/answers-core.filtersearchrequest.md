@@ -9,14 +9,14 @@ Options for a filtersearch request.
 <b>Signature:</b>
 
 ```typescript
-export interface FilterSearchRequest 
+export interface FilterSearchRequest extends AnswersRequest 
 ```
+<b>Extends:</b> [AnswersRequest](./answers-core.answersrequest.md)
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [customClientSdk?](./answers-core.filtersearchrequest.customclientsdk.md) | [CustomClientSdk](./answers-core.customclientsdk.md) | <i>(Optional)</i> Additional agents to add to the Client-SDK HTTP header. |
 |  [fields](./answers-core.filtersearchrequest.fields.md) | [SearchParameterField](./answers-core.searchparameterfield.md)<!-- -->\[\] | An array of [SearchParameterField](./answers-core.searchparameterfield.md) |
 |  [input](./answers-core.filtersearchrequest.input.md) | string | The input string for autocomplete. |
 |  [sectioned](./answers-core.filtersearchrequest.sectioned.md) | boolean | Determines whether or not the results of the [FilterSearchResponse](./answers-core.filtersearchresponse.md) are separated by field. |

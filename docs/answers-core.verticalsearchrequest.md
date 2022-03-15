@@ -9,15 +9,15 @@ Options which can be specified for a vertical search.
 <b>Signature:</b>
 
 ```typescript
-export interface VerticalSearchRequest 
+export interface VerticalSearchRequest extends AnswersRequest 
 ```
+<b>Extends:</b> [AnswersRequest](./answers-core.answersrequest.md)
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [context?](./answers-core.verticalsearchrequest.context.md) | [Context](./answers-core.context.md) | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [customClientSdk?](./answers-core.verticalsearchrequest.customclientsdk.md) | [CustomClientSdk](./answers-core.customclientsdk.md) | <i>(Optional)</i> Additional agents to add to the Client-SDK HTTP header. |
 |  [facets?](./answers-core.verticalsearchrequest.facets.md) | [Facet](./answers-core.facet.md)<!-- -->\[\] | <i>(Optional)</i> The facet filters to apply to the search. |
 |  [limit?](./answers-core.verticalsearchrequest.limit.md) | number | <i>(Optional)</i> The maximum number of results to include with a max of 50. |
 |  [location?](./answers-core.verticalsearchrequest.location.md) | [LatLong](./answers-core.latlong.md) | <i>(Optional)</i> The latitude and longitude of the user making the request. Used to bias the results. |

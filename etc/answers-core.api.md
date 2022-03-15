@@ -40,6 +40,11 @@ export class AnswersError extends Error {
 }
 
 // @public
+export interface AnswersRequest {
+    customClientSdk?: CustomClientSdk;
+}
+
+// @public
 export interface AppliedQueryFilter {
     displayKey: string;
     displayValue: string;
@@ -205,8 +210,7 @@ export enum FilterCombinator {
 }
 
 // @public
-export interface FilterSearchRequest {
-    customClientSdk?: CustomClientSdk;
+export interface FilterSearchRequest extends AnswersRequest {
     fields: SearchParameterField[];
     input: string;
     sectioned: boolean;
@@ -308,8 +312,7 @@ export enum QueryTrigger {
 }
 
 // @public
-export interface QuestionSubmissionRequest {
-    customClientSdk?: CustomClientSdk;
+export interface QuestionSubmissionRequest extends AnswersRequest {
     email: string;
     entityId: string;
     name: string;
@@ -350,7 +353,6 @@ export enum SearchIntent {
 
 // @public
 export interface SearchParameterField {
-    customClientSdk?: CustomClientSdk;
     entityType: string;
     fetchEntities: boolean;
     fieldApiName: string;
@@ -410,8 +412,7 @@ export enum SpellCheckType {
 }
 
 // @public
-export interface UniversalAutocompleteRequest {
-    customClientSdk?: CustomClientSdk;
+export interface UniversalAutocompleteRequest extends AnswersRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
 }
@@ -423,9 +424,8 @@ export interface UniversalLimit {
 }
 
 // @public
-export interface UniversalSearchRequest {
+export interface UniversalSearchRequest extends AnswersRequest {
     context?: Context;
-    customClientSdk?: CustomClientSdk;
     limit?: UniversalLimit;
     location?: LatLong;
     query: string;
@@ -451,8 +451,7 @@ export interface UniversalSearchResponse {
 }
 
 // @public
-export interface VerticalAutocompleteRequest {
-    customClientSdk?: CustomClientSdk;
+export interface VerticalAutocompleteRequest extends AnswersRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
     verticalKey: string;
@@ -469,9 +468,8 @@ export interface VerticalResults {
 }
 
 // @public
-export interface VerticalSearchRequest {
+export interface VerticalSearchRequest extends AnswersRequest {
     context?: Context;
-    customClientSdk?: CustomClientSdk;
     facets?: Facet[];
     limit?: number;
     location?: LatLong;
