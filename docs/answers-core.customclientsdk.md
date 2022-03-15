@@ -2,14 +2,19 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [CustomClientSdk](./answers-core.customclientsdk.md)
 
-## CustomClientSdk type
+## CustomClientSdk interface
 
 Additional agents to add to the Client-SDK HTTP header.
 
 <b>Signature:</b>
 
 ```typescript
-export declare type CustomClientSdk = Record<string, string> & {
-    ANSWERS_CORE?: never;
-};
+export interface CustomClientSdk 
 ```
+
+## Properties
+
+|  Property | Type | Description |
+|  --- | --- | --- |
+|  [ANSWERS\_CORE?](./answers-core.customclientsdk.answers_core.md) | never | <i>(Optional)</i> The ANSWERS\_CORE agent should not be supplied. Instead, it will be automatically added to the header and populated with the version of Answers Core being used. |
+

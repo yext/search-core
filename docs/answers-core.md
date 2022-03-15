@@ -45,6 +45,7 @@
 |  [AutocompleteService](./answers-core.autocompleteservice.md) | A service for autocomplete requests. |
 |  [BaseAnswersConfig](./answers-core.baseanswersconfig.md) | The base configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
+|  [CustomClientSdk](./answers-core.customclientsdk.md) | Additional agents to add to the Client-SDK HTTP header. |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search. |
 |  [DisplayableFacet](./answers-core.displayablefacet.md) | A [Facet](./answers-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./answers-core.displayablefacetoption.md) | A [FacetOption](./answers-core.facetoption.md) with extra data meant to be displayed to the end user. |
@@ -86,6 +87,5 @@
 |  --- | --- |
 |  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->. The config requires either an apiKey or a token. |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [CustomClientSdk](./answers-core.customclientsdk.md) | Additional agents to add to the Client-SDK HTTP header. |
 |  [HighlightedFields](./answers-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Answers API |
 

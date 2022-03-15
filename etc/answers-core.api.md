@@ -97,9 +97,10 @@ export interface CombinedFilter {
 export type Context = any;
 
 // @public
-export type CustomClientSdk = Record<string, string> & {
+export interface CustomClientSdk {
+    [agent: string]: string | undefined;
     ANSWERS_CORE?: never;
-};
+}
 
 // @public
 export interface DirectAnswer {

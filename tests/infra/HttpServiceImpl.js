@@ -108,12 +108,13 @@ describe('HttpServiceImpl', () => {
   });
 
 
-  it('can make request with custom client SDK', async () => {
+  it('makes request with custom client SDK, but only when defined', async () => {
     const queryParams = {
       aQuery: 'param'
     };
     const customClientSdk = {
       ...clientSdk,
+      UNDEFINED_AGENT: undefined,
       CUSTOM_TEST_SITE: 'test'
     };
     await httpServiceImpl.get('http://yext.com', queryParams, customClientSdk);

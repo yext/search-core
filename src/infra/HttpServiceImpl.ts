@@ -79,6 +79,9 @@ function fetch(
 
 function formatAsHttpHeader(jsonHeader: Record<string, string>) {
   return Object.keys(jsonHeader).reduce((combinedHeader, currentKey) => {
+    if (!jsonHeader[currentKey]) {
+      return combinedHeader;
+    }
     const httpFormattedHeader = `${currentKey}=${jsonHeader[currentKey]}`;
     return combinedHeader ? `${combinedHeader}, ${httpFormattedHeader}` : httpFormattedHeader;
   }, '');
