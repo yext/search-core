@@ -78,7 +78,7 @@ function fetch(
 }
 
 /**
- * Converts the JSON representing the Client-SDK agents into the format of an HTTP header.
+ * Converts the JSON representing the Client-SDK agents into the expected HTTP header format.
  * Agents that have an undefined version are excluded from the returned header.
  *
  * @example
