@@ -1,7 +1,7 @@
 
 /**
- * Additional agents used to create the Answers experience. These agents are added to the
- * Client-SDK HTTP header along with the ANSWERS_CORE agent.
+ * Additional agents and their versions used to create the Answers experience. The information for these
+ * agents is added to the Client-SDK HTTP header along with that of the ANSWERS_CORE agent.
  *
  * @public
  **/
