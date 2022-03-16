@@ -16,5 +16,5 @@ export interface AdditionalHttpHeaderValues
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  ["Client-SDK"?](./answers-core.additionalhttpheadervalues._client-sdk_.md) | [ClientSDKHeaderValues](./answers-core.clientsdkheadervalues.md) | <i>(Optional)</i> |
+|  ["Client-SDK"?](./answers-core.additionalhttpheadervalues._client-sdk_.md) | [ClientSDKHeaderValues](./answers-core.clientsdkheadervalues.md) | <i>(Optional)</i> Additional agents and their versions used to create the Answers experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
 

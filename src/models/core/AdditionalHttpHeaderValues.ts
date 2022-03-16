@@ -5,6 +5,7 @@
  * @public
  **/
 export interface AdditionalHttpHeaderValues {
+  /** {@inheritDoc ClientSDKHeaderValues} */
   'Client-SDK'?: ClientSDKHeaderValues
 }
 

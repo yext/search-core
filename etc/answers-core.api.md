@@ -6,7 +6,6 @@
 
 // @public
 export interface AdditionalHttpHeaderValues {
-    // (undocumented)
     'Client-SDK'?: ClientSDKHeaderValues;
 }
 
