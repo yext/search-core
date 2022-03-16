@@ -9,10 +9,12 @@ import { HttpService } from '../../src/services/HttpService';
 import { AutocompleteServiceImpl } from '../../src/infra/AutocompleteServiceImpl';
 import mockAutocompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutocompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
+import mockAutocompleteResponseWithFailedVerticals from '../fixtures/autocompleteresponsewithfailedverticals.json';
 import mockAutocompleteResponseWithVerticalKeys from '../fixtures/autocompleteresponsewithverticalkeys.json';
 import { defaultEndpoints } from '../../src/constants';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { ApiResponse } from '../../src/models/answersapi/ApiResponse';
+import { AnswersError } from '../../src/models/answersapi/AnswersError';
 import { getClientSdk } from '../../src/utils/getClientSdk';
 
 describe('AutocompleteService', () => {
@@ -210,6 +212,29 @@ describe('AutocompleteService', () => {
       expect(mockHttpService.get).toHaveBeenLastCalledWith(
         expectedFilterUrl, expectedQueryParams, getClientSdk());
     });
+
+    it('handle failed verticals in response', () => {
+      const request: FilterSearchRequest = {
+        input: 'salesforce',
+        sessionTrackingEnabled: false,
+        verticalKey: 'verticalKey',
+        sectioned: false,
+        fields: [{
+          fieldApiName: 'field',
+          entityType: 'location',
+          fetchEntities: false
+        }]
+      };
+      const autocompleteService = createMockAutocompleteService({
+        response: mockAutocompleteResponseWithFailedVerticals
+      });
+      expect(async () => await autocompleteService.filterSearch(request))
+        .rejects.toThrow({
+          message: 'Something went wrong.',
+          code: 400,
+          type: 'BACKEND_ERROR'
+        } as AnswersError);
+    });
   });
 });
 
@@ -258,6 +283,13 @@ describe('additionalQueryParams are passed through', () => {
   });
 
   it('FilterSearch', async () => {
+    mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
+    apiResponseValidator = new ApiResponseValidator();
+    autocompleteService = new AutocompleteServiceImpl(
+      config,
+      mockHttpService as HttpService,
+      apiResponseValidator
+    );
     const request: FilterSearchRequest = {
       input: 'salesforce',
       verticalKey: 'verticalKey',
