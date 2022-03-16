@@ -113,13 +113,15 @@ describe('HttpServiceImpl', () => {
     const queryParams = {
       aQuery: 'param'
     };
-    const customClientSdk = {
-      ...clientSdk,
-      UNDEFINED_AGENT: undefined,
-      EMPTY_STRING: '',
-      CUSTOM_TEST_SITE: 'test'
+    const additionalHttpHeaderValues = {
+      'Client-SDK': {
+        ...clientSdk,
+        UNDEFINED_AGENT: undefined,
+        EMPTY_STRING: '',
+        CUSTOM_TEST_SITE: 'test'
+      }
     };
-    await httpServiceImpl.get('http://yext.com', queryParams, getClientSdk(customClientSdk));
+    await httpServiceImpl.get('http://yext.com', queryParams, getClientSdk(additionalHttpHeaderValues));
     const expectedReqInit = {
       method: 'get',
       mode: 'cors',

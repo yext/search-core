@@ -11,7 +11,10 @@ export {
 export { AnswersRequest } from './core/AnswersRequest';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';
-export { CustomClientSdk } from './core/ClientSdk';
+export {
+  AdditionalHttpHeaderValues,
+  ClientSDKHeaderValues
+} from './core/AdditionalHttpHeaderValues';
 
 // Autocomplete service
 export * from './autocompleteservice/AutocompleteRequest';

@@ -11,8 +11,10 @@ const verticalRequest: VerticalSearchRequest = {
     randomize: true,
   },
   referrerPageUrl: 'www.google.com/answers/not/ads',
-  customClientSdk: {
-    CORE_TEST_SITE: 'test'
+  additionalHttpHeaderValues: {
+    'Client-SDK': {
+      CORE_TEST_SITE: 'test'
+    }
   }
 };
 

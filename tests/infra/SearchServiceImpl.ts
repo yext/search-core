@@ -179,15 +179,18 @@ describe('SearchService', () => {
     });
 
     it('A custom client SDK may be supplied', async () => {
-      const customClientSdk = {
-        CUSTOM_TEST_SITE: 'test'
+      const additionalHttpHeaderValues = {
+        'Client-SDK': {
+          CUSTOM_TEST_SITE: 'test'
+        }
       };
       await searchServiceWithRequiredApiKey.universalSearch({
         query: 'test',
-        customClientSdk
+        additionalHttpHeaderValues
       });
       expect(mockHttpService.get).toHaveBeenLastCalledWith(
-        expectedUniversalUrl, expect.anything(), expect.objectContaining(customClientSdk));
+        expectedUniversalUrl, expect.anything(), expect.objectContaining(
+          additionalHttpHeaderValues['Client-SDK']));
     });
   });
 

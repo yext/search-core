@@ -74,13 +74,13 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ? await this.httpService.get<ApiResponse>(
         this.universalEndpoint,
         queryParams,
-        getClientSdk(request.customClientSdk),
+        getClientSdk(request.additionalHttpHeaderValues),
         this.config.token
       )
       : await this.httpService.get<ApiResponse>(
         this.universalEndpoint,
         queryParams,
-        getClientSdk(request.customClientSdk)
+        getClientSdk(request.additionalHttpHeaderValues)
       );
 
     const validationResult = this.apiResponseValidator.validate(response);
@@ -110,13 +110,13 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ? await this.httpService.get<ApiResponse>(
         this.verticalEndpoint,
         queryParams,
-        getClientSdk(request.customClientSdk),
+        getClientSdk(request.additionalHttpHeaderValues),
         this.config.token
       )
       : await this.httpService.get<ApiResponse>(
         this.verticalEndpoint,
         queryParams,
-        getClientSdk(request.customClientSdk)
+        getClientSdk(request.additionalHttpHeaderValues)
       );
 
     const validationResult = this.apiResponseValidator.validate(response);
@@ -151,13 +151,13 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ? await this.httpService.get<ApiResponse>(
         this.filterEndpoint,
         queryParams,
-        getClientSdk(request.customClientSdk),
+        getClientSdk(request.additionalHttpHeaderValues),
         this.config.token
       )
       : await this.httpService.get<ApiResponse>(
         this.filterEndpoint,
         queryParams,
-        getClientSdk(request.customClientSdk)
+        getClientSdk(request.additionalHttpHeaderValues)
       );
 
     const validationResult = this.apiResponseValidator.validate(response);

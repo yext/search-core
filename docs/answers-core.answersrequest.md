@@ -16,5 +16,5 @@ export interface AnswersRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [customClientSdk?](./answers-core.answersrequest.customclientsdk.md) | [CustomClientSdk](./answers-core.customclientsdk.md) | <i>(Optional)</i> Additional agents and their versions used to create the Answers experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
+|  [additionalHttpHeaderValues?](./answers-core.answersrequest.additionalhttpheadervalues.md) | [AdditionalHttpHeaderValues](./answers-core.additionalhttpheadervalues.md) | <i>(Optional)</i> AdditionalHttpHeaderValues allows users to specify additional values for specific HTTP headers. |
 
