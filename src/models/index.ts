@@ -12,9 +12,9 @@ export { AnswersRequest } from './core/AnswersRequest';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';
 export {
-  AdditionalHttpHeaderValues,
+  AdditionalHttpHeaders,
   ClientSDKHeaderValues
-} from './core/AdditionalHttpHeaderValues';
+} from './core/AdditionalHttpHeaders';
 
 // Autocomplete service
 export * from './autocompleteservice/AutocompleteRequest';

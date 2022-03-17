@@ -5,7 +5,7 @@
 ```ts
 
 // @public
-export interface AdditionalHttpHeaderValues {
+export interface AdditionalHttpHeaders {
     'Client-SDK'?: ClientSDKHeaderValues;
 }
 
@@ -46,7 +46,7 @@ export class AnswersError extends Error {
 
 // @public
 export interface AnswersRequest {
-    additionalHttpHeaderValues?: AdditionalHttpHeaderValues;
+    additionalHttpHeaders?: AdditionalHttpHeaders;
 }
 
 // @public

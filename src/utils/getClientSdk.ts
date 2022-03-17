@@ -1,16 +1,16 @@
-import { AdditionalHttpHeaderValues } from '../models/core/AdditionalHttpHeaderValues';
+import { AdditionalHttpHeaders } from '../models/core/AdditionalHttpHeaders';
 import packageJson from '../../package.json';
 
 const { version } = packageJson;
 
 export function getClientSdk(
-  additionalHttpHeaderValues?: AdditionalHttpHeaderValues
+  additionalHttpHeaders?: AdditionalHttpHeaders
 ): Record<string, string> {
   const coreAgent = { ANSWERS_CORE: version };
-  if (!additionalHttpHeaderValues) {
+  if (!additionalHttpHeaders) {
     return coreAgent;
   }
-  const customClientSdk = additionalHttpHeaderValues['Client-SDK'] ?? {};
+  const customClientSdk = additionalHttpHeaders['Client-SDK'] ?? {};
 
   return Object.entries(customClientSdk).reduce((clientSdk, [agent, version]) => {
     return version

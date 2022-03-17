@@ -3,7 +3,7 @@ import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterSearch
 
 export const univeralAutocompleteRequest: UniversalAutocompleteRequest = {
   input: 'virginiaa',
-  additionalHttpHeaderValues: {
+  additionalHttpHeaders: {
     'Client-SDK': {
       CORE_TEST_SITE: 'test'
     }
@@ -13,7 +13,7 @@ export const univeralAutocompleteRequest: UniversalAutocompleteRequest = {
 export const verticalAutocompleteRequest: VerticalAutocompleteRequest = {
   input: 'virginiaa',
   verticalKey: 'KM',
-  additionalHttpHeaderValues: {
+  additionalHttpHeaders: {
     'Client-SDK': {
       CORE_TEST_SITE: 'test'
     }
@@ -31,7 +31,7 @@ export const filterSearchRequest: FilterSearchRequest = {
       fetchEntities: true
     }
   ],
-  additionalHttpHeaderValues: {
+  additionalHttpHeaders: {
     'Client-SDK': {
       CORE_TEST_SITE: 'test'
     }

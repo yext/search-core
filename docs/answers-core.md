@@ -37,7 +37,7 @@
 
 |  Interface | Description |
 |  --- | --- |
-|  [AdditionalHttpHeaderValues](./answers-core.additionalhttpheadervalues.md) | AdditionalHttpHeaderValues allows users to specify additional values for specific HTTP headers. |
+|  [AdditionalHttpHeaders](./answers-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
 |  [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires apiKey. |
 |  [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires token. |
 |  [AnswersRequest](./answers-core.answersrequest.md) | Options for an Answers API request. |

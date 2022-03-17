@@ -1,4 +1,4 @@
-import { AdditionalHttpHeaderValues } from './AdditionalHttpHeaderValues';
+import { AdditionalHttpHeaders } from './AdditionalHttpHeaders';
 
 /**
  * Options for an Answers API request.
@@ -6,6 +6,6 @@ import { AdditionalHttpHeaderValues } from './AdditionalHttpHeaderValues';
  * @public
  */
 export interface AnswersRequest {
-  /** {@inheritDoc AdditionalHttpHeaderValues} */
-  additionalHttpHeaderValues?: AdditionalHttpHeaderValues
+  /** {@inheritDoc AdditionalHttpHeaders} */
+  additionalHttpHeaders?: AdditionalHttpHeaders
 }

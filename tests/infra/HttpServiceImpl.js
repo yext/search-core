@@ -113,7 +113,7 @@ describe('HttpServiceImpl', () => {
     const queryParams = {
       aQuery: 'param'
     };
-    const additionalHttpHeaderValues = {
+    const additionalHttpHeaders = {
       'Client-SDK': {
         ...clientSdk,
         UNDEFINED_AGENT: undefined,
@@ -121,7 +121,7 @@ describe('HttpServiceImpl', () => {
         CUSTOM_TEST_SITE: 'test'
       }
     };
-    await httpServiceImpl.get('http://yext.com', queryParams, getClientSdk(additionalHttpHeaderValues));
+    await httpServiceImpl.get('http://yext.com', queryParams, getClientSdk(additionalHttpHeaders));
     const expectedReqInit = {
       method: 'get',
       mode: 'cors',

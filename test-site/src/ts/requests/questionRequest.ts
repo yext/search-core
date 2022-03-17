@@ -6,7 +6,7 @@ const questionRequest: QuestionSubmissionRequest = {
   name: 'bob',
   questionText: 'wow wow wow!',
   sessionTrackingEnabled: true,
-  additionalHttpHeaderValues: {
+  additionalHttpHeaders: {
     'Client-SDK': {
       CORE_TEST_SITE: 'test'
     }

@@ -16,5 +16,5 @@ export interface AnswersRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [additionalHttpHeaderValues?](./answers-core.answersrequest.additionalhttpheadervalues.md) | [AdditionalHttpHeaderValues](./answers-core.additionalhttpheadervalues.md) | <i>(Optional)</i> AdditionalHttpHeaderValues allows users to specify additional values for specific HTTP headers. |
+|  [additionalHttpHeaders?](./answers-core.answersrequest.additionalhttpheaders.md) | [AdditionalHttpHeaders](./answers-core.additionalhttpheaders.md) | <i>(Optional)</i> AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
 

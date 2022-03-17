@@ -54,14 +54,14 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
         this.endpoint,
         queryParams,
         body,
-        getClientSdk(request.additionalHttpHeaderValues),
+        getClientSdk(request.additionalHttpHeaders),
         this.config.token
       )
       : await this.httpService.post<ApiResponse>(
         this.endpoint,
         queryParams,
         body,
-        getClientSdk(request.additionalHttpHeaderValues)
+        getClientSdk(request.additionalHttpHeaders)
       );
 
     const validationResult = this.apiResponseValidator.validate(response);

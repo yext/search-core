@@ -14,7 +14,7 @@ const universalRequest: UniversalSearchRequest = {
   },
   referrerPageUrl: 'www.google.com/answers/not/ads',
   restrictVerticals: ['faq', 'links'],
-  additionalHttpHeaderValues: {
+  additionalHttpHeaders: {
     'Client-SDK': {
       CORE_TEST_SITE: 'test'
     }

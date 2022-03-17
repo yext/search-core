@@ -1,10 +1,10 @@
 
 /**
- * AdditionalHttpHeaderValues allows users to specify additional values for specific HTTP headers.
+ * AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers.
  *
  * @public
  **/
-export interface AdditionalHttpHeaderValues {
+export interface AdditionalHttpHeaders {
   /** {@inheritDoc ClientSDKHeaderValues} */
   'Client-SDK'?: ClientSDKHeaderValues
 }
