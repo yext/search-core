@@ -107,17 +107,20 @@ describe('AutocompleteService', () => {
     });
 
     it('passes custom client SDK', async () => {
-      const customClientSdk = {
-        CUSTOM_TEST_SITE: 'test'
+      const additionalHttpHeaders = {
+        'Client-SDK': {
+          CUSTOM_TEST_SITE: 'test'
+        }
       };
       const requestWithClient: UniversalAutocompleteRequest = {
         ...request,
-        customClientSdk
+        additionalHttpHeaders
       };
       const autocompleteService = createMockAutocompleteService();
       await autocompleteService.universalAutocomplete(requestWithClient);
       expect(mockHttpService.get).toHaveBeenLastCalledWith(
-        expectedUniversalUrl, expectedQueryParams, expect.objectContaining(customClientSdk));
+        expectedUniversalUrl, expectedQueryParams, expect.objectContaining(
+          additionalHttpHeaders['Client-SDK']));
     });
   });
 

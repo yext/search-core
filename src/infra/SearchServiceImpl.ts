@@ -125,13 +125,13 @@ export class SearchServiceImpl implements SearchService {
       ? await this.httpService.get<ApiResponse>(
         this.universalSearchEndpoint,
         queryParams,
-        getClientSdk(request.customClientSdk),
+        getClientSdk(request.additionalHttpHeaders),
         this.config.token
       )
       : await this.httpService.get<ApiResponse>(
         this.universalSearchEndpoint,
         queryParams,
-        getClientSdk(request.customClientSdk)
+        getClientSdk(request.additionalHttpHeaders)
       );
 
     const validationResult = this.apiResponseValidator.validate(response);
@@ -176,13 +176,13 @@ export class SearchServiceImpl implements SearchService {
       ? await this.httpService.get<ApiResponse>(
         this.verticalSearchEndpoint,
         queryParams,
-        getClientSdk(request.customClientSdk),
+        getClientSdk(request.additionalHttpHeaders),
         this.config.token
       )
       : await this.httpService.get<ApiResponse>(
         this.verticalSearchEndpoint,
         queryParams,
-        getClientSdk(request.customClientSdk)
+        getClientSdk(request.additionalHttpHeaders)
       );
 
     const validationResult = this.apiResponseValidator.validate(response);

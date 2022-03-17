@@ -5,6 +5,11 @@
 ```ts
 
 // @public
+export interface AdditionalHttpHeaders {
+    'Client-SDK'?: ClientSDKHeaderValues;
+}
+
+// @public
 export type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;
 
 // @public
@@ -41,7 +46,7 @@ export class AnswersError extends Error {
 
 // @public
 export interface AnswersRequest {
-    customClientSdk?: CustomClientSdk;
+    additionalHttpHeaders?: AdditionalHttpHeaders;
 }
 
 // @public
@@ -93,6 +98,12 @@ export interface BaseAnswersConfig {
 }
 
 // @public
+export interface ClientSDKHeaderValues {
+    [agent: string]: string | undefined;
+    ANSWERS_CORE?: never;
+}
+
+// @public
 export interface CombinedFilter {
     combinator: FilterCombinator;
     filters: (Filter | CombinedFilter)[];
@@ -100,12 +111,6 @@ export interface CombinedFilter {
 
 // @public
 export type Context = any;
-
-// @public
-export interface CustomClientSdk {
-    [agent: string]: string | undefined;
-    ANSWERS_CORE?: never;
-}
 
 // @public
 export interface DirectAnswer {

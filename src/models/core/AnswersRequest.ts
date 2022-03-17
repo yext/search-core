@@ -1,4 +1,4 @@
-import { CustomClientSdk } from './ClientSdk';
+import { AdditionalHttpHeaders } from './AdditionalHttpHeaders';
 
 /**
  * Options for an Answers API request.
@@ -6,6 +6,6 @@ import { CustomClientSdk } from './ClientSdk';
  * @public
  */
 export interface AnswersRequest {
-  /** {@inheritDoc CustomClientSdk} */
-  customClientSdk?: CustomClientSdk
+  /** {@inheritDoc AdditionalHttpHeaders} */
+  additionalHttpHeaders?: AdditionalHttpHeaders
 }
