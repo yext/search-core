@@ -17,7 +17,9 @@ export type NumberRangeMatcher = Matcher.GreaterThan
  * @public
  */
 export interface NumberRangeLimit {
+  /** {@link Matcher} for the limit */
   matcher: NumberRangeMatcher,
+  /** Value of the limit. */
   value: number
 }
 
@@ -27,6 +29,8 @@ export interface NumberRangeLimit {
  * @public
  */
 export interface NumberRangeValue {
+  /** Start limit of the number range value. */
   start: NumberRangeLimit
+  /** End limit of the number range value. */
   end: NumberRangeLimit
 }

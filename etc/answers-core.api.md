@@ -173,7 +173,6 @@ export interface Facet {
 // @public
 export interface FacetOption {
     matcher: Matcher;
-    // Warning: (ae-forgotten-export) The symbol "NumberRangeValue" needs to be exported by the entry point index.d.ts
     value: string | number | boolean | NumberRangeValue;
 }
 
@@ -284,6 +283,21 @@ export interface NearFilterValue {
     lat: number;
     lng: number;
     radius: number;
+}
+
+// @public
+export interface NumberRangeLimit {
+    matcher: NumberRangeMatcher;
+    value: number;
+}
+
+// @public
+export type NumberRangeMatcher = Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo | Matcher.LessThan | Matcher.LessThanOrEqualTo;
+
+// @public
+export interface NumberRangeValue {
+    end: NumberRangeLimit;
+    start: NumberRangeLimit;
 }
 
 // @public

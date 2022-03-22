@@ -63,6 +63,8 @@
 |  [LatLong](./answers-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
 |  [NearFilterValue](./answers-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./answers-core.matcher.md)<!-- -->. |
+|  [NumberRangeLimit](./answers-core.numberrangelimit.md) | The start/end limit of [NumberRangeValue](./answers-core.numberrangevalue.md)<!-- -->. |
+|  [NumberRangeValue](./answers-core.numberrangevalue.md) | A filter value for a filter with a $between [Matcher](./answers-core.matcher.md)<!-- -->. |
 |  [QueryRulesActionsData](./answers-core.queryrulesactionsdata.md) | Data returned from the Answers query rules system. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | A representation of a question submission response. |
@@ -90,4 +92,5 @@
 |  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->. The config requires either an apiKey or a token. |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [HighlightedFields](./answers-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Answers API |
+|  [NumberRangeMatcher](./answers-core.numberrangematcher.md) | Matcher values for a filter with a $between [Matcher](./answers-core.matcher.md)<!-- -->. |
 
