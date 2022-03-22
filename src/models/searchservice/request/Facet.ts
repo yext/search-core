@@ -1,4 +1,5 @@
 import { Matcher } from '../common/Matcher';
+import { NumberRangeValue } from '../common/NumberRangeValue';
 
 /**
  * Represents dynamic filter options for the Answers API.
@@ -31,5 +32,5 @@ export interface FacetOption {
    * @example
    * 'Sales'
    */
-  value: string | number | boolean;
+  value: string | number | boolean | NumberRangeValue;
 }

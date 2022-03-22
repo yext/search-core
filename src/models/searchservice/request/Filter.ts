@@ -1,4 +1,5 @@
 import { Matcher } from '../common/Matcher';
+import { NumberRangeValue } from '../common/NumberRangeValue';
 
 /**
  * Represents a filter which compares values to a single field.
@@ -21,7 +22,7 @@ export interface Filter {
    * @example
    * 'Sales'
    */
-  value: string | number | boolean | NearFilterValue;
+  value: string | number | boolean | NearFilterValue | NumberRangeValue;
 }
 
 /**

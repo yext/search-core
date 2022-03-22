@@ -136,7 +136,6 @@ export enum Direction {
 // @public
 export interface DisplayableFacet extends Facet {
     displayName: string;
-    fieldId: string;
     options: DisplayableFacetOption[];
 }
 
@@ -144,9 +143,7 @@ export interface DisplayableFacet extends Facet {
 export interface DisplayableFacetOption extends FacetOption {
     count: number;
     displayName: string;
-    matcher: Matcher;
     selected: boolean;
-    value: string | number | boolean;
 }
 
 // @public
@@ -176,7 +173,8 @@ export interface Facet {
 // @public
 export interface FacetOption {
     matcher: Matcher;
-    value: string | number | boolean;
+    // Warning: (ae-forgotten-export) The symbol "NumberRangeValue" needs to be exported by the entry point index.d.ts
+    value: string | number | boolean | NumberRangeValue;
 }
 
 // @public
@@ -205,7 +203,7 @@ export interface FieldValueDirectAnswer extends DirectAnswer {
 export interface Filter {
     fieldId: string;
     matcher: Matcher;
-    value: string | number | boolean | NearFilterValue;
+    value: string | number | boolean | NearFilterValue | NumberRangeValue;
 }
 
 // @public
@@ -271,6 +269,7 @@ export enum LocationBiasMethod {
 
 // @public
 export enum Matcher {
+    Between = "$between",
     Equals = "$eq",
     GreaterThan = "$gt",
     GreaterThanOrEqualTo = "$ge",

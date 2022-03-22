@@ -341,6 +341,44 @@ describe('SearchService', () => {
       const actualLocationRadius = (actualQueryParams as { locationRadius: string }).locationRadius;
       expect(actualLocationRadius).toEqual('1.23');
     });
+
+    it('Passes number range facets correctly', async () => {
+      const request: VerticalSearchRequest = {
+        query: 'testQuery',
+        verticalKey: 'verticalKey',
+        facets: [
+          {
+            fieldId: 'price',
+            options: [
+              {
+                matcher: Matcher.Between,
+                value: {
+                  start: { matcher: Matcher.GreaterThan, value: 0 },
+                  end: { matcher: Matcher.LessThan, value: 10 }
+                }
+              },
+              {
+                matcher: Matcher.Between,
+                value: {
+                  start: {matcher: Matcher.GreaterThanOrEqualTo, value: 30 },
+                  end: { matcher: Matcher.LessThanOrEqualTo, value: 50 }
+                }
+              },
+            ]
+          }
+        ]
+      };
+      await searchServiceWithRequiredApiKey.verticalSearch(request);
+      const actualQueryParams = mockHttpService.get.mock.calls[0][1];
+      const actualFacetFilters = (actualQueryParams as { facetFilters: string }).facetFilters;
+      const expectedFacetFilters = JSON.stringify({
+        price: [
+          { price: { $gt: 0, $lt: 10 } },
+          { price: { $ge: 30, $le: 50 } }
+        ]
+      });
+      expect(actualFacetFilters).toEqual(expectedFacetFilters);
+    });
   });
 });
 

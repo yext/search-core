@@ -18,6 +18,5 @@ export interface DisplayableFacet extends Facet
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [displayName](./answers-core.displayablefacet.displayname.md) | string | The name of the facet which is meant to be displayed to the user. |
-|  [fieldId](./answers-core.displayablefacet.fieldid.md) | string | The associated fieldId. |
 |  [options](./answers-core.displayablefacet.options.md) | [DisplayableFacetOption](./answers-core.displayablefacetoption.md)<!-- -->\[\] | An array of [DisplayableFacetOption](./answers-core.displayablefacetoption.md) |
 

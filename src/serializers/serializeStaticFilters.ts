@@ -1,6 +1,7 @@
+import { NumberRangeValue } from '../models/searchservice/common/NumberRangeValue';
 import { CombinedFilter } from '../models/searchservice/request/CombinedFilter';
 import { Filter } from '../models/searchservice/request/Filter';
-import { StaticFilters } from '../models/searchservice/request/StaticFilters';
+import { StaticFilters, Filter as InternalFilter } from '../models/searchservice/request/StaticFilters';
 
 export function serializeStaticFilters(
   filter: CombinedFilter | Filter): string | undefined {
@@ -25,11 +26,22 @@ function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilter
     : { [combinedFilter.combinator]: shapedFilters };
 }
 
+export function isNumberRangeValue(data: unknown): data is NumberRangeValue {
+  return typeof data === 'object' && !!data && 'start' in data && 'end' in data;
+}
+
 export function shapeFilterForApi(filter: Filter): StaticFilters {
+  let filterValues: InternalFilter | undefined = undefined;
+  if (isNumberRangeValue(filter.value)) {
+    filterValues = {
+      [filter.value.start.matcher]: filter.value.start.value,
+      [filter.value.end.matcher]: filter.value.end.value,
+    };
+  } else {
+    filterValues = { [filter.matcher]: filter.value };
+  }
   return {
-    [filter.fieldId]: {
-      [filter.matcher]: filter.value
-    }
+    [filter.fieldId]: filterValues
   };
 }
 
