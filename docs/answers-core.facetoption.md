@@ -17,5 +17,5 @@ export interface FacetOption
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [matcher](./answers-core.facetoption.matcher.md) | [Matcher](./answers-core.matcher.md) | A Matcher is a filtering operation. |
-|  [value](./answers-core.facetoption.value.md) | string \| number \| boolean | The value to compare. |
+|  [value](./answers-core.facetoption.value.md) | string \| number \| boolean \| [NumberRangeValue](./answers-core.numberrangevalue.md) | The value to compare. |
 

@@ -1,3 +1,4 @@
+import { NumberRangeValue } from '../../models/searchservice/common/NumberRangeValue';
 import { DisplayableFacet, DisplayableFacetOption } from '../../models/searchservice/response/DisplayableFacet';
 import { createFilter } from '../core/createFilter';
 
@@ -22,7 +23,7 @@ function createFacetOptions(options: any[]): DisplayableFacetOption[] {
       count: option.count,
       selected: option.selected,
       matcher: filter.matcher,
-      value: filter.value as string | number | boolean
+      value: filter.value as string | number | boolean | NumberRangeValue
     };
   });
 }

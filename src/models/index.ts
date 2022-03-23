@@ -61,3 +61,8 @@ export { Snippet } from './searchservice/response/Snippet';
 
 // Search service common models
 export { Matcher } from './searchservice/common/Matcher';
+export {
+  NumberRangeValue,
+  LowerNumberRangeLimit,
+  UpperNumberRangeLimit
+} from './searchservice/common/NumberRangeValue';

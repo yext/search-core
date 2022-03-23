@@ -56,3 +56,38 @@ it('serializeFacets serializes a mix of disabled and enabled filters properly', 
   };
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
+
+
+it('serializeFacets serializes number range facets properly', () => {
+  const actualSerializedFilters = serializeFacets([
+    {
+      fieldId: 'price',
+      options: [
+        {
+          matcher: Matcher.Between,
+          value: {
+            start: { matcher: Matcher.GreaterThan, value: 0 },
+            end: { matcher: Matcher.LessThan, value: 10 }
+          }
+        },
+        {
+          matcher: Matcher.Between,
+          value: {
+            start: {matcher: Matcher.GreaterThanOrEqualTo, value: 30 },
+            end: { matcher: Matcher.LessThanOrEqualTo, value: 50 }
+          }
+        },
+      ]
+    },
+    { fieldId: 'count', options: []},
+  ]);
+
+  const expectedSerializedFilters = {
+    price: [
+      { price: { $gt: 0, $lt: 10 } },
+      { price: { $ge: 30, $le: 50 } }
+    ],
+    count: []
+  };
+  expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
+});

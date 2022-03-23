@@ -1,5 +1,6 @@
 import { Facet, FacetOption } from '../request/Facet';
 import { Matcher } from '../common/Matcher';
+import { NumberRangeValue } from '../common/NumberRangeValue';
 
 /**
  * A {@link Facet} which contains extra fields meant to be displayed to the end user.
@@ -24,7 +25,7 @@ export interface DisplayableFacetOption extends FacetOption {
   /** {@inheritDoc Matcher} */
   matcher: Matcher;
   /** {@inheritDoc FacetOption.value} */
-  value: string | number | boolean;
+  value: string | number | boolean | NumberRangeValue;
   /** The name of the facet option which is meant  to be displayed to the end user. */
   displayName: string;
   /** The number of results associated with this facet option. */

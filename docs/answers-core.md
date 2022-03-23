@@ -62,7 +62,9 @@
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Answers API. |
 |  [LatLong](./answers-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
+|  [LowerNumberRangeLimit](./answers-core.lowernumberrangelimit.md) | The start limit of [NumberRangeValue](./answers-core.numberrangevalue.md)<!-- -->. |
 |  [NearFilterValue](./answers-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./answers-core.matcher.md)<!-- -->. |
+|  [NumberRangeValue](./answers-core.numberrangevalue.md) | A filter value for a filter with a $between [Matcher](./answers-core.matcher.md)<!-- -->. |
 |  [QueryRulesActionsData](./answers-core.queryrulesactionsdata.md) | Data returned from the Answers query rules system. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | A representation of a question submission response. |
@@ -77,6 +79,7 @@
 |  [UniversalLimit](./answers-core.universallimit.md) | The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
 |  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
 |  [UniversalSearchResponse](./answers-core.universalsearchresponse.md) | A representation of a response from a universal search. |
+|  [UpperNumberRangeLimit](./answers-core.uppernumberrangelimit.md) | The end limit of [NumberRangeValue](./answers-core.numberrangevalue.md)<!-- -->. |
 |  [VerticalAutocompleteRequest](./answers-core.verticalautocompleterequest.md) | Options for a vertial autocomplete request. |
 |  [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical. |
 |  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
