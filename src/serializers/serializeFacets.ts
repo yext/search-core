@@ -3,12 +3,12 @@ import { ApiStaticFilters } from '../models/searchservice/request/ApiStaticFilte
 import { shapeFilterForApi } from './serializeStaticFilters';
 
 export function serializeFacets(filters: Facet[]): string {
-  return JSON.stringify(filters.reduce((obj, facet) => {
+  return JSON.stringify(filters.reduce<Record<string, ApiStaticFilters[]>>((obj, facet) => {
     const fieldId = facet.fieldId;
     const shapedFacets = shapeFacetOptionArrayForApi(facet.options, fieldId);
     obj[fieldId] = shapedFacets;
     return obj;
-  }, {} as { [key: string]: ApiStaticFilters[] }));
+  }, {}));
 }
 
 function shapeFacetOptionArrayForApi(options: FacetOption[], fieldId: string): ApiStaticFilters[] {
