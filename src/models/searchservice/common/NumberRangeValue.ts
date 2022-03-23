@@ -1,28 +1,13 @@
 import { Matcher } from './Matcher';
 
 /**
- * Matcher values of a lower limit for a filter with a $between {@link Matcher}.
- *
- * @public
- */
-export type LowerNumberRangeMatcher = Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo;
-
-/**
- * Matcher values of an upper limit for a filter with a $between {@link Matcher}.
- *
- * @public
- */
-export type UpperNumberRangeMatcher = Matcher.LessThan | Matcher.LessThanOrEqualTo;
-
-
-/**
  * The start limit of {@link NumberRangeValue}.
  *
  * @public
  */
 export interface LowerNumberRangeLimit {
   /** {@link Matcher} for the start limit */
-  matcher: LowerNumberRangeMatcher,
+  matcher: Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo,
   /** Value of the limit. */
   value: number
 }
@@ -34,7 +19,7 @@ export interface LowerNumberRangeLimit {
  */
 export interface UpperNumberRangeLimit {
   /** {@link Matcher} for the end limit */
-  matcher: UpperNumberRangeMatcher,
+  matcher: Matcher.LessThan | Matcher.LessThanOrEqualTo,
   /** Value of the limit. */
   value: number
 }

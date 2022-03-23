@@ -16,6 +16,6 @@ export interface LowerNumberRangeLimit
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [matcher](./answers-core.lowernumberrangelimit.matcher.md) | [LowerNumberRangeMatcher](./answers-core.lowernumberrangematcher.md) | [Matcher](./answers-core.matcher.md) for the start limit |
+|  [matcher](./answers-core.lowernumberrangelimit.matcher.md) | [Matcher.GreaterThan](./answers-core.matcher.md) \| [Matcher.GreaterThanOrEqualTo](./answers-core.matcher.md) | [Matcher](./answers-core.matcher.md) for the start limit |
 |  [value](./answers-core.lowernumberrangelimit.value.md) | number | Value of the limit. |
 

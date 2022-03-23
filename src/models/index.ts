@@ -64,7 +64,5 @@ export { Matcher } from './searchservice/common/Matcher';
 export {
   NumberRangeValue,
   LowerNumberRangeLimit,
-  LowerNumberRangeMatcher,
-  UpperNumberRangeLimit,
-  UpperNumberRangeMatcher
+  UpperNumberRangeLimit
 } from './searchservice/common/NumberRangeValue';

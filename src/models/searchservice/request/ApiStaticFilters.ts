@@ -10,7 +10,7 @@ export interface ApiStaticFilters {
 }
 
 /**
- * Represents a single filter.
+ * Represents a single filter in the format that the Answers API expects.
  *
  * @internal
  */

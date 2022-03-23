@@ -1,7 +1,7 @@
 import { isNumberRangeValue } from '../models/searchservice/common/NumberRangeValue';
 import { CombinedFilter } from '../models/searchservice/request/CombinedFilter';
 import { Filter } from '../models/searchservice/request/Filter';
-import { ApiStaticFilters, ApiFilter } from '../models/searchservice/request/StaticFilters';
+import { ApiStaticFilters, ApiFilter } from '../models/searchservice/request/ApiStaticFilters';
 
 export function serializeStaticFilters(
   filter: CombinedFilter | Filter): string | undefined {

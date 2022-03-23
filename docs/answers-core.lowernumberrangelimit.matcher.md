@@ -9,5 +9,5 @@
 <b>Signature:</b>
 
 ```typescript
-matcher: LowerNumberRangeMatcher;
+matcher: Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo;
 ```

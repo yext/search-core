@@ -271,12 +271,9 @@ export enum LocationBiasMethod {
 
 // @public
 export interface LowerNumberRangeLimit {
-    matcher: LowerNumberRangeMatcher;
+    matcher: Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo;
     value: number;
 }
-
-// @public
-export type LowerNumberRangeMatcher = Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo;
 
 // @public
 export enum Matcher {
@@ -471,12 +468,9 @@ export interface UniversalSearchResponse {
 
 // @public
 export interface UpperNumberRangeLimit {
-    matcher: UpperNumberRangeMatcher;
+    matcher: Matcher.LessThan | Matcher.LessThanOrEqualTo;
     value: number;
 }
-
-// @public
-export type UpperNumberRangeMatcher = Matcher.LessThan | Matcher.LessThanOrEqualTo;
 
 // @public
 export interface VerticalAutocompleteRequest extends AnswersRequest {

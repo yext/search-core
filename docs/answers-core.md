@@ -93,6 +93,4 @@
 |  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->. The config requires either an apiKey or a token. |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [HighlightedFields](./answers-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Answers API |
-|  [LowerNumberRangeMatcher](./answers-core.lowernumberrangematcher.md) | Matcher values of a lower limit for a filter with a $between [Matcher](./answers-core.matcher.md)<!-- -->. |
-|  [UpperNumberRangeMatcher](./answers-core.uppernumberrangematcher.md) | Matcher values of an upper limit for a filter with a $between [Matcher](./answers-core.matcher.md)<!-- -->. |
 

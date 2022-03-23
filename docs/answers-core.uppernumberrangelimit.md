@@ -16,6 +16,6 @@ export interface UpperNumberRangeLimit
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [matcher](./answers-core.uppernumberrangelimit.matcher.md) | [UpperNumberRangeMatcher](./answers-core.uppernumberrangematcher.md) | [Matcher](./answers-core.matcher.md) for the end limit |
+|  [matcher](./answers-core.uppernumberrangelimit.matcher.md) | [Matcher.LessThan](./answers-core.matcher.md) \| [Matcher.LessThanOrEqualTo](./answers-core.matcher.md) | [Matcher](./answers-core.matcher.md) for the end limit |
 |  [value](./answers-core.uppernumberrangelimit.value.md) | number | Value of the limit. |
 

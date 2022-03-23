@@ -1,5 +1,5 @@
 import { Facet, FacetOption } from '../models/searchservice/request/Facet';
-import { ApiStaticFilters } from '../models/searchservice/request/StaticFilters';
+import { ApiStaticFilters } from '../models/searchservice/request/ApiStaticFilters';
 import { shapeFilterForApi } from './serializeStaticFilters';
 
 export function serializeFacets(filters: Facet[]): string {
