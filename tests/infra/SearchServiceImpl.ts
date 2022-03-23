@@ -360,7 +360,7 @@ describe('SearchService', () => {
               {
                 matcher: Matcher.Between,
                 value: {
-                  start: {matcher: Matcher.GreaterThanOrEqualTo, value: 30 },
+                  start: { matcher: Matcher.GreaterThanOrEqualTo, value: 30 },
                   end: { matcher: Matcher.LessThanOrEqualTo, value: 50 }
                 }
               },

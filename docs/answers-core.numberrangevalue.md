@@ -16,6 +16,6 @@ export interface NumberRangeValue
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [end](./answers-core.numberrangevalue.end.md) | [NumberRangeLimit](./answers-core.numberrangelimit.md) | End limit of the number range value. |
-|  [start](./answers-core.numberrangevalue.start.md) | [NumberRangeLimit](./answers-core.numberrangelimit.md) | Start limit of the number range value. |
+|  [end?](./answers-core.numberrangevalue.end.md) | [UpperNumberRangeLimit](./answers-core.uppernumberrangelimit.md) | <i>(Optional)</i> End limit of the number range value. |
+|  [start?](./answers-core.numberrangevalue.start.md) | [LowerNumberRangeLimit](./answers-core.lowernumberrangelimit.md) | <i>(Optional)</i> Start limit of the number range value. |
 

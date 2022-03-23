@@ -66,7 +66,7 @@ it('serializeFacets serializes number range facets properly', () => {
         {
           matcher: Matcher.Between,
           value: {
-            start: {matcher: Matcher.GreaterThan, value: 0 },
+            start: { matcher: Matcher.GreaterThan, value: 0 },
             end: { matcher: Matcher.LessThan, value: 10 }
           }
         },

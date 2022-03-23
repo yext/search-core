@@ -1,24 +1,40 @@
 import { Matcher } from './Matcher';
 
 /**
- * Matcher values for a filter with a $between {@link Matcher}.
+ * Matcher values of a lower limit for a filter with a $between {@link Matcher}.
  *
  * @public
  */
-export type NumberRangeMatcher = Matcher.GreaterThan
-| Matcher.GreaterThanOrEqualTo
-| Matcher.LessThan
-| Matcher.LessThanOrEqualTo;
+export type LowerNumberRangeMatcher = Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo;
+
+/**
+ * Matcher values of an upper limit for a filter with a $between {@link Matcher}.
+ *
+ * @public
+ */
+export type UpperNumberRangeMatcher = Matcher.LessThan | Matcher.LessThanOrEqualTo;
 
 
 /**
- * The start/end limit of {@link NumberRangeValue}.
+ * The start limit of {@link NumberRangeValue}.
  *
  * @public
  */
-export interface NumberRangeLimit {
-  /** {@link Matcher} for the limit */
-  matcher: NumberRangeMatcher,
+export interface LowerNumberRangeLimit {
+  /** {@link Matcher} for the start limit */
+  matcher: LowerNumberRangeMatcher,
+  /** Value of the limit. */
+  value: number
+}
+
+/**
+ * The end limit of {@link NumberRangeValue}.
+ *
+ * @public
+ */
+export interface UpperNumberRangeLimit {
+  /** {@link Matcher} for the end limit */
+  matcher: UpperNumberRangeMatcher,
   /** Value of the limit. */
   value: number
 }
@@ -30,7 +46,11 @@ export interface NumberRangeLimit {
  */
 export interface NumberRangeValue {
   /** Start limit of the number range value. */
-  start: NumberRangeLimit
+  start?: LowerNumberRangeLimit
   /** End limit of the number range value. */
-  end: NumberRangeLimit
+  end?: UpperNumberRangeLimit
+}
+
+export function isNumberRangeValue(data: unknown): data is NumberRangeValue {
+  return typeof data === 'object' && !!data && ('start' in data || 'end' in data);
 }

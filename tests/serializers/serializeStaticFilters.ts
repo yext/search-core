@@ -90,7 +90,7 @@ it('serializeStaticFilters works with a $between Simple filter', () => {
       fieldId: 'price',
       matcher: Matcher.Between,
       value: {
-        start: {matcher: Matcher.GreaterThan, value: 0 },
+        start: { matcher: Matcher.GreaterThan, value: 0 },
         end: { matcher: Matcher.LessThan, value: 10 }
       }
     }
@@ -98,6 +98,38 @@ it('serializeStaticFilters works with a $between Simple filter', () => {
 
   const expectedSerializedFilters = {
     price: { $gt: 0, $lt: 10 }
+  };
+  expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
+});
+
+it('serializeStaticFilters works with only lower limit defined for a $between Simple filter', () => {
+  const actualSerializedFilters = serializeStaticFilters(
+    {
+      fieldId: 'price',
+      matcher: Matcher.Between,
+      value: {
+        start: { matcher: Matcher.GreaterThan, value: 0 }
+      }
+    }
+  );
+  const expectedSerializedFilters = {
+    price: { $gt: 0 }
+  };
+  expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
+});
+
+it('serializeStaticFilters works with only upper limit defined for a $between Simple filter', () => {
+  const actualSerializedFilters = serializeStaticFilters(
+    {
+      fieldId: 'price',
+      matcher: Matcher.Between,
+      value: {
+        end: { matcher: Matcher.LessThan, value: 10 }
+      }
+    }
+  );
+  const expectedSerializedFilters = {
+    price: { $lt: 10 }
   };
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });

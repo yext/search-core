@@ -9,5 +9,5 @@ End limit of the number range value.
 <b>Signature:</b>
 
 ```typescript
-end: NumberRangeLimit;
+end?: UpperNumberRangeLimit;
 ```

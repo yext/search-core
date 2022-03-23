@@ -63,6 +63,8 @@ export { Snippet } from './searchservice/response/Snippet';
 export { Matcher } from './searchservice/common/Matcher';
 export {
   NumberRangeValue,
-  NumberRangeLimit,
-  NumberRangeMatcher
+  LowerNumberRangeLimit,
+  LowerNumberRangeMatcher,
+  UpperNumberRangeLimit,
+  UpperNumberRangeMatcher
 } from './searchservice/common/NumberRangeValue';

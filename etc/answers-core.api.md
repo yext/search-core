@@ -136,6 +136,7 @@ export enum Direction {
 // @public
 export interface DisplayableFacet extends Facet {
     displayName: string;
+    fieldId: string;
     options: DisplayableFacetOption[];
 }
 
@@ -143,7 +144,9 @@ export interface DisplayableFacet extends Facet {
 export interface DisplayableFacetOption extends FacetOption {
     count: number;
     displayName: string;
+    matcher: Matcher;
     selected: boolean;
+    value: string | number | boolean | NumberRangeValue;
 }
 
 // @public
@@ -267,6 +270,15 @@ export enum LocationBiasMethod {
 }
 
 // @public
+export interface LowerNumberRangeLimit {
+    matcher: LowerNumberRangeMatcher;
+    value: number;
+}
+
+// @public
+export type LowerNumberRangeMatcher = Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo;
+
+// @public
 export enum Matcher {
     Between = "$between",
     Equals = "$eq",
@@ -286,18 +298,9 @@ export interface NearFilterValue {
 }
 
 // @public
-export interface NumberRangeLimit {
-    matcher: NumberRangeMatcher;
-    value: number;
-}
-
-// @public
-export type NumberRangeMatcher = Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo | Matcher.LessThan | Matcher.LessThanOrEqualTo;
-
-// @public
 export interface NumberRangeValue {
-    end: NumberRangeLimit;
-    start: NumberRangeLimit;
+    end?: UpperNumberRangeLimit;
+    start?: LowerNumberRangeLimit;
 }
 
 // @public
@@ -465,6 +468,15 @@ export interface UniversalSearchResponse {
     uuid: string;
     verticalResults: VerticalResults[];
 }
+
+// @public
+export interface UpperNumberRangeLimit {
+    matcher: UpperNumberRangeMatcher;
+    value: number;
+}
+
+// @public
+export type UpperNumberRangeMatcher = Matcher.LessThan | Matcher.LessThanOrEqualTo;
 
 // @public
 export interface VerticalAutocompleteRequest extends AnswersRequest {

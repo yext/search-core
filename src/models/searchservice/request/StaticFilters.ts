@@ -5,8 +5,8 @@ import { NearFilterValue } from './Filter';
  *
  * @internal
  */
-export interface StaticFilters {
-  [combinator: string]: (StaticFilters | Filter)[] | Filter | StaticFilters;
+export interface ApiStaticFilters {
+  [combinator: string]: (ApiStaticFilters | ApiFilter)[] | ApiFilter | ApiStaticFilters;
 }
 
 /**
@@ -14,6 +14,6 @@ export interface StaticFilters {
  *
  * @internal
  */
-export interface Filter {
+export interface ApiFilter {
   [matcher: string]: string | number | boolean | NearFilterValue
 }

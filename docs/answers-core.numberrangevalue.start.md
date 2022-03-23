@@ -9,5 +9,5 @@ Start limit of the number range value.
 <b>Signature:</b>
 
 ```typescript
-start: NumberRangeLimit;
+start?: LowerNumberRangeLimit;
 ```

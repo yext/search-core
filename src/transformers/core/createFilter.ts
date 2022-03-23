@@ -5,13 +5,9 @@ import { NumberRangeValue } from '../../models/searchservice/common/NumberRangeV
 export function createFilter(filter: any): Filter {
   const fieldId = Object.keys(filter)[0];
   const matcher = Object.keys(filter[fieldId])[0];
-  const rawValue = filter[fieldId][matcher];
   let value: string | number | boolean | NearFilterValue | NumberRangeValue;
   if (matcher === Matcher.Between) {
-    value = {
-      start: { matcher: Object.keys(rawValue)[0], value: Object.values(rawValue)[0] },
-      end: { matcher: Object.keys(rawValue)[1], value: Object.values(rawValue)[1] }
-    } as NumberRangeValue;
+    value = createNumberRangeValue(filter[fieldId][matcher]);
   } else {
     value = filter[fieldId][matcher];
   }
@@ -20,4 +16,16 @@ export function createFilter(filter: any): Filter {
     matcher: matcher as Matcher,
     value
   };
+}
+
+function createNumberRangeValue(value: any): NumberRangeValue {
+  const numberRangeValue: NumberRangeValue = {};
+  Object.keys(value).forEach(limitMatcher => {
+    if (limitMatcher === Matcher.GreaterThan || limitMatcher === Matcher.GreaterThanOrEqualTo) {
+      numberRangeValue.start = { matcher: limitMatcher, value: value[limitMatcher] };
+    } else if (limitMatcher === Matcher.LessThan || limitMatcher === Matcher.LessThanOrEqualTo) {
+      numberRangeValue.end = { matcher: limitMatcher, value: value[limitMatcher] };
+    }
+  });
+  return numberRangeValue;
 }

@@ -1,7 +1,7 @@
-import { NumberRangeValue } from '../models/searchservice/common/NumberRangeValue';
+import { isNumberRangeValue } from '../models/searchservice/common/NumberRangeValue';
 import { CombinedFilter } from '../models/searchservice/request/CombinedFilter';
 import { Filter } from '../models/searchservice/request/Filter';
-import { StaticFilters, Filter as InternalFilter } from '../models/searchservice/request/StaticFilters';
+import { ApiStaticFilters, ApiFilter } from '../models/searchservice/request/StaticFilters';
 
 export function serializeStaticFilters(
   filter: CombinedFilter | Filter): string | undefined {
@@ -12,8 +12,8 @@ export function serializeStaticFilters(
   return JSON.stringify(shapeFilterForApi(filter));
 }
 
-function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilters {
-  const shapedFilters: StaticFilters[] = [];
+function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): ApiStaticFilters {
+  const shapedFilters: ApiStaticFilters[] = [];
   for (const filter of combinedFilter.filters) {
     if (isCombinedFilter(filter)) {
       shapedFilters.push(shapeCombinedFilterForApi(filter));
@@ -26,17 +26,15 @@ function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilter
     : { [combinedFilter.combinator]: shapedFilters };
 }
 
-export function isNumberRangeValue(data: unknown): data is NumberRangeValue {
-  return typeof data === 'object' && !!data && 'start' in data && 'end' in data;
-}
-
-export function shapeFilterForApi(filter: Filter): StaticFilters {
-  let filterValues: InternalFilter | undefined = undefined;
+export function shapeFilterForApi(filter: Filter): ApiStaticFilters {
+  let filterValues: ApiFilter = {};
   if (isNumberRangeValue(filter.value)) {
-    filterValues = {
-      [filter.value.start.matcher]: filter.value.start.value,
-      [filter.value.end.matcher]: filter.value.end.value,
-    };
+    if (filter.value.start) {
+      filterValues[filter.value.start.matcher] = filter.value.start.value;
+    }
+    if (filter.value.end) {
+      filterValues[filter.value.end.matcher] = filter.value.end.value;
+    }
   } else {
     filterValues = { [filter.matcher]: filter.value };
   }
