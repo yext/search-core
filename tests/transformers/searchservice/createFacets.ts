@@ -82,7 +82,7 @@ it('createFacets with number range filter', () => {
           count: 20,
           selected: false,
           filter: {
-            price: { $between: { $ge: 0, $lt: 23 } }
+            price: { $between: { $lt: 23, $ge: 0 } }
           }
         },
         {
