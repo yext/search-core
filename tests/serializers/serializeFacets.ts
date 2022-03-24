@@ -4,12 +4,12 @@ import { serializeFacets } from '../../src/serializers/serializeFacets';
 it('serializeFacets serializes facets properly', () => {
   const actualSerializedFilters = serializeFacets([
     { fieldId: 'c_jobCategory', options: [
-      { matcher: Matcher.Equals, value: 'Sales'},
+      { matcher: Matcher.Equals, value: 'Sales' },
       { matcher: Matcher.Equals, value: 'Client Success' },
-      { matcher: Matcher.Equals, value: 'Finance' }]},
+      { matcher: Matcher.Equals, value: 'Finance' }] },
     { fieldId: 'c_jobLocationShortDescription', options: [
-      { matcher: Matcher.Equals, value: 'New York'},
-      { matcher: Matcher.Equals, value: 'Chicago'}]},
+      { matcher: Matcher.Equals, value: 'New York' },
+      { matcher: Matcher.Equals, value: 'Chicago' }] },
   ]);
 
   const expectedSerializedFilters = {
@@ -29,7 +29,7 @@ it('serializeFacets serializes facets properly', () => {
 it('serializeFacets serializes disabled facets properly', () => {
   const actualSerializedFilters = serializeFacets([
     { fieldId: 'c_jobCategory', options: [] },
-    { fieldId: 'c_jobLocationShortDescription', options: []},
+    { fieldId: 'c_jobLocationShortDescription', options: [] },
   ]);
 
   const expectedSerializedFilters = {
@@ -42,9 +42,9 @@ it('serializeFacets serializes disabled facets properly', () => {
 it('serializeFacets serializes a mix of disabled and enabled filters properly', () => {
   const actualSerializedFilters = serializeFacets([
     { fieldId: 'c_jobCategory', options: [
-      {matcher: Matcher.Equals, value: 'Sales' },
-      {matcher: Matcher.Equals, value: 'Client Success'}]},
-    { fieldId: 'c_jobLocationShortDescription', options: []},
+      { matcher: Matcher.Equals, value: 'Sales' },
+      { matcher: Matcher.Equals, value: 'Client Success' }] },
+    { fieldId: 'c_jobLocationShortDescription', options: [] },
   ]);
 
   const expectedSerializedFilters = {
@@ -73,13 +73,13 @@ it('serializeFacets serializes number range facets properly', () => {
         {
           matcher: Matcher.Between,
           value: {
-            start: {matcher: Matcher.GreaterThanOrEqualTo, value: 30 },
+            start: { matcher: Matcher.GreaterThanOrEqualTo, value: 30 },
             end: { matcher: Matcher.LessThanOrEqualTo, value: 50 }
           }
         },
       ]
     },
-    { fieldId: 'count', options: []},
+    { fieldId: 'count', options: [] },
   ]);
 
   const expectedSerializedFilters = {

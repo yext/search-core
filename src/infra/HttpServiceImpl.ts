@@ -55,7 +55,7 @@ export class HttpServiceImpl implements HttpService {
       headers: {
         'Client-SDK': formatAsHttpHeader(clientSdk),
         'Content-Type': 'application/json',
-        ...(authToken && { Authorization: `Bearer ${authToken}`}),
+        ...(authToken && { Authorization: `Bearer ${authToken}` }),
       }
     })
       .then(res => res.json());
@@ -82,10 +82,10 @@ function fetch(
  *
  * @example
  * Input clientSdk:
- * {
+ * \{
  *   ANSWERS_CORE: '123',
  *   CUSTOM_AGENT: '456'
- * }
+ * \}
  *
  * Output HTTP header:
  * 'ANSWERS_CORE=123, CUSTOM_AGENT=456'

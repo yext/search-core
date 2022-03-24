@@ -10,15 +10,15 @@ export interface AutocompleteService {
   /**
    * Retrieves query suggestions for universal.
    */
-  universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>;
+  universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>,
 
   /**
    * Retrieves query suggestions for a vertical.
    */
-  verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse>;
+  verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse>,
 
   /**
    * Retrieves query suggestions for filter search.
    */
-  filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>;
- }
+  filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>
+}

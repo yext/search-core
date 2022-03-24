@@ -10,7 +10,7 @@ export interface HttpService {
     queryParams: QueryParams,
     clientSdk: Record<string, string>,
     authToken?: string
-  ): Promise<T>;
+  ): Promise<T>,
 
   post<T>(
     url: string,
@@ -18,5 +18,5 @@ export interface HttpService {
     body: QueryParams,
     clientSdk: Record<string, string>,
     authToken?: string
-  ): Promise<T>;
+  ): Promise<T>
 }

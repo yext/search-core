@@ -12,19 +12,19 @@ import { AnswersRequest } from '../../core/AnswersRequest';
  */
 export interface UniversalSearchRequest extends AnswersRequest {
   /** The search query. */
-  query: string;
+  query: string,
   /** {@inheritDoc QueryTrigger} */
-  queryTrigger?: QueryTrigger;
+  queryTrigger?: QueryTrigger,
   /** Disables spellcheck if true. */
-  skipSpellCheck?: boolean;
+  skipSpellCheck?: boolean,
   /** Used to track session state when cookies are blocked. */
-  sessionId?: string;
+  sessionId?: string,
   /** Enables session tracking. */
-  sessionTrackingEnabled?: boolean;
+  sessionTrackingEnabled?: boolean,
   /** {@inheritDoc LatLong} */
-  location?: LatLong;
+  location?: LatLong,
   /** {@inheritDoc Context} */
-  context?: Context;
+  context?: Context,
   /**
    * The URl of the page which referred the user to the current page.
    *
@@ -32,11 +32,11 @@ export interface UniversalSearchRequest extends AnswersRequest {
    * If a user is on https://www.yext.com/ and navigates to https://www.yext.com/answers and perform a search,
    * the referrerPageUrl would be https://www.yext.com/.
    */
-  referrerPageUrl?: string;
+  referrerPageUrl?: string,
   /** {@inheritDoc QuerySource} */
-  querySource?: QuerySource | string;
+  querySource?: QuerySource | string,
   /** {@inheritDoc UniversalLimit} */
-  limit?: UniversalLimit;
+  limit?: UniversalLimit,
   /** If included, the response will only include these verticals. */
   restrictVerticals?: string[]
 }
