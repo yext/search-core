@@ -11,7 +11,7 @@ import mockAutocompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutocompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
 import mockAutocompleteResponseWithFailedVerticals from '../fixtures/autocompleteresponsewithfailedverticals.json';
 import mockAutocompleteResponseWithVerticalKeys from '../fixtures/autocompleteresponsewithverticalkeys.json';
-import { defaultEndpoints } from '../../src/constants';
+import { defaultEndpoints, defaultApiVersion } from '../../src/constants';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { ApiResponse } from '../../src/models/answersapi/ApiResponse';
 import { AnswersError } from '../../src/models/answersapi/AnswersError';
@@ -59,7 +59,7 @@ describe('AutocompleteService', () => {
       input: '',
       experienceKey: 'testExperienceKey',
       api_key: 'testApiKey',
-      v: 20190101,
+      v: defaultApiVersion,
       locale: 'en',
       sessionTrackingEnabled: false,
       visitorId: '123',
@@ -84,7 +84,7 @@ describe('AutocompleteService', () => {
         input: '',
         experienceKey: 'testExperienceKey',
         api_key: 'testApiKey',
-        v: 20190101,
+        v: defaultApiVersion,
         locale: 'en',
         sessionTrackingEnabled: false
       };
@@ -135,7 +135,7 @@ describe('AutocompleteService', () => {
       input: 'salesforce',
       experienceKey: 'testExperienceKey',
       api_key: 'testApiKey',
-      v: 20190101,
+      v: defaultApiVersion,
       locale: 'en',
       sessionTrackingEnabled: false,
       verticalKey: 'verticalKey'
@@ -151,7 +151,7 @@ describe('AutocompleteService', () => {
         input: 'salesforce',
         experienceKey: 'testExperienceKey',
         api_key: 'testApiKey',
-        v: 20190101,
+        v: defaultApiVersion,
         locale: 'en',
         sessionTrackingEnabled: false,
         verticalKey: 'verticalKey',
@@ -200,7 +200,7 @@ describe('AutocompleteService', () => {
         input: 'salesforce',
         experienceKey: 'testExperienceKey',
         api_key: 'testApiKey',
-        v: 20190101,
+        v: defaultApiVersion,
         locale: 'en',
         sessionTrackingEnabled: false,
         verticalKey: 'verticalKey',
