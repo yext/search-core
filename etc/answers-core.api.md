@@ -225,10 +225,12 @@ export interface FilterSearchRequest extends AnswersRequest {
 
 // @public
 export interface FilterSearchResponse {
-    businessId?: string;
+    inputIntents: SearchIntent[];
     queryId?: string;
+    results: AutocompleteResult[];
+    sectioned: boolean;
     sections: {
-        label?: string;
+        label: string;
         results: AutocompleteResult[];
     }[];
     uuid: string;

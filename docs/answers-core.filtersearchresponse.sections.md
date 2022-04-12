@@ -10,12 +10,12 @@ Represents autocomplete results separated by field.
 
 ```typescript
 sections: {
-        label?: string;
+        label: string;
         results: AutocompleteResult[];
     }[];
 ```
 
 ## Remarks
 
-If sectioned is true, the matching filters will be returned in a separate section per field. By default, they are all returned in the same section.
+This array will only be populated if sectioned is true.
 
