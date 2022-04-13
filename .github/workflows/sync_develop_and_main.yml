@@ -1,27 +1,37 @@
-name: create PR from main to develop
+name: Create PR from main to develop
 
 on:
   push:
     branches: [main, master]
 
 permissions:
-  contents: read
+  contents: write
   pull-requests: write
 
 jobs:
-  createPullRequest:
+  create_pull_request:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: extract package version
+      - name: Extract version and merge branch name
         id: vars
         run: |
           PACKAGE_VERSION="v$(cat ./package.json | grep version | head -1 | awk -F: '{ print $2 }' | sed 's/[",]//g' | tr -d '[[:space:]]')"
           echo ::set-output name=tag::${PACKAGE_VERSION}
-      - uses: repo-sync/pull-request@v2
+          echo ::set-output name=merge_branch_name::"dev/merge-${PACKAGE_VERSION}-into-develop"
+          git config --global --add safe.directory /github/workspace
+      - name: Create merge branch
+        uses: peterjgrainger/action-create-branch@v2.0.1
         with:
-          source_branch: "${{ github.event.repository.default_branch }}"
+          branch: ${{ steps.vars.outputs.merge_branch_name }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create pull request
+        uses: cea2aj/pull-request@master
+        with:
+          source_branch: "${{ steps.vars.outputs.merge_branch_name }}"
           destination_branch: "develop"
           pr_title: "Merge ${{ github.event.repository.default_branch }} (${{ steps.vars.outputs.tag }}) into develop"
           pr_body: "Merge ${{ github.event.repository.default_branch }} (${{ steps.vars.outputs.tag }}) into develop"
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          entrypoint: './entrypoint.sh'
