@@ -4,7 +4,7 @@ import { shapeFilterForApi } from './serializeStaticFilters';
 
 export function serializeFacets(filters: Facet[]): string {
   return JSON.stringify(filters.reduce<Record<string, ApiStaticFilters[]>>((obj, facet) => {
-    const fieldId = facet.fieldId
+    const fieldId = facet.fieldId;
     const shapedFacets = shapeFacetOptionArrayForApi(facet.options, fieldId);
     obj[fieldId] = shapedFacets;
     return obj;
