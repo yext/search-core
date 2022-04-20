@@ -32,12 +32,12 @@ interface UniversalSearchQueryParams extends QueryParams {
   location?: string,
   locale?: string,
   skipSpellCheck?: boolean,
-  sessionTrackingEnabled?: boolean
+  sessionTrackingEnabled?: boolean,
   queryTrigger?: QueryTrigger,
-  context?: string;
+  context?: string,
   referrerPageUrl?: string,
   source?: QuerySource | string,
-  visitor?: string
+  visitor?: string,
   restrictVerticals?: string
 }
 

@@ -9,11 +9,11 @@ import { Source } from './Source';
  */
 export interface VerticalResults {
   /** A array of {@link AppliedQueryFilter}s which were applied to the vertical results. */
-  appliedQueryFilters: AppliedQueryFilter[];
+  appliedQueryFilters: AppliedQueryFilter[],
   /** The duration of the query in milliseconds. */
-  queryDurationMillis: number;
+  queryDurationMillis: number,
   /** An array of search {@link Result}s for the vertical. */
-  results: Result[];
+  results: Result[],
   /**
    * The total number of results within the vertical.
    *
@@ -21,9 +21,9 @@ export interface VerticalResults {
    * This number may be higher than the number of results in the results array
    * since the API limits the number of results returned in each request.
   */
-  resultsCount: number;
+  resultsCount: number,
   /** {@inheritDoc Source} */
-  source: Source;
+  source: Source,
   /** The vertical key associated with the vertical results. */
-  verticalKey: string;
+  verticalKey: string
 }

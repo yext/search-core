@@ -9,19 +9,19 @@ import { Result } from './Result';
  */
 export interface FieldValueDirectAnswer extends DirectAnswer {
   /** {@link DirectAnswerType}.FieldValue. */
-  type: DirectAnswerType.FieldValue;
+  type: DirectAnswerType.FieldValue,
   /** {@inheritDoc DirectAnswer.value} */
-  value: string;
+  value: string,
   /** {@inheritDoc DirectAnswer.relatedResult} */
-  relatedResult: Result;
+  relatedResult: Result,
   /** {@inheritDoc DirectAnswer.verticalKey} */
-  verticalKey: string;
+  verticalKey: string,
   /** {@inheritDoc DirectAnswer.fieldType} */
-  fieldType: string;
+  fieldType: string,
   /** The name of the entity that direct answer came from. */
-  entityName: string;
+  entityName: string,
   /** The field name of the direct answer. */
-  fieldName: string;
+  fieldName: string,
   /** The field api name of the direct answer. */
-  fieldApiName: string;
+  fieldApiName: string
 }

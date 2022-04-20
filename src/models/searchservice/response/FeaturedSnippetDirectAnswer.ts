@@ -10,15 +10,15 @@ import { Snippet } from './Snippet';
  */
 export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
   /** {@link DirectAnswerType}.FeaturedSnippet. */
-  type: DirectAnswerType.FeaturedSnippet;
+  type: DirectAnswerType.FeaturedSnippet,
   /** {@inheritDoc DirectAnswer.value} */
-  value?: string;
+  value?: string,
   /** {@inheritDoc DirectAnswer.relatedResult} */
-  relatedResult: Result;
+  relatedResult: Result,
   /** {@inheritDoc DirectAnswer.verticalKey} */
-  verticalKey: string;
+  verticalKey: string,
   /** {@inheritDoc DirectAnswer.fieldType} */
-  fieldType: string;
+  fieldType: string,
   /** The snippet where the direct answer was found. */
-  snippet: Snippet;
+  snippet: Snippet
 }

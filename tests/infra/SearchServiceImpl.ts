@@ -163,7 +163,7 @@ describe('SearchService', () => {
         mockHttpService as HttpService,
         apiResponseValidator
       );
-      await searchService.universalSearch({query: 'test'});
+      await searchService.universalSearch({ query: 'test' });
       expect(mockHttpService.get).toHaveBeenCalledWith(customUrl, expect.anything(), getClientSdk());
     });
 
@@ -195,7 +195,7 @@ describe('SearchService', () => {
     });
   });
 
-  describe('Vertical Search', ()=> {
+  describe('Vertical Search', () => {
     const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query';
 
     it('Query params are correct when only required params (without token) are supplied', async () => {
@@ -279,7 +279,7 @@ describe('SearchService', () => {
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
-        context: JSON.stringify({key: 'value'}),
+        context: JSON.stringify({ key: 'value' }),
         experienceKey: 'testExperienceKey',
         facetFilters: JSON.stringify({
           c_awards:[{
@@ -287,7 +287,7 @@ describe('SearchService', () => {
           }]
         }),
         filters: JSON.stringify({
-          city:{['!$eq']: 'Arlington'}
+          city:{ ['!$eq']: 'Arlington' }
         }),
         input: 'testQuery',
         limit: 10,

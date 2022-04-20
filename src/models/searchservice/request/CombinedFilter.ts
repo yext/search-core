@@ -7,9 +7,9 @@ import { Filter } from './Filter';
  */
 export interface CombinedFilter {
   /** An array of filters applied to the search. */
-  filters: (Filter | CombinedFilter)[];
+  filters: (Filter | CombinedFilter)[],
   /** The logical operator used to combine the filters. */
-  combinator: FilterCombinator;
+  combinator: FilterCombinator
 }
 
 /**

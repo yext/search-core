@@ -9,13 +9,13 @@ import { Result } from '../searchservice/response/Result';
  */
 export interface AutocompleteResponse {
   /** An array of {@link AutocompleteResult}s. */
-  results: AutocompleteResult[];
+  results: AutocompleteResult[],
   /** {@inheritDoc SearchIntent} */
-  inputIntents: SearchIntent[];
+  inputIntents: SearchIntent[],
   /** The ID of the search query. */
-  queryId?: string;
+  queryId?: string,
   /** A unique id which corresponds to the request. */
-  uuid: string;
+  uuid: string
 }
 
 /**
@@ -39,14 +39,14 @@ export interface FilterSearchResponse {
      */
     label?: string,
     /** An array of {@link AutocompleteResult}s. */
-    results: AutocompleteResult[];
+    results: AutocompleteResult[]
   }[],
   /** ID of the account associated with this Answers experience */
   businessId?: string,
   /** {@inheritDoc AutocompleteResponse.queryId} */
   queryId?: string,
   /** A unique id which corresponds to the request. */
-  uuid: string;
+  uuid: string
 }
 
 /**
@@ -56,21 +56,21 @@ export interface FilterSearchResponse {
  */
 export interface AutocompleteResult {
   /** The value of an autocomplete suggestion. */
-  value: string;
+  value: string,
   /**
    * A filter applied to the autocomplete response.
    *
    * @remarks
    * This property is only defined for filtersearch.
    */
-  filter?: Filter;
+  filter?: Filter,
   /**
    * The fieldId which corresponds to the AutocompleteResult value.
    *
    * @remarks
    * This property is only defined for filtersearch.
    */
-  key?: string;
+  key?: string,
   /**
    * An array of substrings which overlap with the autocomplete input.
    *
@@ -80,7 +80,7 @@ export interface AutocompleteResult {
   matchedSubstrings?: {
     length: number,
     offset: number
-  }[];
+  }[],
   /**
    * An entity that corresponds to the autocomplete result.
    *
@@ -88,7 +88,7 @@ export interface AutocompleteResult {
    * This property is only defined if the corresponding
    * {@link SearchParameterField.fetchEntities} field is true.
    */
-  relatedItem?: Result
+  relatedItem?: Result,
   /**
    * Any vertical keys associated with a prompt.
    * This only shows up on universal autocomplete requests.

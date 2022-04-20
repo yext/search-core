@@ -5,7 +5,7 @@ import { VerticalAutocompleteRequest, FilterSearchRequest,
 import { AutocompleteResponse, FilterSearchResponse } from '../models/autocompleteservice/AutocompleteResponse';
 import { defaultApiVersion, defaultEndpoints } from '../constants';
 import { AnswersConfig } from '../models/core/AnswersConfig';
-import { HttpService }from '../services/HttpService';
+import { HttpService } from '../services/HttpService';
 import { AutocompleteQueryParams } from '../models/autocompleteservice/AutocompleteQueryParams';
 import { AutocompleteService } from '../services/AutocompleteService';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
@@ -17,7 +17,7 @@ import { getClientSdk } from '../utils/getClientSdk';
  * autocomplete request.
  */
 interface VerticalAutocompleteQueryParams extends AutocompleteQueryParams {
-  verticalKey?: string,
+  verticalKey?: string
 }
 
 /**
@@ -169,7 +169,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
   }
 
   private serializeSearchParameterFields(fields: SearchParameterField[]) {
-    return fields.map(({ fieldApiName, entityType, fetchEntities}) => (
+    return fields.map(({ fieldApiName, entityType, fetchEntities }) => (
       {
         fieldId: fieldApiName,
         entityTypeId: entityType,

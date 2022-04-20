@@ -5,7 +5,7 @@
  */
 export interface Snippet {
   /** The snippet's body of text */
-  value: string;
+  value: string,
   /** The locations in the document text of the {@link FeaturedSnippetDirectAnswer.value} */
-  matchedSubstrings: {offset: number, length: number}[];
+  matchedSubstrings: { offset: number, length: number }[]
 }

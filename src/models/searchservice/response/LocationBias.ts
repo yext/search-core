@@ -5,18 +5,18 @@
  */
 export interface LocationBias {
   /** The location's latitude. */
-  latitude: number;
+  latitude: number,
   /** The location's longitude. */
-  longitude: number;
+  longitude: number,
   /**
    * The name of the location.
    *
    * @example
    * Arlington, Virginia.
    */
-  displayName: string;
+  displayName: string,
   /** {@inheritDoc LocationBiasMethod} */
-  method: LocationBiasMethod;
+  method: LocationBiasMethod
 }
 
 /**

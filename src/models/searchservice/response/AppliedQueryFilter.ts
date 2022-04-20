@@ -12,14 +12,14 @@ export interface AppliedQueryFilter {
    * @example
    * 'Job Category'
    */
-  displayKey: string;
+  displayKey: string,
   /**
    * The value used in the filter.
    *
    * @example
    * 'Sales'
    */
-  displayValue: string;
+  displayValue: string,
   /** The filter applied to the query results. */
-  filter: Filter;
+  filter: Filter
 }
