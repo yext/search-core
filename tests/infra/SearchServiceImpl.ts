@@ -11,6 +11,7 @@ import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Direction } from '../../src/models/searchservice/request/Direction';
 import { SortType } from '../../src/models/searchservice/request/SortType';
 import { getClientSdk } from '../../src/utils/getClientSdk';
+import { defaultApiVersion } from '../../src/constants';
 
 describe('SearchService', () => {
   const configWithRequiredApiKey: AnswersConfig = {
@@ -81,7 +82,7 @@ describe('SearchService', () => {
         experienceKey: 'testExperienceKey',
         input: 'testQuery',
         locale: 'en',
-        v: 20190101,
+        v: defaultApiVersion,
         source: 'STANDARD'
       };
       await searchServiceWithRequiredApiKey.universalSearch(requestWithRequiredParams);
@@ -97,7 +98,7 @@ describe('SearchService', () => {
         experienceKey: 'testExperienceKey',
         input: 'testQuery',
         locale: 'en',
-        v: 20190101,
+        v: defaultApiVersion,
         source: 'STANDARD'
       };
       await searchServiceWithRequiredToken.universalSearch(requestWithRequiredParams);
@@ -137,7 +138,7 @@ describe('SearchService', () => {
         session_id: '8ad0cb51-82f6-4ad9-bc62-b358115fde30',
         sessionTrackingEnabled: true,
         skipSpellCheck: true,
-        v: 20190101,
+        v: defaultApiVersion,
         version: 'PRODUCTION',
         source: 'STANDARD',
         visitorId: '123',
@@ -208,7 +209,7 @@ describe('SearchService', () => {
         verticalKey: 'verticalKey',
         input: 'testQuery',
         locale: 'en',
-        v: 20190101,
+        v: defaultApiVersion,
         source: 'STANDARD',
         sortBys: '[]',
       };
@@ -227,7 +228,7 @@ describe('SearchService', () => {
         verticalKey: 'verticalKey',
         input: 'testQuery',
         locale: 'en',
-        v: 20190101,
+        v: defaultApiVersion,
         source: 'STANDARD',
         sortBys: '[]',
       };
@@ -307,7 +308,7 @@ describe('SearchService', () => {
           type: 'FIELD'
         }]),
         source: 'STANDARD',
-        v: 20190101,
+        v: defaultApiVersion,
         version: 'PRODUCTION',
         verticalKey: 'verticalKey',
         visitorId: '123',
