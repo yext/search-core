@@ -1,0 +1,7 @@
+name: Check and Update Third Party Notices
+
+on: pull_request
+
+jobs:
+  call_notices_check:
+    uses: yext/slapshot-reusable-workflows/.github/workflows/third_party_notices_check.yml@dev/update-third-party-notices-check
