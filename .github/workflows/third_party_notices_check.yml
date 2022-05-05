@@ -5,3 +5,5 @@ on: pull_request
 jobs:
   call_notices_check:
     uses: yext/slapshot-reusable-workflows/.github/workflows/third_party_notices_check.yml@dev/update-third-party-notices-check
+    secrets:
+      REPO_SCOPE_TOKEN: ${{ secrets.BOT_REPO_SCOPE_TOKEN }}
