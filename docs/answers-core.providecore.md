@@ -4,7 +4,7 @@
 
 ## provideCore() function
 
-The entrypoint to the answers-core library. TEST
+The entrypoint to the answers-core library.
 
 <b>Signature:</b>
 
