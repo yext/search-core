@@ -8,4 +8,4 @@ jobs:
     with:
       build_script: npm run build-ci
     secrets:
-      REPO_SCOPE_TOKEN: ${{ secrets.BOT_REPO_SCOPE_TOKEN }}
+      REPO_SCOPE_TOKEN: ${{ secrets.TEST_REPO_SCOPED_WITHOUT_ORG }}
