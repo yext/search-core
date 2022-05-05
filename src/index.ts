@@ -7,7 +7,7 @@ import { AutocompleteServiceImpl } from './infra/AutocompleteServiceImpl';
 import { ApiResponseValidator } from './validation/ApiResponseValidator';
 
 /**
- * The entrypoint to the answers-core library. TEST
+ * The entrypoint to the answers-core library.
  *
  * @remarks
  * Returns an {@link AnswersCore} instance.
