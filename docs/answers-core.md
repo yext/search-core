@@ -31,7 +31,7 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [provideCore(config)](./answers-core.providecore.md) | The entrypoint to the answers-core library. TEST |
+|  [provideCore(config)](./answers-core.providecore.md) | The entrypoint to the answers-core library. |
 
 ## Interfaces
 
