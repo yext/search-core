@@ -4,7 +4,7 @@
 
 ## LocationBoundingBox interface
 
-Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md) filter type. (e.g. boundary for a locality or region specific location filter)
+Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md)<!-- -->. (e.g. boundary for a locality or region specific location filter)
 
 <b>Signature:</b>
 

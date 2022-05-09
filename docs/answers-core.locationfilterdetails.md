@@ -4,7 +4,7 @@
 
 ## LocationFilterDetails interface
 
-Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md) filter type.
+Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md)<!-- -->.
 
 <b>Signature:</b>
 
