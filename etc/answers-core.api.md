@@ -359,7 +359,7 @@ export interface Result {
     link?: string;
     name?: string;
     rawData: Record<string, unknown>;
-    source: Source;
+    source: Source | string;
 }
 
 // @public
@@ -485,7 +485,7 @@ export interface VerticalResults {
     queryDurationMillis: number;
     results: Result[];
     resultsCount: number;
-    source: Source;
+    source: Source | string;
     verticalKey: string;
 }
 
@@ -531,7 +531,6 @@ export interface Visitor {
     id: string;
     idMethod?: string;
 }
-
 
 // (No @packageDocumentation comment for this package)
 
