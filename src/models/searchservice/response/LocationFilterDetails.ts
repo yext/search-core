@@ -1,5 +1,5 @@
 /**
- * Additional details relevant to the filter with "PLACE" for its {@link AppliedQueryFilterType} filter type.
+ * Additional details relevant to the filter with "PLACE" for its {@link AppliedQueryFilterType}.
  *
  * @public
  */
@@ -12,7 +12,7 @@ export interface LocationFilterDetails {
 }
 
 /**
- * Location boundaries for a filter with "Place" for its {@link AppliedQueryFilterType} filter type.
+ * Location boundaries for a filter with "Place" for its {@link AppliedQueryFilterType}.
  * (e.g. boundary for a locality or region specific location filter)
  *
  * @public
