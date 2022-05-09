@@ -63,8 +63,8 @@
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Answers API. |
 |  [LatLong](./answers-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
-|  [LocationBoundingBox](./answers-core.locationboundingbox.md) | Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md) filter type. (e.g. boundary for a locality or region specific location filter) |
-|  [LocationFilterDetails](./answers-core.locationfilterdetails.md) | Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md) filter type. |
+|  [LocationBoundingBox](./answers-core.locationboundingbox.md) | Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md)<!-- -->. (e.g. boundary for a locality or region specific location filter) |
+|  [LocationFilterDetails](./answers-core.locationfilterdetails.md) | Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md)<!-- -->. |
 |  [LowerNumberRangeLimit](./answers-core.lowernumberrangelimit.md) | The start limit of [NumberRangeValue](./answers-core.numberrangevalue.md)<!-- -->. |
 |  [NearFilterValue](./answers-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./answers-core.matcher.md)<!-- -->. |
 |  [NumberRangeValue](./answers-core.numberrangevalue.md) | A filter value for a filter with a $between [Matcher](./answers-core.matcher.md)<!-- -->. |
