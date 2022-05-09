@@ -23,7 +23,7 @@ export interface VerticalResults {
   */
   resultsCount: number,
   /** {@inheritDoc Source} */
-  source: Source | string,
+  source: Source,
   /** The vertical key associated with the vertical results. */
   verticalKey: string
 }

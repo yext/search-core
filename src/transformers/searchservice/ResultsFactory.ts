@@ -5,7 +5,7 @@ import { Source } from '../../models/searchservice/response/Source';
  * A factory which creates results from different sources
  */
 export class ResultsFactory {
-  public static create(results: any, source: Source | string): Result[] {
+  public static create(results: any, source: Source): Result[] {
     if (!results) {
       return [];
     }
@@ -25,7 +25,7 @@ export class ResultsFactory {
         case Source.Algolia:
           return this.fromAlgoliaSearchEngine(result, resultIndex);
         default:
-          return this.fromUnknownSource(result, resultIndex, source);
+          return this.fromCustomSource(result, resultIndex);
       }
     });
   }
@@ -94,11 +94,11 @@ export class ResultsFactory {
     };
   }
 
-  private static fromUnknownSource(result: any, index: number, source: string): Result {
+  private static fromCustomSource(result: any, index: number): Result {
     const rawData = result.data ?? result;
     return {
       rawData: rawData,
-      source: source || Source.Generic,
+      source: Source.Custom,
       index: index,
       name: rawData.name,
       description: rawData.description, // Do we want to truncate this like in the SDK?

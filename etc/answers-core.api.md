@@ -359,7 +359,7 @@ export interface Result {
     link?: string;
     name?: string;
     rawData: Record<string, unknown>;
-    source: Source | string;
+    source: Source;
 }
 
 // @public
@@ -407,7 +407,7 @@ export enum SortType {
 export enum Source {
     Algolia = "ALGOLIA",
     Bing = "BING_CSE",
-    Generic = "GENERIC",
+    Custom = "CUSTOM_SEARCHER",
     Google = "GOOGLE_CSE",
     KnowledgeManager = "KNOWLEDGE_MANAGER",
     Zendesk = "ZENDESK"
@@ -485,7 +485,7 @@ export interface VerticalResults {
     queryDurationMillis: number;
     results: Result[];
     resultsCount: number;
-    source: Source | string;
+    source: Source;
     verticalKey: string;
 }
 

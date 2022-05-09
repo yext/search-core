@@ -148,46 +148,7 @@ it('properly transforms Bing search results', () => {
   expect(expectedResults).toMatchObject(actualResults);
 });
 
-it('properly transforms backend results from unknown source', () => {
-  const unknownSourceData = [{
-    data: {
-      answer: 'You should still self\-quarantine for 14 days since your last exposure.',
-      c_organization: 'CDC',
-      id: 'iwasaroundsomeonewhohascovid19andmycovid19testcame',
-      keywords: ['covid', 'COVID-19', 'Coronavirus'],
-      website: 'https://www.cdc.gov/coronavirus/2019-ncov/faq.html',
-      name: 'Do I still need to quarantine for 14 days?',
-      type: 'faq',
-      description: 'COVID question'
-    },
-    highlightedFields: {},
-    source: 'WIKI'
-  }];
-
-  const expectedResults = [{
-    description: 'COVID question',
-    id: 'iwasaroundsomeonewhohascovid19andmycovid19testcame',
-    index: 1,
-    link: 'https://www.cdc.gov/coronavirus/2019-ncov/faq.html',
-    name: 'Do I still need to quarantine for 14 days?',
-    rawData: {
-      answer: 'You should still self-quarantine for 14 days since your last exposure.',
-      c_organization: 'CDC',
-      id: 'iwasaroundsomeonewhohascovid19andmycovid19testcame',
-      keywords: ['covid', 'COVID-19', 'Coronavirus'],
-      website: 'https://www.cdc.gov/coronavirus/2019-ncov/faq.html',
-      name: 'Do I still need to quarantine for 14 days?',
-      type: 'faq',
-      description: 'COVID question'
-    },
-    source: 'WIKI',
-  }];
-
-  const actualResults = ResultsFactory.create(unknownSourceData, 'WIKI');
-  expect(expectedResults).toMatchObject(actualResults);
-});
-
-it('properly transforms generic backend results', () => {
+it('properly transforms backend results from custom source', () => {
   const genericData = [{
     data: {
       answer: 'You should still self\-quarantine for 14 days since your last exposure.',
@@ -218,9 +179,9 @@ it('properly transforms generic backend results', () => {
       type: 'faq',
       description: 'COVID question'
     },
-    source: 'GENERIC',
+    source: Source.Custom
   }];
 
-  const actualResults = ResultsFactory.create(genericData, Source.Generic);
+  const actualResults = ResultsFactory.create(genericData, Source.Custom);
   expect(expectedResults).toMatchObject(actualResults);
 });
