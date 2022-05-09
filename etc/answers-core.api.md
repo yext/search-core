@@ -407,7 +407,7 @@ export enum SortType {
 export enum Source {
     Algolia = "ALGOLIA",
     Bing = "BING_CSE",
-    Generic = "GENERIC",
+    Custom = "CUSTOM_SEARCHER",
     Google = "GOOGLE_CSE",
     KnowledgeManager = "KNOWLEDGE_MANAGER",
     Zendesk = "ZENDESK"
@@ -531,7 +531,6 @@ export interface Visitor {
     id: string;
     idMethod?: string;
 }
-
 
 // (No @packageDocumentation comment for this package)
 
