@@ -16,7 +16,9 @@ export interface AppliedQueryFilter
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [details?](./answers-core.appliedqueryfilter.details.md) | [LocationFilterDetails](./answers-core.locationfilterdetails.md) | <i>(Optional)</i> Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md) filter type. |
 |  [displayKey](./answers-core.appliedqueryfilter.displaykey.md) | string | The display name of the filter key. |
 |  [displayValue](./answers-core.appliedqueryfilter.displayvalue.md) | string | The value used in the filter. |
 |  [filter](./answers-core.appliedqueryfilter.filter.md) | [Filter](./answers-core.filter.md) | The filter applied to the query results. |
+|  [type](./answers-core.appliedqueryfilter.type.md) | [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md) | Represents the type of [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) applied to a search. |
 

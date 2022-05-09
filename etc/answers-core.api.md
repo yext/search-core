@@ -51,9 +51,18 @@ export interface AnswersRequest {
 
 // @public
 export interface AppliedQueryFilter {
+    details?: LocationFilterDetails;
     displayKey: string;
     displayValue: string;
     filter: Filter;
+    type: AppliedQueryFilterType;
+}
+
+// @public
+export enum AppliedQueryFilterType {
+    FieldValue = "FIELD_VALUE",
+    Intent = "INTENT",
+    Place = "PLACE"
 }
 
 // @public
@@ -267,6 +276,32 @@ export enum LocationBiasMethod {
     Device = "DEVICE",
     Ip = "IP",
     Unknown = "UNKNOWN"
+}
+
+// @public
+export interface LocationBoundingBox {
+    // (undocumented)
+    maxLatitude: number;
+    // (undocumented)
+    maxLongitude: number;
+    // (undocumented)
+    minLatitude: number;
+    // (undocumented)
+    minLongitude: number;
+}
+
+// @public
+export interface LocationFilterDetails {
+    // (undocumented)
+    boundingBox?: LocationBoundingBox;
+    // (undocumented)
+    featureTypes: string[];
+    // (undocumented)
+    latitude: number;
+    // (undocumented)
+    longitude: number;
+    // (undocumented)
+    placeName: string;
 }
 
 // @public
@@ -531,7 +566,6 @@ export interface Visitor {
     id: string;
     idMethod?: string;
 }
-
 
 // (No @packageDocumentation comment for this package)
 
