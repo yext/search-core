@@ -4,6 +4,8 @@
 
 ## LocationFilterDetails.longitude property
 
+The location's longitude.
+
 <b>Signature:</b>
 
 ```typescript

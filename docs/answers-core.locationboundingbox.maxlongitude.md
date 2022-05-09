@@ -4,6 +4,8 @@
 
 ## LocationBoundingBox.maxLongitude property
 
+The location's highest longitude degree.
+
 <b>Signature:</b>
 
 ```typescript

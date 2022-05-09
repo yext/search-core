@@ -4,6 +4,8 @@
 
 ## LocationFilterDetails.placeName property
 
+The location's name.
+
 <b>Signature:</b>
 
 ```typescript

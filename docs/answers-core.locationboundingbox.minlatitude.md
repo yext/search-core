@@ -4,6 +4,8 @@
 
 ## LocationBoundingBox.minLatitude property
 
+The location's lowest latitude degree.
+
 <b>Signature:</b>
 
 ```typescript

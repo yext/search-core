@@ -4,6 +4,8 @@
 
 ## LocationFilterDetails.featureTypes property
 
+The location's classification (e.g. locality, region, address).
+
 <b>Signature:</b>
 
 ```typescript

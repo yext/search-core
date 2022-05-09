@@ -16,9 +16,9 @@ export interface LocationFilterDetails
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [boundingBox?](./answers-core.locationfilterdetails.boundingbox.md) | [LocationBoundingBox](./answers-core.locationboundingbox.md) | <i>(Optional)</i> |
-|  [featureTypes](./answers-core.locationfilterdetails.featuretypes.md) | string\[\] |  |
-|  [latitude](./answers-core.locationfilterdetails.latitude.md) | number |  |
-|  [longitude](./answers-core.locationfilterdetails.longitude.md) | number |  |
-|  [placeName](./answers-core.locationfilterdetails.placename.md) | string |  |
+|  [boundingBox?](./answers-core.locationfilterdetails.boundingbox.md) | [LocationBoundingBox](./answers-core.locationboundingbox.md) | <i>(Optional)</i> The location's coordinate boundaries. |
+|  [featureTypes](./answers-core.locationfilterdetails.featuretypes.md) | string\[\] | The location's classification (e.g. locality, region, address). |
+|  [latitude](./answers-core.locationfilterdetails.latitude.md) | number | The location's latitude. |
+|  [longitude](./answers-core.locationfilterdetails.longitude.md) | number | The location's longitude. |
+|  [placeName](./answers-core.locationfilterdetails.placename.md) | string | The location's name. |
 

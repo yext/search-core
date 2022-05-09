@@ -280,27 +280,18 @@ export enum LocationBiasMethod {
 
 // @public
 export interface LocationBoundingBox {
-    // (undocumented)
     maxLatitude: number;
-    // (undocumented)
     maxLongitude: number;
-    // (undocumented)
     minLatitude: number;
-    // (undocumented)
     minLongitude: number;
 }
 
 // @public
 export interface LocationFilterDetails {
-    // (undocumented)
     boundingBox?: LocationBoundingBox;
-    // (undocumented)
     featureTypes: string[];
-    // (undocumented)
     latitude: number;
-    // (undocumented)
     longitude: number;
-    // (undocumented)
     placeName: string;
 }
 

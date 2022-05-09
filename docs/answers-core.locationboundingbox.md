@@ -16,8 +16,8 @@ export interface LocationBoundingBox
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [maxLatitude](./answers-core.locationboundingbox.maxlatitude.md) | number |  |
-|  [maxLongitude](./answers-core.locationboundingbox.maxlongitude.md) | number |  |
-|  [minLatitude](./answers-core.locationboundingbox.minlatitude.md) | number |  |
-|  [minLongitude](./answers-core.locationboundingbox.minlongitude.md) | number |  |
+|  [maxLatitude](./answers-core.locationboundingbox.maxlatitude.md) | number | The location's highest latitude degree. |
+|  [maxLongitude](./answers-core.locationboundingbox.maxlongitude.md) | number | The location's highest longitude degree. |
+|  [minLatitude](./answers-core.locationboundingbox.minlatitude.md) | number | The location's lowest latitude degree. |
+|  [minLongitude](./answers-core.locationboundingbox.minlongitude.md) | number | The location's lowest longitude degree. |
 

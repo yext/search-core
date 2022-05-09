@@ -4,6 +4,8 @@
 
 ## LocationFilterDetails.boundingBox property
 
+The location's coordinate boundaries.
+
 <b>Signature:</b>
 
 ```typescript
