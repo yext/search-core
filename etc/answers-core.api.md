@@ -51,9 +51,18 @@ export interface AnswersRequest {
 
 // @public
 export interface AppliedQueryFilter {
+    details?: LocationFilterDetails;
     displayKey: string;
     displayValue: string;
     filter: Filter;
+    type: AppliedQueryFilterType;
+}
+
+// @public
+export enum AppliedQueryFilterType {
+    FieldValue = "FIELD_VALUE",
+    Intent = "INTENT",
+    Place = "PLACE"
 }
 
 // @public
@@ -267,6 +276,23 @@ export enum LocationBiasMethod {
     Device = "DEVICE",
     Ip = "IP",
     Unknown = "UNKNOWN"
+}
+
+// @public
+export interface LocationBoundingBox {
+    maxLatitude: number;
+    maxLongitude: number;
+    minLatitude: number;
+    minLongitude: number;
+}
+
+// @public
+export interface LocationFilterDetails {
+    boundingBox?: LocationBoundingBox;
+    featureTypes: string[];
+    latitude: number;
+    longitude: number;
+    placeName: string;
 }
 
 // @public
