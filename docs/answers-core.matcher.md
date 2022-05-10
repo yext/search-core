@@ -16,6 +16,7 @@ export declare enum Matcher
 
 |  Member | Value | Description |
 |  --- | --- | --- |
+|  Between | <code>&quot;$between&quot;</code> | A limitation of the dataset to a range of values. |
 |  Equals | <code>&quot;$eq&quot;</code> | An equals comparison. |
 |  GreaterThan | <code>&quot;$gt&quot;</code> | A greater than comparison. |
 |  GreaterThanOrEqualTo | <code>&quot;$ge&quot;</code> | A greater than or equal to comparison. |

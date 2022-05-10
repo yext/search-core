@@ -4,7 +4,7 @@
 
 ## SortBy.field property
 
-The field name to sort by. Required if the SortBy type is [SortType.Field](./answers-core.sorttype.field.md)<!-- -->.
+The field name to sort by. Required if the SortBy type is [SortType.Field](./answers-core.sorttype.md)<!-- -->.
 
 <b>Signature:</b>
 

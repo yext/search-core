@@ -5,8 +5,21 @@ import { VerticalSearchResponse } from '../models/searchservice/response/Vertica
 
 /**
  * A service which performs Yext Answers searches
+ *
+ * @public
  */
 export interface SearchService {
-  universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>
+  /**
+   * Performs a Universal search across all verticals.
+   *
+   * @param request - The details of the Universal search request.
+   */
+  universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>,
+
+  /**
+   * Performs a search across a particular Vertical.
+   *
+   * @param request - The details of the Vertical search request.
+   */
   verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>
 }

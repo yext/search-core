@@ -3,6 +3,7 @@ import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { HttpService } from '../../src/services/HttpService';
 import { AnswersConfig } from '../../src/models/core/AnswersConfig';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
+import { defaultApiVersion } from '../../src/constants';
 
 const baseCoreConfig = {
   apiKey: 'anApiKey',
@@ -67,7 +68,7 @@ describe('Question submission', () => {
     const expectedQueryParams = {
       api_key: 'anApiKey',
       sessionTrackingEnabled: true,
-      v: 20190101
+      v: defaultApiVersion
     };
     const actualQueryParams = actualHttpParams[1];
     expect(expectedQueryParams).toEqual(actualQueryParams);

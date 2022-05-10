@@ -5,6 +5,11 @@
 ```ts
 
 // @public
+export interface AdditionalHttpHeaders {
+    'Client-SDK'?: ClientSDKHeaderValues;
+}
+
+// @public
 export type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;
 
 // @public
@@ -21,11 +26,6 @@ export interface AnswersConfigWithToken extends BaseAnswersConfig {
 
 // @public
 export class AnswersCore {
-    // Warning: (ae-forgotten-export) The symbol "SearchService" needs to be exported by the entry point index.d.ts
-    // Warning: (ae-forgotten-export) The symbol "QuestionSubmissionService" needs to be exported by the entry point index.d.ts
-    // Warning: (ae-forgotten-export) The symbol "AutocompleteService" needs to be exported by the entry point index.d.ts
-    //
-    // @internal
     constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService);
     filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>;
     submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
@@ -45,10 +45,24 @@ export class AnswersError extends Error {
 }
 
 // @public
+export interface AnswersRequest {
+    additionalHttpHeaders?: AdditionalHttpHeaders;
+}
+
+// @public
 export interface AppliedQueryFilter {
+    details?: LocationFilterDetails;
     displayKey: string;
     displayValue: string;
     filter: Filter;
+    type: AppliedQueryFilterType;
+}
+
+// @public
+export enum AppliedQueryFilterType {
+    FieldValue = "FIELD_VALUE",
+    Intent = "INTENT",
+    Place = "PLACE"
 }
 
 // @public
@@ -73,6 +87,13 @@ export interface AutocompleteResult {
 }
 
 // @public
+export interface AutocompleteService {
+    filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>;
+    universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>;
+    verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse>;
+}
+
+// @public
 export interface BaseAnswersConfig {
     // @alpha
     additionalQueryParams?: {
@@ -83,6 +104,12 @@ export interface BaseAnswersConfig {
     experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
     locale: string;
     visitor?: Visitor;
+}
+
+// @public
+export interface ClientSDKHeaderValues {
+    [agent: string]: string | undefined;
+    ANSWERS_CORE?: never;
 }
 
 // @public
@@ -128,7 +155,7 @@ export interface DisplayableFacetOption extends FacetOption {
     displayName: string;
     matcher: Matcher;
     selected: boolean;
-    value: string | number | boolean;
+    value: string | number | boolean | NumberRangeValue;
 }
 
 // @public
@@ -158,7 +185,7 @@ export interface Facet {
 // @public
 export interface FacetOption {
     matcher: Matcher;
-    value: string | number | boolean;
+    value: string | number | boolean | NumberRangeValue;
 }
 
 // @public
@@ -187,7 +214,7 @@ export interface FieldValueDirectAnswer extends DirectAnswer {
 export interface Filter {
     fieldId: string;
     matcher: Matcher;
-    value: string | number | boolean | NearFilterValue;
+    value: string | number | boolean | NearFilterValue | NumberRangeValue;
 }
 
 // @public
@@ -197,7 +224,7 @@ export enum FilterCombinator {
 }
 
 // @public
-export interface FilterSearchRequest {
+export interface FilterSearchRequest extends AnswersRequest {
     fields: SearchParameterField[];
     input: string;
     sectioned: boolean;
@@ -207,12 +234,10 @@ export interface FilterSearchRequest {
 
 // @public
 export interface FilterSearchResponse {
-    inputIntents: SearchIntent[];
+    businessId?: string;
     queryId?: string;
-    results: AutocompleteResult[];
-    sectioned: boolean;
     sections: {
-        label: string;
+        label?: string;
         results: AutocompleteResult[];
     }[];
     uuid: string;
@@ -254,7 +279,31 @@ export enum LocationBiasMethod {
 }
 
 // @public
+export interface LocationBoundingBox {
+    maxLatitude: number;
+    maxLongitude: number;
+    minLatitude: number;
+    minLongitude: number;
+}
+
+// @public
+export interface LocationFilterDetails {
+    boundingBox?: LocationBoundingBox;
+    featureTypes: string[];
+    latitude: number;
+    longitude: number;
+    placeName: string;
+}
+
+// @public
+export interface LowerNumberRangeLimit {
+    matcher: Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo;
+    value: number;
+}
+
+// @public
 export enum Matcher {
+    Between = "$between",
     Equals = "$eq",
     GreaterThan = "$gt",
     GreaterThanOrEqualTo = "$ge",
@@ -272,10 +321,28 @@ export interface NearFilterValue {
 }
 
 // @public
+export interface NumberRangeValue {
+    end?: UpperNumberRangeLimit;
+    start?: LowerNumberRangeLimit;
+}
+
+// @public
 export function provideCore(config: AnswersConfig): AnswersCore;
 
 // @public
+export interface QueryRulesActionsData {
+    data?: Record<string, unknown>;
+    errors?: {
+        uuid: string;
+        type: string;
+        message?: string;
+    }[];
+    key: string;
+}
+
+// @public
 export enum QuerySource {
+    Autocomplete = "AUTOCOMPLETE",
     Overlay = "OVERLAY",
     Standard = "STANDARD"
 }
@@ -287,7 +354,7 @@ export enum QueryTrigger {
 }
 
 // @public
-export interface QuestionSubmissionRequest {
+export interface QuestionSubmissionRequest extends AnswersRequest {
     email: string;
     entityId: string;
     name: string;
@@ -299,6 +366,11 @@ export interface QuestionSubmissionRequest {
 // @public
 export interface QuestionSubmissionResponse {
     uuid: string;
+}
+
+// @public
+export interface QuestionSubmissionService {
+    submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
 }
 
 // @public
@@ -329,6 +401,12 @@ export interface SearchParameterField {
 }
 
 // @public
+export interface SearchService {
+    universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
+    verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
+}
+
+// @public
 export interface Snippet {
     matchedSubstrings: {
         offset: number;
@@ -355,7 +433,7 @@ export enum SortType {
 export enum Source {
     Algolia = "ALGOLIA",
     Bing = "BING_CSE",
-    Generic = "GENERIC",
+    Custom = "CUSTOM_SEARCHER",
     Google = "GOOGLE_CSE",
     KnowledgeManager = "KNOWLEDGE_MANAGER",
     Zendesk = "ZENDESK"
@@ -376,7 +454,7 @@ export enum SpellCheckType {
 }
 
 // @public
-export interface UniversalAutocompleteRequest {
+export interface UniversalAutocompleteRequest extends AnswersRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
 }
@@ -388,7 +466,7 @@ export interface UniversalLimit {
 }
 
 // @public
-export interface UniversalSearchRequest {
+export interface UniversalSearchRequest extends AnswersRequest {
     context?: Context;
     limit?: UniversalLimit;
     location?: LatLong;
@@ -407,6 +485,7 @@ export interface UniversalSearchResponse {
     directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer;
     locationBias?: LocationBias;
     queryId?: string;
+    queryRulesActionsData?: QueryRulesActionsData[];
     searchIntents?: SearchIntent[];
     spellCheck?: SpellCheck;
     uuid: string;
@@ -414,7 +493,13 @@ export interface UniversalSearchResponse {
 }
 
 // @public
-export interface VerticalAutocompleteRequest {
+export interface UpperNumberRangeLimit {
+    matcher: Matcher.LessThan | Matcher.LessThanOrEqualTo;
+    value: number;
+}
+
+// @public
+export interface VerticalAutocompleteRequest extends AnswersRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
     verticalKey: string;
@@ -431,7 +516,7 @@ export interface VerticalResults {
 }
 
 // @public
-export interface VerticalSearchRequest {
+export interface VerticalSearchRequest extends AnswersRequest {
     context?: Context;
     facets?: Facet[];
     limit?: number;
@@ -460,6 +545,7 @@ export interface VerticalSearchResponse {
     facets?: DisplayableFacet[];
     locationBias?: LocationBias;
     queryId: string;
+    queryRulesActionsData?: QueryRulesActionsData[];
     searchIntents?: SearchIntent[];
     spellCheck?: SpellCheck;
     uuid: string;
@@ -471,7 +557,6 @@ export interface Visitor {
     id: string;
     idMethod?: string;
 }
-
 
 // (No @packageDocumentation comment for this package)
 

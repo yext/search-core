@@ -70,3 +70,60 @@ it('createFacets', () => {
     }
   ]);
 });
+
+it('createFacets with number range filter', () => {
+  const actualCoreResponse = createFacets([
+    {
+      fieldId: 'price',
+      displayName: 'Price',
+      options: [
+        {
+          displayName: '0 - 23',
+          count: 20,
+          selected: false,
+          filter: {
+            price: { $between: { $lt: 23, $ge: 0 } }
+          }
+        },
+        {
+          displayName: '23 - 60',
+          count: 20,
+          selected: false,
+          filter: {
+            price: { $between: { $ge: 23, $lt: 60 } }
+          }
+        }
+      ]
+    }
+  ]);
+
+  expect(actualCoreResponse).toEqual([
+    {
+      fieldId: 'price',
+      displayName: 'Price',
+      options: [
+        {
+          displayName: '0 - 23',
+          count: 20,
+          selected: false,
+          matcher: '$between',
+          value: {
+            start: { matcher: '$ge', value: 0 },
+            end: { matcher: '$lt', value: 23 }
+          }
+        },
+        {
+          displayName: '23 - 60',
+          count: 20,
+          selected: false,
+          matcher: '$between',
+          value: {
+            start: { matcher: '$ge', value: 23 },
+            end: { matcher: '$lt', value: 60 }
+          }
+        }
+      ]
+    }
+  ]);
+});
+

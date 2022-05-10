@@ -10,6 +10,8 @@ import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator'
 import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Direction } from '../../src/models/searchservice/request/Direction';
 import { SortType } from '../../src/models/searchservice/request/SortType';
+import { getClientSdk } from '../../src/utils/getClientSdk';
+import { defaultApiVersion } from '../../src/constants';
 
 describe('SearchService', () => {
   const configWithRequiredApiKey: AnswersConfig = {
@@ -80,11 +82,12 @@ describe('SearchService', () => {
         experienceKey: 'testExperienceKey',
         input: 'testQuery',
         locale: 'en',
-        v: 20190101,
+        v: defaultApiVersion,
         source: 'STANDARD'
       };
       await searchServiceWithRequiredApiKey.universalSearch(requestWithRequiredParams);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(
+        expectedUniversalUrl, expectedQueryParams, getClientSdk());
     });
 
     it('Query params are correct when only required params (without apikey) are supplied', async () => {
@@ -95,12 +98,12 @@ describe('SearchService', () => {
         experienceKey: 'testExperienceKey',
         input: 'testQuery',
         locale: 'en',
-        v: 20190101,
+        v: defaultApiVersion,
         source: 'STANDARD'
       };
       await searchServiceWithRequiredToken.universalSearch(requestWithRequiredParams);
       expect(mockHttpService.get)
-        .toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, 'testToken');
+        .toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, getClientSdk(), 'testToken');
     });
 
     it('Query params are correct when all possible params are supplied', async () => {
@@ -135,7 +138,7 @@ describe('SearchService', () => {
         session_id: '8ad0cb51-82f6-4ad9-bc62-b358115fde30',
         sessionTrackingEnabled: true,
         skipSpellCheck: true,
-        v: 20190101,
+        v: defaultApiVersion,
         version: 'PRODUCTION',
         source: 'STANDARD',
         visitorId: '123',
@@ -144,7 +147,7 @@ describe('SearchService', () => {
       };
       await searchServiceWithAllParams.universalSearch(requestWithAllParams);
       expect(mockHttpService.get)
-        .toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+        .toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams, getClientSdk());
     });
 
     it('A custom universal search service endpoint may be supplied', async () => {
@@ -160,8 +163,8 @@ describe('SearchService', () => {
         mockHttpService as HttpService,
         apiResponseValidator
       );
-      await searchService.universalSearch({query: 'test'});
-      expect(mockHttpService.get).toHaveBeenCalledWith(customUrl, expect.anything());
+      await searchService.universalSearch({ query: 'test' });
+      expect(mockHttpService.get).toHaveBeenCalledWith(customUrl, expect.anything(), getClientSdk());
     });
 
     it('An arbitrary string may be supplied as a querySource', async () => {
@@ -172,11 +175,27 @@ describe('SearchService', () => {
       const expectedQueryParams = expect.objectContaining({
         source: 'CUSTOM_SOURCE'
       });
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedUniversalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(
+        expectedUniversalUrl, expectedQueryParams, getClientSdk());
+    });
+
+    it('A custom client SDK may be supplied', async () => {
+      const additionalHttpHeaders = {
+        'Client-SDK': {
+          CUSTOM_TEST_SITE: 'test'
+        }
+      };
+      await searchServiceWithRequiredApiKey.universalSearch({
+        query: 'test',
+        additionalHttpHeaders
+      });
+      expect(mockHttpService.get).toHaveBeenLastCalledWith(
+        expectedUniversalUrl, expect.anything(), expect.objectContaining(
+          additionalHttpHeaders['Client-SDK']));
     });
   });
 
-  describe('Vertical Search', ()=> {
+  describe('Vertical Search', () => {
     const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query';
 
     it('Query params are correct when only required params (without token) are supplied', async () => {
@@ -190,12 +209,13 @@ describe('SearchService', () => {
         verticalKey: 'verticalKey',
         input: 'testQuery',
         locale: 'en',
-        v: 20190101,
+        v: defaultApiVersion,
         source: 'STANDARD',
         sortBys: '[]',
       };
       await searchServiceWithRequiredApiKey.verticalSearch(requestWithRequiredParams);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(
+        expectedVerticalUrl, expectedQueryParams, getClientSdk());
     });
 
     it('Query params are correct when only required params (without apiKey) are supplied', async () => {
@@ -208,12 +228,13 @@ describe('SearchService', () => {
         verticalKey: 'verticalKey',
         input: 'testQuery',
         locale: 'en',
-        v: 20190101,
+        v: defaultApiVersion,
         source: 'STANDARD',
         sortBys: '[]',
       };
       await searchServiceWithRequiredToken.verticalSearch(requestWithRequiredParams);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams, 'testToken');
+      expect(mockHttpService.get).toHaveBeenCalledWith(
+        expectedVerticalUrl, expectedQueryParams, getClientSdk(), 'testToken');
     });
 
     it('Query params are correct when all possible params are supplied', async () => {
@@ -258,7 +279,7 @@ describe('SearchService', () => {
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
-        context: JSON.stringify({key: 'value'}),
+        context: JSON.stringify({ key: 'value' }),
         experienceKey: 'testExperienceKey',
         facetFilters: JSON.stringify({
           c_awards:[{
@@ -266,7 +287,7 @@ describe('SearchService', () => {
           }]
         }),
         filters: JSON.stringify({
-          city:{['!$eq']: 'Arlington'}
+          city:{ ['!$eq']: 'Arlington' }
         }),
         input: 'testQuery',
         limit: 10,
@@ -287,14 +308,15 @@ describe('SearchService', () => {
           type: 'FIELD'
         }]),
         source: 'STANDARD',
-        v: 20190101,
+        v: defaultApiVersion,
         version: 'PRODUCTION',
         verticalKey: 'verticalKey',
         visitorId: '123',
         visitorIdMethod: 'YEXT_AUTH'
       };
       await searchServiceWithAllParams.verticalSearch(requestWithAllParams);
-      expect(mockHttpService.get).toHaveBeenCalledWith(expectedVerticalUrl, expectedQueryParams);
+      expect(mockHttpService.get).toHaveBeenCalledWith(
+        expectedVerticalUrl, expectedQueryParams, getClientSdk());
     });
 
     it('Passes locationRadius = 0 correctly, despite it being a falsy value', async () => {
@@ -319,6 +341,44 @@ describe('SearchService', () => {
       const actualQueryParams = mockHttpService.get.mock.calls[0][1];
       const actualLocationRadius = (actualQueryParams as { locationRadius: string }).locationRadius;
       expect(actualLocationRadius).toEqual('1.23');
+    });
+
+    it('Passes number range facets correctly', async () => {
+      const request: VerticalSearchRequest = {
+        query: 'testQuery',
+        verticalKey: 'verticalKey',
+        facets: [
+          {
+            fieldId: 'price',
+            options: [
+              {
+                matcher: Matcher.Between,
+                value: {
+                  start: { matcher: Matcher.GreaterThan, value: 0 },
+                  end: { matcher: Matcher.LessThan, value: 10 }
+                }
+              },
+              {
+                matcher: Matcher.Between,
+                value: {
+                  start: { matcher: Matcher.GreaterThanOrEqualTo, value: 30 },
+                  end: { matcher: Matcher.LessThanOrEqualTo, value: 50 }
+                }
+              },
+            ]
+          }
+        ]
+      };
+      await searchServiceWithRequiredApiKey.verticalSearch(request);
+      const actualQueryParams = mockHttpService.get.mock.calls[0][1];
+      const actualFacetFilters = (actualQueryParams as { facetFilters: string }).facetFilters;
+      const expectedFacetFilters = JSON.stringify({
+        price: [
+          { price: { $gt: 0, $lt: 10 } },
+          { price: { $ge: 30, $le: 50 } }
+        ]
+      });
+      expect(actualFacetFilters).toEqual(expectedFacetFilters);
     });
   });
 });

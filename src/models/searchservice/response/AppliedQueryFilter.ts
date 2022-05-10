@@ -1,4 +1,6 @@
 import { Filter } from '../request/Filter';
+import { AppliedQueryFilterType } from './AppliedQueryFilterType';
+import { LocationFilterDetails } from './LocationFilterDetails';
 
 /**
  * A filter that the Answers API applied to the search.
@@ -12,14 +14,18 @@ export interface AppliedQueryFilter {
    * @example
    * 'Job Category'
    */
-  displayKey: string;
+  displayKey: string,
   /**
    * The value used in the filter.
    *
    * @example
    * 'Sales'
    */
-  displayValue: string;
+  displayValue: string,
   /** The filter applied to the query results. */
-  filter: Filter;
+  filter: Filter,
+  /** {@inheritDoc AppliedQueryFilterType} */
+  type: AppliedQueryFilterType,
+  /** {@inheritDoc LocationFilterDetails} */
+  details?: LocationFilterDetails
 }

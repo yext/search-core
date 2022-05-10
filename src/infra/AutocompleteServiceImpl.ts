@@ -5,18 +5,19 @@ import { VerticalAutocompleteRequest, FilterSearchRequest,
 import { AutocompleteResponse, FilterSearchResponse } from '../models/autocompleteservice/AutocompleteResponse';
 import { defaultApiVersion, defaultEndpoints } from '../constants';
 import { AnswersConfig } from '../models/core/AnswersConfig';
-import { HttpService }from '../services/HttpService';
+import { HttpService } from '../services/HttpService';
 import { AutocompleteQueryParams } from '../models/autocompleteservice/AutocompleteQueryParams';
 import { AutocompleteService } from '../services/AutocompleteService';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
+import { getClientSdk } from '../utils/getClientSdk';
 
 /**
  * Internal interface representing the query params which are sent for a vertical
  * autocomplete request.
  */
 interface VerticalAutocompleteQueryParams extends AutocompleteQueryParams {
-  verticalKey?: string,
+  verticalKey?: string
 }
 
 /**
@@ -55,12 +56,6 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       ?? defaultEndpoints.filterSearch;
   }
 
-  /**
-   * Retrieves query suggestions for universal.
-   *
-   * @param {AutocompleteRequest} request
-   * @returns {Promise<AutocompleteResponse>}
-   */
   async universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse> {
     const queryParams: AutocompleteQueryParams = {
       input: request.input,
@@ -76,8 +71,17 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     };
 
     const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.universalEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.universalEndpoint, queryParams);
+      ? await this.httpService.get<ApiResponse>(
+        this.universalEndpoint,
+        queryParams,
+        getClientSdk(request.additionalHttpHeaders),
+        this.config.token
+      )
+      : await this.httpService.get<ApiResponse>(
+        this.universalEndpoint,
+        queryParams,
+        getClientSdk(request.additionalHttpHeaders)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -87,12 +91,6 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     return createAutocompleteResponse(response);
   }
 
-  /**
-   * Retrieves query suggestions for a vertical.
-   *
-   * @param {VerticalAutocompleteRequest} request
-   * @returns {Promise<AutocompleteResponse>}
-   */
   async verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse> {
     const queryParams: VerticalAutocompleteQueryParams = {
       input: request.input,
@@ -109,8 +107,17 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     };
 
     const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.verticalEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.verticalEndpoint, queryParams);
+      ? await this.httpService.get<ApiResponse>(
+        this.verticalEndpoint,
+        queryParams,
+        getClientSdk(request.additionalHttpHeaders),
+        this.config.token
+      )
+      : await this.httpService.get<ApiResponse>(
+        this.verticalEndpoint,
+        queryParams,
+        getClientSdk(request.additionalHttpHeaders)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -120,12 +127,6 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     return createAutocompleteResponse(response);
   }
 
-  /**
-   * Retrieves query suggestions for filter search.
-   *
-   * @param {FilterSearchRequest} request
-   * @returns {Promise<AutocompleteResponse>}
-   */
   async filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse> {
     const searchParams = {
       sectioned: request.sectioned,
@@ -147,8 +148,17 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     };
 
     const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.filterEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.filterEndpoint, queryParams);
+      ? await this.httpService.get<ApiResponse>(
+        this.filterEndpoint,
+        queryParams,
+        getClientSdk(request.additionalHttpHeaders),
+        this.config.token
+      )
+      : await this.httpService.get<ApiResponse>(
+        this.filterEndpoint,
+        queryParams,
+        getClientSdk(request.additionalHttpHeaders)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -159,7 +169,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
   }
 
   private serializeSearchParameterFields(fields: SearchParameterField[]) {
-    return fields.map(({ fieldApiName, entityType, fetchEntities}) => (
+    return fields.map(({ fieldApiName, entityType, fetchEntities }) => (
       {
         fieldId: fieldApiName,
         entityTypeId: entityType,

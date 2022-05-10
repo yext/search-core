@@ -1,6 +1,7 @@
+import { isNumberRangeValue } from '../models/searchservice/common/NumberRangeValue';
 import { CombinedFilter } from '../models/searchservice/request/CombinedFilter';
 import { Filter } from '../models/searchservice/request/Filter';
-import { StaticFilters } from '../models/searchservice/request/StaticFilters';
+import { ApiStaticFilters, ApiFilter } from '../models/searchservice/request/ApiStaticFilters';
 
 export function serializeStaticFilters(
   filter: CombinedFilter | Filter): string | undefined {
@@ -11,8 +12,8 @@ export function serializeStaticFilters(
   return JSON.stringify(shapeFilterForApi(filter));
 }
 
-function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilters {
-  const shapedFilters: StaticFilters[] = [];
+function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): ApiStaticFilters {
+  const shapedFilters: ApiStaticFilters[] = [];
   for (const filter of combinedFilter.filters) {
     if (isCombinedFilter(filter)) {
       shapedFilters.push(shapeCombinedFilterForApi(filter));
@@ -25,11 +26,20 @@ function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): StaticFilter
     : { [combinedFilter.combinator]: shapedFilters };
 }
 
-export function shapeFilterForApi(filter: Filter): StaticFilters {
-  return {
-    [filter.fieldId]: {
-      [filter.matcher]: filter.value
+export function shapeFilterForApi(filter: Filter): ApiStaticFilters {
+  let filterValues: ApiFilter = {};
+  if (isNumberRangeValue(filter.value)) {
+    if (filter.value.start) {
+      filterValues[filter.value.start.matcher] = filter.value.start.value;
     }
+    if (filter.value.end) {
+      filterValues[filter.value.end.matcher] = filter.value.end.value;
+    }
+  } else {
+    filterValues = { [filter.matcher]: filter.value };
+  }
+  return {
+    [filter.fieldId]: filterValues
   };
 }
 

@@ -5,11 +5,11 @@
  */
 export interface SpellCheck {
   /** The query that was input into the spell checker. */
-  originalQuery: string;
+  originalQuery: string,
   /** The corrected version of the originalQuery. */
-  correctedQuery: string;
+  correctedQuery: string,
   /** The type of spell check. */
-  type: SpellCheckType;
+  type: SpellCheckType
 }
 
 /**

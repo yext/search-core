@@ -1,6 +1,6 @@
 import { Endpoints } from './models/core/Endpoints';
 
-export const defaultApiVersion = 20190101;
+export const defaultApiVersion = 20220511;
 
 export const defaultEndpoints: Required<Endpoints> = {
   universalSearch: 'https://liveapi.yext.com/v2/accounts/me/answers/query',

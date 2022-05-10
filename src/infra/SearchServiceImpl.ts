@@ -16,6 +16,7 @@ import { serializeFacets } from '../serializers/serializeFacets';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
 import { LatLong } from '../models/searchservice/request/LatLong';
+import { getClientSdk } from '../utils/getClientSdk';
 
 /**
  * Represents the query params which may be sent in a universal search.
@@ -31,12 +32,12 @@ interface UniversalSearchQueryParams extends QueryParams {
   location?: string,
   locale?: string,
   skipSpellCheck?: boolean,
-  sessionTrackingEnabled?: boolean
+  sessionTrackingEnabled?: boolean,
   queryTrigger?: QueryTrigger,
-  context?: string;
+  context?: string,
   referrerPageUrl?: string,
   source?: QuerySource | string,
-  visitor?: string
+  visitor?: string,
   restrictVerticals?: string
 }
 
@@ -121,8 +122,17 @@ export class SearchServiceImpl implements SearchService {
     };
 
     const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.universalSearchEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.universalSearchEndpoint, queryParams);
+      ? await this.httpService.get<ApiResponse>(
+        this.universalSearchEndpoint,
+        queryParams,
+        getClientSdk(request.additionalHttpHeaders),
+        this.config.token
+      )
+      : await this.httpService.get<ApiResponse>(
+        this.universalSearchEndpoint,
+        queryParams,
+        getClientSdk(request.additionalHttpHeaders)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {
@@ -163,8 +173,17 @@ export class SearchServiceImpl implements SearchService {
     };
 
     const response = 'token' in this.config
-      ? await this.httpService.get<ApiResponse>(this.verticalSearchEndpoint, queryParams, this.config.token)
-      : await this.httpService.get<ApiResponse>(this.verticalSearchEndpoint, queryParams);
+      ? await this.httpService.get<ApiResponse>(
+        this.verticalSearchEndpoint,
+        queryParams,
+        getClientSdk(request.additionalHttpHeaders),
+        this.config.token
+      )
+      : await this.httpService.get<ApiResponse>(
+        this.verticalSearchEndpoint,
+        queryParams,
+        getClientSdk(request.additionalHttpHeaders)
+      );
 
     const validationResult = this.apiResponseValidator.validate(response);
     if (validationResult instanceof Error) {

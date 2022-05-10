@@ -1,13 +1,15 @@
+import { AnswersRequest } from '../core/AnswersRequest';
+
 /**
  * Options for a universal autocomplete request.
  *
  * @public
  */
-export interface UniversalAutocompleteRequest {
+export interface UniversalAutocompleteRequest extends AnswersRequest {
   /** The input string for autocomplete. */
   input: string,
   /** Enables session tracking. */
-  sessionTrackingEnabled?: boolean,
+  sessionTrackingEnabled?: boolean
 }
 
 /**
@@ -15,13 +17,13 @@ export interface UniversalAutocompleteRequest {
  *
  * @public
  */
-export interface VerticalAutocompleteRequest {
+export interface VerticalAutocompleteRequest extends AnswersRequest {
   /** {@inheritDoc UniversalAutocompleteRequest.input} */
   input: string,
   /** {@inheritDoc UniversalAutocompleteRequest.sessionTrackingEnabled} */
   sessionTrackingEnabled?: boolean,
   /** The key for the vertical to get autocomplete suggestions from. */
-  verticalKey: string,
+  verticalKey: string
 }
 
 /**
@@ -29,7 +31,7 @@ export interface VerticalAutocompleteRequest {
  *
  * @public
  */
-export interface FilterSearchRequest {
+export interface FilterSearchRequest extends AnswersRequest {
   /** {@inheritDoc UniversalAutocompleteRequest.input} */
   input: string,
   /** {@inheritDoc UniversalAutocompleteRequest.sessionTrackingEnabled} */
@@ -39,7 +41,7 @@ export interface FilterSearchRequest {
   /** Determines whether or not the results of the {@link FilterSearchResponse} are separated by field. */
   sectioned: boolean,
   /** An array of {@link SearchParameterField} */
-  fields: SearchParameterField[];
+  fields: SearchParameterField[]
 }
 
 /**

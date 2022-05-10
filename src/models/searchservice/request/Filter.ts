@@ -1,4 +1,5 @@
 import { Matcher } from '../common/Matcher';
+import { NumberRangeValue } from '../common/NumberRangeValue';
 
 /**
  * Represents a filter which compares values to a single field.
@@ -12,16 +13,16 @@ export interface Filter {
    * @example
    * 'c_jobCategory'
    */
-  fieldId: string;
+  fieldId: string,
   /** {@inheritDoc Matcher} */
-  matcher: Matcher;
+  matcher: Matcher,
   /**
    * The value to compare.
    *
    * @example
    * 'Sales'
    */
-  value: string | number | boolean | NearFilterValue;
+  value: string | number | boolean | NearFilterValue | NumberRangeValue
 }
 
 /**

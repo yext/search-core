@@ -2,12 +2,22 @@ import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterSearch
   from '@yext/answers-core';
 
 export const univeralAutocompleteRequest: UniversalAutocompleteRequest = {
-  input: 'virginiaa'
+  input: 'virginiaa',
+  additionalHttpHeaders: {
+    'Client-SDK': {
+      CORE_TEST_SITE: 'test'
+    }
+  }
 };
 
 export const verticalAutocompleteRequest: VerticalAutocompleteRequest = {
   input: 'virginiaa',
-  verticalKey: 'KM'
+  verticalKey: 'KM',
+  additionalHttpHeaders: {
+    'Client-SDK': {
+      CORE_TEST_SITE: 'test'
+    }
+  }
 };
 
 export const filterSearchRequest: FilterSearchRequest = {
@@ -20,5 +30,10 @@ export const filterSearchRequest: FilterSearchRequest = {
       entityType: 'location',
       fetchEntities: true
     }
-  ]
+  ],
+  additionalHttpHeaders: {
+    'Client-SDK': {
+      CORE_TEST_SITE: 'test'
+    }
+  }
 };

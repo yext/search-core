@@ -15,6 +15,7 @@
 
 |  Enumeration | Description |
 |  --- | --- |
+|  [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md) | Represents the type of [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) applied to a search. |
 |  [DirectAnswerType](./answers-core.directanswertype.md) | Represents the type of direct answer. |
 |  [Direction](./answers-core.direction.md) | The direction of a sort. |
 |  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
@@ -37,12 +38,16 @@
 
 |  Interface | Description |
 |  --- | --- |
+|  [AdditionalHttpHeaders](./answers-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
 |  [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires apiKey. |
 |  [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires token. |
+|  [AnswersRequest](./answers-core.answersrequest.md) | Options for an Answers API request. |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutocompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |
+|  [AutocompleteService](./answers-core.autocompleteservice.md) | A service for autocomplete requests. |
 |  [BaseAnswersConfig](./answers-core.baseanswersconfig.md) | The base configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
+|  [ClientSDKHeaderValues](./answers-core.clientsdkheadervalues.md) | Additional agents and their versions used to create the Answers experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
 |  [DirectAnswer](./answers-core.directanswer.md) | A direct answer to a search. |
 |  [DisplayableFacet](./answers-core.displayablefacet.md) | A [Facet](./answers-core.facet.md) which contains extra fields meant to be displayed to the end user. |
@@ -58,11 +63,18 @@
 |  [HighlightedValue](./answers-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Answers API. |
 |  [LatLong](./answers-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./answers-core.locationbias.md) | Information about the user's location. |
+|  [LocationBoundingBox](./answers-core.locationboundingbox.md) | Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md)<!-- -->. (e.g. boundary for a locality or region specific location filter) |
+|  [LocationFilterDetails](./answers-core.locationfilterdetails.md) | Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md)<!-- -->. |
+|  [LowerNumberRangeLimit](./answers-core.lowernumberrangelimit.md) | The start limit of [NumberRangeValue](./answers-core.numberrangevalue.md)<!-- -->. |
 |  [NearFilterValue](./answers-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./answers-core.matcher.md)<!-- -->. |
+|  [NumberRangeValue](./answers-core.numberrangevalue.md) | A filter value for a filter with a $between [Matcher](./answers-core.matcher.md)<!-- -->. |
+|  [QueryRulesActionsData](./answers-core.queryrulesactionsdata.md) | Data returned from the Answers query rules system. |
 |  [QuestionSubmissionRequest](./answers-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
 |  [QuestionSubmissionResponse](./answers-core.questionsubmissionresponse.md) | A representation of a question submission response. |
+|  [QuestionSubmissionService](./answers-core.questionsubmissionservice.md) | Submits a custom question to the Answers API. |
 |  [Result](./answers-core.result.md) | An individual search result. |
 |  [SearchParameterField](./answers-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
+|  [SearchService](./answers-core.searchservice.md) | A service which performs Yext Answers searches |
 |  [Snippet](./answers-core.snippet.md) | The section of text where a [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) was found. |
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./answers-core.spellcheck.md) | A spellcheck response from a search query. |
@@ -70,6 +82,7 @@
 |  [UniversalLimit](./answers-core.universallimit.md) | The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
 |  [UniversalSearchRequest](./answers-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
 |  [UniversalSearchResponse](./answers-core.universalsearchresponse.md) | A representation of a response from a universal search. |
+|  [UpperNumberRangeLimit](./answers-core.uppernumberrangelimit.md) | The end limit of [NumberRangeValue](./answers-core.numberrangevalue.md)<!-- -->. |
 |  [VerticalAutocompleteRequest](./answers-core.verticalautocompleterequest.md) | Options for a vertial autocomplete request. |
 |  [VerticalResults](./answers-core.verticalresults.md) | Represents results from a search vertical. |
 |  [VerticalSearchRequest](./answers-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |

@@ -52,5 +52,12 @@ export enum Matcher {
    * @remarks
    * Only compatible with the builtin.location field.
    */
-  Near = '$near'
+  Near = '$near',
+  /**
+   * A limitation of the dataset to a range of values.
+   *
+   * @remarks
+   * Compatible with integer and float.
+   */
+  Between = '$between'
 }

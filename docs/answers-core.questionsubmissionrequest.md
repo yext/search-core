@@ -9,8 +9,9 @@ Options for a QuestionSubmission request.
 <b>Signature:</b>
 
 ```typescript
-export interface QuestionSubmissionRequest 
+export interface QuestionSubmissionRequest extends AnswersRequest 
 ```
+<b>Extends:</b> [AnswersRequest](./answers-core.answersrequest.md)
 
 ## Properties
 

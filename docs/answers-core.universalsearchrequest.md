@@ -9,8 +9,9 @@ Options which can be specified for a universal search.
 <b>Signature:</b>
 
 ```typescript
-export interface UniversalSearchRequest 
+export interface UniversalSearchRequest extends AnswersRequest 
 ```
+<b>Extends:</b> [AnswersRequest](./answers-core.answersrequest.md)
 
 ## Properties
 

@@ -14,18 +14,18 @@ export class ResultsFactory {
       const resultIndex = index + 1;
 
       switch (source) {
-      case Source.KnowledgeManager:
-        return this.fromKnowledgeManager(result, resultIndex);
-      case Source.Google:
-        return this.fromGoogleCustomSearchEngine(result, resultIndex);
-      case Source.Bing:
-        return this.fromBingCustomSearchEngine(result, resultIndex);
-      case Source.Zendesk:
-        return this.fromZendeskSearchEngine(result, resultIndex);
-      case Source.Algolia:
-        return this.fromAlgoliaSearchEngine(result, resultIndex);
-      default:
-        return this.fromGeneric(result, resultIndex);
+        case Source.KnowledgeManager:
+          return this.fromKnowledgeManager(result, resultIndex);
+        case Source.Google:
+          return this.fromGoogleCustomSearchEngine(result, resultIndex);
+        case Source.Bing:
+          return this.fromBingCustomSearchEngine(result, resultIndex);
+        case Source.Zendesk:
+          return this.fromZendeskSearchEngine(result, resultIndex);
+        case Source.Algolia:
+          return this.fromAlgoliaSearchEngine(result, resultIndex);
+        default:
+          return this.fromCustomSource(result, resultIndex);
       }
     });
   }
@@ -94,11 +94,11 @@ export class ResultsFactory {
     };
   }
 
-  private static fromGeneric(result: any, index: number): Result {
+  private static fromCustomSource(result: any, index: number): Result {
     const rawData = result.data ?? result;
     return {
       rawData: rawData,
-      source: Source.Generic,
+      source: Source.Custom,
       index: index,
       name: rawData.name,
       description: rawData.description, // Do we want to truncate this like in the SDK?

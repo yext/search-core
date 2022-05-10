@@ -9,5 +9,5 @@ The value to compare.
 <b>Signature:</b>
 
 ```typescript
-value: string | number | boolean;
+value: string | number | boolean | NumberRangeValue;
 ```

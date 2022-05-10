@@ -8,8 +8,13 @@ export {
   AnswersConfigWithApiKey,
   AnswersConfigWithToken
 } from './core/AnswersConfig';
+export { AnswersRequest } from './core/AnswersRequest';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';
+export {
+  AdditionalHttpHeaders,
+  ClientSDKHeaderValues
+} from './core/AdditionalHttpHeaders';
 
 // Autocomplete service
 export * from './autocompleteservice/AutocompleteRequest';
@@ -36,6 +41,8 @@ export { Direction } from './searchservice/request/Direction';
 
 // Search service response models
 export { AppliedQueryFilter } from './searchservice/response/AppliedQueryFilter';
+export { AppliedQueryFilterType } from './searchservice/response/AppliedQueryFilterType';
+export { LocationFilterDetails, LocationBoundingBox } from './searchservice/response/LocationFilterDetails';
 export { DirectAnswer } from './searchservice/response/DirectAnswer';
 export { FieldValueDirectAnswer } from './searchservice/response/FieldValueDirectAnswer';
 export { FeaturedSnippetDirectAnswer } from './searchservice/response/FeaturedSnippetDirectAnswer';
@@ -44,6 +51,7 @@ export { DisplayableFacet, DisplayableFacetOption } from './searchservice/respon
 export { HighlightedFields } from './searchservice/response/HighlightedFields';
 export { HighlightedValue } from './searchservice/response/HighlightedValue';
 export { LocationBias, LocationBiasMethod } from './searchservice/response/LocationBias';
+export { QueryRulesActionsData } from './searchservice/response/QueryRulesActionsData';
 export { Result } from './searchservice/response/Result';
 export { SearchIntent } from './searchservice/response/SearchIntent';
 export { Source } from './searchservice/response/Source';
@@ -55,3 +63,8 @@ export { Snippet } from './searchservice/response/Snippet';
 
 // Search service common models
 export { Matcher } from './searchservice/common/Matcher';
+export {
+  NumberRangeValue,
+  LowerNumberRangeLimit,
+  UpperNumberRangeLimit
+} from './searchservice/common/NumberRangeValue';

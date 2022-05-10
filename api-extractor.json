@@ -45,7 +45,7 @@
    *
    * SUPPORTED TOKENS: <projectFolder>, <packageName>, <unscopedPackageName>
    */
-  "mainEntryPointFilePath": "<projectFolder>/lib/commonjs/index.d.ts",
+  "mainEntryPointFilePath": "<projectFolder>/dist/commonjs/src/index.d.ts",
 
   /**
    * A list of NPM package names whose exports should be treated as part of this package.
@@ -299,7 +299,7 @@
          *
          * DEFAULT VALUE: "warning"
          */
-        "logLevel": "warning"
+        "logLevel": "error"
 
         /**
          * When addToApiReportFile is true:  If API Extractor is configured to write an API report file (.api.md),
@@ -328,7 +328,7 @@
      */
     "extractorMessageReporting": {
       "default": {
-        "logLevel": "warning"
+        "logLevel": "error"
         // "addToApiReportFile": false
       }
 
@@ -349,7 +349,7 @@
      */
     "tsdocMessageReporting": {
       "default": {
-        "logLevel": "warning"
+        "logLevel": "error"
         // "addToApiReportFile": false
       }
 
