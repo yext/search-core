@@ -14,6 +14,6 @@ export enum Source {
   Zendesk = 'ZENDESK',
   /** The result is from Algolia. */
   Algolia = 'ALGOLIA',
-  /** The result was from a generic source. */
-  Generic = 'GENERIC'
+  /** The result was from a custom source. */
+  Custom = 'CUSTOM_SEARCHER'
 }

@@ -31,7 +31,7 @@ export interface UpperNumberRangeLimit {
  */
 export interface NumberRangeValue {
   /** Start limit of the number range value. */
-  start?: LowerNumberRangeLimit
+  start?: LowerNumberRangeLimit,
   /** End limit of the number range value. */
   end?: UpperNumberRangeLimit
 }

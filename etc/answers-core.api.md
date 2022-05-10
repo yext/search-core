@@ -51,9 +51,18 @@ export interface AnswersRequest {
 
 // @public
 export interface AppliedQueryFilter {
+    details?: LocationFilterDetails;
     displayKey: string;
     displayValue: string;
     filter: Filter;
+    type: AppliedQueryFilterType;
+}
+
+// @public
+export enum AppliedQueryFilterType {
+    FieldValue = "FIELD_VALUE",
+    Intent = "INTENT",
+    Place = "PLACE"
 }
 
 // @public
@@ -270,6 +279,23 @@ export enum LocationBiasMethod {
 }
 
 // @public
+export interface LocationBoundingBox {
+    maxLatitude: number;
+    maxLongitude: number;
+    minLatitude: number;
+    minLongitude: number;
+}
+
+// @public
+export interface LocationFilterDetails {
+    boundingBox?: LocationBoundingBox;
+    featureTypes: string[];
+    latitude: number;
+    longitude: number;
+    placeName: string;
+}
+
+// @public
 export interface LowerNumberRangeLimit {
     matcher: Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo;
     value: number;
@@ -407,7 +433,7 @@ export enum SortType {
 export enum Source {
     Algolia = "ALGOLIA",
     Bing = "BING_CSE",
-    Generic = "GENERIC",
+    Custom = "CUSTOM_SEARCHER",
     Google = "GOOGLE_CSE",
     KnowledgeManager = "KNOWLEDGE_MANAGER",
     Zendesk = "ZENDESK"
@@ -531,7 +557,6 @@ export interface Visitor {
     id: string;
     idMethod?: string;
 }
-
 
 // (No @packageDocumentation comment for this package)
 

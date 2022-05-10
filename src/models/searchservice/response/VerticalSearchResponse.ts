@@ -14,15 +14,15 @@ import { QueryRulesActionsData } from './QueryRulesActionsData';
  */
 export interface VerticalSearchResponse {
   /** {@inheritDoc VerticalResults} */
-  verticalResults: VerticalResults;
+  verticalResults: VerticalResults,
   /** The ID of the query. */
-  queryId: string;
+  queryId: string,
   /** {@inheritDoc DirectAnswer} */
   directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer,
   /** An array of {@link SearchIntent}s. */
-  searchIntents?: SearchIntent[];
+  searchIntents?: SearchIntent[],
   /** An array of {@link Facet}s associated with the search results. */
-  facets?: DisplayableFacet[];
+  facets?: DisplayableFacet[],
   /** {@inheritDoc SpellCheck} */
   spellCheck?: SpellCheck,
   /** {@inheritDoc LocationBias} */

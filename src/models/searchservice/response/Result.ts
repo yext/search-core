@@ -8,21 +8,21 @@ import { Source } from './Source';
  */
 export interface Result {
   /** Raw entity profile data in the shape of key-value pairs. */
-  rawData: Record<string, unknown>;
+  rawData: Record<string, unknown>,
   /** {@inheritDoc Source}*/
-  source: Source;
+  source: Source,
   /** The index of the result among the other results in the search. */
-  index?: number;
+  index?: number,
   /** The name of the result. */
-  name?: string;
+  name?: string,
   /** A description of the result. */
-  description?: string;
+  description?: string,
   /** A hyperlink associated with the result. */
-  link?: string;
+  link?: string,
   /** The result ID which depends on the Result Source. */
-  id?: string;
+  id?: string,
   /** The distance from the user to the result in meters. */
-  distance?: number;
+  distance?: number,
   /**
    * The distance from a {@link AppliedQueryFilter} location to the result in meters.
    *
@@ -35,9 +35,9 @@ export interface Result {
    * `AppliedQueryFilter` for 'New York', the distanceFromFilter value will be from
    * the search result to 'New York'.
    */
-  distanceFromFilter?: number;
+  distanceFromFilter?: number,
   /** The {@link HighlightedFields | highlighted fields} emphasized by the api. */
   highlightedFields?: HighlightedFields,
   /** The entity type of the result */
-  entityType?: string;
+  entityType?: string
 }

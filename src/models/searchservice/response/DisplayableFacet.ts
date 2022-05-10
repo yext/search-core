@@ -9,11 +9,11 @@ import { NumberRangeValue } from '../common/NumberRangeValue';
  */
 export interface DisplayableFacet extends Facet {
   /** {@inheritDoc Facet.fieldId} */
-  fieldId: string;
+  fieldId: string,
   /** An array of {@link DisplayableFacetOption} */
-  options: DisplayableFacetOption[];
+  options: DisplayableFacetOption[],
   /** The name of the facet which is meant to be displayed to the user. */
-  displayName: string;
+  displayName: string
 }
 
 /**
@@ -23,13 +23,13 @@ export interface DisplayableFacet extends Facet {
  */
 export interface DisplayableFacetOption extends FacetOption {
   /** {@inheritDoc Matcher} */
-  matcher: Matcher;
+  matcher: Matcher,
   /** {@inheritDoc FacetOption.value} */
-  value: string | number | boolean | NumberRangeValue;
+  value: string | number | boolean | NumberRangeValue,
   /** The name of the facet option which is meant  to be displayed to the end user. */
-  displayName: string;
+  displayName: string,
   /** The number of results associated with this facet option. */
-  count: number;
+  count: number,
   /** Whether or not the filter is selected in the search results. */
-  selected: boolean;
+  selected: boolean
 }

@@ -13,16 +13,16 @@ export interface Filter {
    * @example
    * 'c_jobCategory'
    */
-  fieldId: string;
+  fieldId: string,
   /** {@inheritDoc Matcher} */
-  matcher: Matcher;
+  matcher: Matcher,
   /**
    * The value to compare.
    *
    * @example
    * 'Sales'
    */
-  value: string | number | boolean | NearFilterValue | NumberRangeValue;
+  value: string | number | boolean | NearFilterValue | NumberRangeValue
 }
 
 /**

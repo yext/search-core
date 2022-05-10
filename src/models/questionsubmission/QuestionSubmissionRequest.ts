@@ -7,15 +7,15 @@ import { AnswersRequest } from '../core/AnswersRequest';
  */
 export interface QuestionSubmissionRequest extends AnswersRequest {
   /** The email of the user that is submitting the question. */
-  email: string
+  email: string,
   /** The ID of the entity to associate with the question. */
-  entityId: string
+  entityId: string,
   /** The name of the user. */
-  name: string
+  name: string,
   /** The question. */
-  questionText: string
+  questionText: string,
   /** Additional information about the question. */
-  questionDescription?: string
+  questionDescription?: string,
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean
 }

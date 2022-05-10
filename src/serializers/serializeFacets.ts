@@ -13,6 +13,6 @@ export function serializeFacets(filters: Facet[]): string {
 
 function shapeFacetOptionArrayForApi(options: FacetOption[], fieldId: string): ApiStaticFilters[] {
   return options.map((option) => {
-    return shapeFilterForApi({...option, fieldId: fieldId});
+    return shapeFilterForApi({ ...option, fieldId: fieldId });
   });
 }

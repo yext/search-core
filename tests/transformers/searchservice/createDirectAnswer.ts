@@ -8,7 +8,7 @@ it('can create a FeaturedSnippetDirectAnswer', () => {
       value: 'Honolulu. Hawaii',
       fieldType: 'multi_line_text',
       snippet: {
-        matchedSubstrings: [{offset: 31, length: 16}],
+        matchedSubstrings: [{ offset: 31, length: 16 }],
         value: '... senator from 1997 to 2004. Obama was born in Honolulu. Hawaii. After graduating ...'
       }
     },
@@ -25,7 +25,7 @@ it('can create a FeaturedSnippetDirectAnswer', () => {
     verticalKey: 'wiki_bios',
     fieldType: 'multi_line_text',
     snippet: {
-      matchedSubstrings: [{offset: 31, length: 16}],
+      matchedSubstrings: [{ offset: 31, length: 16 }],
       value: '... senator from 1997 to 2004. Obama was born in Honolulu. Hawaii. After graduating ...'
     }
   };

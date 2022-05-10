@@ -6,7 +6,7 @@ import { NearFilterValue } from './Filter';
  * @internal
  */
 export interface ApiStaticFilters {
-  [combinator: string]: (ApiStaticFilters | ApiFilter)[] | ApiFilter | ApiStaticFilters;
+  [combinator: string]: (ApiStaticFilters | ApiFilter)[] | ApiFilter | ApiStaticFilters
 }
 
 /**
