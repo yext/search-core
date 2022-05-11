@@ -58,6 +58,7 @@ export { UniversalSearchResponse } from './searchservice/response/UniversalSearc
 export { VerticalResults } from './searchservice/response/VerticalResults';
 export { VerticalSearchResponse } from './searchservice/response/VerticalSearchResponse';
 export { Snippet } from './searchservice/response/Snippet';
+export { ErrorType } from './searchservice/response/ErrorType';
 export { FailedVertical } from './searchservice/response/FailedVertical';
 
 // Search service common models

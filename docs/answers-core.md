@@ -17,6 +17,7 @@
 |  --- | --- |
 |  [DirectAnswerType](./answers-core.directanswertype.md) | Represents the type of direct answer. |
 |  [Direction](./answers-core.direction.md) | The direction of a sort. |
+|  [ErrorType](./answers-core.errortype.md) | Identifier for the type of error causing the failure. |
 |  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location. |
 |  [Matcher](./answers-core.matcher.md) | A Matcher is a filtering operation. |

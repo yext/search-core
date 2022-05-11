@@ -168,6 +168,14 @@ export interface Endpoints {
 }
 
 // @public
+export enum ErrorType {
+    BackendError = "BACKEND_ERROR",
+    InvalidConfig = "INVALID_CONFIG",
+    InvalidQuery = "INVALID_QUERY",
+    Timeout = "TIMEOUT"
+}
+
+// @public
 export interface Facet {
     fieldId: string;
     options: FacetOption[];
@@ -185,7 +193,7 @@ export interface FailedVertical {
         responseCode: number;
         description: string;
     };
-    errorType: string;
+    errorType: ErrorType;
     queryDurationMillis: number;
     verticalKey: string;
 }

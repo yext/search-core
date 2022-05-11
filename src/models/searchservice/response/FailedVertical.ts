@@ -1,3 +1,5 @@
+import { ErrorType } from './ErrorType';
+
 /**
  * Error information from when a vertical fails to return results.
  *
@@ -6,11 +8,8 @@
 export interface FailedVertical {
   /** The vertical key associated with the failed vertical. */
   verticalKey: string,
-  /**
-   * The type of error causing the failure. Possible options are
-   * "TIMEOUT", "BACKEND_ERROR", "INVALID_CONFIG", and "INVALID_QUERY".
-   */
-  errorType: string,
+  /** {@inheritDoc ErrorType} */
+  errorType: ErrorType,
   /** The duration of the query in milliseconds. */
   queryDurationMillis: number,
   /** Detailed information about the error. */

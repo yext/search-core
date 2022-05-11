@@ -4,10 +4,10 @@
 
 ## FailedVertical.errorType property
 
-The type of error causing the failure. Possible options are "TIMEOUT", "BACKEND\_ERROR", "INVALID\_CONFIG", and "INVALID\_QUERY".
+Identifier for the type of error causing the failure.
 
 <b>Signature:</b>
 
 ```typescript
-errorType: string;
+errorType: ErrorType;
 ```
