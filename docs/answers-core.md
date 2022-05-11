@@ -54,6 +54,7 @@
 |  [Endpoints](./answers-core.endpoints.md) | Overrides for the URLs which are used when making requests to the Answers API. |
 |  [Facet](./answers-core.facet.md) | Represents dynamic filter options for the Answers API. |
 |  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet. |
+|  [FailedVertical](./answers-core.failedvertical.md) | Error information from when a vertical fails to return results. |
 |  [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) | A direct answer which was found within a document. |
 |  [FieldValueDirectAnswer](./answers-core.fieldvaluedirectanswer.md) | A direct answer where the answer came from a field from the knowledge graph. |
 |  [Filter](./answers-core.filter.md) | Represents a filter which compares values to a single field. |

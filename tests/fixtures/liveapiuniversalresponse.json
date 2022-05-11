@@ -164,7 +164,26 @@
         "source": "KNOWLEDGE_MANAGER"
       }
     ],
-    "failedVerticals": [],
+    "failedVerticals": [
+      {
+        "verticalConfigId": "links",
+        "errorType": "BACKEND_ERROR",
+        "queryDurationMillis": 17,
+        "details": {
+          "responseCode": 400,
+          "description": "test"
+        }
+      },
+      {
+        "verticalConfigId": "products",
+        "errorType": "INVALID_CONFIG",
+        "queryDurationMillis": 55,
+        "details": {
+          "responseCode": 0,
+          "description": "error"
+        }
+      }
+    ],
     "queryId": "28aa65cc-5aff-4a4e-afcf-ad04a70738fc",
     "directAnswer": {
       "type": "FIELD_VALUE",

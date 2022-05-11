@@ -180,6 +180,17 @@ export interface FacetOption {
 }
 
 // @public
+export interface FailedVertical {
+    details: {
+        responseCode: number;
+        description: string;
+    };
+    errorType: string;
+    queryDurationMillis: number;
+    verticalKey: string;
+}
+
+// @public
 export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
     fieldType: string;
     relatedResult: Result;
@@ -457,6 +468,7 @@ export interface UniversalSearchRequest extends AnswersRequest {
 // @public
 export interface UniversalSearchResponse {
     directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer;
+    failedVerticals?: FailedVertical[];
     locationBias?: LocationBias;
     queryId?: string;
     queryRulesActionsData?: QueryRulesActionsData[];
@@ -531,7 +543,6 @@ export interface Visitor {
     id: string;
     idMethod?: string;
 }
-
 
 // (No @packageDocumentation comment for this package)
 
