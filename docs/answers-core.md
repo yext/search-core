@@ -18,6 +18,7 @@
 |  [AppliedQueryFilterType](./answers-core.appliedqueryfiltertype.md) | Represents the type of [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) applied to a search. |
 |  [DirectAnswerType](./answers-core.directanswertype.md) | Represents the type of direct answer. |
 |  [Direction](./answers-core.direction.md) | The direction of a sort. |
+|  [ErrorType](./answers-core.errortype.md) | Identifier for the type of error causing the failure. |
 |  [FilterCombinator](./answers-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./answers-core.combinedfilter.md) should be combined. |
 |  [LocationBiasMethod](./answers-core.locationbiasmethod.md) | The method used to determine the location. |
 |  [Matcher](./answers-core.matcher.md) | A Matcher is a filtering operation. |
@@ -55,6 +56,7 @@
 |  [Endpoints](./answers-core.endpoints.md) | Overrides for the URLs which are used when making requests to the Answers API. |
 |  [Facet](./answers-core.facet.md) | Represents dynamic filter options for the Answers API. |
 |  [FacetOption](./answers-core.facetoption.md) | A filter associated with the facet. |
+|  [FailedVertical](./answers-core.failedvertical.md) | Error information from when a vertical fails to return results. |
 |  [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) | A direct answer which was found within a document. |
 |  [FieldValueDirectAnswer](./answers-core.fieldvaluedirectanswer.md) | A direct answer where the answer came from a field from the knowledge graph. |
 |  [Filter](./answers-core.filter.md) | Represents a filter which compares values to a single field. |

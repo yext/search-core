@@ -177,6 +177,14 @@ export interface Endpoints {
 }
 
 // @public
+export enum ErrorType {
+    BackendError = "BACKEND_ERROR",
+    InvalidConfig = "INVALID_CONFIG",
+    InvalidQuery = "INVALID_QUERY",
+    Timeout = "TIMEOUT"
+}
+
+// @public
 export interface Facet {
     fieldId: string;
     options: FacetOption[];
@@ -186,6 +194,17 @@ export interface Facet {
 export interface FacetOption {
     matcher: Matcher;
     value: string | number | boolean | NumberRangeValue;
+}
+
+// @public
+export interface FailedVertical {
+    details: {
+        responseCode: number;
+        description: string;
+    };
+    errorType: ErrorType;
+    queryDurationMillis: number;
+    verticalKey: string;
 }
 
 // @public
@@ -483,6 +502,7 @@ export interface UniversalSearchRequest extends AnswersRequest {
 // @public
 export interface UniversalSearchResponse {
     directAnswer?: FeaturedSnippetDirectAnswer | FieldValueDirectAnswer;
+    failedVerticals?: FailedVertical[];
     locationBias?: LocationBias;
     queryId?: string;
     queryRulesActionsData?: QueryRulesActionsData[];

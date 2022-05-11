@@ -7,3 +7,15 @@ it('createUniversalSearchResponse', () => {
 
   expect(actualCoreResponse).toMatchObject(coreResponse);
 });
+
+it('works without failedVerticals', () => {
+  const responseWithoutFailedVerticals = {
+    ...liveApiResponse,
+    response: {
+      failedVerticals: []
+    }
+  };
+  const actualCoreResponse = createUniversalSearchResponse(responseWithoutFailedVerticals);
+
+  expect(actualCoreResponse.failedVerticals).toEqual([]);
+});

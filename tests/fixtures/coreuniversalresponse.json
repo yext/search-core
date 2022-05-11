@@ -226,5 +226,25 @@
         "type": "TIMEOUT"
       }]
     }
+  ],
+  "failedVerticals": [
+    {
+      "verticalKey": "links",
+      "errorType": "BACKEND_ERROR",
+      "queryDurationMillis": 17,
+      "details": {
+        "responseCode": 400,
+        "description": "test"
+      }
+    },
+    {
+      "verticalKey": "products",
+      "errorType": "INVALID_CONFIG",
+      "queryDurationMillis": 55,
+      "details": {
+        "responseCode": 0,
+        "description": "error"
+      }
+    }
   ]
 }
