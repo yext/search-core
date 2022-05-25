@@ -1,15 +1,14 @@
-import { provideCore, AnswersConfig, AnswersCore, SandboxEndpoints } from '@yext/answers-core';
+import { provideCore, AnswersConfig, AnswersCore } from '@yext/answers-core';
 import verticalRequest from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
 import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchRequest } from './requests/autocompleteRequests';
 
 const coreConfig: AnswersConfig = {
-  apiKey: 'f3cb6746165308853973560db7b61949',
-  experienceKey: 'rose_test_sandbox',
+  apiKey: '2d8c550071a64ea23e263118a2b0680b',
+  experienceKey: 'slanswers',
   locale: 'en',
   experienceVersion: 'PRODUCTION',
-  endpoints: SandboxEndpoints
 };
 
 const element = document.createElement('pre');
