@@ -4,7 +4,7 @@
 
 ## SandboxEndpoints variable
 
-The endpoints to use for sandbox experiences
+The endpoints to use for sandbox experiences.
 
 <b>Signature:</b>
 

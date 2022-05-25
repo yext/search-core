@@ -95,7 +95,7 @@
 
 |  Variable | Description |
 |  --- | --- |
-|  [SandboxEndpoints](./answers-core.sandboxendpoints.md) | The endpoints to use for sandbox experiences |
+|  [SandboxEndpoints](./answers-core.sandboxendpoints.md) | The endpoints to use for sandbox experiences. |
 
 ## Type Aliases
 
