@@ -13,7 +13,7 @@ export const defaultEndpoints: Required<Endpoints> = {
 } as const;
 
 /**
- * The endpoints to use for sandbox experiences
+ * The endpoints to use for sandbox experiences.
  *
  * @public
  */
