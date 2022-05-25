@@ -11,7 +11,7 @@ import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Direction } from '../../src/models/searchservice/request/Direction';
 import { SortType } from '../../src/models/searchservice/request/SortType';
 import { getClientSdk } from '../../src/utils/getClientSdk';
-import { defaultApiVersion } from '../../src/constants';
+import { defaultApiVersion, SandboxEndpoints } from '../../src/constants';
 
 describe('SearchService', () => {
   const configWithRequiredApiKey: AnswersConfig = {
@@ -430,5 +430,49 @@ describe('additionalQueryParams are passed through', () => {
     expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
       jsLibVersion: 'LIB_VERSION'
     }));
+  });
+});
+
+describe('sandbox endpoints work as expected', () => {
+  const coreConfig: AnswersConfig = {
+    apiKey: 'testApiKey',
+    experienceKey: 'testExperienceKey',
+    locale: 'en',
+    endpoints: SandboxEndpoints
+  };
+
+  let mockHttpService, apiResponseValidator, searchService;
+  beforeEach(() => {
+    mockHttpService = new HttpServiceMock();
+    mockHttpService.get.mockResolvedValue({
+      response: {},
+      meta: {},
+    });
+    apiResponseValidator = new ApiResponseValidator();
+    searchService = new SearchServiceImpl(
+      coreConfig,
+      mockHttpService as HttpService,
+      apiResponseValidator
+    );
+  });
+
+  it('universalSearch', async () => {
+    const request: UniversalSearchRequest = {
+      query: 'testQuery'
+    };
+    await searchService.universalSearch(request);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][0]).toEqual(SandboxEndpoints.universalSearch);
+  });
+
+  it('verticalSearch', async () => {
+    const request: VerticalSearchRequest = {
+      query: 'testQuery',
+      verticalKey: 'verticalKey'
+    };
+
+    await searchService.verticalSearch(request);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][0]).toEqual(SandboxEndpoints.verticalSearch);
   });
 });

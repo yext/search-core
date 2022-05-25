@@ -16,6 +16,7 @@ import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator'
 import { ApiResponse } from '../../src/models/answersapi/ApiResponse';
 import { AnswersError } from '../../src/models/answersapi/AnswersError';
 import { getClientSdk } from '../../src/utils/getClientSdk';
+import { SandboxEndpoints } from '../../src/constants';
 
 describe('AutocompleteService', () => {
   const config: AnswersConfig = {
@@ -304,5 +305,67 @@ describe('additionalQueryParams are passed through', () => {
     expect(mockHttpService.get.mock.calls[0][1]).toEqual(expect.objectContaining({
       jsLibVersion: 'LIB_VERSION'
     }));
+  });
+});
+
+
+describe('sandbox endpoints work as expected', () => {
+  const config: AnswersConfig = {
+    apiKey: 'testApiKey',
+    experienceKey: 'testExperienceKey',
+    locale: 'en',
+    endpoints: SandboxEndpoints
+  };
+  let mockHttpService, apiResponseValidator, autocompleteService;
+  beforeEach(() => {
+    mockHttpService = new HttpServiceMock();
+    mockHttpService.get.mockResolvedValue(mockAutocompleteResponse);
+    apiResponseValidator = new ApiResponseValidator();
+    autocompleteService = new AutocompleteServiceImpl(
+      config,
+      mockHttpService as HttpService,
+      apiResponseValidator
+    );
+  });
+
+  it('Universal Autocomplete', async () => {
+    const request: UniversalAutocompleteRequest = {
+      input: 'salesforce'
+    };
+    await autocompleteService.universalAutocomplete(request);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][0])
+      .toEqual(SandboxEndpoints.universalAutocomplete);
+  });
+
+  it('Vertical Autocomplete', async () => {
+    const request: VerticalAutocompleteRequest = {
+      input: 'salesforce',
+      verticalKey: 'verticalKey'
+    };
+    await autocompleteService.verticalAutocomplete(request);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][0])
+      .toEqual(SandboxEndpoints.verticalAutocomplete);
+  });
+
+  it('FilterSearch', async () => {
+    mockHttpService.get.mockResolvedValue(mockAutocompleteResponseWithSections);
+    apiResponseValidator = new ApiResponseValidator();
+    autocompleteService = new AutocompleteServiceImpl(
+      config,
+      mockHttpService as HttpService,
+      apiResponseValidator
+    );
+    const request: FilterSearchRequest = {
+      input: 'salesforce',
+      verticalKey: 'verticalKey',
+      sectioned: false,
+      fields: []
+    };
+    await autocompleteService.filterSearch(request);
+    expect(mockHttpService.get).toHaveBeenCalledTimes(1);
+    expect(mockHttpService.get.mock.calls[0][0])
+      .toEqual(SandboxEndpoints.filterSearch);
   });
 });

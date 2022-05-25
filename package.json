@@ -1,6 +1,6 @@
 {
   "name": "@yext/answers-core",
-  "version": "1.6.0",
+  "version": "1.7.0-alpha.165",
   "description": "Typescript Networking Library for the Yext Answers API",
   "main": "./dist/commonjs/src/index.js",
   "module": "./dist/esm/src/index.js",
@@ -15,7 +15,7 @@
     "node": ">=12"
   },
   "scripts": {
-    "test": "npm run lint && jest",
+    "test": "npm run lint && jest --collectCoverage",
     "lint": "eslint .",
     "tsc-cjs": "tsc -p tsconfig.cjs.json",
     "tsc-esm": "tsc -p tsconfig.esm.json",
@@ -69,7 +69,7 @@
   },
   "jest": {
     "bail": 0,
-    "collectCoverage": true,
+    "collectCoverage": false,
     "collectCoverageFrom": [
       "src/**",
       "!src/models/**/*.ts"

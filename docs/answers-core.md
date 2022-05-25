@@ -91,6 +91,12 @@
 |  [VerticalSearchResponse](./answers-core.verticalsearchresponse.md) | A representation of a response from a vertical search. |
 |  [Visitor](./answers-core.visitor.md) | Information used to associate requests with a particular user. |
 
+## Variables
+
+|  Variable | Description |
+|  --- | --- |
+|  [SandboxEndpoints](./answers-core.sandboxendpoints.md) | The endpoints to use for sandbox experiences |
+
 ## Type Aliases
 
 |  Type Alias | Description |

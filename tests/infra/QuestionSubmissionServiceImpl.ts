@@ -3,7 +3,7 @@ import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { HttpService } from '../../src/services/HttpService';
 import { AnswersConfig } from '../../src/models/core/AnswersConfig';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
-import { defaultApiVersion } from '../../src/constants';
+import { defaultApiVersion, SandboxEndpoints } from '../../src/constants';
 
 const baseCoreConfig = {
   apiKey: 'anApiKey',
@@ -117,4 +117,23 @@ it('additionalQueryParams are passed through', async () => {
   expect(actualQueryParams).toEqual(expect.objectContaining({
     jsLibVersion: 'LIB_VERSION'
   }));
+});
+
+it('sandbox endpoints work as expected', async () => {
+  const coreConfig = {
+    ...baseCoreConfig,
+    endpoints: SandboxEndpoints
+  };
+  const mockHttp = new HttpServiceMock();
+  mockHttp.post.mockResolvedValue({
+    meta: {
+      uuid: 'aUUID'
+    },
+    response: {}
+  });
+  const qaService = new QuestionSubmissionServiceImpl(
+    coreConfig, mockHttp as HttpService, apiResponseValidator);
+  await qaService.submitQuestion(qaRequest);
+  const mockCalls = mockHttp.post.mock.calls;
+  expect(mockCalls[0][0]).toEqual(SandboxEndpoints.questionSubmission);
 });
