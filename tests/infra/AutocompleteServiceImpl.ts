@@ -308,7 +308,6 @@ describe('additionalQueryParams are passed through', () => {
   });
 });
 
-
 describe('sandbox endpoints work as expected', () => {
   const config: AnswersConfig = {
     apiKey: 'testApiKey',
