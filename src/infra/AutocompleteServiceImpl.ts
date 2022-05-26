@@ -146,7 +146,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
-      excluded: JSON.stringify(this.transformExcludedField(request.excluded)),
+      excluded: JSON.stringify(this.transformExcludedFields(request.excluded)),
       ...this.config?.additionalQueryParams
     };
 
@@ -181,7 +181,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     ));
   }
 
-  private transformExcludedField(excludedFields?: Filter[]) {
+  private transformExcludedFields(excludedFields?: Filter[]) {
     return excludedFields?.map(({ fieldId, matcher, value }) => (
       {
         [fieldId]: {
