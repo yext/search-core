@@ -3,7 +3,7 @@ import { VerticalAutocompleteRequest, FilterSearchRequest,
   UniversalAutocompleteRequest, SearchParameterField }
   from '../models/autocompleteservice/AutocompleteRequest';
 import { AutocompleteResponse, FilterSearchResponse } from '../models/autocompleteservice/AutocompleteResponse';
-import { defaultApiVersion, defaultEndpoints } from '../constants';
+import { defaultApiVersion } from '../constants';
 import { AnswersConfig } from '../models/core/AnswersConfig';
 import { HttpService } from '../services/HttpService';
 import { AutocompleteQueryParams } from '../models/autocompleteservice/AutocompleteQueryParams';
@@ -48,12 +48,9 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     this.config = config;
     this.httpService = httpRequester;
     this.apiResponseValidator = apiResponseValidator;
-    this.universalEndpoint = this.config.endpoints?.universalAutocomplete
-      ?? defaultEndpoints.universalAutocomplete;
-    this.verticalEndpoint = this.config.endpoints?.verticalAutocomplete
-      ?? defaultEndpoints.verticalAutocomplete;
-    this.filterEndpoint = this.config.endpoints?.filterSearch
-      ?? defaultEndpoints.filterSearch;
+    this.universalEndpoint = this.config.endpoints.universalAutocomplete;
+    this.verticalEndpoint = this.config.endpoints.verticalAutocomplete;
+    this.filterEndpoint = this.config.endpoints.filterSearch;
   }
 
   async universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse> {

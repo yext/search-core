@@ -1,4 +1,4 @@
-import { defaultApiVersion, defaultEndpoints } from '../constants';
+import { defaultApiVersion } from '../constants';
 import { QuestionSubmissionService } from '../services/QuestionSubmissionService';
 import { HttpService } from '../services/HttpService';
 import { AnswersConfig } from '../models/core/AnswersConfig';
@@ -27,8 +27,7 @@ export class QuestionSubmissionServiceImpl implements QuestionSubmissionService 
     this.config = config;
     this.httpService = httpService;
     this.apiResponseValidator = apiResponseValidator;
-    this.endpoint = this.config.endpoints?.questionSubmission
-      ?? defaultEndpoints.questionSubmission;
+    this.endpoint = this.config.endpoints.questionSubmission;
   }
 
   async submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse> {
