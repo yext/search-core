@@ -11,6 +11,7 @@ import { AutocompleteService } from '../services/AutocompleteService';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
 import { getClientSdk } from '../utils/getClientSdk';
+import { Filter } from '../models/searchservice/request/Filter';
 
 /**
  * Internal interface representing the query params which are sent for a vertical
@@ -26,7 +27,8 @@ interface VerticalAutocompleteQueryParams extends AutocompleteQueryParams {
  */
 interface FilterSearchQueryParams extends AutocompleteQueryParams {
   verticalKey?: string,
-  search_parameters?: string
+  search_parameters?: string,
+  excluded?: string
 }
 
 /**
@@ -144,6 +146,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
+      excluded: JSON.stringify(this.transformExcludedField(request.excluded)),
       ...this.config?.additionalQueryParams
     };
 
@@ -174,6 +177,16 @@ export class AutocompleteServiceImpl implements AutocompleteService {
         fieldId: fieldApiName,
         entityTypeId: entityType,
         shouldFetchEntities: fetchEntities
+      }
+    ));
+  }
+
+  private transformExcludedField(excludedFields?: Filter[]) {
+    return excludedFields?.map(({ fieldId, matcher, value }) => (
+      {
+        [fieldId]: {
+          [matcher]: value
+        }
       }
     ));
   }

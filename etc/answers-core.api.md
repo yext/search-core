@@ -244,6 +244,7 @@ export enum FilterCombinator {
 
 // @public
 export interface FilterSearchRequest extends AnswersRequest {
+    excluded?: Filter[];
     fields: SearchParameterField[];
     input: string;
     sectioned: boolean;

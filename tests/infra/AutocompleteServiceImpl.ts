@@ -16,6 +16,7 @@ import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator'
 import { ApiResponse } from '../../src/models/answersapi/ApiResponse';
 import { AnswersError } from '../../src/models/answersapi/AnswersError';
 import { getClientSdk } from '../../src/utils/getClientSdk';
+import { Matcher } from '../../src/models/searchservice/common/Matcher';
 
 describe('AutocompleteService', () => {
   const config: AnswersConfig = {
@@ -185,6 +186,10 @@ describe('AutocompleteService', () => {
           shouldFetchEntities: false
         }]
       };
+      const convertedExcludedFields = [
+        { someFieldId: { [Matcher.Equals]: 'Washington DC' } },
+        { anotherFieldId: { [Matcher.Equals]: 'Seattle' } }
+      ];
       const request: FilterSearchRequest = {
         input: 'salesforce',
         sessionTrackingEnabled: false,
@@ -194,7 +199,19 @@ describe('AutocompleteService', () => {
           fieldApiName: 'field',
           entityType: 'location',
           fetchEntities: false
-        }]
+        }],
+        excluded: [
+          {
+            fieldId: 'someFieldId',
+            value: 'Washington DC',
+            matcher: Matcher.Equals
+          },
+          {
+            fieldId: 'anotherFieldId',
+            value: 'Seattle',
+            matcher: Matcher.Equals
+          }
+        ]
       };
       const expectedQueryParams = {
         input: 'salesforce',
@@ -205,6 +222,7 @@ describe('AutocompleteService', () => {
         sessionTrackingEnabled: false,
         verticalKey: 'verticalKey',
         search_parameters: JSON.stringify(convertedSearchParams),
+        excluded: JSON.stringify(convertedExcludedFields),
         visitorId: '123',
         visitorIdMethod: 'YEXT_AUTH'
       };
