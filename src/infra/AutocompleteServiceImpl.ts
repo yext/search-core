@@ -3,8 +3,8 @@ import { VerticalAutocompleteRequest, FilterSearchRequest,
   UniversalAutocompleteRequest, SearchParameterField }
   from '../models/autocompleteservice/AutocompleteRequest';
 import { AutocompleteResponse, FilterSearchResponse } from '../models/autocompleteservice/AutocompleteResponse';
-import { defaultApiVersion, defaultEndpoints } from '../constants';
-import { AnswersConfig } from '../models/core/AnswersConfig';
+import { defaultApiVersion } from '../constants';
+import { AnswersConfigWithDefaulting } from '../models/core/AnswersConfig';
 import { HttpService } from '../services/HttpService';
 import { AutocompleteQueryParams } from '../models/autocompleteservice/AutocompleteQueryParams';
 import { AutocompleteService } from '../services/AutocompleteService';
@@ -33,7 +33,7 @@ interface FilterSearchQueryParams extends AutocompleteQueryParams {
 * A service that performs query suggestions.
 */
 export class AutocompleteServiceImpl implements AutocompleteService {
-  private config: AnswersConfig;
+  private config: AnswersConfigWithDefaulting;
   private httpService: HttpService;
   private apiResponseValidator;
   private universalEndpoint: string;
@@ -41,19 +41,16 @@ export class AutocompleteServiceImpl implements AutocompleteService {
   private filterEndpoint: string;
 
   constructor(
-    config: AnswersConfig,
+    config: AnswersConfigWithDefaulting,
     httpRequester: HttpService,
     apiResponseValidator: ApiResponseValidator
   ) {
     this.config = config;
     this.httpService = httpRequester;
     this.apiResponseValidator = apiResponseValidator;
-    this.universalEndpoint = this.config.endpoints?.universalAutocomplete
-      ?? defaultEndpoints.universalAutocomplete;
-    this.verticalEndpoint = this.config.endpoints?.verticalAutocomplete
-      ?? defaultEndpoints.verticalAutocomplete;
-    this.filterEndpoint = this.config.endpoints?.filterSearch
-      ?? defaultEndpoints.filterSearch;
+    this.universalEndpoint = this.config.endpoints.universalAutocomplete;
+    this.verticalEndpoint = this.config.endpoints.verticalAutocomplete;
+    this.filterEndpoint = this.config.endpoints.filterSearch;
   }
 
   async universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse> {

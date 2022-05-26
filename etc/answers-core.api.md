@@ -408,6 +408,9 @@ export interface Result {
 }
 
 // @public
+export const SandboxEndpoints: Required<Endpoints>;
+
+// @public
 export enum SearchIntent {
     NearMe = "NEAR_ME"
 }

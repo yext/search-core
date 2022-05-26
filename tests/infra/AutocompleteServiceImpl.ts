@@ -1,5 +1,5 @@
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
-import { AnswersConfig } from '../../src/models/core/AnswersConfig';
+import { AnswersConfigWithDefaulting } from '../../src/models/core/AnswersConfig';
 import {
   UniversalAutocompleteRequest,
   VerticalAutocompleteRequest,
@@ -18,25 +18,30 @@ import { AnswersError } from '../../src/models/answersapi/AnswersError';
 import { getClientSdk } from '../../src/utils/getClientSdk';
 
 describe('AutocompleteService', () => {
-  const config: AnswersConfig = {
+  const config: AnswersConfigWithDefaulting = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en',
     visitor: {
       id: '123',
       idMethod: 'YEXT_AUTH'
-    }
+    },
+    endpoints: defaultEndpoints
   };
 
-  const configWithToken: AnswersConfig = {
+  const configWithToken: AnswersConfigWithDefaulting = {
     token: 'testToken',
     experienceKey: 'testExperienceKey',
     locale: 'en',
+    endpoints: defaultEndpoints
   };
 
   const mockHttpService = new HttpServiceMock();
   const apiResponseValidator = new ApiResponseValidator();
-  function createMockAutocompleteService(params?: { response?: ApiResponse, answersConfig?: AnswersConfig }) {
+  function createMockAutocompleteService(params?: {
+    response?: ApiResponse,
+    answersConfig?: AnswersConfigWithDefaulting
+  }) {
     const {
       response = mockAutocompleteResponse,
       answersConfig = config
@@ -242,13 +247,14 @@ describe('AutocompleteService', () => {
 });
 
 describe('additionalQueryParams are passed through', () => {
-  const config: AnswersConfig = {
+  const config: AnswersConfigWithDefaulting = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en',
     additionalQueryParams: {
       jsLibVersion: 'LIB_VERSION'
-    }
+    },
+    endpoints: defaultEndpoints
   };
   let mockHttpService, apiResponseValidator, autocompleteService;
   beforeEach(() => {
