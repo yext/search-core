@@ -80,5 +80,7 @@ export type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;
 
 /**
  * The AnswersConfig after any defaulting has been done from within answers-core.
+ *
+ * @internal
  */
 export type AnswersConfigWithDefaulting = AnswersConfig & { endpoints: Required<Endpoints> };
