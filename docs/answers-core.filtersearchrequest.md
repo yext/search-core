@@ -17,6 +17,7 @@ export interface FilterSearchRequest extends AnswersRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [excluded?](./answers-core.filtersearchrequest.excluded.md) | [Filter](./answers-core.filter.md)<!-- -->\[\] | <i>(Optional)</i> an array of filters that should be excluded from filter search results. |
 |  [fields](./answers-core.filtersearchrequest.fields.md) | [SearchParameterField](./answers-core.searchparameterfield.md)<!-- -->\[\] | An array of [SearchParameterField](./answers-core.searchparameterfield.md) |
 |  [input](./answers-core.filtersearchrequest.input.md) | string | The input string for autocomplete. |
 |  [sectioned](./answers-core.filtersearchrequest.sectioned.md) | boolean | Determines whether or not the results of the [FilterSearchResponse](./answers-core.filtersearchresponse.md) are separated by field. |

@@ -1,4 +1,4 @@
-import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterSearchRequest }
+import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterSearchRequest, Matcher }
   from '@yext/answers-core';
 
 export const univeralAutocompleteRequest: UniversalAutocompleteRequest = {
@@ -21,13 +21,13 @@ export const verticalAutocompleteRequest: VerticalAutocompleteRequest = {
 };
 
 export const filterSearchRequest: FilterSearchRequest = {
-  input: 'virginiaa',
-  verticalKey: 'KM',
+  input: 'tom',
+  verticalKey: 'people',
   sectioned: false,
   fields: [
     {
       fieldApiName: 'name',
-      entityType: 'location',
+      entityType: 'ce_person',
       fetchEntities: true
     }
   ],
@@ -35,5 +35,17 @@ export const filterSearchRequest: FilterSearchRequest = {
     'Client-SDK': {
       CORE_TEST_SITE: 'test'
     }
-  }
+  },
+  excluded: [
+    {
+      fieldId: 'name',
+      value: 'Tom Dixon',
+      matcher: Matcher.Equals
+    },
+    {
+      fieldId: 'name',
+      value: 'Tom Elliott',
+      matcher: Matcher.Equals
+    }
+  ]
 };
