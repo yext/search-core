@@ -1,16 +1,19 @@
 import { createAutocompleteResponse, createFilterSearchResponse } from '../transformers/autocompleteservice/createAutocompleteResponse';
-import { VerticalAutocompleteRequest, FilterSearchRequest,
-  UniversalAutocompleteRequest, SearchParameterField }
-  from '../models/autocompleteservice/AutocompleteRequest';
+import {
+  VerticalAutocompleteRequest,
+  FilterSearchRequest,
+  UniversalAutocompleteRequest
+} from '../models/autocompleteservice/AutocompleteRequest';
 import { AutocompleteResponse, FilterSearchResponse } from '../models/autocompleteservice/AutocompleteResponse';
-import { defaultApiVersion, defaultEndpoints } from '../constants';
-import { AnswersConfig } from '../models/core/AnswersConfig';
+import { defaultApiVersion } from '../constants';
+import { AnswersConfigWithDefaulting } from '../models/core/AnswersConfig';
 import { HttpService } from '../services/HttpService';
 import { AutocompleteQueryParams } from '../models/autocompleteservice/AutocompleteQueryParams';
 import { AutocompleteService } from '../services/AutocompleteService';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
 import { ApiResponse } from '../models/answersapi/ApiResponse';
 import { getClientSdk } from '../utils/getClientSdk';
+import { serializeExcludedFields, serializeSearchParameterFields } from '../serializers/serializeFilterSearch';
 
 /**
  * Internal interface representing the query params which are sent for a vertical
@@ -26,14 +29,15 @@ interface VerticalAutocompleteQueryParams extends AutocompleteQueryParams {
  */
 interface FilterSearchQueryParams extends AutocompleteQueryParams {
   verticalKey?: string,
-  search_parameters?: string
+  search_parameters?: string,
+  excluded?: string
 }
 
 /**
 * A service that performs query suggestions.
 */
 export class AutocompleteServiceImpl implements AutocompleteService {
-  private config: AnswersConfig;
+  private config: AnswersConfigWithDefaulting;
   private httpService: HttpService;
   private apiResponseValidator;
   private universalEndpoint: string;
@@ -41,19 +45,16 @@ export class AutocompleteServiceImpl implements AutocompleteService {
   private filterEndpoint: string;
 
   constructor(
-    config: AnswersConfig,
+    config: AnswersConfigWithDefaulting,
     httpRequester: HttpService,
     apiResponseValidator: ApiResponseValidator
   ) {
     this.config = config;
     this.httpService = httpRequester;
     this.apiResponseValidator = apiResponseValidator;
-    this.universalEndpoint = this.config.endpoints?.universalAutocomplete
-      ?? defaultEndpoints.universalAutocomplete;
-    this.verticalEndpoint = this.config.endpoints?.verticalAutocomplete
-      ?? defaultEndpoints.verticalAutocomplete;
-    this.filterEndpoint = this.config.endpoints?.filterSearch
-      ?? defaultEndpoints.filterSearch;
+    this.universalEndpoint = this.config.endpoints.universalAutocomplete;
+    this.verticalEndpoint = this.config.endpoints.verticalAutocomplete;
+    this.filterEndpoint = this.config.endpoints.filterSearch;
   }
 
   async universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse> {
@@ -130,7 +131,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
   async filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse> {
     const searchParams = {
       sectioned: request.sectioned,
-      fields: this.serializeSearchParameterFields(request.fields)
+      fields: serializeSearchParameterFields(request.fields)
     };
     const queryParams: FilterSearchQueryParams = {
       input: request.input,
@@ -144,6 +145,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
+      excluded: JSON.stringify(serializeExcludedFields(request.excluded)),
       ...this.config?.additionalQueryParams
     };
 
@@ -166,15 +168,5 @@ export class AutocompleteServiceImpl implements AutocompleteService {
     }
 
     return createFilterSearchResponse(response);
-  }
-
-  private serializeSearchParameterFields(fields: SearchParameterField[]) {
-    return fields.map(({ fieldApiName, entityType, fetchEntities }) => (
-      {
-        fieldId: fieldApiName,
-        entityTypeId: entityType,
-        shouldFetchEntities: fetchEntities
-      }
-    ));
   }
 }

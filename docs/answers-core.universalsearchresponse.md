@@ -17,6 +17,7 @@ export interface UniversalSearchResponse
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [directAnswer?](./answers-core.universalsearchresponse.directanswer.md) | [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) \| [FieldValueDirectAnswer](./answers-core.fieldvaluedirectanswer.md) | <i>(Optional)</i> A direct answer to a search. |
+|  [failedVerticals?](./answers-core.universalsearchresponse.failedverticals.md) | [FailedVertical](./answers-core.failedvertical.md)<!-- -->\[\] | <i>(Optional)</i> Error information from when a vertical fails to return results. |
 |  [locationBias?](./answers-core.universalsearchresponse.locationbias.md) | [LocationBias](./answers-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
 |  [queryId?](./answers-core.universalsearchresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
 |  [queryRulesActionsData?](./answers-core.universalsearchresponse.queryrulesactionsdata.md) | [QueryRulesActionsData](./answers-core.queryrulesactionsdata.md)<!-- -->\[\] | <i>(Optional)</i> Data returned from the Answers query rules system. |

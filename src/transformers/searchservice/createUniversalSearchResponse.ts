@@ -3,6 +3,7 @@ import { createVerticalResults } from './createVerticalResults';
 import { createDirectAnswer } from './createDirectAnswer';
 import { createSpellCheck } from './createSpellCheck';
 import { createLocationBias } from './createLocationBias';
+import { createFailedVertical } from './createFailedVertical';
 
 export function createUniversalSearchResponse(data: any): UniversalSearchResponse {
   const verticalResults = Array.isArray(data.response.modules)
@@ -17,6 +18,7 @@ export function createUniversalSearchResponse(data: any): UniversalSearchRespons
     spellCheck: data.response.spellCheck && createSpellCheck(data.response.spellCheck),
     locationBias: data.response.locationBias && createLocationBias(data.response.locationBias),
     uuid: data.meta.uuid,
-    queryRulesActionsData: data.response.queryRulesActionsData
+    queryRulesActionsData: data.response.queryRulesActionsData,
+    failedVerticals: data.response.failedVerticals && data.response.failedVerticals.map(createFailedVertical)
   };
 }

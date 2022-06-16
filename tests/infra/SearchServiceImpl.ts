@@ -1,6 +1,6 @@
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { SearchServiceImpl } from '../../src/infra/SearchServiceImpl';
-import { AnswersConfig } from '../../src/models/core/AnswersConfig';
+import { AnswersConfigWithDefaulting } from '../../src/models/core/AnswersConfig';
 import { UniversalSearchRequest } from '../../src/models/searchservice/request/UniversalSearchRequest';
 import { HttpService } from '../../src/services/HttpService';
 import { QueryTrigger } from '../../src/models/searchservice/request/QueryTrigger';
@@ -11,22 +11,24 @@ import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Direction } from '../../src/models/searchservice/request/Direction';
 import { SortType } from '../../src/models/searchservice/request/SortType';
 import { getClientSdk } from '../../src/utils/getClientSdk';
-import { defaultApiVersion } from '../../src/constants';
+import { defaultApiVersion, defaultEndpoints } from '../../src/constants';
 
 describe('SearchService', () => {
-  const configWithRequiredApiKey: AnswersConfig = {
+  const configWithRequiredApiKey: AnswersConfigWithDefaulting = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
-    locale: 'en'
+    locale: 'en',
+    endpoints: defaultEndpoints
   };
 
-  const configWithRequiredToken: AnswersConfig = {
+  const configWithRequiredToken: AnswersConfigWithDefaulting = {
     token: 'testToken',
     experienceKey: 'testExperienceKey',
-    locale: 'en'
+    locale: 'en',
+    endpoints: defaultEndpoints
   };
 
-  const configWithAllParams: AnswersConfig = {
+  const configWithAllParams: AnswersConfigWithDefaulting = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'es',
@@ -34,7 +36,8 @@ describe('SearchService', () => {
     visitor: {
       id: '123',
       idMethod: 'YEXT_AUTH'
-    }
+    },
+    endpoints: defaultEndpoints
   };
 
   const apiResponseValidator = new ApiResponseValidator();
@@ -152,9 +155,10 @@ describe('SearchService', () => {
 
     it('A custom universal search service endpoint may be supplied', async () => {
       const customUrl = 'http://custom.endpoint.com/api';
-      const config: AnswersConfig = {
+      const config: AnswersConfigWithDefaulting = {
         ...configWithRequiredApiKey,
         endpoints: {
+          ...defaultEndpoints,
           universalSearch: customUrl
         }
       };
@@ -384,10 +388,11 @@ describe('SearchService', () => {
 });
 
 describe('additionalQueryParams are passed through', () => {
-  const coreConfig: AnswersConfig = {
+  const coreConfig: AnswersConfigWithDefaulting = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en',
+    endpoints: defaultEndpoints,
     additionalQueryParams: {
       jsLibVersion: 'LIB_VERSION'
     }

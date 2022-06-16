@@ -1,15 +1,16 @@
 import { QuestionSubmissionServiceImpl } from '../../src/infra/QuestionSubmissionServiceImpl';
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { HttpService } from '../../src/services/HttpService';
-import { AnswersConfig } from '../../src/models/core/AnswersConfig';
+import { AnswersConfigWithDefaulting } from '../../src/models/core/AnswersConfig';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
-import { defaultApiVersion } from '../../src/constants';
+import { defaultApiVersion, defaultEndpoints } from '../../src/constants';
 
 const baseCoreConfig = {
   apiKey: 'anApiKey',
   experienceKey: 'anExperienceKey',
   locale: 'fr',
-  experienceVersion: 'STAGING'
+  experienceVersion: 'STAGING',
+  endpoints: defaultEndpoints
 };
 
 const qaRequest = {
@@ -48,7 +49,7 @@ describe('Question submission', () => {
 
   it('a custom endpoint may be supplied', async () => {
     const expectedUrl = 'https://custom.endpoint.com/api';
-    const coreConfig: AnswersConfig = {
+    const coreConfig: AnswersConfigWithDefaulting = {
       ...baseCoreConfig,
       endpoints: {
         questionSubmission: 'https://custom.endpoint.com/api'

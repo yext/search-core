@@ -5,6 +5,7 @@ import { FieldValueDirectAnswer } from './FieldValueDirectAnswer';
 import { SpellCheck } from './SpellCheck';
 import { LocationBias } from './LocationBias';
 import { QueryRulesActionsData } from './QueryRulesActionsData';
+import { FailedVertical } from './FailedVertical';
 
 /**
  * A representation of a response from a universal search.
@@ -27,5 +28,7 @@ export interface UniversalSearchResponse {
   /** A unique id which corresponds to the request. */
   uuid: string,
   /** {@inheritDoc QueryRulesActionsData} */
-  queryRulesActionsData?: QueryRulesActionsData[]
+  queryRulesActionsData?: QueryRulesActionsData[],
+  /** {@inheritDoc FailedVertical} */
+  failedVerticals?: FailedVertical[]
 }

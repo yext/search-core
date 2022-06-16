@@ -1,6 +1,6 @@
 import { createVerticalSearchResponse } from '../transformers/searchservice/createVerticalSearchResponse';
 import { SearchService } from '../services/SearchService';
-import { defaultApiVersion, defaultEndpoints } from '../constants';
+import { defaultApiVersion } from '../constants';
 import { QueryParams } from '../models/http/params';
 import { QueryTrigger } from '../models/searchservice/request/QueryTrigger';
 import { QuerySource } from '../models/searchservice/request/QuerySource';
@@ -8,7 +8,7 @@ import { UniversalSearchRequest } from '../models/searchservice/request/Universa
 import { UniversalSearchResponse } from '../models/searchservice/response/UniversalSearchResponse';
 import { createUniversalSearchResponse } from '../transformers/searchservice/createUniversalSearchResponse';
 import { HttpService } from '../services/HttpService';
-import { AnswersConfig } from '../models/core/AnswersConfig';
+import { AnswersConfigWithDefaulting } from '../models/core/AnswersConfig';
 import { VerticalSearchRequest } from '../models/searchservice/request/VerticalSearchRequest';
 import { VerticalSearchResponse } from '../models/searchservice/response/VerticalSearchResponse';
 import { serializeStaticFilters } from '../serializers/serializeStaticFilters';
@@ -78,24 +78,22 @@ interface VerticalSearchQueryParams extends QueryParams {
  * @internal
  */
 export class SearchServiceImpl implements SearchService {
-  private config: AnswersConfig;
+  private config: AnswersConfigWithDefaulting;
   private httpService: HttpService;
   private apiResponseValidator: ApiResponseValidator;
   private verticalSearchEndpoint: string;
   private universalSearchEndpoint: string;
 
   constructor(
-    config: AnswersConfig,
+    config: AnswersConfigWithDefaulting,
     httpService: HttpService,
     apiResponseValidator: ApiResponseValidator
   ) {
     this.config = config;
     this.httpService = httpService;
     this.apiResponseValidator = apiResponseValidator;
-    this.universalSearchEndpoint = config.endpoints?.universalSearch
-      ?? defaultEndpoints.universalSearch;
-    this.verticalSearchEndpoint = config.endpoints?.verticalSearch
-      ?? defaultEndpoints.verticalSearch;
+    this.universalSearchEndpoint = config.endpoints.universalSearch;
+    this.verticalSearchEndpoint = config.endpoints.verticalSearch;
   }
 
   async universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse> {

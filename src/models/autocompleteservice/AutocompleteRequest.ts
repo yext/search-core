@@ -1,4 +1,5 @@
 import { AnswersRequest } from '../core/AnswersRequest';
+import { Filter } from '../searchservice/request/Filter';
 
 /**
  * Options for a universal autocomplete request.
@@ -41,7 +42,9 @@ export interface FilterSearchRequest extends AnswersRequest {
   /** Determines whether or not the results of the {@link FilterSearchResponse} are separated by field. */
   sectioned: boolean,
   /** An array of {@link SearchParameterField} */
-  fields: SearchParameterField[]
+  fields: SearchParameterField[],
+  /** an array of filters that should be excluded from filter search results. */
+  excluded?: Filter[]
 }
 
 /**
