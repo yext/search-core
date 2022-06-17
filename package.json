@@ -9,7 +9,8 @@
     "dist",
     "legacy",
     "lib",
-    "src"
+    "src",
+    "THIRD-PARTY-NOTICES"
   ],
   "engines": {
     "node": ">=12"
