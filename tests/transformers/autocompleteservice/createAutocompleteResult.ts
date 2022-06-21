@@ -1,6 +1,5 @@
 import { createAutocompleteResult } from '../../../src/transformers/autocompleteservice/createAutocompleteResult';
 
-
 describe('AutocompleteResult', () => {
   it('result with no filter is parsed correctly', () => {
     const resultWithNoFilter = {

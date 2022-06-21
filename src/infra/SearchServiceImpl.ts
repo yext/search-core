@@ -115,7 +115,7 @@ export class SearchServiceImpl implements SearchService {
       source: request.querySource || QuerySource.Standard,
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
-      restrictVerticals: request.restrictVerticals && request.restrictVerticals.join(','),
+      restrictVerticals: request.restrictVerticals?.join(','),
       ...this.config?.additionalQueryParams
     };
 

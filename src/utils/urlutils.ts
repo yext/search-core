@@ -10,7 +10,7 @@ export function addParamsToURL(
   const parsedUrl = new URL(url);
   const urlParams = new URLSearchParams(parsedUrl.search.substring(1));
 
-  const sanitizedParams: SanitizedQueryParams = sanitizeQueryParams (params);
+  const sanitizedParams: SanitizedQueryParams = sanitizeQueryParams(params);
 
   for (const key in sanitizedParams) {
     urlParams.append(key, sanitizedParams[key].toString());

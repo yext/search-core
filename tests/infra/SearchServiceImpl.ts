@@ -130,7 +130,7 @@ describe('SearchService', () => {
       };
       const expectedQueryParams = {
         api_key: 'testApiKey',
-        context: JSON.stringify({ key:'value' }),
+        context: JSON.stringify({ key: 'value' }),
         experienceKey: 'testExperienceKey',
         limit: JSON.stringify({ people: 17 }),
         input: 'testQuery',
@@ -286,12 +286,12 @@ describe('SearchService', () => {
         context: JSON.stringify({ key: 'value' }),
         experienceKey: 'testExperienceKey',
         facetFilters: JSON.stringify({
-          c_awards:[{
-            c_awards: { $eq:'Impact Award' }
+          c_awards: [{
+            c_awards: { $eq: 'Impact Award' }
           }]
         }),
         filters: JSON.stringify({
-          city:{ ['!$eq']: 'Arlington' }
+          city: { ['!$eq']: 'Arlington' }
         }),
         input: 'testQuery',
         limit: 10,
@@ -307,8 +307,8 @@ describe('SearchService', () => {
         sessionTrackingEnabled: true,
         skipSpellCheck: true,
         sortBys: JSON.stringify([{
-          direction:'ASC',
-          field:'name',
+          direction: 'ASC',
+          field: 'name',
           type: 'FIELD'
         }]),
         source: 'STANDARD',

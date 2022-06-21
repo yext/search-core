@@ -16,8 +16,7 @@ export function createVerticalSearchResponse(data: any): VerticalSearchResponse 
     locationBias: data.response.locationBias && createLocationBias(data.response.locationBias),
     allResultsForVertical: data.response.allResultsForVertical
       && createVerticalSearchResponse({ response: data.response.allResultsForVertical }),
-    alternativeVerticals: data.response.alternativeVerticals && data.response.alternativeVerticals.modules
-      && data.response.alternativeVerticals.modules.map(createVerticalResults),
+    alternativeVerticals: data.response.alternativeVerticals?.modules?.map(createVerticalResults),
     uuid: data.meta?.uuid,
     queryRulesActionsData: data.response.queryRulesActionsData
   };
