@@ -108,7 +108,6 @@ describe('HttpServiceImpl', () => {
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?nodeQuery=param', expect.anything());
   });
 
-
   it('makes request with custom client SDK, but only when not falsy', async () => {
     const queryParams = {
       aQuery: 'param'

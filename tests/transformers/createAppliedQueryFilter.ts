@@ -48,7 +48,7 @@ it('createAppliedQueryFilter correctly transforms appliedQueryFilters with "INTE
             }
           }
         },
-        type:'INTENT'
+        type: 'INTENT'
       }
     ]
   };
@@ -91,7 +91,7 @@ it('createAppliedQueryFilter correctly transforms appliedQueryFilters with "PLAC
       {
         displayKey: 'Location',
         displayValue: 'Virginia',
-        filter:{
+        filter: {
           'builtin.location': {
             '$eq': 'P-region.7919684583758790'
           }

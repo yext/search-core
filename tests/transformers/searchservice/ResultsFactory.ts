@@ -15,8 +15,7 @@ it('properly transforms Knowledge Graph results', () => {
     highlightedFields: {},
     distance: 36032,
     distanceFromFilter: 3821
-  }
-  ];
+  }];
   const expectedResults = [{
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     distance: 36032,
