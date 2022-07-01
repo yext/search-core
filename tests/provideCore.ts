@@ -28,5 +28,4 @@ it('can specify custom endpoints', () => {
   expect(AutocompleteServiceImpl).toHaveBeenCalledWith(expectedObject, {}, {});
   expect(QuestionSubmissionServiceImpl).toHaveBeenCalledWith(expectedObject, {}, {});
   expect(SearchServiceImpl).toHaveBeenCalledWith(expectedObject, {}, {});
-  expect(SearchServiceImpl).not.toHaveBeenCalledWith({test: expectedObject }, {}, {});
 });
