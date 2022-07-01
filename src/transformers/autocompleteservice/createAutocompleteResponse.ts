@@ -1,4 +1,4 @@
-import { AnswersError } from '../../models/answersapi/AnswersError';
+import { SearchError } from '../../models/answersapi/AnswersError';
 import { AutocompleteResponse, FilterSearchResponse } from '../../models/autocompleteservice/AutocompleteResponse';
 import { createAutocompleteResult } from './createAutocompleteResult';
 
@@ -32,7 +32,7 @@ export function createFilterSearchResponse(data: any): FilterSearchResponse {
   const response = data.response;
   if (response.failedVerticals && response.failedVerticals.length != 0) {
     const error = response.failedVerticals[0];
-    throw new AnswersError(error.details.description, error.details.responseCode, error.errorType);
+    throw new SearchError(error.details.description, error.details.responseCode, error.errorType);
   }
   const sections = response.sections.map((section: any) => ({
     label: section.label,

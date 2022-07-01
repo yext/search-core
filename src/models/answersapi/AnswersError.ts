@@ -6,7 +6,7 @@
  *
  * @public
  */
-export class AnswersError extends Error {
+export class SearchError extends Error {
   /** The error message. */
   public message: string;
   /** Answers API error code. */
@@ -25,6 +25,6 @@ export class AnswersError extends Error {
     // When targeting ES5, it is necessary to manually set the prototype for instance of checks to work
     // See: "Extending built-ins like Error, Array, and Map may no longer work"
     // https://github.com/Microsoft/TypeScript/wiki/Breaking-Changes
-    Object.setPrototypeOf(this, AnswersError.prototype);
+    Object.setPrototypeOf(this, SearchError.prototype);
   }
 }

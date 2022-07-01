@@ -1,5 +1,8 @@
+// answers synonyms
+export { SearchError as AnswersError } from './answersapi/AnswersError';
+
 // Answers API models
-export { AnswersError } from './answersapi/AnswersError';
+export { SearchError } from './answersapi/AnswersError';
 
 // Core models
 export {
