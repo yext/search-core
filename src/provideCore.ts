@@ -8,7 +8,7 @@ import { SearchCore } from './SearchCore';
 import { defaultEndpoints } from './constants';
 
 /**
- * The entrypoint to the answers-core library.
+ * The entrypoint to the search-core library.
  *
  * @remarks
  * Returns an {@link SearchCore} instance.
