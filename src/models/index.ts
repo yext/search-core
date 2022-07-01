@@ -1,5 +1,7 @@
 // answers synonyms
 export { SearchError as AnswersError } from './answersapi/AnswersError';
+export { SearchConfigWithApiKey as AnswersConfigWithApiKey } from './core/AnswersConfig';
+
 
 // Answers API models
 export { SearchError } from './answersapi/AnswersError';
@@ -8,7 +10,7 @@ export { SearchError } from './answersapi/AnswersError';
 export {
   AnswersConfig,
   BaseAnswersConfig,
-  AnswersConfigWithApiKey,
+  SearchConfigWithApiKey,
   AnswersConfigWithToken
 } from './core/AnswersConfig';
 export { AnswersRequest } from './core/AnswersRequest';
