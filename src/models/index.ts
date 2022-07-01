@@ -1,6 +1,6 @@
 // answers synonyms
-export { SearchError as AnswersError } from './answersapi/AnswersError';
-export { SearchConfigWithApiKey as AnswersConfigWithApiKey } from './core/AnswersConfig';
+export { AnswersError } from './synonyms';
+export { AnswersConfigWithApiKey } from './synonyms';
 
 
 // Answers API models

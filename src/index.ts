@@ -1,5 +1,5 @@
 // Answers synonyms
-export { SearchCore as AnswersCore } from './SearchCore';
+export { AnswersCore } from './synonyms';
 
 // Search exports
 export { SearchCore } from './SearchCore';
