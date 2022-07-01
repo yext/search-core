@@ -1,5 +1,5 @@
 /**
- * Represents intents from the Answers API.
+ * Represents intents from the Search API.
  *
  * @public
  */
