@@ -17,7 +17,7 @@ import { AutocompleteService } from './services/AutocompleteService';
  *
  * @public
  */
-export class AnswersCore {
+export class SearchCore {
   constructor(
     private searchService: SearchService,
     private questionSubmissionService: QuestionSubmissionService,
