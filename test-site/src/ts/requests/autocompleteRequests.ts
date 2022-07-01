@@ -1,5 +1,5 @@
 import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterSearchRequest, Matcher }
-  from '@yext/answers-core';
+  from '@yext/search-core';
 
 export const univeralAutocompleteRequest: UniversalAutocompleteRequest = {
   input: 'virginiaa',

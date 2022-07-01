@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
-import { provideCore } from '@yext/answers-core';
+import { provideCore } from '@yext/search-core';
 import verticalRequest from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
