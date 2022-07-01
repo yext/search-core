@@ -2,7 +2,7 @@ import { Endpoints } from './Endpoints';
 import { Visitor } from './Visitor';
 
 /**
- * The base configuration options for {@link AnswersCore}.
+ * The base configuration options for {@link SearchCore}.
  * @public
  */
 export interface BaseAnswersConfig {
@@ -39,7 +39,7 @@ export interface BaseAnswersConfig {
 }
 
 /**
- * Configuration options for {@link AnswersCore}, which includes the
+ * Configuration options for {@link SearchCore}, which includes the
  * options from {@link BaseAnswersConfig}, but requires apiKey.
  * @public
  */
@@ -53,7 +53,7 @@ export interface SearchConfigWithApiKey extends BaseAnswersConfig {
 }
 
 /**
- * Configuration options for {@link AnswersCore}, which includes the
+ * Configuration options for {@link SearchCore}, which includes the
  * options from {@link BaseAnswersConfig}, but requires token.
  * @public
  */
@@ -70,7 +70,7 @@ export interface AnswersConfigWithToken extends BaseAnswersConfig {
 }
 
 /**
- * The main configuration options for {@link AnswersCore}.
+ * The main configuration options for {@link SearchCore}.
  * For a full description of the options, see {@link BaseAnswersConfig}.
  * The config requires either an apiKey or a token.
  *
