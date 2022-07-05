@@ -25,7 +25,7 @@ export declare class SearchCore
 |  [filterSearch(request)](./search-core.searchcore.filtersearch.md) |  | Performs a filtersearch request against specified fields within a single vertical. |
 |  [submitQuestion(request)](./search-core.searchcore.submitquestion.md) |  | Submits a custom question to the Answers API. |
 |  [universalAutocomplete(request)](./search-core.searchcore.universalautocomplete.md) |  | Performs an autocomplete request across all verticals. |
-|  [universalSearch(request)](./search-core.searchcore.universalsearch.md) |  | Performs an Answers search across all verticals. |
+|  [universalSearch(request)](./search-core.searchcore.universalsearch.md) |  | Performs an Search across all verticals. |
 |  [verticalAutocomplete(request)](./search-core.searchcore.verticalautocomplete.md) |  | Performs an autocomplete request for a single vertical. |
-|  [verticalSearch(request)](./search-core.searchcore.verticalsearch.md) |  | Performs an Answers search for a single vertical. |
+|  [verticalSearch(request)](./search-core.searchcore.verticalsearch.md) |  | Performs an Search for a single vertical. |
 

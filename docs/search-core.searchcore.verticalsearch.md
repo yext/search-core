@@ -4,7 +4,7 @@
 
 ## SearchCore.verticalSearch() method
 
-Performs an Answers search for a single vertical.
+Performs an Search for a single vertical.
 
 <b>Signature:</b>
 
