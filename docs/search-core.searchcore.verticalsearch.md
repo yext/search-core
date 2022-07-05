@@ -24,5 +24,5 @@ Promise&lt;[VerticalSearchResponse](./search-core.verticalsearchresponse.md)<!--
 
 ## Remarks
 
-If rejected, the reason will be an [AnswersError](./search-core.answerserror.md)<!-- -->.
+If rejected, the reason will be an [SearchError](./search-core.searcherror.md)<!-- -->.
 

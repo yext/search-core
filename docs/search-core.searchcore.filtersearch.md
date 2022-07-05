@@ -24,7 +24,7 @@ Promise&lt;[FilterSearchResponse](./search-core.filtersearchresponse.md)<!-- -->
 
 ## Remarks
 
-This differs from the vertical autocomplete because the vertical autocomplete operates on all entity fields whereas filtersearch operates only on specified fields. If rejected, the reason will be an [AnswersError](./search-core.answerserror.md)<!-- -->.
+This differs from the vertical autocomplete because the vertical autocomplete operates on all entity fields whereas filtersearch operates only on specified fields. If rejected, the reason will be an [SearchError](./search-core.searcherror.md)<!-- -->.
 
 ## Example
 
