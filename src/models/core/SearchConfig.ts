@@ -2,10 +2,10 @@ import { Endpoints } from './Endpoints';
 import { Visitor } from './Visitor';
 
 /**
- * The base configuration options for {@link AnswersCore}.
+ * The base configuration options for {@link SearchCore}.
  * @public
  */
-export interface BaseAnswersConfig {
+export interface BaseSearchConfig {
   /** The experience key of the answers experience. */
   experienceKey: string,
   /** The locale of the answers experience. */
@@ -39,11 +39,11 @@ export interface BaseAnswersConfig {
 }
 
 /**
- * Configuration options for {@link AnswersCore}, which includes the
- * options from {@link BaseAnswersConfig}, but requires apiKey.
+ * Configuration options for {@link SearchCore}, which includes the
+ * options from {@link BaseSearchConfig}, but requires apiKey.
  * @public
  */
-export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
+export interface AnswersConfigWithApiKey extends BaseSearchConfig {
   /** The api key of the answers experience which will be sent as a query param. */
   apiKey: string,
   /**
@@ -53,11 +53,11 @@ export interface AnswersConfigWithApiKey extends BaseAnswersConfig {
 }
 
 /**
- * Configuration options for {@link AnswersCore}, which includes the
- * options from {@link BaseAnswersConfig}, but requires token.
+ * Configuration options for {@link SearchCore}, which includes the
+ * options from {@link BaseSearchConfig}, but requires token.
  * @public
  */
-export interface AnswersConfigWithToken extends BaseAnswersConfig {
+export interface AnswersConfigWithToken extends BaseSearchConfig {
   /**
    * The authentication token of the answers experience
    * which will be passed in the Auth header as a Bearer token.
@@ -70,8 +70,8 @@ export interface AnswersConfigWithToken extends BaseAnswersConfig {
 }
 
 /**
- * The main configuration options for {@link AnswersCore}.
- * For a full description of the options, see {@link BaseAnswersConfig}.
+ * The main configuration options for {@link SearchCore}.
+ * For a full description of the options, see {@link BaseSearchConfig}.
  * The config requires either an apiKey or a token.
  *
  * @public

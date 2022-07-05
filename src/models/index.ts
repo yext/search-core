@@ -1,5 +1,6 @@
 // deprecated symbols
 export { AnswersConfig } from './deprecated';
+export { BaseAnswersConfig } from './deprecated';
 
 // Answers API models
 export { AnswersError } from './answersapi/AnswersError';
@@ -7,7 +8,7 @@ export { AnswersError } from './answersapi/AnswersError';
 // Core models
 export {
   SearchConfig,
-  BaseAnswersConfig,
+  BaseSearchConfig,
   AnswersConfigWithApiKey,
   AnswersConfigWithToken
 } from './core/SearchConfig';
