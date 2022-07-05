@@ -25,7 +25,7 @@ export class SearchCore {
   ) {}
 
   /**
-   * Performs an Search across all verticals.
+   * Performs a search across all verticals.
    *
    * @remarks
    * If rejected, the reason will be an {@link SearchError}.
@@ -37,7 +37,7 @@ export class SearchCore {
   }
 
   /**
-   * Performs an Search for a single vertical.
+   * Performs a search for a single vertical.
    *
    * @remarks
    * If rejected, the reason will be an {@link SearchError}.
@@ -49,7 +49,7 @@ export class SearchCore {
   }
 
   /**
-   * Submits a custom question to the Answers API.
+   * Submits a custom question to the Search API.
    *
    * @remarks
    * If rejected, the reason will be an {@link SearchError}.
