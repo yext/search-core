@@ -6,14 +6,14 @@ import { QueryTrigger } from './QueryTrigger';
 import { SortBy } from './SortBy';
 import { QuerySource } from './QuerySource';
 import { Facet } from './Facet';
-import { AnswersRequest } from '../../core/AnswersRequest';
+import { SearchRequest } from '../../core/SearchRequest';
 
 /**
  * Options which can be specified for a vertical search.
  *
  * @public
  */
-export interface VerticalSearchRequest extends AnswersRequest {
+export interface VerticalSearchRequest extends SearchRequest {
   /** The search query. */
   query: string,
   /** The key associated with the vertical. */

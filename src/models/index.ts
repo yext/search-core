@@ -1,5 +1,6 @@
 // deprecated symbols
 export { AnswersError } from './deprecated';
+export { AnswersRequest } from './deprecated';
 
 // Answers API models
 export { SearchError } from './answersapi/SearchError';
@@ -11,7 +12,7 @@ export {
   AnswersConfigWithApiKey,
   AnswersConfigWithToken
 } from './core/AnswersConfig';
-export { AnswersRequest } from './core/AnswersRequest';
+export { SearchRequest } from './core/SearchRequest';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';
 export {

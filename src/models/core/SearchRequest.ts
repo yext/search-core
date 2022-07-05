@@ -1,11 +1,11 @@
 import { AdditionalHttpHeaders } from './AdditionalHttpHeaders';
 
 /**
- * Options for an Answers API request.
+ * Options for an Search API request.
  *
  * @public
  */
-export interface AnswersRequest {
+export interface SearchRequest {
   /** {@inheritDoc AdditionalHttpHeaders} */
   additionalHttpHeaders?: AdditionalHttpHeaders
 }
