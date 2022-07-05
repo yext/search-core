@@ -11,14 +11,14 @@ export class AnswersError extends SearchError{};
 /**
  * @public @deprecated AnswersConfigWithApiKey was deprecated and replaced by SearchConfigWithApiKey
  */
-export interface AnswersConfigWithApiKey extends SearchConfigWithApiKey{};
+export type AnswersConfigWithApiKey = SearchConfigWithApiKey;
 
 /**
  * @public @deprecated AnswersConfigWithToken was deprecated and replaced by SearchConfigWithToken
  */
-export interface AnswersConfigWithToken extends SearchConfigWithToken{};
+export type AnswersConfigWithToken = SearchConfigWithToken;
 
 /**
  * @public @deprecated AnswersRequest was deprecated and replaced by SearchRequest
  */
-export interface AnswersRequest extends SearchRequest{};
+export type AnswersRequest = SearchRequest;
