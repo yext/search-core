@@ -1,5 +1,5 @@
 // Answers API models
-export { AnswersError } from './answersapi/AnswersError';
+export { SearchError } from './answersapi/SearchError';
 
 // Core models
 export {
