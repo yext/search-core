@@ -1,3 +1,6 @@
+// deprecated symbols
+export { AnswersError } from './deprecated';
+
 // Answers API models
 export { SearchError } from './answersapi/SearchError';
 
