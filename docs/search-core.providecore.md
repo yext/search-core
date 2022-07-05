@@ -16,7 +16,7 @@ export declare function provideCore(config: SearchConfig): SearchCore;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | [SearchConfig](./search-core.searchconfig.md) | The answers-core config |
+|  config | [SearchConfig](./search-core.searchconfig.md) | The search-core config |
 
 <b>Returns:</b>
 
