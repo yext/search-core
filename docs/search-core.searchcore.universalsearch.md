@@ -4,7 +4,7 @@
 
 ## SearchCore.universalSearch() method
 
-Performs an Search across all verticals.
+Performs a search across all verticals.
 
 <b>Signature:</b>
 

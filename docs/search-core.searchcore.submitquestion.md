@@ -4,7 +4,7 @@
 
 ## SearchCore.submitQuestion() method
 
-Submits a custom question to the Answers API.
+Submits a custom question to the Search API.
 
 <b>Signature:</b>
 
