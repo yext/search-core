@@ -1,11 +1,24 @@
 import { SearchError } from './answersapi/AnswersError';
+import { SearchConfigWithApiKey } from './core/AnswersConfig';
+import { SearchConfigWithToken } from './core/AnswersConfig';
+import { SearchRequest } from './core/SearchRequest';
+
+/**
+ * @deprecated 
+ */
 export class AnswersError extends SearchError{};
 
-import { SearchConfigWithApiKey } from './core/AnswersConfig';
+/**
+ * @deprecated 
+ */
 export interface AnswersConfigWithApiKey extends SearchConfigWithApiKey{};
 
-import { SearchConfigWithToken } from './core/AnswersConfig';
+/**
+ * @deprecated 
+ */
 export interface AnswersConfigWithToken extends SearchConfigWithToken{};
 
-import { SearchRequest } from './core/SearchRequest';
+/**
+ * @deprecated 
+ */
 export interface AnswersRequest extends SearchRequest{};
