@@ -42,9 +42,6 @@
 |  Interface | Description |
 |  --- | --- |
 |  [AdditionalHttpHeaders](./search-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
-|  [AnswersConfigWithApiKey](./search-core.answersconfigwithapikey.md) |  |
-|  [AnswersConfigWithToken](./search-core.answersconfigwithtoken.md) |  |
-|  [AnswersRequest](./search-core.answersrequest.md) |  |
 |  [AppliedQueryFilter](./search-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutocompleteResponse](./search-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./search-core.autocompleteresult.md) | An autocomplete suggestion. |
@@ -107,6 +104,9 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [AnswersConfig](./search-core.answersconfig.md) | The main configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. For a full description of the options, see [BaseAnswersConfig](./search-core.baseanswersconfig.md)<!-- -->. The config requires either an apiKey or a token. |
+|  [AnswersConfigWithApiKey](./search-core.answersconfigwithapikey.md) |  |
+|  [AnswersConfigWithToken](./search-core.answersconfigwithtoken.md) |  |
+|  [AnswersRequest](./search-core.answersrequest.md) |  |
 |  [Context](./search-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [HighlightedFields](./search-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Answers API |
 

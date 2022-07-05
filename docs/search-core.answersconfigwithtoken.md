@@ -2,7 +2,7 @@
 
 [Home](./index.md) &gt; [@yext/search-core](./search-core.md) &gt; [AnswersConfigWithToken](./search-core.answersconfigwithtoken.md)
 
-## AnswersConfigWithToken interface
+## AnswersConfigWithToken type
 
 > Warning: This API is now obsolete.
 > 
@@ -12,7 +12,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface AnswersConfigWithToken extends SearchConfigWithToken 
+export declare type AnswersConfigWithToken = SearchConfigWithToken;
 ```
-<b>Extends:</b> [SearchConfigWithToken](./search-core.searchconfigwithtoken.md)
+<b>References:</b> [SearchConfigWithToken](./search-core.searchconfigwithtoken.md)
 

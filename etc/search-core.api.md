@@ -13,12 +13,10 @@ export interface AdditionalHttpHeaders {
 export type AnswersConfig = SearchConfigWithApiKey | SearchConfigWithToken;
 
 // @public @deprecated (undocumented)
-export interface AnswersConfigWithApiKey extends SearchConfigWithApiKey {
-}
+export type AnswersConfigWithApiKey = SearchConfigWithApiKey;
 
 // @public @deprecated (undocumented)
-export interface AnswersConfigWithToken extends SearchConfigWithToken {
-}
+export type AnswersConfigWithToken = SearchConfigWithToken;
 
 // @public @deprecated (undocumented)
 export class AnswersCore extends SearchCore {
@@ -29,8 +27,7 @@ export class AnswersError extends SearchError {
 }
 
 // @public @deprecated (undocumented)
-export interface AnswersRequest extends SearchRequest {
-}
+export type AnswersRequest = SearchRequest;
 
 // @public
 export interface AppliedQueryFilter {

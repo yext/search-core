@@ -2,7 +2,7 @@
 
 [Home](./index.md) &gt; [@yext/search-core](./search-core.md) &gt; [AnswersRequest](./search-core.answersrequest.md)
 
-## AnswersRequest interface
+## AnswersRequest type
 
 > Warning: This API is now obsolete.
 > 
@@ -12,7 +12,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface AnswersRequest extends SearchRequest 
+export declare type AnswersRequest = SearchRequest;
 ```
-<b>Extends:</b> [SearchRequest](./search-core.searchrequest.md)
+<b>References:</b> [SearchRequest](./search-core.searchrequest.md)
 
