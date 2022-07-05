@@ -4,14 +4,14 @@
 
 ## SearchConfigWithApiKey interface
 
-Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./search-core.baseanswersconfig.md)<!-- -->, but requires apiKey.
+Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires apiKey.
 
 <b>Signature:</b>
 
 ```typescript
-export interface SearchConfigWithApiKey extends BaseAnswersConfig 
+export interface SearchConfigWithApiKey extends BaseSearchConfig 
 ```
-<b>Extends:</b> [BaseAnswersConfig](./search-core.baseanswersconfig.md)
+<b>Extends:</b> [BaseSearchConfig](./search-core.basesearchconfig.md)
 
 ## Properties
 

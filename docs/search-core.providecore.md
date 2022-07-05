@@ -9,14 +9,14 @@ The entrypoint to the search-core library.
 <b>Signature:</b>
 
 ```typescript
-export declare function provideCore(config: AnswersConfig): SearchCore;
+export declare function provideCore(config: SearchConfig): SearchCore;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | [AnswersConfig](./search-core.answersconfig.md) | The answers-core config |
+|  config | [SearchConfig](./search-core.searchconfig.md) | The answers-core config |
 
 <b>Returns:</b>
 

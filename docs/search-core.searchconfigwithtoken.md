@@ -4,14 +4,14 @@
 
 ## SearchConfigWithToken interface
 
-Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./search-core.baseanswersconfig.md)<!-- -->, but requires token.
+Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires token.
 
 <b>Signature:</b>
 
 ```typescript
-export interface SearchConfigWithToken extends BaseAnswersConfig 
+export interface SearchConfigWithToken extends BaseSearchConfig 
 ```
-<b>Extends:</b> [BaseAnswersConfig](./search-core.baseanswersconfig.md)
+<b>Extends:</b> [BaseSearchConfig](./search-core.basesearchconfig.md)
 
 ## Properties
 

@@ -9,8 +9,8 @@ export interface AdditionalHttpHeaders {
     'Client-SDK'?: ClientSDKHeaderValues;
 }
 
-// @public
-export type AnswersConfig = SearchConfigWithApiKey | SearchConfigWithToken;
+// @public @deprecated (undocumented)
+export type AnswersConfig = SearchConfig;
 
 // @public @deprecated (undocumented)
 export type AnswersConfigWithApiKey = SearchConfigWithApiKey;
@@ -73,8 +73,11 @@ export interface AutocompleteService {
     verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse>;
 }
 
+// @public @deprecated (undocumented)
+export type BaseAnswersConfig = BaseSearchConfig;
+
 // @public
-export interface BaseAnswersConfig {
+export interface BaseSearchConfig {
     // @alpha
     additionalQueryParams?: {
         [key: string]: string | number | boolean;
@@ -327,7 +330,7 @@ export interface NumberRangeValue {
 }
 
 // @public
-export function provideCore(config: AnswersConfig): SearchCore;
+export function provideCore(config: SearchConfig): SearchCore;
 
 // @public
 export interface QueryRulesActionsData {
@@ -392,13 +395,16 @@ export interface Result {
 export const SandboxEndpoints: Required<Endpoints>;
 
 // @public
-export interface SearchConfigWithApiKey extends BaseAnswersConfig {
+export type SearchConfig = SearchConfigWithApiKey | SearchConfigWithToken;
+
+// @public
+export interface SearchConfigWithApiKey extends BaseSearchConfig {
     apiKey: string;
     token?: never;
 }
 
 // @public
-export interface SearchConfigWithToken extends BaseAnswersConfig {
+export interface SearchConfigWithToken extends BaseSearchConfig {
     apiKey?: never;
     token: string;
 }
