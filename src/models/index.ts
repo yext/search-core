@@ -2,6 +2,7 @@
 export { AnswersConfig } from './deprecated';
 export { BaseAnswersConfig } from './deprecated';
 export { AnswersConfigWithApiKey } from './deprecated';
+export { AnswersConfigWithToken } from './deprecated';
 
 // Answers API models
 export { AnswersError } from './answersapi/AnswersError';
@@ -11,7 +12,7 @@ export {
   SearchConfig,
   BaseSearchConfig,
   SearchConfigWithApiKey,
-  AnswersConfigWithToken
+  SearchConfigWithToken
 } from './core/SearchConfig';
 export { AnswersRequest } from './core/AnswersRequest';
 export { Endpoints } from './core/Endpoints';

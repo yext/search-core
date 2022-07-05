@@ -57,7 +57,7 @@ export interface SearchConfigWithApiKey extends BaseSearchConfig {
  * options from {@link BaseSearchConfig}, but requires token.
  * @public
  */
-export interface AnswersConfigWithToken extends BaseSearchConfig {
+export interface SearchConfigWithToken extends BaseSearchConfig {
   /**
    * The authentication token of the answers experience
    * which will be passed in the Auth header as a Bearer token.
@@ -76,7 +76,7 @@ export interface AnswersConfigWithToken extends BaseSearchConfig {
  *
  * @public
  */
-export type SearchConfig = SearchConfigWithApiKey | AnswersConfigWithToken;
+export type SearchConfig = SearchConfigWithApiKey | SearchConfigWithToken;
 
 /**
  * The AnswersConfig after any defaulting has been done from within answers-core.
