@@ -25,7 +25,7 @@ export class SearchCore {
   ) {}
 
   /**
-   * Performs an Answers search across all verticals.
+   * Performs an Search across all verticals.
    *
    * @remarks
    * If rejected, the reason will be an {@link SearchError}.
@@ -37,7 +37,7 @@ export class SearchCore {
   }
 
   /**
-   * Performs an Answers search for a single vertical.
+   * Performs an Search for a single vertical.
    *
    * @remarks
    * If rejected, the reason will be an {@link SearchError}.

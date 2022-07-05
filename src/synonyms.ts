@@ -1,4 +1,4 @@
-import { SearchCore } from "./SearchCore";
+import { SearchCore } from './SearchCore';
 
 /**
  * @public @deprecated AnswersCore was deprecated and replaced by SearchCore
