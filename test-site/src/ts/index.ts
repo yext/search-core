@@ -1,4 +1,4 @@
-import { provideCore, AnswersConfig, AnswersCore } from '@yext/answers-core';
+import { provideCore, AnswersConfig, AnswersCore } from '@yext/search-core';
 import verticalRequest from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
