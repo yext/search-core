@@ -11,7 +11,7 @@ import { defaultEndpoints } from './constants';
  * The entrypoint to the search-core library.
  *
  * @remarks
- * Returns an {@link SearchCore} instance.
+ * Returns an {@link AnswersCore} instance.
  *
  * @param config - The search-core config
  *
