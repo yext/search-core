@@ -1,4 +1,4 @@
-import { SearchError } from './answersapi/AnswersError';
+import { SearchError } from './answersapi/SearchError';
 import { SearchConfigWithApiKey } from './core/AnswersConfig';
 import { SearchConfigWithToken } from './core/AnswersConfig';
 import { SearchRequest } from './core/SearchRequest';

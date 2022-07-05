@@ -5,7 +5,7 @@ export { AnswersConfigWithToken } from './synonyms';
 export { AnswersRequest } from'./synonyms';
 
 // Answers API models
-export { SearchError } from './answersapi/AnswersError';
+export { SearchError } from './answersapi/SearchError';
 
 // Core models
 export {

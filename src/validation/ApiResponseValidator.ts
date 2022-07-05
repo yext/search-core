@@ -1,5 +1,5 @@
 import { ApiResponse } from '../models/answersapi/ApiResponse';
-import { SearchError } from '../models/answersapi/AnswersError';
+import { SearchError } from '../models/answersapi/SearchError';
 
 /**
  * Determines whether or not an API response can be used to construct an answers-core response
