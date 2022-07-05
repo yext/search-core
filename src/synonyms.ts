@@ -1,6 +1,6 @@
 import { SearchCore } from "./SearchCore";
 
 /**
- * @deprecated 
+ * @public @deprecated 
  */
 export class AnswersCore extends SearchCore{};

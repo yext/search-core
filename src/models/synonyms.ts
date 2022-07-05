@@ -4,21 +4,21 @@ import { SearchConfigWithToken } from './core/AnswersConfig';
 import { SearchRequest } from './core/SearchRequest';
 
 /**
- * @deprecated 
+ * @public @deprecated 
  */
 export class AnswersError extends SearchError{};
 
 /**
- * @deprecated 
+ * @public @deprecated 
  */
 export interface AnswersConfigWithApiKey extends SearchConfigWithApiKey{};
 
 /**
- * @deprecated 
+ * @public @deprecated 
  */
 export interface AnswersConfigWithToken extends SearchConfigWithToken{};
 
 /**
- * @deprecated 
+ * @public @deprecated 
  */
 export interface AnswersRequest extends SearchRequest{};
