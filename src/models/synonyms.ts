@@ -1,5 +1,5 @@
 import { SearchError } from './answersapi/SearchError';
-import { SearchConfigWithApiKey, SearchConfigWithToken, BaseSearchConfig } from './core/SearchConfig';
+import { SearchConfigWithApiKey, SearchConfigWithToken, BaseSearchConfig, SearchConfig } from './core/SearchConfig';
 import { SearchRequest } from './core/SearchRequest';
 
 
@@ -27,3 +27,8 @@ export type AnswersRequest = SearchRequest;
  * @public @deprecated BaseAnswersConfig was deprecated and replaced by BaseSearchConfig
  */
  export type BaseAnswersConfig = BaseSearchConfig;
+
+ /**
+ * @public @deprecated AnswersConfig was deprecated and replaced by SearchConfig
+ */
+  export type AnswersConfig = SearchConfig;

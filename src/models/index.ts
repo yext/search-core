@@ -4,13 +4,14 @@ export { AnswersConfigWithApiKey } from './synonyms';
 export { AnswersConfigWithToken } from './synonyms';
 export { AnswersRequest } from'./synonyms';
 export { BaseAnswersConfig } from'./synonyms';
+export { AnswersConfig } from'./synonyms';
 
 // Answers API models
 export { SearchError } from './answersapi/SearchError';
 
 // Core models
 export {
-  AnswersConfig,
+  SearchConfig,
   BaseSearchConfig,
   SearchConfigWithApiKey,
   SearchConfigWithToken

@@ -76,11 +76,11 @@ export interface SearchConfigWithToken extends BaseSearchConfig {
  *
  * @public
  */
-export type AnswersConfig = SearchConfigWithApiKey | SearchConfigWithToken;
+export type SearchConfig = SearchConfigWithApiKey | SearchConfigWithToken;
 
 /**
- * The AnswersConfig after any defaulting has been done from within answers-core.
+ * The SearchConfig after any defaulting has been done from within search-core.
  *
  * @internal
  */
-export type AnswersConfigWithDefaulting = AnswersConfig & { endpoints: Required<Endpoints> };
+export type SearchConfigWithDefaulting = SearchConfig & { endpoints: Required<Endpoints> };
