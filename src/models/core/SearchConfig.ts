@@ -5,7 +5,7 @@ import { Visitor } from './Visitor';
  * The base configuration options for {@link SearchCore}.
  * @public
  */
-export interface BaseAnswersConfig {
+export interface BaseSearchConfig {
   /** The experience key of the answers experience. */
   experienceKey: string,
   /** The locale of the answers experience. */
@@ -40,10 +40,10 @@ export interface BaseAnswersConfig {
 
 /**
  * Configuration options for {@link SearchCore}, which includes the
- * options from {@link BaseAnswersConfig}, but requires apiKey.
+ * options from {@link BaseSearchConfig}, but requires apiKey.
  * @public
  */
-export interface SearchConfigWithApiKey extends BaseAnswersConfig {
+export interface SearchConfigWithApiKey extends BaseSearchConfig {
   /** The api key of the answers experience which will be sent as a query param. */
   apiKey: string,
   /**
@@ -54,10 +54,10 @@ export interface SearchConfigWithApiKey extends BaseAnswersConfig {
 
 /**
  * Configuration options for {@link SearchCore}, which includes the
- * options from {@link BaseAnswersConfig}, but requires token.
+ * options from {@link BaseSearchConfig}, but requires token.
  * @public
  */
-export interface SearchConfigWithToken extends BaseAnswersConfig {
+export interface SearchConfigWithToken extends BaseSearchConfig {
   /**
    * The authentication token of the answers experience
    * which will be passed in the Auth header as a Bearer token.
@@ -71,7 +71,7 @@ export interface SearchConfigWithToken extends BaseAnswersConfig {
 
 /**
  * The main configuration options for {@link SearchCore}.
- * For a full description of the options, see {@link BaseAnswersConfig}.
+ * For a full description of the options, see {@link BaseSearchConfig}.
  * The config requires either an apiKey or a token.
  *
  * @public

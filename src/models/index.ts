@@ -3,6 +3,7 @@ export { AnswersError } from './synonyms';
 export { AnswersConfigWithApiKey } from './synonyms';
 export { AnswersConfigWithToken } from './synonyms';
 export { AnswersRequest } from'./synonyms';
+export { BaseAnswersConfig } from'./synonyms';
 
 // Answers API models
 export { SearchError } from './answersapi/SearchError';
@@ -10,10 +11,10 @@ export { SearchError } from './answersapi/SearchError';
 // Core models
 export {
   AnswersConfig,
-  BaseAnswersConfig,
+  BaseSearchConfig,
   SearchConfigWithApiKey,
   SearchConfigWithToken
-} from './core/AnswersConfig';
+} from './core/SearchConfig';
 export { SearchRequest } from './core/SearchRequest';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';
