@@ -1,13 +1,16 @@
+// deprecated symbols
+export { AnswersConfig } from './deprecated';
+
 // Answers API models
 export { AnswersError } from './answersapi/AnswersError';
 
 // Core models
 export {
-  AnswersConfig,
+  SearchConfig,
   BaseAnswersConfig,
   AnswersConfigWithApiKey,
   AnswersConfigWithToken
-} from './core/AnswersConfig';
+} from './core/SearchConfig';
 export { AnswersRequest } from './core/AnswersRequest';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';

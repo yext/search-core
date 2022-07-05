@@ -6,7 +6,7 @@ import {
 } from '../models/autocompleteservice/AutocompleteRequest';
 import { AutocompleteResponse, FilterSearchResponse } from '../models/autocompleteservice/AutocompleteResponse';
 import { defaultApiVersion } from '../constants';
-import { AnswersConfigWithDefaulting } from '../models/core/AnswersConfig';
+import { AnswersConfigWithDefaulting } from '../models/core/SearchConfig';
 import { HttpService } from '../services/HttpService';
 import { AutocompleteQueryParams } from '../models/autocompleteservice/AutocompleteQueryParams';
 import { AutocompleteService } from '../services/AutocompleteService';

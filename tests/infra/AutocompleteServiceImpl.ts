@@ -1,5 +1,5 @@
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
-import { AnswersConfigWithDefaulting } from '../../src/models/core/AnswersConfig';
+import { AnswersConfigWithDefaulting } from '../../src/models/core/SearchConfig';
 import {
   UniversalAutocompleteRequest,
   VerticalAutocompleteRequest,
@@ -41,15 +41,15 @@ describe('AutocompleteService', () => {
   const apiResponseValidator = new ApiResponseValidator();
   function createMockAutocompleteService(params?: {
     response?: ApiResponse,
-    answersConfig?: AnswersConfigWithDefaulting
+    searchConfig?: AnswersConfigWithDefaulting
   }) {
     const {
       response = mockAutocompleteResponse,
-      answersConfig = config
+      searchConfig = config
     } = params || {};
     mockHttpService.get.mockResolvedValue(response);
     return new AutocompleteServiceImpl(
-      answersConfig,
+      searchConfig,
       mockHttpService as HttpService,
       apiResponseValidator
     );
@@ -85,7 +85,7 @@ describe('AutocompleteService', () => {
     });
 
     it('query params are correct with token', async () => {
-      const autocompleteService = createMockAutocompleteService({ answersConfig: configWithToken });
+      const autocompleteService = createMockAutocompleteService({ searchConfig: configWithToken });
       const expectedQueryParams = {
         input: '',
         experienceKey: 'testExperienceKey',
@@ -171,7 +171,7 @@ describe('AutocompleteService', () => {
     });
 
     it('query params are correct with token', async () => {
-      const autocompleteService = createMockAutocompleteService({ answersConfig: configWithToken });
+      const autocompleteService = createMockAutocompleteService({ searchConfig: configWithToken });
 
       const { api_key: _, ...expectedParams } = expectedQueryParams;
       await autocompleteService.verticalAutocomplete(request);

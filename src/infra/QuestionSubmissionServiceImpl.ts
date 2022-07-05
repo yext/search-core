@@ -1,7 +1,7 @@
 import { defaultApiVersion } from '../constants';
 import { QuestionSubmissionService } from '../services/QuestionSubmissionService';
 import { HttpService } from '../services/HttpService';
-import { AnswersConfigWithDefaulting } from '../models/core/AnswersConfig';
+import { AnswersConfigWithDefaulting } from '../models/core/SearchConfig';
 import { QuestionSubmissionRequest } from '../models/questionsubmission/QuestionSubmissionRequest';
 import { QuestionSubmissionResponse } from '../models/questionsubmission/QuestionSubmissionResponse';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';

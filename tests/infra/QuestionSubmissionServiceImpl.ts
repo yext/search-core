@@ -1,7 +1,7 @@
 import { QuestionSubmissionServiceImpl } from '../../src/infra/QuestionSubmissionServiceImpl';
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { HttpService } from '../../src/services/HttpService';
-import { AnswersConfigWithDefaulting } from '../../src/models/core/AnswersConfig';
+import { AnswersConfigWithDefaulting } from '../../src/models/core/SearchConfig';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { defaultApiVersion, defaultEndpoints } from '../../src/constants';
 
