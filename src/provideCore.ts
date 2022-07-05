@@ -13,7 +13,7 @@ import { defaultEndpoints } from './constants';
  * @remarks
  * Returns an {@link SearchCore} instance.
  *
- * @param config - The answers-core config
+ * @param config - The search-core config
  *
  * @public
  */
