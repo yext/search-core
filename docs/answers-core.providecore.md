@@ -4,19 +4,19 @@
 
 ## provideCore() function
 
-The entrypoint to the answers-core library.
+The entrypoint to the search-core library.
 
 <b>Signature:</b>
 
 ```typescript
-export declare function provideCore(config: AnswersConfig): AnswersCore;
+export declare function provideCore(config: SearchConfig): AnswersCore;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  config | [AnswersConfig](./answers-core.answersconfig.md) | The answers-core config |
+|  config | [SearchConfig](./answers-core.searchconfig.md) | The search-core config |
 
 <b>Returns:</b>
 

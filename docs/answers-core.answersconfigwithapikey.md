@@ -2,21 +2,17 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md)
 
-## AnswersConfigWithApiKey interface
+## AnswersConfigWithApiKey type
 
-Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires apiKey.
+> Warning: This API is now obsolete.
+> 
+> AnswersConfigWithApiKey is deprecated and has been replaced by SearchConfigWithApiKey
+> 
 
 <b>Signature:</b>
 
 ```typescript
-export interface AnswersConfigWithApiKey extends BaseAnswersConfig 
+export declare type AnswersConfigWithApiKey = SearchConfigWithApiKey;
 ```
-<b>Extends:</b> [BaseAnswersConfig](./answers-core.baseanswersconfig.md)
-
-## Properties
-
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [apiKey](./answers-core.answersconfigwithapikey.apikey.md) | string | The api key of the answers experience which will be sent as a query param. |
-|  [token?](./answers-core.answersconfigwithapikey.token.md) | never | <i>(Optional)</i> token should NOT be provided along with apiKey. |
+<b>References:</b> [SearchConfigWithApiKey](./answers-core.searchconfigwithapikey.md)
 

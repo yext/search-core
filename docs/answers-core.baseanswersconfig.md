@@ -2,23 +2,17 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [BaseAnswersConfig](./answers-core.baseanswersconfig.md)
 
-## BaseAnswersConfig interface
+## BaseAnswersConfig type
 
-The base configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->.
+> Warning: This API is now obsolete.
+> 
+> BaseAnswersConfig is deprecated and has been replaced by BaseSearchConfig
+> 
 
 <b>Signature:</b>
 
 ```typescript
-export interface BaseAnswersConfig 
+export declare type BaseAnswersConfig = BaseSearchConfig;
 ```
-
-## Properties
-
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [endpoints?](./answers-core.baseanswersconfig.endpoints.md) | [Endpoints](./answers-core.endpoints.md) | <i>(Optional)</i> Overrides for the URLs which are used when making requests to the Answers API. |
-|  [experienceKey](./answers-core.baseanswersconfig.experiencekey.md) | string | The experience key of the answers experience. |
-|  [experienceVersion?](./answers-core.baseanswersconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the answers experience configuration. |
-|  [locale](./answers-core.baseanswersconfig.locale.md) | string | The locale of the answers experience. |
-|  [visitor?](./answers-core.baseanswersconfig.visitor.md) | [Visitor](./answers-core.visitor.md) | <i>(Optional)</i> Information used to associate requests with a particular user. |
+<b>References:</b> [BaseSearchConfig](./answers-core.basesearchconfig.md)
 

@@ -2,21 +2,17 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md)
 
-## AnswersConfigWithToken interface
+## AnswersConfigWithToken type
 
-Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires token.
+> Warning: This API is now obsolete.
+> 
+> AnswersConfigWithToken is deprecated and has been replaced by SearchConfigWithToken
+> 
 
 <b>Signature:</b>
 
 ```typescript
-export interface AnswersConfigWithToken extends BaseAnswersConfig 
+export declare type AnswersConfigWithToken = SearchConfigWithToken;
 ```
-<b>Extends:</b> [BaseAnswersConfig](./answers-core.baseanswersconfig.md)
-
-## Properties
-
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [apiKey?](./answers-core.answersconfigwithtoken.apikey.md) | never | <i>(Optional)</i> apiKey should NOT be provided along with token. |
-|  [token](./answers-core.answersconfigwithtoken.token.md) | string | The authentication token of the answers experience which will be passed in the Auth header as a Bearer token. |
+<b>References:</b> [SearchConfigWithToken](./answers-core.searchconfigwithtoken.md)
 

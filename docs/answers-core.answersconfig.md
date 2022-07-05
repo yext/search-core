@@ -4,12 +4,15 @@
 
 ## AnswersConfig type
 
-The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->. The config requires either an apiKey or a token.
+> Warning: This API is now obsolete.
+> 
+> AnswersConfig is deprecated and has been replaced by SearchConfig
+> 
 
 <b>Signature:</b>
 
 ```typescript
-export declare type AnswersConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;
+export declare type AnswersConfig = SearchConfig;
 ```
-<b>References:</b> [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md)<!-- -->, [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md)
+<b>References:</b> [SearchConfig](./answers-core.searchconfig.md)
 
