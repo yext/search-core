@@ -2,19 +2,17 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [AnswersRequest](./answers-core.answersrequest.md)
 
-## AnswersRequest interface
+## AnswersRequest type
 
-Options for an Answers API request.
+> Warning: This API is now obsolete.
+> 
+> AnswersRequest is deprecated and has been replaced by SearchRequest
+> 
 
 <b>Signature:</b>
 
 ```typescript
-export interface AnswersRequest 
+export declare type AnswersRequest = SearchRequest;
 ```
-
-## Properties
-
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [additionalHttpHeaders?](./answers-core.answersrequest.additionalhttpheaders.md) | [AdditionalHttpHeaders](./answers-core.additionalhttpheaders.md) | <i>(Optional)</i> AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
+<b>References:</b> [SearchRequest](./answers-core.searchrequest.md)
 

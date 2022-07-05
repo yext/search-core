@@ -8,8 +8,9 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [AnswersCore](./answers-core.answerscore.md) | Provides methods for executing searches, submitting questions, and performing autocompletes. |
-|  [AnswersError](./answers-core.answerserror.md) | Represents an error |
+|  [AnswersCore](./answers-core.answerscore.md) |  |
+|  [SearchCore](./answers-core.searchcore.md) | Provides methods for executing searches, submitting questions, and performing autocompletes. |
+|  [SearchError](./answers-core.searcherror.md) | Represents an error |
 
 ## Enumerations
 
@@ -42,7 +43,6 @@
 |  [AdditionalHttpHeaders](./answers-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
 |  [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires apiKey. |
 |  [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md) | Configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->, but requires token. |
-|  [AnswersRequest](./answers-core.answersrequest.md) | Options for an Answers API request. |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutocompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |
@@ -76,6 +76,7 @@
 |  [QuestionSubmissionService](./answers-core.questionsubmissionservice.md) | Submits a custom question to the Answers API. |
 |  [Result](./answers-core.result.md) | An individual search result. |
 |  [SearchParameterField](./answers-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
+|  [SearchRequest](./answers-core.searchrequest.md) | Options for an Search API request. |
 |  [SearchService](./answers-core.searchservice.md) | A service which performs Yext Answers searches |
 |  [Snippet](./answers-core.snippet.md) | The section of text where a [FeaturedSnippetDirectAnswer](./answers-core.featuredsnippetdirectanswer.md) was found. |
 |  [SortBy](./answers-core.sortby.md) | Represents a criterion that can be used to sort results. |
@@ -102,6 +103,8 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [AnswersConfig](./answers-core.answersconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseAnswersConfig](./answers-core.baseanswersconfig.md)<!-- -->. The config requires either an apiKey or a token. |
+|  [AnswersError](./answers-core.answerserror.md) |  |
+|  [AnswersRequest](./answers-core.answersrequest.md) |  |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [HighlightedFields](./answers-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Answers API |
 

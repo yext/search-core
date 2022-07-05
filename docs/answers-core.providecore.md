@@ -9,7 +9,7 @@ The entrypoint to the answers-core library.
 <b>Signature:</b>
 
 ```typescript
-export declare function provideCore(config: AnswersConfig): AnswersCore;
+export declare function provideCore(config: AnswersConfig): SearchCore;
 ```
 
 ## Parameters
@@ -20,9 +20,9 @@ export declare function provideCore(config: AnswersConfig): AnswersCore;
 
 <b>Returns:</b>
 
-[AnswersCore](./answers-core.answerscore.md)
+[SearchCore](./answers-core.searchcore.md)
 
 ## Remarks
 
-Returns an [AnswersCore](./answers-core.answerscore.md) instance.
+Returns an [SearchCore](./answers-core.searchcore.md) instance.
 

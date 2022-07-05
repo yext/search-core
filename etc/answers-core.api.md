@@ -24,30 +24,15 @@ export interface AnswersConfigWithToken extends BaseAnswersConfig {
     token: string;
 }
 
-// @public
-export class AnswersCore {
-    constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService);
-    filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>;
-    submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
-    universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>;
-    universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
-    verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse>;
-    verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
+// @public @deprecated (undocumented)
+export class AnswersCore extends SearchCore {
 }
 
-// @public
-export class AnswersError extends Error {
-    // @internal
-    constructor(message: string, code?: number, type?: string);
-    code?: number;
-    message: string;
-    type?: string;
-}
+// @public @deprecated (undocumented)
+export type AnswersError = SearchError;
 
-// @public
-export interface AnswersRequest {
-    additionalHttpHeaders?: AdditionalHttpHeaders;
-}
+// @public @deprecated (undocumented)
+export type AnswersRequest = SearchRequest;
 
 // @public
 export interface AppliedQueryFilter {
@@ -243,7 +228,7 @@ export enum FilterCombinator {
 }
 
 // @public
-export interface FilterSearchRequest extends AnswersRequest {
+export interface FilterSearchRequest extends SearchRequest {
     excluded?: Filter[];
     fields: SearchParameterField[];
     input: string;
@@ -347,7 +332,7 @@ export interface NumberRangeValue {
 }
 
 // @public
-export function provideCore(config: AnswersConfig): AnswersCore;
+export function provideCore(config: AnswersConfig): SearchCore;
 
 // @public
 export interface QueryRulesActionsData {
@@ -374,7 +359,7 @@ export enum QueryTrigger {
 }
 
 // @public
-export interface QuestionSubmissionRequest extends AnswersRequest {
+export interface QuestionSubmissionRequest extends SearchRequest {
     email: string;
     entityId: string;
     name: string;
@@ -412,6 +397,26 @@ export interface Result {
 export const SandboxEndpoints: Required<Endpoints>;
 
 // @public
+export class SearchCore {
+    constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService);
+    filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>;
+    submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
+    universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>;
+    universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
+    verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse>;
+    verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
+}
+
+// @public
+export class SearchError extends Error {
+    // @internal
+    constructor(message: string, code?: number, type?: string);
+    code?: number;
+    message: string;
+    type?: string;
+}
+
+// @public
 export enum SearchIntent {
     NearMe = "NEAR_ME"
 }
@@ -421,6 +426,11 @@ export interface SearchParameterField {
     entityType: string;
     fetchEntities: boolean;
     fieldApiName: string;
+}
+
+// @public
+export interface SearchRequest {
+    additionalHttpHeaders?: AdditionalHttpHeaders;
 }
 
 // @public
@@ -477,7 +487,7 @@ export enum SpellCheckType {
 }
 
 // @public
-export interface UniversalAutocompleteRequest extends AnswersRequest {
+export interface UniversalAutocompleteRequest extends SearchRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
 }
@@ -489,7 +499,7 @@ export interface UniversalLimit {
 }
 
 // @public
-export interface UniversalSearchRequest extends AnswersRequest {
+export interface UniversalSearchRequest extends SearchRequest {
     context?: Context;
     limit?: UniversalLimit;
     location?: LatLong;
@@ -523,7 +533,7 @@ export interface UpperNumberRangeLimit {
 }
 
 // @public
-export interface VerticalAutocompleteRequest extends AnswersRequest {
+export interface VerticalAutocompleteRequest extends SearchRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
     verticalKey: string;
@@ -540,7 +550,7 @@ export interface VerticalResults {
 }
 
 // @public
-export interface VerticalSearchRequest extends AnswersRequest {
+export interface VerticalSearchRequest extends SearchRequest {
     context?: Context;
     facets?: Facet[];
     limit?: number;

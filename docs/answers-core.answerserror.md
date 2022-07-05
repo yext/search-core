@@ -2,28 +2,17 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [AnswersError](./answers-core.answerserror.md)
 
-## AnswersError class
+## AnswersError type
 
-Represents an error
+> Warning: This API is now obsolete.
+> 
+> AnswersError is deprecated and has been replaced by SearchError
+> 
 
 <b>Signature:</b>
 
 ```typescript
-export declare class AnswersError extends Error 
+export declare type AnswersError = SearchError;
 ```
-<b>Extends:</b> Error
-
-## Remarks
-
-If the error originates from the Answer API, the code and type property will be present.
-
-The constructor for this class is marked as internal. Third-party code should not call the constructor directly or create subclasses that extend the `AnswersError` class.
-
-## Properties
-
-|  Property | Modifiers | Type | Description |
-|  --- | --- | --- | --- |
-|  [code?](./answers-core.answerserror.code.md) |  | number | <i>(Optional)</i> Answers API error code. |
-|  [message](./answers-core.answerserror.message.md) |  | string | The error message. |
-|  [type?](./answers-core.answerserror.type.md) |  | string | <i>(Optional)</i> Answers API error type. |
+<b>References:</b> [SearchError](./answers-core.searcherror.md)
 

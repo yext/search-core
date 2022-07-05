@@ -9,9 +9,9 @@ Options for a filtersearch request.
 <b>Signature:</b>
 
 ```typescript
-export interface FilterSearchRequest extends AnswersRequest 
+export interface FilterSearchRequest extends SearchRequest 
 ```
-<b>Extends:</b> [AnswersRequest](./answers-core.answersrequest.md)
+<b>Extends:</b> [SearchRequest](./answers-core.searchrequest.md)
 
 ## Properties
 
