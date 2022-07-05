@@ -2,6 +2,7 @@
 export { AnswersError } from './synonyms';
 export { AnswersConfigWithApiKey } from './synonyms';
 export { AnswersConfigWithToken } from './synonyms';
+export { AnswersRequest } from'./synonyms';
 
 // Answers API models
 export { SearchError } from './answersapi/AnswersError';
@@ -13,7 +14,7 @@ export {
   SearchConfigWithApiKey,
   SearchConfigWithToken
 } from './core/AnswersConfig';
-export { AnswersRequest } from './core/AnswersRequest';
+export { SearchRequest } from './core/SearchRequest';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';
 export {
