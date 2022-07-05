@@ -43,7 +43,7 @@ export interface BaseSearchConfig {
  * options from {@link BaseSearchConfig}, but requires apiKey.
  * @public
  */
-export interface AnswersConfigWithApiKey extends BaseSearchConfig {
+export interface SearchConfigWithApiKey extends BaseSearchConfig {
   /** The api key of the answers experience which will be sent as a query param. */
   apiKey: string,
   /**
@@ -76,7 +76,7 @@ export interface AnswersConfigWithToken extends BaseSearchConfig {
  *
  * @public
  */
-export type SearchConfig = AnswersConfigWithApiKey | AnswersConfigWithToken;
+export type SearchConfig = SearchConfigWithApiKey | AnswersConfigWithToken;
 
 /**
  * The AnswersConfig after any defaulting has been done from within answers-core.
