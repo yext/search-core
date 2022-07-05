@@ -8,5 +8,5 @@
 
 |  Package | Description |
 |  --- | --- |
-|  [@yext/answers-core](./answers-core.md) |  |
+|  [@yext/search-core](./search-core.md) |  |
 
