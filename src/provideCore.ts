@@ -4,20 +4,20 @@ import { HttpServiceImpl } from './infra/HttpServiceImpl';
 import { SearchConfig, SearchConfigWithDefaulting } from './models/core/SearchConfig';
 import { AutocompleteServiceImpl } from './infra/AutocompleteServiceImpl';
 import { ApiResponseValidator } from './validation/ApiResponseValidator';
-import { AnswersCore } from './AnswersCore';
+import { SearchCore } from './SearchCore';
 import { defaultEndpoints } from './constants';
 
 /**
  * The entrypoint to the search-core library.
  *
  * @remarks
- * Returns an {@link AnswersCore} instance.
+ * Returns an {@link SearchCore} instance.
  *
  * @param config - The search-core config
  *
  * @public
  */
-export function provideCore(config: SearchConfig): AnswersCore {
+export function provideCore(config: SearchConfig): SearchCore {
   if ('apiKey' in config && 'token' in config) {
     throw new Error('Both apiKey and token are present. Only one authentication method should be provided');
   }
@@ -38,5 +38,5 @@ export function provideCore(config: SearchConfig): AnswersCore {
     defaultedConfig, httpService, apiResponseValidator);
   const autoCompleteService = new AutocompleteServiceImpl(defaultedConfig, httpService, apiResponseValidator);
 
-  return new AnswersCore(searchService, questionSubmissionService, autoCompleteService);
+  return new SearchCore(searchService, questionSubmissionService, autoCompleteService);
 }

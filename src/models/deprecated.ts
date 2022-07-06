@@ -3,6 +3,8 @@ import { SearchConfig } from './core/SearchConfig';
 import { BaseSearchConfig } from './core/SearchConfig';
 import { SearchConfigWithApiKey } from './core/SearchConfig';
 import { SearchConfigWithToken } from './core/SearchConfig';
+import { SearchError } from './answersapi/SearchError';
+import { SearchRequest } from './core/SearchRequest';
 
 /**
  * @deprecated AnswersConfig is deprecated and has been replaced by {@link SearchConfig}
@@ -27,3 +29,15 @@ export interface AnswersConfigWithApiKey extends SearchConfigWithApiKey{}
  * @public
  */
 export interface AnswersConfigWithToken extends SearchConfigWithToken{}
+
+/**
+ * @deprecated AnswersError is deprecated and has been replaced by {@link SearchError}
+ * @public
+ */
+export interface AnswersError extends SearchError{}
+
+/**
+* @deprecated AnswersRequest is deprecated and has been replaced by {@link SearchRequest}
+* @public
+*/
+export interface AnswersRequest extends SearchRequest{}

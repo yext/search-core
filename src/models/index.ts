@@ -3,9 +3,11 @@ export { AnswersConfig } from './deprecated';
 export { BaseAnswersConfig } from './deprecated';
 export { AnswersConfigWithApiKey } from './deprecated';
 export { AnswersConfigWithToken } from './deprecated';
+export { AnswersError } from './deprecated';
+export { AnswersRequest } from './deprecated';
 
 // Answers API models
-export { AnswersError } from './answersapi/AnswersError';
+export { SearchError } from './answersapi/SearchError';
 
 // Core models
 export {
@@ -14,7 +16,7 @@ export {
   SearchConfigWithApiKey,
   SearchConfigWithToken
 } from './core/SearchConfig';
-export { AnswersRequest } from './core/AnswersRequest';
+export { SearchRequest } from './core/SearchRequest';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';
 export {

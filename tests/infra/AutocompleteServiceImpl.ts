@@ -14,7 +14,7 @@ import mockAutocompleteResponseWithVerticalKeys from '../fixtures/autocompletere
 import { defaultEndpoints, defaultApiVersion } from '../../src/constants';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { ApiResponse } from '../../src/models/answersapi/ApiResponse';
-import { AnswersError } from '../../src/models/answersapi/AnswersError';
+import { SearchError } from '../../src/models/answersapi/SearchError';
 import { getClientSdk } from '../../src/utils/getClientSdk';
 import { Matcher } from '../../src/models/searchservice/common/Matcher';
 
@@ -259,7 +259,7 @@ describe('AutocompleteService', () => {
           message: 'Something went wrong.',
           code: 400,
           type: 'BACKEND_ERROR'
-        } as AnswersError);
+        } as SearchError);
     });
   });
 });

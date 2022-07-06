@@ -1,7 +1,7 @@
 {
-  "name": "answers-core-test-repo",
+  "name": "search-core-test-repo",
   "version": "1.0.0",
-  "description": "testing of the answers-core",
+  "description": "testing of the search-core",
   "private": "true",
   "devDependencies": {
     "ts-loader": "^9.2.6",
