@@ -4,7 +4,7 @@
 
 ## SearchService interface
 
-A service which performs Yext Search
+A service which performs Yext Search.
 
 <b>Signature:</b>
 
