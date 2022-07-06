@@ -96,7 +96,7 @@ export interface BaseSearchConfig {
 // @public
 export interface ClientSDKHeaderValues {
     [agent: string]: string | undefined;
-    ANSWERS_CORE?: never;
+    SEARCH_CORE?: never;
 }
 
 // @public
