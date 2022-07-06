@@ -60,7 +60,7 @@ Now that the core is initialized, let's run a search on an "FAQs" vertical.
 ```js
 core.verticalSearch({
   verticalKey: 'FAQs',
-  query: 'What is Yext Searcn?',
+  query: 'What is Yext Search?',
 }).then(results => {
   // Do something with the search results
 }).catch(err => {
