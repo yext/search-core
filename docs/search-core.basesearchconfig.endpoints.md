@@ -4,7 +4,7 @@
 
 ## BaseSearchConfig.endpoints property
 
-Overrides for the URLs which are used when making requests to the Answers API.
+Overrides for the URLs which are used when making requests to the Search API.
 
 <b>Signature:</b>
 

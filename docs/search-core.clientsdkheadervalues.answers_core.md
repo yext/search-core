@@ -4,7 +4,7 @@
 
 ## ClientSDKHeaderValues.ANSWERS\_CORE property
 
-The ANSWERS\_CORE agent should not be supplied. Instead, it will be automatically added to the header and populated with the version of Answers Core being used.
+The ANSWERS\_CORE agent should not be supplied. Instead, it will be automatically added to the header and populated with the version of Search Core being used.
 
 <b>Signature:</b>
 

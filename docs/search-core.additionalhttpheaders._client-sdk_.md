@@ -4,7 +4,7 @@
 
 ## AdditionalHttpHeaders."Client-SDK" property
 
-Additional agents and their versions used to create the Answers experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent.
+Additional agents and their versions used to create the Search experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent.
 
 <b>Signature:</b>
 

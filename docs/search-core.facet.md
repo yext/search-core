@@ -4,7 +4,7 @@
 
 ## Facet interface
 
-Represents dynamic filter options for the Answers API.
+Represents dynamic filter options for the Search API.
 
 <b>Signature:</b>
 

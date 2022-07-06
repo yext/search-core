@@ -4,7 +4,7 @@
 
 ## UniversalSearchRequest.context property
 
-Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->.
+Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->.
 
 <b>Signature:</b>
 

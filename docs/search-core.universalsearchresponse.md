@@ -20,7 +20,7 @@ export interface UniversalSearchResponse
 |  [failedVerticals?](./search-core.universalsearchresponse.failedverticals.md) | [FailedVertical](./search-core.failedvertical.md)<!-- -->\[\] | <i>(Optional)</i> Error information from when a vertical fails to return results. |
 |  [locationBias?](./search-core.universalsearchresponse.locationbias.md) | [LocationBias](./search-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
 |  [queryId?](./search-core.universalsearchresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
-|  [queryRulesActionsData?](./search-core.universalsearchresponse.queryrulesactionsdata.md) | [QueryRulesActionsData](./search-core.queryrulesactionsdata.md)<!-- -->\[\] | <i>(Optional)</i> Data returned from the Answers query rules system. |
+|  [queryRulesActionsData?](./search-core.universalsearchresponse.queryrulesactionsdata.md) | [QueryRulesActionsData](./search-core.queryrulesactionsdata.md)<!-- -->\[\] | <i>(Optional)</i> Data returned from the Search query rules system. |
 |  [searchIntents?](./search-core.universalsearchresponse.searchintents.md) | [SearchIntent](./search-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./search-core.searchintent.md)<!-- -->s which represents requests from the API. |
 |  [spellCheck?](./search-core.universalsearchresponse.spellcheck.md) | [SpellCheck](./search-core.spellcheck.md) | <i>(Optional)</i> A spellcheck response from a search query. |
 |  [uuid](./search-core.universalsearchresponse.uuid.md) | string | A unique id which corresponds to the request. |

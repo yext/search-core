@@ -4,7 +4,7 @@
 
 ## SearchIntent enum
 
-Represents intents from the Answers API.
+Represents intents from the Search API.
 
 <b>Signature:</b>
 
@@ -16,5 +16,5 @@ export declare enum SearchIntent
 
 |  Member | Value | Description |
 |  --- | --- | --- |
-|  NearMe | <code>&quot;NEAR_ME&quot;</code> | The Answers API is requesting a prompt for the user's location. |
+|  NearMe | <code>&quot;NEAR_ME&quot;</code> | The Search API is requesting a prompt for the user's location. |
 

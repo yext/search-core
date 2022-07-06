@@ -4,7 +4,7 @@
 
 ## AppliedQueryFilter interface
 
-A filter that the Answers API applied to the search.
+A filter that the Search API applied to the search.
 
 <b>Signature:</b>
 

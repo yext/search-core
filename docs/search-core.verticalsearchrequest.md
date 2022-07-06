@@ -17,7 +17,7 @@ export interface VerticalSearchRequest extends SearchRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [context?](./search-core.verticalsearchrequest.context.md) | [Context](./search-core.context.md) | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
+|  [context?](./search-core.verticalsearchrequest.context.md) | [Context](./search-core.context.md) | <i>(Optional)</i> Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [facets?](./search-core.verticalsearchrequest.facets.md) | [Facet](./search-core.facet.md)<!-- -->\[\] | <i>(Optional)</i> The facet filters to apply to the search. |
 |  [limit?](./search-core.verticalsearchrequest.limit.md) | number | <i>(Optional)</i> The maximum number of results to include with a max of 50. |
 |  [location?](./search-core.verticalsearchrequest.location.md) | [LatLong](./search-core.latlong.md) | <i>(Optional)</i> The latitude and longitude of the user making the request. Used to bias the results. |

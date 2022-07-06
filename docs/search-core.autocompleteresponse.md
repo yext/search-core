@@ -16,7 +16,7 @@ export interface AutocompleteResponse
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [inputIntents](./search-core.autocompleteresponse.inputintents.md) | [SearchIntent](./search-core.searchintent.md)<!-- -->\[\] | Represents intents from the Answers API. |
+|  [inputIntents](./search-core.autocompleteresponse.inputintents.md) | [SearchIntent](./search-core.searchintent.md)<!-- -->\[\] | Represents intents from the Search API. |
 |  [queryId?](./search-core.autocompleteresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
 |  [results](./search-core.autocompleteresponse.results.md) | [AutocompleteResult](./search-core.autocompleteresult.md)<!-- -->\[\] | An array of [AutocompleteResult](./search-core.autocompleteresult.md)<!-- -->s. |
 |  [uuid](./search-core.autocompleteresponse.uuid.md) | string | A unique id which corresponds to the request. |

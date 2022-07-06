@@ -4,7 +4,7 @@
 
 ## SearchConfigWithToken interface
 
-Configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires token.
+Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires token.
 
 <b>Signature:</b>
 
@@ -18,5 +18,5 @@ export interface SearchConfigWithToken extends BaseSearchConfig
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [apiKey?](./search-core.searchconfigwithtoken.apikey.md) | never | <i>(Optional)</i> apiKey should NOT be provided along with token. |
-|  [token](./search-core.searchconfigwithtoken.token.md) | string | The authentication token of the answers experience which will be passed in the Auth header as a Bearer token. |
+|  [token](./search-core.searchconfigwithtoken.token.md) | string | The authentication token of the search experience which will be passed in the Auth header as a Bearer token. |
 

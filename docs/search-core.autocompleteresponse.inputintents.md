@@ -4,7 +4,7 @@
 
 ## AutocompleteResponse.inputIntents property
 
-Represents intents from the Answers API.
+Represents intents from the Search API.
 
 <b>Signature:</b>
 

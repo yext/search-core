@@ -25,7 +25,7 @@
 |  [Matcher](./search-core.matcher.md) | A Matcher is a filtering operation. |
 |  [QuerySource](./search-core.querysource.md) | The source of the search request. |
 |  [QueryTrigger](./search-core.querytrigger.md) | Describes the ways a search can be executed besides user input. |
-|  [SearchIntent](./search-core.searchintent.md) | Represents intents from the Answers API. |
+|  [SearchIntent](./search-core.searchintent.md) | Represents intents from the Search API. |
 |  [SortType](./search-core.sorttype.md) | The method of sorting. |
 |  [Source](./search-core.source.md) | Represents the source of a [Result](./search-core.result.md)<!-- -->. |
 |  [SpellCheckType](./search-core.spellchecktype.md) | Represents the type of spell check performed. |
@@ -45,19 +45,19 @@
 |  [AnswersConfigWithToken](./search-core.answersconfigwithtoken.md) |  |
 |  [AnswersError](./search-core.answerserror.md) |  |
 |  [AnswersRequest](./search-core.answersrequest.md) |  |
-|  [AppliedQueryFilter](./search-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
+|  [AppliedQueryFilter](./search-core.appliedqueryfilter.md) | A filter that the Search API applied to the search. |
 |  [AutocompleteResponse](./search-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./search-core.autocompleteresult.md) | An autocomplete suggestion. |
 |  [AutocompleteService](./search-core.autocompleteservice.md) | A service for autocomplete requests. |
 |  [BaseAnswersConfig](./search-core.baseanswersconfig.md) |  |
-|  [BaseSearchConfig](./search-core.basesearchconfig.md) | The base configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->. |
-|  [ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md) | Additional agents and their versions used to create the Answers experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
+|  [BaseSearchConfig](./search-core.basesearchconfig.md) | The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. |
+|  [ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md) | Additional agents and their versions used to create the Search experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
 |  [CombinedFilter](./search-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
 |  [DirectAnswer](./search-core.directanswer.md) | A direct answer to a search. |
 |  [DisplayableFacet](./search-core.displayablefacet.md) | A [Facet](./search-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./search-core.displayablefacetoption.md) | A [FacetOption](./search-core.facetoption.md) with extra data meant to be displayed to the end user. |
-|  [Endpoints](./search-core.endpoints.md) | Overrides for the URLs which are used when making requests to the Answers API. |
-|  [Facet](./search-core.facet.md) | Represents dynamic filter options for the Answers API. |
+|  [Endpoints](./search-core.endpoints.md) | Overrides for the URLs which are used when making requests to the Search API. |
+|  [Facet](./search-core.facet.md) | Represents dynamic filter options for the Search API. |
 |  [FacetOption](./search-core.facetoption.md) | A filter associated with the facet. |
 |  [FailedVertical](./search-core.failedvertical.md) | Error information from when a vertical fails to return results. |
 |  [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) | A direct answer which was found within a document. |
@@ -65,7 +65,7 @@
 |  [Filter](./search-core.filter.md) | Represents a filter which compares values to a single field. |
 |  [FilterSearchRequest](./search-core.filtersearchrequest.md) | Options for a filtersearch request. |
 |  [FilterSearchResponse](./search-core.filtersearchresponse.md) | The response of a filtersearch request. |
-|  [HighlightedValue](./search-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Answers API. |
+|  [HighlightedValue](./search-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Search API. |
 |  [LatLong](./search-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./search-core.locationbias.md) | Information about the user's location. |
 |  [LocationBoundingBox](./search-core.locationboundingbox.md) | Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. (e.g. boundary for a locality or region specific location filter) |
@@ -73,16 +73,16 @@
 |  [LowerNumberRangeLimit](./search-core.lowernumberrangelimit.md) | The start limit of [NumberRangeValue](./search-core.numberrangevalue.md)<!-- -->. |
 |  [NearFilterValue](./search-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./search-core.matcher.md)<!-- -->. |
 |  [NumberRangeValue](./search-core.numberrangevalue.md) | A filter value for a filter with a $between [Matcher](./search-core.matcher.md)<!-- -->. |
-|  [QueryRulesActionsData](./search-core.queryrulesactionsdata.md) | Data returned from the Answers query rules system. |
+|  [QueryRulesActionsData](./search-core.queryrulesactionsdata.md) | Data returned from the Search query rules system. |
 |  [QuestionSubmissionRequest](./search-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
 |  [QuestionSubmissionResponse](./search-core.questionsubmissionresponse.md) | A representation of a question submission response. |
-|  [QuestionSubmissionService](./search-core.questionsubmissionservice.md) | Submits a custom question to the Answers API. |
+|  [QuestionSubmissionService](./search-core.questionsubmissionservice.md) | Submits a custom question to the Search API. |
 |  [Result](./search-core.result.md) | An individual search result. |
-|  [SearchConfigWithApiKey](./search-core.searchconfigwithapikey.md) | Configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires apiKey. |
-|  [SearchConfigWithToken](./search-core.searchconfigwithtoken.md) | Configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires token. |
+|  [SearchConfigWithApiKey](./search-core.searchconfigwithapikey.md) | Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires apiKey. |
+|  [SearchConfigWithToken](./search-core.searchconfigwithtoken.md) | Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires token. |
 |  [SearchParameterField](./search-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
-|  [SearchRequest](./search-core.searchrequest.md) | Options for an Search API request. |
-|  [SearchService](./search-core.searchservice.md) | A service which performs Yext Answers searches |
+|  [SearchRequest](./search-core.searchrequest.md) | Options for a Search API request. |
+|  [SearchService](./search-core.searchservice.md) | A service which performs Yext Search |
 |  [Snippet](./search-core.snippet.md) | The section of text where a [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) was found. |
 |  [SortBy](./search-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./search-core.spellcheck.md) | A spellcheck response from a search query. |
@@ -108,7 +108,7 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [AnswersConfig](./search-core.answersconfig.md) |  |
-|  [Context](./search-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [HighlightedFields](./search-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Answers API |
-|  [SearchConfig](./search-core.searchconfig.md) | The main configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token. |
+|  [Context](./search-core.context.md) | Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
+|  [HighlightedFields](./search-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Search API |
+|  [SearchConfig](./search-core.searchconfig.md) | The main configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token. |
 
