@@ -4,7 +4,7 @@ import { VerticalSearchRequest } from '../models/searchservice/request/VerticalS
 import { VerticalSearchResponse } from '../models/searchservice/response/VerticalSearchResponse';
 
 /**
- * A service which performs Yext Search
+ * A service which performs Yext Search.
  *
  * @public
  */

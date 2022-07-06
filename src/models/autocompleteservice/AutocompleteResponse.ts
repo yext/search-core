@@ -41,7 +41,7 @@ export interface FilterSearchResponse {
     /** An array of {@link AutocompleteResult}s. */
     results: AutocompleteResult[]
   }[],
-  /** ID of the account associated with this Search experience */
+  /** ID of the account associated with this Search experience. */
   businessId?: string,
   /** {@inheritDoc AutocompleteResponse.queryId} */
   queryId?: string,

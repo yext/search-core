@@ -2,7 +2,7 @@ import { ApiResponse } from '../models/answersapi/ApiResponse';
 import { SearchError } from '../models/answersapi/SearchError';
 
 /**
- * Determines whether or not an API response can be used to construct a search-core response
+ * Determines whether or not an API response can be used to construct a search-core response.
  *
  * @internal
  */

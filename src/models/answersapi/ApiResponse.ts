@@ -1,5 +1,5 @@
 /**
- * The basic structure of a response from the Search API
+ * The basic structure of a response from the Search API.
  *
  * @internal
  */
