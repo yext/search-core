@@ -8,8 +8,9 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [AnswersCore](./search-core.answerscore.md) | Provides methods for executing searches, submitting questions, and performing autocompletes. |
-|  [AnswersError](./search-core.answerserror.md) | Represents an error |
+|  [AnswersCore](./search-core.answerscore.md) |  |
+|  [SearchCore](./search-core.searchcore.md) | Provides methods for executing searches, submitting questions, and performing autocompletes. |
+|  [SearchError](./search-core.searcherror.md) | Represents an error |
 
 ## Enumerations
 
@@ -42,7 +43,8 @@
 |  [AdditionalHttpHeaders](./search-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
 |  [AnswersConfigWithApiKey](./search-core.answersconfigwithapikey.md) | Configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./search-core.baseanswersconfig.md)<!-- -->, but requires apiKey. |
 |  [AnswersConfigWithToken](./search-core.answersconfigwithtoken.md) | Configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./search-core.baseanswersconfig.md)<!-- -->, but requires token. |
-|  [AnswersRequest](./search-core.answersrequest.md) | Options for an Answers API request. |
+|  [AnswersError](./search-core.answerserror.md) |  |
+|  [AnswersRequest](./search-core.answersrequest.md) |  |
 |  [AppliedQueryFilter](./search-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutocompleteResponse](./search-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./search-core.autocompleteresult.md) | An autocomplete suggestion. |
@@ -76,6 +78,7 @@
 |  [QuestionSubmissionService](./search-core.questionsubmissionservice.md) | Submits a custom question to the Answers API. |
 |  [Result](./search-core.result.md) | An individual search result. |
 |  [SearchParameterField](./search-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
+|  [SearchRequest](./search-core.searchrequest.md) | Options for an Search API request. |
 |  [SearchService](./search-core.searchservice.md) | A service which performs Yext Answers searches |
 |  [Snippet](./search-core.snippet.md) | The section of text where a [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) was found. |
 |  [SortBy](./search-core.sortby.md) | Represents a criterion that can be used to sort results. |

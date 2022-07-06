@@ -1,4 +1,4 @@
-import { provideCore, AnswersConfig, AnswersCore } from '@yext/search-core';
+import { provideCore, AnswersConfig, SearchCore } from '@yext/search-core';
 import verticalRequest from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
@@ -16,7 +16,7 @@ window.onload = () => {
   document.body.appendChild(element);
 };
 
-const globalCore: AnswersCore = provideCore(coreConfig);
+const globalCore: SearchCore = provideCore(coreConfig);
 
 export async function universalSearch(): Promise<void> {
   loadingSpinner();

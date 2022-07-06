@@ -4,17 +4,15 @@
 
 ## AnswersRequest interface
 
-Options for an Answers API request.
+> Warning: This API is now obsolete.
+> 
+> AnswersRequest is deprecated and has been replaced by [SearchRequest](./search-core.searchrequest.md)
+> 
 
 <b>Signature:</b>
 
 ```typescript
-export interface AnswersRequest 
+export interface AnswersRequest extends SearchRequest 
 ```
-
-## Properties
-
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [additionalHttpHeaders?](./search-core.answersrequest.additionalhttpheaders.md) | [AdditionalHttpHeaders](./search-core.additionalhttpheaders.md) | <i>(Optional)</i> AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
+<b>Extends:</b> [SearchRequest](./search-core.searchrequest.md)
 

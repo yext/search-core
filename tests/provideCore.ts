@@ -5,7 +5,7 @@ import { SearchServiceImpl } from '../src/infra/SearchServiceImpl';
 import { Endpoints } from '../src/models/core/Endpoints';
 import { provideCore } from '../src/provideCore';
 
-jest.mock('../src/AnswersCore');
+jest.mock('../src/SearchCore');
 jest.mock('../src/infra/AutocompleteServiceImpl');
 jest.mock('../src/infra/QuestionSubmissionServiceImpl');
 jest.mock('../src/infra/SearchServiceImpl');

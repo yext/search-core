@@ -1,11 +1,11 @@
-import { AnswersRequest } from '../core/AnswersRequest';
+import { SearchRequest } from '../core/SearchRequest';
 
 /**
  * Options for a QuestionSubmission request.
  *
  * @public
  */
-export interface QuestionSubmissionRequest extends AnswersRequest {
+export interface QuestionSubmissionRequest extends SearchRequest {
   /** The email of the user that is submitting the question. */
   email: string,
   /** The ID of the entity to associate with the question. */

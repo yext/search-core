@@ -17,7 +17,7 @@ import { AutocompleteService } from './services/AutocompleteService';
  *
  * @public
  */
-export class AnswersCore {
+export class SearchCore {
   constructor(
     private searchService: SearchService,
     private questionSubmissionService: QuestionSubmissionService,
@@ -25,10 +25,10 @@ export class AnswersCore {
   ) {}
 
   /**
-   * Performs an Answers search across all verticals.
+   * Performs a search across all verticals.
    *
    * @remarks
-   * If rejected, the reason will be an {@link AnswersError}.
+   * If rejected, the reason will be an {@link SearchError}.
    *
    * @param request - Universal search request options
    */
@@ -37,10 +37,10 @@ export class AnswersCore {
   }
 
   /**
-   * Performs an Answers search for a single vertical.
+   * Performs a search for a single vertical.
    *
    * @remarks
-   * If rejected, the reason will be an {@link AnswersError}.
+   * If rejected, the reason will be an {@link SearchError}.
    *
    * @param request - Vertical search request options
    */
@@ -49,10 +49,10 @@ export class AnswersCore {
   }
 
   /**
-   * Submits a custom question to the Answers API.
+   * Submits a custom question to the Search API.
    *
    * @remarks
-   * If rejected, the reason will be an {@link AnswersError}.
+   * If rejected, the reason will be an {@link SearchError}.
    *
    * @param request - Question submission request options
    */
@@ -64,7 +64,7 @@ export class AnswersCore {
    * Performs an autocomplete request across all verticals.
    *
    * @remarks
-   * If rejected, the reason will be an {@link AnswersError}.
+   * If rejected, the reason will be an {@link SearchError}.
    *
    * @param request - Universal autocomplete request options
    */
@@ -76,7 +76,7 @@ export class AnswersCore {
    * Performs an autocomplete request for a single vertical.
    *
    * @remarks
-   * If rejected, the reason will be an {@link AnswersError}.
+   * If rejected, the reason will be an {@link SearchError}.
    *
    * @param request - Vertical autocomplete request options
    */
@@ -90,7 +90,7 @@ export class AnswersCore {
    * @remarks
    * This differs from the vertical autocomplete because the vertical autocomplete
    * operates on all entity fields whereas filtersearch operates only on specified fields.
-   * If rejected, the reason will be an {@link AnswersError}.
+   * If rejected, the reason will be an {@link SearchError}.
    *
    * @example
    * A site has a 'products' vertical and would like a way to allow the user to narrow down
