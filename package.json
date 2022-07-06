@@ -1,7 +1,7 @@
 {
-  "name": "@yext/answers-core",
+  "name": "@yext/search-core",
   "version": "1.7.0",
-  "description": "Typescript Networking Library for the Yext Answers API",
+  "description": "Typescript Networking Library for the Yext Search API",
   "main": "./dist/commonjs/src/index.js",
   "module": "./dist/esm/src/index.js",
   "types": "./dist/bundle.d.ts",
@@ -31,14 +31,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yext/answers-core.git"
+    "url": "https://github.com/yext/search-core.git"
   },
   "author": "slapshot@yext.com",
   "license": "BSD-3-Clause",
   "bugs": {
-    "url": "https://github.com/yext/answers-core/issues"
+    "url": "https://github.com/yext/search-core/issues"
   },
-  "homepage": "https://github.com/yext/answers-core#readme",
+  "homepage": "https://github.com/yext/search-core#readme",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-transform-runtime": "^7.12.10",
