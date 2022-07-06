@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-interface */
 import { SearchConfig } from './core/SearchConfig';
 import { BaseSearchConfig } from './core/SearchConfig';
 import { SearchConfigWithApiKey } from './core/SearchConfig';
@@ -13,16 +14,16 @@ export type AnswersConfig = SearchConfig;
  * @deprecated BaseAnswersConfig is deprecated and has been replaced by {@link BaseSearchConfig}
  * @public
  */
-export type BaseAnswersConfig = BaseSearchConfig;
+export interface BaseAnswersConfig extends BaseSearchConfig{}
 
 /**
  * @deprecated AnswersConfigWithApiKey is deprecated and has been replaced by {@link SearchConfigWithApiKey}
  * @public
  */
-export type AnswersConfigWithApiKey = SearchConfigWithApiKey;
+export interface AnswersConfigWithApiKey extends SearchConfigWithApiKey{}
 
 /**
  * @deprecated AnswersConfigWithToken is deprecated and has been replaced by {@link SearchConfigWithToken}
  * @public
  */
-export type AnswersConfigWithToken = SearchConfigWithToken;
+export interface AnswersConfigWithToken extends SearchConfigWithToken{}
