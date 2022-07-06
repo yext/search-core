@@ -6,7 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
-> AnswersConfig is deprecated and has been replaced by SearchConfig
+> AnswersConfig is deprecated and has been replaced by [SearchConfig](./answers-core.searchconfig.md)
 > 
 
 <b>Signature:</b>

@@ -6,7 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
-> BaseAnswersConfig is deprecated and has been replaced by BaseSearchConfig
+> BaseAnswersConfig is deprecated and has been replaced by [BaseSearchConfig](./answers-core.basesearchconfig.md)
 > 
 
 <b>Signature:</b>

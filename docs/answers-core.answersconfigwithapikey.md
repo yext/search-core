@@ -6,7 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
-> AnswersConfigWithApiKey is deprecated and has been replaced by SearchConfigWithApiKey
+> AnswersConfigWithApiKey is deprecated and has been replaced by [SearchConfigWithApiKey](./answers-core.searchconfigwithapikey.md)
 > 
 
 <b>Signature:</b>
