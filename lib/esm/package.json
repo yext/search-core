@@ -1,5 +1,5 @@
 {
-  "name": "answers-core-esm",
+  "name": "search-core-esm",
   "module": "../../dist/esm/src",
   "types": "../../dist/bundle.d.ts"
 }
