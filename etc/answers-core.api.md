@@ -13,10 +13,12 @@ export interface AdditionalHttpHeaders {
 export type AnswersConfig = SearchConfig;
 
 // @public @deprecated (undocumented)
-export type AnswersConfigWithApiKey = SearchConfigWithApiKey;
+export interface AnswersConfigWithApiKey extends SearchConfigWithApiKey {
+}
 
 // @public @deprecated (undocumented)
-export type AnswersConfigWithToken = SearchConfigWithToken;
+export interface AnswersConfigWithToken extends SearchConfigWithToken {
+}
 
 // @public
 export class AnswersCore {
@@ -88,7 +90,8 @@ export interface AutocompleteService {
 }
 
 // @public @deprecated (undocumented)
-export type BaseAnswersConfig = BaseSearchConfig;
+export interface BaseAnswersConfig extends BaseSearchConfig {
+}
 
 // @public
 export interface BaseSearchConfig {

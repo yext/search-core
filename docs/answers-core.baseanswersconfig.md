@@ -2,7 +2,7 @@
 
 [Home](./index.md) &gt; [@yext/answers-core](./answers-core.md) &gt; [BaseAnswersConfig](./answers-core.baseanswersconfig.md)
 
-## BaseAnswersConfig type
+## BaseAnswersConfig interface
 
 > Warning: This API is now obsolete.
 > 
@@ -12,7 +12,7 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type BaseAnswersConfig = BaseSearchConfig;
+export interface BaseAnswersConfig extends BaseSearchConfig 
 ```
-<b>References:</b> [BaseSearchConfig](./answers-core.basesearchconfig.md)
+<b>Extends:</b> [BaseSearchConfig](./answers-core.basesearchconfig.md)
 

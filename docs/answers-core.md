@@ -40,11 +40,14 @@
 |  Interface | Description |
 |  --- | --- |
 |  [AdditionalHttpHeaders](./answers-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
+|  [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md) |  |
+|  [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md) |  |
 |  [AnswersRequest](./answers-core.answersrequest.md) | Options for an Answers API request. |
 |  [AppliedQueryFilter](./answers-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutocompleteResponse](./answers-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./answers-core.autocompleteresult.md) | An autocomplete suggestion. |
 |  [AutocompleteService](./answers-core.autocompleteservice.md) | A service for autocomplete requests. |
+|  [BaseAnswersConfig](./answers-core.baseanswersconfig.md) |  |
 |  [BaseSearchConfig](./answers-core.basesearchconfig.md) | The base configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. |
 |  [ClientSDKHeaderValues](./answers-core.clientsdkheadervalues.md) | Additional agents and their versions used to create the Answers experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
 |  [CombinedFilter](./answers-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
@@ -102,9 +105,6 @@
 |  Type Alias | Description |
 |  --- | --- |
 |  [AnswersConfig](./answers-core.answersconfig.md) |  |
-|  [AnswersConfigWithApiKey](./answers-core.answersconfigwithapikey.md) |  |
-|  [AnswersConfigWithToken](./answers-core.answersconfigwithtoken.md) |  |
-|  [BaseAnswersConfig](./answers-core.baseanswersconfig.md) |  |
 |  [Context](./answers-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [HighlightedFields](./answers-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Answers API |
 |  [SearchConfig](./answers-core.searchconfig.md) | The main configuration options for [AnswersCore](./answers-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./answers-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token. |
