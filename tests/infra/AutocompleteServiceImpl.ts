@@ -1,5 +1,5 @@
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
-import { AnswersConfigWithDefaulting } from '../../src/models/core/SearchConfig';
+import { SearchConfigWithDefaulting } from '../../src/models/core/SearchConfig';
 import {
   UniversalAutocompleteRequest,
   VerticalAutocompleteRequest,
@@ -19,7 +19,7 @@ import { getClientSdk } from '../../src/utils/getClientSdk';
 import { Matcher } from '../../src/models/searchservice/common/Matcher';
 
 describe('AutocompleteService', () => {
-  const config: AnswersConfigWithDefaulting = {
+  const config: SearchConfigWithDefaulting = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en',
@@ -30,7 +30,7 @@ describe('AutocompleteService', () => {
     endpoints: defaultEndpoints
   };
 
-  const configWithToken: AnswersConfigWithDefaulting = {
+  const configWithToken: SearchConfigWithDefaulting = {
     token: 'testToken',
     experienceKey: 'testExperienceKey',
     locale: 'en',
@@ -41,7 +41,7 @@ describe('AutocompleteService', () => {
   const apiResponseValidator = new ApiResponseValidator();
   function createMockAutocompleteService(params?: {
     response?: ApiResponse,
-    searchConfig?: AnswersConfigWithDefaulting
+    searchConfig?: SearchConfigWithDefaulting
   }) {
     const {
       response = mockAutocompleteResponse,
@@ -265,7 +265,7 @@ describe('AutocompleteService', () => {
 });
 
 describe('additionalQueryParams are passed through', () => {
-  const config: AnswersConfigWithDefaulting = {
+  const config: SearchConfigWithDefaulting = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en',

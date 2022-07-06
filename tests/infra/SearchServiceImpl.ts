@@ -1,6 +1,6 @@
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { SearchServiceImpl } from '../../src/infra/SearchServiceImpl';
-import { AnswersConfigWithDefaulting } from '../../src/models/core/SearchConfig';
+import { SearchConfigWithDefaulting } from '../../src/models/core/SearchConfig';
 import { UniversalSearchRequest } from '../../src/models/searchservice/request/UniversalSearchRequest';
 import { HttpService } from '../../src/services/HttpService';
 import { QueryTrigger } from '../../src/models/searchservice/request/QueryTrigger';
@@ -14,21 +14,21 @@ import { getClientSdk } from '../../src/utils/getClientSdk';
 import { defaultApiVersion, defaultEndpoints } from '../../src/constants';
 
 describe('SearchService', () => {
-  const configWithRequiredApiKey: AnswersConfigWithDefaulting = {
+  const configWithRequiredApiKey: SearchConfigWithDefaulting = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en',
     endpoints: defaultEndpoints
   };
 
-  const configWithRequiredToken: AnswersConfigWithDefaulting = {
+  const configWithRequiredToken: SearchConfigWithDefaulting = {
     token: 'testToken',
     experienceKey: 'testExperienceKey',
     locale: 'en',
     endpoints: defaultEndpoints
   };
 
-  const configWithAllParams: AnswersConfigWithDefaulting = {
+  const configWithAllParams: SearchConfigWithDefaulting = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'es',
@@ -155,7 +155,7 @@ describe('SearchService', () => {
 
     it('A custom universal search service endpoint may be supplied', async () => {
       const customUrl = 'http://custom.endpoint.com/api';
-      const config: AnswersConfigWithDefaulting = {
+      const config: SearchConfigWithDefaulting = {
         ...configWithRequiredApiKey,
         endpoints: {
           ...defaultEndpoints,
@@ -388,7 +388,7 @@ describe('SearchService', () => {
 });
 
 describe('additionalQueryParams are passed through', () => {
-  const coreConfig: AnswersConfigWithDefaulting = {
+  const coreConfig: SearchConfigWithDefaulting = {
     apiKey: 'testApiKey',
     experienceKey: 'testExperienceKey',
     locale: 'en',

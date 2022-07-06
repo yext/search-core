@@ -6,7 +6,7 @@ import {
 } from '../models/autocompleteservice/AutocompleteRequest';
 import { AutocompleteResponse, FilterSearchResponse } from '../models/autocompleteservice/AutocompleteResponse';
 import { defaultApiVersion } from '../constants';
-import { AnswersConfigWithDefaulting } from '../models/core/SearchConfig';
+import { SearchConfigWithDefaulting } from '../models/core/SearchConfig';
 import { HttpService } from '../services/HttpService';
 import { AutocompleteQueryParams } from '../models/autocompleteservice/AutocompleteQueryParams';
 import { AutocompleteService } from '../services/AutocompleteService';
@@ -37,7 +37,7 @@ interface FilterSearchQueryParams extends AutocompleteQueryParams {
 * A service that performs query suggestions.
 */
 export class AutocompleteServiceImpl implements AutocompleteService {
-  private config: AnswersConfigWithDefaulting;
+  private config: SearchConfigWithDefaulting;
   private httpService: HttpService;
   private apiResponseValidator;
   private universalEndpoint: string;
@@ -45,7 +45,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
   private filterEndpoint: string;
 
   constructor(
-    config: AnswersConfigWithDefaulting,
+    config: SearchConfigWithDefaulting,
     httpRequester: HttpService,
     apiResponseValidator: ApiResponseValidator
   ) {

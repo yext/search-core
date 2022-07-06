@@ -83,4 +83,4 @@ export type SearchConfig = SearchConfigWithApiKey | SearchConfigWithToken;
  *
  * @internal
  */
-export type AnswersConfigWithDefaulting = SearchConfig & { endpoints: Required<Endpoints> };
+export type SearchConfigWithDefaulting = SearchConfig & { endpoints: Required<Endpoints> };

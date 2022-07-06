@@ -1,7 +1,7 @@
 import { SearchServiceImpl } from './infra/SearchServiceImpl';
 import { QuestionSubmissionServiceImpl } from './infra/QuestionSubmissionServiceImpl';
 import { HttpServiceImpl } from './infra/HttpServiceImpl';
-import { SearchConfig, AnswersConfigWithDefaulting } from './models/core/SearchConfig';
+import { SearchConfig, SearchConfigWithDefaulting } from './models/core/SearchConfig';
 import { AutocompleteServiceImpl } from './infra/AutocompleteServiceImpl';
 import { ApiResponseValidator } from './validation/ApiResponseValidator';
 import { AnswersCore } from './AnswersCore';
@@ -22,7 +22,7 @@ export function provideCore(config: SearchConfig): AnswersCore {
     throw new Error('Both apiKey and token are present. Only one authentication method should be provided');
   }
 
-  const defaultedConfig: AnswersConfigWithDefaulting = {
+  const defaultedConfig: SearchConfigWithDefaulting = {
     ...config,
     endpoints: {
       ...defaultEndpoints,
