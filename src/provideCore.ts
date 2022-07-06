@@ -1,28 +1,28 @@
 import { SearchServiceImpl } from './infra/SearchServiceImpl';
 import { QuestionSubmissionServiceImpl } from './infra/QuestionSubmissionServiceImpl';
 import { HttpServiceImpl } from './infra/HttpServiceImpl';
-import { AnswersConfig, AnswersConfigWithDefaulting } from './models/core/AnswersConfig';
+import { SearchConfig, SearchConfigWithDefaulting } from './models/core/SearchConfig';
 import { AutocompleteServiceImpl } from './infra/AutocompleteServiceImpl';
 import { ApiResponseValidator } from './validation/ApiResponseValidator';
 import { SearchCore } from './SearchCore';
 import { defaultEndpoints } from './constants';
 
 /**
- * The entrypoint to the answers-core library.
+ * The entrypoint to the search-core library.
  *
  * @remarks
  * Returns an {@link SearchCore} instance.
  *
- * @param config - The answers-core config
+ * @param config - The search-core config
  *
  * @public
  */
-export function provideCore(config: AnswersConfig): SearchCore {
+export function provideCore(config: SearchConfig): SearchCore {
   if ('apiKey' in config && 'token' in config) {
     throw new Error('Both apiKey and token are present. Only one authentication method should be provided');
   }
 
-  const defaultedConfig: AnswersConfigWithDefaulting = {
+  const defaultedConfig: SearchConfigWithDefaulting = {
     ...config,
     endpoints: {
       ...defaultEndpoints,

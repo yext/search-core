@@ -8,7 +8,7 @@ import { UniversalSearchRequest } from '../models/searchservice/request/Universa
 import { UniversalSearchResponse } from '../models/searchservice/response/UniversalSearchResponse';
 import { createUniversalSearchResponse } from '../transformers/searchservice/createUniversalSearchResponse';
 import { HttpService } from '../services/HttpService';
-import { AnswersConfigWithDefaulting } from '../models/core/AnswersConfig';
+import { SearchConfigWithDefaulting } from '../models/core/SearchConfig';
 import { VerticalSearchRequest } from '../models/searchservice/request/VerticalSearchRequest';
 import { VerticalSearchResponse } from '../models/searchservice/response/VerticalSearchResponse';
 import { serializeStaticFilters } from '../serializers/serializeStaticFilters';
@@ -78,14 +78,14 @@ interface VerticalSearchQueryParams extends QueryParams {
  * @internal
  */
 export class SearchServiceImpl implements SearchService {
-  private config: AnswersConfigWithDefaulting;
+  private config: SearchConfigWithDefaulting;
   private httpService: HttpService;
   private apiResponseValidator: ApiResponseValidator;
   private verticalSearchEndpoint: string;
   private universalSearchEndpoint: string;
 
   constructor(
-    config: AnswersConfigWithDefaulting,
+    config: SearchConfigWithDefaulting,
     httpService: HttpService,
     apiResponseValidator: ApiResponseValidator
   ) {

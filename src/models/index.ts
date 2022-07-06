@@ -1,4 +1,8 @@
 // deprecated symbols
+export { AnswersConfig } from './deprecated';
+export { BaseAnswersConfig } from './deprecated';
+export { AnswersConfigWithApiKey } from './deprecated';
+export { AnswersConfigWithToken } from './deprecated';
 export { AnswersError } from './deprecated';
 export { AnswersRequest } from './deprecated';
 
@@ -7,11 +11,11 @@ export { SearchError } from './answersapi/SearchError';
 
 // Core models
 export {
-  AnswersConfig,
-  BaseAnswersConfig,
-  AnswersConfigWithApiKey,
-  AnswersConfigWithToken
-} from './core/AnswersConfig';
+  SearchConfig,
+  BaseSearchConfig,
+  SearchConfigWithApiKey,
+  SearchConfigWithToken
+} from './core/SearchConfig';
 export { SearchRequest } from './core/SearchRequest';
 export { Endpoints } from './core/Endpoints';
 export { Visitor } from './core/Visitor';

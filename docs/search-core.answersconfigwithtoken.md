@@ -4,19 +4,15 @@
 
 ## AnswersConfigWithToken interface
 
-Configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./search-core.baseanswersconfig.md)<!-- -->, but requires token.
+> Warning: This API is now obsolete.
+> 
+> AnswersConfigWithToken is deprecated and has been replaced by [SearchConfigWithToken](./search-core.searchconfigwithtoken.md)
+> 
 
 <b>Signature:</b>
 
 ```typescript
-export interface AnswersConfigWithToken extends BaseAnswersConfig 
+export interface AnswersConfigWithToken extends SearchConfigWithToken 
 ```
-<b>Extends:</b> [BaseAnswersConfig](./search-core.baseanswersconfig.md)
-
-## Properties
-
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [apiKey?](./search-core.answersconfigwithtoken.apikey.md) | never | <i>(Optional)</i> apiKey should NOT be provided along with token. |
-|  [token](./search-core.answersconfigwithtoken.token.md) | string | The authentication token of the answers experience which will be passed in the Auth header as a Bearer token. |
+<b>Extends:</b> [SearchConfigWithToken](./search-core.searchconfigwithtoken.md)
 

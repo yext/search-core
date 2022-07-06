@@ -34,22 +34,23 @@
 
 |  Function | Description |
 |  --- | --- |
-|  [provideCore(config)](./search-core.providecore.md) | The entrypoint to the answers-core library. |
+|  [provideCore(config)](./search-core.providecore.md) | The entrypoint to the search-core library. |
 
 ## Interfaces
 
 |  Interface | Description |
 |  --- | --- |
 |  [AdditionalHttpHeaders](./search-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
-|  [AnswersConfigWithApiKey](./search-core.answersconfigwithapikey.md) | Configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./search-core.baseanswersconfig.md)<!-- -->, but requires apiKey. |
-|  [AnswersConfigWithToken](./search-core.answersconfigwithtoken.md) | Configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->, which includes the options from [BaseAnswersConfig](./search-core.baseanswersconfig.md)<!-- -->, but requires token. |
+|  [AnswersConfigWithApiKey](./search-core.answersconfigwithapikey.md) |  |
+|  [AnswersConfigWithToken](./search-core.answersconfigwithtoken.md) |  |
 |  [AnswersError](./search-core.answerserror.md) |  |
 |  [AnswersRequest](./search-core.answersrequest.md) |  |
 |  [AppliedQueryFilter](./search-core.appliedqueryfilter.md) | A filter that the Answers API applied to the search. |
 |  [AutocompleteResponse](./search-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./search-core.autocompleteresult.md) | An autocomplete suggestion. |
 |  [AutocompleteService](./search-core.autocompleteservice.md) | A service for autocomplete requests. |
-|  [BaseAnswersConfig](./search-core.baseanswersconfig.md) | The base configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->. |
+|  [BaseAnswersConfig](./search-core.baseanswersconfig.md) |  |
+|  [BaseSearchConfig](./search-core.basesearchconfig.md) | The base configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->. |
 |  [ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md) | Additional agents and their versions used to create the Answers experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
 |  [CombinedFilter](./search-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
 |  [DirectAnswer](./search-core.directanswer.md) | A direct answer to a search. |
@@ -77,6 +78,8 @@
 |  [QuestionSubmissionResponse](./search-core.questionsubmissionresponse.md) | A representation of a question submission response. |
 |  [QuestionSubmissionService](./search-core.questionsubmissionservice.md) | Submits a custom question to the Answers API. |
 |  [Result](./search-core.result.md) | An individual search result. |
+|  [SearchConfigWithApiKey](./search-core.searchconfigwithapikey.md) | Configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires apiKey. |
+|  [SearchConfigWithToken](./search-core.searchconfigwithtoken.md) | Configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires token. |
 |  [SearchParameterField](./search-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
 |  [SearchRequest](./search-core.searchrequest.md) | Options for an Search API request. |
 |  [SearchService](./search-core.searchservice.md) | A service which performs Yext Answers searches |
@@ -104,7 +107,8 @@
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [AnswersConfig](./search-core.answersconfig.md) | The main configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseAnswersConfig](./search-core.baseanswersconfig.md)<!-- -->. The config requires either an apiKey or a token. |
+|  [AnswersConfig](./search-core.answersconfig.md) |  |
 |  [Context](./search-core.context.md) | Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [HighlightedFields](./search-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Answers API |
+|  [SearchConfig](./search-core.searchconfig.md) | The main configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token. |
 
