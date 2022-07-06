@@ -192,7 +192,7 @@ export class SearchServiceImpl implements SearchService {
   }
 
   /**
-   * Converts a {@link LatLong} into the format the Answers API expects.
+   * Converts a {@link LatLong} into the format the Search API expects.
    */
   private stringifyLatLong(latLong: LatLong | undefined): string | undefined {
     if (!latLong) {

@@ -1,7 +1,7 @@
 import { HighlightedValue } from './HighlightedValue';
 
 /**
- * A mapping of fields to the values emphasized by the Answers API
+ * A mapping of fields to the values emphasized by the Search API
  *
  * @remarks
  * Only fields that have been marked as highlighted will be present - which may not be

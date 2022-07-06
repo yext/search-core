@@ -2,16 +2,16 @@ import { Endpoints } from './Endpoints';
 import { Visitor } from './Visitor';
 
 /**
- * The base configuration options for {@link AnswersCore}.
+ * The base configuration options for {@link SearchCore}.
  * @public
  */
 export interface BaseSearchConfig {
-  /** The experience key of the answers experience. */
+  /** The experience key of the search experience. */
   experienceKey: string,
-  /** The locale of the answers experience. */
+  /** The locale of the search experience. */
   locale: string,
   /**
-   * The version of the answers experience configuration.
+   * The version of the search experience configuration.
    *
    * @remarks
    * May be a configuration label (string) or a configuration version (number).
@@ -39,12 +39,12 @@ export interface BaseSearchConfig {
 }
 
 /**
- * Configuration options for {@link AnswersCore}, which includes the
+ * Configuration options for {@link SearchCore}, which includes the
  * options from {@link BaseSearchConfig}, but requires apiKey.
  * @public
  */
 export interface SearchConfigWithApiKey extends BaseSearchConfig {
-  /** The api key of the answers experience which will be sent as a query param. */
+  /** The api key of the search experience which will be sent as a query param. */
   apiKey: string,
   /**
    * token should NOT be provided along with apiKey.
@@ -53,13 +53,13 @@ export interface SearchConfigWithApiKey extends BaseSearchConfig {
 }
 
 /**
- * Configuration options for {@link AnswersCore}, which includes the
+ * Configuration options for {@link SearchCore}, which includes the
  * options from {@link BaseSearchConfig}, but requires token.
  * @public
  */
 export interface SearchConfigWithToken extends BaseSearchConfig {
   /**
-   * The authentication token of the answers experience
+   * The authentication token of the search experience
    * which will be passed in the Auth header as a Bearer token.
    */
   token: string,
@@ -70,7 +70,7 @@ export interface SearchConfigWithToken extends BaseSearchConfig {
 }
 
 /**
- * The main configuration options for {@link AnswersCore}.
+ * The main configuration options for {@link SearchCore}.
  * For a full description of the options, see {@link BaseSearchConfig}.
  * The config requires either an apiKey or a token.
  *
@@ -79,7 +79,7 @@ export interface SearchConfigWithToken extends BaseSearchConfig {
 export type SearchConfig = SearchConfigWithApiKey | SearchConfigWithToken;
 
 /**
- * The AnswersConfig after any defaulting has been done from within answers-core.
+ * The SearchConfig after any defaulting has been done from within search-core.
  *
  * @internal
  */

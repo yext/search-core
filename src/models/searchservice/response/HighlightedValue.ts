@@ -1,5 +1,5 @@
 /**
- * A field value and its substring matches as emphasized by the Answers API.
+ * A field value and its substring matches as emphasized by the Search API.
  *
  * @public
  */
@@ -9,7 +9,7 @@ export interface HighlightedValue {
    *
    * @remarks
    * No formatting is applied to this value. This is simply the value that
-   * the Answers API determined should be highlighted.
+   * the Search API determined should be highlighted.
    */
   value: string,
   /**
