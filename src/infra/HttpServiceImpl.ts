@@ -83,12 +83,12 @@ function fetch(
  * @example
  * Input clientSdk:
  * \{
- *   ANSWERS_CORE: '123',
+ *   SEARCH_CORE: '123',
  *   CUSTOM_AGENT: '456'
  * \}
  *
  * Output HTTP header:
- * 'ANSWERS_CORE=123, CUSTOM_AGENT=456'
+ * 'SEARCH_CORE=123, CUSTOM_AGENT=456'
  */
 function formatAsHttpHeader(clientSdk: Record<string, string>) {
   return Object.keys(clientSdk).reduce((combinedHeader, currentKey) => {
