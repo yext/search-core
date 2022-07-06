@@ -1,4 +1,4 @@
-import { QuestionSubmissionRequest } from '@yext/answers-core';
+import { QuestionSubmissionRequest } from '@yext/search-core';
 
 const questionRequest: QuestionSubmissionRequest = {
   email: 'oshi@yext.com',
