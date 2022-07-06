@@ -4,7 +4,7 @@
  * @public
  */
 export enum Source {
-  /** The result is from a Search Knowledge Graph. */
+  /** The result is from a Knowledge Graph. */
   KnowledgeManager = 'KNOWLEDGE_MANAGER',
   /** The result is from Google Custom Search Engine. */
   Google = 'GOOGLE_CSE',
