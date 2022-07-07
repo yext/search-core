@@ -7,7 +7,7 @@ export { AnswersError } from './deprecated';
 export { AnswersRequest } from './deprecated';
 
 // Answers API models
-export { SearchError } from './answersapi/SearchError';
+export { SearchError } from './searchapi/SearchError';
 
 // Core models
 export {

@@ -1,4 +1,4 @@
-import { SearchError } from '../../models/answersapi/SearchError';
+import { SearchError } from '../../models/searchapi/SearchError';
 import { AutocompleteResponse, FilterSearchResponse } from '../../models/autocompleteservice/AutocompleteResponse';
 import { createAutocompleteResult } from './createAutocompleteResult';
 

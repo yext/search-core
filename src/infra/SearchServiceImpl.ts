@@ -14,7 +14,7 @@ import { VerticalSearchResponse } from '../models/searchservice/response/Vertica
 import { serializeStaticFilters } from '../serializers/serializeStaticFilters';
 import { serializeFacets } from '../serializers/serializeFacets';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
-import { ApiResponse } from '../models/answersapi/ApiResponse';
+import { ApiResponse } from '../models/searchapi/ApiResponse';
 import { LatLong } from '../models/searchservice/request/LatLong';
 import { getClientSdk } from '../utils/getClientSdk';
 
