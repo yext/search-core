@@ -5,6 +5,17 @@
   "main": "./dist/commonjs/src/index.js",
   "module": "./dist/esm/src/index.js",
   "types": "./dist/bundle.d.ts",
+  "keywords": [
+    "networking",
+    "Answers API",
+    "Search",
+    "browser",
+    "nodeJS",
+    "TypeScript",
+    "CommonJS",
+    "ES6",
+    "Yext"
+  ],
   "files": [
     "dist",
     "legacy",
