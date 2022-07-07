@@ -6,7 +6,7 @@ export { AnswersConfigWithToken } from './deprecated';
 export { AnswersError } from './deprecated';
 export { AnswersRequest } from './deprecated';
 
-// Answers API models
+// Search API models
 export { SearchError } from './searchapi/SearchError';
 
 // Core models
