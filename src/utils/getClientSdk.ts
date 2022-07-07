@@ -6,7 +6,7 @@ const { version } = packageJson;
 export function getClientSdk(
   additionalHttpHeaders?: AdditionalHttpHeaders
 ): Record<string, string> {
-  const coreAgent = { SEARCH_CORE: version };
+  const coreAgent = { ANSWERS_CORE: version };
   if (!additionalHttpHeaders) {
     return coreAgent;
   }

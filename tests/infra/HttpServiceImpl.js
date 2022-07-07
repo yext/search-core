@@ -8,7 +8,7 @@ jest.mock('cross-fetch');
 describe('HttpServiceImpl', () => {
   const httpServiceImpl = new HttpServiceImpl();
   const clientSdk = {
-    SEARCH_CORE: '123'
+    ANSWERS_CORE: '123'
   };
   fetch.mockResolvedValue({
     json: () => []
@@ -24,7 +24,7 @@ describe('HttpServiceImpl', () => {
       mode: 'cors',
       credentials: 'include',
       headers: {
-        'Client-SDK': 'SEARCH_CORE=123'
+        'Client-SDK': 'ANSWERS_CORE=123'
       }
     };
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);
@@ -42,7 +42,7 @@ describe('HttpServiceImpl', () => {
       mode: 'cors',
       credentials: 'include',
       headers: {
-        'Client-SDK': 'SEARCH_CORE=123',
+        'Client-SDK': 'ANSWERS_CORE=123',
         Authorization: `Bearer ${authToken}`
       }
     };
@@ -63,7 +63,7 @@ describe('HttpServiceImpl', () => {
       mode: 'cors',
       credentials: undefined,
       headers: {
-        'Client-SDK': 'SEARCH_CORE=123',
+        'Client-SDK': 'ANSWERS_CORE=123',
         'Content-Type': 'application/json'
       }
     };
@@ -86,7 +86,7 @@ describe('HttpServiceImpl', () => {
       mode: 'cors',
       credentials: 'include',
       headers: {
-        'Client-SDK': 'SEARCH_CORE=123',
+        'Client-SDK': 'ANSWERS_CORE=123',
         'Content-Type': 'application/json',
         Authorization: `Bearer ${authToken}`
       }
@@ -127,7 +127,7 @@ describe('HttpServiceImpl', () => {
       mode: 'cors',
       credentials: 'include',
       headers: {
-        'Client-SDK': 'SEARCH_CORE=123, CUSTOM_TEST_SITE=test'
+        'Client-SDK': 'ANSWERS_CORE=123, CUSTOM_TEST_SITE=test'
       }
     };
     expect(fetch).toHaveBeenLastCalledWith('http://yext.com/?aQuery=param', expectedReqInit);
