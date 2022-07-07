@@ -7,14 +7,14 @@
   "types": "./dist/bundle.d.ts",
   "keywords": [
     "networking",
-    "Search API",
-    "Search",
+    "search api",
+    "search",
     "browser",
-    "nodeJS",
-    "TypeScript",
-    "CommonJS",
-    "ES6",
-    "Yext"
+    "nodejs",
+    "typescript",
+    "commonjs",
+    "es6",
+    "yext"
   ],
   "files": [
     "dist",
