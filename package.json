@@ -7,7 +7,7 @@
   "types": "./dist/bundle.d.ts",
   "keywords": [
     "networking",
-    "Answers API",
+    "Search API",
     "Search",
     "browser",
     "nodeJS",
