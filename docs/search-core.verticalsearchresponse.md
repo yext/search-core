@@ -22,7 +22,7 @@ export interface VerticalSearchResponse
 |  [facets?](./search-core.verticalsearchresponse.facets.md) | [DisplayableFacet](./search-core.displayablefacet.md)<!-- -->\[\] | <i>(Optional)</i> An array of [Facet](./search-core.facet.md)<!-- -->s associated with the search results. |
 |  [locationBias?](./search-core.verticalsearchresponse.locationbias.md) | [LocationBias](./search-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
 |  [queryId](./search-core.verticalsearchresponse.queryid.md) | string | The ID of the query. |
-|  [queryRulesActionsData?](./search-core.verticalsearchresponse.queryrulesactionsdata.md) | [QueryRulesActionsData](./search-core.queryrulesactionsdata.md)<!-- -->\[\] | <i>(Optional)</i> Data returned from the Answers query rules system. |
+|  [queryRulesActionsData?](./search-core.verticalsearchresponse.queryrulesactionsdata.md) | [QueryRulesActionsData](./search-core.queryrulesactionsdata.md)<!-- -->\[\] | <i>(Optional)</i> Data returned from the Search query rules system. |
 |  [searchIntents?](./search-core.verticalsearchresponse.searchintents.md) | [SearchIntent](./search-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./search-core.searchintent.md)<!-- -->s. |
 |  [spellCheck?](./search-core.verticalsearchresponse.spellcheck.md) | [SpellCheck](./search-core.spellcheck.md) | <i>(Optional)</i> A spellcheck response from a search query. |
 |  [uuid](./search-core.verticalsearchresponse.uuid.md) | string | A unique id which corresponds to the request. |

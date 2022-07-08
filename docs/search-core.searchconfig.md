@@ -4,7 +4,7 @@
 
 ## SearchConfig type
 
-The main configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token.
+The main configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token.
 
 <b>Signature:</b>
 

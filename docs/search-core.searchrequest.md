@@ -4,7 +4,7 @@
 
 ## SearchRequest interface
 
-Options for an Search API request.
+Options for a Search API request.
 
 <b>Signature:</b>
 

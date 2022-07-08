@@ -4,7 +4,7 @@
 
 ## BaseSearchConfig.locale property
 
-The locale of the answers experience.
+The locale of the search experience.
 
 <b>Signature:</b>
 

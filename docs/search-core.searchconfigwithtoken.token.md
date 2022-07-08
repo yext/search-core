@@ -4,7 +4,7 @@
 
 ## SearchConfigWithToken.token property
 
-The authentication token of the answers experience which will be passed in the Auth header as a Bearer token.
+The authentication token of the search experience which will be passed in the Auth header as a Bearer token.
 
 <b>Signature:</b>
 

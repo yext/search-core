@@ -11,7 +11,7 @@ import { HttpService } from '../services/HttpService';
 import { AutocompleteQueryParams } from '../models/autocompleteservice/AutocompleteQueryParams';
 import { AutocompleteService } from '../services/AutocompleteService';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
-import { ApiResponse } from '../models/answersapi/ApiResponse';
+import { ApiResponse } from '../models/searchapi/ApiResponse';
 import { getClientSdk } from '../utils/getClientSdk';
 import { serializeExcludedFields, serializeSearchParameterFields } from '../serializers/serializeFilterSearch';
 

@@ -14,5 +14,5 @@ value: string;
 
 ## Remarks
 
-No formatting is applied to this value. This is simply the value that the Answers API determined should be highlighted.
+No formatting is applied to this value. This is simply the value that the Search API determined should be highlighted.
 

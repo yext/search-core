@@ -4,7 +4,7 @@
 
 ## HighlightedValue interface
 
-A field value and its substring matches as emphasized by the Answers API.
+A field value and its substring matches as emphasized by the Search API.
 
 <b>Signature:</b>
 

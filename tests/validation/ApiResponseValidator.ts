@@ -1,6 +1,6 @@
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
-import { ApiResponse } from '../../src/models/answersapi/ApiResponse';
-import { SearchError } from '../../src/models/answersapi/SearchError';
+import { ApiResponse } from '../../src/models/searchapi/ApiResponse';
+import { SearchError } from '../../src/models/searchapi/SearchError';
 
 const apiResponseValidator = new ApiResponseValidator();
 

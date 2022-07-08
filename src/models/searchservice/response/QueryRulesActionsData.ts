@@ -1,5 +1,5 @@
 /**
- * Data returned from the Answers query rules system.
+ * Data returned from the Search query rules system.
  *
  * @public
  */

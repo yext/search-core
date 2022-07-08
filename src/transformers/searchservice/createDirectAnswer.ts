@@ -29,6 +29,6 @@ export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | Fie
       snippet: data.answer.snippet
     };
   } else {
-    throw new Error('The Answers API returned an unknown direct answer type');
+    throw new Error('The Search API returned an unknown direct answer type');
   }
 }

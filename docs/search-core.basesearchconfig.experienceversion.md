@@ -4,7 +4,7 @@
 
 ## BaseSearchConfig.experienceVersion property
 
-The version of the answers experience configuration.
+The version of the search experience configuration.
 
 <b>Signature:</b>
 

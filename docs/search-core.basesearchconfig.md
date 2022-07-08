@@ -4,7 +4,7 @@
 
 ## BaseSearchConfig interface
 
-The base configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->.
+The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->.
 
 <b>Signature:</b>
 
@@ -16,9 +16,9 @@ export interface BaseSearchConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [endpoints?](./search-core.basesearchconfig.endpoints.md) | [Endpoints](./search-core.endpoints.md) | <i>(Optional)</i> Overrides for the URLs which are used when making requests to the Answers API. |
-|  [experienceKey](./search-core.basesearchconfig.experiencekey.md) | string | The experience key of the answers experience. |
-|  [experienceVersion?](./search-core.basesearchconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the answers experience configuration. |
-|  [locale](./search-core.basesearchconfig.locale.md) | string | The locale of the answers experience. |
+|  [endpoints?](./search-core.basesearchconfig.endpoints.md) | [Endpoints](./search-core.endpoints.md) | <i>(Optional)</i> Overrides for the URLs which are used when making requests to the Search API. |
+|  [experienceKey](./search-core.basesearchconfig.experiencekey.md) | string | The experience key of the search experience. |
+|  [experienceVersion?](./search-core.basesearchconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the search experience configuration. |
+|  [locale](./search-core.basesearchconfig.locale.md) | string | The locale of the search experience. |
 |  [visitor?](./search-core.basesearchconfig.visitor.md) | [Visitor](./search-core.visitor.md) | <i>(Optional)</i> Information used to associate requests with a particular user. |
 

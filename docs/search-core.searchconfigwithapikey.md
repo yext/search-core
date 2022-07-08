@@ -4,7 +4,7 @@
 
 ## SearchConfigWithApiKey interface
 
-Configuration options for [AnswersCore](./search-core.answerscore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires apiKey.
+Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires apiKey.
 
 <b>Signature:</b>
 
@@ -17,6 +17,6 @@ export interface SearchConfigWithApiKey extends BaseSearchConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [apiKey](./search-core.searchconfigwithapikey.apikey.md) | string | The api key of the answers experience which will be sent as a query param. |
+|  [apiKey](./search-core.searchconfigwithapikey.apikey.md) | string | The api key of the search experience which will be sent as a query param. |
 |  [token?](./search-core.searchconfigwithapikey.token.md) | never | <i>(Optional)</i> token should NOT be provided along with apiKey. |
 

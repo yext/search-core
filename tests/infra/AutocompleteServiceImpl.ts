@@ -13,8 +13,8 @@ import mockAutocompleteResponseWithFailedVerticals from '../fixtures/autocomplet
 import mockAutocompleteResponseWithVerticalKeys from '../fixtures/autocompleteresponsewithverticalkeys.json';
 import { defaultEndpoints, defaultApiVersion } from '../../src/constants';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
-import { ApiResponse } from '../../src/models/answersapi/ApiResponse';
-import { SearchError } from '../../src/models/answersapi/SearchError';
+import { ApiResponse } from '../../src/models/searchapi/ApiResponse';
+import { SearchError } from '../../src/models/searchapi/SearchError';
 import { getClientSdk } from '../../src/utils/getClientSdk';
 import { Matcher } from '../../src/models/searchservice/common/Matcher';
 

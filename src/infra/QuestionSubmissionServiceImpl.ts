@@ -5,7 +5,7 @@ import { SearchConfigWithDefaulting } from '../models/core/SearchConfig';
 import { QuestionSubmissionRequest } from '../models/questionsubmission/QuestionSubmissionRequest';
 import { QuestionSubmissionResponse } from '../models/questionsubmission/QuestionSubmissionResponse';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
-import { ApiResponse } from '../models/answersapi/ApiResponse';
+import { ApiResponse } from '../models/searchapi/ApiResponse';
 import { getClientSdk } from '../utils/getClientSdk';
 
 /**

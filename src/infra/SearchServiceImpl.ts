@@ -14,7 +14,7 @@ import { VerticalSearchResponse } from '../models/searchservice/response/Vertica
 import { serializeStaticFilters } from '../serializers/serializeStaticFilters';
 import { serializeFacets } from '../serializers/serializeFacets';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
-import { ApiResponse } from '../models/answersapi/ApiResponse';
+import { ApiResponse } from '../models/searchapi/ApiResponse';
 import { LatLong } from '../models/searchservice/request/LatLong';
 import { getClientSdk } from '../utils/getClientSdk';
 
@@ -192,7 +192,7 @@ export class SearchServiceImpl implements SearchService {
   }
 
   /**
-   * Converts a {@link LatLong} into the format the Answers API expects.
+   * Converts a {@link LatLong} into the format the Search API expects.
    */
   private stringifyLatLong(latLong: LatLong | undefined): string | undefined {
     if (!latLong) {

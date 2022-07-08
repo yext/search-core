@@ -17,7 +17,7 @@ export interface UniversalSearchRequest extends SearchRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [context?](./search-core.universalsearchrequest.context.md) | [Context](./search-core.context.md) | <i>(Optional)</i> Used to trigger Answers [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
+|  [context?](./search-core.universalsearchrequest.context.md) | [Context](./search-core.context.md) | <i>(Optional)</i> Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [limit?](./search-core.universalsearchrequest.limit.md) | [UniversalLimit](./search-core.universallimit.md) | <i>(Optional)</i> The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
 |  [location?](./search-core.universalsearchrequest.location.md) | [LatLong](./search-core.latlong.md) | <i>(Optional)</i> The latitude and longitude of the user making the request. Used to bias the results. |
 |  [query](./search-core.universalsearchrequest.query.md) | string | The search query. |

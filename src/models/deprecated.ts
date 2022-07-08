@@ -3,7 +3,7 @@ import { SearchConfig } from './core/SearchConfig';
 import { BaseSearchConfig } from './core/SearchConfig';
 import { SearchConfigWithApiKey } from './core/SearchConfig';
 import { SearchConfigWithToken } from './core/SearchConfig';
-import { SearchError } from './answersapi/SearchError';
+import { SearchError } from './searchapi/SearchError';
 import { SearchRequest } from './core/SearchRequest';
 
 /**

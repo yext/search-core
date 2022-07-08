@@ -4,7 +4,7 @@
 
 ## FilterSearchResponse.businessId property
 
-ID of the account associated with this Answers experience
+ID of the account associated with this Search experience.
 
 <b>Signature:</b>
 

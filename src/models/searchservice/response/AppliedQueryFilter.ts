@@ -3,7 +3,7 @@ import { AppliedQueryFilterType } from './AppliedQueryFilterType';
 import { LocationFilterDetails } from './LocationFilterDetails';
 
 /**
- * A filter that the Answers API applied to the search.
+ * A filter that the Search API applied to the search.
  *
  * @public
  */

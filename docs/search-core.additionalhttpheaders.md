@@ -16,5 +16,5 @@ export interface AdditionalHttpHeaders
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  ["Client-SDK"?](./search-core.additionalhttpheaders._client-sdk_.md) | [ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md) | <i>(Optional)</i> Additional agents and their versions used to create the Answers experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
+|  ["Client-SDK"?](./search-core.additionalhttpheaders._client-sdk_.md) | [ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md) | <i>(Optional)</i> Additional agents and their versions used to create the Search experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
 

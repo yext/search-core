@@ -2,7 +2,7 @@ import { QuestionSubmissionResponse } from '../models/questionsubmission/Questio
 import { QuestionSubmissionRequest } from '../models/questionsubmission/QuestionSubmissionRequest';
 
 /**
- * Submits a custom question to the Answers API.
+ * Submits a custom question to the Search API.
  *
  * @public
  */
