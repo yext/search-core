@@ -1,7 +1,7 @@
 import { QuestionSubmissionServiceImpl } from '../../src/infra/QuestionSubmissionServiceImpl';
 import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { HttpService } from '../../src/services/HttpService';
-import { AnswersConfigWithDefaulting } from '../../src/models/core/AnswersConfig';
+import { SearchConfigWithDefaulting } from '../../src/models/core/SearchConfig';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { defaultApiVersion, defaultEndpoints } from '../../src/constants';
 
@@ -49,7 +49,7 @@ describe('Question submission', () => {
 
   it('a custom endpoint may be supplied', async () => {
     const expectedUrl = 'https://custom.endpoint.com/api';
-    const coreConfig: AnswersConfigWithDefaulting = {
+    const coreConfig: SearchConfigWithDefaulting = {
       ...baseCoreConfig,
       endpoints: {
         questionSubmission: 'https://custom.endpoint.com/api'

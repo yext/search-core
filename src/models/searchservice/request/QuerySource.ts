@@ -5,11 +5,11 @@
  */
 export enum QuerySource {
   /**
-   * Indicates that the query was initiated from a standard Answers integration.
+   * Indicates that the query was initiated from a standard Search integration.
    */
   Standard = 'STANDARD',
   /**
-   * Indicates that the query was initiated from an Answers Overlay.
+   * Indicates that the query was initiated from a Search Overlay.
    */
   Overlay = 'OVERLAY',
   /**

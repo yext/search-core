@@ -1,5 +1,4 @@
-import { QueryTrigger } from '@yext/answers-core';
-import { VerticalSearchRequest } from '@yext/answers-core';
+import { QueryTrigger, VerticalSearchRequest } from '@yext/search-core';
 
 const verticalRequest: VerticalSearchRequest = {
   verticalKey: 'people',

@@ -1,7 +1,7 @@
 import { NearFilterValue } from './Filter';
 
 /**
- * Represents static filters in the format that the Answers API expects.
+ * Represents static filters in the format that the Search API expects.
  *
  * @internal
  */
@@ -10,7 +10,7 @@ export interface ApiStaticFilters {
 }
 
 /**
- * Represents a single filter in the format that the Answers API expects.
+ * Represents a single filter in the format that the Search API expects.
  *
  * @internal
  */

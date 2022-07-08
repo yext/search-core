@@ -1,4 +1,4 @@
-import { QueryTrigger, UniversalSearchRequest } from '@yext/answers-core';
+import { QueryTrigger, UniversalSearchRequest } from '@yext/search-core';
 
 const universalRequest: UniversalSearchRequest = {
   query: 'office near me',

@@ -1,11 +1,11 @@
 import { defaultApiVersion } from '../constants';
 import { QuestionSubmissionService } from '../services/QuestionSubmissionService';
 import { HttpService } from '../services/HttpService';
-import { AnswersConfigWithDefaulting } from '../models/core/AnswersConfig';
+import { SearchConfigWithDefaulting } from '../models/core/SearchConfig';
 import { QuestionSubmissionRequest } from '../models/questionsubmission/QuestionSubmissionRequest';
 import { QuestionSubmissionResponse } from '../models/questionsubmission/QuestionSubmissionResponse';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
-import { ApiResponse } from '../models/answersapi/ApiResponse';
+import { ApiResponse } from '../models/searchapi/ApiResponse';
 import { getClientSdk } from '../utils/getClientSdk';
 
 /**
@@ -14,13 +14,13 @@ import { getClientSdk } from '../utils/getClientSdk';
  * @internal
  */
 export class QuestionSubmissionServiceImpl implements QuestionSubmissionService {
-  private config: AnswersConfigWithDefaulting;
+  private config: SearchConfigWithDefaulting;
   private httpService: HttpService;
   private apiResponseValidator: ApiResponseValidator;
   private endpoint: string;
 
   constructor(
-    config: AnswersConfigWithDefaulting,
+    config: SearchConfigWithDefaulting,
     httpService: HttpService,
     apiResponseValidator: ApiResponseValidator
   ) {
