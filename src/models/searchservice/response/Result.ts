@@ -6,10 +6,10 @@ import { Source } from './Source';
  *
  * @public
  */
-export interface Result {
+export interface Result<T = Record<string, unknown>> {
   /** Raw entity profile data in the shape of key-value pairs. */
-  rawData: Record<string, unknown>,
-  /** {@inheritDoc Source}*/
+  rawData: T,
+  /** {@inheritDoc Source} */
   source: Source,
   /** The index of the result among the other results in the search. */
   index?: number,
@@ -38,6 +38,6 @@ export interface Result {
   distanceFromFilter?: number,
   /** The {@link HighlightedFields | highlighted fields} emphasized by the api. */
   highlightedFields?: HighlightedFields,
-  /** The entity type of the result */
+  /** The entity type of the result. */
   entityType?: string
 }
