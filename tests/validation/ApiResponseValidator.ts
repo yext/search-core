@@ -1,6 +1,6 @@
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
-import { ApiResponse } from '../../src/models/answersapi/ApiResponse';
-import { AnswersError } from '../../src/models/answersapi/AnswersError';
+import { ApiResponse } from '../../src/models/searchapi/ApiResponse';
+import { SearchError } from '../../src/models/searchapi/SearchError';
 
 const apiResponseValidator = new ApiResponseValidator();
 
@@ -26,7 +26,7 @@ it('A response without a response property fails validation', () => {
   } as ApiResponse;
   const validationResponse = apiResponseValidator.validate(response);
 
-  return expect(validationResponse).toBeInstanceOf(AnswersError);
+  return expect(validationResponse).toBeInstanceOf(SearchError);
 });
 
 it('A response without a meta property fails validation', () => {
@@ -35,7 +35,7 @@ it('A response without a meta property fails validation', () => {
   } as ApiResponse;
   const validationResponse = apiResponseValidator.validate(response);
 
-  return expect(validationResponse).toBeInstanceOf(AnswersError);
+  return expect(validationResponse).toBeInstanceOf(SearchError);
 });
 
 it('A response with an error fails validation', () => {
@@ -54,5 +54,5 @@ it('A response with an error fails validation', () => {
   };
   const validationResponse = apiResponseValidator.validate(response);
 
-  return expect(validationResponse).toBeInstanceOf(AnswersError);
+  return expect(validationResponse).toBeInstanceOf(SearchError);
 });

@@ -19,6 +19,6 @@ export function createUniversalSearchResponse(data: any): UniversalSearchRespons
     locationBias: data.response.locationBias && createLocationBias(data.response.locationBias),
     uuid: data.meta.uuid,
     queryRulesActionsData: data.response.queryRulesActionsData,
-    failedVerticals: data.response.failedVerticals && data.response.failedVerticals.map(createFailedVertical)
+    failedVerticals: data.response.failedVerticals?.map(createFailedVertical)
   };
 }

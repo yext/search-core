@@ -8,13 +8,13 @@ import { UniversalSearchRequest } from '../models/searchservice/request/Universa
 import { UniversalSearchResponse } from '../models/searchservice/response/UniversalSearchResponse';
 import { createUniversalSearchResponse } from '../transformers/searchservice/createUniversalSearchResponse';
 import { HttpService } from '../services/HttpService';
-import { AnswersConfigWithDefaulting } from '../models/core/AnswersConfig';
+import { SearchConfigWithDefaulting } from '../models/core/SearchConfig';
 import { VerticalSearchRequest } from '../models/searchservice/request/VerticalSearchRequest';
 import { VerticalSearchResponse } from '../models/searchservice/response/VerticalSearchResponse';
 import { serializeStaticFilters } from '../serializers/serializeStaticFilters';
 import { serializeFacets } from '../serializers/serializeFacets';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
-import { ApiResponse } from '../models/answersapi/ApiResponse';
+import { ApiResponse } from '../models/searchapi/ApiResponse';
 import { LatLong } from '../models/searchservice/request/LatLong';
 import { getClientSdk } from '../utils/getClientSdk';
 
@@ -78,14 +78,14 @@ interface VerticalSearchQueryParams extends QueryParams {
  * @internal
  */
 export class SearchServiceImpl implements SearchService {
-  private config: AnswersConfigWithDefaulting;
+  private config: SearchConfigWithDefaulting;
   private httpService: HttpService;
   private apiResponseValidator: ApiResponseValidator;
   private verticalSearchEndpoint: string;
   private universalSearchEndpoint: string;
 
   constructor(
-    config: AnswersConfigWithDefaulting,
+    config: SearchConfigWithDefaulting,
     httpService: HttpService,
     apiResponseValidator: ApiResponseValidator
   ) {
@@ -115,7 +115,7 @@ export class SearchServiceImpl implements SearchService {
       source: request.querySource || QuerySource.Standard,
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
-      restrictVerticals: request.restrictVerticals && request.restrictVerticals.join(','),
+      restrictVerticals: request.restrictVerticals?.join(','),
       ...this.config?.additionalQueryParams
     };
 
@@ -192,7 +192,7 @@ export class SearchServiceImpl implements SearchService {
   }
 
   /**
-   * Converts a {@link LatLong} into the format the Answers API expects.
+   * Converts a {@link LatLong} into the format the Search API expects.
    */
   private stringifyLatLong(latLong: LatLong | undefined): string | undefined {
     if (!latLong) {

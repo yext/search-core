@@ -1,10 +1,10 @@
-import { provideCore, AnswersConfig, AnswersCore } from '@yext/answers-core';
+import { provideCore, SearchConfig, SearchCore } from '@yext/search-core';
 import verticalRequest from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
 import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchRequest } from './requests/autocompleteRequests';
 
-const coreConfig: AnswersConfig = {
+const coreConfig: SearchConfig = {
   apiKey: '2d8c550071a64ea23e263118a2b0680b',
   experienceKey: 'slanswers',
   locale: 'en',
@@ -16,7 +16,7 @@ window.onload = () => {
   document.body.appendChild(element);
 };
 
-const globalCore: AnswersCore = provideCore(coreConfig);
+const globalCore: SearchCore = provideCore(coreConfig);
 
 export async function universalSearch(): Promise<void> {
   loadingSpinner();

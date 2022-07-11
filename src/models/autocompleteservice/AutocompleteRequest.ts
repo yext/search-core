@@ -1,4 +1,4 @@
-import { AnswersRequest } from '../core/AnswersRequest';
+import { SearchRequest } from '../core/SearchRequest';
 import { Filter } from '../searchservice/request/Filter';
 
 /**
@@ -6,7 +6,7 @@ import { Filter } from '../searchservice/request/Filter';
  *
  * @public
  */
-export interface UniversalAutocompleteRequest extends AnswersRequest {
+export interface UniversalAutocompleteRequest extends SearchRequest {
   /** The input string for autocomplete. */
   input: string,
   /** Enables session tracking. */
@@ -18,7 +18,7 @@ export interface UniversalAutocompleteRequest extends AnswersRequest {
  *
  * @public
  */
-export interface VerticalAutocompleteRequest extends AnswersRequest {
+export interface VerticalAutocompleteRequest extends SearchRequest {
   /** {@inheritDoc UniversalAutocompleteRequest.input} */
   input: string,
   /** {@inheritDoc UniversalAutocompleteRequest.sessionTrackingEnabled} */
@@ -32,7 +32,7 @@ export interface VerticalAutocompleteRequest extends AnswersRequest {
  *
  * @public
  */
-export interface FilterSearchRequest extends AnswersRequest {
+export interface FilterSearchRequest extends SearchRequest {
   /** {@inheritDoc UniversalAutocompleteRequest.input} */
   input: string,
   /** {@inheritDoc UniversalAutocompleteRequest.sessionTrackingEnabled} */
