@@ -17,6 +17,7 @@ export interface SpellCheck
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [correctedQuery](./search-core.spellcheck.correctedquery.md) | string | The corrected version of the originalQuery. |
+|  [matchedSubstrings](./search-core.spellcheck.matchedsubstrings.md) | { length: number; offset: number; }\[\] | An array of substring matches which correspond to the highlighting. Offset indicates the index of the match, and the length indicates the number of characters of the match. |
 |  [originalQuery](./search-core.spellcheck.originalquery.md) | string | The query that was input into the spell checker. |
 |  [type](./search-core.spellcheck.type.md) | [SpellCheckType](./search-core.spellchecktype.md) | The type of spell check. |
 
