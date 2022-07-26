@@ -9,7 +9,15 @@ export interface SpellCheck {
   /** The corrected version of the originalQuery. */
   correctedQuery: string,
   /** The type of spell check. */
-  type: SpellCheckType
+  type: SpellCheckType,
+  /**
+   * An array of substring matches which correspond to the highlighting.
+   * Offset indicates the index of the match, and the length indicates the number of characters of the match.
+  */
+  matchedSubstrings: {
+    length: number,
+    offset: number
+  }[]
 }
 
 /**

@@ -492,6 +492,10 @@ export enum Source {
 // @public
 export interface SpellCheck {
     correctedQuery: string;
+    matchedSubstrings: {
+        length: number;
+        offset: number;
+    }[];
     originalQuery: string;
     type: SpellCheckType;
 }
