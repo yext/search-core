@@ -9,7 +9,7 @@ An individual search result.
 <b>Signature:</b>
 
 ```typescript
-export interface Result 
+export interface Result<T = Record<string, unknown>> 
 ```
 
 ## Properties
@@ -19,12 +19,12 @@ export interface Result
 |  [description?](./search-core.result.description.md) | string | <i>(Optional)</i> A description of the result. |
 |  [distance?](./search-core.result.distance.md) | number | <i>(Optional)</i> The distance from the user to the result in meters. |
 |  [distanceFromFilter?](./search-core.result.distancefromfilter.md) | number | <i>(Optional)</i> The distance from a [AppliedQueryFilter](./search-core.appliedqueryfilter.md) location to the result in meters. |
-|  [entityType?](./search-core.result.entitytype.md) | string | <i>(Optional)</i> The entity type of the result |
+|  [entityType?](./search-core.result.entitytype.md) | string | <i>(Optional)</i> The entity type of the result. |
 |  [highlightedFields?](./search-core.result.highlightedfields.md) | [HighlightedFields](./search-core.highlightedfields.md) | <i>(Optional)</i> The [highlighted fields](./search-core.highlightedfields.md) emphasized by the api. |
 |  [id?](./search-core.result.id.md) | string | <i>(Optional)</i> The result ID which depends on the Result Source. |
 |  [index?](./search-core.result.index.md) | number | <i>(Optional)</i> The index of the result among the other results in the search. |
 |  [link?](./search-core.result.link.md) | string | <i>(Optional)</i> A hyperlink associated with the result. |
 |  [name?](./search-core.result.name.md) | string | <i>(Optional)</i> The name of the result. |
-|  [rawData](./search-core.result.rawdata.md) | Record&lt;string, unknown&gt; | Raw entity profile data in the shape of key-value pairs. |
+|  [rawData](./search-core.result.rawdata.md) | T | Raw entity profile data in the shape of key-value pairs. |
 |  [source](./search-core.result.source.md) | [Source](./search-core.source.md) | Represents the source of a [Result](./search-core.result.md)<!-- -->. |
 

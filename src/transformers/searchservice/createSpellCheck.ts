@@ -5,5 +5,6 @@ export function createSpellCheck(data: any): SpellCheck {
     originalQuery: data.originalQuery,
     correctedQuery: data.correctedQuery.value,
     type: data.type,
+    matchedSubstrings: data.correctedQuery.matchedSubstrings
   };
 }

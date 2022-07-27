@@ -1,6 +1,6 @@
 {
   "name": "@yext/search-core",
-  "version": "1.8.1",
+  "version": "1.9.0",
   "description": "Typescript Networking Library for the Yext Search API",
   "main": "./dist/commonjs/src/index.js",
   "module": "./dist/esm/src/index.js",
