@@ -74,7 +74,7 @@ describe('SearchService', () => {
   });
 
   describe('Universal Search', () => {
-    const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/query';
+    const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/search/query';
 
     it('Query params are correct when only required params (without token) are supplied', async () => {
       const requestWithRequiredParams: UniversalSearchRequest = {
@@ -200,7 +200,7 @@ describe('SearchService', () => {
   });
 
   describe('Vertical Search', () => {
-    const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/answers/vertical/query';
+    const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/search/vertical/query';
 
     it('Query params are correct when only required params (without token) are supplied', async () => {
       const requestWithRequiredParams: VerticalSearchRequest = {
