@@ -6,7 +6,7 @@ import { DirectAnswerType } from './DirectAnswerType';
  *
  * @public
  */
-export interface DirectAnswer<T = unknown> {
+export interface DirectAnswer {
   /** The {@link DirectAnswerType}. */
   type: DirectAnswerType,
   /**
@@ -15,7 +15,7 @@ export interface DirectAnswer<T = unknown> {
    * @remarks
    * A value will not be present if the {@link DirectAnswer.fieldType} is 'rich_text'.
    */
-  value?: T,
+  value?: string,
   /** The entity associated with the direct answer. */
   relatedResult: Result,
   /** The vertical key of the direct answer. */

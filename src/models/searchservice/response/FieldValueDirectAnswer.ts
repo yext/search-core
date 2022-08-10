@@ -7,11 +7,11 @@ import { Result } from './Result';
  *
  * @public
  */
-export interface FieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
+export interface FieldValueDirectAnswer extends DirectAnswer {
   /** {@link DirectAnswerType}.FieldValue. */
   type: DirectAnswerType.FieldValue,
   /** {@inheritDoc DirectAnswer.value} */
-  value: T,
+  value: string,
   /** {@inheritDoc DirectAnswer.relatedResult} */
   relatedResult: Result,
   /** {@inheritDoc DirectAnswer.verticalKey} */

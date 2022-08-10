@@ -8,7 +8,7 @@ import { Snippet } from './Snippet';
  *
  * @public
  */
-export interface FeaturedSnippetDirectAnswer extends DirectAnswer<string> {
+export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
   /** {@link DirectAnswerType}.FeaturedSnippet. */
   type: DirectAnswerType.FeaturedSnippet,
   /** {@inheritDoc DirectAnswer.value} */
