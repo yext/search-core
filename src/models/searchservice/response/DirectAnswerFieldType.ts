@@ -4,11 +4,11 @@
  * @public
  */
 export enum DirectAnswerFieldType {
-  Url = 'url',
-  ComplexUrl = 'complex_url',
-  IOSAppUrl = 'ios_app_url',
-  AndroidAppUrl = 'android_app_url',
-  FacebookUrl = 'facebook_url',
+  URL = 'url',
+  ComplexURL = 'complex_url',
+  IOSAppURL = 'ios_app_url',
+  AndroidAppURL = 'android_app_url',
+  FacebookURL = 'facebook_url',
   Email = 'email',
   InstagramHandle = 'instagram_handle',
   TwitterHandle = 'twitter_handle',
