@@ -70,6 +70,7 @@ export { VerticalSearchResponse } from './searchservice/response/VerticalSearchR
 export { Snippet } from './searchservice/response/Snippet';
 export { ErrorType } from './searchservice/response/ErrorType';
 export { FailedVertical } from './searchservice/response/FailedVertical';
+export { FieldType } from './searchservice/response/FieldType';
 
 // Search service common models
 export { Matcher } from './searchservice/common/Matcher';
@@ -78,3 +79,6 @@ export {
   LowerNumberRangeLimit,
   UpperNumberRangeLimit
 } from './searchservice/common/NumberRangeValue';
+
+// Utils
+export { EnumOrLiteral } from './utils/EnumOrLiteral';

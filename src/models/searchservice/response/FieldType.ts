@@ -1,6 +1,5 @@
 /**
- * Type for value of DirectAnswer.
- *
+ * Possible field types for {@link DirectAnswer.fieldType}.
  * @public
  */
 export enum FieldType {
