@@ -588,7 +588,7 @@ export interface VerticalSearchRequest extends SearchRequest {
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
     sortBys?: SortBy[];
-    staticFilters?: StaticFilter;
+    staticFilter?: StaticFilter;
     verticalKey: string;
 }
 

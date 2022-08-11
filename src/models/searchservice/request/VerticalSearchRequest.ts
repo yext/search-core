@@ -37,8 +37,8 @@ export interface VerticalSearchRequest extends SearchRequest {
   sessionId?: string,
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean,
-  /** The static filters to apply to the search. */
-  staticFilters?: StaticFilter,
+  /** The static filter to apply to the search. */
+  staticFilter?: StaticFilter,
   /** Determines how results are sorted. **/
   sortBys?: SortBy[],
   /** {@inheritdoc UniversalSearchRequest.referrerPageUrl} */

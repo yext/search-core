@@ -274,7 +274,7 @@ describe('SearchService', () => {
           field: 'name',
           type: SortType.Field
         }],
-        staticFilters: {
+        staticFilter: {
           kind: 'fieldValue',
           value: {
             fieldId: 'city',
