@@ -1,5 +1,5 @@
 import { SearchRequest } from '../core/SearchRequest';
-import { Filter } from '../searchservice/request/Filter';
+import { FieldValueFilter } from '../searchservice/request/FieldValueFilter';
 
 /**
  * Options for a universal autocomplete request.
@@ -41,10 +41,10 @@ export interface FilterSearchRequest extends SearchRequest {
   verticalKey: string,
   /** Determines whether or not the results of the {@link FilterSearchResponse} are separated by field. */
   sectioned: boolean,
-  /** An array of {@link SearchParameterField} */
+  /** An array of {@link SearchParameterField}. */
   fields: SearchParameterField[],
-  /** an array of filters that should be excluded from filter search results. */
-  excluded?: Filter[]
+  /** An array of field value filters that should be excluded from filter search results. */
+  excluded?: FieldValueFilter[]
 }
 
 /**

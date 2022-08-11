@@ -9,5 +9,5 @@ The static filters to apply to the search.
 <b>Signature:</b>
 
 ```typescript
-staticFilters?: CombinedFilter | Filter;
+staticFilters?: StaticFilter;
 ```

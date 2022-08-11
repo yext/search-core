@@ -37,7 +37,7 @@ export interface AppliedQueryFilter {
     details?: LocationFilterDetails;
     displayKey: string;
     displayValue: string;
-    filter: Filter;
+    filter: FieldValueFilter;
     type: AppliedQueryFilterType;
 }
 
@@ -58,7 +58,7 @@ export interface AutocompleteResponse {
 
 // @public
 export interface AutocompleteResult {
-    filter?: Filter;
+    filter?: FieldValueFilter;
     key?: string;
     matchedSubstrings?: {
         length: number;
@@ -100,12 +100,6 @@ export interface ClientSDKHeaderValues {
 }
 
 // @public
-export interface CombinedFilter {
-    combinator: FilterCombinator;
-    filters: (Filter | CombinedFilter)[];
-}
-
-// @public
 export type Context = any;
 
 // @public
@@ -132,7 +126,6 @@ export enum Direction {
 // @public
 export interface DisplayableFacet extends Facet {
     displayName: string;
-    fieldId: string;
     options: DisplayableFacetOption[];
 }
 
@@ -140,9 +133,7 @@ export interface DisplayableFacet extends Facet {
 export interface DisplayableFacetOption extends FacetOption {
     count: number;
     displayName: string;
-    matcher: Matcher;
     selected: boolean;
-    value: string | number | boolean | NumberRangeValue;
 }
 
 // @public
@@ -178,9 +169,8 @@ export interface Facet {
 }
 
 // @public
-export interface FacetOption {
-    matcher: Matcher;
-    value: string | number | boolean | NumberRangeValue;
+export interface FacetOption extends Omit<FieldValueFilter, 'fieldId'> {
+    value: Exclude<FieldValueFilter['value'], NearFilterValue>;
 }
 
 // @public
@@ -217,7 +207,7 @@ export interface FieldValueDirectAnswer extends DirectAnswer {
 }
 
 // @public
-export interface Filter {
+export interface FieldValueFilter {
     fieldId: string;
     matcher: Matcher;
     value: string | number | boolean | NearFilterValue | NumberRangeValue;
@@ -231,7 +221,7 @@ export enum FilterCombinator {
 
 // @public
 export interface FilterSearchRequest extends SearchRequest {
-    excluded?: Filter[];
+    excluded?: FieldValueFilter[];
     fields: SearchParameterField[];
     input: string;
     sectioned: boolean;
@@ -508,6 +498,16 @@ export enum SpellCheckType {
 }
 
 // @public
+export type StaticFilter = {
+    kind: 'fieldValue';
+    value: FieldValueFilter;
+} | {
+    kind: 'combination';
+    combinator: FilterCombinator;
+    children: StaticFilter[];
+};
+
+// @public
 export interface UniversalAutocompleteRequest extends SearchRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
@@ -588,7 +588,7 @@ export interface VerticalSearchRequest extends SearchRequest {
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
     sortBys?: SortBy[];
-    staticFilters?: CombinedFilter | Filter;
+    staticFilters?: StaticFilter;
     verticalKey: string;
 }
 

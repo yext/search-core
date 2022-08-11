@@ -4,10 +4,10 @@
 
 ## FilterSearchRequest.excluded property
 
-an array of filters that should be excluded from filter search results.
+An array of field value filters that should be excluded from filter search results.
 
 <b>Signature:</b>
 
 ```typescript
-excluded?: Filter[];
+excluded?: FieldValueFilter[];
 ```

@@ -33,14 +33,14 @@ export { QuestionSubmissionRequest } from './questionsubmission/QuestionSubmissi
 export { QuestionSubmissionResponse } from './questionsubmission/QuestionSubmissionResponse';
 
 // Search service request models
-export { CombinedFilter, FilterCombinator } from './searchservice/request/CombinedFilter';
+export { StaticFilter, FilterCombinator } from './searchservice/request/StaticFilter';
 export { Context } from './searchservice/request/Context';
 export { UniversalLimit } from './searchservice/request/UniversalLimit';
 export { LatLong } from './searchservice/request/LatLong';
 export { QuerySource } from './searchservice/request/QuerySource';
 export { QueryTrigger } from './searchservice/request/QueryTrigger';
 export { Facet, FacetOption } from './searchservice/request/Facet';
-export { Filter, NearFilterValue } from './searchservice/request/Filter';
+export { FieldValueFilter, NearFilterValue } from './searchservice/request/FieldValueFilter';
 export { SortBy } from './searchservice/request/SortBy';
 export { UniversalSearchRequest } from './searchservice/request/UniversalSearchRequest';
 export { VerticalSearchRequest } from './searchservice/request/VerticalSearchRequest';

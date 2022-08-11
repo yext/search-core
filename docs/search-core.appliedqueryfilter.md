@@ -19,6 +19,6 @@ export interface AppliedQueryFilter
 |  [details?](./search-core.appliedqueryfilter.details.md) | [LocationFilterDetails](./search-core.locationfilterdetails.md) | <i>(Optional)</i> Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. |
 |  [displayKey](./search-core.appliedqueryfilter.displaykey.md) | string | The display name of the filter key. |
 |  [displayValue](./search-core.appliedqueryfilter.displayvalue.md) | string | The value used in the filter. |
-|  [filter](./search-core.appliedqueryfilter.filter.md) | [Filter](./search-core.filter.md) | The filter applied to the query results. |
+|  [filter](./search-core.appliedqueryfilter.filter.md) | [FieldValueFilter](./search-core.fieldvaluefilter.md) | The filter applied to the query results. |
 |  [type](./search-core.appliedqueryfilter.type.md) | [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md) | Represents the type of [AppliedQueryFilter](./search-core.appliedqueryfilter.md) applied to a search. |
 

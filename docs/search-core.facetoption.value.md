@@ -9,7 +9,7 @@ The value to compare.
 <b>Signature:</b>
 
 ```typescript
-value: string | number | boolean | NumberRangeValue;
+value: Exclude<FieldValueFilter['value'], NearFilterValue>;
 ```
 
 ## Example

@@ -33,6 +33,6 @@ export interface VerticalSearchRequest extends SearchRequest
 |  [sessionTrackingEnabled?](./search-core.verticalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
 |  [skipSpellCheck?](./search-core.verticalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> Skips spell checking if true. |
 |  [sortBys?](./search-core.verticalsearchrequest.sortbys.md) | [SortBy](./search-core.sortby.md)<!-- -->\[\] | <i>(Optional)</i> Determines how results are sorted. \* |
-|  [staticFilters?](./search-core.verticalsearchrequest.staticfilters.md) | [CombinedFilter](./search-core.combinedfilter.md) \| [Filter](./search-core.filter.md) | <i>(Optional)</i> The static filters to apply to the search. |
+|  [staticFilters?](./search-core.verticalsearchrequest.staticfilters.md) | [StaticFilter](./search-core.staticfilter.md) | <i>(Optional)</i> The static filters to apply to the search. |
 |  [verticalKey](./search-core.verticalsearchrequest.verticalkey.md) | string | The key associated with the vertical. |
 

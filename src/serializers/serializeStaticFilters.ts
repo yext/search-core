@@ -1,32 +1,41 @@
 import { isNumberRangeValue } from '../models/searchservice/common/NumberRangeValue';
-import { CombinedFilter } from '../models/searchservice/request/CombinedFilter';
-import { Filter } from '../models/searchservice/request/Filter';
+import { FilterCombinator, StaticFilter } from '../models/searchservice/request/StaticFilter';
+import { FieldValueFilter } from '../models/searchservice/request/FieldValueFilter';
 import { ApiStaticFilters, ApiFilter } from '../models/searchservice/request/ApiStaticFilters';
 
 export function serializeStaticFilters(
-  filter: CombinedFilter | Filter): string | undefined {
-  if (isCombinedFilter(filter)) {
-    return JSON.stringify(shapeCombinedFilterForApi(filter));
+  filter: StaticFilter): string | undefined {
+  if (filter.kind === 'combination') {
+    const shapedFilter = shapeCombinedFilterForApi(filter.combinator, filter.children);
+    return shapedFilter && JSON.stringify(shapedFilter);
   }
 
-  return JSON.stringify(shapeFilterForApi(filter));
+  return JSON.stringify(shapeFieldValueFilterForApi(filter.value));
 }
 
-function shapeCombinedFilterForApi(combinedFilter: CombinedFilter): ApiStaticFilters {
+function shapeCombinedFilterForApi(
+  combinator: FilterCombinator,
+  filters: StaticFilter[]
+): ApiStaticFilters | undefined {
+  if (filters.length === 0) {
+    return undefined;
+  }
+
   const shapedFilters: ApiStaticFilters[] = [];
-  for (const filter of combinedFilter.filters) {
-    if (isCombinedFilter(filter)) {
-      shapedFilters.push(shapeCombinedFilterForApi(filter));
+  for (const filter of filters) {
+    if (filter.kind === 'combination') {
+      const shapedFilter = shapeCombinedFilterForApi(filter.combinator, filter.children);
+      shapedFilter && shapedFilters.push(shapedFilter);
     } else {
-      shapedFilters.push(shapeFilterForApi(filter));
+      shapedFilters.push(shapeFieldValueFilterForApi(filter.value));
     }
   }
   return shapedFilters.length === 1
     ? shapedFilters[0]
-    : { [combinedFilter.combinator]: shapedFilters };
+    : { [combinator]: shapedFilters };
 }
 
-export function shapeFilterForApi(filter: Filter): ApiStaticFilters {
+export function shapeFieldValueFilterForApi(filter: FieldValueFilter): ApiStaticFilters {
   let filterValues: ApiFilter = {};
   if (isNumberRangeValue(filter.value)) {
     if (filter.value.start) {
@@ -41,9 +50,4 @@ export function shapeFilterForApi(filter: Filter): ApiStaticFilters {
   return {
     [filter.fieldId]: filterValues
   };
-}
-
-function isCombinedFilter(filter: CombinedFilter | Filter): filter is CombinedFilter {
-  return ((filter as CombinedFilter).filters !== undefined)
-    && ((filter as CombinedFilter).combinator !== undefined);
 }

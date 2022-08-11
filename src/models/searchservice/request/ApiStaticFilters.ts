@@ -1,4 +1,4 @@
-import { NearFilterValue } from './Filter';
+import { NearFilterValue } from './FieldValueFilter';
 
 /**
  * Represents static filters in the format that the Search API expects.
