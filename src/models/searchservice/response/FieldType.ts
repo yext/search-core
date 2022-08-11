@@ -3,7 +3,7 @@
  *
  * @public
  */
-export enum DirectAnswerFieldType {
+export enum FieldType {
   URL = 'url',
   ComplexURL = 'complex_url',
   IOSAppURL = 'ios_app_url',
