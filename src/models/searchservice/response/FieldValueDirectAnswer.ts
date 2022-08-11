@@ -1,5 +1,6 @@
 import { DirectAnswer } from './DirectAnswer';
 import { DirectAnswerType } from './DirectAnswerType';
+import { BuiltInFieldType } from './BuiltInFieldType';
 import { Result } from './Result';
 
 /**
@@ -7,17 +8,17 @@ import { Result } from './Result';
  *
  * @public
  */
-export interface FieldValueDirectAnswer extends DirectAnswer {
+export interface FieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
   /** {@link DirectAnswerType}.FieldValue. */
   type: DirectAnswerType.FieldValue,
   /** {@inheritDoc DirectAnswer.value} */
-  value: string,
+  value: T,
   /** {@inheritDoc DirectAnswer.relatedResult} */
   relatedResult: Result,
   /** {@inheritDoc DirectAnswer.verticalKey} */
   verticalKey: string,
   /** {@inheritDoc DirectAnswer.fieldType} */
-  fieldType: string,
+  fieldType: BuiltInFieldType | string,
   /** The name of the entity that direct answer came from. */
   entityName: string,
   /** The field name of the direct answer. */

@@ -1,12 +1,13 @@
 import { Result } from './Result';
 import { DirectAnswerType } from './DirectAnswerType';
+import { BuiltInFieldType } from './BuiltInFieldType';
 
 /**
  * A direct answer to a search.
  *
  * @public
  */
-export interface DirectAnswer {
+export interface DirectAnswer<T = unknown> {
   /** The {@link DirectAnswerType}. */
   type: DirectAnswerType,
   /**
@@ -15,11 +16,11 @@ export interface DirectAnswer {
    * @remarks
    * A value will not be present if the {@link DirectAnswer.fieldType} is 'rich_text'.
    */
-  value?: string,
+  value?: T,
   /** The entity associated with the direct answer. */
   relatedResult: Result,
   /** The vertical key of the direct answer. */
   verticalKey: string,
   /** The field type of the direct answer. */
-  fieldType: string
+  fieldType: BuiltInFieldType | string
 }

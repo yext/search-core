@@ -9,16 +9,16 @@ A direct answer to a search.
 <b>Signature:</b>
 
 ```typescript
-export interface DirectAnswer 
+export interface DirectAnswer<T = unknown> 
 ```
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [fieldType](./search-core.directanswer.fieldtype.md) | string | The field type of the direct answer. |
+|  [fieldType](./search-core.directanswer.fieldtype.md) | [BuiltInFieldType](./search-core.builtinfieldtype.md) \| string | The field type of the direct answer. |
 |  [relatedResult](./search-core.directanswer.relatedresult.md) | [Result](./search-core.result.md) | The entity associated with the direct answer. |
 |  [type](./search-core.directanswer.type.md) | [DirectAnswerType](./search-core.directanswertype.md) | The [DirectAnswerType](./search-core.directanswertype.md)<!-- -->. |
-|  [value?](./search-core.directanswer.value.md) | string | <i>(Optional)</i> The result of the direct answer. |
+|  [value?](./search-core.directanswer.value.md) | T | <i>(Optional)</i> The result of the direct answer. |
 |  [verticalKey](./search-core.directanswer.verticalkey.md) | string | The vertical key of the direct answer. |
 
