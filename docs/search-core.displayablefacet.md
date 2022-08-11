@@ -18,6 +18,5 @@ export interface DisplayableFacet extends Facet
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [displayName](./search-core.displayablefacet.displayname.md) | string | The name of the facet which is meant to be displayed to the user. |
-|  [fieldId](./search-core.displayablefacet.fieldid.md) | string | The associated fieldId. |
 |  [options](./search-core.displayablefacet.options.md) | [DisplayableFacetOption](./search-core.displayablefacetoption.md)<!-- -->\[\] | An array of [DisplayableFacetOption](./search-core.displayablefacetoption.md) |
 

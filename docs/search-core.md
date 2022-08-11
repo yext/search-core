@@ -20,7 +20,7 @@
 |  [DirectAnswerType](./search-core.directanswertype.md) | Represents the type of direct answer. |
 |  [Direction](./search-core.direction.md) | The direction of a sort. |
 |  [ErrorType](./search-core.errortype.md) | Identifier for the type of error causing the failure. |
-|  [FilterCombinator](./search-core.filtercombinator.md) | Indicates how the filters in a [CombinedFilter](./search-core.combinedfilter.md) should be combined. |
+|  [FilterCombinator](./search-core.filtercombinator.md) | Indicates how child filters in a [StaticFilter](./search-core.staticfilter.md) should be combined. |
 |  [LocationBiasMethod](./search-core.locationbiasmethod.md) | The method used to determine the location. |
 |  [Matcher](./search-core.matcher.md) | A Matcher is a filtering operation. |
 |  [QuerySource](./search-core.querysource.md) | The source of the search request. |
@@ -52,7 +52,6 @@
 |  [BaseAnswersConfig](./search-core.baseanswersconfig.md) |  |
 |  [BaseSearchConfig](./search-core.basesearchconfig.md) | The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. |
 |  [ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md) | Additional agents and their versions used to create the Search experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
-|  [CombinedFilter](./search-core.combinedfilter.md) | Represents multiple filters that will be combined to refine results. |
 |  [DirectAnswer](./search-core.directanswer.md) | A direct answer to a search. |
 |  [DisplayableFacet](./search-core.displayablefacet.md) | A [Facet](./search-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./search-core.displayablefacetoption.md) | A [FacetOption](./search-core.facetoption.md) with extra data meant to be displayed to the end user. |
@@ -62,7 +61,7 @@
 |  [FailedVertical](./search-core.failedvertical.md) | Error information from when a vertical fails to return results. |
 |  [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) | A direct answer which was found within a document. |
 |  [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) | A direct answer where the answer came from a field from the knowledge graph. |
-|  [Filter](./search-core.filter.md) | Represents a filter which compares values to a single field. |
+|  [FieldValueFilter](./search-core.fieldvaluefilter.md) | Represents a filter which compares values to a single field. |
 |  [FilterSearchRequest](./search-core.filtersearchrequest.md) | Options for a filtersearch request. |
 |  [FilterSearchResponse](./search-core.filtersearchresponse.md) | The response of a filtersearch request. |
 |  [HighlightedValue](./search-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Search API. |
@@ -111,4 +110,5 @@
 |  [Context](./search-core.context.md) | Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [HighlightedFields](./search-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Search API. |
 |  [SearchConfig](./search-core.searchconfig.md) | The main configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token. |
+|  [StaticFilter](./search-core.staticfilter.md) | Represents a static filter that will be used to refine results. |
 

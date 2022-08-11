@@ -1,8 +1,8 @@
-import { Filter, NearFilterValue } from '../../models/searchservice/request/Filter';
+import { FieldValueFilter, NearFilterValue } from '../../models/searchservice/request/FieldValueFilter';
 import { Matcher } from '../../models/searchservice/common/Matcher';
 import { NumberRangeValue } from '../../models/searchservice/common/NumberRangeValue';
 
-export function createFilter(filter: any): Filter {
+export function createFieldValueFilter(filter: any): FieldValueFilter {
   const fieldId = Object.keys(filter)[0];
   const matcher = Object.keys(filter[fieldId])[0];
   let value: string | number | boolean | NearFilterValue | NumberRangeValue;

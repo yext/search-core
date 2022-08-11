@@ -1,4 +1,4 @@
-import { Filter } from '../request/Filter';
+import { FieldValueFilter } from '../request/FieldValueFilter';
 import { AppliedQueryFilterType } from './AppliedQueryFilterType';
 import { LocationFilterDetails } from './LocationFilterDetails';
 
@@ -23,7 +23,7 @@ export interface AppliedQueryFilter {
    */
   displayValue: string,
   /** The filter applied to the query results. */
-  filter: Filter,
+  filter: FieldValueFilter,
   /** {@inheritDoc AppliedQueryFilterType} */
   type: AppliedQueryFilterType,
   /** {@inheritDoc LocationFilterDetails} */

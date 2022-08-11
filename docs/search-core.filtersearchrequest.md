@@ -17,8 +17,8 @@ export interface FilterSearchRequest extends SearchRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [excluded?](./search-core.filtersearchrequest.excluded.md) | [Filter](./search-core.filter.md)<!-- -->\[\] | <i>(Optional)</i> an array of filters that should be excluded from filter search results. |
-|  [fields](./search-core.filtersearchrequest.fields.md) | [SearchParameterField](./search-core.searchparameterfield.md)<!-- -->\[\] | An array of [SearchParameterField](./search-core.searchparameterfield.md) |
+|  [excluded?](./search-core.filtersearchrequest.excluded.md) | [FieldValueFilter](./search-core.fieldvaluefilter.md)<!-- -->\[\] | <i>(Optional)</i> An array of field value filters that should be excluded from filter search results. |
+|  [fields](./search-core.filtersearchrequest.fields.md) | [SearchParameterField](./search-core.searchparameterfield.md)<!-- -->\[\] | An array of [SearchParameterField](./search-core.searchparameterfield.md)<!-- -->. |
 |  [input](./search-core.filtersearchrequest.input.md) | string | The input string for autocomplete. |
 |  [sectioned](./search-core.filtersearchrequest.sectioned.md) | boolean | Determines whether or not the results of the [FilterSearchResponse](./search-core.filtersearchresponse.md) are separated by field. |
 |  [sessionTrackingEnabled?](./search-core.filtersearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |

@@ -6,7 +6,7 @@ import { NumberRangeValue } from '../common/NumberRangeValue';
  *
  * @public
  */
-export interface Filter {
+export interface FieldValueFilter {
   /**
    * The fieldId to apply the filter against.
    *
