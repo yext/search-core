@@ -3,8 +3,7 @@ import { FilterCombinator, StaticFilter } from '../models/searchservice/request/
 import { FieldValueFilter } from '../models/searchservice/request/FieldValueFilter';
 import { ApiStaticFilters, ApiFilter } from '../models/searchservice/request/ApiStaticFilters';
 
-export function serializeStaticFilters(
-  filter: StaticFilter): string | undefined {
+export function serializeStaticFilters(filter: StaticFilter): string | undefined {
   if (filter.kind === 'combination') {
     const shapedFilter = shapeCombinedFilterForApi(filter.combinator, filter.children);
     return shapedFilter && JSON.stringify(shapedFilter);

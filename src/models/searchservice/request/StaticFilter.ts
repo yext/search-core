@@ -6,8 +6,8 @@ import { FieldValueFilter } from './FieldValueFilter';
  * @public
  */
 export type StaticFilter =
-	{ kind: 'fieldValue', value: FieldValueFilter } |
-	{ kind: 'combination', combinator: FilterCombinator, children: StaticFilter[] };
+  { kind: 'fieldValue', value: FieldValueFilter } |
+  { kind: 'combination', combinator: FilterCombinator, children: StaticFilter[] };
 
 /**
  * Indicates how child filters in a {@link StaticFilter} should be combined.
