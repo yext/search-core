@@ -17,6 +17,7 @@
 |  Enumeration | Description |
 |  --- | --- |
 |  [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md) | Represents the type of [AppliedQueryFilter](./search-core.appliedqueryfilter.md) applied to a search. |
+|  [BuiltInFieldType](./search-core.builtinfieldtype.md) | Possible built-in field types for [DirectAnswer.fieldType](./search-core.directanswer.fieldtype.md)<!-- -->. |
 |  [DirectAnswerType](./search-core.directanswertype.md) | Represents the type of direct answer. |
 |  [Direction](./search-core.direction.md) | The direction of a sort. |
 |  [ErrorType](./search-core.errortype.md) | Identifier for the type of error causing the failure. |

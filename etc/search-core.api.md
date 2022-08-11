@@ -94,6 +94,12 @@ export interface BaseSearchConfig {
 }
 
 // @public
+export enum BuiltInFieldType {
+    // (undocumented)
+    Address = "address"
+}
+
+// @public
 export interface ClientSDKHeaderValues {
     [agent: string]: string | undefined;
     ANSWERS_CORE?: never;
@@ -109,11 +115,11 @@ export interface CombinedFilter {
 export type Context = any;
 
 // @public
-export interface DirectAnswer {
-    fieldType: string;
+export interface DirectAnswer<T = unknown> {
+    fieldType: BuiltInFieldType | string;
     relatedResult: Result;
     type: DirectAnswerType;
-    value?: string;
+    value?: T;
     verticalKey: string;
 }
 
@@ -195,24 +201,24 @@ export interface FailedVertical {
 }
 
 // @public
-export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
-    fieldType: string;
+export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
+    fieldType: BuiltInFieldType | string;
     relatedResult: Result;
     snippet: Snippet;
     type: DirectAnswerType.FeaturedSnippet;
-    value?: string;
+    value?: T;
     verticalKey: string;
 }
 
 // @public
-export interface FieldValueDirectAnswer extends DirectAnswer {
+export interface FieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
     entityName: string;
     fieldApiName: string;
     fieldName: string;
-    fieldType: string;
+    fieldType: BuiltInFieldType | string;
     relatedResult: Result;
     type: DirectAnswerType.FieldValue;
-    value: string;
+    value: T;
     verticalKey: string;
 }
 

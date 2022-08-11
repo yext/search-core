@@ -1,7 +1,6 @@
 import { Result } from './Result';
 import { DirectAnswerType } from './DirectAnswerType';
-import { FieldType } from './FieldType';
-import { EnumOrLiteral } from '../../utils/EnumOrLiteral';
+import { BuiltInFieldType } from './BuiltInFieldType';
 
 /**
  * A direct answer to a search.
@@ -23,5 +22,5 @@ export interface DirectAnswer<T = unknown> {
   /** The vertical key of the direct answer. */
   verticalKey: string,
   /** The field type of the direct answer. */
-  fieldType: EnumOrLiteral<FieldType>
+  fieldType: BuiltInFieldType | string
 }

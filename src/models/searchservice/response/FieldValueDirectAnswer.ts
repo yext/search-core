@@ -1,7 +1,6 @@
-import { EnumOrLiteral } from '../../utils/EnumOrLiteral';
 import { DirectAnswer } from './DirectAnswer';
 import { DirectAnswerType } from './DirectAnswerType';
-import { FieldType } from './FieldType';
+import { BuiltInFieldType } from './BuiltInFieldType';
 import { Result } from './Result';
 
 /**
@@ -19,7 +18,7 @@ export interface FieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
   /** {@inheritDoc DirectAnswer.verticalKey} */
   verticalKey: string,
   /** {@inheritDoc DirectAnswer.fieldType} */
-  fieldType: EnumOrLiteral<FieldType>,
+  fieldType: BuiltInFieldType | string,
   /** The name of the entity that direct answer came from. */
   entityName: string,
   /** The field name of the direct answer. */

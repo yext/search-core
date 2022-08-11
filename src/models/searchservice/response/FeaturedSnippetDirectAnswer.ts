@@ -1,7 +1,6 @@
-import { EnumOrLiteral } from '../../utils/EnumOrLiteral';
 import { DirectAnswer } from './DirectAnswer';
 import { DirectAnswerType } from './DirectAnswerType';
-import { FieldType } from './FieldType';
+import { BuiltInFieldType } from './BuiltInFieldType';
 import { Result } from './Result';
 import { Snippet } from './Snippet';
 
@@ -10,17 +9,17 @@ import { Snippet } from './Snippet';
  *
  * @public
  */
-export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
+export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
   /** {@link DirectAnswerType}.FeaturedSnippet. */
   type: DirectAnswerType.FeaturedSnippet,
   /** {@inheritDoc DirectAnswer.value} */
-  value?: string,
+  value?: T,
   /** {@inheritDoc DirectAnswer.relatedResult} */
   relatedResult: Result,
   /** {@inheritDoc DirectAnswer.verticalKey} */
   verticalKey: string,
   /** {@inheritDoc DirectAnswer.fieldType} */
-  fieldType: EnumOrLiteral<FieldType>,
+  fieldType: BuiltInFieldType | string,
   /** The snippet where the direct answer was found. */
   snippet: Snippet
 }

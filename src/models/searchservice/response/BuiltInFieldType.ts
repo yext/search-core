@@ -1,8 +1,8 @@
 /**
- * Possible field types for {@link DirectAnswer.fieldType}.
+ * Possible built-in field types for {@link DirectAnswer.fieldType}.
  * @public
  */
-export enum FieldType {
+export enum BuiltInFieldType {
   // URL = 'url',
   // ComplexURL = 'complex_url',
   // IOSAppURL = 'ios_app_url',

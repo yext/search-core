@@ -9,18 +9,18 @@ A direct answer which was found within a document.
 <b>Signature:</b>
 
 ```typescript
-export interface FeaturedSnippetDirectAnswer extends DirectAnswer 
+export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> 
 ```
-<b>Extends:</b> [DirectAnswer](./search-core.directanswer.md)
+<b>Extends:</b> [DirectAnswer](./search-core.directanswer.md)<!-- -->&lt;T&gt;
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [fieldType](./search-core.featuredsnippetdirectanswer.fieldtype.md) | string | The field type of the direct answer. |
+|  [fieldType](./search-core.featuredsnippetdirectanswer.fieldtype.md) | [BuiltInFieldType](./search-core.builtinfieldtype.md) \| string | The field type of the direct answer. |
 |  [relatedResult](./search-core.featuredsnippetdirectanswer.relatedresult.md) | [Result](./search-core.result.md) | The entity associated with the direct answer. |
 |  [snippet](./search-core.featuredsnippetdirectanswer.snippet.md) | [Snippet](./search-core.snippet.md) | The snippet where the direct answer was found. |
 |  [type](./search-core.featuredsnippetdirectanswer.type.md) | [DirectAnswerType.FeaturedSnippet](./search-core.directanswertype.md) | [DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FeaturedSnippet. |
-|  [value?](./search-core.featuredsnippetdirectanswer.value.md) | string | <i>(Optional)</i> The result of the direct answer. |
+|  [value?](./search-core.featuredsnippetdirectanswer.value.md) | T | <i>(Optional)</i> The result of the direct answer. |
 |  [verticalKey](./search-core.featuredsnippetdirectanswer.verticalkey.md) | string | The vertical key of the direct answer. |
 
