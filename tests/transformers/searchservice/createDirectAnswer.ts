@@ -72,7 +72,7 @@ it('can create a custom FieldValueDirectAnswer', () => {
       entityName: 'Obama Phone',
       fieldName: 'Phone Description',
       fieldApiName: 'phoneDescription',
-      fieldType: 'c010101.specialtype'
+      fieldType: 'c3350634.specialtype'
     },
     relatedItem: {
       verticalConfigId: 'phone',
