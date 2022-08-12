@@ -67,29 +67,35 @@ it('can create a custom FieldValueDirectAnswer', () => {
   const apiFieldValueDirectAnswer = {
     type: 'FIELD_VALUE',
     answer: {
-      value: '18888888888',
-      entityName: 'Barack Obama',
-      fieldName: 'Phone Number',
-      fieldApiName: 'mainPhone',
+      value: {
+        color: 'yellow',
+        os: 'android'
+      },
+      entityName: 'Obama Phone',
+      fieldName: 'Phone Description',
+      fieldApiName: 'phoneDescription',
       fieldType: 'c010101.specialtype'
     },
     relatedItem: {
-      verticalConfigId: 'people',
+      verticalConfigId: 'phone',
       data: {}
     }
   };
   const actualDirectAnswer = createDirectAnswer(apiFieldValueDirectAnswer);
   const expectedDirectAnswer: CustomFieldValueDA = {
     type: DirectAnswerType.FieldValue,
-    value: '18888888888',
+    value: {
+      color: 'yellow',
+      os: 'android'
+    },
     relatedResult: {
       rawData: {},
       source: Source.KnowledgeManager
     },
-    verticalKey: 'people',
-    entityName: 'Barack Obama',
-    fieldName: 'Phone Number',
-    fieldApiName: 'mainPhone',
+    verticalKey: 'phone',
+    entityName: 'Obama Phone',
+    fieldName: 'Phone Description',
+    fieldApiName: 'phoneDescription',
     fieldType: 'unknown'
   };
   expect(actualDirectAnswer).toMatchObject(expectedDirectAnswer);
