@@ -85,11 +85,7 @@ export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T>
     entityName: string;
     fieldApiName: string;
     fieldName: string;
-    fieldType: EnumOrLiteral<BuiltInFieldType> | 'unknown';
-    relatedResult: Result;
     type: DirectAnswerType.FieldValue;
-    value: T;
-    verticalKey: string;
 }
 
 // @public
@@ -214,12 +210,8 @@ export interface FailedVertical {
 
 // @public
 export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
-    fieldType: EnumOrLiteral<BuiltInFieldType> | 'unknown';
-    relatedResult: Result;
     snippet: Snippet;
     type: DirectAnswerType.FeaturedSnippet;
-    value?: T;
-    verticalKey: string;
 }
 
 // @public
