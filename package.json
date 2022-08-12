@@ -28,7 +28,7 @@
   },
   "scripts": {
     "test": "npm run lint && jest",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings=0",
     "tsc-cjs": "tsc -p tsconfig.cjs.json",
     "tsc-esm": "tsc -p tsconfig.esm.json",
     "tsc": "npm run tsc-cjs && npm run tsc-esm",
