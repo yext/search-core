@@ -9,7 +9,7 @@ Possible built-in and custom [BaseFieldValueDirectAnswer](./search-core.basefiel
 <b>Signature:</b>
 
 ```typescript
-export declare type FieldValueDirectAnswer = CustomFieldValueDA;
+export declare type FieldValueDirectAnswer = CustomFieldValueDirectAnswer;
 ```
-<b>References:</b> [CustomFieldValueDA](./search-core.customfieldvalueda.md)
+<b>References:</b> [CustomFieldValueDirectAnswer](./search-core.customfieldvaluedirectanswer.md)
 

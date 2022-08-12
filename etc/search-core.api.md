@@ -119,7 +119,7 @@ export interface ClientSDKHeaderValues {
 export type Context = any;
 
 // @public
-export interface CustomFieldValueDA<T = unknown> extends BaseFieldValueDirectAnswer<T> {
+export interface CustomFieldValueDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
     fieldType: 'unknown';
 }
 
@@ -215,7 +215,7 @@ export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T
 }
 
 // @public
-export type FieldValueDirectAnswer = CustomFieldValueDA;
+export type FieldValueDirectAnswer = CustomFieldValueDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
