@@ -1,5 +1,5 @@
-import { FieldValueDirectAnswer } from "./FieldValueDirectAnswer";
-import { BuiltInFieldType } from "./BuiltInFieldType";
+import { FieldValueDirectAnswer } from './FieldValueDirectAnswer';
+import { BuiltInFieldType } from './BuiltInFieldType';
 
 /**
  * A interface for direct answers {@link FieldValueDirectAnswer} with address values.
@@ -16,13 +16,13 @@ export interface AddressDirectAnswer extends FieldValueDirectAnswer<Address> {
  * @public
  */
 export interface Address {
-	line1?: string,
-	line2?: string,
-	line3?: string,
-	sublocality?: string,
-	city?: string,
-	region?: string,
-	postalCode?: string,
-	extraDescription?: string,
-	countryCode?: string,
+  line1?: string,
+  line2?: string,
+  line3?: string,
+  sublocality?: string,
+  city?: string,
+  region?: string,
+  postalCode?: string,
+  extraDescription?: string,
+  countryCode?: string
 }
