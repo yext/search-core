@@ -81,6 +81,18 @@ export interface BaseAnswersConfig extends BaseSearchConfig {
 }
 
 // @public
+export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
+    entityName: string;
+    fieldApiName: string;
+    fieldName: string;
+    fieldType: EnumOrLiteral<BuiltInFieldType> | 'unknown';
+    relatedResult: Result;
+    type: DirectAnswerType.FieldValue;
+    value: T;
+    verticalKey: string;
+}
+
+// @public
 export interface BaseSearchConfig {
     // @alpha
     additionalQueryParams?: {
@@ -109,8 +121,14 @@ export interface ClientSDKHeaderValues {
 export type Context = any;
 
 // @public
+export interface CustomDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
+    // (undocumented)
+    fieldType: 'unknown';
+}
+
+// @public
 export interface DirectAnswer<T = unknown> {
-    fieldType: BuiltInFieldType | string;
+    fieldType: EnumOrLiteral<BuiltInFieldType> | 'unknown';
     relatedResult: Result;
     type: DirectAnswerType;
     value?: T;
@@ -161,6 +179,9 @@ export interface Endpoints {
 }
 
 // @public
+export type EnumOrLiteral<T extends string> = T | `${T}`;
+
+// @public
 export enum ErrorType {
     BackendError = "BACKEND_ERROR",
     InvalidConfig = "INVALID_CONFIG",
@@ -192,7 +213,7 @@ export interface FailedVertical {
 
 // @public
 export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
-    fieldType: BuiltInFieldType | string;
+    fieldType: EnumOrLiteral<BuiltInFieldType> | 'unknown';
     relatedResult: Result;
     snippet: Snippet;
     type: DirectAnswerType.FeaturedSnippet;
@@ -201,16 +222,7 @@ export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T
 }
 
 // @public
-export interface FieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
-    entityName: string;
-    fieldApiName: string;
-    fieldName: string;
-    fieldType: BuiltInFieldType | string;
-    relatedResult: Result;
-    type: DirectAnswerType.FieldValue;
-    value: T;
-    verticalKey: string;
-}
+export type FieldValueDirectAnswer = CustomDirectAnswer;
 
 // @public
 export interface FieldValueFilter {

@@ -9,5 +9,5 @@ The field type of the direct answer.
 <b>Signature:</b>
 
 ```typescript
-fieldType: BuiltInFieldType | string;
+fieldType: EnumOrLiteral<BuiltInFieldType> | 'unknown';
 ```

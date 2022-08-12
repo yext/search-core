@@ -1,5 +1,5 @@
 import { createDirectAnswer } from '../../../src/transformers/searchservice/createDirectAnswer';
-import { DirectAnswerType } from '../../../src/models/searchservice/response/DirectAnswerType';
+import { DirectAnswerType } from '../../../src/models/searchservice/response/directanswer/DirectAnswerType';
 
 it('can create a FeaturedSnippetDirectAnswer', () => {
   const apiFeaturedSnippetDirectAnswer = {

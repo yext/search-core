@@ -51,10 +51,13 @@ export { Direction } from './searchservice/request/Direction';
 export { AppliedQueryFilter } from './searchservice/response/AppliedQueryFilter';
 export { AppliedQueryFilterType } from './searchservice/response/AppliedQueryFilterType';
 export { LocationFilterDetails, LocationBoundingBox } from './searchservice/response/LocationFilterDetails';
-export { DirectAnswer } from './searchservice/response/DirectAnswer';
-export { FieldValueDirectAnswer } from './searchservice/response/FieldValueDirectAnswer';
-export { FeaturedSnippetDirectAnswer } from './searchservice/response/FeaturedSnippetDirectAnswer';
-export { DirectAnswerType } from './searchservice/response/DirectAnswerType';
+export { DirectAnswer } from './searchservice/response/directanswer/DirectAnswer';
+export { BaseFieldValueDirectAnswer } from './searchservice/response/directanswer/BaseFieldValueDirectAnswer';
+export { FieldValueDirectAnswer } from './searchservice/response/directanswer/FieldValueDirectAnswer';
+export { CustomDirectAnswer } from './searchservice/response/directanswer/CustomDirectAnswer';
+export { FeaturedSnippetDirectAnswer } from './searchservice/response/directanswer/FeaturedSnippetDirectAnswer';
+export { DirectAnswerType } from './searchservice/response/directanswer/DirectAnswerType';
+export { BuiltInFieldType } from './searchservice/response/directanswer/BuiltInFieldType';
 export { DisplayableFacet, DisplayableFacetOption } from './searchservice/response/DisplayableFacet';
 export { HighlightedFields } from './searchservice/response/HighlightedFields';
 export { HighlightedValue } from './searchservice/response/HighlightedValue';
@@ -70,7 +73,6 @@ export { VerticalSearchResponse } from './searchservice/response/VerticalSearchR
 export { Snippet } from './searchservice/response/Snippet';
 export { ErrorType } from './searchservice/response/ErrorType';
 export { FailedVertical } from './searchservice/response/FailedVertical';
-export { BuiltInFieldType } from './searchservice/response/BuiltInFieldType';
 
 // Search service common models
 export { Matcher } from './searchservice/common/Matcher';
@@ -79,3 +81,6 @@ export {
   LowerNumberRangeLimit,
   UpperNumberRangeLimit
 } from './searchservice/common/NumberRangeValue';
+
+// Utils
+export { EnumOrLiteral } from './utils/EnumOrLiteral';

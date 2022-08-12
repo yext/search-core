@@ -1,6 +1,6 @@
-import { FeaturedSnippetDirectAnswer } from '../../models/searchservice/response/FeaturedSnippetDirectAnswer';
-import { FieldValueDirectAnswer } from '../../models/searchservice/response/FieldValueDirectAnswer';
-import { DirectAnswerType } from '../../models/searchservice/response/DirectAnswerType';
+import { FeaturedSnippetDirectAnswer } from '../../models/searchservice/response/directanswer/FeaturedSnippetDirectAnswer';
+import { FieldValueDirectAnswer } from '../../models/searchservice/response/directanswer/FieldValueDirectAnswer';
+import { DirectAnswerType } from '../../models/searchservice/response/directanswer/DirectAnswerType';
 import { ResultsFactory } from './ResultsFactory';
 
 export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | FieldValueDirectAnswer {
