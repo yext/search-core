@@ -9,6 +9,34 @@ export interface AdditionalHttpHeaders {
     'Client-SDK'?: ClientSDKHeaderValues;
 }
 
+// @public
+export interface Address {
+    // (undocumented)
+    city?: string;
+    // (undocumented)
+    countryCode?: string;
+    // (undocumented)
+    extraDescription?: string;
+    // (undocumented)
+    line1?: string;
+    // (undocumented)
+    line2?: string;
+    // (undocumented)
+    line3?: string;
+    // (undocumented)
+    postalCode?: string;
+    // (undocumented)
+    region?: string;
+    // (undocumented)
+    sublocality?: string;
+}
+
+// @public
+export interface AddressDirectAnswer extends FieldValueDirectAnswer<Address> {
+    // (undocumented)
+    fieldType: BuiltInFieldType.Address;
+}
+
 // @public @deprecated (undocumented)
 export type AnswersConfig = SearchConfig;
 
