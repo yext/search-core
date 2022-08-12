@@ -11,11 +11,11 @@ export enum BuiltInFieldType {
   // Email = 'email',
   // InstagramHandle = 'instagram_handle',
   // TwitterHandle = 'twitter_handle',
-  // Phone = 'phone',
-  Address = 'address',
+  Phone = 'phone',
+  // Address = 'address',
   // Hours = 'hours',
   // Decimal = 'decimal',
   // RichText = 'rich_text',
   // SingleLineText = 'single_line_text',
-  // MultiLineText = 'multi_line_text'
+  MultiLineText = 'multi_line_text'
 }

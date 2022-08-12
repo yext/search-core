@@ -108,7 +108,9 @@ export interface BaseSearchConfig {
 // @public
 export enum BuiltInFieldType {
     // (undocumented)
-    Address = "address"
+    MultiLineText = "multi_line_text",
+    // (undocumented)
+    Phone = "phone"
 }
 
 // @public
@@ -121,7 +123,7 @@ export interface ClientSDKHeaderValues {
 export type Context = any;
 
 // @public
-export interface CustomDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
+export interface CustomFieldValueDA<T = unknown> extends BaseFieldValueDirectAnswer<T> {
     // (undocumented)
     fieldType: 'unknown';
 }
@@ -222,7 +224,7 @@ export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T
 }
 
 // @public
-export type FieldValueDirectAnswer = CustomDirectAnswer;
+export type FieldValueDirectAnswer = CustomFieldValueDA;
 
 // @public
 export interface FieldValueFilter {

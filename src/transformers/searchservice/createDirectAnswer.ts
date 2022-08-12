@@ -2,6 +2,7 @@ import { FeaturedSnippetDirectAnswer } from '../../models/searchservice/response
 import { FieldValueDirectAnswer } from '../../models/searchservice/response/directanswer/FieldValueDirectAnswer';
 import { DirectAnswerType } from '../../models/searchservice/response/directanswer/DirectAnswerType';
 import { ResultsFactory } from './ResultsFactory';
+import { BuiltInFieldType } from '../../models/searchservice/response/directanswer/BuiltInFieldType';
 
 export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | FieldValueDirectAnswer {
   const isFieldValueDirectAnswer = data?.type === DirectAnswerType.FieldValue;
@@ -11,7 +12,7 @@ export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | Fie
     value: data.answer.value,
     relatedResult: ResultsFactory.fromDirectAnswer(data.relatedItem.data),
     verticalKey: data.relatedItem.verticalConfigId,
-    fieldType: data.answer.fieldType
+    fieldType: Object.values(BuiltInFieldType).includes(data.answer.fieldType) ? data.answer.fieldType : 'unknown'
   };
 
   if (isFieldValueDirectAnswer) {

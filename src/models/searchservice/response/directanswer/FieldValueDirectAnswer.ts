@@ -1,4 +1,4 @@
-import { CustomDirectAnswer } from './CustomDirectAnswer';
+import { CustomFieldValueDA } from './CustomFieldValueDA';
 
 /**
  * Possible built-in and custom {@link BaseFieldValueDirectAnswer} interfaces
@@ -6,4 +6,4 @@ import { CustomDirectAnswer } from './CustomDirectAnswer';
  * @public
  */
 //add other builtin field value direct answer interfaces here
-export type FieldValueDirectAnswer = CustomDirectAnswer;
+export type FieldValueDirectAnswer = CustomFieldValueDA;

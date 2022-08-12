@@ -54,7 +54,7 @@ export { LocationFilterDetails, LocationBoundingBox } from './searchservice/resp
 export { DirectAnswer } from './searchservice/response/directanswer/DirectAnswer';
 export { BaseFieldValueDirectAnswer } from './searchservice/response/directanswer/BaseFieldValueDirectAnswer';
 export { FieldValueDirectAnswer } from './searchservice/response/directanswer/FieldValueDirectAnswer';
-export { CustomDirectAnswer } from './searchservice/response/directanswer/CustomDirectAnswer';
+export { CustomFieldValueDA } from './searchservice/response/directanswer/CustomFieldValueDA';
 export { FeaturedSnippetDirectAnswer } from './searchservice/response/directanswer/FeaturedSnippetDirectAnswer';
 export { DirectAnswerType } from './searchservice/response/directanswer/DirectAnswerType';
 export { BuiltInFieldType } from './searchservice/response/directanswer/BuiltInFieldType';
