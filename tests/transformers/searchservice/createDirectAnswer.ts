@@ -1,7 +1,5 @@
 import { createDirectAnswer } from '../../../src/transformers/searchservice/createDirectAnswer';
 import { DirectAnswerType } from '../../../src/models/searchservice/response/directanswer/DirectAnswerType';
-import { CustomFieldValueDA } from '../../../src/models/searchservice/response/directanswer/CustomFieldValueDA';
-import { Source } from '../../../src/models/searchservice/response/Source';
 
 it('can create a FeaturedSnippetDirectAnswer', () => {
   const apiFeaturedSnippetDirectAnswer = {
