@@ -4,6 +4,8 @@
 
 ## CustomFieldValueDA.fieldType property
 
+The field type of the direct answer.
+
 <b>Signature:</b>
 
 ```typescript

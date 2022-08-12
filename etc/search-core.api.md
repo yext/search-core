@@ -124,7 +124,6 @@ export type Context = any;
 
 // @public
 export interface CustomFieldValueDA<T = unknown> extends BaseFieldValueDirectAnswer<T> {
-    // (undocumented)
     fieldType: 'unknown';
 }
 

@@ -17,5 +17,5 @@ export interface CustomFieldValueDA<T = unknown> extends BaseFieldValueDirectAns
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [fieldType](./search-core.customfieldvalueda.fieldtype.md) | 'unknown' |  |
+|  [fieldType](./search-core.customfieldvalueda.fieldtype.md) | 'unknown' | The field type of the direct answer. |
 
