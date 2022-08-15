@@ -4,7 +4,7 @@
 
 ## EmailFieldValueDirectAnswer interface
 
-A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with email value.
+A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'email' field type.
 
 <b>Signature:</b>
 
