@@ -9,14 +9,7 @@ Represents a static filter that will be used to refine results.
 <b>Signature:</b>
 
 ```typescript
-export declare type StaticFilter = {
-    kind: 'fieldValue';
-    value: FieldValueFilter;
-} | {
-    kind: 'combination';
-    combinator: FilterCombinator;
-    children: StaticFilter[];
-};
+export declare type StaticFilter = FieldValueStaticFilter | DisjunctionStaticFilter | ConjunctionStaticFilter;
 ```
-<b>References:</b> [FieldValueFilter](./search-core.fieldvaluefilter.md)<!-- -->, [FilterCombinator](./search-core.filtercombinator.md)<!-- -->, [StaticFilter](./search-core.staticfilter.md)
+<b>References:</b> [FieldValueStaticFilter](./search-core.fieldvaluestaticfilter.md)<!-- -->, [DisjunctionStaticFilter](./search-core.disjunctionstaticfilter.md)<!-- -->, [ConjunctionStaticFilter](./search-core.conjunctionstaticfilter.md)
 
