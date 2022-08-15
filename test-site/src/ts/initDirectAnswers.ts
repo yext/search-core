@@ -1,4 +1,4 @@
-import { BuiltInFieldType, DirectAnswerType, FeaturedSnippetDirectAnswer, FieldValueDirectAnswer } from '@yext/search-core';
+import { BuiltInFieldType, DirectAnswerType } from '@yext/search-core';
 import { directAnswer } from './index';
 
 /**
