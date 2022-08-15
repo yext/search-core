@@ -1,5 +1,5 @@
 import { BuiltInFieldType } from './directanswer/BuiltInFieldType';
-import { BaseFieldValueDirectAnswer } from './directanswer/BaseFieldValueDirectAnswer'
+import { BaseFieldValueDirectAnswer } from './directanswer/BaseFieldValueDirectAnswer';
 
 /**
  * A {@link BaseFieldValueDirectAnswer} interface with address value.
