@@ -21,4 +21,5 @@ export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T>
 |  [fieldApiName](./search-core.basefieldvaluedirectanswer.fieldapiname.md) | string | The field api name of the direct answer. |
 |  [fieldName](./search-core.basefieldvaluedirectanswer.fieldname.md) | string | The field name of the direct answer. |
 |  [type](./search-core.basefieldvaluedirectanswer.type.md) | [DirectAnswerType.FieldValue](./search-core.directanswertype.md) | [DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FieldValue. |
+|  [value](./search-core.basefieldvaluedirectanswer.value.md) | T | The result of the direct answer. |
 

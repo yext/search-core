@@ -86,6 +86,7 @@ export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T>
     fieldApiName: string;
     fieldName: string;
     type: DirectAnswerType.FieldValue;
+    value: T;
 }
 
 // @public

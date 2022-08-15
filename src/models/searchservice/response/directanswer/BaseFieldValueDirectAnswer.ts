@@ -9,6 +9,8 @@ import { DirectAnswerType } from './DirectAnswerType';
 export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
   /** {@link DirectAnswerType}.FieldValue. */
   type: DirectAnswerType.FieldValue,
+  /** The result of the direct answer. */
+  value: T,
   /** The name of the entity that direct answer came from. */
   entityName: string,
   /** The field name of the direct answer. */
