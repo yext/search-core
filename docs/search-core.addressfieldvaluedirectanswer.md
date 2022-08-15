@@ -4,7 +4,7 @@
 
 ## AddressFieldValueDirectAnswer interface
 
-A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with address value.
+A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'address' field type.
 
 <b>Signature:</b>
 
