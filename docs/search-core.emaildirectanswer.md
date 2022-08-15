@@ -9,9 +9,9 @@ A interface for direct answers [FieldValueDirectAnswer](./search-core.fieldvalue
 <b>Signature:</b>
 
 ```typescript
-export interface EmailDirectAnswer extends FieldValueDirectAnswer<Email> 
+export interface EmailDirectAnswer extends FieldValueDirectAnswer<string[]> 
 ```
-<b>Extends:</b> [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md)<!-- -->&lt;[Email](./search-core.email.md)<!-- -->&gt;
+<b>Extends:</b> [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md)<!-- -->&lt;string\[\]&gt;
 
 ## Properties
 

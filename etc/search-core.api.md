@@ -145,10 +145,7 @@ export interface DisplayableFacetOption extends FacetOption {
 }
 
 // @public
-export type Email = string[];
-
-// @public
-export interface EmailDirectAnswer extends FieldValueDirectAnswer<Email> {
+export interface EmailDirectAnswer extends FieldValueDirectAnswer<string[]> {
     // (undocumented)
     fieldType: BuiltInFieldType.Email;
 }

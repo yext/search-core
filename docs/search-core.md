@@ -110,7 +110,6 @@
 |  --- | --- |
 |  [AnswersConfig](./search-core.answersconfig.md) |  |
 |  [Context](./search-core.context.md) | Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [Email](./search-core.email.md) | A type to use in email direct answer's value [FieldValueDirectAnswer.value](./search-core.fieldvaluedirectanswer.value.md)<!-- -->. |
 |  [HighlightedFields](./search-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Search API. |
 |  [SearchConfig](./search-core.searchconfig.md) | The main configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token. |
 |  [StaticFilter](./search-core.staticfilter.md) | Represents a static filter that will be used to refine results. |

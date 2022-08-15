@@ -6,13 +6,6 @@ import { BuiltInFieldType } from './BuiltInFieldType';
  *
  * @public
  */
-export interface EmailDirectAnswer extends FieldValueDirectAnswer<Email> {
+export interface EmailDirectAnswer extends FieldValueDirectAnswer<string[]> {
   fieldType: BuiltInFieldType.Email
 }
-
-/**
- * A type to use in email direct answer's value {@link FieldValueDirectAnswer.value}.
- *
- * @public
- */
-export type Email = string[];
