@@ -105,6 +105,8 @@ export interface BaseSearchConfig {
 // @public
 export enum BuiltInFieldType {
     // (undocumented)
+    Address = "address",
+    // (undocumented)
     Email = "email",
     // (undocumented)
     MultiLineText = "multi_line_text",

@@ -12,7 +12,7 @@ export enum BuiltInFieldType {
   // InstagramHandle = 'instagram_handle',
   // TwitterHandle = 'twitter_handle',
   Phone = 'phone',
-  // Address = 'address',
+  Address = 'address',
   // Hours = 'hours',
   // Decimal = 'decimal',
   RichText = 'rich_text',
