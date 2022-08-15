@@ -1,5 +1,6 @@
 /**
  * Possible built-in field types for {@link DirectAnswer.fieldType}.
+ *
  * @public
  */
 export enum BuiltInFieldType {

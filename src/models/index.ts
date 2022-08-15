@@ -66,10 +66,12 @@ export { BaseFieldValueDirectAnswer } from './searchservice/response/directanswe
 export { FieldValueDirectAnswer } from './searchservice/response/directanswer/FieldValueDirectAnswer';
 export { UnknownFieldValueDirectAnswer } from './searchservice/response/directanswer/UnknownFieldValueDirectAnswer';
 
-export { BaseFeaturedSnippetDirectAnswer } from './searchservice/response/directanswer/BaseFeaturedSnippetDirectAnswer';
-export { FeaturedSnippetDirectAnswer } from './searchservice/response/directanswer/FeaturedSnippetDirectAnswer';
-export { RichTextFeaturedSnippetDirectAnswer } from './searchservice/response/directanswer/RichTextFeaturedSnippetDirectAnswer';
-export { MultiLineTextFeaturedSnippetDirectAnswer } from './searchservice/response/directanswer/MultiLineTextFeaturedSnippetDirectAnswer';
+export {
+  BaseFeaturedSnippetDirectAnswer,
+  FeaturedSnippetDirectAnswer,
+  RichTextFeaturedSnippetDirectAnswer,
+  MultiLineTextFeaturedSnippetDirectAnswer
+} from './searchservice/response/directanswer/FeaturedSnippetDirectAnswer';
 
 export { DisplayableFacet, DisplayableFacetOption } from './searchservice/response/DisplayableFacet';
 export { HighlightedFields } from './searchservice/response/HighlightedFields';

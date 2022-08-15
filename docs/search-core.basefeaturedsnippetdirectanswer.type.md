@@ -4,7 +4,7 @@
 
 ## BaseFeaturedSnippetDirectAnswer.type property
 
-[DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FeaturedSnippet
+Indicates that the DirectAnswer is a [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md)<!-- -->.
 
 <b>Signature:</b>
 

@@ -7,7 +7,7 @@ import { DirectAnswerType } from './DirectAnswerType';
  * @public
  */
 export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
-  /** {@link DirectAnswerType}.FieldValue. */
+  /** {@inheritDoc DirectAnswerType.FieldValue} */
   type: DirectAnswerType.FieldValue,
   /** The result of the direct answer. */
   value: T,

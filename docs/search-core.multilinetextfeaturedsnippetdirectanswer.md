@@ -4,7 +4,7 @@
 
 ## MultiLineTextFeaturedSnippetDirectAnswer interface
 
-A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'multi\_line\_text' field type
+A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'multi\_line\_text' field type.
 
 <b>Signature:</b>
 

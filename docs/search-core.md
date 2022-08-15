@@ -74,7 +74,7 @@
 |  [LocationBoundingBox](./search-core.locationboundingbox.md) | Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. (e.g. boundary for a locality or region specific location filter) |
 |  [LocationFilterDetails](./search-core.locationfilterdetails.md) | Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. |
 |  [LowerNumberRangeLimit](./search-core.lowernumberrangelimit.md) | The start limit of [NumberRangeValue](./search-core.numberrangevalue.md)<!-- -->. |
-|  [MultiLineTextFeaturedSnippetDirectAnswer](./search-core.multilinetextfeaturedsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'multi\_line\_text' field type |
+|  [MultiLineTextFeaturedSnippetDirectAnswer](./search-core.multilinetextfeaturedsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'multi\_line\_text' field type. |
 |  [NearFilterValue](./search-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./search-core.matcher.md)<!-- -->. |
 |  [NumberRangeValue](./search-core.numberrangevalue.md) | A filter value for a filter with a $between [Matcher](./search-core.matcher.md)<!-- -->. |
 |  [QueryRulesActionsData](./search-core.queryrulesactionsdata.md) | Data returned from the Search query rules system. |
@@ -116,8 +116,8 @@
 |  [AnswersConfig](./search-core.answersconfig.md) |  |
 |  [Context](./search-core.context.md) | Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [EnumOrLiteral](./search-core.enumorliteral.md) | Produces a union type from the enum passed as a generic which consists of the enum values and the string literals of the enum. |
-|  [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) | Possible built-in [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) interfaces |
-|  [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) | Possible built-in and custom [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interfaces |
+|  [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) | All possible built-in [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) interfaces. |
+|  [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) | Possible built-in and custom [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interfaces. |
 |  [HighlightedFields](./search-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Search API. |
 |  [SearchConfig](./search-core.searchconfig.md) | The main configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token. |
 |  [StaticFilter](./search-core.staticfilter.md) | Represents a static filter that will be used to refine results. |

@@ -4,7 +4,7 @@
 
 ## FeaturedSnippetDirectAnswer type
 
-Possible built-in [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) interfaces
+All possible built-in [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) interfaces.
 
 <b>Signature:</b>
 
