@@ -57,13 +57,20 @@ export { Direction } from './searchservice/request/Direction';
 export { AppliedQueryFilter } from './searchservice/response/AppliedQueryFilter';
 export { AppliedQueryFilterType } from './searchservice/response/AppliedQueryFilterType';
 export { LocationFilterDetails, LocationBoundingBox } from './searchservice/response/LocationFilterDetails';
+
 export { DirectAnswer } from './searchservice/response/directanswer/DirectAnswer';
+export { DirectAnswerType } from './searchservice/response/directanswer/DirectAnswerType';
+export { BuiltInFieldType } from './searchservice/response/directanswer/BuiltInFieldType';
+
 export { BaseFieldValueDirectAnswer } from './searchservice/response/directanswer/BaseFieldValueDirectAnswer';
 export { FieldValueDirectAnswer } from './searchservice/response/directanswer/FieldValueDirectAnswer';
 export { UnknownFieldValueDirectAnswer } from './searchservice/response/directanswer/UnknownFieldValueDirectAnswer';
+
+export { BaseFeaturedSnippetDirectAnswer } from './searchservice/response/directanswer/BaseFeaturedSnippetDirectAnswer';
 export { FeaturedSnippetDirectAnswer } from './searchservice/response/directanswer/FeaturedSnippetDirectAnswer';
-export { DirectAnswerType } from './searchservice/response/directanswer/DirectAnswerType';
-export { BuiltInFieldType } from './searchservice/response/directanswer/BuiltInFieldType';
+export { RichTextFeaturedSnippetDirectAnswer } from './searchservice/response/directanswer/RichTextFeaturedSnippetDirectAnswer';
+export { MultiLineTextFeaturedSnippetDirectAnswer } from './searchservice/response/directanswer/MultiLineTextFeaturedSnippetDirectAnswer';
+
 export { DisplayableFacet, DisplayableFacetOption } from './searchservice/response/DisplayableFacet';
 export { HighlightedFields } from './searchservice/response/HighlightedFields';
 export { HighlightedValue } from './searchservice/response/HighlightedValue';

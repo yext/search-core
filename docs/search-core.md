@@ -51,6 +51,7 @@
 |  [AutocompleteResult](./search-core.autocompleteresult.md) | An autocomplete suggestion. |
 |  [AutocompleteService](./search-core.autocompleteservice.md) | A service for autocomplete requests. |
 |  [BaseAnswersConfig](./search-core.baseanswersconfig.md) |  |
+|  [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) | A direct answer which was found within a document. |
 |  [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) | A direct answer where the answer came from a field from the knowledge graph. |
 |  [BaseSearchConfig](./search-core.basesearchconfig.md) | The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. |
 |  [ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md) | Additional agents and their versions used to create the Search experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
@@ -63,7 +64,6 @@
 |  [Facet](./search-core.facet.md) | Represents dynamic filter options for the Search API. |
 |  [FacetOption](./search-core.facetoption.md) | A filter associated with the facet. |
 |  [FailedVertical](./search-core.failedvertical.md) | Error information from when a vertical fails to return results. |
-|  [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) | A direct answer which was found within a document. |
 |  [FieldValueFilter](./search-core.fieldvaluefilter.md) | Represents a filter which compares values to a single field. |
 |  [FieldValueStaticFilter](./search-core.fieldvaluestaticfilter.md) | A [FieldValueFilter](./search-core.fieldvaluefilter.md) with the kind of filter specified to discriminate between static filter types. |
 |  [FilterSearchRequest](./search-core.filtersearchrequest.md) | Options for a filtersearch request. |
@@ -74,6 +74,7 @@
 |  [LocationBoundingBox](./search-core.locationboundingbox.md) | Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. (e.g. boundary for a locality or region specific location filter) |
 |  [LocationFilterDetails](./search-core.locationfilterdetails.md) | Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. |
 |  [LowerNumberRangeLimit](./search-core.lowernumberrangelimit.md) | The start limit of [NumberRangeValue](./search-core.numberrangevalue.md)<!-- -->. |
+|  [MultiLineTextFeaturedSnippetDirectAnswer](./search-core.multilinetextfeaturedsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'multi\_line\_text' field type |
 |  [NearFilterValue](./search-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./search-core.matcher.md)<!-- -->. |
 |  [NumberRangeValue](./search-core.numberrangevalue.md) | A filter value for a filter with a $between [Matcher](./search-core.matcher.md)<!-- -->. |
 |  [QueryRulesActionsData](./search-core.queryrulesactionsdata.md) | Data returned from the Search query rules system. |
@@ -81,6 +82,7 @@
 |  [QuestionSubmissionResponse](./search-core.questionsubmissionresponse.md) | A representation of a question submission response. |
 |  [QuestionSubmissionService](./search-core.questionsubmissionservice.md) | Submits a custom question to the Search API. |
 |  [Result](./search-core.result.md) | An individual search result. |
+|  [RichTextFeaturedSnippetDirectAnswer](./search-core.richtextfeaturedsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'rich\_text' field type. "value" field is omitted for featured snippet direct answer of this field type. |
 |  [SearchConfigWithApiKey](./search-core.searchconfigwithapikey.md) | Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires apiKey. |
 |  [SearchConfigWithToken](./search-core.searchconfigwithtoken.md) | Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires token. |
 |  [SearchParameterField](./search-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
@@ -114,6 +116,7 @@
 |  [AnswersConfig](./search-core.answersconfig.md) |  |
 |  [Context](./search-core.context.md) | Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [EnumOrLiteral](./search-core.enumorliteral.md) | Produces a union type from the enum passed as a generic which consists of the enum values and the string literals of the enum. |
+|  [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) | Possible built-in [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) interfaces |
 |  [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) | Possible built-in and custom [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interfaces |
 |  [HighlightedFields](./search-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Search API. |
 |  [SearchConfig](./search-core.searchconfig.md) | The main configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token. |
