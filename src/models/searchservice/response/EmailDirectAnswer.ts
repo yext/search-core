@@ -1,11 +1,11 @@
 import { BuiltInFieldType } from './directanswer/BuiltInFieldType';
-import { DirectAnswer } from './directanswer/DirectAnswer';
+import { BaseFieldValueDirectAnswer } from './directanswer/BaseFieldValueDirectAnswer';
 
 /**
- * A {@link DirectAnswer} interface with email value.
+ * A {@link BaseFieldValueDirectAnswer} interface with email value.
  *
  * @public
  */
-export interface EmailDirectAnswer extends DirectAnswer<string[]> {
+export interface EmailDirectAnswer extends BaseFieldValueDirectAnswer<string[]> {
   fieldType: BuiltInFieldType.Email
 }

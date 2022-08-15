@@ -4,14 +4,14 @@
 
 ## EmailDirectAnswer interface
 
-A [DirectAnswer](./search-core.directanswer.md) interface with email value.
+A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with email value.
 
 <b>Signature:</b>
 
 ```typescript
-export interface EmailDirectAnswer extends DirectAnswer<string[]> 
+export interface EmailDirectAnswer extends BaseFieldValueDirectAnswer<string[]> 
 ```
-<b>Extends:</b> [DirectAnswer](./search-core.directanswer.md)<!-- -->&lt;string\[\]&gt;
+<b>Extends:</b> [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;string\[\]&gt;
 
 ## Properties
 
