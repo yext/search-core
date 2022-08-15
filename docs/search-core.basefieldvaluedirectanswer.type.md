@@ -4,7 +4,7 @@
 
 ## BaseFieldValueDirectAnswer.type property
 
-[DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FieldValue.
+Indicates that the DirectAnswer is a [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md)<!-- -->.
 
 <b>Signature:</b>
 

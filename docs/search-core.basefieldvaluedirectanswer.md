@@ -20,6 +20,6 @@ export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T>
 |  [entityName](./search-core.basefieldvaluedirectanswer.entityname.md) | string | The name of the entity that direct answer came from. |
 |  [fieldApiName](./search-core.basefieldvaluedirectanswer.fieldapiname.md) | string | The field api name of the direct answer. |
 |  [fieldName](./search-core.basefieldvaluedirectanswer.fieldname.md) | string | The field name of the direct answer. |
-|  [type](./search-core.basefieldvaluedirectanswer.type.md) | [DirectAnswerType.FieldValue](./search-core.directanswertype.md) | [DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FieldValue. |
+|  [type](./search-core.basefieldvaluedirectanswer.type.md) | [DirectAnswerType.FieldValue](./search-core.directanswertype.md) | Indicates that the DirectAnswer is a [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md)<!-- -->. |
 |  [value](./search-core.basefieldvaluedirectanswer.value.md) | T | The result of the direct answer. |
 

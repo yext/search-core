@@ -4,7 +4,7 @@
 
 ## FieldValueDirectAnswer type
 
-Possible built-in and custom [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interfaces
+Possible built-in and custom [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interfaces.
 
 <b>Signature:</b>
 
