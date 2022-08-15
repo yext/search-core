@@ -81,6 +81,13 @@ export interface BaseAnswersConfig extends BaseSearchConfig {
 }
 
 // @public
+export interface BaseFeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
+    fieldType: EnumOrLiteral<BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText>;
+    snippet: Snippet;
+    type: DirectAnswerType.FeaturedSnippet;
+}
+
+// @public
 export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
     entityName: string;
     fieldApiName: string;
@@ -113,7 +120,9 @@ export enum BuiltInFieldType {
     // (undocumented)
     Phone = "phone",
     // (undocumented)
-    RichText = "rich_text"
+    RichText = "rich_text",
+    // (undocumented)
+    SingleLineText = "single_line_text"
 }
 
 // @public
@@ -231,11 +240,7 @@ export interface FailedVertical {
 }
 
 // @public
-export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
-    fieldType: BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText;
-    snippet: Snippet;
-    type: DirectAnswerType.FeaturedSnippet;
-}
+export type FeaturedSnippetDirectAnswer = MultiLineTextFeaturedSnippetDirectAnswer | RichTextFeaturedSnippetDirectAnswer;
 
 // @public
 export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer;
@@ -350,6 +355,12 @@ export enum Matcher {
 }
 
 // @public
+export interface MultiLineTextFeaturedSnippetDirectAnswer extends BaseFeaturedSnippetDirectAnswer<string> {
+    fieldType: EnumOrLiteral<BuiltInFieldType.MultiLineText>;
+    value: string;
+}
+
+// @public
 export interface NearFilterValue {
     lat: number;
     lng: number;
@@ -422,6 +433,11 @@ export interface Result<T = Record<string, unknown>> {
     name?: string;
     rawData: T;
     source: Source;
+}
+
+// @public
+export interface RichTextFeaturedSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
+    fieldType: EnumOrLiteral<BuiltInFieldType.RichText>;
 }
 
 // @public

@@ -1,7 +1,7 @@
 import { UnknownFieldValueDirectAnswer } from './UnknownFieldValueDirectAnswer';
 
 /**
- * Possible built-in and custom {@link BaseFieldValueDirectAnswer} interfaces
+ * Possible built-in and custom {@link BaseFieldValueDirectAnswer} interfaces.
  *
  * @public
  */

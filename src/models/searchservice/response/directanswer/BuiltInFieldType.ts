@@ -1,5 +1,6 @@
 /**
  * Possible built-in field types for {@link DirectAnswer.fieldType}.
+ *
  * @public
  */
 export enum BuiltInFieldType {
@@ -15,7 +16,7 @@ export enum BuiltInFieldType {
   Address = 'address',
   // Hours = 'hours',
   // Decimal = 'decimal',
+  SingleLineText = 'single_line_text',
   RichText = 'rich_text',
-  // SingleLineText = 'single_line_text',
   MultiLineText = 'multi_line_text'
 }

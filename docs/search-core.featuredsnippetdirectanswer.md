@@ -2,22 +2,14 @@
 
 [Home](./index.md) &gt; [@yext/search-core](./search-core.md) &gt; [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md)
 
-## FeaturedSnippetDirectAnswer interface
+## FeaturedSnippetDirectAnswer type
 
-A direct answer which was found within a document.
+All possible built-in [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) interfaces.
 
 <b>Signature:</b>
 
 ```typescript
-export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> 
+export declare type FeaturedSnippetDirectAnswer = MultiLineTextFeaturedSnippetDirectAnswer | RichTextFeaturedSnippetDirectAnswer;
 ```
-<b>Extends:</b> [DirectAnswer](./search-core.directanswer.md)<!-- -->&lt;T&gt;
-
-## Properties
-
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [fieldType](./search-core.featuredsnippetdirectanswer.fieldtype.md) | [BuiltInFieldType.MultiLineText](./search-core.builtinfieldtype.md) \| [BuiltInFieldType.RichText](./search-core.builtinfieldtype.md) | The field type of the direct answer. |
-|  [snippet](./search-core.featuredsnippetdirectanswer.snippet.md) | [Snippet](./search-core.snippet.md) | The snippet where the direct answer was found. |
-|  [type](./search-core.featuredsnippetdirectanswer.type.md) | [DirectAnswerType.FeaturedSnippet](./search-core.directanswertype.md) | [DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FeaturedSnippet |
+<b>References:</b> [MultiLineTextFeaturedSnippetDirectAnswer](./search-core.multilinetextfeaturedsnippetdirectanswer.md)<!-- -->, [RichTextFeaturedSnippetDirectAnswer](./search-core.richtextfeaturedsnippetdirectanswer.md)
 
