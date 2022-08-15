@@ -65,6 +65,8 @@ export { BuiltInFieldType } from './searchservice/response/directanswer/BuiltInF
 export { BaseFieldValueDirectAnswer } from './searchservice/response/directanswer/BaseFieldValueDirectAnswer';
 export { FieldValueDirectAnswer } from './searchservice/response/directanswer/FieldValueDirectAnswer';
 export { UnknownFieldValueDirectAnswer } from './searchservice/response/directanswer/UnknownFieldValueDirectAnswer';
+export { AddressFieldValueDirectAnswer, Address } from './searchservice/response/AddressFieldValueDirectAnswer';
+
 
 export {
   BaseFeaturedSnippetDirectAnswer,
@@ -88,7 +90,6 @@ export { VerticalSearchResponse } from './searchservice/response/VerticalSearchR
 export { Snippet } from './searchservice/response/Snippet';
 export { ErrorType } from './searchservice/response/ErrorType';
 export { FailedVertical } from './searchservice/response/FailedVertical';
-export { AddressFieldValueDirectAnswer, Address } from './searchservice/response/AddressFieldValueDirectAnswer';
 
 // Search service common models
 export { Matcher } from './searchservice/common/Matcher';
