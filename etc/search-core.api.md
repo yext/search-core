@@ -364,6 +364,12 @@ export interface NumberRangeValue {
 }
 
 // @public
+export interface PhoneFieldValueDirectAnswer extends BaseFieldValueDirectAnswer<string> {
+    // (undocumented)
+    fieldType: BuiltInFieldType.Phone;
+}
+
+// @public
 export function provideCore(config: SearchConfig): SearchCore;
 
 // @public
