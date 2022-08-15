@@ -32,7 +32,7 @@ export interface Address {
 }
 
 // @public
-export interface AddressDirectAnswer extends FieldValueDirectAnswer<Address> {
+export interface AddressDirectAnswer extends DirectAnswer<Address> {
     // (undocumented)
     fieldType: BuiltInFieldType.Address;
 }
@@ -109,6 +109,15 @@ export interface BaseAnswersConfig extends BaseSearchConfig {
 }
 
 // @public
+export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
+    entityName: string;
+    fieldApiName: string;
+    fieldName: string;
+    type: DirectAnswerType.FieldValue;
+    value: T;
+}
+
+// @public
 export interface BaseSearchConfig {
     // @alpha
     additionalQueryParams?: {
@@ -124,7 +133,13 @@ export interface BaseSearchConfig {
 // @public
 export enum BuiltInFieldType {
     // (undocumented)
-    Address = "address"
+    Address = "address",
+    // (undocumented)
+    MultiLineText = "multi_line_text",
+    // (undocumented)
+    Phone = "phone",
+    // (undocumented)
+    RichText = "rich_text"
 }
 
 // @public
@@ -134,11 +149,18 @@ export interface ClientSDKHeaderValues {
 }
 
 // @public
+export interface ConjunctionStaticFilter {
+    combinator: FilterCombinator.AND;
+    filters: StaticFilter[];
+    kind: 'conjunction';
+}
+
+// @public
 export type Context = any;
 
 // @public
 export interface DirectAnswer<T = unknown> {
-    fieldType: BuiltInFieldType | string;
+    fieldType: EnumOrLiteral<BuiltInFieldType> | 'unknown';
     relatedResult: Result;
     type: DirectAnswerType;
     value?: T;
@@ -155,6 +177,13 @@ export enum DirectAnswerType {
 export enum Direction {
     Ascending = "ASC",
     Descending = "DESC"
+}
+
+// @public
+export interface DisjunctionStaticFilter {
+    combinator: FilterCombinator.OR;
+    filters: (DisjunctionStaticFilter | FieldValueStaticFilter)[];
+    kind: 'disjunction';
 }
 
 // @public
@@ -189,6 +218,9 @@ export interface Endpoints {
 }
 
 // @public
+export type EnumOrLiteral<T extends string> = T | `${T}`;
+
+// @public
 export enum ErrorType {
     BackendError = "BACKEND_ERROR",
     InvalidConfig = "INVALID_CONFIG",
@@ -220,31 +252,24 @@ export interface FailedVertical {
 
 // @public
 export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
-    fieldType: BuiltInFieldType | string;
-    relatedResult: Result;
+    fieldType: BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText;
     snippet: Snippet;
     type: DirectAnswerType.FeaturedSnippet;
-    value?: T;
-    verticalKey: string;
 }
 
 // @public
-export interface FieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
-    entityName: string;
-    fieldApiName: string;
-    fieldName: string;
-    fieldType: BuiltInFieldType | string;
-    relatedResult: Result;
-    type: DirectAnswerType.FieldValue;
-    value: T;
-    verticalKey: string;
-}
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
     fieldId: string;
     matcher: Matcher;
     value: string | number | boolean | NearFilterValue | NumberRangeValue;
+}
+
+// @public
+export interface FieldValueStaticFilter extends FieldValueFilter {
+    kind: 'fieldValue';
 }
 
 // @public
@@ -532,14 +557,7 @@ export enum SpellCheckType {
 }
 
 // @public
-export type StaticFilter = {
-    kind: 'fieldValue';
-    value: FieldValueFilter;
-} | {
-    kind: 'combination';
-    combinator: FilterCombinator;
-    children: StaticFilter[];
-};
+export type StaticFilter = FieldValueStaticFilter | DisjunctionStaticFilter | ConjunctionStaticFilter;
 
 // @public
 export interface UniversalAutocompleteRequest extends SearchRequest {
@@ -579,6 +597,11 @@ export interface UniversalSearchResponse {
     spellCheck?: SpellCheck;
     uuid: string;
     verticalResults: VerticalResults[];
+}
+
+// @public
+export interface UnknownFieldValueDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
+    fieldType: 'unknown';
 }
 
 // @public

@@ -1,6 +1,6 @@
 {
   "name": "@yext/search-core",
-  "version": "2.0.0-alpha.201",
+  "version": "2.0.0-alpha.204",
   "description": "Typescript Networking Library for the Yext Search API",
   "main": "./dist/commonjs/src/index.js",
   "module": "./dist/esm/src/index.js",
@@ -28,7 +28,7 @@
   },
   "scripts": {
     "test": "npm run lint && jest",
-    "lint": "eslint .",
+    "lint": "eslint . --max-warnings=0",
     "tsc-cjs": "tsc -p tsconfig.cjs.json",
     "tsc-esm": "tsc -p tsconfig.esm.json",
     "tsc": "npm run tsc-cjs && npm run tsc-esm",

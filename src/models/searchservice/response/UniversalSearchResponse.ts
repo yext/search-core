@@ -1,7 +1,7 @@
 import { VerticalResults } from './VerticalResults';
 import { SearchIntent } from './SearchIntent';
-import { FeaturedSnippetDirectAnswer } from './FeaturedSnippetDirectAnswer';
-import { FieldValueDirectAnswer } from './FieldValueDirectAnswer';
+import { FeaturedSnippetDirectAnswer } from './directanswer/FeaturedSnippetDirectAnswer';
+import { FieldValueDirectAnswer } from './directanswer/FieldValueDirectAnswer';
 import { SpellCheck } from './SpellCheck';
 import { LocationBias } from './LocationBias';
 import { QueryRulesActionsData } from './QueryRulesActionsData';

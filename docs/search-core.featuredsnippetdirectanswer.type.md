@@ -4,7 +4,7 @@
 
 ## FeaturedSnippetDirectAnswer.type property
 
-[DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FeaturedSnippet.
+[DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FeaturedSnippet
 
 <b>Signature:</b>
 

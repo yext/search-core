@@ -4,14 +4,14 @@
 
 ## AddressDirectAnswer interface
 
-An interface for direct answers for a [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) with address values.
+An interface for direct answers for a [DirectAnswer](./search-core.directanswer.md) with address values.
 
 <b>Signature:</b>
 
 ```typescript
-export interface AddressDirectAnswer extends FieldValueDirectAnswer<Address> 
+export interface AddressDirectAnswer extends DirectAnswer<Address> 
 ```
-<b>Extends:</b> [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md)<!-- -->&lt;[Address](./search-core.address.md)<!-- -->&gt;
+<b>Extends:</b> [DirectAnswer](./search-core.directanswer.md)<!-- -->&lt;[Address](./search-core.address.md)<!-- -->&gt;
 
 ## Properties
 

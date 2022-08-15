@@ -4,7 +4,7 @@
 
 ## DirectAnswer.value property
 
-The result of the direct answer.
+The value of the direct answer.
 
 <b>Signature:</b>
 
@@ -14,5 +14,5 @@ value?: T;
 
 ## Remarks
 
-A value will not be present if the [DirectAnswer.fieldType](./search-core.directanswer.fieldtype.md) is 'rich\_text'.
+A value will not be present if the [DirectAnswer.type](./search-core.directanswer.type.md) is 'FEATURED\_SNIPPET' and [DirectAnswer.fieldType](./search-core.directanswer.fieldtype.md) is 'rich\_text'.
 

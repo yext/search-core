@@ -4,7 +4,7 @@
 
 ## Address interface
 
-A type interface with address fields to use in [FieldValueDirectAnswer.value](./search-core.fieldvaluedirectanswer.value.md)<!-- -->.
+A type interface with address fields to use in [DirectAnswer.value](./search-core.directanswer.value.md)<!-- -->.
 
 <b>Signature:</b>
 
