@@ -2,27 +2,14 @@
 
 [Home](./index.md) &gt; [@yext/search-core](./search-core.md) &gt; [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md)
 
-## FieldValueDirectAnswer interface
+## FieldValueDirectAnswer type
 
-A direct answer where the answer came from a field from the knowledge graph.
+Possible built-in and custom [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interfaces
 
 <b>Signature:</b>
 
 ```typescript
-export interface FieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> 
+export declare type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer;
 ```
-<b>Extends:</b> [DirectAnswer](./search-core.directanswer.md)<!-- -->&lt;T&gt;
-
-## Properties
-
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [entityName](./search-core.fieldvaluedirectanswer.entityname.md) | string | The name of the entity that direct answer came from. |
-|  [fieldApiName](./search-core.fieldvaluedirectanswer.fieldapiname.md) | string | The field api name of the direct answer. |
-|  [fieldName](./search-core.fieldvaluedirectanswer.fieldname.md) | string | The field name of the direct answer. |
-|  [fieldType](./search-core.fieldvaluedirectanswer.fieldtype.md) | [BuiltInFieldType](./search-core.builtinfieldtype.md) \| string | The field type of the direct answer. |
-|  [relatedResult](./search-core.fieldvaluedirectanswer.relatedresult.md) | [Result](./search-core.result.md) | The entity associated with the direct answer. |
-|  [type](./search-core.fieldvaluedirectanswer.type.md) | [DirectAnswerType.FieldValue](./search-core.directanswertype.md) | [DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FieldValue. |
-|  [value](./search-core.fieldvaluedirectanswer.value.md) | T | The result of the direct answer. |
-|  [verticalKey](./search-core.fieldvaluedirectanswer.verticalkey.md) | string | The vertical key of the direct answer. |
+<b>References:</b> [UnknownFieldValueDirectAnswer](./search-core.unknownfieldvaluedirectanswer.md)
 

@@ -81,6 +81,15 @@ export interface BaseAnswersConfig extends BaseSearchConfig {
 }
 
 // @public
+export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
+    entityName: string;
+    fieldApiName: string;
+    fieldName: string;
+    type: DirectAnswerType.FieldValue;
+    value: T;
+}
+
+// @public
 export interface BaseSearchConfig {
     // @alpha
     additionalQueryParams?: {
@@ -96,7 +105,11 @@ export interface BaseSearchConfig {
 // @public
 export enum BuiltInFieldType {
     // (undocumented)
-    Address = "address"
+    MultiLineText = "multi_line_text",
+    // (undocumented)
+    Phone = "phone",
+    // (undocumented)
+    RichText = "rich_text"
 }
 
 // @public
@@ -117,7 +130,7 @@ export type Context = any;
 
 // @public
 export interface DirectAnswer<T = unknown> {
-    fieldType: BuiltInFieldType | string;
+    fieldType: EnumOrLiteral<BuiltInFieldType> | 'unknown';
     relatedResult: Result;
     type: DirectAnswerType;
     value?: T;
@@ -175,6 +188,9 @@ export interface Endpoints {
 }
 
 // @public
+export type EnumOrLiteral<T extends string> = T | `${T}`;
+
+// @public
 export enum ErrorType {
     BackendError = "BACKEND_ERROR",
     InvalidConfig = "INVALID_CONFIG",
@@ -206,25 +222,13 @@ export interface FailedVertical {
 
 // @public
 export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
-    fieldType: BuiltInFieldType | string;
-    relatedResult: Result;
+    fieldType: BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText;
     snippet: Snippet;
     type: DirectAnswerType.FeaturedSnippet;
-    value?: T;
-    verticalKey: string;
 }
 
 // @public
-export interface FieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
-    entityName: string;
-    fieldApiName: string;
-    fieldName: string;
-    fieldType: BuiltInFieldType | string;
-    relatedResult: Result;
-    type: DirectAnswerType.FieldValue;
-    value: T;
-    verticalKey: string;
-}
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
@@ -563,6 +567,11 @@ export interface UniversalSearchResponse {
     spellCheck?: SpellCheck;
     uuid: string;
     verticalResults: VerticalResults[];
+}
+
+// @public
+export interface UnknownFieldValueDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
+    fieldType: 'unknown';
 }
 
 // @public

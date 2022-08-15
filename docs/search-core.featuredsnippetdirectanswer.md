@@ -17,10 +17,7 @@ export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [fieldType](./search-core.featuredsnippetdirectanswer.fieldtype.md) | [BuiltInFieldType](./search-core.builtinfieldtype.md) \| string | The field type of the direct answer. |
-|  [relatedResult](./search-core.featuredsnippetdirectanswer.relatedresult.md) | [Result](./search-core.result.md) | The entity associated with the direct answer. |
+|  [fieldType](./search-core.featuredsnippetdirectanswer.fieldtype.md) | [BuiltInFieldType.MultiLineText](./search-core.builtinfieldtype.md) \| [BuiltInFieldType.RichText](./search-core.builtinfieldtype.md) | The field type of the direct answer. |
 |  [snippet](./search-core.featuredsnippetdirectanswer.snippet.md) | [Snippet](./search-core.snippet.md) | The snippet where the direct answer was found. |
-|  [type](./search-core.featuredsnippetdirectanswer.type.md) | [DirectAnswerType.FeaturedSnippet](./search-core.directanswertype.md) | [DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FeaturedSnippet. |
-|  [value?](./search-core.featuredsnippetdirectanswer.value.md) | T | <i>(Optional)</i> The result of the direct answer. |
-|  [verticalKey](./search-core.featuredsnippetdirectanswer.verticalkey.md) | string | The vertical key of the direct answer. |
+|  [type](./search-core.featuredsnippetdirectanswer.type.md) | [DirectAnswerType.FeaturedSnippet](./search-core.directanswertype.md) | [DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FeaturedSnippet |
 

@@ -1,5 +1,5 @@
 import { createDirectAnswer } from '../../../src/transformers/searchservice/createDirectAnswer';
-import { DirectAnswerType } from '../../../src/models/searchservice/response/DirectAnswerType';
+import { DirectAnswerType } from '../../../src/models/searchservice/response/directanswer/DirectAnswerType';
 
 it('can create a FeaturedSnippetDirectAnswer', () => {
   const apiFeaturedSnippetDirectAnswer = {
@@ -32,6 +32,26 @@ it('can create a FeaturedSnippetDirectAnswer', () => {
   expect(actualDirectAnswer).toMatchObject(expectedDirectAnswer);
 });
 
+it('can handle unexpected fieldType for a FeaturedSnippetDirectAnswer', () => {
+  const apiFeaturedSnippetDirectAnswer = {
+    type: 'FEATURED_SNIPPET',
+    answer: {
+      value: 'Honolulu. Hawaii',
+      fieldType: 'phone',
+      snippet: {
+        matchedSubstrings: [{ offset: 31, length: 16 }],
+        value: '111 222 3333'
+      }
+    },
+    relatedItem: {
+      verticalConfigId: 'wiki_bios',
+      data: {}
+    }
+  };
+  expect(() => createDirectAnswer(apiFeaturedSnippetDirectAnswer))
+    .toThrow('Unexpected fieldType for featured snippet direct answer: phone');
+});
+
 it('can create a FieldValueDirectAnswer', () => {
   const apiFieldValueDirectAnswer = {
     type: 'FIELD_VALUE',
@@ -59,4 +79,26 @@ it('can create a FieldValueDirectAnswer', () => {
     fieldType: 'phone'
   };
   expect(actualDirectAnswer).toMatchObject(expectedDirectAnswer);
+});
+
+it('can create a custom FieldValueDirectAnswer', () => {
+  const apiFieldValueDirectAnswer = {
+    type: 'FIELD_VALUE',
+    answer: {
+      value: {
+        color: 'yellow',
+        os: 'android'
+      },
+      entityName: 'Obama Phone',
+      fieldName: 'Phone Description',
+      fieldApiName: 'phoneDescription',
+      fieldType: 'c3350634.specialtype'
+    },
+    relatedItem: {
+      verticalConfigId: 'phone',
+      data: {}
+    }
+  };
+  const actualDirectAnswer = createDirectAnswer(apiFieldValueDirectAnswer);
+  expect(actualDirectAnswer).toMatchObject(expect.objectContaining({ fieldType: 'unknown' }));
 });
