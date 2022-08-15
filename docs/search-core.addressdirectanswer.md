@@ -4,7 +4,7 @@
 
 ## AddressDirectAnswer interface
 
-A interface for direct answers [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) with address values.
+An interface for direct answers for a [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) with address values.
 
 <b>Signature:</b>
 

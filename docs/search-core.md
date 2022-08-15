@@ -43,7 +43,7 @@
 |  --- | --- |
 |  [AdditionalHttpHeaders](./search-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
 |  [Address](./search-core.address.md) | A type interface with address fields to use in [FieldValueDirectAnswer.value](./search-core.fieldvaluedirectanswer.value.md)<!-- -->. |
-|  [AddressDirectAnswer](./search-core.addressdirectanswer.md) | A interface for direct answers [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) with address values. |
+|  [AddressDirectAnswer](./search-core.addressdirectanswer.md) | An interface for direct answers for a [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) with address values. |
 |  [AnswersConfigWithApiKey](./search-core.answersconfigwithapikey.md) |  |
 |  [AnswersConfigWithToken](./search-core.answersconfigwithtoken.md) |  |
 |  [AnswersError](./search-core.answerserror.md) |  |

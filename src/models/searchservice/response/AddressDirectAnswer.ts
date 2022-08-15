@@ -2,7 +2,7 @@ import { FieldValueDirectAnswer } from './FieldValueDirectAnswer';
 import { BuiltInFieldType } from './BuiltInFieldType';
 
 /**
- * A interface for direct answers {@link FieldValueDirectAnswer} with address values.
+ * An interface for direct answers for a {@link FieldValueDirectAnswer} with address values.
  *
  * @public
  */
