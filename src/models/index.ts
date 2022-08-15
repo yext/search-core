@@ -79,7 +79,7 @@ export { VerticalSearchResponse } from './searchservice/response/VerticalSearchR
 export { Snippet } from './searchservice/response/Snippet';
 export { ErrorType } from './searchservice/response/ErrorType';
 export { FailedVertical } from './searchservice/response/FailedVertical';
-export { AddressDirectAnswer, Address } from './searchservice/response/AddressDirectAnswer';
+export { AddressFieldValueDirectAnswer, Address } from './searchservice/response/AddressFieldValueDirectAnswer';
 
 // Search service common models
 export { Matcher } from './searchservice/common/Matcher';
