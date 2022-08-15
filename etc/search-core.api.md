@@ -96,7 +96,9 @@ export interface BaseSearchConfig {
 // @public
 export enum BuiltInFieldType {
     // (undocumented)
-    Address = "address"
+    Address = "address",
+    // (undocumented)
+    Email = "email"
 }
 
 // @public
@@ -140,6 +142,15 @@ export interface DisplayableFacetOption extends FacetOption {
     count: number;
     displayName: string;
     selected: boolean;
+}
+
+// @public
+export type Email = string[];
+
+// @public
+export interface EmailDirectAnswer extends FieldValueDirectAnswer<Email> {
+    // (undocumented)
+    fieldType: BuiltInFieldType.Email;
 }
 
 // @public

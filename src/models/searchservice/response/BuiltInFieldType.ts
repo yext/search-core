@@ -8,7 +8,7 @@ export enum BuiltInFieldType {
   // IOSAppURL = 'ios_app_url',
   // AndroidAppURL = 'android_app_url',
   // FacebookURL = 'facebook_url',
-  // Email = 'email',
+  Email = 'email',
   // InstagramHandle = 'instagram_handle',
   // TwitterHandle = 'twitter_handle',
   // Phone = 'phone',

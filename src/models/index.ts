@@ -71,6 +71,7 @@ export { Snippet } from './searchservice/response/Snippet';
 export { ErrorType } from './searchservice/response/ErrorType';
 export { FailedVertical } from './searchservice/response/FailedVertical';
 export { BuiltInFieldType } from './searchservice/response/BuiltInFieldType';
+export { EmailDirectAnswer, Email } from './searchservice/response/EmailDirectAnswer';
 
 // Search service common models
 export { Matcher } from './searchservice/common/Matcher';

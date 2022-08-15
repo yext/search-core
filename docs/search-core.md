@@ -56,6 +56,7 @@
 |  [DirectAnswer](./search-core.directanswer.md) | A direct answer to a search. |
 |  [DisplayableFacet](./search-core.displayablefacet.md) | A [Facet](./search-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./search-core.displayablefacetoption.md) | A [FacetOption](./search-core.facetoption.md) with extra data meant to be displayed to the end user. |
+|  [EmailDirectAnswer](./search-core.emaildirectanswer.md) | A interface for direct answers [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) with email values. |
 |  [Endpoints](./search-core.endpoints.md) | Overrides for the URLs which are used when making requests to the Search API. |
 |  [Facet](./search-core.facet.md) | Represents dynamic filter options for the Search API. |
 |  [FacetOption](./search-core.facetoption.md) | A filter associated with the facet. |
@@ -109,6 +110,7 @@
 |  --- | --- |
 |  [AnswersConfig](./search-core.answersconfig.md) |  |
 |  [Context](./search-core.context.md) | Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
+|  [Email](./search-core.email.md) | A type to use in email direct answer's value [FieldValueDirectAnswer.value](./search-core.fieldvaluedirectanswer.value.md)<!-- -->. |
 |  [HighlightedFields](./search-core.highlightedfields.md) | A mapping of fields to the values emphasized by the Search API. |
 |  [SearchConfig](./search-core.searchconfig.md) | The main configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token. |
 |  [StaticFilter](./search-core.staticfilter.md) | Represents a static filter that will be used to refine results. |

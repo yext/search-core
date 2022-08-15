@@ -17,4 +17,5 @@ export declare enum BuiltInFieldType
 |  Member | Value | Description |
 |  --- | --- | --- |
 |  Address | <code>&quot;address&quot;</code> |  |
+|  Email | <code>&quot;email&quot;</code> |  |
 
