@@ -6,6 +6,6 @@ import { BaseFieldValueDirectAnswer } from './directanswer/BaseFieldValueDirectA
  *
  * @public
  */
-export interface EmailDirectAnswer extends BaseFieldValueDirectAnswer<string[]> {
+export interface EmailFieldValueDirectAnswer extends BaseFieldValueDirectAnswer<string[]> {
   fieldType: BuiltInFieldType.Email
 }
