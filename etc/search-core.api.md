@@ -32,7 +32,7 @@ export interface Address {
 }
 
 // @public
-export interface AddressDirectAnswer extends DirectAnswer<Address> {
+export interface AddressDirectAnswer extends BaseFieldValueDirectAnswer<Address> {
     // (undocumented)
     fieldType: BuiltInFieldType.Address;
 }

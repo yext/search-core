@@ -1,17 +1,17 @@
 import { BuiltInFieldType } from './directanswer/BuiltInFieldType';
-import { DirectAnswer } from './directanswer/DirectAnswer';
+import { BaseFieldValueDirectAnswer } from './directanswer/BaseFieldValueDirectAnswer';
 
 /**
- * A {@link DirectAnswer} interface with address value.
+ * A {@link BaseFieldValueDirectAnswer} interface with address value.
  *
  * @public
  */
-export interface AddressDirectAnswer extends DirectAnswer<Address> {
+export interface AddressDirectAnswer extends BaseFieldValueDirectAnswer<Address> {
   fieldType: BuiltInFieldType.Address
 }
 
 /**
- * An interface with address fields to use in {@link DirectAnswer.value}.
+ * An interface with address fields to use in {@link BaseFieldValueDirectAnswer.value}.
  *
  * @public
  */
