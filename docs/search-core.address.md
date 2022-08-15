@@ -4,7 +4,7 @@
 
 ## Address interface
 
-A type interface with address fields to use in [DirectAnswer.value](./search-core.directanswer.value.md)<!-- -->.
+An interface with address fields to use in [DirectAnswer.value](./search-core.directanswer.value.md)<!-- -->.
 
 <b>Signature:</b>
 
@@ -16,13 +16,13 @@ export interface Address
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [city?](./search-core.address.city.md) | string | <i>(Optional)</i> |
+|  [city](./search-core.address.city.md) | string |  |
 |  [countryCode?](./search-core.address.countrycode.md) | string | <i>(Optional)</i> |
 |  [extraDescription?](./search-core.address.extradescription.md) | string | <i>(Optional)</i> |
-|  [line1?](./search-core.address.line1.md) | string | <i>(Optional)</i> |
+|  [line1](./search-core.address.line1.md) | string |  |
 |  [line2?](./search-core.address.line2.md) | string | <i>(Optional)</i> |
 |  [line3?](./search-core.address.line3.md) | string | <i>(Optional)</i> |
-|  [postalCode?](./search-core.address.postalcode.md) | string | <i>(Optional)</i> |
-|  [region?](./search-core.address.region.md) | string | <i>(Optional)</i> |
+|  [postalCode](./search-core.address.postalcode.md) | string |  |
+|  [region](./search-core.address.region.md) | string |  |
 |  [sublocality?](./search-core.address.sublocality.md) | string | <i>(Optional)</i> |
 

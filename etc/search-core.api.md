@@ -12,21 +12,21 @@ export interface AdditionalHttpHeaders {
 // @public
 export interface Address {
     // (undocumented)
-    city?: string;
+    city: string;
     // (undocumented)
     countryCode?: string;
     // (undocumented)
     extraDescription?: string;
     // (undocumented)
-    line1?: string;
+    line1: string;
     // (undocumented)
     line2?: string;
     // (undocumented)
     line3?: string;
     // (undocumented)
-    postalCode?: string;
+    postalCode: string;
     // (undocumented)
-    region?: string;
+    region: string;
     // (undocumented)
     sublocality?: string;
 }

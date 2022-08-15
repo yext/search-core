@@ -42,8 +42,8 @@
 |  Interface | Description |
 |  --- | --- |
 |  [AdditionalHttpHeaders](./search-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
-|  [Address](./search-core.address.md) | A type interface with address fields to use in [DirectAnswer.value](./search-core.directanswer.value.md)<!-- -->. |
-|  [AddressDirectAnswer](./search-core.addressdirectanswer.md) | An interface for direct answers for a [DirectAnswer](./search-core.directanswer.md) with address values. |
+|  [Address](./search-core.address.md) | An interface with address fields to use in [DirectAnswer.value](./search-core.directanswer.value.md)<!-- -->. |
+|  [AddressDirectAnswer](./search-core.addressdirectanswer.md) | A direct answer [DirectAnswer](./search-core.directanswer.md) interface with address value. |
 |  [AnswersConfigWithApiKey](./search-core.answersconfigwithapikey.md) |  |
 |  [AnswersConfigWithToken](./search-core.answersconfigwithtoken.md) |  |
 |  [AnswersError](./search-core.answerserror.md) |  |

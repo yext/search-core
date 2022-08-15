@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-postalCode?: string;
+postalCode: string;
 ```

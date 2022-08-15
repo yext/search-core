@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-region?: string;
+region: string;
 ```

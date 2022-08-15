@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-line1?: string;
+line1: string;
 ```
