@@ -106,6 +106,13 @@ export interface ClientSDKHeaderValues {
 }
 
 // @public
+export interface ConjunctionStaticFilter {
+    combinator: FilterCombinator.AND;
+    filters: StaticFilter[];
+    kind: 'conjunction';
+}
+
+// @public
 export type Context = any;
 
 // @public
@@ -127,6 +134,13 @@ export enum DirectAnswerType {
 export enum Direction {
     Ascending = "ASC",
     Descending = "DESC"
+}
+
+// @public
+export interface DisjunctionStaticFilter {
+    combinator: FilterCombinator.OR;
+    filters: (DisjunctionStaticFilter | FieldValueStaticFilter)[];
+    kind: 'disjunction';
 }
 
 // @public
@@ -217,6 +231,11 @@ export interface FieldValueFilter {
     fieldId: string;
     matcher: Matcher;
     value: string | number | boolean | NearFilterValue | NumberRangeValue;
+}
+
+// @public
+export interface FieldValueStaticFilter extends FieldValueFilter {
+    kind: 'fieldValue';
 }
 
 // @public
@@ -504,14 +523,7 @@ export enum SpellCheckType {
 }
 
 // @public
-export type StaticFilter = {
-    kind: 'fieldValue';
-    value: FieldValueFilter;
-} | {
-    kind: 'combination';
-    combinator: FilterCombinator;
-    children: StaticFilter[];
-};
+export type StaticFilter = FieldValueStaticFilter | DisjunctionStaticFilter | ConjunctionStaticFilter;
 
 // @public
 export interface UniversalAutocompleteRequest extends SearchRequest {

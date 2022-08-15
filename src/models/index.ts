@@ -33,7 +33,13 @@ export { QuestionSubmissionRequest } from './questionsubmission/QuestionSubmissi
 export { QuestionSubmissionResponse } from './questionsubmission/QuestionSubmissionResponse';
 
 // Search service request models
-export { StaticFilter, FilterCombinator } from './searchservice/request/StaticFilter';
+export {
+  StaticFilter,
+  FieldValueStaticFilter,
+  ConjunctionStaticFilter,
+  DisjunctionStaticFilter,
+  FilterCombinator
+} from './searchservice/request/StaticFilter';
 export { Context } from './searchservice/request/Context';
 export { UniversalLimit } from './searchservice/request/UniversalLimit';
 export { LatLong } from './searchservice/request/LatLong';
