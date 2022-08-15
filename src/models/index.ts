@@ -65,6 +65,7 @@ export { BuiltInFieldType } from './searchservice/response/directanswer/BuiltInF
 export { BaseFieldValueDirectAnswer } from './searchservice/response/directanswer/BaseFieldValueDirectAnswer';
 export { FieldValueDirectAnswer } from './searchservice/response/directanswer/FieldValueDirectAnswer';
 export { UnknownFieldValueDirectAnswer } from './searchservice/response/directanswer/UnknownFieldValueDirectAnswer';
+export * from './searchservice/response/directanswer/StringValueDirectAnswer';
 
 export {
   BaseFeaturedSnippetDirectAnswer,

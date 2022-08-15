@@ -1,3 +1,4 @@
+import { AndroidAppUrlDirectAnswer, DecimalDirectAnswer, FacebookUrlDirectAnswer, InstagramHandleDirectAnswer, IosAppUrlDirectAnswer, RichTextDirectAnswer, TextValueDirectAnswer, TwitterHandleDirectAnswer, UrlDirectAnswer } from './StringValueDirectAnswer';
 import { UnknownFieldValueDirectAnswer } from './UnknownFieldValueDirectAnswer';
 
 /**
@@ -5,5 +6,14 @@ import { UnknownFieldValueDirectAnswer } from './UnknownFieldValueDirectAnswer';
  *
  * @public
  */
-//add other builtin field value direct answer interfaces here
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer;
+export type FieldValueDirectAnswer =
+  UnknownFieldValueDirectAnswer |
+  TextValueDirectAnswer |
+  UrlDirectAnswer |
+  RichTextDirectAnswer |
+  DecimalDirectAnswer |
+  FacebookUrlDirectAnswer |
+  InstagramHandleDirectAnswer |
+  TwitterHandleDirectAnswer |
+  IosAppUrlDirectAnswer |
+  AndroidAppUrlDirectAnswer;
