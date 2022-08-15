@@ -79,11 +79,7 @@ export { VerticalSearchResponse } from './searchservice/response/VerticalSearchR
 export { Snippet } from './searchservice/response/Snippet';
 export { ErrorType } from './searchservice/response/ErrorType';
 export { FailedVertical } from './searchservice/response/FailedVertical';
-<<<<<<< HEAD
-export { BuiltInFieldType } from './searchservice/response/BuiltInFieldType';
 export { EmailDirectAnswer } from './searchservice/response/EmailDirectAnswer';
-=======
->>>>>>> develop
 
 // Search service common models
 export { Matcher } from './searchservice/common/Matcher';

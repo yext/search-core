@@ -105,17 +105,13 @@ export interface BaseSearchConfig {
 // @public
 export enum BuiltInFieldType {
     // (undocumented)
-<<<<<<< HEAD
-    Address = "address",
+    Email = "email",
     // (undocumented)
-    Email = "email"
-=======
     MultiLineText = "multi_line_text",
     // (undocumented)
     Phone = "phone",
     // (undocumented)
     RichText = "rich_text"
->>>>>>> develop
 }
 
 // @public
@@ -176,7 +172,7 @@ export interface DisplayableFacetOption extends FacetOption {
 }
 
 // @public
-export interface EmailDirectAnswer extends FieldValueDirectAnswer<string[]> {
+export interface EmailDirectAnswer extends DirectAnswer<string[]> {
     // (undocumented)
     fieldType: BuiltInFieldType.Email;
 }
