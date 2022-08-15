@@ -4,7 +4,7 @@
 
 ## AddressDirectAnswer interface
 
-A direct answer [DirectAnswer](./search-core.directanswer.md) interface with address value.
+A [DirectAnswer](./search-core.directanswer.md) interface with address value.
 
 <b>Signature:</b>
 

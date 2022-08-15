@@ -2,7 +2,7 @@ import { BuiltInFieldType } from './directanswer/BuiltInFieldType';
 import { DirectAnswer } from './directanswer/DirectAnswer';
 
 /**
- * A direct answer {@link DirectAnswer} interface with address value.
+ * A {@link DirectAnswer} interface with address value.
  *
  * @public
  */
