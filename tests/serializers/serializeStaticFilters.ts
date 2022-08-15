@@ -4,27 +4,63 @@ import { serializeStaticFilters } from '../../src/serializers/serializeStaticFil
 
 it('serializeStaticFilters works with multiple levels of nesting', () => {
   const actualSerializedFilters = serializeStaticFilters({
-    kind: 'combination',
-    children: [
+    kind: 'conjunction',
+    filters: [
       {
-        kind: 'combination',
-        children:
+        kind: 'disjunction',
+        filters:
           [
             {
               kind: 'fieldValue',
-              value: { fieldId: 'c_Region', matcher: Matcher.Equals, value: 'APAC' }
+              fieldId: 'c_Region',
+              matcher: Matcher.Equals,
+              value: 'APAC'
             },
             {
-              kind: 'fieldValue',
-              value: { fieldId: 'c_Region', matcher: Matcher.Equals, value: 'EMEA' }
+              kind: 'disjunction',
+              filters: [
+                {
+                  kind: 'fieldValue',
+                  fieldId: 'c_Region',
+                  matcher: Matcher.Equals,
+                  value: 'EMEA'
+                },
+                {
+                  kind: 'fieldValue',
+                  fieldId: 'c_puppyPreference',
+                  matcher: Matcher.Equals,
+                  value: 'Frodo'
+                }
+              ],
+              combinator: FilterCombinator.OR
             }
           ],
         combinator: FilterCombinator.OR
       },
       {
         kind: 'fieldValue',
-        value: { fieldId: 'builtin.entityType', matcher: Matcher.Equals, value: 'Publication' }
+        fieldId: 'builtin.entityType',
+        matcher: Matcher.Equals,
+        value: 'Publication'
       },
+      {
+        kind: 'conjunction',
+        filters: [
+          {
+            kind: 'fieldValue',
+            fieldId: 'c_puppyPreference',
+            matcher: Matcher.Equals,
+            value: 'Marty'
+          },
+          {
+            kind: 'fieldValue',
+            fieldId: 'c_employeeDepartment',
+            matcher: Matcher.Equals,
+            value: 'Technology'
+          },
+        ],
+        combinator: FilterCombinator.AND
+      }
     ],
     combinator: FilterCombinator.AND
   });
@@ -34,26 +70,41 @@ it('serializeStaticFilters works with multiple levels of nesting', () => {
       {
         $or: [
           { c_Region: { $eq: 'APAC' } },
-          { c_Region: { $eq: 'EMEA' } }
+          {
+            $or: [
+              { c_Region: { $eq: 'EMEA' } },
+              { c_puppyPreference: { $eq: 'Frodo' } }
+            ]
+          }
         ]
       },
-      { 'builtin.entityType': { $eq: 'Publication' } }
+      { 'builtin.entityType': { $eq: 'Publication' } },
+      {
+        $and: [
+          { c_puppyPreference: { $eq: 'Marty' } },
+          { c_employeeDepartment: { $eq: 'Technology' } }
+        ]
+      },
     ]
   };
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
 
-it('serializeStaticFilters works with a simple combined filter', () => {
+it('serializeStaticFilters works with a DisjunctionStaticFilter', () => {
   const actualSerializedFilters = serializeStaticFilters({
-    kind: 'combination',
-    children: [
+    kind: 'disjunction',
+    filters: [
       {
         kind: 'fieldValue',
-        value: { fieldId: 'c_Region', matcher: Matcher.Equals, value: 'APAC' }
+        fieldId: 'c_Region',
+        matcher: Matcher.Equals,
+        value: 'APAC'
       },
       {
         kind: 'fieldValue',
-        value: { fieldId: 'c_Region', matcher: Matcher.Equals, value: 'EMEA' }
+        fieldId: 'c_Region',
+        matcher: Matcher.Equals,
+        value: 'EMEA'
       }
     ],
     combinator: FilterCombinator.OR
@@ -68,31 +119,56 @@ it('serializeStaticFilters works with a simple combined filter', () => {
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
 
-it('serializeStaticFilters works with only a FieldValueFilter', () => {
+it('serializeStaticFilters works with a ConjunctionStaticFilter', () => {
+  const actualSerializedFilters = serializeStaticFilters({
+    kind: 'conjunction',
+    filters: [
+      {
+        kind: 'fieldValue',
+        fieldId: 'c_Region',
+        matcher: Matcher.Equals,
+        value: 'APAC'
+      },
+      {
+        kind: 'fieldValue',
+        fieldId: 'builtin.entityType',
+        matcher: Matcher.Equals,
+        value: 'Publication'
+      }
+    ],
+    combinator: FilterCombinator.AND
+  });
+
+  const expectedSerializedFilters = {
+    $and: [
+      { c_Region: { $eq: 'APAC' } },
+      { 'builtin.entityType': { $eq: 'Publication' } }
+    ]
+  };
+  expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
+});
+
+it('serializeStaticFilters works with a FieldValueStaticFilter', () => {
   const actualSerializedFilters = serializeStaticFilters({
     kind: 'fieldValue',
-    value: {
-      fieldId: 'c_Region',
-      matcher: Matcher.Equals,
-      value: 'APAC'
-    }
+    fieldId: 'c_Region',
+    matcher: Matcher.Equals,
+    value: 'APAC'
   });
 
   const expectedSerializedFilters = { c_Region: { $eq: 'APAC' } };
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
 
-it('serializeStaticFilters works with a $near FieldValueFilter', () => {
+it('serializeStaticFilters works with a $near FieldValueStaticFilter', () => {
   const actualSerializedFilters = serializeStaticFilters({
     kind: 'fieldValue',
+    fieldId: 'builtin.location',
+    matcher: Matcher.Near,
     value: {
-      fieldId: 'builtin.location',
-      matcher: Matcher.Near,
-      value: {
-        lat: 1,
-        lng: 2,
-        radius: 3
-      }
+      lat: 1,
+      lng: 2,
+      radius: 3
     }
   });
 
@@ -108,17 +184,15 @@ it('serializeStaticFilters works with a $near FieldValueFilter', () => {
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
 
-it('serializeStaticFilters works with a $between FieldValueFilter', () => {
+it('serializeStaticFilters works with a $between FieldValueStaticFilter', () => {
   const actualSerializedFilters = serializeStaticFilters(
     {
       kind: 'fieldValue',
+      fieldId: 'price',
+      matcher: Matcher.Between,
       value: {
-        fieldId: 'price',
-        matcher: Matcher.Between,
-        value: {
-          start: { matcher: Matcher.GreaterThan, value: 0 },
-          end: { matcher: Matcher.LessThan, value: 10 }
-        }
+        start: { matcher: Matcher.GreaterThan, value: 0 },
+        end: { matcher: Matcher.LessThan, value: 10 }
       }
     }
   );
@@ -129,16 +203,14 @@ it('serializeStaticFilters works with a $between FieldValueFilter', () => {
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
 
-it('serializeStaticFilters works with only lower limit defined for a $between FieldValueFilter', () => {
+it('serializeStaticFilters works with only lower limit defined for a $between FieldValueStaticFilter', () => {
   const actualSerializedFilters = serializeStaticFilters(
     {
       kind: 'fieldValue',
+      fieldId: 'price',
+      matcher: Matcher.Between,
       value: {
-        fieldId: 'price',
-        matcher: Matcher.Between,
-        value: {
-          start: { matcher: Matcher.GreaterThan, value: 0 }
-        }
+        start: { matcher: Matcher.GreaterThan, value: 0 }
       }
     }
   );
@@ -148,16 +220,14 @@ it('serializeStaticFilters works with only lower limit defined for a $between Fi
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
 
-it('serializeStaticFilters works with only upper limit defined for a $between FieldValueFilter', () => {
+it('serializeStaticFilters works with only upper limit defined for a $between FieldValueStaticFilter', () => {
   const actualSerializedFilters = serializeStaticFilters(
     {
       kind: 'fieldValue',
+      fieldId: 'price',
+      matcher: Matcher.Between,
       value: {
-        fieldId: 'price',
-        matcher: Matcher.Between,
-        value: {
-          end: { matcher: Matcher.LessThan, value: 10 }
-        }
+        end: { matcher: Matcher.LessThan, value: 10 }
       }
     }
   );
@@ -169,16 +239,18 @@ it('serializeStaticFilters works with only upper limit defined for a $between Fi
 
 it('serializeStaticFilters works with a nested filter with single or no children', () => {
   const actualSerializedFilters = serializeStaticFilters({
-    kind: 'combination',
-    children: [
+    kind: 'conjunction',
+    filters: [
       {
-        kind: 'combination',
-        children: [],
+        kind: 'disjunction',
+        filters: [],
         combinator: FilterCombinator.OR
       },
       {
         kind: 'fieldValue',
-        value: { fieldId: 'builtin.entityType', matcher: Matcher.Equals, value: 'Publication' }
+        fieldId: 'builtin.entityType',
+        matcher: Matcher.Equals,
+        value: 'Publication'
       },
     ],
     combinator: FilterCombinator.AND
@@ -190,11 +262,29 @@ it('serializeStaticFilters works with a nested filter with single or no children
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
 
-it('serializeStaticFilters works with a simple combined filter with no children', () => {
+it('serializeStaticFilters works with a DisjunctionStaticFilter with no children', () => {
   const actualSerializedFilters = serializeStaticFilters({
-    kind: 'combination',
-    children: [],
+    kind: 'disjunction',
+    filters: [],
     combinator: FilterCombinator.OR
+  });
+
+  expect(actualSerializedFilters).toBeUndefined();
+});
+
+it('serializeStaticFilters works with a nested ConjunctionStaticFilter with no children', () => {
+  const actualSerializedFilters = serializeStaticFilters({
+    kind: 'conjunction',
+    filters: [{
+      kind: 'conjunction',
+      filters: [],
+      combinator: FilterCombinator.AND
+    }, {
+      kind: 'disjunction',
+      filters: [],
+      combinator: FilterCombinator.OR
+    }],
+    combinator: FilterCombinator.AND
   });
 
   expect(actualSerializedFilters).toBeUndefined();

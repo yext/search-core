@@ -53,7 +53,9 @@
 |  [BaseAnswersConfig](./search-core.baseanswersconfig.md) |  |
 |  [BaseSearchConfig](./search-core.basesearchconfig.md) | The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. |
 |  [ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md) | Additional agents and their versions used to create the Search experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
+|  [ConjunctionStaticFilter](./search-core.conjunctionstaticfilter.md) | A static filter composed by combining other static filters with the logical AND operator. |
 |  [DirectAnswer](./search-core.directanswer.md) | A direct answer to a search. |
+|  [DisjunctionStaticFilter](./search-core.disjunctionstaticfilter.md) | A static filter composed by combining filters with the logical OR operator. The combined filters can either be field value filters or other disjunction filters. |
 |  [DisplayableFacet](./search-core.displayablefacet.md) | A [Facet](./search-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./search-core.displayablefacetoption.md) | A [FacetOption](./search-core.facetoption.md) with extra data meant to be displayed to the end user. |
 |  [Endpoints](./search-core.endpoints.md) | Overrides for the URLs which are used when making requests to the Search API. |
@@ -63,6 +65,7 @@
 |  [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) | A direct answer which was found within a document. |
 |  [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) | A direct answer where the answer came from a field from the knowledge graph. |
 |  [FieldValueFilter](./search-core.fieldvaluefilter.md) | Represents a filter which compares values to a single field. |
+|  [FieldValueStaticFilter](./search-core.fieldvaluestaticfilter.md) | A [FieldValueFilter](./search-core.fieldvaluefilter.md) with the kind of filter specified to discriminate between static filter types. |
 |  [FilterSearchRequest](./search-core.filtersearchrequest.md) | Options for a filtersearch request. |
 |  [FilterSearchResponse](./search-core.filtersearchresponse.md) | The response of a filtersearch request. |
 |  [HighlightedValue](./search-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Search API. |
