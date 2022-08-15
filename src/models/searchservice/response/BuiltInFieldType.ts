@@ -16,6 +16,6 @@ export enum BuiltInFieldType {
   // Hours = 'hours',
   // Decimal = 'decimal',
   // RichText = 'rich_text',
-  // SingleLineText = 'single_line_text',
-  // MultiLineText = 'multi_line_text'
+  SingleLineText = 'single_line_text',
+  MultiLineText = 'multi_line_text'
 }

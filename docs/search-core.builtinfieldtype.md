@@ -17,4 +17,6 @@ export declare enum BuiltInFieldType
 |  Member | Value | Description |
 |  --- | --- | --- |
 |  Address | <code>&quot;address&quot;</code> |  |
+|  MultiLineText | <code>&quot;multi_line_text&quot;</code> |  |
+|  SingleLineText | <code>&quot;single_line_text&quot;</code> |  |
 

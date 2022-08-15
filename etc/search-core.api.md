@@ -96,7 +96,11 @@ export interface BaseSearchConfig {
 // @public
 export enum BuiltInFieldType {
     // (undocumented)
-    Address = "address"
+    Address = "address",
+    // (undocumented)
+    MultiLineText = "multi_line_text",
+    // (undocumented)
+    SingleLineText = "single_line_text"
 }
 
 // @public
