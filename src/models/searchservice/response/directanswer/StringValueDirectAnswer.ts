@@ -1,3 +1,4 @@
+import { EnumOrLiteral } from '../../../utils/EnumOrLiteral';
 import { BaseFieldValueDirectAnswer } from './BaseFieldValueDirectAnswer';
 import { BuiltInFieldType } from './BuiltInFieldType';
 
@@ -7,5 +8,5 @@ import { BuiltInFieldType } from './BuiltInFieldType';
  * @public
  */
 export interface StringValueDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> {
-  fieldType: BuiltInFieldType.SingleLineText | BuiltInFieldType.MultiLineText
+  fieldType: EnumOrLiteral<BuiltInFieldType.SingleLineText | BuiltInFieldType.MultiLineText>
 }
