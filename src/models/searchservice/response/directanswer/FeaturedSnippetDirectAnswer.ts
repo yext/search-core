@@ -1,8 +1,7 @@
 import { DirectAnswer } from './DirectAnswer';
 import { DirectAnswerType } from './DirectAnswerType';
+import { Snippet } from '../Snippet';
 import { BuiltInFieldType } from './BuiltInFieldType';
-import { Result } from './Result';
-import { Snippet } from './Snippet';
 
 /**
  * A direct answer which was found within a document.
@@ -10,16 +9,10 @@ import { Snippet } from './Snippet';
  * @public
  */
 export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
-  /** {@link DirectAnswerType}.FeaturedSnippet. */
+  /** {@link DirectAnswerType}.FeaturedSnippet */
   type: DirectAnswerType.FeaturedSnippet,
-  /** {@inheritDoc DirectAnswer.value} */
-  value?: T,
-  /** {@inheritDoc DirectAnswer.relatedResult} */
-  relatedResult: Result,
-  /** {@inheritDoc DirectAnswer.verticalKey} */
-  verticalKey: string,
   /** {@inheritDoc DirectAnswer.fieldType} */
-  fieldType: BuiltInFieldType | string,
+  fieldType: BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText,
   /** The snippet where the direct answer was found. */
   snippet: Snippet
 }
