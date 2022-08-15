@@ -18,4 +18,5 @@ export declare enum BuiltInFieldType
 |  --- | --- | --- |
 |  MultiLineText | <code>&quot;multi_line_text&quot;</code> |  |
 |  Phone | <code>&quot;phone&quot;</code> |  |
+|  RichText | <code>&quot;rich_text&quot;</code> |  |
 

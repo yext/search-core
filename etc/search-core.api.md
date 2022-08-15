@@ -107,7 +107,9 @@ export enum BuiltInFieldType {
     // (undocumented)
     MultiLineText = "multi_line_text",
     // (undocumented)
-    Phone = "phone"
+    Phone = "phone",
+    // (undocumented)
+    RichText = "rich_text"
 }
 
 // @public
@@ -206,6 +208,7 @@ export interface FailedVertical {
 
 // @public
 export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
+    fieldType: BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText;
     snippet: Snippet;
     type: DirectAnswerType.FeaturedSnippet;
 }

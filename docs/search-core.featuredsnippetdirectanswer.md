@@ -17,6 +17,7 @@ export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [fieldType](./search-core.featuredsnippetdirectanswer.fieldtype.md) | [BuiltInFieldType.MultiLineText](./search-core.builtinfieldtype.md) \| [BuiltInFieldType.RichText](./search-core.builtinfieldtype.md) | The field type of the direct answer. |
 |  [snippet](./search-core.featuredsnippetdirectanswer.snippet.md) | [Snippet](./search-core.snippet.md) | The snippet where the direct answer was found. |
-|  [type](./search-core.featuredsnippetdirectanswer.type.md) | [DirectAnswerType.FeaturedSnippet](./search-core.directanswertype.md) | [DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FeaturedSnippet. |
+|  [type](./search-core.featuredsnippetdirectanswer.type.md) | [DirectAnswerType.FeaturedSnippet](./search-core.directanswertype.md) | [DirectAnswerType](./search-core.directanswertype.md)<!-- -->.FeaturedSnippet |
 
