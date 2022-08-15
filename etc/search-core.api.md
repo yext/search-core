@@ -120,11 +120,6 @@ export interface ClientSDKHeaderValues {
 export type Context = any;
 
 // @public
-export interface CustomFieldValueDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
-    fieldType: 'unknown';
-}
-
-// @public
 export interface DirectAnswer<T = unknown> {
     fieldType: EnumOrLiteral<BuiltInFieldType> | 'unknown';
     relatedResult: Result;
@@ -216,7 +211,7 @@ export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T
 }
 
 // @public
-export type FieldValueDirectAnswer = CustomFieldValueDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
@@ -557,6 +552,11 @@ export interface UniversalSearchResponse {
     spellCheck?: SpellCheck;
     uuid: string;
     verticalResults: VerticalResults[];
+}
+
+// @public
+export interface UnknownFieldValueDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
+    fieldType: 'unknown';
 }
 
 // @public

@@ -5,7 +5,7 @@ import { BaseFieldValueDirectAnswer } from './BaseFieldValueDirectAnswer';
  *
  * @public
  */
-export interface CustomFieldValueDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T>{
+export interface UnknownFieldValueDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T>{
   /** {@inheritDoc DirectAnswer.fieldType} */
   fieldType: 'unknown'
 }

@@ -1,4 +1,4 @@
-import { CustomFieldValueDirectAnswer } from './CustomFieldValueDirectAnswer';
+import { UnknownFieldValueDirectAnswer } from './UnknownFieldValueDirectAnswer';
 
 /**
  * Possible built-in and custom {@link BaseFieldValueDirectAnswer} interfaces
@@ -6,4 +6,4 @@ import { CustomFieldValueDirectAnswer } from './CustomFieldValueDirectAnswer';
  * @public
  */
 //add other builtin field value direct answer interfaces here
-export type FieldValueDirectAnswer = CustomFieldValueDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer;
