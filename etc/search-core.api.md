@@ -109,7 +109,9 @@ export enum BuiltInFieldType {
     // (undocumented)
     Phone = "phone",
     // (undocumented)
-    RichText = "rich_text"
+    RichText = "rich_text",
+    // (undocumented)
+    SingleLineText = "single_line_text"
 }
 
 // @public
