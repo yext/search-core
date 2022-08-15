@@ -24,12 +24,16 @@ export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | Fie
       fieldApiName: data.answer.fieldApiName,
     };
   } else if (isFeaturedSnippetDirectAnswer) {
+    const fieldType = commonDirectAnswerData.fieldType;
+    if (fieldType != BuiltInFieldType.MultiLineText && fieldType != BuiltInFieldType.RichText) {
+      throw new Error(`Unexpected fieldType for featured snippet direct answer: ${fieldType}`);
+    }
     return {
       type: DirectAnswerType.FeaturedSnippet,
       ...commonDirectAnswerData,
       snippet: data.answer.snippet
     };
   } else {
-    throw new Error('The Search API returned an unknown direct answer type');
+    throw new Error(`The Search API returned an unknown direct answer type: ${data?.type}`);
   }
 }

@@ -12,7 +12,7 @@ export interface DirectAnswer<T = unknown> {
   /** The {@link DirectAnswerType}. */
   type: DirectAnswerType,
   /**
-   * The result of the direct answer.
+   * The value of the direct answer.
    *
    * @remarks
    * A value will not be present if the {@link DirectAnswer."type"} is 'FEATURED_SNIPPET'

@@ -32,6 +32,26 @@ it('can create a FeaturedSnippetDirectAnswer', () => {
   expect(actualDirectAnswer).toMatchObject(expectedDirectAnswer);
 });
 
+it('can handle unexpected fieldType for a FeaturedSnippetDirectAnswer', () => {
+  const apiFeaturedSnippetDirectAnswer = {
+    type: 'FEATURED_SNIPPET',
+    answer: {
+      value: 'Honolulu. Hawaii',
+      fieldType: 'phone',
+      snippet: {
+        matchedSubstrings: [{ offset: 31, length: 16 }],
+        value: '111 222 3333'
+      }
+    },
+    relatedItem: {
+      verticalConfigId: 'wiki_bios',
+      data: {}
+    }
+  };
+  expect(() => createDirectAnswer(apiFeaturedSnippetDirectAnswer))
+    .toThrow('Unexpected fieldType for featured snippet direct answer: phone');
+});
+
 it('can create a FieldValueDirectAnswer', () => {
   const apiFieldValueDirectAnswer = {
     type: 'FIELD_VALUE',

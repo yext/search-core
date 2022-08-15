@@ -19,6 +19,6 @@ export interface DirectAnswer<T = unknown>
 |  [fieldType](./search-core.directanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType](./search-core.builtinfieldtype.md)<!-- -->&gt; \| 'unknown' | The field type of the direct answer. |
 |  [relatedResult](./search-core.directanswer.relatedresult.md) | [Result](./search-core.result.md) | The entity associated with the direct answer. |
 |  [type](./search-core.directanswer.type.md) | [DirectAnswerType](./search-core.directanswertype.md) | The [DirectAnswerType](./search-core.directanswertype.md)<!-- -->. |
-|  [value?](./search-core.directanswer.value.md) | T | <i>(Optional)</i> The result of the direct answer. |
+|  [value?](./search-core.directanswer.value.md) | T | <i>(Optional)</i> The value of the direct answer. |
 |  [verticalKey](./search-core.directanswer.verticalkey.md) | string | The vertical key of the direct answer. |
 
