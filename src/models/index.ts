@@ -67,7 +67,6 @@ export { FieldValueDirectAnswer } from './searchservice/response/directanswer/Fi
 export { UnknownFieldValueDirectAnswer } from './searchservice/response/directanswer/UnknownFieldValueDirectAnswer';
 export { AddressFieldValueDirectAnswer, Address } from './searchservice/response/AddressFieldValueDirectAnswer';
 
-
 export {
   BaseFeaturedSnippetDirectAnswer,
   FeaturedSnippetDirectAnswer,
