@@ -4,7 +4,7 @@
 
 ## EmailDirectAnswer interface
 
-A interface for direct answers [DirectAnswer](./search-core.directanswer.md) with email values.
+An interface for direct answers [DirectAnswer](./search-core.directanswer.md) with email values.
 
 <b>Signature:</b>
 
