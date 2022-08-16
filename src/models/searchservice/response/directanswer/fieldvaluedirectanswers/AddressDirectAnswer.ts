@@ -17,13 +17,13 @@ export interface AddressDirectAnswer extends BaseFieldValueDirectAnswer<Address>
  * @public
  */
 export interface Address {
-  line1: string,
+  line1?: string,
   line2?: string,
   line3?: string,
   sublocality?: string,
-  city: string,
+  city?: string,
   region?: string,
   postalCode?: string,
   extraDescription?: string,
-  countryCode?: string
+  countryCode: string
 }
