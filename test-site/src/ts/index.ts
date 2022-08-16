@@ -1,8 +1,9 @@
-import { provideCore, SearchConfig, SearchCore } from '@yext/search-core';
+import { provideCore, SearchConfig, SearchCore, UniversalSearchRequest, UniversalSearchResponse } from '@yext/search-core';
 import verticalRequest from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
 import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchRequest } from './requests/autocompleteRequests';
+import initDirectAnswers from './initDirectAnswers';
 
 const coreConfig: SearchConfig = {
   apiKey: '2d8c550071a64ea23e263118a2b0680b',
@@ -14,9 +15,19 @@ const coreConfig: SearchConfig = {
 const element = document.createElement('pre');
 window.onload = () => {
   document.body.appendChild(element);
+  initDirectAnswers();
 };
 
 const globalCore: SearchCore = provideCore(coreConfig);
+
+export async function directAnswer(query: string): Promise<UniversalSearchResponse> {
+  loadingSpinner();
+  const startTime = new Date().getTime();
+  const req: UniversalSearchRequest = { query };
+  const res: UniversalSearchResponse = await globalCore.universalSearch(req);
+  updateUI(res.directAnswer, startTime, 'Universal Direct Answer Response:');
+  return res;
+}
 
 export async function universalSearch(): Promise<void> {
   loadingSpinner();

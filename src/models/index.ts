@@ -64,14 +64,13 @@ export { BuiltInFieldType } from './searchservice/response/directanswer/BuiltInF
 
 export { BaseFieldValueDirectAnswer } from './searchservice/response/directanswer/BaseFieldValueDirectAnswer';
 export { FieldValueDirectAnswer } from './searchservice/response/directanswer/FieldValueDirectAnswer';
-export { UnknownFieldValueDirectAnswer } from './searchservice/response/directanswer/UnknownFieldValueDirectAnswer';
+export * from './searchservice/response/directanswer/fieldvaluedirectanswers';
 
 export {
   BaseFeaturedSnippetDirectAnswer,
-  FeaturedSnippetDirectAnswer,
-  RichTextFeaturedSnippetDirectAnswer,
-  MultiLineTextFeaturedSnippetDirectAnswer
+  FeaturedSnippetDirectAnswer
 } from './searchservice/response/directanswer/FeaturedSnippetDirectAnswer';
+export * from './searchservice/response/directanswer/featuredsnippetdirectanswers';
 
 export { DisplayableFacet, DisplayableFacetOption } from './searchservice/response/DisplayableFacet';
 export { HighlightedFields } from './searchservice/response/HighlightedFields';
