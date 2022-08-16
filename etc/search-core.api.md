@@ -265,7 +265,7 @@ export interface FailedVertical {
 export type FeaturedSnippetDirectAnswer = MultiLineTextFeaturedSnippetDirectAnswer | RichTextFeaturedSnippetDirectAnswer;
 
 // @public
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextValueDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer;
+export type FieldValueDirectAnswer = UnknownDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
@@ -596,7 +596,7 @@ export enum SpellCheckType {
 export type StaticFilter = FieldValueStaticFilter | DisjunctionStaticFilter | ConjunctionStaticFilter;
 
 // @public
-export interface TextValueDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> {
+export interface TextDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> {
     // (undocumented)
     fieldType: EnumOrLiteral<BuiltInFieldType.SingleLineText | BuiltInFieldType.MultiLineText>;
 }
@@ -648,7 +648,7 @@ export interface UniversalSearchResponse {
 }
 
 // @public
-export interface UnknownFieldValueDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
+export interface UnknownDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
     fieldType: 'unknown';
 }
 

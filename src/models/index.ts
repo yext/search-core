@@ -68,10 +68,9 @@ export * from './searchservice/response/directanswer/fieldvaluedirectanswers';
 
 export {
   BaseFeaturedSnippetDirectAnswer,
-  FeaturedSnippetDirectAnswer,
-  RichTextFeaturedSnippetDirectAnswer,
-  MultiLineTextFeaturedSnippetDirectAnswer
+  FeaturedSnippetDirectAnswer
 } from './searchservice/response/directanswer/FeaturedSnippetDirectAnswer';
+export * from './searchservice/response/directanswer/featuredsnippetdirectanswers';
 
 export { DisplayableFacet, DisplayableFacetOption } from './searchservice/response/DisplayableFacet';
 export { HighlightedFields } from './searchservice/response/HighlightedFields';

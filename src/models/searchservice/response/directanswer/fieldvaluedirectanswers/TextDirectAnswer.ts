@@ -7,6 +7,6 @@ import { BuiltInFieldType } from '../BuiltInFieldType';
  *
  * @public
  */
-export interface TextValueDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> {
+export interface TextDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> {
   fieldType: EnumOrLiteral<BuiltInFieldType.SingleLineText | BuiltInFieldType.MultiLineText>
 }

@@ -97,13 +97,13 @@
 |  [Snippet](./search-core.snippet.md) | The section of text where a [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) was found. |
 |  [SortBy](./search-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./search-core.spellcheck.md) | A spellcheck response from a search query. |
-|  [TextValueDirectAnswer](./search-core.textvaluedirectanswer.md) | A direct answer whose source is a string or string list field in the knowledge graph. |
+|  [TextDirectAnswer](./search-core.textdirectanswer.md) | A direct answer whose source is a string or string list field in the knowledge graph. |
 |  [TwitterHandleDirectAnswer](./search-core.twitterhandledirectanswer.md) | A direct answer for an twitter handle field. |
 |  [UniversalAutocompleteRequest](./search-core.universalautocompleterequest.md) | Options for a universal autocomplete request. |
 |  [UniversalLimit](./search-core.universallimit.md) | The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
 |  [UniversalSearchRequest](./search-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
 |  [UniversalSearchResponse](./search-core.universalsearchresponse.md) | A representation of a response from a universal search. |
-|  [UnknownFieldValueDirectAnswer](./search-core.unknownfieldvaluedirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) with a field type outside of [BuiltInFieldType](./search-core.builtinfieldtype.md)<!-- -->. |
+|  [UnknownDirectAnswer](./search-core.unknowndirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) with a field type outside of [BuiltInFieldType](./search-core.builtinfieldtype.md)<!-- -->. |
 |  [UpperNumberRangeLimit](./search-core.uppernumberrangelimit.md) | The end limit of [NumberRangeValue](./search-core.numberrangevalue.md)<!-- -->. |
 |  [UrlDirectAnswer](./search-core.urldirectanswer.md) | A direct answer for a simple url field. |
 |  [VerticalAutocompleteRequest](./search-core.verticalautocompleterequest.md) | Options for a vertial autocomplete request. |

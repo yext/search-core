@@ -1,13 +1,15 @@
-import { UnknownFieldValueDirectAnswer } from './fieldvaluedirectanswers/UnknownFieldValueDirectAnswer';
-import { DecimalDirectAnswer } from './fieldvaluedirectanswers/DecimalDirectAnswer';
-import { InstagramHandleDirectAnswer } from './fieldvaluedirectanswers/InstagramHandleDirectAnswer';
-import { IosAppUrlDirectAnswer } from './fieldvaluedirectanswers/IosAppUrlDirectAnswer';
-import { AndroidAppUrlDirectAnswer } from './fieldvaluedirectanswers/AndroidAppUrlDirectAnswer';
-import { TwitterHandleDirectAnswer } from './fieldvaluedirectanswers/TwitterHandleDirectAnswer';
-import { FacebookUrlDirectAnswer } from './fieldvaluedirectanswers/FacebookUrlDirectAnswer';
-import { RichTextDirectAnswer } from './fieldvaluedirectanswers/RichTextDirectAnswer';
-import { UrlDirectAnswer } from './fieldvaluedirectanswers/UrlDirectAnswer';
-import { TextValueDirectAnswer } from './fieldvaluedirectanswers/TextValueDirectAnswer';
+import {
+  UnknownDirectAnswer,
+  DecimalDirectAnswer,
+  InstagramHandleDirectAnswer,
+  IosAppUrlDirectAnswer,
+  AndroidAppUrlDirectAnswer,
+  TwitterHandleDirectAnswer,
+  FacebookUrlDirectAnswer,
+  RichTextDirectAnswer,
+  UrlDirectAnswer,
+  TextDirectAnswer
+} from './fieldvaluedirectanswers';
 
 /**
  * Possible built-in and custom {@link BaseFieldValueDirectAnswer} interfaces.
@@ -15,8 +17,8 @@ import { TextValueDirectAnswer } from './fieldvaluedirectanswers/TextValueDirect
  * @public
  */
 export type FieldValueDirectAnswer =
-  UnknownFieldValueDirectAnswer |
-  TextValueDirectAnswer |
+  UnknownDirectAnswer |
+  TextDirectAnswer |
   UrlDirectAnswer |
   RichTextDirectAnswer |
   DecimalDirectAnswer |

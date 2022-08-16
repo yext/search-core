@@ -1,4 +1,4 @@
-export { UnknownFieldValueDirectAnswer } from './UnknownFieldValueDirectAnswer';
+export { UnknownDirectAnswer } from './UnknownDirectAnswer';
 export { DecimalDirectAnswer } from './DecimalDirectAnswer';
 export { InstagramHandleDirectAnswer } from './InstagramHandleDirectAnswer';
 export { IosAppUrlDirectAnswer } from './IosAppUrlDirectAnswer';
@@ -7,4 +7,4 @@ export { TwitterHandleDirectAnswer } from './TwitterHandleDirectAnswer';
 export { FacebookUrlDirectAnswer } from './FacebookUrlDirectAnswer';
 export { RichTextDirectAnswer } from './RichTextDirectAnswer';
 export { UrlDirectAnswer } from './UrlDirectAnswer';
-export { TextValueDirectAnswer } from './TextValueDirectAnswer';
+export { TextDirectAnswer } from './TextDirectAnswer';
