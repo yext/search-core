@@ -12,13 +12,7 @@ jobs:
       build_script: npm run build-ci
 
   compilation_check_for_test_site:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js
-        uses: actions/setup-node@v3
-      - run: npm ci
-      - run: npm run build
-      - run: cd test-site
-      - run: npm i
-      - run: npm run build
+    uses: yext/slapshot-reusable-workflows/.github/workflows/run_tests.yml@v1
+    with:
+      test_script: cd test-site && npm i && npm run build
+      node_matrix: '["16.x"]'

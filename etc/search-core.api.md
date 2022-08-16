@@ -118,11 +118,15 @@ export interface BaseSearchConfig {
 // @public
 export enum BuiltInFieldType {
     // (undocumented)
+    Address = "address",
+    // (undocumented)
     AndroidAppURL = "android_app_url",
     // (undocumented)
     ComplexURL = "complex_url",
     // (undocumented)
     Decimal = "decimal",
+    // (undocumented)
+    Email = "email",
     // (undocumented)
     FacebookURL = "facebook_url",
     // (undocumented)
@@ -222,6 +226,12 @@ export interface DisplayableFacetOption extends FacetOption {
     count: number;
     displayName: string;
     selected: boolean;
+}
+
+// @public
+export interface EmailDirectAnswer extends BaseFieldValueDirectAnswer<string[]> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Email>;
 }
 
 // @public

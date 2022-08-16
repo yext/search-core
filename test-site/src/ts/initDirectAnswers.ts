@@ -51,7 +51,9 @@ const FIELD_VALUE_QUERIES = {
     'oliver shi outdoor pools?' // number
   ],
   [BuiltInFieldType.Phone]: [
-    'oliver shi phone?' // string
+    'amani farooque phone number?' // string
+  [BuiltInFieldType.Email]: [
+    'oliver shi email' // string[]
   ]
 };
 
@@ -128,6 +130,9 @@ function ensureFieldValueSwitchability(da: FieldValueDirectAnswer) {
       console.log(da.value);
       break;
     case BuiltInFieldType.Phone:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.Email:
       console.log(da.value);
       break;
   }
