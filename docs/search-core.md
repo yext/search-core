@@ -57,6 +57,8 @@
 |  [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) | A direct answer where the answer came from a field from the knowledge graph. |
 |  [BaseSearchConfig](./search-core.basesearchconfig.md) | The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. |
 |  [ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md) | Additional agents and their versions used to create the Search experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
+|  [ComplexURL](./search-core.complexurl.md) | The shape of a [BuiltInFieldType.ComplexURL](./search-core.builtinfieldtype.md) DirectAnswer value |
+|  [ComplexUrlDirectAnswer](./search-core.complexurldirectanswer.md) | A direct answer for a complex url field. |
 |  [ConjunctionStaticFilter](./search-core.conjunctionstaticfilter.md) | A static filter composed by combining other static filters with the logical AND operator. |
 |  [DecimalDirectAnswer](./search-core.decimaldirectanswer.md) | A direct answer for a decimal field, which is a number represented using a string. |
 |  [DirectAnswer](./search-core.directanswer.md) | A direct answer to a search. |

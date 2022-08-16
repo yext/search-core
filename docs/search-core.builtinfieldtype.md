@@ -18,6 +18,7 @@ export declare enum BuiltInFieldType
 |  --- | --- | --- |
 |  Address | <code>&quot;address&quot;</code> |  |
 |  AndroidAppURL | <code>&quot;android_app_url&quot;</code> |  |
+|  ComplexURL | <code>&quot;complex_url&quot;</code> |  |
 |  Decimal | <code>&quot;decimal&quot;</code> |  |
 |  FacebookURL | <code>&quot;facebook_url&quot;</code> |  |
 |  InstagramHandle | <code>&quot;instagram_handle&quot;</code> |  |
