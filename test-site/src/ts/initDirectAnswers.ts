@@ -50,6 +50,9 @@ const FIELD_VALUE_QUERIES = {
   [BuiltInFieldType.Integer]: [
     'oliver shi outdoor pools?' // number
   ],
+  [BuiltInFieldType.Phone]: [
+    'amani farooque phone number?' // string
+  ],
   [BuiltInFieldType.Email]: [
     'oliver shi email' // string[]
   ]
@@ -125,6 +128,9 @@ function ensureFieldValueSwitchability(da: FieldValueDirectAnswer) {
       console.log(da.value);
       break;
     case BuiltInFieldType.Integer:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.Phone:
       console.log(da.value);
       break;
     case BuiltInFieldType.Email:

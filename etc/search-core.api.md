@@ -295,7 +295,7 @@ export interface FailedVertical {
 export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
 
 // @public
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer | EmailDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer | PhoneDirectAnswer | EmailDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
@@ -441,6 +441,12 @@ export interface NearFilterValue {
 export interface NumberRangeValue {
     end?: UpperNumberRangeLimit;
     start?: LowerNumberRangeLimit;
+}
+
+// @public
+export interface PhoneDirectAnswer extends BaseFieldValueDirectAnswer<string> {
+    // (undocumented)
+    fieldType: BuiltInFieldType.Phone;
 }
 
 // @public

@@ -11,6 +11,7 @@ import {
   TextDirectAnswer,
   ComplexUrlDirectAnswer,
   IntegerDirectAnswer,
+  PhoneDirectAnswer,
   EmailDirectAnswer
 } from './fieldvaluedirectanswers';
 
@@ -32,4 +33,5 @@ export type FieldValueDirectAnswer =
   AndroidAppUrlDirectAnswer |
   ComplexUrlDirectAnswer |
   IntegerDirectAnswer |
+  PhoneDirectAnswer |
   EmailDirectAnswer;
