@@ -16,7 +16,7 @@ export enum BuiltInFieldType {
   Address = 'address',
   // Hours = 'hours',
   Decimal = 'decimal',
-  // Integer = 'integer',
+  Integer = 'integer',
   SingleLineText = 'single_line_text',
   RichText = 'rich_text',
   MultiLineText = 'multi_line_text'

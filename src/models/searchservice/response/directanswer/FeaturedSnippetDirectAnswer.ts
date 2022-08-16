@@ -4,8 +4,8 @@ import { Snippet } from '../Snippet';
 import { BuiltInFieldType } from './BuiltInFieldType';
 import { EnumOrLiteral } from '../../../utils/EnumOrLiteral';
 import {
-  MultiLineTextFeaturedSnippetDirectAnswer,
-  RichTextFeaturedSnippetDirectAnswer
+  MultiLineTextSnippetDirectAnswer,
+  RichTextSnippetDirectAnswer
 } from './featuredsnippetdirectanswers';
 
 /**
@@ -28,4 +28,4 @@ export interface BaseFeaturedSnippetDirectAnswer<T = unknown> extends DirectAnsw
  * @public
  */
 export type FeaturedSnippetDirectAnswer =
-  MultiLineTextFeaturedSnippetDirectAnswer | RichTextFeaturedSnippetDirectAnswer;
+  MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;

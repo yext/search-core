@@ -8,7 +8,7 @@ import { BaseFeaturedSnippetDirectAnswer } from '../FeaturedSnippetDirectAnswer'
  *
  * @public
  */
-export interface RichTextFeaturedSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
+export interface RichTextSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
   /** {@inheritDoc DirectAnswer.fieldType} */
   fieldType: EnumOrLiteral<BuiltInFieldType.RichText>
 }

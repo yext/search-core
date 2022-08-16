@@ -8,7 +8,8 @@ import {
   FacebookUrlDirectAnswer,
   RichTextDirectAnswer,
   UrlDirectAnswer,
-  TextDirectAnswer
+  TextDirectAnswer,
+  IntegerDirectAnswer
 } from './fieldvaluedirectanswers';
 
 /**
@@ -26,4 +27,5 @@ export type FieldValueDirectAnswer =
   InstagramHandleDirectAnswer |
   TwitterHandleDirectAnswer |
   IosAppUrlDirectAnswer |
-  AndroidAppUrlDirectAnswer;
+  AndroidAppUrlDirectAnswer |
+  IntegerDirectAnswer;

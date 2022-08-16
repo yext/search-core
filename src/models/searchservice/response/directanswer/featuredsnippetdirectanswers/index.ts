@@ -1,2 +1,2 @@
-export { RichTextFeaturedSnippetDirectAnswer } from './RichTextFeaturedSnippetDirectAnswer';
-export { MultiLineTextFeaturedSnippetDirectAnswer } from './MultiLineTextFeaturedSnippetDirectAnswer';
+export { RichTextSnippetDirectAnswer } from './RichTextSnippetDirectAnswer';
+export { MultiLineTextSnippetDirectAnswer } from './MultiLineTextSnippetDirectAnswer';

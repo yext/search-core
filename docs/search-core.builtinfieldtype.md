@@ -22,6 +22,7 @@ export declare enum BuiltInFieldType
 |  Email | <code>&quot;email&quot;</code> |  |
 |  FacebookURL | <code>&quot;facebook_url&quot;</code> |  |
 |  InstagramHandle | <code>&quot;instagram_handle&quot;</code> |  |
+|  Integer | <code>&quot;integer&quot;</code> |  |
 |  IOSAppURL | <code>&quot;ios_app_url&quot;</code> |  |
 |  MultiLineText | <code>&quot;multi_line_text&quot;</code> |  |
 |  Phone | <code>&quot;phone&quot;</code> |  |
