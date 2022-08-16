@@ -11,7 +11,7 @@ jobs:
     with:
       build_script: npm run build-ci
 
-  test_site_build:
+  compilation_check_for_test_site:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
