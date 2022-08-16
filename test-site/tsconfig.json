@@ -4,6 +4,6 @@
     "noImplicitAny": true,
     "module": "commonjs",
     "esModuleInterop": true,
-    "target": "es2015",
+    "target": "es2019",
   }
 }
