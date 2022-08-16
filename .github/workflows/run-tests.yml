@@ -14,5 +14,5 @@ jobs:
   compilation_check_for_test_site:
     uses: yext/slapshot-reusable-workflows/.github/workflows/run_tests.yml@v1
     with:
-      build_script: cd test-site && npm i && npm run build
+      test_script: cd test-site && npm i && npm run build
       node_matrix: '["16.x"]'
