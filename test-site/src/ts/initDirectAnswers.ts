@@ -115,6 +115,9 @@ function ensureFieldValueSwitchability(da: FieldValueDirectAnswer) {
     case BuiltInFieldType.URL:
       console.log(da.value);
       break;
+    case BuiltInFieldType.Integer:
+      console.log(da.value);
+      break;
   }
 }
 
