@@ -31,5 +31,5 @@ export type FieldValueDirectAnswer =
   IosAppUrlDirectAnswer |
   AndroidAppUrlDirectAnswer |
   ComplexUrlDirectAnswer |
-  IntegerDirectAnswer | 
+  IntegerDirectAnswer |
   EmailDirectAnswer;
