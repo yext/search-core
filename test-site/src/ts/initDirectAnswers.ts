@@ -52,6 +52,7 @@ const FIELD_VALUE_QUERIES = {
   ],
   [BuiltInFieldType.Phone]: [
     'amani farooque phone number?' // string
+  ],
   [BuiltInFieldType.Email]: [
     'oliver shi email' // string[]
   ]
