@@ -8,7 +8,6 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [AnswersCore](./search-core.answerscore.md) |  |
 |  [SearchCore](./search-core.searchcore.md) | Provides methods for executing searches, submitting questions, and performing autocompletes. |
 |  [SearchError](./search-core.searcherror.md) | Represents an error |
 
@@ -45,15 +44,10 @@
 |  [Address](./search-core.address.md) | An interface with address fields to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->. |
 |  [AddressDirectAnswer](./search-core.addressdirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'address' field type. |
 |  [AndroidAppUrlDirectAnswer](./search-core.androidappurldirectanswer.md) | A direct answer for an android app url field. |
-|  [AnswersConfigWithApiKey](./search-core.answersconfigwithapikey.md) |  |
-|  [AnswersConfigWithToken](./search-core.answersconfigwithtoken.md) |  |
-|  [AnswersError](./search-core.answerserror.md) |  |
-|  [AnswersRequest](./search-core.answersrequest.md) |  |
 |  [AppliedQueryFilter](./search-core.appliedqueryfilter.md) | A filter that the Search API applied to the search. |
 |  [AutocompleteResponse](./search-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
 |  [AutocompleteResult](./search-core.autocompleteresult.md) | An autocomplete suggestion. |
 |  [AutocompleteService](./search-core.autocompleteservice.md) | A service for autocomplete requests. |
-|  [BaseAnswersConfig](./search-core.baseanswersconfig.md) |  |
 |  [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) | A direct answer which was found within a document. |
 |  [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) | A direct answer where the answer came from a field from the knowledge graph. |
 |  [BaseSearchConfig](./search-core.basesearchconfig.md) | The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. |
@@ -129,7 +123,6 @@
 
 |  Type Alias | Description |
 |  --- | --- |
-|  [AnswersConfig](./search-core.answersconfig.md) |  |
 |  [Context](./search-core.context.md) | Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [EnumOrLiteral](./search-core.enumorliteral.md) | Produces a union type from the enum passed as a generic which consists of the enum values and the string literals of the enum. |
 |  [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) | All possible built-in [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) interfaces. |

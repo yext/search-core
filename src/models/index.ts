@@ -1,11 +1,3 @@
-// deprecated symbols
-export { AnswersConfig } from './deprecated';
-export { BaseAnswersConfig } from './deprecated';
-export { AnswersConfigWithApiKey } from './deprecated';
-export { AnswersConfigWithToken } from './deprecated';
-export { AnswersError } from './deprecated';
-export { AnswersRequest } from './deprecated';
-
 // Search API models
 export { SearchError } from './searchapi/SearchError';
 
