@@ -9,7 +9,8 @@ import {
   RichTextDirectAnswer,
   UrlDirectAnswer,
   TextDirectAnswer,
-  IntegerDirectAnswer
+  IntegerDirectAnswer,
+  AddressFieldValueDirectAnswer
 } from './fieldvaluedirectanswers';
 
 /**
@@ -28,4 +29,5 @@ export type FieldValueDirectAnswer =
   TwitterHandleDirectAnswer |
   IosAppUrlDirectAnswer |
   AndroidAppUrlDirectAnswer |
-  IntegerDirectAnswer;
+  IntegerDirectAnswer |
+  AddressFieldValueDirectAnswer;

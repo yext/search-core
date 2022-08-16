@@ -1,6 +1,6 @@
-import { BuiltInFieldType } from './directanswer/BuiltInFieldType';
-import { BaseFieldValueDirectAnswer } from './directanswer/BaseFieldValueDirectAnswer';
-import { EnumOrLiteral } from '../../utils/EnumOrLiteral';
+import { BuiltInFieldType } from '../BuiltInFieldType';
+import { BaseFieldValueDirectAnswer } from '../BaseFieldValueDirectAnswer';
+import { EnumOrLiteral } from '../../../../utils/EnumOrLiteral';
 
 /**
  * A {@link BaseFieldValueDirectAnswer} interface with 'address' field type.
