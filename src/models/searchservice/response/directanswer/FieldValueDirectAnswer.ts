@@ -1,9 +1,29 @@
-import { UnknownFieldValueDirectAnswer } from './UnknownFieldValueDirectAnswer';
+import {
+  UnknownFieldValueDirectAnswer,
+  DecimalDirectAnswer,
+  InstagramHandleDirectAnswer,
+  IosAppUrlDirectAnswer,
+  AndroidAppUrlDirectAnswer,
+  TwitterHandleDirectAnswer,
+  FacebookUrlDirectAnswer,
+  RichTextDirectAnswer,
+  UrlDirectAnswer,
+  TextDirectAnswer
+} from './fieldvaluedirectanswers';
 
 /**
  * Possible built-in and custom {@link BaseFieldValueDirectAnswer} interfaces.
  *
  * @public
  */
-//add other builtin field value direct answer interfaces here
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer;
+export type FieldValueDirectAnswer =
+  UnknownFieldValueDirectAnswer |
+  TextDirectAnswer |
+  UrlDirectAnswer |
+  RichTextDirectAnswer |
+  DecimalDirectAnswer |
+  FacebookUrlDirectAnswer |
+  InstagramHandleDirectAnswer |
+  TwitterHandleDirectAnswer |
+  IosAppUrlDirectAnswer |
+  AndroidAppUrlDirectAnswer;

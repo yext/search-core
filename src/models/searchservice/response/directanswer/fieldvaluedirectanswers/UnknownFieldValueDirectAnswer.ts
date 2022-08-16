@@ -1,4 +1,4 @@
-import { BaseFieldValueDirectAnswer } from './BaseFieldValueDirectAnswer';
+import { BaseFieldValueDirectAnswer } from '../BaseFieldValueDirectAnswer';
 
 /**
  * A {@link BaseFieldValueDirectAnswer} with a field type outside of {@link BuiltInFieldType}.

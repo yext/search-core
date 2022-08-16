@@ -17,9 +17,16 @@ export declare enum BuiltInFieldType
 |  Member | Value | Description |
 |  --- | --- | --- |
 |  Address | <code>&quot;address&quot;</code> |  |
+|  AndroidAppURL | <code>&quot;android_app_url&quot;</code> |  |
+|  Decimal | <code>&quot;decimal&quot;</code> |  |
 |  Email | <code>&quot;email&quot;</code> |  |
+|  FacebookURL | <code>&quot;facebook_url&quot;</code> |  |
+|  InstagramHandle | <code>&quot;instagram_handle&quot;</code> |  |
+|  IOSAppURL | <code>&quot;ios_app_url&quot;</code> |  |
 |  MultiLineText | <code>&quot;multi_line_text&quot;</code> |  |
 |  Phone | <code>&quot;phone&quot;</code> |  |
 |  RichText | <code>&quot;rich_text&quot;</code> |  |
 |  SingleLineText | <code>&quot;single_line_text&quot;</code> |  |
+|  TwitterHandle | <code>&quot;twitter_handle&quot;</code> |  |
+|  URL | <code>&quot;url&quot;</code> |  |
 
