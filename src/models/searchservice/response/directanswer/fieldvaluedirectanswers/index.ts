@@ -1,4 +1,4 @@
-export { UnknownDirectAnswer } from './UnknownDirectAnswer';
+export { UnknownFieldValueDirectAnswer } from './UnknownFieldValueDirectAnswer';
 export { DecimalDirectAnswer } from './DecimalDirectAnswer';
 export { InstagramHandleDirectAnswer } from './InstagramHandleDirectAnswer';
 export { IosAppUrlDirectAnswer } from './IosAppUrlDirectAnswer';

@@ -1,5 +1,5 @@
 import {
-  UnknownDirectAnswer,
+  UnknownFieldValueDirectAnswer,
   DecimalDirectAnswer,
   InstagramHandleDirectAnswer,
   IosAppUrlDirectAnswer,
@@ -17,7 +17,7 @@ import {
  * @public
  */
 export type FieldValueDirectAnswer =
-  UnknownDirectAnswer |
+  UnknownFieldValueDirectAnswer |
   TextDirectAnswer |
   UrlDirectAnswer |
   RichTextDirectAnswer |

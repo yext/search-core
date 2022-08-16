@@ -265,7 +265,7 @@ export interface FailedVertical {
 export type FeaturedSnippetDirectAnswer = MultiLineTextFeaturedSnippetDirectAnswer | RichTextFeaturedSnippetDirectAnswer;
 
 // @public
-export type FieldValueDirectAnswer = UnknownDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
@@ -648,7 +648,7 @@ export interface UniversalSearchResponse {
 }
 
 // @public
-export interface UnknownDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
+export interface UnknownFieldValueDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
     fieldType: 'unknown';
 }
 
