@@ -9,3 +9,4 @@ export { RichTextDirectAnswer } from './RichTextDirectAnswer';
 export { UrlDirectAnswer } from './UrlDirectAnswer';
 export { TextDirectAnswer } from './TextDirectAnswer';
 export { IntegerDirectAnswer } from './IntegerDirectAnswer';
+export { AddressDirectAnswer } from './AddressDirectAnswer'

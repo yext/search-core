@@ -10,7 +10,7 @@ import {
   UrlDirectAnswer,
   TextDirectAnswer,
   IntegerDirectAnswer,
-  AddressFieldValueDirectAnswer
+  AddressDirectAnswer
 } from './fieldvaluedirectanswers';
 
 /**
@@ -30,4 +30,4 @@ export type FieldValueDirectAnswer =
   IosAppUrlDirectAnswer |
   AndroidAppUrlDirectAnswer |
   IntegerDirectAnswer |
-  AddressFieldValueDirectAnswer;
+  AddressDirectAnswer;

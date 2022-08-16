@@ -7,7 +7,7 @@ import { EnumOrLiteral } from '../../../../utils/EnumOrLiteral';
  *
  * @public
  */
-export interface AddressFieldValueDirectAnswer extends BaseFieldValueDirectAnswer<Address> {
+export interface AddressDirectAnswer extends BaseFieldValueDirectAnswer<Address> {
   fieldType: EnumOrLiteral<BuiltInFieldType.Address>
 }
 

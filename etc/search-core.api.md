@@ -9,6 +9,14 @@ export interface AdditionalHttpHeaders {
     'Client-SDK'?: ClientSDKHeaderValues;
 }
 
+// Warning: (ae-forgotten-export) The symbol "Address" needs to be exported by the entry point index.d.ts
+//
+// @public
+export interface AddressDirectAnswer extends BaseFieldValueDirectAnswer<Address> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Address>;
+}
+
 // @public
 export interface AndroidAppUrlDirectAnswer extends BaseFieldValueDirectAnswer<string> {
     // (undocumented)
@@ -269,7 +277,7 @@ export interface FailedVertical {
 export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
 
 // @public
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | IntegerDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | IntegerDirectAnswer | AddressDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
