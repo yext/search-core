@@ -10,8 +10,8 @@ import {
   UrlDirectAnswer,
   TextDirectAnswer,
   IntegerDirectAnswer,
-  AddressDirectAnswer
-  ComplexUrlDirectAnswer,
+  AddressDirectAnswer,
+  ComplexUrlDirectAnswer
 } from './fieldvaluedirectanswers';
 
 /**

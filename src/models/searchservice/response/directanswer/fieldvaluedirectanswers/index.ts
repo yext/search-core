@@ -10,4 +10,4 @@ export { UrlDirectAnswer } from './UrlDirectAnswer';
 export { TextDirectAnswer } from './TextDirectAnswer';
 export { ComplexUrlDirectAnswer, ComplexURL } from './ComplexUrlDirectAnswer';
 export { IntegerDirectAnswer } from './IntegerDirectAnswer';
-export { AddressDirectAnswer } from './AddressDirectAnswer'
+export { AddressDirectAnswer } from './AddressDirectAnswer';
