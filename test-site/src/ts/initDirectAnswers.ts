@@ -51,7 +51,7 @@ const FIELD_VALUE_QUERIES = {
     'oliver shi outdoor pools?' // number
   ],
   [BuiltInFieldType.Email]: [
-    'oliver shi email' // email
+    'oliver shi email' // string[]
   ]
 };
 
