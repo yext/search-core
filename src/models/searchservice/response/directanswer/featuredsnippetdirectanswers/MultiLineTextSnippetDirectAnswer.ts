@@ -7,7 +7,7 @@ import { BaseFeaturedSnippetDirectAnswer } from '../FeaturedSnippetDirectAnswer'
  *
  * @public
  */
-export interface MultiLineTextFeaturedSnippetDirectAnswer extends BaseFeaturedSnippetDirectAnswer<string> {
+export interface MultiLineTextSnippetDirectAnswer extends BaseFeaturedSnippetDirectAnswer<string> {
   /** The value of the direct answer. */
   value: string,
   /** {@inheritDoc DirectAnswer.fieldType} */
