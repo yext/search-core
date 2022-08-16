@@ -19,4 +19,5 @@ jobs:
         uses: actions/setup-node@v3
       - run: npm ci
       - run: npm run build
-      - run: cd test-site && npm i && npm run build
+      - run: npm i && npm run build
+        working-directory: './test-site'
