@@ -49,6 +49,9 @@ const FIELD_VALUE_QUERIES = {
   ],
   [BuiltInFieldType.Integer]: [
     'oliver shi outdoor pools?' // number
+  ],
+  [BuiltInFieldType.Address]: [
+    'oliver shi outdoor address?' // Address
   ]
 };
 
