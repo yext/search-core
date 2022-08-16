@@ -112,6 +112,9 @@ function ensureFieldValueSwitchability(da: FieldValueDirectAnswer) {
     case BuiltInFieldType.URL:
       console.log(da.value);
       break;
+    case BuiltInFieldType.Email:
+      console.log(da.value);
+      break;
   }
 }
 
