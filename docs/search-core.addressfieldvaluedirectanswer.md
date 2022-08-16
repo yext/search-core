@@ -17,5 +17,5 @@ export interface AddressFieldValueDirectAnswer extends BaseFieldValueDirectAnswe
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [fieldType](./search-core.addressfieldvaluedirectanswer.fieldtype.md) | [BuiltInFieldType.Address](./search-core.builtinfieldtype.md) |  |
+|  [fieldType](./search-core.addressfieldvaluedirectanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.Address](./search-core.builtinfieldtype.md)<!-- -->&gt; |  |
 

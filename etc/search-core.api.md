@@ -34,7 +34,7 @@ export interface Address {
 // @public
 export interface AddressFieldValueDirectAnswer extends BaseFieldValueDirectAnswer<Address> {
     // (undocumented)
-    fieldType: BuiltInFieldType.Address;
+    fieldType: EnumOrLiteral<BuiltInFieldType.Address>;
 }
 
 // @public @deprecated (undocumented)

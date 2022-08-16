@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-fieldType: BuiltInFieldType.Address;
+fieldType: EnumOrLiteral<BuiltInFieldType.Address>;
 ```
