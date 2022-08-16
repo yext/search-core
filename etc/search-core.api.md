@@ -128,6 +128,8 @@ export enum BuiltInFieldType {
     // (undocumented)
     InstagramHandle = "instagram_handle",
     // (undocumented)
+    Integer = "integer",
+    // (undocumented)
     IOSAppURL = "ios_app_url",
     // (undocumented)
     MultiLineText = "multi_line_text",
@@ -264,10 +266,10 @@ export interface FailedVertical {
 }
 
 // @public
-export type FeaturedSnippetDirectAnswer = MultiLineTextFeaturedSnippetDirectAnswer | RichTextFeaturedSnippetDirectAnswer;
+export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
 
 // @public
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | IntegerDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
@@ -326,6 +328,12 @@ export interface HighlightedValue {
 export interface InstagramHandleDirectAnswer extends BaseFieldValueDirectAnswer<string> {
     // (undocumented)
     fieldType: EnumOrLiteral<BuiltInFieldType.InstagramHandle>;
+}
+
+// @public
+export interface IntegerDirectAnswer extends BaseFieldValueDirectAnswer<number> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Integer>;
 }
 
 // @public
@@ -391,7 +399,7 @@ export enum Matcher {
 }
 
 // @public
-export interface MultiLineTextFeaturedSnippetDirectAnswer extends BaseFeaturedSnippetDirectAnswer<string> {
+export interface MultiLineTextSnippetDirectAnswer extends BaseFeaturedSnippetDirectAnswer<string> {
     fieldType: EnumOrLiteral<BuiltInFieldType.MultiLineText>;
     value: string;
 }
@@ -478,7 +486,7 @@ export interface RichTextDirectAnswer extends BaseFieldValueDirectAnswer<string 
 }
 
 // @public
-export interface RichTextFeaturedSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
+export interface RichTextSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
     fieldType: EnumOrLiteral<BuiltInFieldType.RichText>;
 }
 

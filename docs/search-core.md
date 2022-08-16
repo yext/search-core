@@ -73,13 +73,14 @@
 |  [FilterSearchResponse](./search-core.filtersearchresponse.md) | The response of a filtersearch request. |
 |  [HighlightedValue](./search-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Search API. |
 |  [InstagramHandleDirectAnswer](./search-core.instagramhandledirectanswer.md) | A direct answer for an instagram handle field. |
+|  [IntegerDirectAnswer](./search-core.integerdirectanswer.md) | A direct answer for an integer field. |
 |  [IosAppUrlDirectAnswer](./search-core.iosappurldirectanswer.md) | A direct answer for an iOS app url field. |
 |  [LatLong](./search-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
 |  [LocationBias](./search-core.locationbias.md) | Information about the user's location. |
 |  [LocationBoundingBox](./search-core.locationboundingbox.md) | Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. (e.g. boundary for a locality or region specific location filter) |
 |  [LocationFilterDetails](./search-core.locationfilterdetails.md) | Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. |
 |  [LowerNumberRangeLimit](./search-core.lowernumberrangelimit.md) | The start limit of [NumberRangeValue](./search-core.numberrangevalue.md)<!-- -->. |
-|  [MultiLineTextFeaturedSnippetDirectAnswer](./search-core.multilinetextfeaturedsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'multi\_line\_text' field type. |
+|  [MultiLineTextSnippetDirectAnswer](./search-core.multilinetextsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'multi\_line\_text' field type. |
 |  [NearFilterValue](./search-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./search-core.matcher.md)<!-- -->. |
 |  [NumberRangeValue](./search-core.numberrangevalue.md) | A filter value for a filter with a $between [Matcher](./search-core.matcher.md)<!-- -->. |
 |  [QueryRulesActionsData](./search-core.queryrulesactionsdata.md) | Data returned from the Search query rules system. |
@@ -88,7 +89,7 @@
 |  [QuestionSubmissionService](./search-core.questionsubmissionservice.md) | Submits a custom question to the Search API. |
 |  [Result](./search-core.result.md) | An individual search result. |
 |  [RichTextDirectAnswer](./search-core.richtextdirectanswer.md) | A direct answer for a rich text field. |
-|  [RichTextFeaturedSnippetDirectAnswer](./search-core.richtextfeaturedsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'rich\_text' field type. "value" field is omitted for featured snippet direct answer of this field type. |
+|  [RichTextSnippetDirectAnswer](./search-core.richtextsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'rich\_text' field type. "value" field is omitted for featured snippet direct answer of this field type. |
 |  [SearchConfigWithApiKey](./search-core.searchconfigwithapikey.md) | Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires apiKey. |
 |  [SearchConfigWithToken](./search-core.searchconfigwithtoken.md) | Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires token. |
 |  [SearchParameterField](./search-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
