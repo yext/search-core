@@ -264,7 +264,7 @@ export interface FailedVertical {
 }
 
 // @public
-export type FeaturedSnippetDirectAnswer = MultiLineTextFeaturedSnippetDirectAnswer | RichTextFeaturedSnippetDirectAnswer;
+export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
 
 // @public
 export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | IntegerDirectAnswer;
@@ -397,7 +397,7 @@ export enum Matcher {
 }
 
 // @public
-export interface MultiLineTextFeaturedSnippetDirectAnswer extends BaseFeaturedSnippetDirectAnswer<string> {
+export interface MultiLineTextSnippetDirectAnswer extends BaseFeaturedSnippetDirectAnswer<string> {
     fieldType: EnumOrLiteral<BuiltInFieldType.MultiLineText>;
     value: string;
 }
@@ -484,7 +484,7 @@ export interface RichTextDirectAnswer extends BaseFieldValueDirectAnswer<string 
 }
 
 // @public
-export interface RichTextFeaturedSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
+export interface RichTextSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
     fieldType: EnumOrLiteral<BuiltInFieldType.RichText>;
 }
 
