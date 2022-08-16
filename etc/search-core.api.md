@@ -126,6 +126,8 @@ export enum BuiltInFieldType {
     // (undocumented)
     InstagramHandle = "instagram_handle",
     // (undocumented)
+    Integer = "integer",
+    // (undocumented)
     IOSAppURL = "ios_app_url",
     // (undocumented)
     MultiLineText = "multi_line_text",
@@ -265,7 +267,7 @@ export interface FailedVertical {
 export type FeaturedSnippetDirectAnswer = MultiLineTextFeaturedSnippetDirectAnswer | RichTextFeaturedSnippetDirectAnswer;
 
 // @public
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | IntegerDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
@@ -324,6 +326,12 @@ export interface HighlightedValue {
 export interface InstagramHandleDirectAnswer extends BaseFieldValueDirectAnswer<string> {
     // (undocumented)
     fieldType: EnumOrLiteral<BuiltInFieldType.InstagramHandle>;
+}
+
+// @public
+export interface IntegerDirectAnswer extends BaseFieldValueDirectAnswer<number> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Integer>;
 }
 
 // @public
