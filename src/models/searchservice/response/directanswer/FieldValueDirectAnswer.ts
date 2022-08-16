@@ -12,7 +12,8 @@ import {
   ComplexUrlDirectAnswer,
   IntegerDirectAnswer,
   PhoneDirectAnswer,
-  EmailDirectAnswer
+  EmailDirectAnswer,
+  AddressDirectAnswer
 } from './fieldvaluedirectanswers';
 
 /**
@@ -34,4 +35,5 @@ export type FieldValueDirectAnswer =
   ComplexUrlDirectAnswer |
   IntegerDirectAnswer |
   PhoneDirectAnswer |
-  EmailDirectAnswer;
+  EmailDirectAnswer |
+  AddressDirectAnswer;
