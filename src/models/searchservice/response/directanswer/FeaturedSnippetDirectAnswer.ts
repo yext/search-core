@@ -21,6 +21,7 @@ export interface BaseFeaturedSnippetDirectAnswer<T = unknown> extends DirectAnsw
   /** The snippet where the direct answer was found. */
   snippet: Snippet
 }
+
 /**
  * All possible built-in {@link BaseFeaturedSnippetDirectAnswer} interfaces.
  *
