@@ -11,7 +11,7 @@ import {
   TextDirectAnswer,
   ComplexUrlDirectAnswer,
   IntegerDirectAnswer,
-  PhoneDirectAnswer
+  PhoneDirectAnswer,
   EmailDirectAnswer
 } from './fieldvaluedirectanswers';
 
