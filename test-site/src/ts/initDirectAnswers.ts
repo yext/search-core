@@ -1,4 +1,4 @@
-import { BuiltInFieldType, DirectAnswerType } from '@yext/search-core';
+import { BuiltInFieldType, DirectAnswerType, FeaturedSnippetDirectAnswer, FieldValueDirectAnswer } from '@yext/search-core';
 import { directAnswer } from './index';
 
 /**
@@ -67,41 +67,66 @@ export default function initDirectAnswers() {
     const val = (e.target as HTMLSelectElement).value;
     const res = await directAnswer(val);
     const da = res.directAnswer;
-    if (da.type !== DirectAnswerType.FieldValue) return;
-    switch (da.fieldType) {
-      case BuiltInFieldType.AndroidAppURL:
-        console.log(da.value);
-        break;
-      case BuiltInFieldType.Decimal:
-        console.log(da.value);
-        break;
-      case BuiltInFieldType.FacebookURL:
-        console.log(da.value);
-        break;
-      case BuiltInFieldType.IOSAppURL:
-        console.log(da.value);
-        break;
-      case BuiltInFieldType.InstagramHandle:
-        console.log(da.value);
-        break;
-      case BuiltInFieldType.MultiLineText:
-        console.log(da.value);
-        break;
-      // case BuiltInFieldType.Phone:
-      //   console.log(da.fieldType);
-      //   break;
-      case BuiltInFieldType.RichText:
-        console.log(da.value);
-        break;
-      case BuiltInFieldType.SingleLineText:
-        console.log(da.value);
-        break;
-      case BuiltInFieldType.TwitterHandle:
-        console.log(da.value);
-        break;
-      case BuiltInFieldType.URL:
-        console.log(da.value);
-        break;
+    if (da.type === DirectAnswerType.FieldValue) {
+      ensureFieldValueSwitchability(da);
+    } else if (da.type === DirectAnswerType.FeaturedSnippet) {
+      ensureFeaturedSnippetSwitchability(da);
     }
   });
+}
+
+/**
+ * This function will only compile if every direct answer case can be switched over,
+ * otherwise `da` will have type `never`, which will cause a compile time error when
+ * trying to access `da.value`.
+ */
+function ensureFieldValueSwitchability(da: FieldValueDirectAnswer) {
+  switch (da.fieldType) {
+    case BuiltInFieldType.AndroidAppURL:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.Decimal:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.FacebookURL:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.IOSAppURL:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.InstagramHandle:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.MultiLineText:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.RichText:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.SingleLineText:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.TwitterHandle:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.URL:
+      console.log(da.value);
+      break;
+  }
+}
+
+/**
+ * This function will only compile if every direct answer case can be switched over,
+ * otherwise `da` will have type `never`, which will cause a compile time error when
+ * trying to access properties like `da.value` or `da.snippet`.
+ */
+function ensureFeaturedSnippetSwitchability(da: FeaturedSnippetDirectAnswer) {
+  switch (da.fieldType) {
+    case BuiltInFieldType.RichText:
+      console.log(da.snippet);
+      break;
+    case BuiltInFieldType.MultiLineText:
+      console.log(da.value);
+      break;
+  }
 }
