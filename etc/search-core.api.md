@@ -229,6 +229,12 @@ export interface DisplayableFacetOption extends FacetOption {
 }
 
 // @public
+export interface EmailDirectAnswer extends BaseFieldValueDirectAnswer<string[]> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Email>;
+}
+
+// @public
 export interface Endpoints {
     // (undocumented)
     filterSearch?: string;
@@ -289,7 +295,7 @@ export interface FailedVertical {
 export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
 
 // @public
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer | EmailDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
