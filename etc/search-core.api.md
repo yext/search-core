@@ -120,6 +120,8 @@ export enum BuiltInFieldType {
     // (undocumented)
     AndroidAppURL = "android_app_url",
     // (undocumented)
+    ComplexURL = "complex_url",
+    // (undocumented)
     Decimal = "decimal",
     // (undocumented)
     FacebookURL = "facebook_url",
@@ -145,6 +147,22 @@ export enum BuiltInFieldType {
 export interface ClientSDKHeaderValues {
     [agent: string]: string | undefined;
     ANSWERS_CORE?: never;
+}
+
+// @public
+export interface ComplexURL {
+    // (undocumented)
+    displayUrl?: string;
+    // (undocumented)
+    preferDisplayUrl: boolean;
+    // (undocumented)
+    url: string;
+}
+
+// @public
+export interface ComplexUrlDirectAnswer extends BaseFieldValueDirectAnswer<ComplexURL> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.ComplexURL>;
 }
 
 // @public
@@ -265,7 +283,7 @@ export interface FailedVertical {
 export type FeaturedSnippetDirectAnswer = MultiLineTextFeaturedSnippetDirectAnswer | RichTextFeaturedSnippetDirectAnswer;
 
 // @public
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
