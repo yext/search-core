@@ -44,6 +44,9 @@ const FIELD_VALUE_QUERIES = {
     'oliver shi my rich text field', // string
     'oliver shi multi line rich text' // string[]
   ],
+  [BuiltInFieldType.ComplexURL]: [
+    'oliver shi website url' // ComplexUrl
+  ],
   [BuiltInFieldType.Integer]: [
     'oliver shi outdoor pools?' // number
   ]
@@ -113,6 +116,9 @@ function ensureFieldValueSwitchability(da: FieldValueDirectAnswer) {
       console.log(da.value);
       break;
     case BuiltInFieldType.URL:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.ComplexURL:
       console.log(da.value);
       break;
     case BuiltInFieldType.Integer:

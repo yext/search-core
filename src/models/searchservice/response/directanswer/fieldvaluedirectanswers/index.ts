@@ -8,4 +8,5 @@ export { FacebookUrlDirectAnswer } from './FacebookUrlDirectAnswer';
 export { RichTextDirectAnswer } from './RichTextDirectAnswer';
 export { UrlDirectAnswer } from './UrlDirectAnswer';
 export { TextDirectAnswer } from './TextDirectAnswer';
+export { ComplexUrlDirectAnswer, ComplexURL } from './ComplexUrlDirectAnswer';
 export { IntegerDirectAnswer } from './IntegerDirectAnswer';

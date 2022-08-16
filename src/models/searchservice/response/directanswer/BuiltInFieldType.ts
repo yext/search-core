@@ -5,7 +5,7 @@
  */
 export enum BuiltInFieldType {
   URL = 'url',
-  // ComplexURL = 'complex_url',
+  ComplexURL = 'complex_url',
   IOSAppURL = 'ios_app_url',
   AndroidAppURL = 'android_app_url',
   FacebookURL = 'facebook_url',
