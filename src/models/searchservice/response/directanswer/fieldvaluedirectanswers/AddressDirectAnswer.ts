@@ -22,8 +22,8 @@ export interface Address {
   line3?: string,
   sublocality?: string,
   city: string,
-  region: string,
-  postalCode: string,
+  region?: string,
+  postalCode?: string,
   extraDescription?: string,
   countryCode?: string
 }
