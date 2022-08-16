@@ -11,7 +11,7 @@ A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) inte
 ```typescript
 export interface AddressDirectAnswer extends BaseFieldValueDirectAnswer<Address> 
 ```
-<b>Extends:</b> [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;Address&gt;
+<b>Extends:</b> [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;[Address](./search-core.address.md)<!-- -->&gt;
 
 ## Properties
 
