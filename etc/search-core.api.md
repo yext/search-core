@@ -9,34 +9,6 @@ export interface AdditionalHttpHeaders {
     'Client-SDK'?: ClientSDKHeaderValues;
 }
 
-// @public
-export interface Address {
-    // (undocumented)
-    city: string;
-    // (undocumented)
-    countryCode?: string;
-    // (undocumented)
-    extraDescription?: string;
-    // (undocumented)
-    line1: string;
-    // (undocumented)
-    line2?: string;
-    // (undocumented)
-    line3?: string;
-    // (undocumented)
-    postalCode: string;
-    // (undocumented)
-    region: string;
-    // (undocumented)
-    sublocality?: string;
-}
-
-// @public
-export interface AddressFieldValueDirectAnswer extends BaseFieldValueDirectAnswer<Address> {
-    // (undocumented)
-    fieldType: EnumOrLiteral<BuiltInFieldType.Address>;
-}
-
 // @public @deprecated (undocumented)
 export type AnswersConfig = SearchConfig;
 
@@ -109,13 +81,6 @@ export interface BaseAnswersConfig extends BaseSearchConfig {
 }
 
 // @public
-export interface BaseFeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
-    fieldType: EnumOrLiteral<BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText>;
-    snippet: Snippet;
-    type: DirectAnswerType.FeaturedSnippet;
-}
-
-// @public
 export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
     entityName: string;
     fieldApiName: string;
@@ -142,13 +107,7 @@ export enum BuiltInFieldType {
     // (undocumented)
     Address = "address",
     // (undocumented)
-    MultiLineText = "multi_line_text",
-    // (undocumented)
-    Phone = "phone",
-    // (undocumented)
-    RichText = "rich_text",
-    // (undocumented)
-    SingleLineText = "single_line_text"
+    Email = "email"
 }
 
 // @public
@@ -209,6 +168,12 @@ export interface DisplayableFacetOption extends FacetOption {
 }
 
 // @public
+export interface EmailDirectAnswer extends FieldValueDirectAnswer<string[]> {
+    // (undocumented)
+    fieldType: BuiltInFieldType.Email;
+}
+
+// @public
 export interface Endpoints {
     // (undocumented)
     filterSearch?: string;
@@ -260,7 +225,11 @@ export interface FailedVertical {
 }
 
 // @public
-export type FeaturedSnippetDirectAnswer = MultiLineTextFeaturedSnippetDirectAnswer | RichTextFeaturedSnippetDirectAnswer;
+export interface FeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
+    fieldType: BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText;
+    snippet: Snippet;
+    type: DirectAnswerType.FeaturedSnippet;
+}
 
 // @public
 export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer;
@@ -375,12 +344,6 @@ export enum Matcher {
 }
 
 // @public
-export interface MultiLineTextFeaturedSnippetDirectAnswer extends BaseFeaturedSnippetDirectAnswer<string> {
-    fieldType: EnumOrLiteral<BuiltInFieldType.MultiLineText>;
-    value: string;
-}
-
-// @public
 export interface NearFilterValue {
     lat: number;
     lng: number;
@@ -453,11 +416,6 @@ export interface Result<T = Record<string, unknown>> {
     name?: string;
     rawData: T;
     source: Source;
-}
-
-// @public
-export interface RichTextFeaturedSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
-    fieldType: EnumOrLiteral<BuiltInFieldType.RichText>;
 }
 
 // @public
