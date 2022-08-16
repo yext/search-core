@@ -126,6 +126,8 @@ export enum BuiltInFieldType {
     // (undocumented)
     InstagramHandle = "instagram_handle",
     // (undocumented)
+    Integer = "integer",
+    // (undocumented)
     IOSAppURL = "ios_app_url",
     // (undocumented)
     MultiLineText = "multi_line_text",

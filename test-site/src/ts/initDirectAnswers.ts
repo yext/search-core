@@ -44,6 +44,9 @@ const FIELD_VALUE_QUERIES = {
     'oliver shi my rich text field', // string
     'oliver shi multi line rich text' // string[]
   ],
+  [BuiltInFieldType.Integer]: [
+    'oliver shi outdoor pools?' // number
+  ]
 };
 
 export default function initDirectAnswers() {
