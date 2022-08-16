@@ -1,5 +1,6 @@
 import { BuiltInFieldType } from './directanswer/BuiltInFieldType';
 import { BaseFieldValueDirectAnswer } from './directanswer/BaseFieldValueDirectAnswer';
+import { EnumOrLiteral } from '../../utils/EnumOrLiteral';
 
 /**
  * A {@link BaseFieldValueDirectAnswer} interface with 'email' field type.
@@ -7,5 +8,5 @@ import { BaseFieldValueDirectAnswer } from './directanswer/BaseFieldValueDirectA
  * @public
  */
 export interface EmailFieldValueDirectAnswer extends BaseFieldValueDirectAnswer<string[]> {
-  fieldType: BuiltInFieldType.Email
+  fieldType: EnumOrLiteral<BuiltInFieldType.Email>
 }

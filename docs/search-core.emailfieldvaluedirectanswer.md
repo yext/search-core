@@ -17,5 +17,5 @@ export interface EmailFieldValueDirectAnswer extends BaseFieldValueDirectAnswer<
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [fieldType](./search-core.emailfieldvaluedirectanswer.fieldtype.md) | [BuiltInFieldType.Email](./search-core.builtinfieldtype.md) |  |
+|  [fieldType](./search-core.emailfieldvaluedirectanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.Email](./search-core.builtinfieldtype.md)<!-- -->&gt; |  |
 
