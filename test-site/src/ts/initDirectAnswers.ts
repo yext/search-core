@@ -124,6 +124,9 @@ function ensureFieldValueSwitchability(da: FieldValueDirectAnswer) {
     case BuiltInFieldType.Integer:
       console.log(da.value);
       break;
+    case BuiltInFieldType.Phone:
+      console.log(da.value);
+      break;
   }
 }
 
