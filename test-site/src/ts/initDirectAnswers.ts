@@ -52,6 +52,12 @@ const FIELD_VALUE_QUERIES = {
   ],
   [BuiltInFieldType.Address]: [
     'oliver shi address?' // Address
+  ],
+  [BuiltInFieldType.Phone]: [
+    'amani farooque phone number?' // string
+  ],
+  [BuiltInFieldType.Email]: [
+    'oliver shi email' // string[]
   ]
 };
 
@@ -128,6 +134,12 @@ function ensureFieldValueSwitchability(da: FieldValueDirectAnswer) {
       console.log(da.value);
       break;
     case BuiltInFieldType.Address:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.Phone:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.Email:
       console.log(da.value);
       break;
   }

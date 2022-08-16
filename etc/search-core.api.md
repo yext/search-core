@@ -134,6 +134,8 @@ export enum BuiltInFieldType {
     // (undocumented)
     Decimal = "decimal",
     // (undocumented)
+    Email = "email",
+    // (undocumented)
     FacebookURL = "facebook_url",
     // (undocumented)
     InstagramHandle = "instagram_handle",
@@ -235,6 +237,12 @@ export interface DisplayableFacetOption extends FacetOption {
 }
 
 // @public
+export interface EmailDirectAnswer extends BaseFieldValueDirectAnswer<string[]> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Email>;
+}
+
+// @public
 export interface Endpoints {
     // (undocumented)
     filterSearch?: string;
@@ -296,6 +304,7 @@ export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | Ric
 
 // @public
 export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | IntegerDirectAnswer | AddressDirectAnswer | ComplexUrlDirectAnswer;
+
 
 // @public
 export interface FieldValueFilter {
@@ -441,6 +450,12 @@ export interface NearFilterValue {
 export interface NumberRangeValue {
     end?: UpperNumberRangeLimit;
     start?: LowerNumberRangeLimit;
+}
+
+// @public
+export interface PhoneDirectAnswer extends BaseFieldValueDirectAnswer<string> {
+    // (undocumented)
+    fieldType: BuiltInFieldType.Phone;
 }
 
 // @public
