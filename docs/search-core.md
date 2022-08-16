@@ -42,6 +42,8 @@
 |  Interface | Description |
 |  --- | --- |
 |  [AdditionalHttpHeaders](./search-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
+|  [Address](./search-core.address.md) | An interface with address fields to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->. |
+|  [AddressDirectAnswer](./search-core.addressdirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'address' field type. |
 |  [AndroidAppUrlDirectAnswer](./search-core.androidappurldirectanswer.md) | A direct answer for an android app url field. |
 |  [AnswersConfigWithApiKey](./search-core.answersconfigwithapikey.md) |  |
 |  [AnswersConfigWithToken](./search-core.answersconfigwithtoken.md) |  |

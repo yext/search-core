@@ -10,6 +10,34 @@ export interface AdditionalHttpHeaders {
 }
 
 // @public
+export interface Address {
+    // (undocumented)
+    city?: string;
+    // (undocumented)
+    countryCode: string;
+    // (undocumented)
+    extraDescription?: string;
+    // (undocumented)
+    line1?: string;
+    // (undocumented)
+    line2?: string;
+    // (undocumented)
+    line3?: string;
+    // (undocumented)
+    postalCode?: string;
+    // (undocumented)
+    region?: string;
+    // (undocumented)
+    sublocality?: string;
+}
+
+// @public
+export interface AddressDirectAnswer extends BaseFieldValueDirectAnswer<Address> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Address>;
+}
+
+// @public
 export interface AndroidAppUrlDirectAnswer extends BaseFieldValueDirectAnswer<string> {
     // (undocumented)
     fieldType: EnumOrLiteral<BuiltInFieldType.AndroidAppURL>;
@@ -295,7 +323,7 @@ export interface FailedVertical {
 export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
 
 // @public
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer | PhoneDirectAnswer | EmailDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer | PhoneDirectAnswer | EmailDirectAnswer | AddressDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
