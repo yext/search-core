@@ -27,7 +27,7 @@ Search Core is a networking library for interacting with the Yext Search API.
 
 ## Getting Started
 
-For a full getting started walk through, view our [official Hitchhiker Guide](https://hitchhikers.yext.com/guides/answers-core-getting-started/).
+For a full getting started walk through, view our [official Hitchhiker Guide](https://hitchhikers.yext.com/guides/search-core-getting-started/).
 
 First, install Search-core via [npm](https://www.npmjs.com/get-npm):
 
