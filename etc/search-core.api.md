@@ -132,7 +132,6 @@ export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T>
 
 // @public
 export interface BaseSearchConfig {
-    // @alpha
     additionalQueryParams?: {
         [key: string]: string | number | boolean;
     };
