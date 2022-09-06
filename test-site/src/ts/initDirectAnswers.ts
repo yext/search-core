@@ -60,7 +60,7 @@ const FIELD_VALUE_QUERIES = {
     'oliver shi email' // string[]
   ],
   [BuiltInFieldType.Hours]: [
-    'Abington hours?'
+    'what are Abington hours?'
   ]
 };
 
