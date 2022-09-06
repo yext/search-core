@@ -4,7 +4,7 @@
 
 ## Interval interface
 
-An interface for hours fields to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
+An interface for a time interval to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
 
 <b>Signature:</b>
 
