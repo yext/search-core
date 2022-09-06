@@ -58,6 +58,9 @@ const FIELD_VALUE_QUERIES = {
   ],
   [BuiltInFieldType.Email]: [
     'oliver shi email' // string[]
+  ],
+  [BuiltInFieldType.Hours]: [
+    'what are Abington hours?'
   ]
 };
 
@@ -140,6 +143,9 @@ function ensureFieldValueSwitchability(da: FieldValueDirectAnswer) {
       console.log(da.value);
       break;
     case BuiltInFieldType.Email:
+      console.log(da.value);
+      break;
+    case BuiltInFieldType.Hours:
       console.log(da.value);
       break;
   }

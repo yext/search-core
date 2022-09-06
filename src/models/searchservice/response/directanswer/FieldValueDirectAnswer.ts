@@ -13,7 +13,8 @@ import {
   IntegerDirectAnswer,
   PhoneDirectAnswer,
   EmailDirectAnswer,
-  AddressDirectAnswer
+  AddressDirectAnswer,
+  HoursDirectAnswer
 } from './fieldvaluedirectanswers';
 
 /**
@@ -36,4 +37,5 @@ export type FieldValueDirectAnswer =
   IntegerDirectAnswer |
   PhoneDirectAnswer |
   EmailDirectAnswer |
-  AddressDirectAnswer;
+  AddressDirectAnswer |
+  HoursDirectAnswer;

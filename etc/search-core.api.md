@@ -130,6 +130,8 @@ export enum BuiltInFieldType {
     // (undocumented)
     FacebookURL = "facebook_url",
     // (undocumented)
+    Hours = "hours",
+    // (undocumented)
     InstagramHandle = "instagram_handle",
     // (undocumented)
     Integer = "integer",
@@ -180,6 +182,14 @@ export interface ConjunctionStaticFilter {
 
 // @public
 export type Context = any;
+
+// @public
+export interface DayHour {
+    // (undocumented)
+    isClosed?: boolean;
+    // (undocumented)
+    openIntervals?: Interval[];
+}
 
 // @public
 export interface DecimalDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> {
@@ -295,7 +305,7 @@ export interface FailedVertical {
 export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
 
 // @public
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer | PhoneDirectAnswer | EmailDirectAnswer | AddressDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer | PhoneDirectAnswer | EmailDirectAnswer | AddressDirectAnswer | HoursDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
@@ -351,6 +361,46 @@ export interface HighlightedValue {
 }
 
 // @public
+export interface HolidayHours {
+    // (undocumented)
+    date: string;
+    // (undocumented)
+    isClosed?: boolean;
+    // (undocumented)
+    isRegularHours?: boolean;
+    // (undocumented)
+    openIntervals?: Interval[];
+}
+
+// @public
+export interface Hours {
+    // (undocumented)
+    friday?: DayHour;
+    // (undocumented)
+    holidayHours?: HolidayHours[];
+    // (undocumented)
+    monday?: DayHour;
+    // (undocumented)
+    reopenDate?: string;
+    // (undocumented)
+    saturday?: DayHour;
+    // (undocumented)
+    sunday?: DayHour;
+    // (undocumented)
+    thursday?: DayHour;
+    // (undocumented)
+    tuesday?: DayHour;
+    // (undocumented)
+    wednesday?: DayHour;
+}
+
+// @public
+export interface HoursDirectAnswer extends BaseFieldValueDirectAnswer<Hours | Hours[]> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Hours>;
+}
+
+// @public
 export interface InstagramHandleDirectAnswer extends BaseFieldValueDirectAnswer<string> {
     // (undocumented)
     fieldType: EnumOrLiteral<BuiltInFieldType.InstagramHandle>;
@@ -360,6 +410,14 @@ export interface InstagramHandleDirectAnswer extends BaseFieldValueDirectAnswer<
 export interface IntegerDirectAnswer extends BaseFieldValueDirectAnswer<number> {
     // (undocumented)
     fieldType: EnumOrLiteral<BuiltInFieldType.Integer>;
+}
+
+// @public
+export interface Interval {
+    // (undocumented)
+    end?: string;
+    // (undocumented)
+    start?: string;
 }
 
 // @public
