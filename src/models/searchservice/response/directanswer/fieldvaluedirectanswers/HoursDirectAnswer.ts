@@ -29,7 +29,7 @@ export interface Hours {
 }
 
 /**
- * An interface for hours fields to use in {@link BaseFieldValueDirectAnswer.value}.
+ * An interface for a day's hours to use in {@link BaseFieldValueDirectAnswer.value}.
  *
  * @public
  */
@@ -39,7 +39,7 @@ export interface DayHour {
 }
 
 /**
- * An interface for hours fields to use in {@link BaseFieldValueDirectAnswer.value}.
+ * An interface for holiday hours to use in {@link BaseFieldValueDirectAnswer.value}.
  *
  * @public
  */
@@ -51,7 +51,7 @@ export interface HolidayHours {
 }
 
 /**
- * An interface for hours fields to use in {@link BaseFieldValueDirectAnswer.value}.
+ * An interface for a time interval to use in {@link BaseFieldValueDirectAnswer.value}.
  *
  * @public
  */
