@@ -11,7 +11,7 @@ A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) inte
 ```typescript
 export interface HoursDirectAnswer extends BaseFieldValueDirectAnswer<Hours | Hours[]> 
 ```
-<b>Extends:</b> [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;Hours \| Hours\[\]&gt;
+<b>Extends:</b> [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;[Hours](./search-core.hours.md) \| [Hours](./search-core.hours.md)<!-- -->\[\]&gt;
 
 ## Properties
 

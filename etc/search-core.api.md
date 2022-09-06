@@ -184,6 +184,14 @@ export interface ConjunctionStaticFilter {
 export type Context = any;
 
 // @public
+export interface DayHour {
+    // (undocumented)
+    isClosed?: boolean;
+    // (undocumented)
+    openIntervals?: Interval[];
+}
+
+// @public
 export interface DecimalDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> {
     // (undocumented)
     fieldType: EnumOrLiteral<BuiltInFieldType.Decimal>;
@@ -352,8 +360,40 @@ export interface HighlightedValue {
     value: string;
 }
 
-// Warning: (ae-forgotten-export) The symbol "Hours" needs to be exported by the entry point index.d.ts
-//
+// @public
+export interface HolidayHours {
+    // (undocumented)
+    date: string;
+    // (undocumented)
+    isClosed?: boolean;
+    // (undocumented)
+    isRegularHours?: boolean;
+    // (undocumented)
+    openIntervals?: Interval[];
+}
+
+// @public
+export interface Hours {
+    // (undocumented)
+    friday?: DayHour;
+    // (undocumented)
+    holidayHours?: HolidayHours[];
+    // (undocumented)
+    monday?: DayHour;
+    // (undocumented)
+    reopenDate?: string;
+    // (undocumented)
+    saturday?: DayHour;
+    // (undocumented)
+    sunday?: DayHour;
+    // (undocumented)
+    thursday?: DayHour;
+    // (undocumented)
+    tuesday?: DayHour;
+    // (undocumented)
+    wednesday?: DayHour;
+}
+
 // @public
 export interface HoursDirectAnswer extends BaseFieldValueDirectAnswer<Hours | Hours[]> {
     // (undocumented)
@@ -370,6 +410,14 @@ export interface InstagramHandleDirectAnswer extends BaseFieldValueDirectAnswer<
 export interface IntegerDirectAnswer extends BaseFieldValueDirectAnswer<number> {
     // (undocumented)
     fieldType: EnumOrLiteral<BuiltInFieldType.Integer>;
+}
+
+// @public
+export interface Interval {
+    // (undocumented)
+    end?: string;
+    // (undocumented)
+    start?: string;
 }
 
 // @public
