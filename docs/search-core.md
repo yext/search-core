@@ -71,6 +71,7 @@
 |  [FilterSearchRequest](./search-core.filtersearchrequest.md) | Options for a filtersearch request. |
 |  [FilterSearchResponse](./search-core.filtersearchresponse.md) | The response of a filtersearch request. |
 |  [HighlightedValue](./search-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Search API. |
+|  [HoursDirectAnswer](./search-core.hoursdirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'hours' field type. |
 |  [InstagramHandleDirectAnswer](./search-core.instagramhandledirectanswer.md) | A direct answer for an instagram handle field. |
 |  [IntegerDirectAnswer](./search-core.integerdirectanswer.md) | A direct answer for an integer field. |
 |  [IosAppUrlDirectAnswer](./search-core.iosappurldirectanswer.md) | A direct answer for an iOS app url field. |

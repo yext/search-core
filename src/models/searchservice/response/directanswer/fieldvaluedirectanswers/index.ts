@@ -13,3 +13,4 @@ export { IntegerDirectAnswer } from './IntegerDirectAnswer';
 export { AddressDirectAnswer, Address } from './AddressDirectAnswer';
 export { PhoneDirectAnswer } from './PhoneDirectAnswer';
 export { EmailDirectAnswer } from './EmailDirectAnswer';
+export { HoursDirectAnswer, Hours, HolidayHours, DayHour, Interval } from './HoursDirectAnswer';

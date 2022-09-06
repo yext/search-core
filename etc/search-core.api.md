@@ -130,6 +130,8 @@ export enum BuiltInFieldType {
     // (undocumented)
     FacebookURL = "facebook_url",
     // (undocumented)
+    Hours = "hours",
+    // (undocumented)
     InstagramHandle = "instagram_handle",
     // (undocumented)
     Integer = "integer",
@@ -295,7 +297,7 @@ export interface FailedVertical {
 export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
 
 // @public
-export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer | PhoneDirectAnswer | EmailDirectAnswer | AddressDirectAnswer;
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer | PhoneDirectAnswer | EmailDirectAnswer | AddressDirectAnswer | HoursDirectAnswer;
 
 // @public
 export interface FieldValueFilter {
@@ -348,6 +350,14 @@ export interface HighlightedValue {
         offset: number;
     }[];
     value: string;
+}
+
+// Warning: (ae-forgotten-export) The symbol "Hours" needs to be exported by the entry point index.d.ts
+//
+// @public
+export interface HoursDirectAnswer extends BaseFieldValueDirectAnswer<Hours | Hours[]> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Hours>;
 }
 
 // @public

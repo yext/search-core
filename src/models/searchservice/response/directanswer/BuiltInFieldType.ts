@@ -14,7 +14,7 @@ export enum BuiltInFieldType {
   TwitterHandle = 'twitter_handle',
   Phone = 'phone',
   Address = 'address',
-  // Hours = 'hours',
+  Hours = 'hours',
   Decimal = 'decimal',
   Integer = 'integer',
   SingleLineText = 'single_line_text',

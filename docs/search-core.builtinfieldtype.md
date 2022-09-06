@@ -22,6 +22,7 @@ export declare enum BuiltInFieldType
 |  Decimal | <code>&quot;decimal&quot;</code> |  |
 |  Email | <code>&quot;email&quot;</code> |  |
 |  FacebookURL | <code>&quot;facebook_url&quot;</code> |  |
+|  Hours | <code>&quot;hours&quot;</code> |  |
 |  InstagramHandle | <code>&quot;instagram_handle&quot;</code> |  |
 |  Integer | <code>&quot;integer&quot;</code> |  |
 |  IOSAppURL | <code>&quot;ios_app_url&quot;</code> |  |
