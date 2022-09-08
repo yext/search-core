@@ -31,7 +31,7 @@ export interface BaseSearchConfig {
   /**
    * Additional query params added on to every request.
    *
-   * @alpha
+   * @public
    */
   additionalQueryParams?: {
     [key: string]: string | number | boolean

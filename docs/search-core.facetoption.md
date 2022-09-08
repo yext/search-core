@@ -9,13 +9,13 @@ A filter associated with the facet.
 <b>Signature:</b>
 
 ```typescript
-export interface FacetOption 
+export interface FacetOption extends Omit<FieldValueFilter, 'fieldId'> 
 ```
+<b>Extends:</b> Omit&lt;[FieldValueFilter](./search-core.fieldvaluefilter.md)<!-- -->, 'fieldId'&gt;
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [matcher](./search-core.facetoption.matcher.md) | [Matcher](./search-core.matcher.md) | A Matcher is a filtering operation. |
-|  [value](./search-core.facetoption.value.md) | string \| number \| boolean \| [NumberRangeValue](./search-core.numberrangevalue.md) | The value to compare. |
+|  [value](./search-core.facetoption.value.md) | Exclude&lt;[FieldValueFilter](./search-core.fieldvaluefilter.md)<!-- -->\['value'\], [NearFilterValue](./search-core.nearfiltervalue.md)<!-- -->&gt; | The value to compare. |
 

@@ -4,7 +4,7 @@
 
 ## Snippet.matchedSubstrings property
 
-The locations in the document text of the [FeaturedSnippetDirectAnswer.value](./search-core.featuredsnippetdirectanswer.value.md)
+The locations in the document text of the [DirectAnswer.value](./search-core.directanswer.value.md)
 
 <b>Signature:</b>
 

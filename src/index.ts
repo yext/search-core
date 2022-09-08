@@ -1,6 +1,3 @@
-// deprecated symbols
-export { AnswersCore } from './deprecated';
-
 // main symbols
 export { SearchCore } from './SearchCore';
 export { provideCore } from './provideCore';

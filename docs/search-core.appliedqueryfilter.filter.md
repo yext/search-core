@@ -9,5 +9,5 @@ The filter applied to the query results.
 <b>Signature:</b>
 
 ```typescript
-filter: Filter;
+filter: FieldValueFilter;
 ```

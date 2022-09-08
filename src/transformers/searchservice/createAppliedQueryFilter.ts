@@ -1,11 +1,11 @@
 import { AppliedQueryFilter } from '../../models/searchservice/response/AppliedQueryFilter';
-import { createFilter } from '../core/createFilter';
+import { createFieldValueFilter } from '../core/createFieldValueFilter';
 
 export function createAppliedQueryFilter(data: any): AppliedQueryFilter {
   return {
     displayKey: data.displayKey,
     displayValue: data.displayValue,
-    filter: createFilter(data.filter),
+    filter: createFieldValueFilter(data.filter),
     type: data.type,
     ...(data.details && { details: data.details })
   };

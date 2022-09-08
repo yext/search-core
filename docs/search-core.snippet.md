@@ -16,6 +16,6 @@ export interface Snippet
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [matchedSubstrings](./search-core.snippet.matchedsubstrings.md) | { offset: number; length: number; }\[\] | The locations in the document text of the [FeaturedSnippetDirectAnswer.value](./search-core.featuredsnippetdirectanswer.value.md) |
+|  [matchedSubstrings](./search-core.snippet.matchedsubstrings.md) | { offset: number; length: number; }\[\] | The locations in the document text of the [DirectAnswer.value](./search-core.directanswer.value.md) |
 |  [value](./search-core.snippet.value.md) | string | The snippet's body of text |
 

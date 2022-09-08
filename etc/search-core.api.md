@@ -9,27 +9,38 @@ export interface AdditionalHttpHeaders {
     'Client-SDK'?: ClientSDKHeaderValues;
 }
 
-// @public @deprecated (undocumented)
-export type AnswersConfig = SearchConfig;
-
-// @public @deprecated (undocumented)
-export interface AnswersConfigWithApiKey extends SearchConfigWithApiKey {
+// @public
+export interface Address {
+    // (undocumented)
+    city?: string;
+    // (undocumented)
+    countryCode: string;
+    // (undocumented)
+    extraDescription?: string;
+    // (undocumented)
+    line1?: string;
+    // (undocumented)
+    line2?: string;
+    // (undocumented)
+    line3?: string;
+    // (undocumented)
+    postalCode?: string;
+    // (undocumented)
+    region?: string;
+    // (undocumented)
+    sublocality?: string;
 }
 
-// @public @deprecated (undocumented)
-export interface AnswersConfigWithToken extends SearchConfigWithToken {
+// @public
+export interface AddressDirectAnswer extends BaseFieldValueDirectAnswer<Address> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Address>;
 }
 
-// @public @deprecated (undocumented)
-export class AnswersCore extends SearchCore {
-}
-
-// @public @deprecated (undocumented)
-export interface AnswersError extends SearchError {
-}
-
-// @public @deprecated (undocumented)
-export interface AnswersRequest extends SearchRequest {
+// @public
+export interface AndroidAppUrlDirectAnswer extends BaseFieldValueDirectAnswer<string> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.AndroidAppURL>;
 }
 
 // @public
@@ -37,7 +48,7 @@ export interface AppliedQueryFilter {
     details?: LocationFilterDetails;
     displayKey: string;
     displayValue: string;
-    filter: Filter;
+    filter: FieldValueFilter;
     type: AppliedQueryFilterType;
 }
 
@@ -58,7 +69,7 @@ export interface AutocompleteResponse {
 
 // @public
 export interface AutocompleteResult {
-    filter?: Filter;
+    filter?: FieldValueFilter;
     key?: string;
     matchedSubstrings?: {
         length: number;
@@ -76,13 +87,24 @@ export interface AutocompleteService {
     verticalAutocomplete(request: VerticalAutocompleteRequest): Promise<AutocompleteResponse>;
 }
 
-// @public @deprecated (undocumented)
-export interface BaseAnswersConfig extends BaseSearchConfig {
+// @public
+export interface BaseFeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
+    fieldType: EnumOrLiteral<BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText>;
+    snippet: Snippet;
+    type: DirectAnswerType.FeaturedSnippet;
+}
+
+// @public
+export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> {
+    entityName: string;
+    fieldApiName: string;
+    fieldName: string;
+    type: DirectAnswerType.FieldValue;
+    value: T;
 }
 
 // @public
 export interface BaseSearchConfig {
-    // @alpha
     additionalQueryParams?: {
         [key: string]: string | number | boolean;
     };
@@ -94,26 +116,93 @@ export interface BaseSearchConfig {
 }
 
 // @public
+export enum BuiltInFieldType {
+    // (undocumented)
+    Address = "address",
+    // (undocumented)
+    AndroidAppURL = "android_app_url",
+    // (undocumented)
+    ComplexURL = "complex_url",
+    // (undocumented)
+    Decimal = "decimal",
+    // (undocumented)
+    Email = "email",
+    // (undocumented)
+    FacebookURL = "facebook_url",
+    // (undocumented)
+    Hours = "hours",
+    // (undocumented)
+    InstagramHandle = "instagram_handle",
+    // (undocumented)
+    Integer = "integer",
+    // (undocumented)
+    IOSAppURL = "ios_app_url",
+    // (undocumented)
+    MultiLineText = "multi_line_text",
+    // (undocumented)
+    Phone = "phone",
+    // (undocumented)
+    RichText = "rich_text",
+    // (undocumented)
+    SingleLineText = "single_line_text",
+    // (undocumented)
+    TwitterHandle = "twitter_handle",
+    // (undocumented)
+    URL = "url"
+}
+
+// @public
 export interface ClientSDKHeaderValues {
     [agent: string]: string | undefined;
     ANSWERS_CORE?: never;
 }
 
 // @public
-export interface CombinedFilter {
-    combinator: FilterCombinator;
-    filters: (Filter | CombinedFilter)[];
+export interface ComplexURL {
+    // (undocumented)
+    displayUrl?: string;
+    // (undocumented)
+    preferDisplayUrl: boolean;
+    // (undocumented)
+    url: string;
+}
+
+// @public
+export interface ComplexUrlDirectAnswer extends BaseFieldValueDirectAnswer<ComplexURL> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.ComplexURL>;
+}
+
+// @public
+export interface ConjunctionStaticFilter {
+    combinator: FilterCombinator.AND;
+    filters: StaticFilter[];
+    kind: 'conjunction';
 }
 
 // @public
 export type Context = any;
 
 // @public
-export interface DirectAnswer {
-    fieldType: string;
+export interface DayHour {
+    // (undocumented)
+    isClosed?: boolean;
+    // (undocumented)
+    openIntervals?: Interval[];
+}
+
+// @public
+export interface DecimalDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Decimal>;
+}
+
+// @public
+export interface DirectAnswer<T = unknown> {
+    fieldType: EnumOrLiteral<BuiltInFieldType> | 'unknown';
     relatedResult: Result;
     type: DirectAnswerType;
-    value?: string;
+    value?: T;
     verticalKey: string;
 }
 
@@ -130,9 +219,15 @@ export enum Direction {
 }
 
 // @public
+export interface DisjunctionStaticFilter {
+    combinator: FilterCombinator.OR;
+    filters: (DisjunctionStaticFilter | FieldValueStaticFilter)[];
+    kind: 'disjunction';
+}
+
+// @public
 export interface DisplayableFacet extends Facet {
     displayName: string;
-    fieldId: string;
     options: DisplayableFacetOption[];
 }
 
@@ -140,9 +235,13 @@ export interface DisplayableFacet extends Facet {
 export interface DisplayableFacetOption extends FacetOption {
     count: number;
     displayName: string;
-    matcher: Matcher;
     selected: boolean;
-    value: string | number | boolean | NumberRangeValue;
+}
+
+// @public
+export interface EmailDirectAnswer extends BaseFieldValueDirectAnswer<string[]> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Email>;
 }
 
 // @public
@@ -164,11 +263,20 @@ export interface Endpoints {
 }
 
 // @public
+export type EnumOrLiteral<T extends string> = T | `${T}`;
+
+// @public
 export enum ErrorType {
     BackendError = "BACKEND_ERROR",
     InvalidConfig = "INVALID_CONFIG",
     InvalidQuery = "INVALID_QUERY",
     Timeout = "TIMEOUT"
+}
+
+// @public
+export interface FacebookUrlDirectAnswer extends BaseFieldValueDirectAnswer<string> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.FacebookURL>;
 }
 
 // @public
@@ -178,9 +286,8 @@ export interface Facet {
 }
 
 // @public
-export interface FacetOption {
-    matcher: Matcher;
-    value: string | number | boolean | NumberRangeValue;
+export interface FacetOption extends Omit<FieldValueFilter, 'fieldId'> {
+    value: Exclude<FieldValueFilter['value'], NearFilterValue>;
 }
 
 // @public
@@ -195,32 +302,21 @@ export interface FailedVertical {
 }
 
 // @public
-export interface FeaturedSnippetDirectAnswer extends DirectAnswer {
-    fieldType: string;
-    relatedResult: Result;
-    snippet: Snippet;
-    type: DirectAnswerType.FeaturedSnippet;
-    value?: string;
-    verticalKey: string;
-}
+export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
 
 // @public
-export interface FieldValueDirectAnswer extends DirectAnswer {
-    entityName: string;
-    fieldApiName: string;
-    fieldName: string;
-    fieldType: string;
-    relatedResult: Result;
-    type: DirectAnswerType.FieldValue;
-    value: string;
-    verticalKey: string;
-}
+export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer | PhoneDirectAnswer | EmailDirectAnswer | AddressDirectAnswer | HoursDirectAnswer;
 
 // @public
-export interface Filter {
+export interface FieldValueFilter {
     fieldId: string;
     matcher: Matcher;
     value: string | number | boolean | NearFilterValue | NumberRangeValue;
+}
+
+// @public
+export interface FieldValueStaticFilter extends FieldValueFilter {
+    kind: 'fieldValue';
 }
 
 // @public
@@ -231,7 +327,7 @@ export enum FilterCombinator {
 
 // @public
 export interface FilterSearchRequest extends SearchRequest {
-    excluded?: Filter[];
+    excluded?: FieldValueFilter[];
     fields: SearchParameterField[];
     input: string;
     sectioned: boolean;
@@ -262,6 +358,72 @@ export interface HighlightedValue {
         offset: number;
     }[];
     value: string;
+}
+
+// @public
+export interface HolidayHours {
+    // (undocumented)
+    date: string;
+    // (undocumented)
+    isClosed?: boolean;
+    // (undocumented)
+    isRegularHours?: boolean;
+    // (undocumented)
+    openIntervals?: Interval[];
+}
+
+// @public
+export interface Hours {
+    // (undocumented)
+    friday?: DayHour;
+    // (undocumented)
+    holidayHours?: HolidayHours[];
+    // (undocumented)
+    monday?: DayHour;
+    // (undocumented)
+    reopenDate?: string;
+    // (undocumented)
+    saturday?: DayHour;
+    // (undocumented)
+    sunday?: DayHour;
+    // (undocumented)
+    thursday?: DayHour;
+    // (undocumented)
+    tuesday?: DayHour;
+    // (undocumented)
+    wednesday?: DayHour;
+}
+
+// @public
+export interface HoursDirectAnswer extends BaseFieldValueDirectAnswer<Hours | Hours[]> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Hours>;
+}
+
+// @public
+export interface InstagramHandleDirectAnswer extends BaseFieldValueDirectAnswer<string> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.InstagramHandle>;
+}
+
+// @public
+export interface IntegerDirectAnswer extends BaseFieldValueDirectAnswer<number> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.Integer>;
+}
+
+// @public
+export interface Interval {
+    // (undocumented)
+    end?: string;
+    // (undocumented)
+    start?: string;
+}
+
+// @public
+export interface IosAppUrlDirectAnswer extends BaseFieldValueDirectAnswer<string> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.IOSAppURL>;
 }
 
 // @public
@@ -321,6 +483,12 @@ export enum Matcher {
 }
 
 // @public
+export interface MultiLineTextSnippetDirectAnswer extends BaseFeaturedSnippetDirectAnswer<string> {
+    fieldType: EnumOrLiteral<BuiltInFieldType.MultiLineText>;
+    value: string;
+}
+
+// @public
 export interface NearFilterValue {
     lat: number;
     lng: number;
@@ -331,6 +499,12 @@ export interface NearFilterValue {
 export interface NumberRangeValue {
     end?: UpperNumberRangeLimit;
     start?: LowerNumberRangeLimit;
+}
+
+// @public
+export interface PhoneDirectAnswer extends BaseFieldValueDirectAnswer<string> {
+    // (undocumented)
+    fieldType: BuiltInFieldType.Phone;
 }
 
 // @public
@@ -393,6 +567,17 @@ export interface Result<T = Record<string, unknown>> {
     name?: string;
     rawData: T;
     source: Source;
+}
+
+// @public
+export interface RichTextDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.RichText>;
+}
+
+// @public
+export interface RichTextSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
+    fieldType: EnumOrLiteral<BuiltInFieldType.RichText>;
 }
 
 // @public
@@ -508,6 +693,21 @@ export enum SpellCheckType {
 }
 
 // @public
+export type StaticFilter = FieldValueStaticFilter | DisjunctionStaticFilter | ConjunctionStaticFilter;
+
+// @public
+export interface TextDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.SingleLineText | BuiltInFieldType.MultiLineText>;
+}
+
+// @public
+export interface TwitterHandleDirectAnswer extends BaseFieldValueDirectAnswer<string> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.TwitterHandle>;
+}
+
+// @public
 export interface UniversalAutocompleteRequest extends SearchRequest {
     input: string;
     sessionTrackingEnabled?: boolean;
@@ -548,9 +748,20 @@ export interface UniversalSearchResponse {
 }
 
 // @public
+export interface UnknownFieldValueDirectAnswer<T = unknown> extends BaseFieldValueDirectAnswer<T> {
+    fieldType: 'unknown';
+}
+
+// @public
 export interface UpperNumberRangeLimit {
     matcher: Matcher.LessThan | Matcher.LessThanOrEqualTo;
     value: number;
+}
+
+// @public
+export interface UrlDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> {
+    // (undocumented)
+    fieldType: EnumOrLiteral<BuiltInFieldType.URL>;
 }
 
 // @public
@@ -588,7 +799,7 @@ export interface VerticalSearchRequest extends SearchRequest {
     sessionTrackingEnabled?: boolean;
     skipSpellCheck?: boolean;
     sortBys?: SortBy[];
-    staticFilters?: CombinedFilter | Filter;
+    staticFilter?: StaticFilter;
     verticalKey: string;
 }
 

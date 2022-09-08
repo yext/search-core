@@ -1,5 +1,5 @@
 import { SearchParameterField } from '../models/autocompleteservice/AutocompleteRequest';
-import { Filter } from '../models/searchservice/request/Filter';
+import { FieldValueFilter } from '../models/searchservice/request/FieldValueFilter';
 
 export function serializeSearchParameterFields(fields: SearchParameterField[]) {
   return fields.map(({ fieldApiName, entityType, fetchEntities }) => (
@@ -11,7 +11,7 @@ export function serializeSearchParameterFields(fields: SearchParameterField[]) {
   ));
 }
 
-export function serializeExcludedFields(excludedFields?: Filter[]) {
+export function serializeExcludedFields(excludedFields?: FieldValueFilter[]) {
   return excludedFields?.map(({ fieldId, matcher, value }) => (
     {
       [fieldId]: {

@@ -1,5 +1,4 @@
-import { CombinedFilter } from './CombinedFilter';
-import { Filter } from './Filter';
+import { StaticFilter } from './StaticFilter';
 import { Context } from './Context';
 import { LatLong } from './LatLong';
 import { QueryTrigger } from './QueryTrigger';
@@ -38,8 +37,8 @@ export interface VerticalSearchRequest extends SearchRequest {
   sessionId?: string,
   /** Enables session tracking. */
   sessionTrackingEnabled?: boolean,
-  /** The static filters to apply to the search. */
-  staticFilters?: CombinedFilter | Filter,
+  /** The static filter to apply to the search. */
+  staticFilter?: StaticFilter,
   /** Determines how results are sorted. **/
   sortBys?: SortBy[],
   /** {@inheritdoc UniversalSearchRequest.referrerPageUrl} */

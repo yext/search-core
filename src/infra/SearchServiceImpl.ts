@@ -150,7 +150,7 @@ export class SearchServiceImpl implements SearchService {
       input: request.query,
       location: this.stringifyLatLong(request.location),
       verticalKey: request.verticalKey,
-      filters: request.staticFilters && serializeStaticFilters(request.staticFilters),
+      filters: request.staticFilter && serializeStaticFilters(request.staticFilter),
       limit: request.limit,
       offset: request.offset,
       retrieveFacets: request.retrieveFacets,

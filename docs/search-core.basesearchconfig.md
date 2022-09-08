@@ -16,6 +16,7 @@ export interface BaseSearchConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [additionalQueryParams?](./search-core.basesearchconfig.additionalqueryparams.md) | { \[key: string\]: string \| number \| boolean; } | <i>(Optional)</i> Additional query params added on to every request. |
 |  [endpoints?](./search-core.basesearchconfig.endpoints.md) | [Endpoints](./search-core.endpoints.md) | <i>(Optional)</i> Overrides for the URLs which are used when making requests to the Search API. |
 |  [experienceKey](./search-core.basesearchconfig.experiencekey.md) | string | The experience key of the search experience. |
 |  [experienceVersion?](./search-core.basesearchconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the search experience configuration. |

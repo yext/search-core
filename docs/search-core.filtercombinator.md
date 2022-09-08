@@ -4,7 +4,7 @@
 
 ## FilterCombinator enum
 
-Indicates how the filters in a [CombinedFilter](./search-core.combinedfilter.md) should be combined.
+Indicates how child filters in a [StaticFilter](./search-core.staticfilter.md) should be combined.
 
 <b>Signature:</b>
 

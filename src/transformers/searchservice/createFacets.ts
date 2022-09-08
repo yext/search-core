@@ -1,6 +1,6 @@
 import { NumberRangeValue } from '../../models/searchservice/common/NumberRangeValue';
 import { DisplayableFacet, DisplayableFacetOption } from '../../models/searchservice/response/DisplayableFacet';
-import { createFilter } from '../core/createFilter';
+import { createFieldValueFilter } from '../core/createFieldValueFilter';
 
 export function createFacets(facets: any): DisplayableFacet[] {
   if (!facets) {
@@ -16,7 +16,7 @@ export function createFacets(facets: any): DisplayableFacet[] {
 
 function createFacetOptions(options: any[]): DisplayableFacetOption[] {
   return options.map((option: any) => {
-    const filter = createFilter(option.filter);
+    const filter = createFieldValueFilter(option.filter);
 
     return {
       displayName: option.displayName,

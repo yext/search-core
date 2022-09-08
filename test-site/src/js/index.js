@@ -3,7 +3,7 @@ import { provideCore } from '@yext/search-core';
 import verticalRequest from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
-import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchRequest } from './requests/autoCompleteRequests';
+import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchRequest } from './requests/autocompleteRequests';
 
 const coreConfig = {
   apiKey: 'df4b24f4075800e5e9705090c54c6c13',

@@ -1,6 +1,6 @@
 import { Facet, FacetOption } from '../models/searchservice/request/Facet';
 import { ApiStaticFilters } from '../models/searchservice/request/ApiStaticFilters';
-import { shapeFilterForApi } from './serializeStaticFilters';
+import { shapeFieldValueFilterForApi } from './serializeStaticFilters';
 
 export function serializeFacets(filters: Facet[]): string {
   return JSON.stringify(filters.reduce<Record<string, ApiStaticFilters[]>>((obj, facet) => {
@@ -13,6 +13,6 @@ export function serializeFacets(filters: Facet[]): string {
 
 function shapeFacetOptionArrayForApi(options: FacetOption[], fieldId: string): ApiStaticFilters[] {
   return options.map((option) => {
-    return shapeFilterForApi({ ...option, fieldId: fieldId });
+    return shapeFieldValueFilterForApi({ ...option, fieldId: fieldId });
   });
 }

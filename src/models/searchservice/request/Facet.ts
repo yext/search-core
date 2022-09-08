@@ -1,5 +1,4 @@
-import { Matcher } from '../common/Matcher';
-import { NumberRangeValue } from '../common/NumberRangeValue';
+import { FieldValueFilter, NearFilterValue } from './FieldValueFilter';
 
 /**
  * Represents dynamic filter options for the Search API.
@@ -23,14 +22,12 @@ export interface Facet {
  *
  * @public
  */
-export interface FacetOption {
-  /** {@inheritDoc Matcher} */
-  matcher: Matcher,
+export interface FacetOption extends Omit<FieldValueFilter, 'fieldId'> {
   /**
    * The value to compare.
    *
    * @example
    * 'Sales'
    */
-  value: string | number | boolean | NumberRangeValue
+  value: Exclude<FieldValueFilter['value'], NearFilterValue>
 }

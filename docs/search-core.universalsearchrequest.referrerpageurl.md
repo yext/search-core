@@ -14,5 +14,5 @@ referrerPageUrl?: string;
 
 ## Example
 
-If a user is on https://www.yext.com/ and navigates to https://www.yext.com/answers and perform a search, the referrerPageUrl would be https://www.yext.com/.
+If a user is on https://www.yext.com/ and navigates to https://search.yext.com/ and perform a search, the referrerPageUrl would be https://www.yext.com/.
 

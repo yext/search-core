@@ -4,7 +4,7 @@
 
 ## FilterSearchRequest.fields property
 
-An array of [SearchParameterField](./search-core.searchparameterfield.md)
+An array of [SearchParameterField](./search-core.searchparameterfield.md)<!-- -->.
 
 <b>Signature:</b>
 
