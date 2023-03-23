@@ -19,7 +19,6 @@ export interface AutocompleteResult
 |  [filter?](./search-core.autocompleteresult.filter.md) | [FieldValueFilter](./search-core.fieldvaluefilter.md) | <i>(Optional)</i> A filter applied to the autocomplete response. |
 |  [key?](./search-core.autocompleteresult.key.md) | string | <i>(Optional)</i> The fieldId which corresponds to the AutocompleteResult value. |
 |  [matchedSubstrings?](./search-core.autocompleteresult.matchedsubstrings.md) | { length: number; offset: number; }\[\] | <i>(Optional)</i> An array of substrings which overlap with the autocomplete input. |
-|  [queryIntents](./search-core.autocompleteresult.queryintents.md) | [SearchIntent](./search-core.searchintent.md)<!-- -->\[\] | [SearchIntent](./search-core.searchintent.md)<!-- -->s corresponding to the autocomplete result. |
 |  [relatedItem?](./search-core.autocompleteresult.relateditem.md) | [Result](./search-core.result.md) | <i>(Optional)</i> An entity that corresponds to the autocomplete result. |
 |  [value](./search-core.autocompleteresult.value.md) | string | The value of an autocomplete suggestion. |
 |  [verticalKeys?](./search-core.autocompleteresult.verticalkeys.md) | string\[\] | <i>(Optional)</i> Any vertical keys associated with a prompt. This only shows up on universal autocomplete requests. |
