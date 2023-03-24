@@ -11,6 +11,9 @@ describe('AutocompleteResponse', () => {
       results: [
         {
           value: 'salesforce',
+          inputIntents: [
+            SearchIntent.NearMe
+          ],
           matchedSubstrings: [
             {
               offset: 0,
@@ -33,6 +36,7 @@ describe('AutocompleteResponse', () => {
           results: [
             {
               value: 'Virginia Beach',
+              inputIntents: [],
               matchedSubstrings: [
                 {
                   offset: 0,
@@ -77,6 +81,7 @@ describe('AutocompleteResponse', () => {
                 fieldId: 'name'
               },
               key: 'name',
+              inputIntents: [],
               relatedItem: {
                 rawData: {
                   mock: 'data'
@@ -110,6 +115,7 @@ describe('AutocompleteResponse', () => {
                 fieldId: 'name2'
               },
               key: 'name',
+              inputIntents: [],
               relatedItem: {
                 rawData: {
                   mock: 'data2'

@@ -13,6 +13,7 @@ export function createAutocompleteResult(result: any): AutocompleteResult {
     matchedSubstrings: result.matchedSubstrings || [],
     value: result.value,
     relatedItem: relatedItem,
-    verticalKeys: result.verticalKeys
+    verticalKeys: result.verticalKeys,
+    inputIntents: result.queryIntents ?? []
   };
 }
