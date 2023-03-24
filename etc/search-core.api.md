@@ -70,6 +70,7 @@ export interface AutocompleteResponse {
 // @public
 export interface AutocompleteResult {
     filter?: FieldValueFilter;
+    inputIntents: SearchIntent[];
     key?: string;
     matchedSubstrings?: {
         length: number;

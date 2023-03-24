@@ -12,7 +12,8 @@ export function createAutocompleteResponse(data: any): AutocompleteResponse {
 
   const response = data.response;
   const responseResults = response.results.map(createAutocompleteResult);
-  const inputIntents = response.input ? response.input.queryIntents : [];
+  const inputIntents = response.input?.queryIntents ?? [];
+
   return {
     results: responseResults,
     queryId: response.queryId,
