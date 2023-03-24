@@ -76,7 +76,6 @@ export interface AutocompleteResult {
         length: number;
         offset: number;
     }[];
-    queryIntents: SearchIntent[];
     relatedItem?: Result;
     value: string;
     verticalKeys?: string[];
