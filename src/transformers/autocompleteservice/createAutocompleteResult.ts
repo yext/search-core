@@ -14,6 +14,6 @@ export function createAutocompleteResult(result: any): AutocompleteResult {
     value: result.value,
     relatedItem: relatedItem,
     verticalKeys: result.verticalKeys,
-    queryIntents: result.queryIntents ?? []
+    inputIntents: result.queryIntents ?? []
   };
 }

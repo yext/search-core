@@ -97,5 +97,5 @@ export interface AutocompleteResult {
   /**
    * {@link SearchIntent}s corresponding to the autocomplete result.
    */
-  queryIntents: SearchIntent[]
+  inputIntents: SearchIntent[]
 }

@@ -17,6 +17,7 @@ export interface AutocompleteResult
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [filter?](./search-core.autocompleteresult.filter.md) | [FieldValueFilter](./search-core.fieldvaluefilter.md) | <i>(Optional)</i> A filter applied to the autocomplete response. |
+|  [inputIntents](./search-core.autocompleteresult.inputintents.md) | [SearchIntent](./search-core.searchintent.md)<!-- -->\[\] | [SearchIntent](./search-core.searchintent.md)<!-- -->s corresponding to the autocomplete result. |
 |  [key?](./search-core.autocompleteresult.key.md) | string | <i>(Optional)</i> The fieldId which corresponds to the AutocompleteResult value. |
 |  [matchedSubstrings?](./search-core.autocompleteresult.matchedsubstrings.md) | { length: number; offset: number; }\[\] | <i>(Optional)</i> An array of substrings which overlap with the autocomplete input. |
 |  [queryIntents](./search-core.autocompleteresult.queryintents.md) | [SearchIntent](./search-core.searchintent.md)<!-- -->\[\] | [SearchIntent](./search-core.searchintent.md)<!-- -->s corresponding to the autocomplete result. |

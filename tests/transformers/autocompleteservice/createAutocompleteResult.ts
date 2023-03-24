@@ -23,7 +23,7 @@ describe('AutocompleteResult', () => {
     const expectedResult = {
       key: 'key',
       value: 'salesforce',
-      queryIntents: [],
+      inputIntents: [],
       matchedSubstrings: [
         {
           offset: 0,
@@ -70,7 +70,7 @@ describe('AutocompleteResult', () => {
         fieldId: 'name'
       },
       key: 'name',
-      queryIntents: [],
+      inputIntents: [],
       relatedItem: {
         rawData: {
           mock: 'data'
@@ -108,7 +108,7 @@ describe('AutocompleteResult', () => {
         fieldId: 'name'
       },
       key: 'name',
-      queryIntents: [],
+      inputIntents: [],
       matchedSubstrings: [
         {
           offset: 0,
