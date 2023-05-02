@@ -8,6 +8,7 @@
 
 |  Class | Description |
 |  --- | --- |
+|  [EndpointsProvider](./search-core.endpointsprovider.md) | Provides methods for getting various endpoints. |
 |  [SearchCore](./search-core.searchcore.md) | Provides methods for executing searches, submitting questions, and performing autocompletes. |
 |  [SearchError](./search-core.searcherror.md) | Represents an error |
 

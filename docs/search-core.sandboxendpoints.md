@@ -4,6 +4,11 @@
 
 ## SandboxEndpoints variable
 
+> Warning: This API is now obsolete.
+> 
+> Use [EndpointsProvider](./search-core.endpointsprovider.md) instead
+> 
+
 The endpoints to use for sandbox experiences.
 
 <b>Signature:</b>

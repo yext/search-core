@@ -264,6 +264,31 @@ export interface Endpoints {
 }
 
 // @public
+export class EndpointsProvider {
+    // Warning: (ae-forgotten-export) The symbol "Environment" needs to be exported by the entry point index.d.ts
+    // Warning: (ae-forgotten-export) The symbol "CloudRegion" needs to be exported by the entry point index.d.ts
+    constructor(environment?: Environment, cloudRegion?: CloudRegion, overrideEndpoints?: Endpoints);
+    // @internal (undocumented)
+    getDomain(): string;
+    getEndpoints(): {
+        universalSearch: string;
+        verticalSearch: string;
+        questionSubmission: string;
+        status: string;
+        universalAutocomplete: string;
+        verticalAutocomplete: string;
+        filterSearch: string;
+    };
+    getFilterSearchEndpoint(): string;
+    getQuestionSubmissionEndpoint(): string;
+    getStatusEndpoint(): string;
+    getUniversalAutocomplete(): string;
+    getUniversalSearchEndpoint(): string;
+    getVerticalAutocomplete(): string;
+    getVerticalSearchEndpoint(): string;
+}
+
+// @public
 export type EnumOrLiteral<T extends string> = T | `${T}`;
 
 // @public
@@ -581,7 +606,7 @@ export interface RichTextSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDir
     fieldType: EnumOrLiteral<BuiltInFieldType.RichText>;
 }
 
-// @public
+// @public @deprecated
 export const SandboxEndpoints: Required<Endpoints>;
 
 // @public

@@ -159,6 +159,18 @@ This package contains the following license and notice below:
 
 The following NPM package may be included in this product:
 
+ - tsc@2.0.4
+
+This package contains the following license and notice below:
+
+## DEPRECATED. 
+
+Use [`typescript`](https://www.npmjs.com/package/typescript) to get access to the `tsc` CLI command.
+
+-----------
+
+The following NPM package may be included in this product:
+
  - webidl-conversions@3.0.1
 
 This package contains the following license and notice below:

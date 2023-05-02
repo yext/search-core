@@ -9,7 +9,7 @@ Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers
 <b>Signature:</b>
 
 ```typescript
-export declare type Context = any;
+export type Context = any;
 ```
 
 ## Remarks

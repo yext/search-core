@@ -11,12 +11,16 @@ import mockAutocompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutocompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
 import mockAutocompleteResponseWithFailedVerticals from '../fixtures/autocompleteresponsewithfailedverticals.json';
 import mockAutocompleteResponseWithVerticalKeys from '../fixtures/autocompleteresponsewithverticalkeys.json';
-import { defaultEndpoints, defaultApiVersion } from '../../src/constants';
+import { defaultApiVersion, EndpointsProvider } from '../../src/constants';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { ApiResponse } from '../../src/models/searchapi/ApiResponse';
 import { SearchError } from '../../src/models/searchapi/SearchError';
 import { getClientSdk } from '../../src/utils/getClientSdk';
 import { Matcher } from '../../src/models/searchservice/common/Matcher';
+import { Endpoints } from '../../src/models/core/Endpoints';
+
+const endpointsProvider: EndpointsProvider = new EndpointsProvider();
+const defaultEndpoints: Required<Endpoints> = endpointsProvider.getEndpoints();
 
 describe('AutocompleteService', () => {
   const config: SearchConfigWithDefaulting = {
@@ -56,7 +60,7 @@ describe('AutocompleteService', () => {
   }
 
   describe('Universal Autocomplete', () => {
-    const expectedUniversalUrl = defaultEndpoints.universalAutocomplete;
+    const expectedUniversalUrl = endpointsProvider.getUniversalAutocomplete();
     const request: UniversalAutocompleteRequest = {
       input: '',
       sessionTrackingEnabled: false
@@ -131,7 +135,7 @@ describe('AutocompleteService', () => {
   });
 
   describe('Vertical Autocomplete', () => {
-    const expectedVerticalUrl = defaultEndpoints.verticalAutocomplete;
+    const expectedVerticalUrl = endpointsProvider.getVerticalAutocomplete();
     const request: VerticalAutocompleteRequest = {
       input: 'salesforce',
       sessionTrackingEnabled: false,
@@ -181,7 +185,7 @@ describe('AutocompleteService', () => {
   });
 
   describe('FilterSearch', () => {
-    const expectedFilterUrl = defaultEndpoints.filterSearch;
+    const expectedFilterUrl = endpointsProvider.getFilterSearchEndpoint();
     it('query params are correct', async () => {
       const convertedSearchParams = {
         sectioned: false,
