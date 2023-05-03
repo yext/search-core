@@ -16,8 +16,8 @@ export declare function provideEndpoints(environment?: Environment, cloudRegion?
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  environment | Environment | environment of the domain to use, defaults to prod if not provided |
-|  cloudRegion | CloudRegion | cloud region of the domain to use, defaults to us if not provided |
+|  environment | [Environment](./search-core.environment.md) | environment of the domain to use, defaults to prod if not provided |
+|  cloudRegion | [CloudRegion](./search-core.cloudregion.md) | cloud region of the domain to use, defaults to us if not provided |
 
 <b>Returns:</b>
 

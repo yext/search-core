@@ -11,7 +11,7 @@ import mockAutocompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutocompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
 import mockAutocompleteResponseWithFailedVerticals from '../fixtures/autocompleteresponsewithfailedverticals.json';
 import mockAutocompleteResponseWithVerticalKeys from '../fixtures/autocompleteresponsewithverticalkeys.json';
-import { defaultApiVersion, provideEndpoints } from '../../src/constants';
+import { defaultApiVersion, provideEndpoints } from '../../src/provideEndpoints';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { ApiResponse } from '../../src/models/searchapi/ApiResponse';
 import { SearchError } from '../../src/models/searchapi/SearchError';

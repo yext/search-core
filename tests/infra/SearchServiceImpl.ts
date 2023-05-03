@@ -11,7 +11,7 @@ import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Direction } from '../../src/models/searchservice/request/Direction';
 import { SortType } from '../../src/models/searchservice/request/SortType';
 import { getClientSdk } from '../../src/utils/getClientSdk';
-import { defaultApiVersion, provideEndpoints } from '../../src/constants';
+import { defaultApiVersion, provideEndpoints } from '../../src/provideEndpoints';
 import { Endpoints } from '../../src/models/core/Endpoints';
 
 const defaultEndpoints: Required<Endpoints> = provideEndpoints();

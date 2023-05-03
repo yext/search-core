@@ -5,7 +5,7 @@ import { SearchConfig, SearchConfigWithDefaulting } from './models/core/SearchCo
 import { AutocompleteServiceImpl } from './infra/AutocompleteServiceImpl';
 import { ApiResponseValidator } from './validation/ApiResponseValidator';
 import { SearchCore } from './SearchCore';
-import { provideEndpoints } from './constants';
+import { provideEndpoints } from './provideEndpoints';
 
 /**
  * The entrypoint to the search-core library.

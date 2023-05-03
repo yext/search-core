@@ -159,6 +159,14 @@ export interface ClientSDKHeaderValues {
 }
 
 // @public
+export enum CloudRegion {
+    // (undocumented)
+    EU = "eu",
+    // (undocumented)
+    US = "us"
+}
+
+// @public
 export interface ComplexURL {
     // (undocumented)
     displayUrl?: string;
@@ -265,6 +273,14 @@ export interface Endpoints {
 
 // @public
 export type EnumOrLiteral<T extends string> = T | `${T}`;
+
+// @public
+export enum Environment {
+    // (undocumented)
+    PROD = "prod",
+    // (undocumented)
+    SANDBOX = "sbx"
+}
 
 // @public
 export enum ErrorType {
@@ -511,9 +527,6 @@ export interface PhoneDirectAnswer extends BaseFieldValueDirectAnswer<string> {
 // @public
 export function provideCore(config: SearchConfig): SearchCore;
 
-// Warning: (ae-forgotten-export) The symbol "Environment" needs to be exported by the entry point index.d.ts
-// Warning: (ae-forgotten-export) The symbol "CloudRegion" needs to be exported by the entry point index.d.ts
-//
 // @public
 export function provideEndpoints(environment?: Environment, cloudRegion?: CloudRegion): Required<Endpoints>;
 

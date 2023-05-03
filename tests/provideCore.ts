@@ -1,4 +1,4 @@
-import { provideEndpoints } from '../src/constants';
+import { provideEndpoints } from '../src/provideEndpoints';
 import { AutocompleteServiceImpl } from '../src/infra/AutocompleteServiceImpl';
 import { QuestionSubmissionServiceImpl } from '../src/infra/QuestionSubmissionServiceImpl';
 import { SearchServiceImpl } from '../src/infra/SearchServiceImpl';
