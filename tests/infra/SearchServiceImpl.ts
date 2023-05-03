@@ -11,10 +11,10 @@ import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Direction } from '../../src/models/searchservice/request/Direction';
 import { SortType } from '../../src/models/searchservice/request/SortType';
 import { getClientSdk } from '../../src/utils/getClientSdk';
-import { CloudRegion, defaultApiVersion, EndpointsProvider, Environment } from '../../src/constants';
+import { defaultApiVersion, provideEndpoints } from '../../src/constants';
 import { Endpoints } from '../../src/models/core/Endpoints';
 
-const defaultEndpoints: Required<Endpoints> = new EndpointsProvider().getEndpoints();
+const defaultEndpoints: Required<Endpoints> = provideEndpoints();
 
 describe('SearchService', () => {
   const configWithRequiredApiKey: SearchConfigWithDefaulting = {
@@ -160,13 +160,7 @@ describe('SearchService', () => {
       const customUrl = 'http://custom.endpoint.com/api';
       const config: SearchConfigWithDefaulting = {
         ...configWithRequiredApiKey,
-        endpoints:
-          new EndpointsProvider(
-            Environment.PROD,
-            CloudRegion.US,
-            {
-              universalSearch: customUrl
-            }).getEndpoints()
+        endpoints: { ...defaultEndpoints, universalSearch: customUrl }
       };
       const searchService: SearchServiceImpl = new SearchServiceImpl(
         config,

@@ -3,14 +3,14 @@ import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { HttpService } from '../../src/services/HttpService';
 import { SearchConfigWithDefaulting } from '../../src/models/core/SearchConfig';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
-import { defaultApiVersion, EndpointsProvider } from '../../src/constants';
+import { defaultApiVersion, provideEndpoints } from '../../src/constants';
 
 const baseCoreConfig = {
   apiKey: 'anApiKey',
   experienceKey: 'anExperienceKey',
   locale: 'fr',
   experienceVersion: 'STAGING',
-  endpoints: new EndpointsProvider().getEndpoints()
+  endpoints: provideEndpoints()
 };
 
 const qaRequest = {

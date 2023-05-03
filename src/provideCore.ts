@@ -5,7 +5,7 @@ import { SearchConfig, SearchConfigWithDefaulting } from './models/core/SearchCo
 import { AutocompleteServiceImpl } from './infra/AutocompleteServiceImpl';
 import { ApiResponseValidator } from './validation/ApiResponseValidator';
 import { SearchCore } from './SearchCore';
-import { CloudRegion, EndpointsProvider, Environment } from './constants';
+import { provideEndpoints } from './constants';
 
 /**
  * The entrypoint to the search-core library.
@@ -24,8 +24,10 @@ export function provideCore(config: SearchConfig): SearchCore {
 
   const defaultedConfig: SearchConfigWithDefaulting = {
     ...config,
-    endpoints:
-      new EndpointsProvider(Environment.PROD, CloudRegion.US, config.endpoints).getEndpoints()
+    endpoints: {
+      ...provideEndpoints(),
+      ...config.endpoints
+    }
   };
 
   const httpService = new HttpServiceImpl();

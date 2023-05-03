@@ -8,7 +8,6 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [EndpointsProvider](./search-core.endpointsprovider.md) | Provides methods for getting various endpoints. |
 |  [SearchCore](./search-core.searchcore.md) | Provides methods for executing searches, submitting questions, and performing autocompletes. |
 |  [SearchError](./search-core.searcherror.md) | Represents an error |
 
@@ -36,6 +35,7 @@
 |  Function | Description |
 |  --- | --- |
 |  [provideCore(config)](./search-core.providecore.md) | The entrypoint to the search-core library. |
+|  [provideEndpoints(environment, cloudRegion)](./search-core.provideendpoints.md) | Provides all endpoints based on environment and cloud region. |
 
 ## Interfaces
 

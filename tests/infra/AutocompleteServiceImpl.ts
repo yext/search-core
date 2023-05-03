@@ -11,7 +11,7 @@ import mockAutocompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutocompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
 import mockAutocompleteResponseWithFailedVerticals from '../fixtures/autocompleteresponsewithfailedverticals.json';
 import mockAutocompleteResponseWithVerticalKeys from '../fixtures/autocompleteresponsewithverticalkeys.json';
-import { defaultApiVersion, EndpointsProvider } from '../../src/constants';
+import { defaultApiVersion, provideEndpoints } from '../../src/constants';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { ApiResponse } from '../../src/models/searchapi/ApiResponse';
 import { SearchError } from '../../src/models/searchapi/SearchError';
@@ -19,8 +19,7 @@ import { getClientSdk } from '../../src/utils/getClientSdk';
 import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Endpoints } from '../../src/models/core/Endpoints';
 
-const endpointsProvider: EndpointsProvider = new EndpointsProvider();
-const defaultEndpoints: Required<Endpoints> = endpointsProvider.getEndpoints();
+const defaultEndpoints: Required<Endpoints> = provideEndpoints();
 
 describe('AutocompleteService', () => {
   const config: SearchConfigWithDefaulting = {
@@ -60,7 +59,7 @@ describe('AutocompleteService', () => {
   }
 
   describe('Universal Autocomplete', () => {
-    const expectedUniversalUrl = endpointsProvider.getUniversalAutocomplete();
+    const expectedUniversalUrl = defaultEndpoints.universalAutocomplete;
     const request: UniversalAutocompleteRequest = {
       input: '',
       sessionTrackingEnabled: false
@@ -135,7 +134,7 @@ describe('AutocompleteService', () => {
   });
 
   describe('Vertical Autocomplete', () => {
-    const expectedVerticalUrl = endpointsProvider.getVerticalAutocomplete();
+    const expectedVerticalUrl = defaultEndpoints.verticalAutocomplete;
     const request: VerticalAutocompleteRequest = {
       input: 'salesforce',
       sessionTrackingEnabled: false,
@@ -185,7 +184,7 @@ describe('AutocompleteService', () => {
   });
 
   describe('FilterSearch', () => {
-    const expectedFilterUrl = endpointsProvider.getFilterSearchEndpoint();
+    const expectedFilterUrl = defaultEndpoints.filterSearch;
     it('query params are correct', async () => {
       const convertedSearchParams = {
         sectioned: false,

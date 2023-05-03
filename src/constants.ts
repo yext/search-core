@@ -2,11 +2,21 @@ import { Endpoints } from './models/core/Endpoints';
 
 export const defaultApiVersion = 20220511;
 
+/**
+ * Defines the cloud region of the API domains.
+ *
+ * @public
+ */
 export enum CloudRegion {
   US = 'us',
   EU = 'eu',
 }
 
+/**
+ * Defines the environment of the API domains.
+ *
+ * @public
+ */
 export enum Environment {
   PROD = 'prod',
   SANDBOX = 'sbx',
@@ -15,112 +25,65 @@ export enum Environment {
 /**
  * Provides methods for getting various endpoints.
  *
- * @public
+ * @internal
  */
 export class EndpointsProvider {
   private readonly environment: Environment;
   private readonly cloudRegion: CloudRegion;
-  private readonly overrideEndpoints?: Endpoints;
 
-  constructor(environment?: Environment, cloudRegion?: CloudRegion, overrideEndpoints?: Endpoints) {
+  constructor(environment?: Environment, cloudRegion?: CloudRegion) {
     this.environment = environment || Environment.PROD;
     this.cloudRegion = cloudRegion || CloudRegion.US;
-    this.overrideEndpoints = overrideEndpoints;
   }
 
-  /** @internal */
+  /** Provides the domain based on environment and cloud region.
+   * @internal
+   */
   getDomain() {
     return `https://${this.environment}-cdn.${this.cloudRegion}.yextapis.com`;
   }
 
   /**
-   * Provides all endpoints based on environment and cloud region. Include any custom
-   * overrides in overrideEndpoints.
-   *
-   * @remarks
-   * Returns an {@link Endpoints} instance.
-   *
-   * @public
+   * Provides all endpoints based on environment and cloud region.
+   * @internal
    */
   getEndpoints() {
     return {
-      universalSearch: this.getUniversalSearchEndpoint(),
-      verticalSearch: this.getVerticalSearchEndpoint(),
-      questionSubmission: this.getQuestionSubmissionEndpoint(),
-      status: this.getStatusEndpoint(),
-      universalAutocomplete: this.getUniversalAutocomplete(),
-      verticalAutocomplete: this.getVerticalAutocomplete(),
-      filterSearch: this.getFilterSearchEndpoint(),
+      universalSearch: `${this.getDomain()}/v2/accounts/me/search/query`,
+      verticalSearch: `${this.getDomain()}/v2/accounts/me/search/vertical/query`,
+      questionSubmission: `${this.getDomain()}/v2/accounts/me/createQuestion`,
+      status: 'https://answersstatus.pagescdn.com',
+      universalAutocomplete: `${this.getDomain()}/v2/accounts/me/search/autocomplete`,
+      verticalAutocomplete: `${this.getDomain()}/v2/accounts/me/search/vertical/autocomplete`,
+      filterSearch: `${this.getDomain()}/v2/accounts/me/search/filtersearch`,
     };
-  }
-
-  /**
-   * Returns the endpoint for universal search.
-   * @public
-   * */
-  getUniversalSearchEndpoint() {
-    return this.overrideEndpoints?.universalSearch ||
-      `${this.getDomain()}/v2/accounts/me/search/query`;
-  }
-
-  /**
-   * Returns the endpoint for vertical search.
-   * @public
-   * */
-  getVerticalSearchEndpoint() {
-    return this.overrideEndpoints?.verticalSearch ||
-      `${this.getDomain()}/v2/accounts/me/search/vertical/query`;
-  }
-
-  /**
-   * Returns the endpoint for question submission.
-   * @public
-   * */
-  getQuestionSubmissionEndpoint() {
-    return this.overrideEndpoints?.questionSubmission ||
-      `${this.getDomain()}/v2/accounts/me/createQuestion`;
-  }
-
-  /**
-   * Returns the endpoint for status.
-   * @public
-   * */
-  getStatusEndpoint() {
-    return this.overrideEndpoints?.status || 'https://answersstatus.pagescdn.com';
-  }
-
-  /**
-   * Returns the endpoint for universal autocomplete.
-   * @public
-   * */
-  getUniversalAutocomplete() {
-    return this.overrideEndpoints?.universalAutocomplete ||
-      `${this.getDomain()}/v2/accounts/me/search/autocomplete`;
-  }
-
-  /**
-   * Returns the endpoint for vertical autocomplete.
-   * @public
-   * */
-  getVerticalAutocomplete() {
-    return this.overrideEndpoints?.verticalAutocomplete ||
-      `${this.getDomain()}/v2/accounts/me/search/vertical/autocomplete`;
-  }
-
-  /**
-   * Returns the endpoint for filter search.
-   * @public
-   * */
-  getFilterSearchEndpoint() {
-    return this.overrideEndpoints?.filterSearch ||
-      `${this.getDomain()}/v2/accounts/me/search/filtersearch`;
   }
 }
 
 /**
  * The endpoints to use for sandbox experiences.
- * @deprecated Use {@link EndpointsProvider} instead
+ *
+ * @deprecated Use {@link provideEndpoints} instead
+ *
  * @public
  */
 export const SandboxEndpoints: Required<Endpoints> =
   new EndpointsProvider(Environment.SANDBOX, CloudRegion.US).getEndpoints();
+
+/**
+ * Provides all endpoints based on environment and cloud region.
+ *
+ * @remarks
+ * Returns an {@link Endpoints} instance.
+ *
+ * @param environment - environment of the domain to use, defaults to prod if not provided
+ * @param cloudRegion - cloud region of the domain to use, defaults to us if not provided
+ *
+ * @public
+ */
+export function provideEndpoints(
+  environment?: Environment,
+  cloudRegion?: CloudRegion
+): Required<Endpoints> {
+  return new EndpointsProvider(environment, cloudRegion).getEndpoints();
+}
