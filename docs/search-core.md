@@ -17,8 +17,10 @@
 |  --- | --- |
 |  [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md) | Represents the type of [AppliedQueryFilter](./search-core.appliedqueryfilter.md) applied to a search. |
 |  [BuiltInFieldType](./search-core.builtinfieldtype.md) | Possible built-in field types for [DirectAnswer.fieldType](./search-core.directanswer.fieldtype.md)<!-- -->. |
+|  [CloudRegion](./search-core.cloudregion.md) | Defines the cloud region of the API domains. |
 |  [DirectAnswerType](./search-core.directanswertype.md) | Represents the type of direct answer. |
 |  [Direction](./search-core.direction.md) | The direction of a sort. |
+|  [Environment](./search-core.environment.md) | Defines the environment of the API domains. |
 |  [ErrorType](./search-core.errortype.md) | Identifier for the type of error causing the failure. |
 |  [FilterCombinator](./search-core.filtercombinator.md) | Indicates how child filters in a [StaticFilter](./search-core.staticfilter.md) should be combined. |
 |  [LocationBiasMethod](./search-core.locationbiasmethod.md) | The method used to determine the location. |
@@ -50,7 +52,7 @@
 |  [AutocompleteService](./search-core.autocompleteservice.md) | A service for autocomplete requests. |
 |  [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) | A direct answer which was found within a document. |
 |  [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) | A direct answer where the answer came from a field from the knowledge graph. |
-|  [BaseSearchConfig](./search-core.basesearchconfig.md) | The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. |
+|  [BaseSearchConfig](./search-core.basesearchconfig.md) | The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [ServingConfig](./search-core.servingconfig.md)<!-- -->. |
 |  [ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md) | Additional agents and their versions used to create the Search experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
 |  [ComplexURL](./search-core.complexurl.md) | The shape of a [BuiltInFieldType.ComplexURL](./search-core.builtinfieldtype.md) DirectAnswer value |
 |  [ComplexUrlDirectAnswer](./search-core.complexurldirectanswer.md) | A direct answer for a complex url field. |
@@ -100,6 +102,7 @@
 |  [SearchParameterField](./search-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
 |  [SearchRequest](./search-core.searchrequest.md) | Options for a Search API request. |
 |  [SearchService](./search-core.searchservice.md) | A service which performs Yext Search. |
+|  [ServingConfig](./search-core.servingconfig.md) | The configuration options for getting the endpoints. |
 |  [Snippet](./search-core.snippet.md) | The section of text where a [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) was found. |
 |  [SortBy](./search-core.sortby.md) | Represents a criterion that can be used to sort results. |
 |  [SpellCheck](./search-core.spellcheck.md) | A spellcheck response from a search query. |

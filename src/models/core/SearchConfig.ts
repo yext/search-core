@@ -1,11 +1,35 @@
 import { Endpoints } from './Endpoints';
 import { Visitor } from './Visitor';
+import { Environment } from './Environment';
+import { CloudRegion } from './CloudRegion';
 
 /**
- * The base configuration options for {@link SearchCore}.
+ * The configuration options for getting the endpoints.
+ *
  * @public
  */
-export interface BaseSearchConfig {
+export interface ServingConfig {
+  /**
+   * {@inheritDoc Environment}
+   *
+   * @public
+   */
+  environment?: Environment,
+  /**
+   * {@inheritDoc CloudRegion}
+   *
+   * @public
+   */
+  cloudRegion?: CloudRegion
+}
+
+/**
+ * The base configuration options for {@link SearchCore}, which includes the
+ * options from {@link ServingConfig}.
+ *
+ * @public
+ */
+export interface BaseSearchConfig extends ServingConfig {
   /** The experience key of the search experience. */
   experienceKey: string,
   /** The locale of the search experience. */
@@ -35,7 +59,19 @@ export interface BaseSearchConfig {
    */
   additionalQueryParams?: {
     [key: string]: string | number | boolean
-  }
+  },
+  /**
+   * {@inheritDoc Environment}
+   *
+   * @public
+   */
+  environment?: Environment,
+  /**
+   * {@inheritDoc CloudRegion}
+   *
+   * @public
+   */
+  cloudRegion?: CloudRegion
 }
 
 /**

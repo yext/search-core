@@ -1,4 +1,4 @@
-import { defaultApiVersion } from '../constants';
+import { defaultApiVersion } from '../provideEndpoints';
 import { QuestionSubmissionService } from '../services/QuestionSubmissionService';
 import { HttpService } from '../services/HttpService';
 import { SearchConfigWithDefaulting } from '../models/core/SearchConfig';

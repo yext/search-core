@@ -11,7 +11,10 @@ import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Direction } from '../../src/models/searchservice/request/Direction';
 import { SortType } from '../../src/models/searchservice/request/SortType';
 import { getClientSdk } from '../../src/utils/getClientSdk';
-import { defaultApiVersion, defaultEndpoints } from '../../src/constants';
+import { defaultApiVersion, EndpointsFactory } from '../../src/provideEndpoints';
+import { Endpoints } from '../../src/models/core/Endpoints';
+
+const defaultEndpoints: Required<Endpoints> = new EndpointsFactory().getEndpoints();
 
 describe('SearchService', () => {
   const configWithRequiredApiKey: SearchConfigWithDefaulting = {
@@ -74,7 +77,7 @@ describe('SearchService', () => {
   });
 
   describe('Universal Search', () => {
-    const expectedUniversalUrl = 'https://liveapi.yext.com/v2/accounts/me/search/query';
+    const expectedUniversalUrl = 'https://prod-cdn.us.yextapis.com/v2/accounts/me/search/query';
 
     it('Query params are correct when only required params (without token) are supplied', async () => {
       const requestWithRequiredParams: UniversalSearchRequest = {
@@ -157,10 +160,7 @@ describe('SearchService', () => {
       const customUrl = 'http://custom.endpoint.com/api';
       const config: SearchConfigWithDefaulting = {
         ...configWithRequiredApiKey,
-        endpoints: {
-          ...defaultEndpoints,
-          universalSearch: customUrl
-        }
+        endpoints: { ...defaultEndpoints, universalSearch: customUrl }
       };
       const searchService: SearchServiceImpl = new SearchServiceImpl(
         config,
@@ -200,7 +200,7 @@ describe('SearchService', () => {
   });
 
   describe('Vertical Search', () => {
-    const expectedVerticalUrl = 'https://liveapi.yext.com/v2/accounts/me/search/vertical/query';
+    const expectedVerticalUrl = 'https://prod-cdn.us.yextapis.com/v2/accounts/me/search/vertical/query';
 
     it('Query params are correct when only required params (without token) are supplied', async () => {
       const requestWithRequiredParams: VerticalSearchRequest = {
