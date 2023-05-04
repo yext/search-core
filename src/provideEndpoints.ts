@@ -10,7 +10,7 @@ export const defaultApiVersion = 20220511;
  *
  * @internal
  */
-export class EndpointsAdapter {
+export class EndpointsFactory {
   private readonly environment: Environment;
   private readonly cloudRegion: CloudRegion;
 
@@ -51,7 +51,7 @@ export class EndpointsAdapter {
  * @public
  */
 export const SandboxEndpoints: Required<Endpoints> =
-  new EndpointsAdapter({ environment: Environment.SANDBOX, cloudRegion: CloudRegion.US })
+  new EndpointsFactory({ environment: Environment.SANDBOX, cloudRegion: CloudRegion.US })
     .getEndpoints();
 
 /**
@@ -65,5 +65,5 @@ export const SandboxEndpoints: Required<Endpoints> =
  * @public
  */
 export function provideEndpoints(config?: ServingConfig): Required<Endpoints> {
-  return new EndpointsAdapter(config).getEndpoints();
+  return new EndpointsFactory(config).getEndpoints();
 }
