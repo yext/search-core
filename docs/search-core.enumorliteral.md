@@ -9,5 +9,5 @@ Produces a union type from the enum passed as a generic which consists of the en
 <b>Signature:</b>
 
 ```typescript
-export declare type EnumOrLiteral<T extends string> = T | `${T}`;
+export type EnumOrLiteral<T extends string> = T | `${T}`;
 ```

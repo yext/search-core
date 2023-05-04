@@ -41,7 +41,7 @@ export class EndpointsFactory {
 /**
  * The endpoints to use for sandbox experiences.
  *
- * @deprecated Use {@link provideCore} with the appropriate {@link ServingConfig} instead
+ * @deprecated Set the appropriate environment and cloud region in {@link ServingConfig} instead.
  *
  * @public
  */
