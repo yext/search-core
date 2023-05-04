@@ -9,7 +9,7 @@ A mapping of fields to the values emphasized by the Search API.
 <b>Signature:</b>
 
 ```typescript
-export type HighlightedFields = {
+export declare type HighlightedFields = {
     [fieldId: string]: HighlightedValue | HighlightedValue[] | HighlightedFields | HighlightedFields[];
 };
 ```
