@@ -48,17 +48,3 @@ export class EndpointsFactory {
 export const SandboxEndpoints: Required<Endpoints> =
   new EndpointsFactory({ environment: Environment.SANDBOX, cloudRegion: CloudRegion.US })
     .getEndpoints();
-
-/**
- * Provides all endpoints based on environment and cloud region.
- *
- * @remarks
- * Returns an {@link Endpoints} instance.
- *
- * @param config - serving config to use for the domain, defaults to Prod and US if not provided.
- *
- * @public
- */
-export function provideEndpoints(config?: ServingConfig): Required<Endpoints> {
-  return new EndpointsFactory(config).getEndpoints();
-}
