@@ -9,7 +9,7 @@ The main configuration options for [SearchCore](./search-core.searchcore.md)<!--
 <b>Signature:</b>
 
 ```typescript
-export type SearchConfig = SearchConfigWithApiKey | SearchConfigWithToken;
+export declare type SearchConfig = SearchConfigWithApiKey | SearchConfigWithToken;
 ```
 <b>References:</b> [SearchConfigWithApiKey](./search-core.searchconfigwithapikey.md)<!-- -->, [SearchConfigWithToken](./search-core.searchconfigwithtoken.md)
 
