@@ -1,39 +1,22 @@
 import { Endpoints } from './models/core/Endpoints';
+import { Environment } from './models/core/Environment';
+import { CloudRegion } from './models/core/CloudRegion';
+import { ServingConfig } from './models/core/SearchConfig';
 
 export const defaultApiVersion = 20220511;
-
-/**
- * Defines the cloud region of the API domains.
- *
- * @public
- */
-export enum CloudRegion {
-  US = 'us',
-  EU = 'eu',
-}
-
-/**
- * Defines the environment of the API domains.
- *
- * @public
- */
-export enum Environment {
-  PROD = 'prod',
-  SANDBOX = 'sbx',
-}
 
 /**
  * Provides methods for getting various endpoints.
  *
  * @internal
  */
-export class EndpointsProvider {
+export class EndpointsAdapter {
   private readonly environment: Environment;
   private readonly cloudRegion: CloudRegion;
 
-  constructor(environment?: Environment, cloudRegion?: CloudRegion) {
-    this.environment = environment || Environment.PROD;
-    this.cloudRegion = cloudRegion || CloudRegion.US;
+  constructor(config?: ServingConfig) {
+    this.environment = config?.environment || Environment.PROD;
+    this.cloudRegion = config?.cloudRegion || CloudRegion.US;
   }
 
   /** Provides the domain based on environment and cloud region.
@@ -68,7 +51,8 @@ export class EndpointsProvider {
  * @public
  */
 export const SandboxEndpoints: Required<Endpoints> =
-  new EndpointsProvider(Environment.SANDBOX, CloudRegion.US).getEndpoints();
+  new EndpointsAdapter({ environment: Environment.SANDBOX, cloudRegion: CloudRegion.US })
+    .getEndpoints();
 
 /**
  * Provides all endpoints based on environment and cloud region.
@@ -76,14 +60,10 @@ export const SandboxEndpoints: Required<Endpoints> =
  * @remarks
  * Returns an {@link Endpoints} instance.
  *
- * @param environment - environment of the domain to use, defaults to prod if not provided
- * @param cloudRegion - cloud region of the domain to use, defaults to us if not provided
+ * @param config - serving config to use for the domain, defaults to Prod and US if not provided.
  *
  * @public
  */
-export function provideEndpoints(
-  environment?: Environment,
-  cloudRegion?: CloudRegion
-): Required<Endpoints> {
-  return new EndpointsProvider(environment, cloudRegion).getEndpoints();
+export function provideEndpoints(config?: ServingConfig): Required<Endpoints> {
+  return new EndpointsAdapter(config).getEndpoints();
 }

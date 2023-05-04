@@ -9,15 +9,14 @@ Provides all endpoints based on environment and cloud region.
 <b>Signature:</b>
 
 ```typescript
-export declare function provideEndpoints(environment?: Environment, cloudRegion?: CloudRegion): Required<Endpoints>;
+export declare function provideEndpoints(config?: ServingConfig): Required<Endpoints>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  environment | [Environment](./search-core.environment.md) | environment of the domain to use, defaults to prod if not provided |
-|  cloudRegion | [CloudRegion](./search-core.cloudregion.md) | cloud region of the domain to use, defaults to us if not provided |
+|  config | [ServingConfig](./search-core.servingconfig.md) | serving config to use for the domain, defaults to Prod and US if not provided. |
 
 <b>Returns:</b>
 

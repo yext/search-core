@@ -25,7 +25,7 @@ export function provideCore(config: SearchConfig): SearchCore {
   const defaultedConfig: SearchConfigWithDefaulting = {
     ...config,
     endpoints: {
-      ...provideEndpoints(),
+      ...provideEndpoints(config),
       ...config.endpoints
     }
   };

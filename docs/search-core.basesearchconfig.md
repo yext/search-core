@@ -9,8 +9,9 @@ The base configuration options for [SearchCore](./search-core.searchcore.md)<!--
 <b>Signature:</b>
 
 ```typescript
-export interface BaseSearchConfig 
+export interface BaseSearchConfig extends ServingConfig 
 ```
+<b>Extends:</b> [ServingConfig](./search-core.servingconfig.md)
 
 ## Properties
 

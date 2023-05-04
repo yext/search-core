@@ -3,6 +3,7 @@ export { SearchError } from './searchapi/SearchError';
 
 // Core models
 export {
+  ServingConfig,
   SearchConfig,
   BaseSearchConfig,
   SearchConfigWithApiKey,
