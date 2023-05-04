@@ -6,7 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
-> Use [provideCore()](./search-core.providecore.md) with the appropriate [ServingConfig](./search-core.servingconfig.md) instead
+> Set the appropriate environment and cloud region in [ServingConfig](./search-core.servingconfig.md) instead.
 > 
 
 The endpoints to use for sandbox experiences.
