@@ -4,6 +4,7 @@
 
 ## ServingConfig.environment property
 
+Defines the environment of the API domains.
 
 <b>Signature:</b>
 

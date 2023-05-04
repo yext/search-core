@@ -1,4 +1,4 @@
-import { provideEndpoints } from '../src/provideEndpoints';
+import { EndpointsFactory } from '../src/provideEndpoints';
 import { AutocompleteServiceImpl } from '../src/infra/AutocompleteServiceImpl';
 import { QuestionSubmissionServiceImpl } from '../src/infra/QuestionSubmissionServiceImpl';
 import { SearchServiceImpl } from '../src/infra/SearchServiceImpl';
@@ -12,7 +12,7 @@ jest.mock('../src/infra/SearchServiceImpl');
 
 it('can specify custom endpoints', () => {
   const customEndPoints: Required<Endpoints> = {
-    ...provideEndpoints(),
+    ...new EndpointsFactory().getEndpoints(),
     verticalSearch: '<verticalSearchEndpoint>'
   };
 

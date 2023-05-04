@@ -11,7 +11,7 @@ import mockAutocompleteResponse from '../fixtures/autocompleteresponse.json';
 import mockAutocompleteResponseWithSections from '../fixtures/autocompleteresponsewithsections.json';
 import mockAutocompleteResponseWithFailedVerticals from '../fixtures/autocompleteresponsewithfailedverticals.json';
 import mockAutocompleteResponseWithVerticalKeys from '../fixtures/autocompleteresponsewithverticalkeys.json';
-import { defaultApiVersion, provideEndpoints } from '../../src/provideEndpoints';
+import { defaultApiVersion, EndpointsFactory } from '../../src/provideEndpoints';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
 import { ApiResponse } from '../../src/models/searchapi/ApiResponse';
 import { SearchError } from '../../src/models/searchapi/SearchError';
@@ -19,7 +19,7 @@ import { getClientSdk } from '../../src/utils/getClientSdk';
 import { Matcher } from '../../src/models/searchservice/common/Matcher';
 import { Endpoints } from '../../src/models/core/Endpoints';
 
-const defaultEndpoints: Required<Endpoints> = provideEndpoints();
+const defaultEndpoints: Required<Endpoints> = new EndpointsFactory().getEndpoints();
 
 describe('AutocompleteService', () => {
   const config: SearchConfigWithDefaulting = {

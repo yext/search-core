@@ -109,7 +109,9 @@ export interface BaseSearchConfig extends ServingConfig {
     additionalQueryParams?: {
         [key: string]: string | number | boolean;
     };
+    cloudRegion?: CloudRegion;
     endpoints?: Endpoints;
+    environment?: Environment;
     experienceKey: string;
     experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
     locale: string;
@@ -156,6 +158,14 @@ export enum BuiltInFieldType {
 export interface ClientSDKHeaderValues {
     [agent: string]: string | undefined;
     ANSWERS_CORE?: never;
+}
+
+// @public
+export enum CloudRegion {
+    // (undocumented)
+    EU = "eu",
+    // (undocumented)
+    US = "us"
 }
 
 // @public
@@ -265,6 +275,14 @@ export interface Endpoints {
 
 // @public
 export type EnumOrLiteral<T extends string> = T | `${T}`;
+
+// @public
+export enum Environment {
+    // (undocumented)
+    PROD = "prod",
+    // (undocumented)
+    SANDBOX = "sbx"
+}
 
 // @public
 export enum ErrorType {
@@ -512,9 +530,6 @@ export interface PhoneDirectAnswer extends BaseFieldValueDirectAnswer<string> {
 export function provideCore(config: SearchConfig): SearchCore;
 
 // @public
-export function provideEndpoints(config?: ServingConfig): Required<Endpoints>;
-
-// @public
 export interface QueryRulesActionsData {
     data?: Record<string, unknown>;
     errors?: {
@@ -647,15 +662,7 @@ export interface SearchService {
 
 // @public
 export interface ServingConfig {
-    // Warning: (ae-forgotten-export) The symbol "CloudRegion" needs to be exported by the entry point index.d.ts
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@yext/search-core" does not have an export "CloudRegion"
-    //
-    // (undocumented)
     cloudRegion?: CloudRegion;
-    // Warning: (ae-forgotten-export) The symbol "Environment" needs to be exported by the entry point index.d.ts
-    // Warning: (ae-unresolved-inheritdoc-reference) The @inheritDoc reference could not be resolved: The package "@yext/search-core" does not have an export "Environment"
-    //
-    // (undocumented)
     environment?: Environment;
 }
 

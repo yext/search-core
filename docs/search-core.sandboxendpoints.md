@@ -6,7 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
-> Use [provideEndpoints()](./search-core.provideendpoints.md) instead
+> Use [provideCore()](./search-core.providecore.md) with the appropriate [ServingConfig](./search-core.servingconfig.md) instead
 > 
 
 The endpoints to use for sandbox experiences.

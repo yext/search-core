@@ -4,7 +4,7 @@
 
 ## ServingConfig interface
 
-The configuration options for [provideEndpoints()](./search-core.provideendpoints.md)<!-- -->.
+The configuration options for getting the endpoints.
 
 <b>Signature:</b>
 
@@ -16,6 +16,6 @@ export interface ServingConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [cloudRegion?](./search-core.servingconfig.cloudregion.md) | CloudRegion | <i>(Optional)</i> |
-|  [environment?](./search-core.servingconfig.environment.md) | Environment | <i>(Optional)</i> |
+|  [cloudRegion?](./search-core.servingconfig.cloudregion.md) | [CloudRegion](./search-core.cloudregion.md) | <i>(Optional)</i> Defines the cloud region of the API domains. |
+|  [environment?](./search-core.servingconfig.environment.md) | [Environment](./search-core.environment.md) | <i>(Optional)</i> Defines the environment of the API domains. |
 

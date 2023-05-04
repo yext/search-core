@@ -19,17 +19,12 @@ export class EndpointsFactory {
     this.cloudRegion = config?.cloudRegion || CloudRegion.US;
   }
 
-  /** Provides the domain based on environment and cloud region.
-   * @internal
-   */
+  /** Provides the domain based on environment and cloud region. */
   getDomain() {
     return `https://${this.environment}-cdn.${this.cloudRegion}.yextapis.com`;
   }
 
-  /**
-   * Provides all endpoints based on environment and cloud region.
-   * @internal
-   */
+  /** Provides all endpoints based on environment and cloud region. */
   getEndpoints() {
     return {
       universalSearch: `${this.getDomain()}/v2/accounts/me/search/query`,
@@ -46,7 +41,7 @@ export class EndpointsFactory {
 /**
  * The endpoints to use for sandbox experiences.
  *
- * @deprecated Use {@link provideEndpoints} instead
+ * @deprecated Use {@link provideCore} with the appropriate {@link ServingConfig} instead
  *
  * @public
  */

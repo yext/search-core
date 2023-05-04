@@ -4,7 +4,7 @@ import { Environment } from './Environment';
 import { CloudRegion } from './CloudRegion';
 
 /**
- * The configuration options for {@link provideEndpoints}.
+ * The configuration options for getting the endpoints.
  *
  * @public
  */
@@ -24,7 +24,9 @@ export interface ServingConfig {
 }
 
 /**
- * The base configuration options for {@link SearchCore}.
+ * The base configuration options for {@link SearchCore}, which includes the
+ * options from {@link ServingConfig}.
+ *
  * @public
  */
 export interface BaseSearchConfig extends ServingConfig {
@@ -57,7 +59,19 @@ export interface BaseSearchConfig extends ServingConfig {
    */
   additionalQueryParams?: {
     [key: string]: string | number | boolean
-  }
+  },
+  /**
+   * {@inheritDoc Environment}
+   *
+   * @public
+   */
+  environment?: Environment,
+  /**
+   * {@inheritDoc CloudRegion}
+   *
+   * @public
+   */
+  cloudRegion?: CloudRegion
 }
 
 /**

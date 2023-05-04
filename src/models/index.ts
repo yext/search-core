@@ -16,6 +16,8 @@ export {
   AdditionalHttpHeaders,
   ClientSDKHeaderValues
 } from './core/AdditionalHttpHeaders';
+export { Environment } from './core/Environment';
+export { CloudRegion } from './core/CloudRegion';
 
 // Autocomplete service
 export * from './autocompleteservice/AutocompleteRequest';

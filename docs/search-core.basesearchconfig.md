@@ -4,7 +4,7 @@
 
 ## BaseSearchConfig interface
 
-The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->.
+The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [ServingConfig](./search-core.servingconfig.md)<!-- -->.
 
 <b>Signature:</b>
 
@@ -18,7 +18,9 @@ export interface BaseSearchConfig extends ServingConfig
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [additionalQueryParams?](./search-core.basesearchconfig.additionalqueryparams.md) | { \[key: string\]: string \| number \| boolean; } | <i>(Optional)</i> Additional query params added on to every request. |
+|  [cloudRegion?](./search-core.basesearchconfig.cloudregion.md) | [CloudRegion](./search-core.cloudregion.md) | <i>(Optional)</i> Defines the cloud region of the API domains. |
 |  [endpoints?](./search-core.basesearchconfig.endpoints.md) | [Endpoints](./search-core.endpoints.md) | <i>(Optional)</i> Overrides for the URLs which are used when making requests to the Search API. |
+|  [environment?](./search-core.basesearchconfig.environment.md) | [Environment](./search-core.environment.md) | <i>(Optional)</i> Defines the environment of the API domains. |
 |  [experienceKey](./search-core.basesearchconfig.experiencekey.md) | string | The experience key of the search experience. |
 |  [experienceVersion?](./search-core.basesearchconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the search experience configuration. |
 |  [locale](./search-core.basesearchconfig.locale.md) | string | The locale of the search experience. |
