@@ -1,6 +1,6 @@
 import { createVerticalSearchResponse } from '../transformers/searchservice/createVerticalSearchResponse';
 import { SearchService } from '../services/SearchService';
-import { defaultApiVersion } from '../constants';
+import { defaultApiVersion } from '../provideEndpoints';
 import { QueryParams } from '../models/http/params';
 import { QueryTrigger } from '../models/searchservice/request/QueryTrigger';
 import { QuerySource } from '../models/searchservice/request/QuerySource';

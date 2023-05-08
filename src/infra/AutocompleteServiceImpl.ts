@@ -5,7 +5,7 @@ import {
   UniversalAutocompleteRequest
 } from '../models/autocompleteservice/AutocompleteRequest';
 import { AutocompleteResponse, FilterSearchResponse } from '../models/autocompleteservice/AutocompleteResponse';
-import { defaultApiVersion } from '../constants';
+import { defaultApiVersion } from '../provideEndpoints';
 import { SearchConfigWithDefaulting } from '../models/core/SearchConfig';
 import { HttpService } from '../services/HttpService';
 import { AutocompleteQueryParams } from '../models/autocompleteservice/AutocompleteQueryParams';

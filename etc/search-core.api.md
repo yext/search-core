@@ -105,11 +105,13 @@ export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T>
 }
 
 // @public
-export interface BaseSearchConfig {
+export interface BaseSearchConfig extends ServingConfig {
     additionalQueryParams?: {
         [key: string]: string | number | boolean;
     };
+    cloudRegion?: CloudRegion;
     endpoints?: Endpoints;
+    environment?: Environment;
     experienceKey: string;
     experienceVersion?: 'STAGING' | 'PRODUCTION' | string | number;
     locale: string;
@@ -156,6 +158,14 @@ export enum BuiltInFieldType {
 export interface ClientSDKHeaderValues {
     [agent: string]: string | undefined;
     ANSWERS_CORE?: never;
+}
+
+// @public
+export enum CloudRegion {
+    // (undocumented)
+    EU = "eu",
+    // (undocumented)
+    US = "us"
 }
 
 // @public
@@ -265,6 +275,14 @@ export interface Endpoints {
 
 // @public
 export type EnumOrLiteral<T extends string> = T | `${T}`;
+
+// @public
+export enum Environment {
+    // (undocumented)
+    PROD = "prod",
+    // (undocumented)
+    SANDBOX = "sbx"
+}
 
 // @public
 export enum ErrorType {
@@ -581,7 +599,7 @@ export interface RichTextSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDir
     fieldType: EnumOrLiteral<BuiltInFieldType.RichText>;
 }
 
-// @public
+// @public @deprecated
 export const SandboxEndpoints: Required<Endpoints>;
 
 // @public
@@ -640,6 +658,12 @@ export interface SearchRequest {
 export interface SearchService {
     universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
     verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
+}
+
+// @public
+export interface ServingConfig {
+    cloudRegion?: CloudRegion;
+    environment?: Environment;
 }
 
 // @public

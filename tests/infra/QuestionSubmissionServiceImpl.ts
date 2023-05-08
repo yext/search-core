@@ -3,14 +3,14 @@ import { HttpServiceMock } from '../mocks/HttpServiceMock';
 import { HttpService } from '../../src/services/HttpService';
 import { SearchConfigWithDefaulting } from '../../src/models/core/SearchConfig';
 import { ApiResponseValidator } from '../../src/validation/ApiResponseValidator';
-import { defaultApiVersion, defaultEndpoints } from '../../src/constants';
+import { defaultApiVersion, EndpointsFactory } from '../../src/provideEndpoints';
 
 const baseCoreConfig = {
   apiKey: 'anApiKey',
   experienceKey: 'anExperienceKey',
   locale: 'fr',
   experienceVersion: 'STAGING',
-  endpoints: defaultEndpoints
+  endpoints: new EndpointsFactory().getEndpoints()
 };
 
 const qaRequest = {
@@ -42,7 +42,7 @@ describe('Question submission', () => {
   });
 
   it('uses the production endpoint by default', () => {
-    const expectedUrl = 'https://liveapi.yext.com/v2/accounts/me/createQuestion';
+    const expectedUrl = 'https://prod-cdn.us.yextapis.com/v2/accounts/me/createQuestion';
     const actualUrl = actualHttpParams[0];
     expect(expectedUrl).toEqual(actualUrl);
   });
