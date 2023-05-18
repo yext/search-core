@@ -1,10 +1,11 @@
 {
   "name": "@yext/search-core",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "description": "Typescript Networking Library for the Yext Search API",
   "main": "./dist/commonjs/src/index.js",
   "module": "./dist/esm/src/index.js",
   "types": "./dist/bundle.d.ts",
+  "sideEffects": false,
   "keywords": [
     "networking",
     "search api",
