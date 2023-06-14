@@ -9,6 +9,6 @@ import { BaseFeaturedSnippetDirectAnswer } from '../FeaturedSnippetDirectAnswer'
  * @public
  */
 export interface MarkdownSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
-    /** {@inheritDoc DirectAnswer.fieldType} */
-    fieldType: EnumOrLiteral<BuiltInFieldType.Markdown>
+  /** {@inheritDoc DirectAnswer.fieldType} */
+  fieldType: EnumOrLiteral<BuiltInFieldType.Html>
 }

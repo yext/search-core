@@ -21,11 +21,11 @@ export interface BaseFeaturedSnippetDirectAnswer<T = unknown> extends DirectAnsw
   type: DirectAnswerType.FeaturedSnippet,
   /** {@inheritDoc DirectAnswer.fieldType} */
   fieldType: EnumOrLiteral<
-      BuiltInFieldType.MultiLineText |
-      BuiltInFieldType.RichText |
-      BuiltInFieldType.RichText_v2 |
-      BuiltInFieldType.Html |
-      BuiltInFieldType.Markdown>,
+  BuiltInFieldType.MultiLineText |
+  BuiltInFieldType.RichText |
+  BuiltInFieldType.RichText_v2 |
+  BuiltInFieldType.Html |
+  BuiltInFieldType.Markdown>,
   /** The snippet where the direct answer was found. */
   snippet: Snippet
 }
@@ -37,7 +37,7 @@ export interface BaseFeaturedSnippetDirectAnswer<T = unknown> extends DirectAnsw
  */
 export type FeaturedSnippetDirectAnswer =
   MultiLineTextSnippetDirectAnswer |
-    RichTextSnippetDirectAnswer |
-    RichTextV2SnippetDirectAnswer |
-    HTMLSnippetDirectAnswer |
-    MarkdownSnippetDirectAnswer;
+  RichTextSnippetDirectAnswer |
+  RichTextV2SnippetDirectAnswer |
+  HTMLSnippetDirectAnswer |
+  MarkdownSnippetDirectAnswer;
