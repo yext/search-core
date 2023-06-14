@@ -17,5 +17,5 @@ export interface MarkdownSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDir
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [fieldType](./search-core.markdownsnippetdirectanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.Markdown](./search-core.builtinfieldtype.md)<!-- -->&gt; | The field type of the direct answer. |
+|  [fieldType](./search-core.markdownsnippetdirectanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.Html](./search-core.builtinfieldtype.md)<!-- -->&gt; | The field type of the direct answer. |
 
