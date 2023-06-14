@@ -9,7 +9,7 @@ All possible built-in [BaseFeaturedSnippetDirectAnswer](./search-core.basefeatur
 <b>Signature:</b>
 
 ```typescript
-export declare type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
+export declare type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer | RichTextV2SnippetDirectAnswer | HTMLSnippetDirectAnswer | MarkdownSnippetDirectAnswer;
 ```
-<b>References:</b> [MultiLineTextSnippetDirectAnswer](./search-core.multilinetextsnippetdirectanswer.md)<!-- -->, [RichTextSnippetDirectAnswer](./search-core.richtextsnippetdirectanswer.md)
+<b>References:</b> [MultiLineTextSnippetDirectAnswer](./search-core.multilinetextsnippetdirectanswer.md)<!-- -->, [RichTextSnippetDirectAnswer](./search-core.richtextsnippetdirectanswer.md)<!-- -->, [RichTextV2SnippetDirectAnswer](./search-core.richtextv2snippetdirectanswer.md)<!-- -->, [HTMLSnippetDirectAnswer](./search-core.htmlsnippetdirectanswer.md)<!-- -->, [MarkdownSnippetDirectAnswer](./search-core.markdownsnippetdirectanswer.md)
 
