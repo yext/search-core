@@ -5,7 +5,10 @@ import { BuiltInFieldType } from './BuiltInFieldType';
 import { EnumOrLiteral } from '../../../utils/EnumOrLiteral';
 import {
   MultiLineTextSnippetDirectAnswer,
-  RichTextSnippetDirectAnswer
+  RichTextSnippetDirectAnswer,
+  RichTextV2SnippetDirectAnswer,
+  HTMLSnippetDirectAnswer,
+  MarkdownSnippetDirectAnswer
 } from './featuredsnippetdirectanswers';
 
 /**
@@ -17,7 +20,12 @@ export interface BaseFeaturedSnippetDirectAnswer<T = unknown> extends DirectAnsw
   /** {@inheritDoc DirectAnswerType.FeaturedSnippet} */
   type: DirectAnswerType.FeaturedSnippet,
   /** {@inheritDoc DirectAnswer.fieldType} */
-  fieldType: EnumOrLiteral<BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText>,
+  fieldType: EnumOrLiteral<
+      BuiltInFieldType.MultiLineText |
+      BuiltInFieldType.RichText |
+      BuiltInFieldType.RichText_v2 |
+      BuiltInFieldType.Html |
+      BuiltInFieldType.Markdown>,
   /** The snippet where the direct answer was found. */
   snippet: Snippet
 }
@@ -28,4 +36,8 @@ export interface BaseFeaturedSnippetDirectAnswer<T = unknown> extends DirectAnsw
  * @public
  */
 export type FeaturedSnippetDirectAnswer =
-  MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
+  MultiLineTextSnippetDirectAnswer |
+    RichTextSnippetDirectAnswer |
+    RichTextV2SnippetDirectAnswer |
+    HTMLSnippetDirectAnswer |
+    MarkdownSnippetDirectAnswer;

@@ -19,5 +19,8 @@ export enum BuiltInFieldType {
   Integer = 'integer',
   SingleLineText = 'single_line_text',
   RichText = 'rich_text',
-  MultiLineText = 'multi_line_text'
+  MultiLineText = 'multi_line_text',
+  RichText_v2 = 'rich_text_v2',
+  Html = 'html',
+  Markdown = 'markdown'
 }

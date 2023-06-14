@@ -25,7 +25,11 @@ export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | Fie
     };
   } else if (isFeaturedSnippetDirectAnswer) {
     const fieldType = commonDirectAnswerData.fieldType;
-    if (fieldType != BuiltInFieldType.MultiLineText && fieldType != BuiltInFieldType.RichText) {
+    if (fieldType != BuiltInFieldType.MultiLineText &&
+        fieldType != BuiltInFieldType.RichText &&
+        fieldType != BuiltInFieldType.RichText_v2 &&
+        fieldType != BuiltInFieldType.Html &&
+        fieldType != BuiltInFieldType.Markdown) {
       throw new Error(`Unexpected fieldType for featured snippet direct answer: ${fieldType}`);
     }
     return {

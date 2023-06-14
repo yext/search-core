@@ -16,7 +16,7 @@ export interface DirectAnswer<T = unknown> {
    *
    * @remarks
    * A value will not be present if the {@link DirectAnswer."type"} is 'FEATURED_SNIPPET'
-   * and {@link DirectAnswer.fieldType} is 'rich_text'.
+   * and {@link DirectAnswer.fieldType} is 'rich_text', 'markdown', 'html' or 'rich_text_v2'.
    */
   value?: T,
   /** The entity associated with the direct answer. */
