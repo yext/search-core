@@ -32,7 +32,6 @@ it('can create a FeaturedSnippetDirectAnswer', () => {
   expect(actualDirectAnswer).toMatchObject(expectedDirectAnswer);
 });
 
-
 it('can create a FeaturedSnippetDirectAnswer with an HTML snippet', () => {
   const apiFeaturedSnippetDirectAnswer = {
     type: 'FEATURED_SNIPPET',
