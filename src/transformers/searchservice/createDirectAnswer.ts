@@ -6,6 +6,14 @@ import { DirectAnswerType } from '../../models/searchservice/response/directansw
 import { ResultsFactory } from './ResultsFactory';
 import { BuiltInFieldType } from '../../models/searchservice/response/directanswer/BuiltInFieldType';
 
+const supportedFieldTypes: BuiltInFieldType[] = [
+  BuiltInFieldType.MultiLineText,
+  BuiltInFieldType.RichText,
+  BuiltInFieldType.RichText_v2,
+  BuiltInFieldType.Markdown,
+  BuiltInFieldType.Html
+];
+
 export function createDirectAnswer(data: any):
 FeaturedSnippetDirectAnswer | FieldValueDirectAnswer | undefined {
   const isFieldValueDirectAnswer = data?.type === DirectAnswerType.FieldValue;
@@ -28,13 +36,6 @@ FeaturedSnippetDirectAnswer | FieldValueDirectAnswer | undefined {
     };
   } else if (isFeaturedSnippetDirectAnswer) {
     const fieldType = commonDirectAnswerData.fieldType;
-    const supportedFieldTypes: BuiltInFieldType[] = [
-      BuiltInFieldType.MultiLineText,
-      BuiltInFieldType.RichText,
-      BuiltInFieldType.RichText_v2,
-      BuiltInFieldType.Markdown,
-      BuiltInFieldType.Html
-    ];
     if (!supportedFieldTypes.includes(fieldType)) {
       console.warn(`Unexpected fieldType for featured snippet direct answer: ${fieldType}`);
       return undefined;
