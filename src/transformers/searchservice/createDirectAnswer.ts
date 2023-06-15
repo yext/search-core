@@ -26,13 +26,13 @@ export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | Fie
   } else if (isFeaturedSnippetDirectAnswer) {
     const fieldType = commonDirectAnswerData.fieldType;
     const supportedFieldTypes: BuiltInFieldType[] = [
-    BuiltInFieldType.MultiLineText,
-    BuiltInFieldType.RichText,
-    BuiltInFieldType.RichText_v2,
-    BuiltInFieldType.Markdown,
-    BuiltInFieldType.Html];
-    
-    if(!supportedFieldTypes.includes(fieldType)) {
+      BuiltInFieldType.MultiLineText,
+      BuiltInFieldType.RichText,
+      BuiltInFieldType.RichText_v2,
+      BuiltInFieldType.Markdown,
+      BuiltInFieldType.Html
+    ];
+    if (!supportedFieldTypes.includes(fieldType)) {
       throw new Error(`Unexpected fieldType for featured snippet direct answer: ${fieldType}`);
     }
     return {
