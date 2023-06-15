@@ -502,7 +502,7 @@ export interface LowerNumberRangeLimit {
 
 // @public
 export interface MarkdownSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
-    fieldType: EnumOrLiteral<BuiltInFieldType.Html>;
+    fieldType: EnumOrLiteral<BuiltInFieldType.Markdown>;
 }
 
 // @public

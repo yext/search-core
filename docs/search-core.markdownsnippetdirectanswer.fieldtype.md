@@ -9,5 +9,5 @@ The field type of the direct answer.
 <b>Signature:</b>
 
 ```typescript
-fieldType: EnumOrLiteral<BuiltInFieldType.Html>;
+fieldType: EnumOrLiteral<BuiltInFieldType.Markdown>;
 ```
