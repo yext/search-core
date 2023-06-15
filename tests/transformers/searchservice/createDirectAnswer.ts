@@ -79,8 +79,8 @@ it('can handle unexpected fieldType for a FeaturedSnippetDirectAnswer', () => {
       data: {}
     }
   };
-  expect(() => createDirectAnswer(apiFeaturedSnippetDirectAnswer))
-    .toThrow('Unexpected fieldType for featured snippet direct answer: phone');
+  const actualDirectAnswer = createDirectAnswer(apiFeaturedSnippetDirectAnswer);
+  expect((actualDirectAnswer)).toBeUndefined();
 });
 
 it('can create a FieldValueDirectAnswer', () => {
