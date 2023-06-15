@@ -1,12 +1,13 @@
 import {
   FeaturedSnippetDirectAnswer
 } from '../../models/searchservice/response/directanswer/FeaturedSnippetDirectAnswer';
-import {FieldValueDirectAnswer} from '../../models/searchservice/response/directanswer/FieldValueDirectAnswer';
-import {DirectAnswerType} from '../../models/searchservice/response/directanswer/DirectAnswerType';
-import {ResultsFactory} from './ResultsFactory';
-import {BuiltInFieldType} from '../../models/searchservice/response/directanswer/BuiltInFieldType';
+import { FieldValueDirectAnswer } from '../../models/searchservice/response/directanswer/FieldValueDirectAnswer';
+import { DirectAnswerType } from '../../models/searchservice/response/directanswer/DirectAnswerType';
+import { ResultsFactory } from './ResultsFactory';
+import { BuiltInFieldType } from '../../models/searchservice/response/directanswer/BuiltInFieldType';
 
-export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | FieldValueDirectAnswer | undefined {
+export function createDirectAnswer(data: any):
+FeaturedSnippetDirectAnswer | FieldValueDirectAnswer | undefined {
   const isFieldValueDirectAnswer = data?.type === DirectAnswerType.FieldValue;
   const isFeaturedSnippetDirectAnswer = data?.type === DirectAnswerType.FeaturedSnippet;
 
