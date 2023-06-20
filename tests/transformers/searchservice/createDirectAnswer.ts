@@ -32,6 +32,37 @@ it('can create a FeaturedSnippetDirectAnswer', () => {
   expect(actualDirectAnswer).toMatchObject(expectedDirectAnswer);
 });
 
+it('can create a FeaturedSnippetDirectAnswer with an HTML snippet', () => {
+  const apiFeaturedSnippetDirectAnswer = {
+    type: 'FEATURED_SNIPPET',
+    answer: {
+      value: 'Honolulu. Hawaii',
+      fieldType: 'html',
+      snippet: {
+        matchedSubstrings: [],
+        value: '<p>senator from 1997 to 2004. Obama was born in Honolulu. Hawaii. After graduating</p>'
+      }
+    },
+    relatedItem: {
+      verticalConfigId: 'wiki_bios',
+      data: {}
+    }
+  };
+  const actualDirectAnswer = createDirectAnswer(apiFeaturedSnippetDirectAnswer);
+  const expectedDirectAnswer = {
+    type: DirectAnswerType.FeaturedSnippet,
+    value: 'Honolulu. Hawaii',
+    relatedResult: {},
+    verticalKey: 'wiki_bios',
+    fieldType: 'html',
+    snippet: {
+      matchedSubstrings: [],
+      value: '<p>senator from 1997 to 2004. Obama was born in Honolulu. Hawaii. After graduating</p>'
+    }
+  };
+  expect(actualDirectAnswer).toMatchObject(expectedDirectAnswer);
+});
+
 it('can handle unexpected fieldType for a FeaturedSnippetDirectAnswer', () => {
   const apiFeaturedSnippetDirectAnswer = {
     type: 'FEATURED_SNIPPET',
@@ -48,8 +79,8 @@ it('can handle unexpected fieldType for a FeaturedSnippetDirectAnswer', () => {
       data: {}
     }
   };
-  expect(() => createDirectAnswer(apiFeaturedSnippetDirectAnswer))
-    .toThrow('Unexpected fieldType for featured snippet direct answer: phone');
+  const actualDirectAnswer = createDirectAnswer(apiFeaturedSnippetDirectAnswer);
+  expect((actualDirectAnswer)).toBeUndefined();
 });
 
 it('can create a FieldValueDirectAnswer', () => {

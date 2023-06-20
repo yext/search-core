@@ -17,7 +17,7 @@ export interface BaseFeaturedSnippetDirectAnswer<T = unknown> extends DirectAnsw
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [fieldType](./search-core.basefeaturedsnippetdirectanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.MultiLineText](./search-core.builtinfieldtype.md) \| [BuiltInFieldType.RichText](./search-core.builtinfieldtype.md)<!-- -->&gt; | The field type of the direct answer. |
+|  [fieldType](./search-core.basefeaturedsnippetdirectanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.MultiLineText](./search-core.builtinfieldtype.md) \| [BuiltInFieldType.RichText](./search-core.builtinfieldtype.md) \| [BuiltInFieldType.RichText\_v2](./search-core.builtinfieldtype.md) \| [BuiltInFieldType.Html](./search-core.builtinfieldtype.md) \| [BuiltInFieldType.Markdown](./search-core.builtinfieldtype.md)<!-- -->&gt; | The field type of the direct answer. |
 |  [snippet](./search-core.basefeaturedsnippetdirectanswer.snippet.md) | [Snippet](./search-core.snippet.md) | The snippet where the direct answer was found. |
 |  [type](./search-core.basefeaturedsnippetdirectanswer.type.md) | [DirectAnswerType.FeaturedSnippet](./search-core.directanswertype.md) | Indicates that the DirectAnswer is a [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md)<!-- -->. |
 
