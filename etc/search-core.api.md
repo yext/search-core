@@ -90,7 +90,7 @@ export interface AutocompleteService {
 
 // @public
 export interface BaseFeaturedSnippetDirectAnswer<T = unknown> extends DirectAnswer<T> {
-    fieldType: EnumOrLiteral<BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText>;
+    fieldType: EnumOrLiteral<BuiltInFieldType.MultiLineText | BuiltInFieldType.RichText | BuiltInFieldType.RichText_v2 | BuiltInFieldType.Html | BuiltInFieldType.Markdown>;
     snippet: Snippet;
     type: DirectAnswerType.FeaturedSnippet;
 }
@@ -135,17 +135,23 @@ export enum BuiltInFieldType {
     // (undocumented)
     Hours = "hours",
     // (undocumented)
+    Html = "html",
+    // (undocumented)
     InstagramHandle = "instagram_handle",
     // (undocumented)
     Integer = "integer",
     // (undocumented)
     IOSAppURL = "ios_app_url",
     // (undocumented)
+    Markdown = "markdown",
+    // (undocumented)
     MultiLineText = "multi_line_text",
     // (undocumented)
     Phone = "phone",
     // (undocumented)
     RichText = "rich_text",
+    // (undocumented)
+    RichText_v2 = "rich_text_v2",
     // (undocumented)
     SingleLineText = "single_line_text",
     // (undocumented)
@@ -321,7 +327,7 @@ export interface FailedVertical {
 }
 
 // @public
-export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer;
+export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer | RichTextV2SnippetDirectAnswer | HTMLSnippetDirectAnswer | MarkdownSnippetDirectAnswer;
 
 // @public
 export type FieldValueDirectAnswer = UnknownFieldValueDirectAnswer | TextDirectAnswer | UrlDirectAnswer | RichTextDirectAnswer | DecimalDirectAnswer | FacebookUrlDirectAnswer | InstagramHandleDirectAnswer | TwitterHandleDirectAnswer | IosAppUrlDirectAnswer | AndroidAppUrlDirectAnswer | ComplexUrlDirectAnswer | IntegerDirectAnswer | PhoneDirectAnswer | EmailDirectAnswer | AddressDirectAnswer | HoursDirectAnswer;
@@ -420,6 +426,11 @@ export interface HoursDirectAnswer extends BaseFieldValueDirectAnswer<Hours | Ho
 }
 
 // @public
+export interface HTMLSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
+    fieldType: EnumOrLiteral<BuiltInFieldType.Html>;
+}
+
+// @public
 export interface InstagramHandleDirectAnswer extends BaseFieldValueDirectAnswer<string> {
     // (undocumented)
     fieldType: EnumOrLiteral<BuiltInFieldType.InstagramHandle>;
@@ -487,6 +498,11 @@ export interface LocationFilterDetails {
 export interface LowerNumberRangeLimit {
     matcher: Matcher.GreaterThan | Matcher.GreaterThanOrEqualTo;
     value: number;
+}
+
+// @public
+export interface MarkdownSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
+    fieldType: EnumOrLiteral<BuiltInFieldType.Markdown>;
 }
 
 // @public
@@ -597,6 +613,11 @@ export interface RichTextDirectAnswer extends BaseFieldValueDirectAnswer<string 
 // @public
 export interface RichTextSnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
     fieldType: EnumOrLiteral<BuiltInFieldType.RichText>;
+}
+
+// @public
+export interface RichTextV2SnippetDirectAnswer extends Omit<BaseFeaturedSnippetDirectAnswer<string>, 'value'> {
+    fieldType: EnumOrLiteral<BuiltInFieldType.RichText_v2>;
 }
 
 // @public @deprecated

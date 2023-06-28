@@ -17,5 +17,5 @@ export interface Snippet
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [matchedSubstrings](./search-core.snippet.matchedsubstrings.md) | { offset: number; length: number; }\[\] | The locations in the document text of the [DirectAnswer.value](./search-core.directanswer.value.md) |
-|  [value](./search-core.snippet.value.md) | string | The snippet's body of text |
+|  [value](./search-core.snippet.value.md) | string | The raw snippet value, or HTML if - entity is of type HTML - the conversion to HTML is enabled in search configuration |
 

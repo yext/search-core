@@ -1,10 +1,21 @@
-import { FeaturedSnippetDirectAnswer } from '../../models/searchservice/response/directanswer/FeaturedSnippetDirectAnswer';
+import {
+  FeaturedSnippetDirectAnswer
+} from '../../models/searchservice/response/directanswer/FeaturedSnippetDirectAnswer';
 import { FieldValueDirectAnswer } from '../../models/searchservice/response/directanswer/FieldValueDirectAnswer';
 import { DirectAnswerType } from '../../models/searchservice/response/directanswer/DirectAnswerType';
 import { ResultsFactory } from './ResultsFactory';
 import { BuiltInFieldType } from '../../models/searchservice/response/directanswer/BuiltInFieldType';
 
-export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | FieldValueDirectAnswer {
+const supportedFieldTypes: BuiltInFieldType[] = [
+  BuiltInFieldType.MultiLineText,
+  BuiltInFieldType.RichText,
+  BuiltInFieldType.RichText_v2,
+  BuiltInFieldType.Markdown,
+  BuiltInFieldType.Html
+];
+
+export function createDirectAnswer(data: any):
+FeaturedSnippetDirectAnswer | FieldValueDirectAnswer | undefined {
   const isFieldValueDirectAnswer = data?.type === DirectAnswerType.FieldValue;
   const isFeaturedSnippetDirectAnswer = data?.type === DirectAnswerType.FeaturedSnippet;
 
@@ -25,8 +36,9 @@ export function createDirectAnswer(data: any): FeaturedSnippetDirectAnswer | Fie
     };
   } else if (isFeaturedSnippetDirectAnswer) {
     const fieldType = commonDirectAnswerData.fieldType;
-    if (fieldType != BuiltInFieldType.MultiLineText && fieldType != BuiltInFieldType.RichText) {
-      throw new Error(`Unexpected fieldType for featured snippet direct answer: ${fieldType}`);
+    if (!supportedFieldTypes.includes(fieldType)) {
+      console.warn(`Unexpected fieldType for featured snippet direct answer: ${fieldType}`);
+      return undefined;
     }
     return {
       type: DirectAnswerType.FeaturedSnippet,
