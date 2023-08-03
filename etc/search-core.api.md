@@ -770,6 +770,7 @@ export interface UniversalSearchRequest extends SearchRequest {
     context?: Context;
     limit?: UniversalLimit;
     location?: LatLong;
+    // (undocumented)
     query: string;
     querySource?: QuerySource | string;
     queryTrigger?: QueryTrigger;

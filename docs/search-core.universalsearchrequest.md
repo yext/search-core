@@ -20,7 +20,7 @@ export interface UniversalSearchRequest extends SearchRequest
 |  [context?](./search-core.universalsearchrequest.context.md) | [Context](./search-core.context.md) | <i>(Optional)</i> Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
 |  [limit?](./search-core.universalsearchrequest.limit.md) | [UniversalLimit](./search-core.universallimit.md) | <i>(Optional)</i> The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
 |  [location?](./search-core.universalsearchrequest.location.md) | [LatLong](./search-core.latlong.md) | <i>(Optional)</i> The latitude and longitude of the user making the request. Used to bias the results. |
-|  [query](./search-core.universalsearchrequest.query.md) | string | The search query. |
+|  [query](./search-core.universalsearchrequest.query.md) | string |  |
 |  [querySource?](./search-core.universalsearchrequest.querysource.md) | [QuerySource](./search-core.querysource.md) \| string | <i>(Optional)</i> The source of the search request. |
 |  [queryTrigger?](./search-core.universalsearchrequest.querytrigger.md) | [QueryTrigger](./search-core.querytrigger.md) | <i>(Optional)</i> Describes the ways a search can be executed besides user input. |
 |  [referrerPageUrl?](./search-core.universalsearchrequest.referrerpageurl.md) | string | <i>(Optional)</i> The URl of the page which referred the user to the current page. |
