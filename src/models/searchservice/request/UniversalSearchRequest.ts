@@ -11,7 +11,7 @@ import { SearchRequest } from '../../core/SearchRequest';
  * @public
  */
 export interface UniversalSearchRequest extends SearchRequest {
-  /** The search query. */
+  /** @privateRemarks The search query. */
   query: string,
   /** {@inheritDoc QueryTrigger} */
   queryTrigger?: QueryTrigger,
