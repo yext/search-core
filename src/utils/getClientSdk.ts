@@ -1,7 +1,5 @@
 import { AdditionalHttpHeaders } from '../models/core/AdditionalHttpHeaders';
-import packageJson from '../../package.json';
-
-const { version } = packageJson;
+import { version } from '../../package.json';
 
 export function getClientSdk(
   additionalHttpHeaders?: AdditionalHttpHeaders
