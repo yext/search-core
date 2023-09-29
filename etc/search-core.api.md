@@ -256,11 +256,10 @@ export interface DisplayableFacetOption extends FacetOption {
 }
 
 // @public
-interface Document_2 {
+export interface DocumentResult {
     documentScore: number;
     segments: Segment[];
 }
-export { Document_2 as Document }
 
 // @public
 export interface EmailDirectAnswer extends BaseFieldValueDirectAnswer<string[]> {
@@ -601,8 +600,8 @@ export interface Result<T = Record<string, unknown>> {
     description?: string;
     distance?: number;
     distanceFromFilter?: number;
-    document?: Document;
-    documents?: Document[];
+    document?: DocumentResult;
+    documents?: DocumentResult[];
     entityType?: string;
     highlightedFields?: HighlightedFields;
     id?: string;

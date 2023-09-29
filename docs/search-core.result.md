@@ -19,8 +19,8 @@ export interface Result<T = Record<string, unknown>>
 |  [description?](./search-core.result.description.md) | string | <i>(Optional)</i> A description of the result. |
 |  [distance?](./search-core.result.distance.md) | number | <i>(Optional)</i> The distance from the user to the result in meters. |
 |  [distanceFromFilter?](./search-core.result.distancefromfilter.md) | number | <i>(Optional)</i> The distance from a [AppliedQueryFilter](./search-core.appliedqueryfilter.md) location to the result in meters. |
-|  [document?](./search-core.result.document.md) | Document | <i>(Optional)</i> A relevant document associated with the result. Present for document verticals grouped by Document. |
-|  [documents?](./search-core.result.documents.md) | Document\[\] | <i>(Optional)</i> All relevant documents associated with the result. Present for document verticals grouped by Entity. |
+|  [document?](./search-core.result.document.md) | [DocumentResult](./search-core.documentresult.md) | <i>(Optional)</i> A relevant document associated with the result. Present for document verticals grouped by Document. |
+|  [documents?](./search-core.result.documents.md) | [DocumentResult](./search-core.documentresult.md)<!-- -->\[\] | <i>(Optional)</i> All relevant documents associated with the result. Present for document verticals grouped by Entity. |
 |  [entityType?](./search-core.result.entitytype.md) | string | <i>(Optional)</i> The entity type of the result. |
 |  [highlightedFields?](./search-core.result.highlightedfields.md) | [HighlightedFields](./search-core.highlightedfields.md) | <i>(Optional)</i> The [highlighted fields](./search-core.highlightedfields.md) emphasized by the api. |
 |  [id?](./search-core.result.id.md) | string | <i>(Optional)</i> The result ID which depends on the Result Source. |

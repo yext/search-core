@@ -1,6 +1,7 @@
 import { HighlightedFields } from './HighlightedFields';
 import { Source } from './Source';
 import { Segment } from './Segment';
+import { DocumentResult } from './DocumentResult';
 
 /**
  * An individual search result.
@@ -48,10 +49,10 @@ export interface Result<T = Record<string, unknown>> {
    * A relevant document associated with the result. Present for document verticals grouped by
    * Document.
    */
-  document?: Document,
+  document?: DocumentResult,
   /**
    * All relevant documents associated with the result. Present for document verticals grouped by
    * Entity.
    */
-  documents?: Document[]
+  documents?: DocumentResult[]
 }
