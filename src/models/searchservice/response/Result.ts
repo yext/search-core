@@ -1,5 +1,6 @@
 import { HighlightedFields } from './HighlightedFields';
 import { Source } from './Source';
+import { Segment } from './Segment';
 
 /**
  * An individual search result.
@@ -39,5 +40,18 @@ export interface Result<T = Record<string, unknown>> {
   /** The {@link HighlightedFields | highlighted fields} emphasized by the api. */
   highlightedFields?: HighlightedFields,
   /** The entity type of the result. */
-  entityType?: string
+  entityType?: string,
+  /** A relevant segment associated with the result. Present for document verticals grouped by
+   * Segment. */
+  segment?: Segment,
+  /**
+   * A relevant document associated with the result. Present for document verticals grouped by
+   * Document.
+   */
+  document?: Document,
+  /**
+   * All relevant documents associated with the result. Present for document verticals grouped by
+   * Entity.
+   */
+  documents?: Document[]
 }

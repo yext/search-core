@@ -63,6 +63,7 @@
 |  [DisjunctionStaticFilter](./search-core.disjunctionstaticfilter.md) | A static filter composed by combining filters with the logical OR operator. The combined filters can either be field value filters or other disjunction filters. |
 |  [DisplayableFacet](./search-core.displayablefacet.md) | A [Facet](./search-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./search-core.displayablefacetoption.md) | A [FacetOption](./search-core.facetoption.md) with extra data meant to be displayed to the end user. |
+|  [Document\_2](./search-core.document_2.md) | Details about the document and the document search algorithm |
 |  [EmailDirectAnswer](./search-core.emaildirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'email' field type. |
 |  [Endpoints](./search-core.endpoints.md) | Overrides for the URLs which are used when making requests to the Search API. |
 |  [FacebookUrlDirectAnswer](./search-core.facebookurldirectanswer.md) | A direct answer for a facebook url field. |
@@ -105,6 +106,7 @@
 |  [SearchParameterField](./search-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
 |  [SearchRequest](./search-core.searchrequest.md) | Options for a Search API request. |
 |  [SearchService](./search-core.searchservice.md) | A service which performs Yext Search. |
+|  [Segment](./search-core.segment.md) | A result produced by a document vertical. |
 |  [ServingConfig](./search-core.servingconfig.md) | The configuration options for getting the endpoints. |
 |  [Snippet](./search-core.snippet.md) | The section of text where a [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) was found. |
 |  [SortBy](./search-core.sortby.md) | Represents a criterion that can be used to sort results. |

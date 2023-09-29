@@ -24,6 +24,8 @@ export class ResultsFactory {
           return this.fromZendeskSearchEngine(result, resultIndex);
         case Source.Algolia:
           return this.fromAlgoliaSearchEngine(result, resultIndex);
+        case Source.DocumentVertical:
+          return this.fromDocumentVertical(result, resultIndex);
         default:
           return this.fromCustomSource(result, resultIndex);
       }
@@ -44,6 +46,22 @@ export class ResultsFactory {
       distanceFromFilter: result.distanceFromFilter,
       highlightedFields: result.highlightedFields,
       entityType: rawData.type
+    };
+  }
+
+  private static fromDocumentVertical(result: any, index: number): Result {
+    const rawData = result.data ?? result;
+    return {
+      rawData: rawData,
+      source: Source.DocumentVertical,
+      name: rawData.name,
+      description: rawData.description,
+      link: rawData.website,
+      id: rawData.id,
+      index: index,
+      segment: result.segment,
+      document: result.document,
+      documents: result.documents
     };
   }
 

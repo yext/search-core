@@ -82,6 +82,8 @@ export { VerticalSearchResponse } from './searchservice/response/VerticalSearchR
 export { Snippet } from './searchservice/response/Snippet';
 export { ErrorType } from './searchservice/response/ErrorType';
 export { FailedVertical } from './searchservice/response/FailedVertical';
+export { Segment } from './searchservice/response/Segment';
+export { Document } from './searchservice/response/Document';
 
 // Search service common models
 export { Matcher } from './searchservice/common/Matcher';

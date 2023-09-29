@@ -256,6 +256,13 @@ export interface DisplayableFacetOption extends FacetOption {
 }
 
 // @public
+interface Document_2 {
+    documentScore: number;
+    segments: Segment[];
+}
+export { Document_2 as Document }
+
+// @public
 export interface EmailDirectAnswer extends BaseFieldValueDirectAnswer<string[]> {
     // (undocumented)
     fieldType: EnumOrLiteral<BuiltInFieldType.Email>;
@@ -594,6 +601,8 @@ export interface Result<T = Record<string, unknown>> {
     description?: string;
     distance?: number;
     distanceFromFilter?: number;
+    document?: Document;
+    documents?: Document[];
     entityType?: string;
     highlightedFields?: HighlightedFields;
     id?: string;
@@ -601,6 +610,7 @@ export interface Result<T = Record<string, unknown>> {
     link?: string;
     name?: string;
     rawData: T;
+    segment?: Segment;
     source: Source;
 }
 
@@ -682,6 +692,12 @@ export interface SearchService {
 }
 
 // @public
+export interface Segment {
+    score: number;
+    text: string;
+}
+
+// @public
 export interface ServingConfig {
     cloudRegion?: CloudRegion;
     environment?: Environment;
@@ -715,6 +731,7 @@ export enum Source {
     Algolia = "ALGOLIA",
     Bing = "BING_CSE",
     Custom = "CUSTOM_SEARCHER",
+    DocumentVertical = "DOCUMENT_VERTICAL",
     Google = "GOOGLE_CSE",
     KnowledgeManager = "KNOWLEDGE_MANAGER",
     Zendesk = "ZENDESK"
