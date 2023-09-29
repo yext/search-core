@@ -9,5 +9,5 @@ Raw entity profile data in the shape of key-value pairs, or as an array of key-v
 <b>Signature:</b>
 
 ```typescript
-rawData: T | T[];
+rawData: T;
 ```
