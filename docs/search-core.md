@@ -63,7 +63,7 @@
 |  [DisjunctionStaticFilter](./search-core.disjunctionstaticfilter.md) | A static filter composed by combining filters with the logical OR operator. The combined filters can either be field value filters or other disjunction filters. |
 |  [DisplayableFacet](./search-core.displayablefacet.md) | A [Facet](./search-core.facet.md) which contains extra fields meant to be displayed to the end user. |
 |  [DisplayableFacetOption](./search-core.displayablefacetoption.md) | A [FacetOption](./search-core.facetoption.md) with extra data meant to be displayed to the end user. |
-|  [Document\_2](./search-core.document_2.md) | Details about the document and the document search algorithm |
+|  [DocumentResult](./search-core.documentresult.md) | Details about the document and the document search algorithm |
 |  [EmailDirectAnswer](./search-core.emaildirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'email' field type. |
 |  [Endpoints](./search-core.endpoints.md) | Overrides for the URLs which are used when making requests to the Search API. |
 |  [FacebookUrlDirectAnswer](./search-core.facebookurldirectanswer.md) | A direct answer for a facebook url field. |

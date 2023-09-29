@@ -5,7 +5,7 @@ import { Segment } from './Segment';
  *
  * @public
  */
-export interface Document {
+export interface DocumentResult {
   /** The score calculated from whatever document search strategy was used. */
   documentScore: number,
   /** All the relevant segments extracted from the document. */

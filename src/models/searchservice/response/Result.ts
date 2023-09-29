@@ -1,6 +1,7 @@
 import { HighlightedFields } from './HighlightedFields';
 import { Source } from './Source';
 import { Segment } from './Segment';
+import { DocumentResult } from './DocumentResult';
 
 /**
  * An individual search result.
@@ -8,8 +9,8 @@ import { Segment } from './Segment';
  * @public
  */
 export interface Result<T = Record<string, unknown>> {
-  /** Raw entity profile data in the shape of key-value pairs. */
-  rawData: T,
+  /** Raw entity profile data in the shape of key-value pairs, or as an array of key-value pairs. */
+  rawData: T | T[],
   /** {@inheritDoc Source} */
   source: Source,
   /** The index of the result among the other results in the search. */
@@ -48,10 +49,10 @@ export interface Result<T = Record<string, unknown>> {
    * A relevant document associated with the result. Present for document verticals grouped by
    * Document.
    */
-  document?: Document,
+  document?: DocumentResult,
   /**
    * All relevant documents associated with the result. Present for document verticals grouped by
    * Entity.
    */
-  documents?: Document[]
+  documents?: DocumentResult[]
 }

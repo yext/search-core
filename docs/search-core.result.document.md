@@ -9,5 +9,5 @@ A relevant document associated with the result. Present for document verticals g
 <b>Signature:</b>
 
 ```typescript
-document?: Document;
+document?: DocumentResult;
 ```
