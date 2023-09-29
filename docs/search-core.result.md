@@ -27,7 +27,7 @@ export interface Result<T = Record<string, unknown>>
 |  [index?](./search-core.result.index.md) | number | <i>(Optional)</i> The index of the result among the other results in the search. |
 |  [link?](./search-core.result.link.md) | string | <i>(Optional)</i> A hyperlink associated with the result. |
 |  [name?](./search-core.result.name.md) | string | <i>(Optional)</i> The name of the result. |
-|  [rawData](./search-core.result.rawdata.md) | T | Raw entity profile data in the shape of key-value pairs. |
+|  [rawData](./search-core.result.rawdata.md) | T \| T\[\] | Raw entity profile data in the shape of key-value pairs, or as an array of key-value pairs. |
 |  [segment?](./search-core.result.segment.md) | [Segment](./search-core.segment.md) | <i>(Optional)</i> A relevant segment associated with the result. Present for document verticals grouped by Segment. |
 |  [source](./search-core.result.source.md) | [Source](./search-core.source.md) | Represents the source of a [Result](./search-core.result.md)<!-- -->. |
 

@@ -9,8 +9,8 @@ import { DocumentResult } from './DocumentResult';
  * @public
  */
 export interface Result<T = Record<string, unknown>> {
-  /** Raw entity profile data in the shape of key-value pairs. */
-  rawData: T,
+  /** Raw entity profile data in the shape of key-value pairs, or as an array of key-value pairs. */
+  rawData: T | T[],
   /** {@inheritDoc Source} */
   source: Source,
   /** The index of the result among the other results in the search. */
