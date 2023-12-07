@@ -1,5 +1,7 @@
 import { HighlightedFields } from './HighlightedFields';
 import { Source } from './Source';
+import { Segment } from './Segment';
+import { DocumentResult } from './DocumentResult';
 
 /**
  * An individual search result.
@@ -7,7 +9,7 @@ import { Source } from './Source';
  * @public
  */
 export interface Result<T = Record<string, unknown>> {
-  /** Raw entity profile data in the shape of key-value pairs. */
+  /** Raw entity profile data in the shape of key-value pairs, or as an array of key-value pairs. */
   rawData: T,
   /** {@inheritDoc Source} */
   source: Source,
@@ -39,5 +41,18 @@ export interface Result<T = Record<string, unknown>> {
   /** The {@link HighlightedFields | highlighted fields} emphasized by the api. */
   highlightedFields?: HighlightedFields,
   /** The entity type of the result. */
-  entityType?: string
+  entityType?: string,
+  /** A relevant segment associated with the result. Present for document verticals grouped by
+   * Segment. */
+  segment?: Segment,
+  /**
+   * A relevant document associated with the result. Present for document verticals grouped by
+   * Document.
+   */
+  document?: DocumentResult,
+  /**
+   * All relevant documents associated with the result. Present for document verticals grouped by
+   * Entity.
+   */
+  documents?: DocumentResult[]
 }
