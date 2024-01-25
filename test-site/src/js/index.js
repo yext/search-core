@@ -6,7 +6,7 @@ import questionRequest from './requests/questionRequest';
 import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchRequest } from './requests/autocompleteRequests';
 
 const coreConfig = {
-  apiKey: 'df4b24f4075800e5e9705090c54c6c13',
+  apiKey: process.env.API_KEY,
   experienceKey: 'rosetest',
   locale: 'en',
   experienceVersion: 'PRODUCTION',
@@ -62,13 +62,13 @@ export async function filterSearch() {
 }
 
 function loadingSpinner() {
-  element.innerHTML = 'Loading...';
+  element.textContent = 'Loading...';
 }
 
 function updateUI(data, startTime, msg) {
   const latency = new Date().getTime() - startTime + 'ms';
   const dataString = JSON.stringify(data, undefined, 2);
-  element.innerHTML = latency + '\n' + dataString;
+  element.textContent = latency + '\n' + dataString;
 
   console.log(msg);
   console.log(data);
