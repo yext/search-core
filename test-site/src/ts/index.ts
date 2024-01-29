@@ -6,7 +6,7 @@ import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchR
 import initDirectAnswers from './initDirectAnswers';
 
 const coreConfig: SearchConfig = {
-  apiKey: '2d8c550071a64ea23e263118a2b0680b',
+  apiKey: process.env.API_KEY,
   experienceKey: 'slanswers',
   locale: 'en',
   experienceVersion: 'PRODUCTION',
@@ -72,13 +72,13 @@ export async function filterSearch(): Promise<void> {
 }
 
 function loadingSpinner() {
-  element.innerHTML = 'Loading...';
+  element.textContent = 'Loading...';
 }
 
 function updateUI(data: unknown, startTime: number, msg: string) {
   const latency = new Date().getTime() - startTime + 'ms';
   const dataString = JSON.stringify(data, undefined, 2);
-  element.innerHTML = latency + '\n' + dataString;
+  element.textContent = latency + '\n' + dataString;
 
   console.log(msg);
   console.log(data);
