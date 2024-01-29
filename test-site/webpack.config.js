@@ -1,6 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 
+const webpackPlugin = new webpack.DefinePlugin({
+  'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
+});
+
 module.exports = [{
   mode: 'development',
   entry: './src/ts/index.ts',
@@ -21,11 +25,7 @@ module.exports = [{
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'window'
   },
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
-    })
-  ],
+  plugins: [webpackPlugin],
 }, {
   mode: 'development',
   entry: './src/js/index.js',
@@ -38,9 +38,5 @@ module.exports = [{
     libraryTarget: 'window'
   },
   target: ['web', 'es5'],
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env.API_KEY': JSON.stringify(process.env.API_KEY),
-    })
-  ],
+  plugins: [webpackPlugin],
 }];
