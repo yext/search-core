@@ -1,6 +1,6 @@
 import crossFetch from 'cross-fetch';
 import { addParamsToURL, sanitizeQueryParams } from '../utils/urlutils';
-import { QueryParams } from '../models/http/params';
+import { BodyParams, QueryParams } from '../models/http/params';
 import { HttpService } from '../services/HttpService';
 
 /**
@@ -42,7 +42,7 @@ export class HttpServiceImpl implements HttpService {
   post<T>(
     url: string,
     queryParams: QueryParams,
-    body: QueryParams,
+    body: BodyParams,
     clientSdk: Record<string, string>,
     authToken?: string
   ): Promise<T> {
