@@ -33,7 +33,6 @@ export class ApiResponseValidator {
 
   private checkForApiErrors(apiResponse: ApiResponse): SearchError | undefined {
     if (apiResponse.meta?.errors?.length >= 1) {
-      apiResponse.meta.errors.map(e => console.log(e));
       const error = apiResponse.meta.errors[0];
       return new SearchError(error.message, error.code, error.type);
     }
