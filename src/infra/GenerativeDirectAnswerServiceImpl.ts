@@ -20,7 +20,7 @@ interface GenerativeDirectAnswerQueryParams extends QueryParams {
   api_key?: string,
   v: number,
   version?: string | number,
-  locale?: string,
+  locale?: string
 }
 
 export class GenerativeDirectAnswerServiceImpl implements GenerativeDirectAnswerService {

@@ -67,7 +67,7 @@ const mockVerticalResults = {
   'verticalKey': 'restaurants'
 };
 
-const mockUniversalResults = {'Verticals': [mockVerticalResults]}
+const mockUniversalResults = { 'Verticals': [mockVerticalResults] };
 
 const baseCoreConfig = {
   apiKey: 'testApiKey',
@@ -85,20 +85,20 @@ const gdaRequestVerticalResults: GenerativeDirectAnswerRequest = {
 const gdaRequestUniversalResults: GenerativeDirectAnswerRequest = {
   searchId: 'testSeachId',
   searchTerm: 'testSearchTerm',
-  results: mockVerticalResults
+  results: mockUniversalResults
 };
 
 const apiResponseValidator = new ApiResponseValidator();
 
 describe('Generative Direct Answer Vertical Results', () => {
-  let mockHttp, qaService, response, mockCalls, actualHttpParams;
+  let mockHttp, gdaService, response, mockCalls, actualHttpParams;
 
   beforeAll(async () => {
     mockHttp = new HttpServiceMock();
     mockHttp.post.mockResolvedValue(mockApiResponse);
-    qaService = new GenerativeDirectAnswerServiceImpl(
+    gdaService = new GenerativeDirectAnswerServiceImpl(
       baseCoreConfig, mockHttp as HttpService, apiResponseValidator);
-    response = await qaService.generateAnswer(gdaRequestVerticalResults);
+    response = await gdaService.generateAnswer(gdaRequestVerticalResults);
     mockCalls = mockHttp.post.mock.calls;
     actualHttpParams = mockCalls[mockCalls.length - 1];
   });
@@ -118,8 +118,9 @@ describe('Generative Direct Answer Vertical Results', () => {
       }
     };
 
-    qaService = new GenerativeDirectAnswerServiceImpl(coreConfig, mockHttp as HttpService, apiResponseValidator);
-    response = await qaService.generateAnswer(gdaRequestVerticalResults);
+    gdaService = new GenerativeDirectAnswerServiceImpl(
+      coreConfig, mockHttp as HttpService, apiResponseValidator);
+    response = await gdaService.generateAnswer(gdaRequestVerticalResults);
     mockCalls = mockHttp.post.mock.calls;
     actualHttpParams = mockCalls[mockCalls.length - 1];
     const actualUrl = actualHttpParams[0];
@@ -154,14 +155,14 @@ describe('Generative Direct Answer Vertical Results', () => {
 });
 
 describe('Generative Direct Answer Universal Results', () => {
-  let mockHttp, qaService, response, mockCalls, actualHttpParams;
+  let mockHttp, gdaService, response, mockCalls, actualHttpParams;
 
   beforeAll(async () => {
     mockHttp = new HttpServiceMock();
     mockHttp.post.mockResolvedValue(mockApiResponse);
-    qaService = new GenerativeDirectAnswerServiceImpl(
+    gdaService = new GenerativeDirectAnswerServiceImpl(
       baseCoreConfig, mockHttp as HttpService, apiResponseValidator);
-    response = await qaService.generateAnswer(gdaRequestUniversalResults);
+    response = await gdaService.generateAnswer(gdaRequestUniversalResults);
     mockCalls = mockHttp.post.mock.calls;
     actualHttpParams = mockCalls[mockCalls.length - 1];
   });
@@ -181,8 +182,9 @@ describe('Generative Direct Answer Universal Results', () => {
       }
     };
 
-    qaService = new GenerativeDirectAnswerServiceImpl(coreConfig, mockHttp as HttpService, apiResponseValidator);
-    response = await qaService.generateAnswer(gdaRequestUniversalResults);
+    gdaService = new GenerativeDirectAnswerServiceImpl(
+      coreConfig, mockHttp as HttpService, apiResponseValidator);
+    response = await gdaService.generateAnswer(gdaRequestUniversalResults);
     mockCalls = mockHttp.post.mock.calls;
     actualHttpParams = mockCalls[mockCalls.length - 1];
     const actualUrl = actualHttpParams[0];
@@ -205,7 +207,7 @@ describe('Generative Direct Answer Universal Results', () => {
     const expectedBodyParams = {
       searchId: 'testSeachId',
       searchTerm: 'testSearchTerm',
-      results: mockVerticalResults,
+      results: mockUniversalResults,
     };
     const actualBodyParams = actualHttpParams[2];
     expect(expectedBodyParams).toEqual(actualBodyParams);
@@ -225,9 +227,9 @@ it('additionalQueryParams are passed through', async () => {
   };
   const mockHttp = new HttpServiceMock();
   mockHttp.post.mockResolvedValue(mockApiResponse);
-  const qaService = new GenerativeDirectAnswerServiceImpl(
+  const gdaService = new GenerativeDirectAnswerServiceImpl(
     coreConfig, mockHttp as HttpService, apiResponseValidator);
-  await qaService.generateAnswer(gdaRequestVerticalResults);
+  await gdaService.generateAnswer(gdaRequestVerticalResults);
   const mockCalls = mockHttp.post.mock.calls;
   const actualQueryParams = mockCalls[0][1];
   expect(actualQueryParams).toEqual(expect.objectContaining({
