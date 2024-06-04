@@ -4,7 +4,9 @@
 
 ## GenerativeDirectAnswerResponse.resultStatus property
 
-**Signature:**
+A string representing whether there was a result found within the given invocation.
+
+<b>Signature:</b>
 
 ```typescript
 resultStatus: string;

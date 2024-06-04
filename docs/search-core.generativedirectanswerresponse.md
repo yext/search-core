@@ -6,7 +6,7 @@
 
 A representation of a generative direct answer response.
 
-**Signature:**
+<b>Signature:</b>
 
 ```typescript
 export interface GenerativeDirectAnswerResponse 
@@ -14,76 +14,9 @@ export interface GenerativeDirectAnswerResponse
 
 ## Properties
 
-<table><thead><tr><th>
+|  Property | Type | Description |
+|  --- | --- | --- |
+|  [citations](./search-core.generativedirectanswerresponse.citations.md) | string\[\] | An array of uids from the relevant [Result.rawData](./search-core.result.rawdata.md) that were used to form the directAnswer. |
+|  [directAnswer](./search-core.generativedirectanswerresponse.directanswer.md) | string | The text of the final generated response. |
+|  [resultStatus](./search-core.generativedirectanswerresponse.resultstatus.md) | string | A string representing whether there was a result found within the given invocation. |
 
-Property
-
-
-</th><th>
-
-Modifiers
-
-
-</th><th>
-
-Type
-
-
-</th><th>
-
-Description
-
-
-</th></tr></thead>
-<tbody><tr><td>
-
-[citations](./search-core.generativedirectanswerresponse.citations.md)
-
-
-</td><td>
-
-
-</td><td>
-
-string\[\]
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[directAnswer](./search-core.generativedirectanswerresponse.directanswer.md)
-
-
-</td><td>
-
-
-</td><td>
-
-string
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[resultStatus](./search-core.generativedirectanswerresponse.resultstatus.md)
-
-
-</td><td>
-
-
-</td><td>
-
-string
-
-
-</td><td>
-
-
-</td></tr>
-</tbody></table>

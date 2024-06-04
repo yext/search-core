@@ -4,7 +4,9 @@
 
 ## GenerativeDirectAnswerResponse.directAnswer property
 
-**Signature:**
+The text of the final generated response.
+
+<b>Signature:</b>
 
 ```typescript
 directAnswer: string;

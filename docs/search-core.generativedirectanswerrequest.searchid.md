@@ -4,7 +4,9 @@
 
 ## GenerativeDirectAnswerRequest.searchId property
 
-**Signature:**
+The ID of the search request.
+
+<b>Signature:</b>
 
 ```typescript
 searchId: string;

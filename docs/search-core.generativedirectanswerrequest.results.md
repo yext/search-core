@@ -4,8 +4,10 @@
 
 ## GenerativeDirectAnswerRequest.results property
 
-**Signature:**
+The complete set of Search Results
+
+<b>Signature:</b>
 
 ```typescript
-results: Record<string, VerticalResults[]>;
+results: VerticalResults | Record<string, VerticalResults[]>;
 ```

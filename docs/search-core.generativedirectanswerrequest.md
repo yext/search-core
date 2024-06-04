@@ -6,85 +6,18 @@
 
 Options which can be specified for a generative direct answer request.
 
-**Signature:**
+<b>Signature:</b>
 
 ```typescript
 export interface GenerativeDirectAnswerRequest extends SearchRequest 
 ```
-**Extends:** [SearchRequest](./search-core.searchrequest.md)
+<b>Extends:</b> [SearchRequest](./search-core.searchrequest.md)
 
 ## Properties
 
-<table><thead><tr><th>
+|  Property | Type | Description |
+|  --- | --- | --- |
+|  [results](./search-core.generativedirectanswerrequest.results.md) | [VerticalResults](./search-core.verticalresults.md) \| Record&lt;string, [VerticalResults](./search-core.verticalresults.md)<!-- -->\[\]&gt; | The complete set of Search Results |
+|  [searchId](./search-core.generativedirectanswerrequest.searchid.md) | string | The ID of the search request. |
+|  [searchTerm](./search-core.generativedirectanswerrequest.searchterm.md) | string | The text of the user-written query that prompted Search results. |
 
-Property
-
-
-</th><th>
-
-Modifiers
-
-
-</th><th>
-
-Type
-
-
-</th><th>
-
-Description
-
-
-</th></tr></thead>
-<tbody><tr><td>
-
-[results](./search-core.generativedirectanswerrequest.results.md)
-
-
-</td><td>
-
-
-</td><td>
-
-Record&lt;string, [VerticalResults](./search-core.verticalresults.md)<!-- -->\[\]&gt;
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[searchId](./search-core.generativedirectanswerrequest.searchid.md)
-
-
-</td><td>
-
-
-</td><td>
-
-string
-
-
-</td><td>
-
-
-</td></tr>
-<tr><td>
-
-[searchTerm](./search-core.generativedirectanswerrequest.searchterm.md)
-
-
-</td><td>
-
-
-</td><td>
-
-string
-
-
-</td><td>
-
-
-</td></tr>
-</tbody></table>

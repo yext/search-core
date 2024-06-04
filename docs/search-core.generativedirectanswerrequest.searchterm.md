@@ -4,7 +4,9 @@
 
 ## GenerativeDirectAnswerRequest.searchTerm property
 
-**Signature:**
+The text of the user-written query that prompted Search results.
+
+<b>Signature:</b>
 
 ```typescript
 searchTerm: string;
