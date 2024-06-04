@@ -1,4 +1,5 @@
 import { defaultApiVersion } from '../provideEndpoints';
+import { QueryParams } from '../models/http/params';
 import { HttpService } from '../services/HttpService';
 import { SearchConfigWithDefaulting } from '../models/core/SearchConfig';
 import { ApiResponseValidator } from '../validation/ApiResponseValidator';
@@ -8,6 +9,19 @@ import { GenerativeDirectAnswerRequest } from '../models/generativedirectanswer/
 import { GenerativeDirectAnswerResponse } from '../models/generativedirectanswer/GenerativeDirectAnswerResponse';
 import { GenerativeDirectAnswerService } from '../services/GenerativeDirectAnswerService';
 import { createGenerativeDirectAnswerResponse } from '../transformers/generativedirectanswerservice/createGenerativeDirectAnswerResponse';
+
+/**
+ * Represents the query params which may be sent in a generative direct answer.
+ *
+ * @internal
+ */
+interface GenerativeDirectAnswerQueryParams extends QueryParams {
+  experienceKey: string,
+  api_key?: string,
+  v: number,
+  version?: string | number,
+  locale?: string,
+}
 
 export class GenerativeDirectAnswerServiceImpl implements GenerativeDirectAnswerService {
   private config: SearchConfigWithDefaulting;
@@ -27,9 +41,14 @@ export class GenerativeDirectAnswerServiceImpl implements GenerativeDirectAnswer
   }
 
   async generateAnswer(request: GenerativeDirectAnswerRequest): Promise<GenerativeDirectAnswerResponse> {
-    const queryParams = {
-      v: defaultApiVersion,
+    const queryParams: GenerativeDirectAnswerQueryParams = {
+      experienceKey: this.config.experienceKey,
       ...('apiKey' in this.config && { api_key: this.config.apiKey }),
+      v: defaultApiVersion,
+      version: this.config.experienceVersion,
+      locale: this.config.locale,
+      visitorId: this.config.visitor?.id,
+      visitorIdMethod: this.config.visitor?.idMethod,
       ...this.config?.additionalQueryParams
     };
     const body = {

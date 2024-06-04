@@ -2,7 +2,7 @@ import { GenerativeDirectAnswerRequest } from '../models/generativedirectanswer/
 import { GenerativeDirectAnswerResponse } from '../models/generativedirectanswer/GenerativeDirectAnswerResponse';
 
 /**
- * A service for autocomplete requests.
+ * A service for generative direct answer requests.
  *
  * @public
  */
