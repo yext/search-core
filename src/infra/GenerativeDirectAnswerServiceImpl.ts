@@ -51,7 +51,7 @@ export class GenerativeDirectAnswerServiceImpl implements GenerativeDirectAnswer
       visitorIdMethod: this.config.visitor?.idMethod,
       ...this.config?.additionalQueryParams
     };
-    let results = {};
+    let results: NonNullable<unknown> = {};
     if (request.results.length === 1) {
       results = request.results[0];
     } else if (request.results.length > 1) {
