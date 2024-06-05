@@ -17,7 +17,7 @@ export interface GenerativeDirectAnswerRequest extends SearchRequest
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [results](./search-core.generativedirectanswerrequest.results.md) | [VerticalResults](./search-core.verticalresults.md) \| Record&lt;string, [VerticalResults](./search-core.verticalresults.md)<!-- -->\[\]&gt; | The complete set of Search Results |
+|  [results](./search-core.generativedirectanswerrequest.results.md) | [VerticalResults](./search-core.verticalresults.md)<!-- -->\[\] | The complete set of Search Results |
 |  [searchId](./search-core.generativedirectanswerrequest.searchid.md) | string | The ID of the search request. |
 |  [searchTerm](./search-core.generativedirectanswerrequest.searchterm.md) | string | The text of the user-written query that prompted Search results. |
 

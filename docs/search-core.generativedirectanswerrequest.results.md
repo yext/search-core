@@ -9,5 +9,5 @@ The complete set of Search Results
 <b>Signature:</b>
 
 ```typescript
-results: VerticalResults | Record<string, VerticalResults[]>;
+results: VerticalResults[];
 ```
