@@ -381,7 +381,7 @@ export interface FilterSearchResponse {
 
 // @public
 export interface GenerativeDirectAnswerRequest extends SearchRequest {
-    results: VerticalResults | Record<string, VerticalResults[]>;
+    results: VerticalResults[];
     searchId: string;
     searchTerm: string;
 }

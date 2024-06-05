@@ -12,5 +12,5 @@ export interface GenerativeDirectAnswerRequest extends SearchRequest {
   /** The text of the user-written query that prompted Search results. */
   searchTerm: string,
   /** The complete set of Search Results */
-  results: VerticalResults | Record<string, VerticalResults[]>
+  results: VerticalResults[]
 }

@@ -51,10 +51,16 @@ export class GenerativeDirectAnswerServiceImpl implements GenerativeDirectAnswer
       visitorIdMethod: this.config.visitor?.idMethod,
       ...this.config?.additionalQueryParams
     };
+    let results = {};
+    if (request.results.length === 1) {
+      results = request.results[0];
+    } else if (request.results.length > 1) {
+      results = { verticals: request.results };
+    }
     const body = {
       searchId: request.searchId,
       searchTerm: request.searchTerm,
-      results: request.results
+      results: results
     };
     const response = 'token' in this.config
       ? await this.httpService.post<ApiResponse>(
