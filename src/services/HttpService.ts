@@ -1,5 +1,5 @@
 
-import { BodyParams, QueryParams } from '../models/http/params';
+import { QueryParams } from '../models/http/params';
 
 /**
  * A service for HTTP Requests
@@ -15,7 +15,7 @@ export interface HttpService {
   post<T>(
     url: string,
     queryParams: QueryParams,
-    body: BodyParams,
+    body: QueryParams,
     clientSdk: Record<string, string>,
     authToken?: string
   ): Promise<T>

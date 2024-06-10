@@ -17,7 +17,6 @@ export interface Endpoints
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [filterSearch?](./search-core.endpoints.filtersearch.md) | string | <i>(Optional)</i> |
-|  [generativeDirectAnswer?](./search-core.endpoints.generativedirectanswer.md) | string | <i>(Optional)</i> |
 |  [questionSubmission?](./search-core.endpoints.questionsubmission.md) | string | <i>(Optional)</i> |
 |  [status?](./search-core.endpoints.status.md) | string | <i>(Optional)</i> |
 |  [universalAutocomplete?](./search-core.endpoints.universalautocomplete.md) | string | <i>(Optional)</i> |

@@ -3,7 +3,6 @@ import verticalRequest from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
 import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchRequest } from './requests/autocompleteRequests';
-import generativeDirectAnswerRequest from './requests/generativeDirectAnswerRequests';
 import initDirectAnswers from './initDirectAnswers';
 
 const coreConfig: SearchConfig = {
@@ -70,13 +69,6 @@ export async function filterSearch(): Promise<void> {
   const startTime = new Date().getTime();
   const data = await globalCore.filterSearch(filterSearchRequest);
   updateUI(data, startTime, 'Core Filter Autocomplete Response:');
-}
-
-export async function generativeDirectAnswer(): Promise<void> {
-  loadingSpinner();
-  const startTime = new Date().getTime();
-  const data = await globalCore.generativeDirectAnswer(generativeDirectAnswerRequest);
-  updateUI(data, startTime, 'Core Generative Direct Answer Response:');
 }
 
 function loadingSpinner() {

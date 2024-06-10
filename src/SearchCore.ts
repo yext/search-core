@@ -12,10 +12,6 @@ import { UniversalAutocompleteRequest, VerticalAutocompleteRequest, FilterSearch
 import { AutocompleteResponse, FilterSearchResponse } from './models/autocompleteservice/AutocompleteResponse';
 import { AutocompleteService } from './services/AutocompleteService';
 
-import { GenerativeDirectAnswerRequest } from './models/generativedirectanswer/GenerativeDirectAnswerRequest';
-import { GenerativeDirectAnswerResponse } from './models/generativedirectanswer/GenerativeDirectAnswerResponse';
-import { GenerativeDirectAnswerService } from './services/GenerativeDirectAnswerService';
-
 /**
  * Provides methods for executing searches, submitting questions, and performing autocompletes.
  *
@@ -25,8 +21,7 @@ export class SearchCore {
   constructor(
     private searchService: SearchService,
     private questionSubmissionService: QuestionSubmissionService,
-    private autoCompleteService: AutocompleteService,
-    private generativeDirectAnswerService: GenerativeDirectAnswerService,
+    private autoCompleteService: AutocompleteService
   ) {}
 
   /**
@@ -106,17 +101,5 @@ export class SearchCore {
    */
   filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse> {
     return this.autoCompleteService.filterSearch(request);
-  }
-
-  /**
-   * Performs a generative direct answer request.
-   *
-   * @remarks
-   * If rejected, the reason will be an {@link SearchError}.
-   *
-   * @param request - Generative direct answer request options
-   */
-  generativeDirectAnswer(request: GenerativeDirectAnswerRequest): Promise<GenerativeDirectAnswerResponse> {
-    return this.generativeDirectAnswerService.generateAnswer(request);
   }
 }
