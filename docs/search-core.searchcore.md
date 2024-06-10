@@ -14,6 +14,7 @@ export declare class SearchCore
 
 ## Constructors
 
+<<<<<<< HEAD
 <table><thead><tr><th>
 
 Constructor
@@ -49,6 +50,23 @@ Constructs a new instance of the `SearchCore` class
 ## Methods
 
 <table><thead><tr><th>
+=======
+|  Constructor | Modifiers | Description |
+|  --- | --- | --- |
+|  [(constructor)(searchService, questionSubmissionService, autoCompleteService, generativeDirectAnswerService)](./search-core.searchcore._constructor_.md) |  | Constructs a new instance of the <code>SearchCore</code> class |
+
+## Methods
+
+|  Method | Modifiers | Description |
+|  --- | --- | --- |
+|  [filterSearch(request)](./search-core.searchcore.filtersearch.md) |  | Performs a filtersearch request against specified fields within a single vertical. |
+|  [generativeDirectAnswer(request)](./search-core.searchcore.generativedirectanswer.md) |  | Performs a generative direct answer request. |
+|  [submitQuestion(request)](./search-core.searchcore.submitquestion.md) |  | Submits a custom question to the Search API. |
+|  [universalAutocomplete(request)](./search-core.searchcore.universalautocomplete.md) |  | Performs an autocomplete request across all verticals. |
+|  [universalSearch(request)](./search-core.searchcore.universalsearch.md) |  | Performs a search across all verticals. |
+|  [verticalAutocomplete(request)](./search-core.searchcore.verticalautocomplete.md) |  | Performs an autocomplete request for a single vertical. |
+|  [verticalSearch(request)](./search-core.searchcore.verticalsearch.md) |  | Performs a search for a single vertical. |
+>>>>>>> d7c4b92 (Merge master (v2.6.0-beta) into develop (#264))
 
 Method
 

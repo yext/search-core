@@ -14,7 +14,20 @@ export interface Endpoints
 
 ## Properties
 
+<<<<<<< HEAD
 <table><thead><tr><th>
+=======
+|  Property | Type | Description |
+|  --- | --- | --- |
+|  [filterSearch?](./search-core.endpoints.filtersearch.md) | string | <i>(Optional)</i> |
+|  [generativeDirectAnswer?](./search-core.endpoints.generativedirectanswer.md) | string | <i>(Optional)</i> |
+|  [questionSubmission?](./search-core.endpoints.questionsubmission.md) | string | <i>(Optional)</i> |
+|  [status?](./search-core.endpoints.status.md) | string | <i>(Optional)</i> |
+|  [universalAutocomplete?](./search-core.endpoints.universalautocomplete.md) | string | <i>(Optional)</i> |
+|  [universalSearch?](./search-core.endpoints.universalsearch.md) | string | <i>(Optional)</i> |
+|  [verticalAutocomplete?](./search-core.endpoints.verticalautocomplete.md) | string | <i>(Optional)</i> |
+|  [verticalSearch?](./search-core.endpoints.verticalsearch.md) | string | <i>(Optional)</i> |
+>>>>>>> d7c4b92 (Merge master (v2.6.0-beta) into develop (#264))
 
 Property
 

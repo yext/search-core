@@ -9,12 +9,21 @@ Constructs a new instance of the `SearchCore` class
 **Signature:**
 
 ```typescript
-constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService);
+constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService, generativeDirectAnswerService: GenerativeDirectAnswerService);
 ```
 
 ## Parameters
 
+<<<<<<< HEAD
 <table><thead><tr><th>
+=======
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  searchService | [SearchService](./search-core.searchservice.md) |  |
+|  questionSubmissionService | [QuestionSubmissionService](./search-core.questionsubmissionservice.md) |  |
+|  autoCompleteService | [AutocompleteService](./search-core.autocompleteservice.md) |  |
+|  generativeDirectAnswerService | [GenerativeDirectAnswerService](./search-core.generativedirectanswerservice.md) |  |
+>>>>>>> d7c4b92 (Merge master (v2.6.0-beta) into develop (#264))
 
 Parameter
 

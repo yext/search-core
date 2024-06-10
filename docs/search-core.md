@@ -271,6 +271,7 @@ The entrypoint to the search-core library.
 
 ## Interfaces
 
+<<<<<<< HEAD
 <table><thead><tr><th>
 
 Interface
@@ -1196,6 +1197,96 @@ Information used to associate requests with a particular user.
 
 </td></tr>
 </tbody></table>
+=======
+|  Interface | Description |
+|  --- | --- |
+|  [AdditionalHttpHeaders](./search-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
+|  [Address](./search-core.address.md) | An interface with address fields to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->. |
+|  [AddressDirectAnswer](./search-core.addressdirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'address' field type. |
+|  [AndroidAppUrlDirectAnswer](./search-core.androidappurldirectanswer.md) | A direct answer for an android app url field. |
+|  [AppliedQueryFilter](./search-core.appliedqueryfilter.md) | A filter that the Search API applied to the search. |
+|  [AutocompleteResponse](./search-core.autocompleteresponse.md) | The response of a universal or vertical autocomplete request. |
+|  [AutocompleteResult](./search-core.autocompleteresult.md) | An autocomplete suggestion. |
+|  [AutocompleteService](./search-core.autocompleteservice.md) | A service for autocomplete requests. |
+|  [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) | A direct answer which was found within a document. |
+|  [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) | A direct answer where the answer came from a field from the knowledge graph. |
+|  [BaseSearchConfig](./search-core.basesearchconfig.md) | The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [ServingConfig](./search-core.servingconfig.md)<!-- -->. |
+|  [ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md) | Additional agents and their versions used to create the Search experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent. |
+|  [ComplexURL](./search-core.complexurl.md) | The shape of a [BuiltInFieldType.ComplexURL](./search-core.builtinfieldtype.md) DirectAnswer value |
+|  [ComplexUrlDirectAnswer](./search-core.complexurldirectanswer.md) | A direct answer for a complex url field. |
+|  [ConjunctionStaticFilter](./search-core.conjunctionstaticfilter.md) | A static filter composed by combining other static filters with the logical AND operator. |
+|  [DayHour](./search-core.dayhour.md) | An interface for a day's hours to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->. |
+|  [DecimalDirectAnswer](./search-core.decimaldirectanswer.md) | A direct answer for a decimal field, which is a number represented using a string. |
+|  [DirectAnswer](./search-core.directanswer.md) | A direct answer to a search. |
+|  [DisjunctionStaticFilter](./search-core.disjunctionstaticfilter.md) | A static filter composed by combining filters with the logical OR operator. The combined filters can either be field value filters or other disjunction filters. |
+|  [DisplayableFacet](./search-core.displayablefacet.md) | A [Facet](./search-core.facet.md) which contains extra fields meant to be displayed to the end user. |
+|  [DisplayableFacetOption](./search-core.displayablefacetoption.md) | A [FacetOption](./search-core.facetoption.md) with extra data meant to be displayed to the end user. |
+|  [DocumentResult](./search-core.documentresult.md) | Details about the document and the document search algorithm |
+|  [EmailDirectAnswer](./search-core.emaildirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'email' field type. |
+|  [Endpoints](./search-core.endpoints.md) | Overrides for the URLs which are used when making requests to the Search API. |
+|  [FacebookUrlDirectAnswer](./search-core.facebookurldirectanswer.md) | A direct answer for a facebook url field. |
+|  [Facet](./search-core.facet.md) | Represents dynamic filter options for the Search API. |
+|  [FacetOption](./search-core.facetoption.md) | A filter associated with the facet. |
+|  [FailedVertical](./search-core.failedvertical.md) | Error information from when a vertical fails to return results. |
+|  [FieldValueFilter](./search-core.fieldvaluefilter.md) | Represents a filter which compares values to a single field. |
+|  [FieldValueStaticFilter](./search-core.fieldvaluestaticfilter.md) | A [FieldValueFilter](./search-core.fieldvaluefilter.md) with the kind of filter specified to discriminate between static filter types. |
+|  [FilterSearchRequest](./search-core.filtersearchrequest.md) | Options for a filtersearch request. |
+|  [FilterSearchResponse](./search-core.filtersearchresponse.md) | The response of a filtersearch request. |
+|  [GenerativeDirectAnswerRequest](./search-core.generativedirectanswerrequest.md) | Options which can be specified for a generative direct answer request. |
+|  [GenerativeDirectAnswerResponse](./search-core.generativedirectanswerresponse.md) | A representation of a generative direct answer response. |
+|  [GenerativeDirectAnswerService](./search-core.generativedirectanswerservice.md) | A service for generative direct answer requests. |
+|  [HighlightedValue](./search-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Search API. |
+|  [HolidayHours](./search-core.holidayhours.md) | An interface for holiday hours to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->. |
+|  [Hours](./search-core.hours.md) | An interface for hours fields to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->. |
+|  [HoursDirectAnswer](./search-core.hoursdirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'hours' field type. |
+|  [HTMLSnippetDirectAnswer](./search-core.htmlsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'html' field type. "value" field is omitted for featured snippet direct answer of this field type. |
+|  [InstagramHandleDirectAnswer](./search-core.instagramhandledirectanswer.md) | A direct answer for an instagram handle field. |
+|  [IntegerDirectAnswer](./search-core.integerdirectanswer.md) | A direct answer for an integer field. |
+|  [Interval](./search-core.interval.md) | An interface for a time interval to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->. |
+|  [IosAppUrlDirectAnswer](./search-core.iosappurldirectanswer.md) | A direct answer for an iOS app url field. |
+|  [LatLong](./search-core.latlong.md) | The latitude and longitude of the user making the request. Used to bias the results. |
+|  [LocationBias](./search-core.locationbias.md) | Information about the user's location. |
+|  [LocationBoundingBox](./search-core.locationboundingbox.md) | Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. (e.g. boundary for a locality or region specific location filter) |
+|  [LocationFilterDetails](./search-core.locationfilterdetails.md) | Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. |
+|  [LowerNumberRangeLimit](./search-core.lowernumberrangelimit.md) | The start limit of [NumberRangeValue](./search-core.numberrangevalue.md)<!-- -->. |
+|  [MarkdownSnippetDirectAnswer](./search-core.markdownsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'markdown' field type. "value" field is omitted for featured snippet direct answer of this field type. |
+|  [MultiLineTextSnippetDirectAnswer](./search-core.multilinetextsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'multi\_line\_text' field type. |
+|  [NearFilterValue](./search-core.nearfiltervalue.md) | A filter value for a filter with a $near [Matcher](./search-core.matcher.md)<!-- -->. |
+|  [NumberRangeValue](./search-core.numberrangevalue.md) | A filter value for a filter with a $between [Matcher](./search-core.matcher.md)<!-- -->. |
+|  [PhoneDirectAnswer](./search-core.phonedirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with phone value. |
+|  [QueryRulesActionsData](./search-core.queryrulesactionsdata.md) | Data returned from the Search query rules system. |
+|  [QuestionSubmissionRequest](./search-core.questionsubmissionrequest.md) | Options for a QuestionSubmission request. |
+|  [QuestionSubmissionResponse](./search-core.questionsubmissionresponse.md) | A representation of a question submission response. |
+|  [QuestionSubmissionService](./search-core.questionsubmissionservice.md) | Submits a custom question to the Search API. |
+|  [Result](./search-core.result.md) | An individual search result. |
+|  [RichTextDirectAnswer](./search-core.richtextdirectanswer.md) | A direct answer for a rich text field. |
+|  [RichTextSnippetDirectAnswer](./search-core.richtextsnippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'rich\_text' field type. "value" field is omitted for featured snippet direct answer of this field type. |
+|  [RichTextV2SnippetDirectAnswer](./search-core.richtextv2snippetdirectanswer.md) | A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'rich\_text\_v2' field type. "value" field is omitted for featured snippet direct answer of this field type. |
+|  [SearchConfigWithApiKey](./search-core.searchconfigwithapikey.md) | Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires apiKey. |
+|  [SearchConfigWithToken](./search-core.searchconfigwithtoken.md) | Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires token. |
+|  [SearchParameterField](./search-core.searchparameterfield.md) | Indicates which entity field to perform the autocomplete request on. |
+|  [SearchRequest](./search-core.searchrequest.md) | Options for a Search API request. |
+|  [SearchService](./search-core.searchservice.md) | A service which performs Yext Search. |
+|  [Segment](./search-core.segment.md) | A result produced by a document vertical. |
+|  [ServingConfig](./search-core.servingconfig.md) | The configuration options for getting the endpoints. |
+|  [Snippet](./search-core.snippet.md) | The section of text where a [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) was found. |
+|  [SortBy](./search-core.sortby.md) | Represents a criterion that can be used to sort results. |
+|  [SpellCheck](./search-core.spellcheck.md) | A spellcheck response from a search query. |
+|  [TextDirectAnswer](./search-core.textdirectanswer.md) | A direct answer whose source is a string or string list field in the knowledge graph. |
+|  [TwitterHandleDirectAnswer](./search-core.twitterhandledirectanswer.md) | A direct answer for an twitter handle field. |
+|  [UniversalAutocompleteRequest](./search-core.universalautocompleterequest.md) | Options for a universal autocomplete request. |
+|  [UniversalLimit](./search-core.universallimit.md) | The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive. |
+|  [UniversalSearchRequest](./search-core.universalsearchrequest.md) | Options which can be specified for a universal search. |
+|  [UniversalSearchResponse](./search-core.universalsearchresponse.md) | A representation of a response from a universal search. |
+|  [UnknownFieldValueDirectAnswer](./search-core.unknownfieldvaluedirectanswer.md) | A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) with a field type outside of [BuiltInFieldType](./search-core.builtinfieldtype.md)<!-- -->. |
+|  [UpperNumberRangeLimit](./search-core.uppernumberrangelimit.md) | The end limit of [NumberRangeValue](./search-core.numberrangevalue.md)<!-- -->. |
+|  [UrlDirectAnswer](./search-core.urldirectanswer.md) | A direct answer for a simple url field. |
+|  [VerticalAutocompleteRequest](./search-core.verticalautocompleterequest.md) | Options for a vertial autocomplete request. |
+|  [VerticalResults](./search-core.verticalresults.md) | Represents results from a search vertical. |
+|  [VerticalSearchRequest](./search-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
+|  [VerticalSearchResponse](./search-core.verticalsearchresponse.md) | A representation of a response from a vertical search. |
+|  [Visitor](./search-core.visitor.md) | Information used to associate requests with a particular user. |
+>>>>>>> d7c4b92 (Merge master (v2.6.0-beta) into develop (#264))
 
 ## Variables
 

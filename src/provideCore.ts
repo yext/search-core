@@ -6,6 +6,7 @@ import { AutocompleteServiceImpl } from './infra/AutocompleteServiceImpl';
 import { ApiResponseValidator } from './validation/ApiResponseValidator';
 import { SearchCore } from './SearchCore';
 import { EndpointsFactory } from './provideEndpoints';
+import { GenerativeDirectAnswerServiceImpl } from './infra/GenerativeDirectAnswerServiceImpl';
 
 /**
  * The entrypoint to the search-core library.
@@ -37,6 +38,13 @@ export function provideCore(config: SearchConfig): SearchCore {
   const questionSubmissionService = new QuestionSubmissionServiceImpl(
     defaultedConfig, httpService, apiResponseValidator);
   const autoCompleteService = new AutocompleteServiceImpl(defaultedConfig, httpService, apiResponseValidator);
+  const generativeDirectAnswerService = new GenerativeDirectAnswerServiceImpl(
+    defaultedConfig, httpService, apiResponseValidator);
 
-  return new SearchCore(searchService, questionSubmissionService, autoCompleteService);
+  return new SearchCore(
+    searchService,
+    questionSubmissionService,
+    autoCompleteService,
+    generativeDirectAnswerService,
+  );
 }
