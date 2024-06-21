@@ -10,7 +10,7 @@ import { Source } from './Source';
 export interface VerticalResults {
   /** A array of {@link AppliedQueryFilter}s which were applied to the vertical results. */
   appliedQueryFilters: AppliedQueryFilter[],
-  /** The duration of the query in milliseconds. */
+  /** The duration of the query in milliseconds (this is present in a universal search but not in a vertical search). */
   queryDurationMillis?: number,
   /** An array of search {@link Result}s for the vertical. */
   results: Result[],

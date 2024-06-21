@@ -4,7 +4,7 @@
 
 ## VerticalResults.queryDurationMillis property
 
-The duration of the query in milliseconds.
+The duration of the query in milliseconds (this is present in a universal search but not in a vertical search).
 
 <b>Signature:</b>
 
