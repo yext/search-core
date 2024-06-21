@@ -14,7 +14,18 @@ export interface VerticalResults
 
 ## Properties
 
+<<<<<<< HEAD
 <table><thead><tr><th>
+=======
+|  Property | Type | Description |
+|  --- | --- | --- |
+|  [appliedQueryFilters](./search-core.verticalresults.appliedqueryfilters.md) | [AppliedQueryFilter](./search-core.appliedqueryfilter.md)<!-- -->\[\] | A array of [AppliedQueryFilter](./search-core.appliedqueryfilter.md)<!-- -->s which were applied to the vertical results. |
+|  [queryDurationMillis?](./search-core.verticalresults.querydurationmillis.md) | number | <i>(Optional)</i> The duration of the query in milliseconds |
+|  [results](./search-core.verticalresults.results.md) | [Result](./search-core.result.md)<!-- -->\[\] | An array of search [Result](./search-core.result.md)<!-- -->s for the vertical. |
+|  [resultsCount](./search-core.verticalresults.resultscount.md) | number | The total number of results within the vertical. |
+|  [source](./search-core.verticalresults.source.md) | [Source](./search-core.source.md) | Represents the source of a [Result](./search-core.result.md)<!-- -->. |
+|  [verticalKey](./search-core.verticalresults.verticalkey.md) | string | The vertical key associated with the vertical results. |
+>>>>>>> 8035fcc (make `queryDurationMillis` field optional in VerticalResults (#266))
 
 Property
 
