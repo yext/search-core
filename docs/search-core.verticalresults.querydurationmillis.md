@@ -4,10 +4,15 @@
 
 ## VerticalResults.queryDurationMillis property
 
-The duration of the query in milliseconds (this is present in a universal search but not in a vertical search).
+The duration of the query in milliseconds
 
 <b>Signature:</b>
 
 ```typescript
 queryDurationMillis?: number;
 ```
+
+## Remarks
+
+This is present in a universal search but not in a vertical search.
+
