@@ -14,7 +14,6 @@ const defaultEndpoints: Required<Endpoints> = new EndpointsFactory().getEndpoint
 
 const mockVerticalResults = [{
   'appliedQueryFilters': [],
-  'queryDurationMillis': 141,
   'results': [
     {
       'distance': 608,
@@ -142,28 +141,31 @@ it('additionalQueryParams are passed through', async () => {
   }));
 });
 
-const mockUniversalResults = [mockVerticalResults, {
-  'appliedQueryFilters': [],
-  'queryDurationMillis': 313,
-  'results': [
-    {
-      'id': '4038721755206544552',
-      'index': 3,
-      'name': 'How do I create a Very Special Event?',
-      'rawData': {
+const mockUniversalResults = [
+  { ...mockVerticalResults, 'queryDurationMillis': 141 },
+  {
+    'appliedQueryFilters': [],
+    'queryDurationMillis': 313,
+    'results': [
+      {
         'id': '4038721755206544552',
+        'index': 3,
         'name': 'How do I create a Very Special Event?',
-        'question': 'How do I create a Very Special Event?',
-        'type': 'faq',
-        'uid': '8367352'
-      },
-      'source': 'CUSTOM_SEARCHER'
-    }
-  ],
-  'resultsCount': 1,
-  'source': 'DOCUMENT_VERTICAL',
-  'verticalKey': 'faq_vector'
-}];
+        'rawData': {
+          'id': '4038721755206544552',
+          'name': 'How do I create a Very Special Event?',
+          'question': 'How do I create a Very Special Event?',
+          'type': 'faq',
+          'uid': '8367352'
+        },
+        'source': 'CUSTOM_SEARCHER'
+      }
+    ],
+    'resultsCount': 1,
+    'source': 'DOCUMENT_VERTICAL',
+    'verticalKey': 'faq_vector'
+  }
+];
 
 const gdaRequestUniversalResults: GenerativeDirectAnswerRequest = {
   searchId: 'testSeachId',

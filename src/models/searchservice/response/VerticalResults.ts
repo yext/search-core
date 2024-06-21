@@ -11,7 +11,7 @@ export interface VerticalResults {
   /** A array of {@link AppliedQueryFilter}s which were applied to the vertical results. */
   appliedQueryFilters: AppliedQueryFilter[],
   /** The duration of the query in milliseconds. */
-  queryDurationMillis: number,
+  queryDurationMillis?: number,
   /** An array of search {@link Result}s for the vertical. */
   results: Result[],
   /**

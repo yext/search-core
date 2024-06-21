@@ -9,5 +9,5 @@ The duration of the query in milliseconds.
 <b>Signature:</b>
 
 ```typescript
-queryDurationMillis: number;
+queryDurationMillis?: number;
 ```

@@ -858,7 +858,7 @@ export interface VerticalAutocompleteRequest extends SearchRequest {
 // @public
 export interface VerticalResults {
     appliedQueryFilters: AppliedQueryFilter[];
-    queryDurationMillis: number;
+    queryDurationMillis?: number;
     results: Result[];
     resultsCount: number;
     source: Source;
