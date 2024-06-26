@@ -16,14 +16,13 @@ export declare class SearchCore
 
 |  Constructor | Modifiers | Description |
 |  --- | --- | --- |
-|  [(constructor)(searchService, questionSubmissionService, autoCompleteService, generativeDirectAnswerService)](./search-core.searchcore._constructor_.md) |  | Constructs a new instance of the <code>SearchCore</code> class |
+|  [(constructor)(searchService, questionSubmissionService, autoCompleteService)](./search-core.searchcore._constructor_.md) |  | Constructs a new instance of the <code>SearchCore</code> class |
 
 ## Methods
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [filterSearch(request)](./search-core.searchcore.filtersearch.md) |  | Performs a filtersearch request against specified fields within a single vertical. |
-|  [generativeDirectAnswer(request)](./search-core.searchcore.generativedirectanswer.md) |  | Performs a generative direct answer request. |
 |  [submitQuestion(request)](./search-core.searchcore.submitquestion.md) |  | Submits a custom question to the Search API. |
 |  [universalAutocomplete(request)](./search-core.searchcore.universalautocomplete.md) |  | Performs an autocomplete request across all verticals. |
 |  [universalSearch(request)](./search-core.searchcore.universalsearch.md) |  | Performs a search across all verticals. |

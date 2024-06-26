@@ -74,9 +74,6 @@
 |  [FieldValueStaticFilter](./search-core.fieldvaluestaticfilter.md) | A [FieldValueFilter](./search-core.fieldvaluefilter.md) with the kind of filter specified to discriminate between static filter types. |
 |  [FilterSearchRequest](./search-core.filtersearchrequest.md) | Options for a filtersearch request. |
 |  [FilterSearchResponse](./search-core.filtersearchresponse.md) | The response of a filtersearch request. |
-|  [GenerativeDirectAnswerRequest](./search-core.generativedirectanswerrequest.md) | Options which can be specified for a generative direct answer request. |
-|  [GenerativeDirectAnswerResponse](./search-core.generativedirectanswerresponse.md) | A representation of a generative direct answer response. |
-|  [GenerativeDirectAnswerService](./search-core.generativedirectanswerservice.md) | A service for generative direct answer requests. |
 |  [HighlightedValue](./search-core.highlightedvalue.md) | A field value and its substring matches as emphasized by the Search API. |
 |  [HolidayHours](./search-core.holidayhours.md) | An interface for holiday hours to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->. |
 |  [Hours](./search-core.hours.md) | An interface for hours fields to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->. |

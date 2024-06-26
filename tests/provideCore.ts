@@ -4,13 +4,11 @@ import { QuestionSubmissionServiceImpl } from '../src/infra/QuestionSubmissionSe
 import { SearchServiceImpl } from '../src/infra/SearchServiceImpl';
 import { Endpoints } from '../src/models/core/Endpoints';
 import { provideCore } from '../src/provideCore';
-import { GenerativeDirectAnswerServiceImpl } from '../src/infra/GenerativeDirectAnswerServiceImpl';
 
 jest.mock('../src/SearchCore');
 jest.mock('../src/infra/AutocompleteServiceImpl');
 jest.mock('../src/infra/QuestionSubmissionServiceImpl');
 jest.mock('../src/infra/SearchServiceImpl');
-jest.mock('../src/infra/GenerativeDirectAnswerServiceImpl');
 
 it('can specify custom endpoints', () => {
   const customEndPoints: Required<Endpoints> = {
@@ -30,5 +28,4 @@ it('can specify custom endpoints', () => {
   expect(AutocompleteServiceImpl).toHaveBeenCalledWith(expectedObject, {}, {});
   expect(QuestionSubmissionServiceImpl).toHaveBeenCalledWith(expectedObject, {}, {});
   expect(SearchServiceImpl).toHaveBeenCalledWith(expectedObject, {}, {});
-  expect(GenerativeDirectAnswerServiceImpl).toHaveBeenCalledWith(expectedObject, {}, {});
 });

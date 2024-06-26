@@ -19,10 +19,6 @@ export {
 export { Environment } from './core/Environment';
 export { CloudRegion } from './core/CloudRegion';
 
-// Generative direct answer service
-export { GenerativeDirectAnswerRequest } from './generativedirectanswer/GenerativeDirectAnswerRequest';
-export { GenerativeDirectAnswerResponse } from './generativedirectanswer/GenerativeDirectAnswerResponse';
-
 // Autocomplete service
 export * from './autocompleteservice/AutocompleteRequest';
 export * from './autocompleteservice/AutocompleteResponse';
