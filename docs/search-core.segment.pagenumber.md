@@ -4,7 +4,7 @@
 
 ## Segment.pageNumber property
 
-The page number of a segment from a pdf
+The page number of the document that the segment came from. Populated only for pdf files.
 
 <b>Signature:</b>
 
