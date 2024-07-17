@@ -714,6 +714,7 @@ export interface SearchService {
 
 // @public
 export interface Segment {
+    pageNumber?: number;
     score: number;
     text: string;
 }
