@@ -272,6 +272,8 @@ export interface Endpoints {
     // (undocumented)
     filterSearch?: string;
     // (undocumented)
+    generativeDirectAnswer?: string;
+    // (undocumented)
     questionSubmission?: string;
     // (undocumented)
     status?: string;
@@ -375,6 +377,25 @@ export interface FilterSearchResponse {
         results: AutocompleteResult[];
     }[];
     uuid: string;
+}
+
+// @public
+export interface GenerativeDirectAnswerRequest extends SearchRequest {
+    results: VerticalResults[];
+    searchId: string;
+    searchTerm: string;
+}
+
+// @public
+export interface GenerativeDirectAnswerResponse {
+    citations: string[];
+    directAnswer: string;
+    resultStatus: string;
+}
+
+// @public
+export interface GenerativeDirectAnswerService {
+    generateAnswer(request: GenerativeDirectAnswerRequest): Promise<GenerativeDirectAnswerResponse>;
 }
 
 // @public
@@ -649,8 +670,9 @@ export interface SearchConfigWithToken extends BaseSearchConfig {
 
 // @public
 export class SearchCore {
-    constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService);
+    constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService, generativeDirectAnswerService: GenerativeDirectAnswerService);
     filterSearch(request: FilterSearchRequest): Promise<FilterSearchResponse>;
+    generativeDirectAnswer(request: GenerativeDirectAnswerRequest): Promise<GenerativeDirectAnswerResponse>;
     submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
     universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>;
     universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
@@ -837,7 +859,7 @@ export interface VerticalAutocompleteRequest extends SearchRequest {
 // @public
 export interface VerticalResults {
     appliedQueryFilters: AppliedQueryFilter[];
-    queryDurationMillis: number;
+    queryDurationMillis?: number;
     results: Result[];
     resultsCount: number;
     source: Source;
