@@ -26,6 +26,8 @@ export class ResultsFactory {
           return this.fromAlgoliaSearchEngine(result, resultIndex);
         case Source.DocumentVertical:
           return this.fromDocumentVertical(result, resultIndex);
+        case Source.FunctionVertical:
+          return this.fromFunctionVertical(result, resultIndex);
         default:
           return this.fromCustomSource(result, resultIndex);
       }
@@ -135,6 +137,19 @@ export class ResultsFactory {
       link: result.website,
       id: result.id,
       entityType: result.type,
+    };
+  }
+
+  public static fromFunctionVertical(result: any, index: number): Result {
+    const rawData = result.data ?? result;
+    return {
+      rawData: rawData,
+      source: Source.FunctionVertical,
+      index: index,
+      name: rawData.name,
+      description: rawData.description,
+      link: rawData.website,
+      id: rawData.id,
     };
   }
 }
