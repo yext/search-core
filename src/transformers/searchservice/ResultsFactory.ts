@@ -115,10 +115,18 @@ export class ResultsFactory {
   }
 
   private static fromCustomSource(result: any, index: number): Result {
+    return this.fromCustomSourceHelper(result, index, Source.Custom);
+  }
+
+  private static fromFunctionVertical(result: any, index: number): Result {
+    return this.fromCustomSourceHelper(result, index, Source.FunctionVertical);
+  }
+
+  private static fromCustomSourceHelper(result: any, index: number, source: Source): Result {
     const rawData = result.data ?? result;
     return {
       rawData: rawData,
-      source: Source.Custom,
+      source: source,
       index: index,
       name: rawData.name,
       description: rawData.description, // Do we want to truncate this like in the SDK?
@@ -137,19 +145,6 @@ export class ResultsFactory {
       link: result.website,
       id: result.id,
       entityType: result.type,
-    };
-  }
-
-  public static fromFunctionVertical(result: any, index: number): Result {
-    const rawData = result.data ?? result;
-    return {
-      rawData: rawData,
-      source: Source.FunctionVertical,
-      index: index,
-      name: rawData.name,
-      description: rawData.description,
-      link: rawData.website,
-      id: rawData.id,
     };
   }
 }

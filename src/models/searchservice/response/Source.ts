@@ -18,6 +18,6 @@ export enum Source {
   Custom = 'CUSTOM_SEARCHER',
   /** The result is from a document vertical. */
   DocumentVertical = 'DOCUMENT_VERTICAL',
-  /** The result is from a document vertical. */
+  /** The result is from a function vertical. */
   FunctionVertical = 'FUNCTION_VERTICAL',
 }
