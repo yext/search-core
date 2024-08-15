@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { provideCore } from '@yext/search-core';
-import verticalRequest from './requests/verticalRequest';
+import { verticalRequest, functionVerticalRequest } from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
 import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchRequest } from './requests/autocompleteRequests';
@@ -67,6 +67,13 @@ export async function generativeDirectAnswer() {
   const startTime = new Date().getTime();
   const data = await globalCore.generativeDirectAnswer(generativeDirectAnswerRequest);
   updateUI(data, startTime, 'Core Generative Direct Answer Response:');
+}
+
+export async function functionVerticalSearch() {
+  loadingSpinner();
+  const startTime = new Date().getTime();
+  const results = await globalCore.verticalSearch(functionVerticalRequest);
+  updateUI(results, startTime, 'Core Function Vertical Response:');
 }
 
 function loadingSpinner() {

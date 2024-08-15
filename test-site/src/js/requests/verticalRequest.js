@@ -1,6 +1,6 @@
 import { QueryTrigger } from '@yext/search-core';
 
-const verticalRequest = {
+export const verticalRequest = {
   verticalKey: 'people',
   query: 'virginia',
   queryTrigger: QueryTrigger.Initialize,
@@ -12,4 +12,7 @@ const verticalRequest = {
   referrerPageUrl: 'www.google.com/answers/not/ads'
 };
 
-export default verticalRequest;
+export const functionVerticalRequest = {
+  verticalKey: 'function_vertical',
+  query: 'virginia',
+};
