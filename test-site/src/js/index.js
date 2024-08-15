@@ -8,7 +8,7 @@ import generativeDirectAnswerRequest from './requests/generativeDirectAnswerRequ
 
 const coreConfig = {
   apiKey: process.env.API_KEY,
-  experienceKey: 'developer-support-test',
+  experienceKey: 'rosetest',
   locale: 'en',
   experienceVersion: 'PRODUCTION',
 };
