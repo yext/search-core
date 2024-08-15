@@ -1,5 +1,5 @@
 import { provideCore, SearchConfig, SearchCore, UniversalSearchRequest, UniversalSearchResponse } from '@yext/search-core';
-import verticalRequest from './requests/verticalRequest';
+import { verticalRequest, functionVerticalRequest } from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
 import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchRequest } from './requests/autocompleteRequests';
@@ -8,7 +8,7 @@ import initDirectAnswers from './initDirectAnswers';
 
 const coreConfig: SearchConfig = {
   apiKey: process.env.API_KEY,
-  experienceKey: 'slanswers',
+  experienceKey: 'developer-support-test',
   locale: 'en',
   experienceVersion: 'PRODUCTION',
 };
@@ -42,6 +42,13 @@ export async function verticalSearch(): Promise<void> {
   const startTime = new Date().getTime();
   const results = await globalCore.verticalSearch(verticalRequest);
   updateUI(results, startTime, 'Core Vertical Response:');
+}
+
+export async function functionVerticalSearch(): Promise<void> {
+  loadingSpinner();
+  const startTime = new Date().getTime();
+  const results = await globalCore.verticalSearch(functionVerticalRequest);
+  updateUI(results, startTime, 'Core Function Vertical Response:');
 }
 
 export async function submitQuestion(): Promise<void> {

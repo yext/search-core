@@ -761,6 +761,7 @@ export enum SortType {
 export enum Source {
     Custom = "CUSTOM_SEARCHER",
     DocumentVertical = "DOCUMENT_VERTICAL",
+    FunctionVertical = "FUNCTION_VERTICAL",
     Google = "GOOGLE_CSE",
     KnowledgeManager = "KNOWLEDGE_MANAGER"
 }

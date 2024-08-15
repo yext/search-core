@@ -20,6 +20,8 @@ export class ResultsFactory {
           return this.fromGoogleCustomSearchEngine(result, resultIndex);
         case Source.DocumentVertical:
           return this.fromDocumentVertical(result, resultIndex);
+        case Source.FunctionVertical:
+          return this.fromFunctionVertical(result, resultIndex);
         default:
           return this.fromCustomSource(result, resultIndex);
       }
@@ -72,10 +74,18 @@ export class ResultsFactory {
   }
 
   private static fromCustomSource(result: any, index: number): Result {
+    return this.fromCustomDataHelper(result, index, Source.Custom);
+  }
+
+  private static fromFunctionVertical(result: any, index: number): Result {
+    return this.fromCustomDataHelper(result, index, Source.FunctionVertical);
+  }
+
+  private static fromCustomDataHelper(result: any, index: number, source: Source): Result {
     const rawData = result.data ?? result;
     return {
       rawData: rawData,
-      source: Source.Custom,
+      source: source,
       index: index,
       name: rawData.name,
       description: rawData.description, // Do we want to truncate this like in the SDK?

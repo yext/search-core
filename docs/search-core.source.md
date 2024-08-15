@@ -14,7 +14,20 @@ export declare enum Source
 
 ## Enumeration Members
 
+<<<<<<< HEAD
 <table><thead><tr><th>
+=======
+|  Member | Value | Description |
+|  --- | --- | --- |
+|  Algolia | <code>&quot;ALGOLIA&quot;</code> | The result is from Algolia. |
+|  Bing | <code>&quot;BING_CSE&quot;</code> | The result is from Bing Search Engine. |
+|  Custom | <code>&quot;CUSTOM_SEARCHER&quot;</code> | The result was from a custom source. |
+|  DocumentVertical | <code>&quot;DOCUMENT_VERTICAL&quot;</code> | The result is from a document vertical. |
+|  FunctionVertical | <code>&quot;FUNCTION_VERTICAL&quot;</code> | The result is from a function vertical. |
+|  Google | <code>&quot;GOOGLE_CSE&quot;</code> | The result is from Google Custom Search Engine. |
+|  KnowledgeManager | <code>&quot;KNOWLEDGE_MANAGER&quot;</code> | The result is from a Knowledge Graph. |
+|  Zendesk | <code>&quot;ZENDESK&quot;</code> | The result is from Zendesk. |
+>>>>>>> 97e068e (search-core: add support for FunctionVertical (#271))
 
 Member
 
