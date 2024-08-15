@@ -115,14 +115,14 @@ export class ResultsFactory {
   }
 
   private static fromCustomSource(result: any, index: number): Result {
-    return this.fromCustomSourceHelper(result, index, Source.Custom);
+    return this.fromCustomDataHelper(result, index, Source.Custom);
   }
 
   private static fromFunctionVertical(result: any, index: number): Result {
-    return this.fromCustomSourceHelper(result, index, Source.FunctionVertical);
+    return this.fromCustomDataHelper(result, index, Source.FunctionVertical);
   }
 
-  private static fromCustomSourceHelper(result: any, index: number, source: Source): Result {
+  private static fromCustomDataHelper(result: any, index: number, source: Source): Result {
     const rawData = result.data ?? result;
     return {
       rawData: rawData,
