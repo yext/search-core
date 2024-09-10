@@ -105,3 +105,37 @@ it('properly transforms backend results from custom source', () => {
   const actualResults = ResultsFactory.create(genericData, Source.Custom);
   expect(expectedResults).toMatchObject(actualResults);
 });
+
+it('properly transforms backend results from function vertical', () => {
+  const genericData = [{
+    data: {
+      answer: 'You should still self\-quarantine for 14 days since your last exposure.',
+      c_organization: 'CDC',
+      id: 'iwasaroundsomeonewhohascovid19andmycovid19testcame',
+      website: 'https://www.cdc.gov/coronavirus/2019-ncov/faq.html',
+      name: 'Do I still need to quarantine for 14 days?',
+      description: 'COVID question 2'
+    },
+    highlightedFields: {}
+  }];
+
+  const expectedResults = [{
+    description: 'COVID question 2',
+    id: 'iwasaroundsomeonewhohascovid19andmycovid19testcame',
+    index: 1,
+    link: 'https://www.cdc.gov/coronavirus/2019-ncov/faq.html',
+    name: 'Do I still need to quarantine for 14 days?',
+    rawData: {
+      answer: 'You should still self\-quarantine for 14 days since your last exposure.',
+      c_organization: 'CDC',
+      id: 'iwasaroundsomeonewhohascovid19andmycovid19testcame',
+      website: 'https://www.cdc.gov/coronavirus/2019-ncov/faq.html',
+      name: 'Do I still need to quarantine for 14 days?',
+      description: 'COVID question 2'
+    },
+    source: Source.FunctionVertical
+  }];
+
+  const actualResults = ResultsFactory.create(genericData, Source.FunctionVertical);
+  expect(expectedResults).toMatchObject(actualResults);
+});

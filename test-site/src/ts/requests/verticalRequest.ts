@@ -1,6 +1,6 @@
 import { QueryTrigger, VerticalSearchRequest } from '@yext/search-core';
 
-const verticalRequest: VerticalSearchRequest = {
+export const verticalRequest: VerticalSearchRequest = {
   verticalKey: 'people',
   query: 'virginia',
   queryTrigger: QueryTrigger.Initialize,
@@ -17,4 +17,7 @@ const verticalRequest: VerticalSearchRequest = {
   }
 };
 
-export default verticalRequest;
+export const functionVerticalRequest: VerticalSearchRequest = {
+  verticalKey: 'function_vertical',
+  query: 'virginia',
+};
