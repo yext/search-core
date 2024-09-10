@@ -4,6 +4,6 @@
  * @public
  */
 export enum CloudChoice {
-    GLOBAL_MULTI = 'GLOBAL-MULTI', //All available cloud regions
-    GLOBAL_GCP = 'GLOBAL-GCP', //Only available GCP-backed cloud regions
+  GLOBAL_MULTI = 'GLOBAL-MULTI', //All available cloud regions
+  GLOBAL_GCP = 'GLOBAL-GCP', //Only available GCP-backed cloud regions
 }
