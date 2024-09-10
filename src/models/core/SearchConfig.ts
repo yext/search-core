@@ -2,6 +2,7 @@ import { Endpoints } from './Endpoints';
 import { Visitor } from './Visitor';
 import { Environment } from './Environment';
 import { CloudRegion } from './CloudRegion';
+import {CloudChoice} from "./CloudChoice";
 
 /**
  * The configuration options for getting the endpoints.
@@ -20,7 +21,13 @@ export interface ServingConfig {
    *
    * @public
    */
-  cloudRegion?: CloudRegion
+  cloudRegion?: CloudRegion,
+  /**
+   * {@inheritDoc CloudChoice}
+   *
+   * @public
+   */
+  cloudChoice?: CloudChoice
 }
 
 /**

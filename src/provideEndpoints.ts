@@ -1,7 +1,8 @@
-import { Endpoints } from './models/core/Endpoints';
-import { Environment } from './models/core/Environment';
-import { CloudRegion } from './models/core/CloudRegion';
-import { ServingConfig } from './models/core/SearchConfig';
+import {Endpoints} from './models/core/Endpoints';
+import {Environment} from './models/core/Environment';
+import {CloudRegion} from './models/core/CloudRegion';
+import {ServingConfig} from './models/core/SearchConfig';
+import {CloudChoice} from "./models/core/CloudChoice";
 
 export const defaultApiVersion = 20220511;
 
@@ -13,15 +14,18 @@ export const defaultApiVersion = 20220511;
 export class EndpointsFactory {
   private readonly environment: Environment;
   private readonly cloudRegion: CloudRegion;
+  private readonly cloudChoice: CloudChoice;
 
   constructor(config?: ServingConfig) {
     this.environment = config?.environment || Environment.PROD;
     this.cloudRegion = config?.cloudRegion || CloudRegion.US;
+    this.cloudChoice = config?.cloudChoice || CloudChoice.GLOBAL_MULTI;
   }
 
   /** Provides the domain based on environment and cloud region. */
   getDomain() {
-    return `https://${this.environment}-cdn.${this.cloudRegion}.yextapis.com`;
+    const cloudChoiceSuffix = this.cloudChoice === CloudChoice.GLOBAL_GCP ? '-gcp' : '';
+    return `https://${this.environment}-cdn${cloudChoiceSuffix}.${this.cloudRegion}.yextapis.com`;
   }
 
   /** Provides all endpoints based on environment and cloud region. */
@@ -46,5 +50,5 @@ export class EndpointsFactory {
  * @public
  */
 export const SandboxEndpoints: Required<Endpoints> =
-  new EndpointsFactory({ environment: Environment.SANDBOX, cloudRegion: CloudRegion.US })
+  new EndpointsFactory({ environment: Environment.SANDBOX, cloudRegion: CloudRegion.US, cloudChoice: CloudChoice.GLOBAL_MULTI })
     .getEndpoints();
