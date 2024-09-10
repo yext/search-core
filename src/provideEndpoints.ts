@@ -50,5 +50,8 @@ export class EndpointsFactory {
  * @public
  */
 export const SandboxEndpoints: Required<Endpoints> =
-  new EndpointsFactory({ environment: Environment.SANDBOX, cloudRegion: CloudRegion.US, cloudChoice: CloudChoice.GLOBAL_MULTI })
+  new EndpointsFactory({
+    environment: Environment.SANDBOX,
+    cloudRegion: CloudRegion.US,
+    cloudChoice: CloudChoice.GLOBAL_MULTI })
     .getEndpoints();
