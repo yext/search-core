@@ -42,59 +42,6 @@ it('properly transforms Knowledge Graph results', () => {
   expect(expectedResults).toMatchObject(actualResults);
 });
 
-it('properly transforms Zendesk results', () => {
-  const zendeskData = [{
-    html_url: 'https://help.yext.com/',
-    id: 8273729837,
-    snippet: 'Enter the Preview link into the text box.',
-    title: 'Add Custom Schema.org Markup',
-  }];
-
-  const expectedResults = [{
-    description: 'Enter the Preview link into the text box.',
-    index: 1,
-    link: 'https://help.yext.com/',
-    name: 'Add Custom Schema.org Markup',
-    rawData: {
-      html_url: 'https://help.yext.com/',
-      id: 8273729837,
-      snippet: 'Enter the Preview link into the text box.',
-      title: 'Add Custom Schema.org Markup',
-    },
-    source: 'ZENDESK',
-  }];
-
-  const actualResults = ResultsFactory.create(zendeskData, Source.Zendesk);
-  expect(expectedResults).toMatchObject(actualResults);
-});
-
-it('properly transforms Algolia results', () => {
-  const algoliaData = [{
-    location: 'Atlanta',
-    logoUrl: 'Hawks_Atlanta.gif',
-    name: 'Hawks',
-    objectID: '49688642',
-    score: 595.5714285714286
-  }];
-
-  const expectedResults = [{
-    id: '49688642',
-    index: 1,
-    name: 'Hawks',
-    rawData: {
-      location: 'Atlanta',
-      logoUrl: 'Hawks_Atlanta.gif',
-      name: 'Hawks',
-      objectID: '49688642',
-      score: 595.5714285714286,
-    },
-    source: 'ALGOLIA',
-  }];
-
-  const actualResults = ResultsFactory.create(algoliaData, Source.Algolia);
-  expect(expectedResults).toMatchObject(actualResults);
-});
-
 it('properly transforms Google Custom Search results', () => {
   const googleData = [{
     displayLink: 'www.yext.com',
@@ -118,32 +65,6 @@ it('properly transforms Google Custom Search results', () => {
   }];
 
   const actualResults = ResultsFactory.create(googleData, Source.Google);
-  expect(expectedResults).toMatchObject(actualResults);
-});
-
-it('properly transforms Bing search results', () => {
-  const bingData = [{
-    displayUrl: 'www.yext.com/support',
-    name: 'Yext support',
-    snippet: 'Get help from Yext',
-    url: 'http://www.yext.com/support'
-  }];
-
-  const expectedResults = [{
-    description: 'Get help from Yext',
-    index: 1,
-    link: 'http://www.yext.com/support',
-    name: 'Yext support',
-    rawData: {
-      displayUrl: 'www.yext.com/support',
-      name: 'Yext support',
-      snippet: 'Get help from Yext',
-      url: 'http://www.yext.com/support',
-    },
-    source: 'BING_CSE',
-  }];
-
-  const actualResults = ResultsFactory.create(bingData, Source.Bing);
   expect(expectedResults).toMatchObject(actualResults);
 });
 

@@ -18,12 +18,6 @@ export class ResultsFactory {
           return this.fromKnowledgeManager(result, resultIndex);
         case Source.Google:
           return this.fromGoogleCustomSearchEngine(result, resultIndex);
-        case Source.Bing:
-          return this.fromBingCustomSearchEngine(result, resultIndex);
-        case Source.Zendesk:
-          return this.fromZendeskSearchEngine(result, resultIndex);
-        case Source.Algolia:
-          return this.fromAlgoliaSearchEngine(result, resultIndex);
         case Source.DocumentVertical:
           return this.fromDocumentVertical(result, resultIndex);
         case Source.FunctionVertical:
@@ -76,41 +70,6 @@ export class ResultsFactory {
       name: rawData.htmlTitle.replace(/(<([^>]+)>)/ig, ''),
       description: rawData.htmlSnippet,
       link: rawData.link
-    };
-  }
-
-  private static fromBingCustomSearchEngine(result: any, index: number): Result {
-    const rawData = result.data ?? result;
-    return {
-      rawData: rawData,
-      source: Source.Bing,
-      index: index,
-      name: rawData.name,
-      description: rawData.snippet,
-      link: rawData.url
-    };
-  }
-
-  private static fromZendeskSearchEngine(result: any, index: number): Result {
-    const rawData = result.data ?? result;
-    return {
-      rawData: rawData,
-      source: Source.Zendesk,
-      index: index,
-      name: rawData.title,
-      description: rawData.snippet,
-      link: rawData.html_url
-    };
-  }
-
-  private static fromAlgoliaSearchEngine(result: any, index: number): Result {
-    const rawData = result.data ?? result;
-    return {
-      rawData: rawData,
-      source: Source.Algolia,
-      index: index,
-      name: rawData.name,
-      id: rawData.objectID
     };
   }
 

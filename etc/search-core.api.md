@@ -750,14 +750,11 @@ export enum SortType {
 
 // @public
 export enum Source {
-    Algolia = "ALGOLIA",
-    Bing = "BING_CSE",
     Custom = "CUSTOM_SEARCHER",
     DocumentVertical = "DOCUMENT_VERTICAL",
     FunctionVertical = "FUNCTION_VERTICAL",
     Google = "GOOGLE_CSE",
-    KnowledgeManager = "KNOWLEDGE_MANAGER",
-    Zendesk = "ZENDESK"
+    KnowledgeManager = "KNOWLEDGE_MANAGER"
 }
 
 // @public
