@@ -16,6 +16,7 @@ export interface ServingConfig
 
 |  Property | Type | Description |
 |  --- | --- | --- |
+|  [cloudChoice?](./search-core.servingconfig.cloudchoice.md) | [CloudChoice](./search-core.cloudchoice.md) | <i>(Optional)</i> Defines the cloud choice of the API domains. |
 |  [cloudRegion?](./search-core.servingconfig.cloudregion.md) | [CloudRegion](./search-core.cloudregion.md) | <i>(Optional)</i> Defines the cloud region of the API domains. |
 |  [environment?](./search-core.servingconfig.environment.md) | [Environment](./search-core.environment.md) | <i>(Optional)</i> Defines the environment of the API domains. |
 

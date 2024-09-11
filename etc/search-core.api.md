@@ -167,6 +167,14 @@ export interface ClientSDKHeaderValues {
 }
 
 // @public
+export enum CloudChoice {
+    // (undocumented)
+    GLOBAL_GCP = "GLOBAL-GCP",
+    // (undocumented)
+    GLOBAL_MULTI = "GLOBAL-MULTI"
+}
+
+// @public
 export enum CloudRegion {
     // (undocumented)
     EU = "eu",
@@ -699,6 +707,7 @@ export interface Segment {
 
 // @public
 export interface ServingConfig {
+    cloudChoice?: CloudChoice;
     cloudRegion?: CloudRegion;
     environment?: Environment;
 }
