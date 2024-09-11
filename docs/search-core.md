@@ -17,6 +17,7 @@
 |  --- | --- |
 |  [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md) | Represents the type of [AppliedQueryFilter](./search-core.appliedqueryfilter.md) applied to a search. |
 |  [BuiltInFieldType](./search-core.builtinfieldtype.md) | Possible built-in field types for [DirectAnswer.fieldType](./search-core.directanswer.fieldtype.md)<!-- -->. |
+|  [CloudChoice](./search-core.cloudchoice.md) | Defines the cloud choice of the API domains. |
 |  [CloudRegion](./search-core.cloudregion.md) | Defines the cloud region of the API domains. |
 |  [DirectAnswerType](./search-core.directanswertype.md) | Represents the type of direct answer. |
 |  [Direction](./search-core.direction.md) | The direction of a sort. |

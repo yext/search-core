@@ -18,6 +18,7 @@ export {
 } from './core/AdditionalHttpHeaders';
 export { Environment } from './core/Environment';
 export { CloudRegion } from './core/CloudRegion';
+export { CloudChoice } from './core/CloudChoice';
 
 // Autocomplete service
 export * from './autocompleteservice/AutocompleteRequest';
