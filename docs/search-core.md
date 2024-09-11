@@ -43,6 +43,7 @@ Represents an error
 
 ## Enumerations
 
+<<<<<<< HEAD
 <table><thead><tr><th>
 
 Enumeration
@@ -242,6 +243,27 @@ Represents the type of spell check performed.
 
 </td></tr>
 </tbody></table>
+=======
+|  Enumeration | Description |
+|  --- | --- |
+|  [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md) | Represents the type of [AppliedQueryFilter](./search-core.appliedqueryfilter.md) applied to a search. |
+|  [BuiltInFieldType](./search-core.builtinfieldtype.md) | Possible built-in field types for [DirectAnswer.fieldType](./search-core.directanswer.fieldtype.md)<!-- -->. |
+|  [CloudChoice](./search-core.cloudchoice.md) | Defines the cloud choice of the API domains. |
+|  [CloudRegion](./search-core.cloudregion.md) | Defines the cloud region of the API domains. |
+|  [DirectAnswerType](./search-core.directanswertype.md) | Represents the type of direct answer. |
+|  [Direction](./search-core.direction.md) | The direction of a sort. |
+|  [Environment](./search-core.environment.md) | Defines the environment of the API domains. |
+|  [ErrorType](./search-core.errortype.md) | Identifier for the type of error causing the failure. |
+|  [FilterCombinator](./search-core.filtercombinator.md) | Indicates how child filters in a [StaticFilter](./search-core.staticfilter.md) should be combined. |
+|  [LocationBiasMethod](./search-core.locationbiasmethod.md) | The method used to determine the location. |
+|  [Matcher](./search-core.matcher.md) | A Matcher is a filtering operation. |
+|  [QuerySource](./search-core.querysource.md) | The source of the search request. |
+|  [QueryTrigger](./search-core.querytrigger.md) | Describes the ways a search can be executed besides user input. |
+|  [SearchIntent](./search-core.searchintent.md) | Represents intents from the Search API. |
+|  [SortType](./search-core.sorttype.md) | The method of sorting. |
+|  [Source](./search-core.source.md) | Represents the source of a [Result](./search-core.result.md)<!-- -->. |
+|  [SpellCheckType](./search-core.spellchecktype.md) | Represents the type of spell check performed. |
+>>>>>>> 7a02721 (search-core: add cloudChoice enum and config support (#277))
 
 ## Functions
 

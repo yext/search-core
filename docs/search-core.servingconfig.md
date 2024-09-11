@@ -14,7 +14,15 @@ export interface ServingConfig
 
 ## Properties
 
+<<<<<<< HEAD
 <table><thead><tr><th>
+=======
+|  Property | Type | Description |
+|  --- | --- | --- |
+|  [cloudChoice?](./search-core.servingconfig.cloudchoice.md) | [CloudChoice](./search-core.cloudchoice.md) | <i>(Optional)</i> Defines the cloud choice of the API domains. |
+|  [cloudRegion?](./search-core.servingconfig.cloudregion.md) | [CloudRegion](./search-core.cloudregion.md) | <i>(Optional)</i> Defines the cloud region of the API domains. |
+|  [environment?](./search-core.servingconfig.environment.md) | [Environment](./search-core.environment.md) | <i>(Optional)</i> Defines the environment of the API domains. |
+>>>>>>> 7a02721 (search-core: add cloudChoice enum and config support (#277))
 
 Property
 
