@@ -1,8 +1,8 @@
-import {Endpoints} from './models/core/Endpoints';
-import {Environment} from './models/core/Environment';
-import {CloudRegion} from './models/core/CloudRegion';
-import {ServingConfig} from './models/core/SearchConfig';
-import {CloudChoice} from './models/core/CloudChoice';
+import { Endpoints } from './models/core/Endpoints';
+import { Environment } from './models/core/Environment';
+import { CloudRegion } from './models/core/CloudRegion';
+import { ServingConfig } from './models/core/SearchConfig';
+import { CloudChoice } from './models/core/CloudChoice';
 
 export const defaultApiVersion = 20220511;
 
