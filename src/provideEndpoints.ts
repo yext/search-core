@@ -1,8 +1,8 @@
-import { Endpoints } from './models/core/Endpoints';
-import { Environment } from './models/core/Environment';
-import { CloudRegion } from './models/core/CloudRegion';
-import { ServingConfig } from './models/core/SearchConfig';
-import { CloudChoice } from './models/core/CloudChoice';
+import {Endpoints} from './models/core/Endpoints';
+import {Environment} from './models/core/Environment';
+import {CloudRegion} from './models/core/CloudRegion';
+import {ServingConfig} from './models/core/SearchConfig';
+import {CloudChoice} from './models/core/CloudChoice';
 
 export const defaultApiVersion = 20220511;
 
@@ -24,8 +24,13 @@ export class EndpointsFactory {
 
   /** Provides the domain based on environment and cloud region. */
   getDomain() {
-    const cloudChoiceSuffix = this.cloudChoice === CloudChoice.GLOBAL_GCP ? '-gcp' : '';
-    return `https://${this.environment}-cdn${cloudChoiceSuffix}.${this.cloudRegion}.yextapis.com`;
+    switch (this.cloudChoice){
+      case CloudChoice.GLOBAL_GCP:
+        return `https://${this.environment}-cdn-gcp.${this.cloudRegion}.yextapis.com`;
+      case CloudChoice.GLOBAL_MULTI:
+      default:
+        return `https://${this.environment}-cdn.${this.cloudRegion}.yextapis.com`;
+    }
   }
 
   /** Provides all endpoints based on environment and cloud region. */
