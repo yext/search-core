@@ -26,6 +26,17 @@ export class EndpointsFactory {
   getDomain() {
     switch (this.cloudChoice){
       case CloudChoice.GLOBAL_GCP:
+        return `https://${this.environment}-cdn-gcp.${this.cloudRegion}.yextapis.com`;
+      case CloudChoice.GLOBAL_MULTI:
+      default:
+        return `https://${this.environment}-cdn.${this.cloudRegion}.yextapis.com`;
+    }
+  }
+
+  /** Provides the cached domain based on environment and cloud region. */
+  getCachedDomain() {
+    switch (this.cloudChoice){
+      case CloudChoice.GLOBAL_GCP:
         return `https://${this.environment}-cdn-cached-gcp.${this.cloudRegion}.yextapis.com`;
       case CloudChoice.GLOBAL_MULTI:
       default:
@@ -40,8 +51,8 @@ export class EndpointsFactory {
       verticalSearch: `${this.getDomain()}/v2/accounts/me/search/vertical/query`,
       questionSubmission: `${this.getDomain()}/v2/accounts/me/createQuestion`,
       status: 'https://answersstatus.pagescdn.com',
-      universalAutocomplete: `${this.getDomain()}/v2/accounts/me/search/autocomplete`,
-      verticalAutocomplete: `${this.getDomain()}/v2/accounts/me/search/vertical/autocomplete`,
+      universalAutocomplete: `${this.getCachedDomain()}/v2/accounts/me/search/autocomplete`,
+      verticalAutocomplete: `${this.getCachedDomain()}/v2/accounts/me/search/vertical/autocomplete`,
       filterSearch: `${this.getDomain()}/v2/accounts/me/search/filtersearch`,
     };
   }
