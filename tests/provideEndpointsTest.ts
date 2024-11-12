@@ -7,7 +7,7 @@ it('Sandbox, US, Multi produces expected endpoint', () => {
     cloudRegion: CloudRegion.US,
     cloudChoice: CloudChoice.GLOBAL_MULTI
   }).getEndpoints();
-  expect(endPoints).toHaveProperty('universalSearch', 'https://sbx-cdn-cached.us.yextapis.com/v2/accounts/me/search/query');
+  expect(endPoints).toHaveProperty('universalSearch', 'https://sbx-cdn.us.yextapis.com/v2/accounts/me/search/query');
 });
 
 it('Prod, US, Multi produces expected endpoint', () => {
@@ -16,7 +16,7 @@ it('Prod, US, Multi produces expected endpoint', () => {
     cloudRegion: CloudRegion.US,
     cloudChoice: CloudChoice.GLOBAL_MULTI
   }).getEndpoints();
-  expect(endPoints).toHaveProperty('verticalSearch', 'https://prod-cdn-cached.us.yextapis.com/v2/accounts/me/search/vertical/query');
+  expect(endPoints).toHaveProperty('verticalSearch', 'https://prod-cdn.us.yextapis.com/v2/accounts/me/search/vertical/query');
 });
 
 it('Prod, US, GCP produces expected endpoint', () => {
@@ -43,5 +43,5 @@ it('Prod, EU, GCP produces expected endpoint', () => {
     cloudRegion: CloudRegion.EU,
     cloudChoice: CloudChoice.GLOBAL_GCP
   }).getEndpoints();
-  expect(endPoints).toHaveProperty('filterSearch', 'https://prod-cdn-cached-gcp.eu.yextapis.com/v2/accounts/me/search/filtersearch');
+  expect(endPoints).toHaveProperty('filterSearch', 'https://prod-cdn-gcp.eu.yextapis.com/v2/accounts/me/search/filtersearch');
 });
