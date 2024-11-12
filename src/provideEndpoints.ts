@@ -26,10 +26,10 @@ export class EndpointsFactory {
   getDomain() {
     switch (this.cloudChoice){
       case CloudChoice.GLOBAL_GCP:
-        return `https://${this.environment}-cdn-gcp.${this.cloudRegion}.yextapis.com`;
+        return `https://${this.environment}-cdn-cached-gcp.${this.cloudRegion}.yextapis.com`;
       case CloudChoice.GLOBAL_MULTI:
       default:
-        return `https://${this.environment}-cdn.${this.cloudRegion}.yextapis.com`;
+        return `https://${this.environment}-cdn-cached.${this.cloudRegion}.yextapis.com`;
     }
   }
 
