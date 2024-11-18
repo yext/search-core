@@ -1,6 +1,6 @@
 {
   "name": "@yext/search-core",
-  "version": "2.5.4",
+  "version": "2.5.6",
   "description": "Typescript Networking Library for the Yext Search API",
   "main": "./dist/commonjs/src/index.js",
   "module": "./dist/esm/src/index.js",
@@ -54,8 +54,8 @@
   "homepage": "https://github.com/yext/search-core#readme",
   "devDependencies": {
     "@babel/core": "^7.12.3",
-    "@babel/plugin-transform-runtime": "^7.12.10",
-    "@babel/preset-env": "^7.12.1",
+    "@babel/plugin-transform-runtime": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
     "@babel/preset-typescript": "^7.12.1",
     "@microsoft/api-documenter": "^7.13.76",
     "@microsoft/api-extractor": "^7.19.2",
