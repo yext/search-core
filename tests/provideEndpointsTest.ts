@@ -25,7 +25,7 @@ it('Prod, US, GCP produces expected endpoint', () => {
     cloudRegion: CloudRegion.US,
     cloudChoice: CloudChoice.GLOBAL_GCP
   }).getEndpoints();
-  expect(endPoints).toHaveProperty('universalAutocomplete', 'https://prod-cdn-gcp.us.yextapis.com/v2/accounts/me/search/autocomplete');
+  expect(endPoints).toHaveProperty('universalAutocomplete', 'https://prod-cdn-cached-gcp.us.yextapis.com/v2/accounts/me/search/autocomplete');
 });
 
 it('Prod, EU, Multi produces expected endpoint', () => {
@@ -34,7 +34,7 @@ it('Prod, EU, Multi produces expected endpoint', () => {
     cloudRegion: CloudRegion.EU,
     cloudChoice: CloudChoice.GLOBAL_MULTI
   }).getEndpoints();
-  expect(endPoints).toHaveProperty('verticalAutocomplete', 'https://prod-cdn.eu.yextapis.com/v2/accounts/me/search/vertical/autocomplete');
+  expect(endPoints).toHaveProperty('verticalAutocomplete', 'https://prod-cdn-cached.eu.yextapis.com/v2/accounts/me/search/vertical/autocomplete');
 });
 
 it('Prod, EU, GCP produces expected endpoint', () => {
