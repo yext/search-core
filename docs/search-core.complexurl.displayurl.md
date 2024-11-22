@@ -4,7 +4,7 @@
 
 ## ComplexURL.displayUrl property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 displayUrl?: string;

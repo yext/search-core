@@ -6,7 +6,7 @@
 
 A representation of a response from a vertical search.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 allResultsForVertical?: VerticalSearchResponse;

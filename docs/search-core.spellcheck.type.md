@@ -6,7 +6,7 @@
 
 The type of spell check.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 type: SpellCheckType;

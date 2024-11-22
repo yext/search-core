@@ -6,7 +6,7 @@
 
 Information about the user's location.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 locationBias?: LocationBias;

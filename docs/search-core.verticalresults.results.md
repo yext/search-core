@@ -6,7 +6,7 @@
 
 An array of search [Result](./search-core.result.md)<!-- -->s for the vertical.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 results: Result[];

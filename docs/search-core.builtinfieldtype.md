@@ -6,7 +6,7 @@
 
 Possible built-in field types for [DirectAnswer.fieldType](./search-core.directanswer.fieldtype.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum BuiltInFieldType 
@@ -14,25 +14,286 @@ export declare enum BuiltInFieldType
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  Address | <code>&quot;address&quot;</code> |  |
-|  AndroidAppURL | <code>&quot;android_app_url&quot;</code> |  |
-|  ComplexURL | <code>&quot;complex_url&quot;</code> |  |
-|  Decimal | <code>&quot;decimal&quot;</code> |  |
-|  Email | <code>&quot;email&quot;</code> |  |
-|  FacebookURL | <code>&quot;facebook_url&quot;</code> |  |
-|  Hours | <code>&quot;hours&quot;</code> |  |
-|  Html | <code>&quot;html&quot;</code> |  |
-|  InstagramHandle | <code>&quot;instagram_handle&quot;</code> |  |
-|  Integer | <code>&quot;integer&quot;</code> |  |
-|  IOSAppURL | <code>&quot;ios_app_url&quot;</code> |  |
-|  Markdown | <code>&quot;markdown&quot;</code> |  |
-|  MultiLineText | <code>&quot;multi_line_text&quot;</code> |  |
-|  Phone | <code>&quot;phone&quot;</code> |  |
-|  RichText | <code>&quot;rich_text&quot;</code> |  |
-|  RichText\_v2 | <code>&quot;rich_text_v2&quot;</code> |  |
-|  SingleLineText | <code>&quot;single_line_text&quot;</code> |  |
-|  TwitterHandle | <code>&quot;twitter_handle&quot;</code> |  |
-|  URL | <code>&quot;url&quot;</code> |  |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+Address
+
+
+</td><td>
+
+`"address"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+AndroidAppURL
+
+
+</td><td>
+
+`"android_app_url"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+ComplexURL
+
+
+</td><td>
+
+`"complex_url"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+Decimal
+
+
+</td><td>
+
+`"decimal"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+Email
+
+
+</td><td>
+
+`"email"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+FacebookURL
+
+
+</td><td>
+
+`"facebook_url"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+Hours
+
+
+</td><td>
+
+`"hours"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+Html
+
+
+</td><td>
+
+`"html"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+InstagramHandle
+
+
+</td><td>
+
+`"instagram_handle"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+Integer
+
+
+</td><td>
+
+`"integer"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+IOSAppURL
+
+
+</td><td>
+
+`"ios_app_url"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+Markdown
+
+
+</td><td>
+
+`"markdown"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+MultiLineText
+
+
+</td><td>
+
+`"multi_line_text"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+Phone
+
+
+</td><td>
+
+`"phone"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+RichText
+
+
+</td><td>
+
+`"rich_text"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+RichText\_v2
+
+
+</td><td>
+
+`"rich_text_v2"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+SingleLineText
+
+
+</td><td>
+
+`"single_line_text"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+TwitterHandle
+
+
+</td><td>
+
+`"twitter_handle"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+URL
+
+
+</td><td>
+
+`"url"`
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

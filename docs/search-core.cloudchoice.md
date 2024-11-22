@@ -6,7 +6,7 @@
 
 Defines the cloud choice of the API domains.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum CloudChoice 
@@ -14,8 +14,48 @@ export declare enum CloudChoice
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  GLOBAL\_GCP | <code>&quot;GLOBAL-GCP&quot;</code> |  |
-|  GLOBAL\_MULTI | <code>&quot;GLOBAL-MULTI&quot;</code> |  |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+GLOBAL\_GCP
+
+
+</td><td>
+
+`"GLOBAL-GCP"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+GLOBAL\_MULTI
+
+
+</td><td>
+
+`"GLOBAL-MULTI"`
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

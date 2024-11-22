@@ -6,7 +6,7 @@
 
 Additional information about the question.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 questionDescription?: string;

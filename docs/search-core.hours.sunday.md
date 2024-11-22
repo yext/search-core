@@ -4,7 +4,7 @@
 
 ## Hours.sunday property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 sunday?: DayHour;

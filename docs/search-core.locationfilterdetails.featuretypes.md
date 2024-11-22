@@ -6,7 +6,7 @@
 
 The location's classification (e.g. locality, region, address).
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 featureTypes: string[];

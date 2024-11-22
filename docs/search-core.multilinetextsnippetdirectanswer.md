@@ -6,17 +6,72 @@
 
 A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'multi\_line\_text' field type.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface MultiLineTextSnippetDirectAnswer extends BaseFeaturedSnippetDirectAnswer<string> 
 ```
-<b>Extends:</b> [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md)<!-- -->&lt;string&gt;
+**Extends:** [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md)<!-- -->&lt;string&gt;
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [fieldType](./search-core.multilinetextsnippetdirectanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.MultiLineText](./search-core.builtinfieldtype.md)<!-- -->&gt; | The field type of the direct answer. |
-|  [value](./search-core.multilinetextsnippetdirectanswer.value.md) | string | The value of the direct answer. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[fieldType](./search-core.multilinetextsnippetdirectanswer.fieldtype.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.MultiLineText](./search-core.builtinfieldtype.md)<!-- -->&gt;
+
+
+</td><td>
+
+The field type of the direct answer.
+
+
+</td></tr>
+<tr><td>
+
+[value](./search-core.multilinetextsnippetdirectanswer.value.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The value of the direct answer.
+
+
+</td></tr>
+</tbody></table>

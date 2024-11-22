@@ -6,14 +6,14 @@
 
 A mapping of fields to the values emphasized by the Search API.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export declare type HighlightedFields = {
+export type HighlightedFields = {
     [fieldId: string]: HighlightedValue | HighlightedValue[] | HighlightedFields | HighlightedFields[];
 };
 ```
-<b>References:</b> [HighlightedValue](./search-core.highlightedvalue.md)<!-- -->, [HighlightedFields](./search-core.highlightedfields.md)
+**References:** [HighlightedValue](./search-core.highlightedvalue.md)<!-- -->, [HighlightedFields](./search-core.highlightedfields.md)
 
 ## Remarks
 

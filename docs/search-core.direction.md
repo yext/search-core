@@ -6,7 +6,7 @@
 
 The direction of a sort.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum Direction 
@@ -14,8 +14,52 @@ export declare enum Direction
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  Ascending | <code>&quot;ASC&quot;</code> | An ascending sort |
-|  Descending | <code>&quot;DESC&quot;</code> | A descending soft |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+Ascending
+
+
+</td><td>
+
+`"ASC"`
+
+
+</td><td>
+
+An ascending sort
+
+
+</td></tr>
+<tr><td>
+
+Descending
+
+
+</td><td>
+
+`"DESC"`
+
+
+</td><td>
+
+A descending soft
+
+
+</td></tr>
+</tbody></table>

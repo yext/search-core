@@ -6,7 +6,7 @@
 
 Represents the type of [AppliedQueryFilter](./search-core.appliedqueryfilter.md) applied to a search.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 type: AppliedQueryFilterType;

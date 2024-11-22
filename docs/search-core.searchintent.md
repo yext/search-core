@@ -6,7 +6,7 @@
 
 Represents intents from the Search API.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum SearchIntent 
@@ -14,7 +14,36 @@ export declare enum SearchIntent
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  NearMe | <code>&quot;NEAR_ME&quot;</code> | The Search API is requesting a prompt for the user's location. |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+NearMe
+
+
+</td><td>
+
+`"NEAR_ME"`
+
+
+</td><td>
+
+The Search API is requesting a prompt for the user's location.
+
+
+</td></tr>
+</tbody></table>

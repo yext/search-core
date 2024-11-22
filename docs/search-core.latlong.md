@@ -6,7 +6,7 @@
 
 The latitude and longitude of the user making the request. Used to bias the results.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface LatLong 
@@ -18,8 +18,63 @@ If omitted from a request, Yext will attempt to determine the location.
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [latitude](./search-core.latlong.latitude.md) | number | Latitude formatted as a decimal degree number. |
-|  [longitude](./search-core.latlong.longitude.md) | number | Longitude formatted as a decimal degree number. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[latitude](./search-core.latlong.latitude.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+Latitude formatted as a decimal degree number.
+
+
+</td></tr>
+<tr><td>
+
+[longitude](./search-core.latlong.longitude.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+Longitude formatted as a decimal degree number.
+
+
+</td></tr>
+</tbody></table>

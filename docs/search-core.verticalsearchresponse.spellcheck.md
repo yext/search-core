@@ -6,7 +6,7 @@
 
 A spellcheck response from a search query.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 spellCheck?: SpellCheck;

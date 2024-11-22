@@ -6,7 +6,7 @@
 
 The total number of results within the vertical.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 resultsCount: number;

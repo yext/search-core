@@ -4,7 +4,7 @@
 
 ## Address.extraDescription property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 extraDescription?: string;

@@ -6,7 +6,7 @@
 
 Identifier for the type of error causing the failure.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 errorType: ErrorType;

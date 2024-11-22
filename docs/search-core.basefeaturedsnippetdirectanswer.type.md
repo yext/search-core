@@ -6,7 +6,7 @@
 
 Indicates that the DirectAnswer is a [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 type: DirectAnswerType.FeaturedSnippet;

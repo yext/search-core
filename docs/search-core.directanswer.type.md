@@ -6,7 +6,7 @@
 
 The [DirectAnswerType](./search-core.directanswertype.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 type: DirectAnswerType;

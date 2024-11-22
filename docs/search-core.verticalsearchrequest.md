@@ -6,33 +6,376 @@
 
 Options which can be specified for a vertical search.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface VerticalSearchRequest extends SearchRequest 
 ```
-<b>Extends:</b> [SearchRequest](./search-core.searchrequest.md)
+**Extends:** [SearchRequest](./search-core.searchrequest.md)
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [context?](./search-core.verticalsearchrequest.context.md) | [Context](./search-core.context.md) | <i>(Optional)</i> Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->. |
-|  [facets?](./search-core.verticalsearchrequest.facets.md) | [Facet](./search-core.facet.md)<!-- -->\[\] | <i>(Optional)</i> The facet filters to apply to the search. |
-|  [limit?](./search-core.verticalsearchrequest.limit.md) | number | <i>(Optional)</i> The maximum number of results to include with a max of 50. |
-|  [location?](./search-core.verticalsearchrequest.location.md) | [LatLong](./search-core.latlong.md) | <i>(Optional)</i> The latitude and longitude of the user making the request. Used to bias the results. |
-|  [locationRadius?](./search-core.verticalsearchrequest.locationradius.md) | number | <i>(Optional)</i> The radius (in meters) to filter the vertical search by. |
-|  [offset?](./search-core.verticalsearchrequest.offset.md) | number | <i>(Optional)</i> The result offset which allows for fetching more results with the same query. |
-|  [query](./search-core.verticalsearchrequest.query.md) | string | The search query. |
-|  [queryId?](./search-core.verticalsearchrequest.queryid.md) | string | <i>(Optional)</i> The queryId for the query, if this is a repeat query. |
-|  [querySource?](./search-core.verticalsearchrequest.querysource.md) | [QuerySource](./search-core.querysource.md) \| string | <i>(Optional)</i> The source of the search request. |
-|  [queryTrigger?](./search-core.verticalsearchrequest.querytrigger.md) | [QueryTrigger](./search-core.querytrigger.md) | <i>(Optional)</i> Describes the ways a search can be executed besides user input. |
-|  [referrerPageUrl?](./search-core.verticalsearchrequest.referrerpageurl.md) | string | <i>(Optional)</i> The URl of the page which referred the user to the current page. |
-|  [retrieveFacets?](./search-core.verticalsearchrequest.retrievefacets.md) | boolean | <i>(Optional)</i> Indicates that facets should be retrieved. |
-|  [sessionId?](./search-core.verticalsearchrequest.sessionid.md) | string | <i>(Optional)</i> Used to track session state when cookies are blocked. |
-|  [sessionTrackingEnabled?](./search-core.verticalsearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
-|  [skipSpellCheck?](./search-core.verticalsearchrequest.skipspellcheck.md) | boolean | <i>(Optional)</i> Skips spell checking if true. |
-|  [sortBys?](./search-core.verticalsearchrequest.sortbys.md) | [SortBy](./search-core.sortby.md)<!-- -->\[\] | <i>(Optional)</i> Determines how results are sorted. \* |
-|  [staticFilter?](./search-core.verticalsearchrequest.staticfilter.md) | [StaticFilter](./search-core.staticfilter.md) | <i>(Optional)</i> The static filter to apply to the search. |
-|  [verticalKey](./search-core.verticalsearchrequest.verticalkey.md) | string | The key associated with the vertical. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[context?](./search-core.verticalsearchrequest.context.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Context](./search-core.context.md)
+
+
+</td><td>
+
+_(Optional)_ Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[facets?](./search-core.verticalsearchrequest.facets.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Facet](./search-core.facet.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_ The facet filters to apply to the search.
+
+
+</td></tr>
+<tr><td>
+
+[limit?](./search-core.verticalsearchrequest.limit.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ The maximum number of results to include with a max of 50.
+
+
+</td></tr>
+<tr><td>
+
+[location?](./search-core.verticalsearchrequest.location.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[LatLong](./search-core.latlong.md)
+
+
+</td><td>
+
+_(Optional)_ The latitude and longitude of the user making the request. Used to bias the results.
+
+
+</td></tr>
+<tr><td>
+
+[locationRadius?](./search-core.verticalsearchrequest.locationradius.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ The radius (in meters) to filter the vertical search by.
+
+
+</td></tr>
+<tr><td>
+
+[offset?](./search-core.verticalsearchrequest.offset.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ The result offset which allows for fetching more results with the same query.
+
+
+</td></tr>
+<tr><td>
+
+[query](./search-core.verticalsearchrequest.query.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The search query.
+
+
+</td></tr>
+<tr><td>
+
+[queryId?](./search-core.verticalsearchrequest.queryid.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ The queryId for the query, if this is a repeat query.
+
+
+</td></tr>
+<tr><td>
+
+[querySource?](./search-core.verticalsearchrequest.querysource.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[QuerySource](./search-core.querysource.md) \| string
+
+
+</td><td>
+
+_(Optional)_ The source of the search request.
+
+
+</td></tr>
+<tr><td>
+
+[queryTrigger?](./search-core.verticalsearchrequest.querytrigger.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[QueryTrigger](./search-core.querytrigger.md)
+
+
+</td><td>
+
+_(Optional)_ Describes the ways a search can be executed besides user input.
+
+
+</td></tr>
+<tr><td>
+
+[referrerPageUrl?](./search-core.verticalsearchrequest.referrerpageurl.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ The URl of the page which referred the user to the current page.
+
+
+</td></tr>
+<tr><td>
+
+[retrieveFacets?](./search-core.verticalsearchrequest.retrievefacets.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+_(Optional)_ Indicates that facets should be retrieved.
+
+
+</td></tr>
+<tr><td>
+
+[sessionId?](./search-core.verticalsearchrequest.sessionid.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ Used to track session state when cookies are blocked.
+
+
+</td></tr>
+<tr><td>
+
+[sessionTrackingEnabled?](./search-core.verticalsearchrequest.sessiontrackingenabled.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+_(Optional)_ Enables session tracking.
+
+
+</td></tr>
+<tr><td>
+
+[skipSpellCheck?](./search-core.verticalsearchrequest.skipspellcheck.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+_(Optional)_ Skips spell checking if true.
+
+
+</td></tr>
+<tr><td>
+
+[sortBys?](./search-core.verticalsearchrequest.sortbys.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[SortBy](./search-core.sortby.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_ Determines how results are sorted. \*
+
+
+</td></tr>
+<tr><td>
+
+[staticFilter?](./search-core.verticalsearchrequest.staticfilter.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[StaticFilter](./search-core.staticfilter.md)
+
+
+</td><td>
+
+_(Optional)_ The static filter to apply to the search.
+
+
+</td></tr>
+<tr><td>
+
+[verticalKey](./search-core.verticalsearchrequest.verticalkey.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The key associated with the vertical.
+
+
+</td></tr>
+</tbody></table>

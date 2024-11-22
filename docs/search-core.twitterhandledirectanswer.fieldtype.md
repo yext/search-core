@@ -4,7 +4,7 @@
 
 ## TwitterHandleDirectAnswer.fieldType property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 fieldType: EnumOrLiteral<BuiltInFieldType.TwitterHandle>;

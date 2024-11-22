@@ -6,7 +6,7 @@
 
 Represents intents from the Search API.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 inputIntents: SearchIntent[];

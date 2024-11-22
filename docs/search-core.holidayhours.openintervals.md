@@ -4,7 +4,7 @@
 
 ## HolidayHours.openIntervals property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 openIntervals?: Interval[];

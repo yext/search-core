@@ -6,7 +6,7 @@
 
 The distance from a [AppliedQueryFilter](./search-core.appliedqueryfilter.md) location to the result in meters.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 distanceFromFilter?: number;

@@ -6,7 +6,7 @@
 
 A filter value for a filter with a $near [Matcher](./search-core.matcher.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface NearFilterValue 
@@ -14,9 +14,82 @@ export interface NearFilterValue
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [lat](./search-core.nearfiltervalue.lat.md) | number | The latitude of the location. |
-|  [lng](./search-core.nearfiltervalue.lng.md) | number | The longitude of the location. |
-|  [radius](./search-core.nearfiltervalue.radius.md) | number | The radius (in meters) around the latitude and longitude. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[lat](./search-core.nearfiltervalue.lat.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The latitude of the location.
+
+
+</td></tr>
+<tr><td>
+
+[lng](./search-core.nearfiltervalue.lng.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The longitude of the location.
+
+
+</td></tr>
+<tr><td>
+
+[radius](./search-core.nearfiltervalue.radius.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The radius (in meters) around the latitude and longitude.
+
+
+</td></tr>
+</tbody></table>

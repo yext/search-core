@@ -4,7 +4,7 @@
 
 ## Address.countryCode property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 countryCode: string;

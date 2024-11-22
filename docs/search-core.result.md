@@ -6,7 +6,7 @@
 
 An individual search result.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface Result<T = Record<string, unknown>> 
@@ -14,20 +14,291 @@ export interface Result<T = Record<string, unknown>>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [description?](./search-core.result.description.md) | string | <i>(Optional)</i> A description of the result. |
-|  [distance?](./search-core.result.distance.md) | number | <i>(Optional)</i> The distance from the user to the result in meters. |
-|  [distanceFromFilter?](./search-core.result.distancefromfilter.md) | number | <i>(Optional)</i> The distance from a [AppliedQueryFilter](./search-core.appliedqueryfilter.md) location to the result in meters. |
-|  [document?](./search-core.result.document.md) | [DocumentResult](./search-core.documentresult.md) | <i>(Optional)</i> A relevant document associated with the result. Present for document verticals grouped by Document. |
-|  [documents?](./search-core.result.documents.md) | [DocumentResult](./search-core.documentresult.md)<!-- -->\[\] | <i>(Optional)</i> All relevant documents associated with the result. Present for document verticals grouped by Entity. |
-|  [entityType?](./search-core.result.entitytype.md) | string | <i>(Optional)</i> The entity type of the result. |
-|  [highlightedFields?](./search-core.result.highlightedfields.md) | [HighlightedFields](./search-core.highlightedfields.md) | <i>(Optional)</i> The [highlighted fields](./search-core.highlightedfields.md) emphasized by the api. |
-|  [id?](./search-core.result.id.md) | string | <i>(Optional)</i> The result ID which depends on the Result Source. |
-|  [index?](./search-core.result.index.md) | number | <i>(Optional)</i> The index of the result among the other results in the search. |
-|  [link?](./search-core.result.link.md) | string | <i>(Optional)</i> A hyperlink associated with the result. |
-|  [name?](./search-core.result.name.md) | string | <i>(Optional)</i> The name of the result. |
-|  [rawData](./search-core.result.rawdata.md) | T | Raw entity profile data in the shape of key-value pairs, or as an array of key-value pairs. |
-|  [segment?](./search-core.result.segment.md) | [Segment](./search-core.segment.md) | <i>(Optional)</i> A relevant segment associated with the result. Present for document verticals grouped by Segment. |
-|  [source](./search-core.result.source.md) | [Source](./search-core.source.md) | Represents the source of a [Result](./search-core.result.md)<!-- -->. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[description?](./search-core.result.description.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ A description of the result.
+
+
+</td></tr>
+<tr><td>
+
+[distance?](./search-core.result.distance.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ The distance from the user to the result in meters.
+
+
+</td></tr>
+<tr><td>
+
+[distanceFromFilter?](./search-core.result.distancefromfilter.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ The distance from a [AppliedQueryFilter](./search-core.appliedqueryfilter.md) location to the result in meters.
+
+
+</td></tr>
+<tr><td>
+
+[document?](./search-core.result.document.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DocumentResult](./search-core.documentresult.md)
+
+
+</td><td>
+
+_(Optional)_ A relevant document associated with the result. Present for document verticals grouped by Document.
+
+
+</td></tr>
+<tr><td>
+
+[documents?](./search-core.result.documents.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DocumentResult](./search-core.documentresult.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_ All relevant documents associated with the result. Present for document verticals grouped by Entity.
+
+
+</td></tr>
+<tr><td>
+
+[entityType?](./search-core.result.entitytype.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ The entity type of the result.
+
+
+</td></tr>
+<tr><td>
+
+[highlightedFields?](./search-core.result.highlightedfields.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[HighlightedFields](./search-core.highlightedfields.md)
+
+
+</td><td>
+
+_(Optional)_ The [highlighted fields](./search-core.highlightedfields.md) emphasized by the api.
+
+
+</td></tr>
+<tr><td>
+
+[id?](./search-core.result.id.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ The result ID which depends on the Result Source.
+
+
+</td></tr>
+<tr><td>
+
+[index?](./search-core.result.index.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ The index of the result among the other results in the search.
+
+
+</td></tr>
+<tr><td>
+
+[link?](./search-core.result.link.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ A hyperlink associated with the result.
+
+
+</td></tr>
+<tr><td>
+
+[name?](./search-core.result.name.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ The name of the result.
+
+
+</td></tr>
+<tr><td>
+
+[rawData](./search-core.result.rawdata.md)
+
+
+</td><td>
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+Raw entity profile data in the shape of key-value pairs, or as an array of key-value pairs.
+
+
+</td></tr>
+<tr><td>
+
+[segment?](./search-core.result.segment.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Segment](./search-core.segment.md)
+
+
+</td><td>
+
+_(Optional)_ A relevant segment associated with the result. Present for document verticals grouped by Segment.
+
+
+</td></tr>
+<tr><td>
+
+[source](./search-core.result.source.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Source](./search-core.source.md)
+
+
+</td><td>
+
+Represents the source of a [Result](./search-core.result.md)<!-- -->.
+
+
+</td></tr>
+</tbody></table>
