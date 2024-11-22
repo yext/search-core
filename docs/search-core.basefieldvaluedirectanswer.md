@@ -6,20 +6,129 @@
 
 A direct answer where the answer came from a field from the knowledge graph.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface BaseFieldValueDirectAnswer<T = unknown> extends DirectAnswer<T> 
 ```
-<b>Extends:</b> [DirectAnswer](./search-core.directanswer.md)<!-- -->&lt;T&gt;
+**Extends:** [DirectAnswer](./search-core.directanswer.md)<!-- -->&lt;T&gt;
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [entityName](./search-core.basefieldvaluedirectanswer.entityname.md) | string | The name of the entity that direct answer came from. |
-|  [fieldApiName](./search-core.basefieldvaluedirectanswer.fieldapiname.md) | string | The field api name of the direct answer. |
-|  [fieldName](./search-core.basefieldvaluedirectanswer.fieldname.md) | string | The field name of the direct answer. |
-|  [type](./search-core.basefieldvaluedirectanswer.type.md) | [DirectAnswerType.FieldValue](./search-core.directanswertype.md) | Indicates that the DirectAnswer is a [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md)<!-- -->. |
-|  [value](./search-core.basefieldvaluedirectanswer.value.md) | T | The result of the direct answer. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[entityName](./search-core.basefieldvaluedirectanswer.entityname.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The name of the entity that direct answer came from.
+
+
+</td></tr>
+<tr><td>
+
+[fieldApiName](./search-core.basefieldvaluedirectanswer.fieldapiname.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The field api name of the direct answer.
+
+
+</td></tr>
+<tr><td>
+
+[fieldName](./search-core.basefieldvaluedirectanswer.fieldname.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The field name of the direct answer.
+
+
+</td></tr>
+<tr><td>
+
+[type](./search-core.basefieldvaluedirectanswer.type.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DirectAnswerType.FieldValue](./search-core.directanswertype.md)
+
+
+</td><td>
+
+Indicates that the DirectAnswer is a [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[value](./search-core.basefieldvaluedirectanswer.value.md)
+
+
+</td><td>
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+The result of the direct answer.
+
+
+</td></tr>
+</tbody></table>

@@ -6,7 +6,7 @@
 
 A service for autocomplete requests.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface AutocompleteService 
@@ -14,9 +14,48 @@ export interface AutocompleteService
 
 ## Methods
 
-|  Method | Description |
-|  --- | --- |
-|  [filterSearch(request)](./search-core.autocompleteservice.filtersearch.md) | Retrieves query suggestions for filter search. |
-|  [universalAutocomplete(request)](./search-core.autocompleteservice.universalautocomplete.md) | Retrieves query suggestions for universal. |
-|  [verticalAutocomplete(request)](./search-core.autocompleteservice.verticalautocomplete.md) | Retrieves query suggestions for a vertical. |
+<table><thead><tr><th>
 
+Method
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[filterSearch(request)](./search-core.autocompleteservice.filtersearch.md)
+
+
+</td><td>
+
+Retrieves query suggestions for filter search.
+
+
+</td></tr>
+<tr><td>
+
+[universalAutocomplete(request)](./search-core.autocompleteservice.universalautocomplete.md)
+
+
+</td><td>
+
+Retrieves query suggestions for universal.
+
+
+</td></tr>
+<tr><td>
+
+[verticalAutocomplete(request)](./search-core.autocompleteservice.verticalautocomplete.md)
+
+
+</td><td>
+
+Retrieves query suggestions for a vertical.
+
+
+</td></tr>
+</tbody></table>

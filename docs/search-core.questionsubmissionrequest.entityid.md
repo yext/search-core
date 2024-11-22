@@ -6,7 +6,7 @@
 
 The ID of the entity to associate with the question.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 entityId: string;

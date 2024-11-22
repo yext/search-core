@@ -6,7 +6,7 @@
 
 A relevant document associated with the result. Present for document verticals grouped by Document.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 document?: DocumentResult;

@@ -6,7 +6,7 @@
 
 An interface for hours fields to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface Hours 
@@ -14,15 +14,196 @@ export interface Hours
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [friday?](./search-core.hours.friday.md) | [DayHour](./search-core.dayhour.md) | <i>(Optional)</i> |
-|  [holidayHours?](./search-core.hours.holidayhours.md) | [HolidayHours](./search-core.holidayhours.md)<!-- -->\[\] | <i>(Optional)</i> |
-|  [monday?](./search-core.hours.monday.md) | [DayHour](./search-core.dayhour.md) | <i>(Optional)</i> |
-|  [reopenDate?](./search-core.hours.reopendate.md) | string | <i>(Optional)</i> |
-|  [saturday?](./search-core.hours.saturday.md) | [DayHour](./search-core.dayhour.md) | <i>(Optional)</i> |
-|  [sunday?](./search-core.hours.sunday.md) | [DayHour](./search-core.dayhour.md) | <i>(Optional)</i> |
-|  [thursday?](./search-core.hours.thursday.md) | [DayHour](./search-core.dayhour.md) | <i>(Optional)</i> |
-|  [tuesday?](./search-core.hours.tuesday.md) | [DayHour](./search-core.dayhour.md) | <i>(Optional)</i> |
-|  [wednesday?](./search-core.hours.wednesday.md) | [DayHour](./search-core.dayhour.md) | <i>(Optional)</i> |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[friday?](./search-core.hours.friday.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DayHour](./search-core.dayhour.md)
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[holidayHours?](./search-core.hours.holidayhours.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[HolidayHours](./search-core.holidayhours.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[monday?](./search-core.hours.monday.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DayHour](./search-core.dayhour.md)
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[reopenDate?](./search-core.hours.reopendate.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[saturday?](./search-core.hours.saturday.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DayHour](./search-core.dayhour.md)
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[sunday?](./search-core.hours.sunday.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DayHour](./search-core.dayhour.md)
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[thursday?](./search-core.hours.thursday.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DayHour](./search-core.dayhour.md)
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[tuesday?](./search-core.hours.tuesday.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DayHour](./search-core.dayhour.md)
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[wednesday?](./search-core.hours.wednesday.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DayHour](./search-core.dayhour.md)
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>

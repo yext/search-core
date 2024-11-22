@@ -6,18 +6,91 @@
 
 A [FacetOption](./search-core.facetoption.md) with extra data meant to be displayed to the end user.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface DisplayableFacetOption extends FacetOption 
 ```
-<b>Extends:</b> [FacetOption](./search-core.facetoption.md)
+**Extends:** [FacetOption](./search-core.facetoption.md)
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [count](./search-core.displayablefacetoption.count.md) | number | The number of results associated with this facet option. |
-|  [displayName](./search-core.displayablefacetoption.displayname.md) | string | The name of the facet option which is meant to be displayed to the end user. |
-|  [selected](./search-core.displayablefacetoption.selected.md) | boolean | Whether or not the filter is selected in the search results. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[count](./search-core.displayablefacetoption.count.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The number of results associated with this facet option.
+
+
+</td></tr>
+<tr><td>
+
+[displayName](./search-core.displayablefacetoption.displayname.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The name of the facet option which is meant to be displayed to the end user.
+
+
+</td></tr>
+<tr><td>
+
+[selected](./search-core.displayablefacetoption.selected.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+Whether or not the filter is selected in the search results.
+
+
+</td></tr>
+</tbody></table>

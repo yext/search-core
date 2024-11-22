@@ -6,7 +6,7 @@
 
 Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. (e.g. boundary for a locality or region specific location filter)
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface LocationBoundingBox 
@@ -14,10 +14,101 @@ export interface LocationBoundingBox
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [maxLatitude](./search-core.locationboundingbox.maxlatitude.md) | number | The location's highest latitude degree. |
-|  [maxLongitude](./search-core.locationboundingbox.maxlongitude.md) | number | The location's highest longitude degree. |
-|  [minLatitude](./search-core.locationboundingbox.minlatitude.md) | number | The location's lowest latitude degree. |
-|  [minLongitude](./search-core.locationboundingbox.minlongitude.md) | number | The location's lowest longitude degree. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[maxLatitude](./search-core.locationboundingbox.maxlatitude.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The location's highest latitude degree.
+
+
+</td></tr>
+<tr><td>
+
+[maxLongitude](./search-core.locationboundingbox.maxlongitude.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The location's highest longitude degree.
+
+
+</td></tr>
+<tr><td>
+
+[minLatitude](./search-core.locationboundingbox.minlatitude.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The location's lowest latitude degree.
+
+
+</td></tr>
+<tr><td>
+
+[minLongitude](./search-core.locationboundingbox.minlongitude.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The location's lowest longitude degree.
+
+
+</td></tr>
+</tbody></table>

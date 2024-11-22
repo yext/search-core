@@ -4,7 +4,7 @@
 
 ## Endpoints.universalSearch property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 universalSearch?: string;

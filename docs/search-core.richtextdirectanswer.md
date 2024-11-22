@@ -6,16 +6,51 @@
 
 A direct answer for a rich text field.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface RichTextDirectAnswer extends BaseFieldValueDirectAnswer<string | string[]> 
 ```
-<b>Extends:</b> [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;string \| string\[\]&gt;
+**Extends:** [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;string \| string\[\]&gt;
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [fieldType](./search-core.richtextdirectanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.RichText](./search-core.builtinfieldtype.md)<!-- -->&gt; |  |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[fieldType](./search-core.richtextdirectanswer.fieldtype.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.RichText](./search-core.builtinfieldtype.md)<!-- -->&gt;
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

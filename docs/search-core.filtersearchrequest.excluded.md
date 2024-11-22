@@ -6,7 +6,7 @@
 
 An array of field value filters that should be excluded from filter search results.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 excluded?: FieldValueFilter[];

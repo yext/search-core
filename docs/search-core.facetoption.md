@@ -6,16 +6,53 @@
 
 A filter associated with the facet.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface FacetOption extends Omit<FieldValueFilter, 'fieldId'> 
 ```
-<b>Extends:</b> Omit&lt;[FieldValueFilter](./search-core.fieldvaluefilter.md)<!-- -->, 'fieldId'&gt;
+**Extends:** Omit&lt;[FieldValueFilter](./search-core.fieldvaluefilter.md)<!-- -->, 'fieldId'&gt;
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [value](./search-core.facetoption.value.md) | Exclude&lt;[FieldValueFilter](./search-core.fieldvaluefilter.md)<!-- -->\['value'\], [NearFilterValue](./search-core.nearfiltervalue.md)<!-- -->&gt; | The value to compare. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[value](./search-core.facetoption.value.md)
+
+
+</td><td>
+
+
+</td><td>
+
+Exclude&lt;[FieldValueFilter](./search-core.fieldvaluefilter.md)<!-- -->\['value'\], [NearFilterValue](./search-core.nearfiltervalue.md)<!-- -->&gt;
+
+
+</td><td>
+
+The value to compare.
+
+
+</td></tr>
+</tbody></table>

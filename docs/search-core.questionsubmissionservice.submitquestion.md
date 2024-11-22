@@ -6,7 +6,7 @@
 
 Submits a question to be answered.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionResponse>;
@@ -14,11 +14,40 @@ submitQuestion(request: QuestionSubmissionRequest): Promise<QuestionSubmissionRe
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  request | [QuestionSubmissionRequest](./search-core.questionsubmissionrequest.md) | The question, as well as the contact info of the submitter. |
+<table><thead><tr><th>
 
-<b>Returns:</b>
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+request
+
+
+</td><td>
+
+[QuestionSubmissionRequest](./search-core.questionsubmissionrequest.md)
+
+
+</td><td>
+
+The question, as well as the contact info of the submitter.
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
 
 Promise&lt;[QuestionSubmissionResponse](./search-core.questionsubmissionresponse.md)<!-- -->&gt;
 

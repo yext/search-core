@@ -6,18 +6,91 @@
 
 Options for a vertial autocomplete request.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface VerticalAutocompleteRequest extends SearchRequest 
 ```
-<b>Extends:</b> [SearchRequest](./search-core.searchrequest.md)
+**Extends:** [SearchRequest](./search-core.searchrequest.md)
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [input](./search-core.verticalautocompleterequest.input.md) | string | The input string for autocomplete. |
-|  [sessionTrackingEnabled?](./search-core.verticalautocompleterequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
-|  [verticalKey](./search-core.verticalautocompleterequest.verticalkey.md) | string | The key for the vertical to get autocomplete suggestions from. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[input](./search-core.verticalautocompleterequest.input.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The input string for autocomplete.
+
+
+</td></tr>
+<tr><td>
+
+[sessionTrackingEnabled?](./search-core.verticalautocompleterequest.sessiontrackingenabled.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+_(Optional)_ Enables session tracking.
+
+
+</td></tr>
+<tr><td>
+
+[verticalKey](./search-core.verticalautocompleterequest.verticalkey.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The key for the vertical to get autocomplete suggestions from.
+
+
+</td></tr>
+</tbody></table>

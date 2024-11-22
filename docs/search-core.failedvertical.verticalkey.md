@@ -6,7 +6,7 @@
 
 The vertical key associated with the failed vertical.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 verticalKey: string;

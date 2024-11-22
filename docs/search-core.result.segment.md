@@ -6,7 +6,7 @@
 
 A relevant segment associated with the result. Present for document verticals grouped by Segment.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 segment?: Segment;

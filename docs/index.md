@@ -6,7 +6,24 @@
 
 ## Packages
 
-|  Package | Description |
-|  --- | --- |
-|  [@yext/search-core](./search-core.md) |  |
+<table><thead><tr><th>
 
+Package
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[@yext/search-core](./search-core.md)
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

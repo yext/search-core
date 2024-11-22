@@ -6,7 +6,7 @@
 
 Value of the limit.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 value: number;

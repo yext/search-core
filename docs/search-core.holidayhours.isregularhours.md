@@ -4,7 +4,7 @@
 
 ## HolidayHours.isRegularHours property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 isRegularHours?: boolean;

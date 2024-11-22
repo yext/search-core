@@ -6,7 +6,7 @@
 
 The email of the user that is submitting the question.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 email: string;

@@ -6,7 +6,7 @@
 
 Represents results from a search vertical.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface VerticalResults 
@@ -14,12 +14,139 @@ export interface VerticalResults
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [appliedQueryFilters](./search-core.verticalresults.appliedqueryfilters.md) | [AppliedQueryFilter](./search-core.appliedqueryfilter.md)<!-- -->\[\] | A array of [AppliedQueryFilter](./search-core.appliedqueryfilter.md)<!-- -->s which were applied to the vertical results. |
-|  [queryDurationMillis](./search-core.verticalresults.querydurationmillis.md) | number | The duration of the query in milliseconds. |
-|  [results](./search-core.verticalresults.results.md) | [Result](./search-core.result.md)<!-- -->\[\] | An array of search [Result](./search-core.result.md)<!-- -->s for the vertical. |
-|  [resultsCount](./search-core.verticalresults.resultscount.md) | number | The total number of results within the vertical. |
-|  [source](./search-core.verticalresults.source.md) | [Source](./search-core.source.md) | Represents the source of a [Result](./search-core.result.md)<!-- -->. |
-|  [verticalKey](./search-core.verticalresults.verticalkey.md) | string | The vertical key associated with the vertical results. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[appliedQueryFilters](./search-core.verticalresults.appliedqueryfilters.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[AppliedQueryFilter](./search-core.appliedqueryfilter.md)<!-- -->\[\]
+
+
+</td><td>
+
+A array of [AppliedQueryFilter](./search-core.appliedqueryfilter.md)<!-- -->s which were applied to the vertical results.
+
+
+</td></tr>
+<tr><td>
+
+[queryDurationMillis](./search-core.verticalresults.querydurationmillis.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The duration of the query in milliseconds.
+
+
+</td></tr>
+<tr><td>
+
+[results](./search-core.verticalresults.results.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Result](./search-core.result.md)<!-- -->\[\]
+
+
+</td><td>
+
+An array of search [Result](./search-core.result.md)<!-- -->s for the vertical.
+
+
+</td></tr>
+<tr><td>
+
+[resultsCount](./search-core.verticalresults.resultscount.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The total number of results within the vertical.
+
+
+</td></tr>
+<tr><td>
+
+[source](./search-core.verticalresults.source.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Source](./search-core.source.md)
+
+
+</td><td>
+
+Represents the source of a [Result](./search-core.result.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[verticalKey](./search-core.verticalresults.verticalkey.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The vertical key associated with the vertical results.
+
+
+</td></tr>
+</tbody></table>

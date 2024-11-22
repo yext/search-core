@@ -6,17 +6,72 @@
 
 A [Facet](./search-core.facet.md) which contains extra fields meant to be displayed to the end user.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface DisplayableFacet extends Facet 
 ```
-<b>Extends:</b> [Facet](./search-core.facet.md)
+**Extends:** [Facet](./search-core.facet.md)
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [displayName](./search-core.displayablefacet.displayname.md) | string | The name of the facet which is meant to be displayed to the user. |
-|  [options](./search-core.displayablefacet.options.md) | [DisplayableFacetOption](./search-core.displayablefacetoption.md)<!-- -->\[\] | An array of [DisplayableFacetOption](./search-core.displayablefacetoption.md) |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[displayName](./search-core.displayablefacet.displayname.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The name of the facet which is meant to be displayed to the user.
+
+
+</td></tr>
+<tr><td>
+
+[options](./search-core.displayablefacet.options.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DisplayableFacetOption](./search-core.displayablefacetoption.md)<!-- -->\[\]
+
+
+</td><td>
+
+An array of [DisplayableFacetOption](./search-core.displayablefacetoption.md)
+
+
+</td></tr>
+</tbody></table>

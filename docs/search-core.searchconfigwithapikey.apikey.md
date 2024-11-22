@@ -6,7 +6,7 @@
 
 The api key of the search experience which will be sent as a query param.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 apiKey: string;

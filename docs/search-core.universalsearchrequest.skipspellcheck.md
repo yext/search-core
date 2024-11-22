@@ -6,7 +6,7 @@
 
 Disables spellcheck if true.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 skipSpellCheck?: boolean;

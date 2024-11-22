@@ -6,7 +6,7 @@
 
 Indicates that facets should be retrieved.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 retrieveFacets?: boolean;

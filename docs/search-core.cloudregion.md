@@ -6,7 +6,7 @@
 
 Defines the cloud region of the API domains.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum CloudRegion 
@@ -14,8 +14,48 @@ export declare enum CloudRegion
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  EU | <code>&quot;eu&quot;</code> |  |
-|  US | <code>&quot;us&quot;</code> |  |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+EU
+
+
+</td><td>
+
+`"eu"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+US
+
+
+</td><td>
+
+`"us"`
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

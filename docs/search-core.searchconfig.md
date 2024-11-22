@@ -6,10 +6,10 @@
 
 The main configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->. For a full description of the options, see [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->. The config requires either an apiKey or a token.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export declare type SearchConfig = SearchConfigWithApiKey | SearchConfigWithToken;
+export type SearchConfig = SearchConfigWithApiKey | SearchConfigWithToken;
 ```
-<b>References:</b> [SearchConfigWithApiKey](./search-core.searchconfigwithapikey.md)<!-- -->, [SearchConfigWithToken](./search-core.searchconfigwithtoken.md)
+**References:** [SearchConfigWithApiKey](./search-core.searchconfigwithapikey.md)<!-- -->, [SearchConfigWithToken](./search-core.searchconfigwithtoken.md)
 

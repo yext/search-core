@@ -6,21 +6,148 @@
 
 Options for a filtersearch request.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface FilterSearchRequest extends SearchRequest 
 ```
-<b>Extends:</b> [SearchRequest](./search-core.searchrequest.md)
+**Extends:** [SearchRequest](./search-core.searchrequest.md)
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [excluded?](./search-core.filtersearchrequest.excluded.md) | [FieldValueFilter](./search-core.fieldvaluefilter.md)<!-- -->\[\] | <i>(Optional)</i> An array of field value filters that should be excluded from filter search results. |
-|  [fields](./search-core.filtersearchrequest.fields.md) | [SearchParameterField](./search-core.searchparameterfield.md)<!-- -->\[\] | An array of [SearchParameterField](./search-core.searchparameterfield.md)<!-- -->. |
-|  [input](./search-core.filtersearchrequest.input.md) | string | The input string for autocomplete. |
-|  [sectioned](./search-core.filtersearchrequest.sectioned.md) | boolean | Determines whether or not the results of the [FilterSearchResponse](./search-core.filtersearchresponse.md) are separated by field. |
-|  [sessionTrackingEnabled?](./search-core.filtersearchrequest.sessiontrackingenabled.md) | boolean | <i>(Optional)</i> Enables session tracking. |
-|  [verticalKey](./search-core.filtersearchrequest.verticalkey.md) | string | The key for the vertical to get autocomplete suggestions from. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[excluded?](./search-core.filtersearchrequest.excluded.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[FieldValueFilter](./search-core.fieldvaluefilter.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_ An array of field value filters that should be excluded from filter search results.
+
+
+</td></tr>
+<tr><td>
+
+[fields](./search-core.filtersearchrequest.fields.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[SearchParameterField](./search-core.searchparameterfield.md)<!-- -->\[\]
+
+
+</td><td>
+
+An array of [SearchParameterField](./search-core.searchparameterfield.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[input](./search-core.filtersearchrequest.input.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The input string for autocomplete.
+
+
+</td></tr>
+<tr><td>
+
+[sectioned](./search-core.filtersearchrequest.sectioned.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+Determines whether or not the results of the [FilterSearchResponse](./search-core.filtersearchresponse.md) are separated by field.
+
+
+</td></tr>
+<tr><td>
+
+[sessionTrackingEnabled?](./search-core.filtersearchrequest.sessiontrackingenabled.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+_(Optional)_ Enables session tracking.
+
+
+</td></tr>
+<tr><td>
+
+[verticalKey](./search-core.filtersearchrequest.verticalkey.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The key for the vertical to get autocomplete suggestions from.
+
+
+</td></tr>
+</tbody></table>

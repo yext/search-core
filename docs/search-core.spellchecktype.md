@@ -6,7 +6,7 @@
 
 Represents the type of spell check performed.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum SpellCheckType 
@@ -14,9 +14,68 @@ export declare enum SpellCheckType
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  AutoCorrect | <code>&quot;AUTOCORRECT&quot;</code> | The API is autocorrecting the original query. |
-|  Combine | <code>&quot;COMBINE&quot;</code> | The API may be doing some combination of suggesting or autocorrecting. |
-|  Suggest | <code>&quot;SUGGEST&quot;</code> | The API is suggesting an alternative query. |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+AutoCorrect
+
+
+</td><td>
+
+`"AUTOCORRECT"`
+
+
+</td><td>
+
+The API is autocorrecting the original query.
+
+
+</td></tr>
+<tr><td>
+
+Combine
+
+
+</td><td>
+
+`"COMBINE"`
+
+
+</td><td>
+
+The API may be doing some combination of suggesting or autocorrecting.
+
+
+</td></tr>
+<tr><td>
+
+Suggest
+
+
+</td><td>
+
+`"SUGGEST"`
+
+
+</td><td>
+
+The API is suggesting an alternative query.
+
+
+</td></tr>
+</tbody></table>

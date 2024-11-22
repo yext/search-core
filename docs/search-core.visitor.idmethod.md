@@ -6,7 +6,7 @@
 
 The type of visitor
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 idMethod?: string;

@@ -6,7 +6,7 @@
 
 Represents the source of a [Result](./search-core.result.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 source: Source;

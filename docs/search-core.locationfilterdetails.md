@@ -6,7 +6,7 @@
 
 Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface LocationFilterDetails 
@@ -14,11 +14,120 @@ export interface LocationFilterDetails
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [boundingBox?](./search-core.locationfilterdetails.boundingbox.md) | [LocationBoundingBox](./search-core.locationboundingbox.md) | <i>(Optional)</i> The location's coordinate boundaries. |
-|  [featureTypes](./search-core.locationfilterdetails.featuretypes.md) | string\[\] | The location's classification (e.g. locality, region, address). |
-|  [latitude](./search-core.locationfilterdetails.latitude.md) | number | The location's latitude. |
-|  [longitude](./search-core.locationfilterdetails.longitude.md) | number | The location's longitude. |
-|  [placeName](./search-core.locationfilterdetails.placename.md) | string | The location's name. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[boundingBox?](./search-core.locationfilterdetails.boundingbox.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[LocationBoundingBox](./search-core.locationboundingbox.md)
+
+
+</td><td>
+
+_(Optional)_ The location's coordinate boundaries.
+
+
+</td></tr>
+<tr><td>
+
+[featureTypes](./search-core.locationfilterdetails.featuretypes.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string\[\]
+
+
+</td><td>
+
+The location's classification (e.g. locality, region, address).
+
+
+</td></tr>
+<tr><td>
+
+[latitude](./search-core.locationfilterdetails.latitude.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The location's latitude.
+
+
+</td></tr>
+<tr><td>
+
+[longitude](./search-core.locationfilterdetails.longitude.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The location's longitude.
+
+
+</td></tr>
+<tr><td>
+
+[placeName](./search-core.locationfilterdetails.placename.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The location's name.
+
+
+</td></tr>
+</tbody></table>

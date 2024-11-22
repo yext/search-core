@@ -6,7 +6,7 @@
 
 The filter applied to the query results.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 filter: FieldValueFilter;

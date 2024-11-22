@@ -6,10 +6,10 @@
 
 Used to trigger Search [Query Rules](https://hitchhikers.yext.com/tracks/answers-advanced/ans302-query-rules/)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export declare type Context = any;
+export type Context = any;
 ```
 
 ## Remarks

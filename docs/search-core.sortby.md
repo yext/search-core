@@ -6,7 +6,7 @@
 
 Represents a criterion that can be used to sort results.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface SortBy 
@@ -18,9 +18,82 @@ Overrides the sort options that are configured on the experience configuration.
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [direction?](./search-core.sortby.direction.md) | [Direction](./search-core.direction.md) | <i>(Optional)</i> The direction of the sort. Required if the SortBy type is [SortType.Field](./search-core.sorttype.md)<!-- -->. |
-|  [field?](./search-core.sortby.field.md) | string | <i>(Optional)</i> The field name to sort by. Required if the SortBy type is [SortType.Field](./search-core.sorttype.md)<!-- -->. |
-|  [type](./search-core.sortby.type.md) | [SortType](./search-core.sorttype.md) | The method of sorting. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[direction?](./search-core.sortby.direction.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Direction](./search-core.direction.md)
+
+
+</td><td>
+
+_(Optional)_ The direction of the sort. Required if the SortBy type is [SortType.Field](./search-core.sorttype.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[field?](./search-core.sortby.field.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ The field name to sort by. Required if the SortBy type is [SortType.Field](./search-core.sorttype.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[type](./search-core.sortby.type.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[SortType](./search-core.sorttype.md)
+
+
+</td><td>
+
+The method of sorting.
+
+
+</td></tr>
+</tbody></table>

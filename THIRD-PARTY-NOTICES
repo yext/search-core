@@ -1,6 +1,6 @@
 The following NPM package may be included in this product:
 
- - @babel/runtime-corejs3@7.12.5
+ - @babel/runtime-corejs3@7.26.0
 
 This package contains the following license and notice below:
 
@@ -31,11 +31,11 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 The following NPM package may be included in this product:
 
- - core-js-pure@3.8.3
+ - core-js-pure@3.39.0
 
 This package contains the following license and notice below:
 
-Copyright (c) 2014-2021 Denis Pushkarev
+Copyright (c) 2014-2024 Denis Pushkarev
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -59,7 +59,7 @@ THE SOFTWARE.
 
 The following NPM package may be included in this product:
 
- - cross-fetch@3.1.5
+ - cross-fetch@3.1.8
 
 This package contains the following license and notice below:
 
@@ -89,7 +89,7 @@ SOFTWARE.
 
 The following NPM package may be included in this product:
 
- - node-fetch@2.6.7
+ - node-fetch@2.7.0
 
 This package contains the following license and notice below:
 
@@ -119,7 +119,7 @@ SOFTWARE.
 
 The following NPM package may be included in this product:
 
- - regenerator-runtime@0.13.7
+ - regenerator-runtime@0.14.1
 
 This package contains the following license and notice below:
 

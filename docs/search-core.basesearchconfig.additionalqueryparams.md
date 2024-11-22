@@ -6,7 +6,7 @@
 
 Additional query params added on to every request.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 additionalQueryParams?: {

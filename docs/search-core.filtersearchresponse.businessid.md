@@ -6,7 +6,7 @@
 
 ID of the account associated with this Search experience.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 businessId?: string;

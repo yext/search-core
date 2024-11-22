@@ -6,7 +6,7 @@
 
 An array of substring matches which correspond to the highlighting.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 matchedSubstrings: {

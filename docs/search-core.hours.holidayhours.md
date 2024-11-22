@@ -4,7 +4,7 @@
 
 ## Hours.holidayHours property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 holidayHours?: HolidayHours[];

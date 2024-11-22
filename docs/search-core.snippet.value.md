@@ -6,7 +6,7 @@
 
 The raw snippet value, or HTML if - entity is of type HTML - the conversion to HTML is enabled in search configuration
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 value: string;

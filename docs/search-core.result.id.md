@@ -6,7 +6,7 @@
 
 The result ID which depends on the Result Source.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 id?: string;

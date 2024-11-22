@@ -6,7 +6,7 @@
 
 Any errors returned from the query rule.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 errors?: {

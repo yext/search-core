@@ -6,7 +6,7 @@
 
 Start limit of the number range value.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 start?: LowerNumberRangeLimit;

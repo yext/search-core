@@ -6,7 +6,7 @@
 
 The method of sorting.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum SortType 
@@ -14,9 +14,68 @@ export declare enum SortType
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  EntityDistance | <code>&quot;ENTITY_DISTANCE&quot;</code> | Sorts based on entity distance alone. |
-|  Field | <code>&quot;FIELD&quot;</code> | Sorts based on a field with the direction specified. |
-|  Relevance | <code>&quot;RELEVANCE&quot;</code> | Sorts based on relevance according to the algorithm and, when relevant, location bias. |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+EntityDistance
+
+
+</td><td>
+
+`"ENTITY_DISTANCE"`
+
+
+</td><td>
+
+Sorts based on entity distance alone.
+
+
+</td></tr>
+<tr><td>
+
+Field
+
+
+</td><td>
+
+`"FIELD"`
+
+
+</td><td>
+
+Sorts based on a field with the direction specified.
+
+
+</td></tr>
+<tr><td>
+
+Relevance
+
+
+</td><td>
+
+`"RELEVANCE"`
+
+
+</td><td>
+
+Sorts based on relevance according to the algorithm and, when relevant, location bias.
+
+
+</td></tr>
+</tbody></table>

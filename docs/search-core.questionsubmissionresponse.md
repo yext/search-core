@@ -6,7 +6,7 @@
 
 A representation of a question submission response.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface QuestionSubmissionResponse 
@@ -14,7 +14,44 @@ export interface QuestionSubmissionResponse
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [uuid](./search-core.questionsubmissionresponse.uuid.md) | string | A unique id which corresponds to the request. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[uuid](./search-core.questionsubmissionresponse.uuid.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+A unique id which corresponds to the request.
+
+
+</td></tr>
+</tbody></table>

@@ -6,7 +6,7 @@
 
 Overrides for the URLs which are used when making requests to the Search API.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface Endpoints 
@@ -14,13 +14,158 @@ export interface Endpoints
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [filterSearch?](./search-core.endpoints.filtersearch.md) | string | <i>(Optional)</i> |
-|  [questionSubmission?](./search-core.endpoints.questionsubmission.md) | string | <i>(Optional)</i> |
-|  [status?](./search-core.endpoints.status.md) | string | <i>(Optional)</i> |
-|  [universalAutocomplete?](./search-core.endpoints.universalautocomplete.md) | string | <i>(Optional)</i> |
-|  [universalSearch?](./search-core.endpoints.universalsearch.md) | string | <i>(Optional)</i> |
-|  [verticalAutocomplete?](./search-core.endpoints.verticalautocomplete.md) | string | <i>(Optional)</i> |
-|  [verticalSearch?](./search-core.endpoints.verticalsearch.md) | string | <i>(Optional)</i> |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[filterSearch?](./search-core.endpoints.filtersearch.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[questionSubmission?](./search-core.endpoints.questionsubmission.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[status?](./search-core.endpoints.status.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[universalAutocomplete?](./search-core.endpoints.universalautocomplete.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[universalSearch?](./search-core.endpoints.universalsearch.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[verticalAutocomplete?](./search-core.endpoints.verticalautocomplete.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[verticalSearch?](./search-core.endpoints.verticalsearch.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>

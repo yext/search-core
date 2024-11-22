@@ -6,7 +6,7 @@
 
 A field value and its substring matches as emphasized by the Search API.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface HighlightedValue 
@@ -14,8 +14,63 @@ export interface HighlightedValue
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [matchedSubstrings](./search-core.highlightedvalue.matchedsubstrings.md) | { length: number; offset: number; }\[\] | An array of substring matches which correspond to the highlighting. |
-|  [value](./search-core.highlightedvalue.value.md) | string | The value of the field which should be highlighted. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[matchedSubstrings](./search-core.highlightedvalue.matchedsubstrings.md)
+
+
+</td><td>
+
+
+</td><td>
+
+{ length: number; offset: number; }\[\]
+
+
+</td><td>
+
+An array of substring matches which correspond to the highlighting.
+
+
+</td></tr>
+<tr><td>
+
+[value](./search-core.highlightedvalue.value.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The value of the field which should be highlighted.
+
+
+</td></tr>
+</tbody></table>

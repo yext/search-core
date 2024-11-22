@@ -6,16 +6,51 @@
 
 A direct answer for a complex url field.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface ComplexUrlDirectAnswer extends BaseFieldValueDirectAnswer<ComplexURL> 
 ```
-<b>Extends:</b> [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;[ComplexURL](./search-core.complexurl.md)<!-- -->&gt;
+**Extends:** [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;[ComplexURL](./search-core.complexurl.md)<!-- -->&gt;
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [fieldType](./search-core.complexurldirectanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.ComplexURL](./search-core.builtinfieldtype.md)<!-- -->&gt; |  |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[fieldType](./search-core.complexurldirectanswer.fieldtype.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.ComplexURL](./search-core.builtinfieldtype.md)<!-- -->&gt;
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

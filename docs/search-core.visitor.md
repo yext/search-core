@@ -6,7 +6,7 @@
 
 Information used to associate requests with a particular user.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface Visitor 
@@ -18,8 +18,63 @@ Visitor information is included with every request with the exception of questio
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [id](./search-core.visitor.id.md) | string | The ID associated with the user |
-|  [idMethod?](./search-core.visitor.idmethod.md) | string | <i>(Optional)</i> The type of visitor |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[id](./search-core.visitor.id.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The ID associated with the user
+
+
+</td></tr>
+<tr><td>
+
+[idMethod?](./search-core.visitor.idmethod.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ The type of visitor
+
+
+</td></tr>
+</tbody></table>

@@ -6,16 +6,51 @@
 
 A direct answer for a facebook url field.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface FacebookUrlDirectAnswer extends BaseFieldValueDirectAnswer<string> 
 ```
-<b>Extends:</b> [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;string&gt;
+**Extends:** [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;string&gt;
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [fieldType](./search-core.facebookurldirectanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.FacebookURL](./search-core.builtinfieldtype.md)<!-- -->&gt; |  |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[fieldType](./search-core.facebookurldirectanswer.fieldtype.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.FacebookURL](./search-core.builtinfieldtype.md)<!-- -->&gt;
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

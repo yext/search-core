@@ -6,7 +6,7 @@
 
 The name of the result.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 name?: string;

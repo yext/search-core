@@ -6,7 +6,7 @@
 
 The display name of the filter key.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 displayKey: string;

@@ -6,7 +6,7 @@
 
 A array of [AppliedQueryFilter](./search-core.appliedqueryfilter.md)<!-- -->s which were applied to the vertical results.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 appliedQueryFilters: AppliedQueryFilter[];

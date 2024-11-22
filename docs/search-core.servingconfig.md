@@ -6,7 +6,7 @@
 
 The configuration options for getting the endpoints.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface ServingConfig 
@@ -14,9 +14,82 @@ export interface ServingConfig
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [cloudChoice?](./search-core.servingconfig.cloudchoice.md) | [CloudChoice](./search-core.cloudchoice.md) | <i>(Optional)</i> Defines the cloud choice of the API domains. |
-|  [cloudRegion?](./search-core.servingconfig.cloudregion.md) | [CloudRegion](./search-core.cloudregion.md) | <i>(Optional)</i> Defines the cloud region of the API domains. |
-|  [environment?](./search-core.servingconfig.environment.md) | [Environment](./search-core.environment.md) | <i>(Optional)</i> Defines the environment of the API domains. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[cloudChoice?](./search-core.servingconfig.cloudchoice.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[CloudChoice](./search-core.cloudchoice.md)
+
+
+</td><td>
+
+_(Optional)_ Defines the cloud choice of the API domains.
+
+
+</td></tr>
+<tr><td>
+
+[cloudRegion?](./search-core.servingconfig.cloudregion.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[CloudRegion](./search-core.cloudregion.md)
+
+
+</td><td>
+
+_(Optional)_ Defines the cloud region of the API domains.
+
+
+</td></tr>
+<tr><td>
+
+[environment?](./search-core.servingconfig.environment.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Environment](./search-core.environment.md)
+
+
+</td><td>
+
+_(Optional)_ Defines the environment of the API domains.
+
+
+</td></tr>
+</tbody></table>

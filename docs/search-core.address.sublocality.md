@@ -4,7 +4,7 @@
 
 ## Address.sublocality property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 sublocality?: string;

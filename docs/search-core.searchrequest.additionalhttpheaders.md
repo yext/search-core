@@ -6,7 +6,7 @@
 
 AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 additionalHttpHeaders?: AdditionalHttpHeaders;

@@ -6,7 +6,7 @@
 
 Defines the cloud region of the API domains.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 cloudRegion?: CloudRegion;

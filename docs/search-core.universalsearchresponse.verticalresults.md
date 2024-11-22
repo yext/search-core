@@ -6,7 +6,7 @@
 
 An array of [VerticalResults](./search-core.verticalresults.md) which represent the results for each vertical.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 verticalResults: VerticalResults[];

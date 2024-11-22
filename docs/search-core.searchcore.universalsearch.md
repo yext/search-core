@@ -6,7 +6,7 @@
 
 Performs a search across all verticals.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchResponse>;
@@ -14,11 +14,40 @@ universalSearch(request: UniversalSearchRequest): Promise<UniversalSearchRespons
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  request | [UniversalSearchRequest](./search-core.universalsearchrequest.md) | Universal search request options |
+<table><thead><tr><th>
 
-<b>Returns:</b>
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+request
+
+
+</td><td>
+
+[UniversalSearchRequest](./search-core.universalsearchrequest.md)
+
+
+</td><td>
+
+Universal search request options
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
 
 Promise&lt;[UniversalSearchResponse](./search-core.universalsearchresponse.md)<!-- -->&gt;
 

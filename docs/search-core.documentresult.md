@@ -6,7 +6,7 @@
 
 Details about the document and the document search algorithm
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface DocumentResult 
@@ -14,8 +14,63 @@ export interface DocumentResult
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [documentScore](./search-core.documentresult.documentscore.md) | number | The score calculated from whatever document search strategy was used. |
-|  [segments](./search-core.documentresult.segments.md) | [Segment](./search-core.segment.md)<!-- -->\[\] | All the relevant segments extracted from the document. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[documentScore](./search-core.documentresult.documentscore.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The score calculated from whatever document search strategy was used.
+
+
+</td></tr>
+<tr><td>
+
+[segments](./search-core.documentresult.segments.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Segment](./search-core.segment.md)<!-- -->\[\]
+
+
+</td><td>
+
+All the relevant segments extracted from the document.
+
+
+</td></tr>
+</tbody></table>

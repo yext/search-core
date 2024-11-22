@@ -6,7 +6,7 @@
 
 An interface for holiday hours to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface HolidayHours 
@@ -14,10 +14,99 @@ export interface HolidayHours
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [date](./search-core.holidayhours.date.md) | string |  |
-|  [isClosed?](./search-core.holidayhours.isclosed.md) | boolean | <i>(Optional)</i> |
-|  [isRegularHours?](./search-core.holidayhours.isregularhours.md) | boolean | <i>(Optional)</i> |
-|  [openIntervals?](./search-core.holidayhours.openintervals.md) | [Interval](./search-core.interval.md)<!-- -->\[\] | <i>(Optional)</i> |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[date](./search-core.holidayhours.date.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[isClosed?](./search-core.holidayhours.isclosed.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[isRegularHours?](./search-core.holidayhours.isregularhours.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[openIntervals?](./search-core.holidayhours.openintervals.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Interval](./search-core.interval.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>

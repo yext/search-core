@@ -6,7 +6,7 @@
 
 The duration of the query in milliseconds.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 queryDurationMillis: number;

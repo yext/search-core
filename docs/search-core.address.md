@@ -6,7 +6,7 @@
 
 An interface with address fields to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface Address 
@@ -14,15 +14,194 @@ export interface Address
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [city?](./search-core.address.city.md) | string | <i>(Optional)</i> |
-|  [countryCode](./search-core.address.countrycode.md) | string |  |
-|  [extraDescription?](./search-core.address.extradescription.md) | string | <i>(Optional)</i> |
-|  [line1?](./search-core.address.line1.md) | string | <i>(Optional)</i> |
-|  [line2?](./search-core.address.line2.md) | string | <i>(Optional)</i> |
-|  [line3?](./search-core.address.line3.md) | string | <i>(Optional)</i> |
-|  [postalCode?](./search-core.address.postalcode.md) | string | <i>(Optional)</i> |
-|  [region?](./search-core.address.region.md) | string | <i>(Optional)</i> |
-|  [sublocality?](./search-core.address.sublocality.md) | string | <i>(Optional)</i> |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[city?](./search-core.address.city.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[countryCode](./search-core.address.countrycode.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+[extraDescription?](./search-core.address.extradescription.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[line1?](./search-core.address.line1.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[line2?](./search-core.address.line2.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[line3?](./search-core.address.line3.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[postalCode?](./search-core.address.postalcode.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[region?](./search-core.address.region.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[sublocality?](./search-core.address.sublocality.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>

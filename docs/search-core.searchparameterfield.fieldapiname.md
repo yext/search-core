@@ -6,7 +6,7 @@
 
 The fieldApiName to perform the autocomplete on.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 fieldApiName: string;

@@ -6,7 +6,7 @@
 
 The location's lowest longitude degree.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 minLongitude: number;

@@ -6,7 +6,7 @@
 
 The unique identifier for this query rule.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 key: string;

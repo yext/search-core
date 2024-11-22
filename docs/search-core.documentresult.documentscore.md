@@ -6,7 +6,7 @@
 
 The score calculated from whatever document search strategy was used.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 documentScore: number;

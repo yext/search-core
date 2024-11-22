@@ -6,7 +6,7 @@
 
 The entrypoint to the search-core library.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare function provideCore(config: SearchConfig): SearchCore;
@@ -14,11 +14,40 @@ export declare function provideCore(config: SearchConfig): SearchCore;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  config | [SearchConfig](./search-core.searchconfig.md) | The search-core config |
+<table><thead><tr><th>
 
-<b>Returns:</b>
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+config
+
+
+</td><td>
+
+[SearchConfig](./search-core.searchconfig.md)
+
+
+</td><td>
+
+The search-core config
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
 
 [SearchCore](./search-core.searchcore.md)
 

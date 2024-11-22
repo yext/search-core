@@ -6,7 +6,7 @@
 
 A filter value for a filter with a $between [Matcher](./search-core.matcher.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface NumberRangeValue 
@@ -14,8 +14,63 @@ export interface NumberRangeValue
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [end?](./search-core.numberrangevalue.end.md) | [UpperNumberRangeLimit](./search-core.uppernumberrangelimit.md) | <i>(Optional)</i> End limit of the number range value. |
-|  [start?](./search-core.numberrangevalue.start.md) | [LowerNumberRangeLimit](./search-core.lowernumberrangelimit.md) | <i>(Optional)</i> Start limit of the number range value. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[end?](./search-core.numberrangevalue.end.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[UpperNumberRangeLimit](./search-core.uppernumberrangelimit.md)
+
+
+</td><td>
+
+_(Optional)_ End limit of the number range value.
+
+
+</td></tr>
+<tr><td>
+
+[start?](./search-core.numberrangevalue.start.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[LowerNumberRangeLimit](./search-core.lowernumberrangelimit.md)
+
+
+</td><td>
+
+_(Optional)_ Start limit of the number range value.
+
+
+</td></tr>
+</tbody></table>

@@ -6,7 +6,7 @@
 
 An array of [SearchParameterField](./search-core.searchparameterfield.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 fields: SearchParameterField[];

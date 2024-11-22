@@ -6,7 +6,7 @@
 
 A service which performs Yext Search.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface SearchService 
@@ -14,8 +14,37 @@ export interface SearchService
 
 ## Methods
 
-|  Method | Description |
-|  --- | --- |
-|  [universalSearch(request)](./search-core.searchservice.universalsearch.md) | Performs a Universal search across all verticals. |
-|  [verticalSearch(request)](./search-core.searchservice.verticalsearch.md) | Performs a search across a particular Vertical. |
+<table><thead><tr><th>
 
+Method
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[universalSearch(request)](./search-core.searchservice.universalsearch.md)
+
+
+</td><td>
+
+Performs a Universal search across all verticals.
+
+
+</td></tr>
+<tr><td>
+
+[verticalSearch(request)](./search-core.searchservice.verticalsearch.md)
+
+
+</td><td>
+
+Performs a search across a particular Vertical.
+
+
+</td></tr>
+</tbody></table>

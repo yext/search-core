@@ -6,7 +6,7 @@
 
 A direct answer to a search.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface DirectAnswer<T = unknown> 
@@ -14,11 +14,120 @@ export interface DirectAnswer<T = unknown>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [fieldType](./search-core.directanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType](./search-core.builtinfieldtype.md)<!-- -->&gt; \| 'unknown' | The field type of the direct answer. |
-|  [relatedResult](./search-core.directanswer.relatedresult.md) | [Result](./search-core.result.md) | The entity associated with the direct answer. |
-|  [type](./search-core.directanswer.type.md) | [DirectAnswerType](./search-core.directanswertype.md) | The [DirectAnswerType](./search-core.directanswertype.md)<!-- -->. |
-|  [value?](./search-core.directanswer.value.md) | T | <i>(Optional)</i> The value of the direct answer. |
-|  [verticalKey](./search-core.directanswer.verticalkey.md) | string | The vertical key of the direct answer. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[fieldType](./search-core.directanswer.fieldtype.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType](./search-core.builtinfieldtype.md)<!-- -->&gt; \| 'unknown'
+
+
+</td><td>
+
+The field type of the direct answer.
+
+
+</td></tr>
+<tr><td>
+
+[relatedResult](./search-core.directanswer.relatedresult.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Result](./search-core.result.md)
+
+
+</td><td>
+
+The entity associated with the direct answer.
+
+
+</td></tr>
+<tr><td>
+
+[type](./search-core.directanswer.type.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DirectAnswerType](./search-core.directanswertype.md)
+
+
+</td><td>
+
+The [DirectAnswerType](./search-core.directanswertype.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[value?](./search-core.directanswer.value.md)
+
+
+</td><td>
+
+
+</td><td>
+
+T
+
+
+</td><td>
+
+_(Optional)_ The value of the direct answer.
+
+
+</td></tr>
+<tr><td>
+
+[verticalKey](./search-core.directanswer.verticalkey.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The vertical key of the direct answer.
+
+
+</td></tr>
+</tbody></table>

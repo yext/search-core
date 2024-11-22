@@ -6,7 +6,7 @@
 
 An array of substring matches which correspond to the highlighting. Offset indicates the index of the match, and the length indicates the number of characters of the match.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 matchedSubstrings: {

@@ -6,7 +6,7 @@
 
 The latitude and longitude of the user making the request. Used to bias the results.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 location?: LatLong;

@@ -6,7 +6,7 @@
 
 Indicates how child filters in a [StaticFilter](./search-core.staticfilter.md) should be combined.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum FilterCombinator 
@@ -14,8 +14,52 @@ export declare enum FilterCombinator
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  AND | <code>&quot;$and&quot;</code> | Indicates that filters should be combined with a logical AND. |
-|  OR | <code>&quot;$or&quot;</code> | Indicates that filters should be combined with a logical OR. |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+AND
+
+
+</td><td>
+
+`"$and"`
+
+
+</td><td>
+
+Indicates that filters should be combined with a logical AND.
+
+
+</td></tr>
+<tr><td>
+
+OR
+
+
+</td><td>
+
+`"$or"`
+
+
+</td><td>
+
+Indicates that filters should be combined with a logical OR.
+
+
+</td></tr>
+</tbody></table>
