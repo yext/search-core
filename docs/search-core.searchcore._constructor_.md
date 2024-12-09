@@ -15,15 +15,24 @@ constructor(searchService: SearchService, questionSubmissionService: QuestionSub
 ## Parameters
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <table><thead><tr><th>
 =======
+=======
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  searchService | [SearchService](./search-core.searchservice.md) |  |
 |  questionSubmissionService | [QuestionSubmissionService](./search-core.questionsubmissionservice.md) |  |
 |  autoCompleteService | [AutocompleteService](./search-core.autocompleteservice.md) |  |
 |  generativeDirectAnswerService | [GenerativeDirectAnswerService](./search-core.generativedirectanswerservice.md) |  |
+<<<<<<< HEAD
 >>>>>>> d7c4b92 (Merge master (v2.6.0-beta) into develop (#264))
+=======
+=======
+<table><thead><tr><th>
+>>>>>>> d56085d (search-core: Resolve Vulnerabilities (#287))
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 
 Parameter
 

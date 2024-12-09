@@ -44,6 +44,9 @@ Represents an error
 ## Enumerations
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 <table><thead><tr><th>
 
 Enumeration
@@ -243,6 +246,7 @@ Represents the type of spell check performed.
 
 </td></tr>
 </tbody></table>
+<<<<<<< HEAD
 =======
 |  Enumeration | Description |
 |  --- | --- |
@@ -264,6 +268,8 @@ Represents the type of spell check performed.
 |  [Source](./search-core.source.md) | Represents the source of a [Result](./search-core.result.md)<!-- -->. |
 |  [SpellCheckType](./search-core.spellchecktype.md) | Represents the type of spell check performed. |
 >>>>>>> 7a02721 (search-core: add cloudChoice enum and config support (#277))
+=======
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 
 ## Functions
 
@@ -293,6 +299,7 @@ The entrypoint to the search-core library.
 
 ## Interfaces
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <table><thead><tr><th>
 
@@ -1220,6 +1227,8 @@ Information used to associate requests with a particular user.
 </td></tr>
 </tbody></table>
 =======
+=======
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 |  Interface | Description |
 |  --- | --- |
 |  [AdditionalHttpHeaders](./search-core.additionalhttpheaders.md) | AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
@@ -1308,7 +1317,937 @@ Information used to associate requests with a particular user.
 |  [VerticalSearchRequest](./search-core.verticalsearchrequest.md) | Options which can be specified for a vertical search. |
 |  [VerticalSearchResponse](./search-core.verticalsearchresponse.md) | A representation of a response from a vertical search. |
 |  [Visitor](./search-core.visitor.md) | Information used to associate requests with a particular user. |
+<<<<<<< HEAD
 >>>>>>> d7c4b92 (Merge master (v2.6.0-beta) into develop (#264))
+=======
+=======
+<table><thead><tr><th>
+
+Interface
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[AdditionalHttpHeaders](./search-core.additionalhttpheaders.md)
+
+
+</td><td>
+
+AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers.
+
+
+</td></tr>
+<tr><td>
+
+[Address](./search-core.address.md)
+
+
+</td><td>
+
+An interface with address fields to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[AddressDirectAnswer](./search-core.addressdirectanswer.md)
+
+
+</td><td>
+
+A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'address' field type.
+
+
+</td></tr>
+<tr><td>
+
+[AndroidAppUrlDirectAnswer](./search-core.androidappurldirectanswer.md)
+
+
+</td><td>
+
+A direct answer for an android app url field.
+
+
+</td></tr>
+<tr><td>
+
+[AppliedQueryFilter](./search-core.appliedqueryfilter.md)
+
+
+</td><td>
+
+A filter that the Search API applied to the search.
+
+
+</td></tr>
+<tr><td>
+
+[AutocompleteResponse](./search-core.autocompleteresponse.md)
+
+
+</td><td>
+
+The response of a universal or vertical autocomplete request.
+
+
+</td></tr>
+<tr><td>
+
+[AutocompleteResult](./search-core.autocompleteresult.md)
+
+
+</td><td>
+
+An autocomplete suggestion.
+
+
+</td></tr>
+<tr><td>
+
+[AutocompleteService](./search-core.autocompleteservice.md)
+
+
+</td><td>
+
+A service for autocomplete requests.
+
+
+</td></tr>
+<tr><td>
+
+[BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md)
+
+
+</td><td>
+
+A direct answer which was found within a document.
+
+
+</td></tr>
+<tr><td>
+
+[BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)
+
+
+</td><td>
+
+A direct answer where the answer came from a field from the knowledge graph.
+
+
+</td></tr>
+<tr><td>
+
+[BaseSearchConfig](./search-core.basesearchconfig.md)
+
+
+</td><td>
+
+The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [ServingConfig](./search-core.servingconfig.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[ClientSDKHeaderValues](./search-core.clientsdkheadervalues.md)
+
+
+</td><td>
+
+Additional agents and their versions used to create the Search experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent.
+
+
+</td></tr>
+<tr><td>
+
+[ComplexURL](./search-core.complexurl.md)
+
+
+</td><td>
+
+The shape of a [BuiltInFieldType.ComplexURL](./search-core.builtinfieldtype.md) DirectAnswer value
+
+
+</td></tr>
+<tr><td>
+
+[ComplexUrlDirectAnswer](./search-core.complexurldirectanswer.md)
+
+
+</td><td>
+
+A direct answer for a complex url field.
+
+
+</td></tr>
+<tr><td>
+
+[ConjunctionStaticFilter](./search-core.conjunctionstaticfilter.md)
+
+
+</td><td>
+
+A static filter composed by combining other static filters with the logical AND operator.
+
+
+</td></tr>
+<tr><td>
+
+[DayHour](./search-core.dayhour.md)
+
+
+</td><td>
+
+An interface for a day's hours to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[DecimalDirectAnswer](./search-core.decimaldirectanswer.md)
+
+
+</td><td>
+
+A direct answer for a decimal field, which is a number represented using a string.
+
+
+</td></tr>
+<tr><td>
+
+[DirectAnswer](./search-core.directanswer.md)
+
+
+</td><td>
+
+A direct answer to a search.
+
+
+</td></tr>
+<tr><td>
+
+[DisjunctionStaticFilter](./search-core.disjunctionstaticfilter.md)
+
+
+</td><td>
+
+A static filter composed by combining filters with the logical OR operator. The combined filters can either be field value filters or other disjunction filters.
+
+
+</td></tr>
+<tr><td>
+
+[DisplayableFacet](./search-core.displayablefacet.md)
+
+
+</td><td>
+
+A [Facet](./search-core.facet.md) which contains extra fields meant to be displayed to the end user.
+
+
+</td></tr>
+<tr><td>
+
+[DisplayableFacetOption](./search-core.displayablefacetoption.md)
+
+
+</td><td>
+
+A [FacetOption](./search-core.facetoption.md) with extra data meant to be displayed to the end user.
+
+
+</td></tr>
+<tr><td>
+
+[DocumentResult](./search-core.documentresult.md)
+
+
+</td><td>
+
+Details about the document and the document search algorithm
+
+
+</td></tr>
+<tr><td>
+
+[EmailDirectAnswer](./search-core.emaildirectanswer.md)
+
+
+</td><td>
+
+A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'email' field type.
+
+
+</td></tr>
+<tr><td>
+
+[Endpoints](./search-core.endpoints.md)
+
+
+</td><td>
+
+Overrides for the URLs which are used when making requests to the Search API.
+
+
+</td></tr>
+<tr><td>
+
+[FacebookUrlDirectAnswer](./search-core.facebookurldirectanswer.md)
+
+
+</td><td>
+
+A direct answer for a facebook url field.
+
+
+</td></tr>
+<tr><td>
+
+[Facet](./search-core.facet.md)
+
+
+</td><td>
+
+Represents dynamic filter options for the Search API.
+
+
+</td></tr>
+<tr><td>
+
+[FacetOption](./search-core.facetoption.md)
+
+
+</td><td>
+
+A filter associated with the facet.
+
+
+</td></tr>
+<tr><td>
+
+[FailedVertical](./search-core.failedvertical.md)
+
+
+</td><td>
+
+Error information from when a vertical fails to return results.
+
+
+</td></tr>
+<tr><td>
+
+[FieldValueFilter](./search-core.fieldvaluefilter.md)
+
+
+</td><td>
+
+Represents a filter which compares values to a single field.
+
+
+</td></tr>
+<tr><td>
+
+[FieldValueStaticFilter](./search-core.fieldvaluestaticfilter.md)
+
+
+</td><td>
+
+A [FieldValueFilter](./search-core.fieldvaluefilter.md) with the kind of filter specified to discriminate between static filter types.
+
+
+</td></tr>
+<tr><td>
+
+[FilterSearchRequest](./search-core.filtersearchrequest.md)
+
+
+</td><td>
+
+Options for a filtersearch request.
+
+
+</td></tr>
+<tr><td>
+
+[FilterSearchResponse](./search-core.filtersearchresponse.md)
+
+
+</td><td>
+
+The response of a filtersearch request.
+
+
+</td></tr>
+<tr><td>
+
+[HighlightedValue](./search-core.highlightedvalue.md)
+
+
+</td><td>
+
+A field value and its substring matches as emphasized by the Search API.
+
+
+</td></tr>
+<tr><td>
+
+[HolidayHours](./search-core.holidayhours.md)
+
+
+</td><td>
+
+An interface for holiday hours to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[Hours](./search-core.hours.md)
+
+
+</td><td>
+
+An interface for hours fields to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[HoursDirectAnswer](./search-core.hoursdirectanswer.md)
+
+
+</td><td>
+
+A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with 'hours' field type.
+
+
+</td></tr>
+<tr><td>
+
+[HTMLSnippetDirectAnswer](./search-core.htmlsnippetdirectanswer.md)
+
+
+</td><td>
+
+A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'html' field type. "value" field is omitted for featured snippet direct answer of this field type.
+
+
+</td></tr>
+<tr><td>
+
+[InstagramHandleDirectAnswer](./search-core.instagramhandledirectanswer.md)
+
+
+</td><td>
+
+A direct answer for an instagram handle field.
+
+
+</td></tr>
+<tr><td>
+
+[IntegerDirectAnswer](./search-core.integerdirectanswer.md)
+
+
+</td><td>
+
+A direct answer for an integer field.
+
+
+</td></tr>
+<tr><td>
+
+[Interval](./search-core.interval.md)
+
+
+</td><td>
+
+An interface for a time interval to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[IosAppUrlDirectAnswer](./search-core.iosappurldirectanswer.md)
+
+
+</td><td>
+
+A direct answer for an iOS app url field.
+
+
+</td></tr>
+<tr><td>
+
+[LatLong](./search-core.latlong.md)
+
+
+</td><td>
+
+The latitude and longitude of the user making the request. Used to bias the results.
+
+
+</td></tr>
+<tr><td>
+
+[LocationBias](./search-core.locationbias.md)
+
+
+</td><td>
+
+Information about the user's location.
+
+
+</td></tr>
+<tr><td>
+
+[LocationBoundingBox](./search-core.locationboundingbox.md)
+
+
+</td><td>
+
+Location boundaries for a filter with "Place" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->. (e.g. boundary for a locality or region specific location filter)
+
+
+</td></tr>
+<tr><td>
+
+[LocationFilterDetails](./search-core.locationfilterdetails.md)
+
+
+</td><td>
+
+Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[LowerNumberRangeLimit](./search-core.lowernumberrangelimit.md)
+
+
+</td><td>
+
+The start limit of [NumberRangeValue](./search-core.numberrangevalue.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[MarkdownSnippetDirectAnswer](./search-core.markdownsnippetdirectanswer.md)
+
+
+</td><td>
+
+A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'markdown' field type. "value" field is omitted for featured snippet direct answer of this field type.
+
+
+</td></tr>
+<tr><td>
+
+[MultiLineTextSnippetDirectAnswer](./search-core.multilinetextsnippetdirectanswer.md)
+
+
+</td><td>
+
+A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'multi\_line\_text' field type.
+
+
+</td></tr>
+<tr><td>
+
+[NearFilterValue](./search-core.nearfiltervalue.md)
+
+
+</td><td>
+
+A filter value for a filter with a $near [Matcher](./search-core.matcher.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[NumberRangeValue](./search-core.numberrangevalue.md)
+
+
+</td><td>
+
+A filter value for a filter with a $between [Matcher](./search-core.matcher.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[PhoneDirectAnswer](./search-core.phonedirectanswer.md)
+
+
+</td><td>
+
+A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) interface with phone value.
+
+
+</td></tr>
+<tr><td>
+
+[QueryRulesActionsData](./search-core.queryrulesactionsdata.md)
+
+
+</td><td>
+
+Data returned from the Search query rules system.
+
+
+</td></tr>
+<tr><td>
+
+[QuestionSubmissionRequest](./search-core.questionsubmissionrequest.md)
+
+
+</td><td>
+
+Options for a QuestionSubmission request.
+
+
+</td></tr>
+<tr><td>
+
+[QuestionSubmissionResponse](./search-core.questionsubmissionresponse.md)
+
+
+</td><td>
+
+A representation of a question submission response.
+
+
+</td></tr>
+<tr><td>
+
+[QuestionSubmissionService](./search-core.questionsubmissionservice.md)
+
+
+</td><td>
+
+Submits a custom question to the Search API.
+
+
+</td></tr>
+<tr><td>
+
+[Result](./search-core.result.md)
+
+
+</td><td>
+
+An individual search result.
+
+
+</td></tr>
+<tr><td>
+
+[RichTextDirectAnswer](./search-core.richtextdirectanswer.md)
+
+
+</td><td>
+
+A direct answer for a rich text field.
+
+
+</td></tr>
+<tr><td>
+
+[RichTextSnippetDirectAnswer](./search-core.richtextsnippetdirectanswer.md)
+
+
+</td><td>
+
+A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'rich\_text' field type. "value" field is omitted for featured snippet direct answer of this field type.
+
+
+</td></tr>
+<tr><td>
+
+[RichTextV2SnippetDirectAnswer](./search-core.richtextv2snippetdirectanswer.md)
+
+
+</td><td>
+
+A [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) with 'rich\_text\_v2' field type. "value" field is omitted for featured snippet direct answer of this field type.
+
+
+</td></tr>
+<tr><td>
+
+[SearchConfigWithApiKey](./search-core.searchconfigwithapikey.md)
+
+
+</td><td>
+
+Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires apiKey.
+
+
+</td></tr>
+<tr><td>
+
+[SearchConfigWithToken](./search-core.searchconfigwithtoken.md)
+
+
+</td><td>
+
+Configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [BaseSearchConfig](./search-core.basesearchconfig.md)<!-- -->, but requires token.
+
+
+</td></tr>
+<tr><td>
+
+[SearchParameterField](./search-core.searchparameterfield.md)
+
+
+</td><td>
+
+Indicates which entity field to perform the autocomplete request on.
+
+
+</td></tr>
+<tr><td>
+
+[SearchRequest](./search-core.searchrequest.md)
+
+
+</td><td>
+
+Options for a Search API request.
+
+
+</td></tr>
+<tr><td>
+
+[SearchService](./search-core.searchservice.md)
+
+
+</td><td>
+
+A service which performs Yext Search.
+
+
+</td></tr>
+<tr><td>
+
+[Segment](./search-core.segment.md)
+
+
+</td><td>
+
+A result produced by a document vertical.
+
+
+</td></tr>
+<tr><td>
+
+[ServingConfig](./search-core.servingconfig.md)
+
+
+</td><td>
+
+The configuration options for getting the endpoints.
+
+
+</td></tr>
+<tr><td>
+
+[Snippet](./search-core.snippet.md)
+
+
+</td><td>
+
+The section of text where a [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) was found.
+
+
+</td></tr>
+<tr><td>
+
+[SortBy](./search-core.sortby.md)
+
+
+</td><td>
+
+Represents a criterion that can be used to sort results.
+
+
+</td></tr>
+<tr><td>
+
+[SpellCheck](./search-core.spellcheck.md)
+
+
+</td><td>
+
+A spellcheck response from a search query.
+
+
+</td></tr>
+<tr><td>
+
+[TextDirectAnswer](./search-core.textdirectanswer.md)
+
+
+</td><td>
+
+A direct answer whose source is a string or string list field in the knowledge graph.
+
+
+</td></tr>
+<tr><td>
+
+[TwitterHandleDirectAnswer](./search-core.twitterhandledirectanswer.md)
+
+
+</td><td>
+
+A direct answer for an twitter handle field.
+
+
+</td></tr>
+<tr><td>
+
+[UniversalAutocompleteRequest](./search-core.universalautocompleterequest.md)
+
+
+</td><td>
+
+Options for a universal autocomplete request.
+
+
+</td></tr>
+<tr><td>
+
+[UniversalLimit](./search-core.universallimit.md)
+
+
+</td><td>
+
+The maximum limit of results per vertical. Each limit can be set from 1-50, inclusive.
+
+
+</td></tr>
+<tr><td>
+
+[UniversalSearchRequest](./search-core.universalsearchrequest.md)
+
+
+</td><td>
+
+Options which can be specified for a universal search.
+
+
+</td></tr>
+<tr><td>
+
+[UniversalSearchResponse](./search-core.universalsearchresponse.md)
+
+
+</td><td>
+
+A representation of a response from a universal search.
+
+
+</td></tr>
+<tr><td>
+
+[UnknownFieldValueDirectAnswer](./search-core.unknownfieldvaluedirectanswer.md)
+
+
+</td><td>
+
+A [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md) with a field type outside of [BuiltInFieldType](./search-core.builtinfieldtype.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[UpperNumberRangeLimit](./search-core.uppernumberrangelimit.md)
+
+
+</td><td>
+
+The end limit of [NumberRangeValue](./search-core.numberrangevalue.md)<!-- -->.
+
+
+</td></tr>
+<tr><td>
+
+[UrlDirectAnswer](./search-core.urldirectanswer.md)
+
+
+</td><td>
+
+A direct answer for a simple url field.
+
+
+</td></tr>
+<tr><td>
+
+[VerticalAutocompleteRequest](./search-core.verticalautocompleterequest.md)
+
+
+</td><td>
+
+Options for a vertial autocomplete request.
+
+
+</td></tr>
+<tr><td>
+
+[VerticalResults](./search-core.verticalresults.md)
+
+
+</td><td>
+
+Represents results from a search vertical.
+
+
+</td></tr>
+<tr><td>
+
+[VerticalSearchRequest](./search-core.verticalsearchrequest.md)
+
+
+</td><td>
+
+Options which can be specified for a vertical search.
+
+
+</td></tr>
+<tr><td>
+
+[VerticalSearchResponse](./search-core.verticalsearchresponse.md)
+
+
+</td><td>
+
+A representation of a response from a vertical search.
+
+
+</td></tr>
+<tr><td>
+
+[Visitor](./search-core.visitor.md)
+
+
+</td><td>
+
+Information used to associate requests with a particular user.
+
+
+</td></tr>
+</tbody></table>
+>>>>>>> d56085d (search-core: Resolve Vulnerabilities (#287))
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 
 ## Variables
 

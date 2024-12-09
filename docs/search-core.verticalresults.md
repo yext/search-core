@@ -15,8 +15,11 @@ export interface VerticalResults
 ## Properties
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <table><thead><tr><th>
 =======
+=======
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 |  Property | Type | Description |
 |  --- | --- | --- |
 |  [appliedQueryFilters](./search-core.verticalresults.appliedqueryfilters.md) | [AppliedQueryFilter](./search-core.appliedqueryfilter.md)<!-- -->\[\] | A array of [AppliedQueryFilter](./search-core.appliedqueryfilter.md)<!-- -->s which were applied to the vertical results. |
@@ -25,7 +28,13 @@ export interface VerticalResults
 |  [resultsCount](./search-core.verticalresults.resultscount.md) | number | The total number of results within the vertical. |
 |  [source](./search-core.verticalresults.source.md) | [Source](./search-core.source.md) | Represents the source of a [Result](./search-core.result.md)<!-- -->. |
 |  [verticalKey](./search-core.verticalresults.verticalkey.md) | string | The vertical key associated with the vertical results. |
+<<<<<<< HEAD
 >>>>>>> 8035fcc (make `queryDurationMillis` field optional in VerticalResults (#266))
+=======
+=======
+<table><thead><tr><th>
+>>>>>>> d56085d (search-core: Resolve Vulnerabilities (#287))
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 
 Property
 

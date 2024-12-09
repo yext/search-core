@@ -15,8 +15,11 @@ export declare enum Source
 ## Enumeration Members
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <table><thead><tr><th>
 =======
+=======
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 |  Member | Value | Description |
 |  --- | --- | --- |
 |  Custom | <code>&quot;CUSTOM_SEARCHER&quot;</code> | The result was from a custom source. |
@@ -25,10 +28,16 @@ export declare enum Source
 |  Google | <code>&quot;GOOGLE_CSE&quot;</code> | The result is from Google Custom Search Engine. |
 |  KnowledgeManager | <code>&quot;KNOWLEDGE_MANAGER&quot;</code> | The result is from a Knowledge Graph. |
 <<<<<<< HEAD
+<<<<<<< HEAD
 |  Zendesk | <code>&quot;ZENDESK&quot;</code> | The result is from Zendesk. |
 >>>>>>> 97e068e (search-core: add support for FunctionVertical (#271))
 =======
 >>>>>>> 4f71562 (ksearch: remove Zendesk/Algolia/Bing (#272))
+=======
+=======
+<table><thead><tr><th>
+>>>>>>> d56085d (search-core: Resolve Vulnerabilities (#287))
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 
 Member
 

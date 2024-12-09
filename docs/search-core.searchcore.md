@@ -15,6 +15,7 @@ export declare class SearchCore
 ## Constructors
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 <table><thead><tr><th>
 
 Constructor
@@ -51,6 +52,8 @@ Constructs a new instance of the `SearchCore` class
 
 <table><thead><tr><th>
 =======
+=======
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 |  Constructor | Modifiers | Description |
 |  --- | --- | --- |
 |  [(constructor)(searchService, questionSubmissionService, autoCompleteService, generativeDirectAnswerService)](./search-core.searchcore._constructor_.md) |  | Constructs a new instance of the <code>SearchCore</code> class |
@@ -66,8 +69,49 @@ Constructs a new instance of the `SearchCore` class
 |  [universalSearch(request)](./search-core.searchcore.universalsearch.md) |  | Performs a search across all verticals. |
 |  [verticalAutocomplete(request)](./search-core.searchcore.verticalautocomplete.md) |  | Performs an autocomplete request for a single vertical. |
 |  [verticalSearch(request)](./search-core.searchcore.verticalsearch.md) |  | Performs a search for a single vertical. |
+<<<<<<< HEAD
 >>>>>>> d7c4b92 (Merge master (v2.6.0-beta) into develop (#264))
 
+=======
+=======
+<table><thead><tr><th>
+
+Constructor
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[(constructor)(searchService, questionSubmissionService, autoCompleteService)](./search-core.searchcore._constructor_.md)
+
+
+</td><td>
+
+
+</td><td>
+
+Constructs a new instance of the `SearchCore` class
+
+
+</td></tr>
+</tbody></table>
+
+## Methods
+
+<table><thead><tr><th>
+>>>>>>> d56085d (search-core: Resolve Vulnerabilities (#287))
+
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 Method
 
 

@@ -7,10 +7,14 @@
 Defines the cloud choice of the API domains.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Signature:**
 =======
 <b>Signature:</b>
 >>>>>>> 7a02721 (search-core: add cloudChoice enum and config support (#277))
+=======
+**Signature:**
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 
 ```typescript
 cloudChoice?: CloudChoice;

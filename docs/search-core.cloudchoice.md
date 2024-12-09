@@ -7,10 +7,14 @@
 Defines the cloud choice of the API domains.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 **Signature:**
 =======
 <b>Signature:</b>
 >>>>>>> 7a02721 (search-core: add cloudChoice enum and config support (#277))
+=======
+**Signature:**
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
 
 ```typescript
 export declare enum CloudChoice 
@@ -18,6 +22,7 @@ export declare enum CloudChoice
 
 ## Enumeration Members
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <table><thead><tr><th>
 
@@ -71,3 +76,50 @@ GLOBAL\_MULTI
 |  GLOBAL\_MULTI | <code>&quot;GLOBAL-MULTI&quot;</code> |  |
 
 >>>>>>> 7a02721 (search-core: add cloudChoice enum and config support (#277))
+=======
+<table><thead><tr><th>
+
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+GLOBAL\_GCP
+
+
+</td><td>
+
+`"GLOBAL-GCP"`
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+GLOBAL\_MULTI
+
+
+</td><td>
+
+`"GLOBAL-MULTI"`
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+>>>>>>> 3825120 (search-core: Resolve Vulnerabilities (#287))
