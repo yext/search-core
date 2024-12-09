@@ -6,7 +6,7 @@
 
 End limit of the number range value.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 end?: UpperNumberRangeLimit;

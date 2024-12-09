@@ -6,7 +6,7 @@
 
 The locations in the document text of the [DirectAnswer.value](./search-core.directanswer.value.md)
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 matchedSubstrings: {

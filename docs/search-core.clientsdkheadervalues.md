@@ -6,7 +6,7 @@
 
 Additional agents and their versions used to create the Search experience. The information for these agents is added to the Client-SDK HTTP header along with that of the ANSWERS\_CORE agent.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface ClientSDKHeaderValues 
@@ -14,7 +14,44 @@ export interface ClientSDKHeaderValues
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [ANSWERS\_CORE?](./search-core.clientsdkheadervalues.answers_core.md) | never | <i>(Optional)</i> The ANSWERS\_CORE agent should not be supplied. Instead, it will be automatically added to the header and populated with the version of Search Core being used. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[ANSWERS\_CORE?](./search-core.clientsdkheadervalues.answers_core.md)
+
+
+</td><td>
+
+
+</td><td>
+
+never
+
+
+</td><td>
+
+_(Optional)_ The ANSWERS\_CORE agent should not be supplied. Instead, it will be automatically added to the header and populated with the version of Search Core being used.
+
+
+</td></tr>
+</tbody></table>

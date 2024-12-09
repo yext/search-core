@@ -6,23 +6,186 @@
 
 The base configuration options for [SearchCore](./search-core.searchcore.md)<!-- -->, which includes the options from [ServingConfig](./search-core.servingconfig.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface BaseSearchConfig extends ServingConfig 
 ```
-<b>Extends:</b> [ServingConfig](./search-core.servingconfig.md)
+**Extends:** [ServingConfig](./search-core.servingconfig.md)
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [additionalQueryParams?](./search-core.basesearchconfig.additionalqueryparams.md) | { \[key: string\]: string \| number \| boolean; } | <i>(Optional)</i> Additional query params added on to every request. |
-|  [cloudRegion?](./search-core.basesearchconfig.cloudregion.md) | [CloudRegion](./search-core.cloudregion.md) | <i>(Optional)</i> Defines the cloud region of the API domains. |
-|  [endpoints?](./search-core.basesearchconfig.endpoints.md) | [Endpoints](./search-core.endpoints.md) | <i>(Optional)</i> Overrides for the URLs which are used when making requests to the Search API. |
-|  [environment?](./search-core.basesearchconfig.environment.md) | [Environment](./search-core.environment.md) | <i>(Optional)</i> Defines the environment of the API domains. |
-|  [experienceKey](./search-core.basesearchconfig.experiencekey.md) | string | The experience key of the search experience. |
-|  [experienceVersion?](./search-core.basesearchconfig.experienceversion.md) | 'STAGING' \| 'PRODUCTION' \| string \| number | <i>(Optional)</i> The version of the search experience configuration. |
-|  [locale](./search-core.basesearchconfig.locale.md) | string | The locale of the search experience. |
-|  [visitor?](./search-core.basesearchconfig.visitor.md) | [Visitor](./search-core.visitor.md) | <i>(Optional)</i> Information used to associate requests with a particular user. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[additionalQueryParams?](./search-core.basesearchconfig.additionalqueryparams.md)
+
+
+</td><td>
+
+
+</td><td>
+
+{ \[key: string\]: string \| number \| boolean; }
+
+
+</td><td>
+
+_(Optional)_ Additional query params added on to every request.
+
+
+</td></tr>
+<tr><td>
+
+[cloudRegion?](./search-core.basesearchconfig.cloudregion.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[CloudRegion](./search-core.cloudregion.md)
+
+
+</td><td>
+
+_(Optional)_ Defines the cloud region of the API domains.
+
+
+</td></tr>
+<tr><td>
+
+[endpoints?](./search-core.basesearchconfig.endpoints.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Endpoints](./search-core.endpoints.md)
+
+
+</td><td>
+
+_(Optional)_ Overrides for the URLs which are used when making requests to the Search API.
+
+
+</td></tr>
+<tr><td>
+
+[environment?](./search-core.basesearchconfig.environment.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Environment](./search-core.environment.md)
+
+
+</td><td>
+
+_(Optional)_ Defines the environment of the API domains.
+
+
+</td></tr>
+<tr><td>
+
+[experienceKey](./search-core.basesearchconfig.experiencekey.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The experience key of the search experience.
+
+
+</td></tr>
+<tr><td>
+
+[experienceVersion?](./search-core.basesearchconfig.experienceversion.md)
+
+
+</td><td>
+
+
+</td><td>
+
+'STAGING' \| 'PRODUCTION' \| string \| number
+
+
+</td><td>
+
+_(Optional)_ The version of the search experience configuration.
+
+
+</td></tr>
+<tr><td>
+
+[locale](./search-core.basesearchconfig.locale.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The locale of the search experience.
+
+
+</td></tr>
+<tr><td>
+
+[visitor?](./search-core.basesearchconfig.visitor.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Visitor](./search-core.visitor.md)
+
+
+</td><td>
+
+_(Optional)_ Information used to associate requests with a particular user.
+
+
+</td></tr>
+</tbody></table>

@@ -6,7 +6,7 @@
 
 The search query.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 query: string;

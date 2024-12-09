@@ -4,7 +4,7 @@
 
 ## Endpoints.universalAutocomplete property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 universalAutocomplete?: string;

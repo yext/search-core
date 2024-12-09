@@ -6,7 +6,7 @@
 
 The radius (in meters) around the latitude and longitude.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 radius: number;

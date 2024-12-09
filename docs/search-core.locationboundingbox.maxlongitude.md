@@ -6,7 +6,7 @@
 
 The location's highest longitude degree.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 maxLongitude: number;

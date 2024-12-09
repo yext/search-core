@@ -6,7 +6,7 @@
 
 Indicates which entity field to perform the autocomplete request on.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface SearchParameterField 
@@ -14,9 +14,82 @@ export interface SearchParameterField
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [entityType](./search-core.searchparameterfield.entitytype.md) | string | The entityType to perform the autocomplete on. |
-|  [fetchEntities](./search-core.searchparameterfield.fetchentities.md) | boolean | Indicates whether or not to return the [AutocompleteResult.relatedItem](./search-core.autocompleteresult.relateditem.md) associated with the autocomplete result. |
-|  [fieldApiName](./search-core.searchparameterfield.fieldapiname.md) | string | The fieldApiName to perform the autocomplete on. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[entityType](./search-core.searchparameterfield.entitytype.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The entityType to perform the autocomplete on.
+
+
+</td></tr>
+<tr><td>
+
+[fetchEntities](./search-core.searchparameterfield.fetchentities.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+Indicates whether or not to return the [AutocompleteResult.relatedItem](./search-core.autocompleteresult.relateditem.md) associated with the autocomplete result.
+
+
+</td></tr>
+<tr><td>
+
+[fieldApiName](./search-core.searchparameterfield.fieldapiname.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The fieldApiName to perform the autocomplete on.
+
+
+</td></tr>
+</tbody></table>

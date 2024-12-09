@@ -6,7 +6,7 @@
 
 Indicates whether or not to return the [AutocompleteResult.relatedItem](./search-core.autocompleteresult.relateditem.md) associated with the autocomplete result.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 fetchEntities: boolean;

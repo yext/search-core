@@ -6,7 +6,7 @@
 
 The [VerticalResults](./search-core.verticalresults.md) for each search vertical.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 alternativeVerticals?: VerticalResults[];

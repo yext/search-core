@@ -6,7 +6,7 @@
 
 The locale of the search experience.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 locale: string;

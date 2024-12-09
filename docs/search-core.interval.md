@@ -6,7 +6,7 @@
 
 An interface for a time interval to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface Interval 
@@ -14,8 +14,63 @@ export interface Interval
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [end?](./search-core.interval.end.md) | string | <i>(Optional)</i> |
-|  [start?](./search-core.interval.start.md) | string | <i>(Optional)</i> |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[end?](./search-core.interval.end.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[start?](./search-core.interval.start.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>

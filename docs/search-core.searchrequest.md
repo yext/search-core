@@ -6,7 +6,7 @@
 
 Options for a Search API request.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface SearchRequest 
@@ -14,7 +14,44 @@ export interface SearchRequest
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [additionalHttpHeaders?](./search-core.searchrequest.additionalhttpheaders.md) | [AdditionalHttpHeaders](./search-core.additionalhttpheaders.md) | <i>(Optional)</i> AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[additionalHttpHeaders?](./search-core.searchrequest.additionalhttpheaders.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[AdditionalHttpHeaders](./search-core.additionalhttpheaders.md)
+
+
+</td><td>
+
+_(Optional)_ AdditionalHttpHeaders allows users to specify additional values for specific HTTP headers.
+
+
+</td></tr>
+</tbody></table>

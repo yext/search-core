@@ -6,7 +6,7 @@
 
 The ID associated with the user
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 id: string;

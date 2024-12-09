@@ -6,7 +6,7 @@
 
 Performs a search across a particular Vertical.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
@@ -14,11 +14,40 @@ verticalSearch(request: VerticalSearchRequest): Promise<VerticalSearchResponse>;
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  request | [VerticalSearchRequest](./search-core.verticalsearchrequest.md) | The details of the Vertical search request. |
+<table><thead><tr><th>
 
-<b>Returns:</b>
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+request
+
+
+</td><td>
+
+[VerticalSearchRequest](./search-core.verticalsearchrequest.md)
+
+
+</td><td>
+
+The details of the Vertical search request.
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
 
 Promise&lt;[VerticalSearchResponse](./search-core.verticalsearchresponse.md)<!-- -->&gt;
 

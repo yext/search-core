@@ -11,7 +11,7 @@
 
 The endpoints to use for sandbox experiences.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 SandboxEndpoints: Required<Endpoints>

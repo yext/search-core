@@ -6,7 +6,7 @@
 
 Error information from when a vertical fails to return results.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface FailedVertical 
@@ -14,10 +14,101 @@ export interface FailedVertical
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [details](./search-core.failedvertical.details.md) | { responseCode: number; description: string; } | Detailed information about the error. |
-|  [errorType](./search-core.failedvertical.errortype.md) | [ErrorType](./search-core.errortype.md) | Identifier for the type of error causing the failure. |
-|  [queryDurationMillis](./search-core.failedvertical.querydurationmillis.md) | number | The duration of the query in milliseconds. |
-|  [verticalKey](./search-core.failedvertical.verticalkey.md) | string | The vertical key associated with the failed vertical. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[details](./search-core.failedvertical.details.md)
+
+
+</td><td>
+
+
+</td><td>
+
+{ responseCode: number; description: string; }
+
+
+</td><td>
+
+Detailed information about the error.
+
+
+</td></tr>
+<tr><td>
+
+[errorType](./search-core.failedvertical.errortype.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[ErrorType](./search-core.errortype.md)
+
+
+</td><td>
+
+Identifier for the type of error causing the failure.
+
+
+</td></tr>
+<tr><td>
+
+[queryDurationMillis](./search-core.failedvertical.querydurationmillis.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+The duration of the query in milliseconds.
+
+
+</td></tr>
+<tr><td>
+
+[verticalKey](./search-core.failedvertical.verticalkey.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The vertical key associated with the failed vertical.
+
+
+</td></tr>
+</tbody></table>

@@ -6,7 +6,7 @@
 
 A static filter composed by combining other static filters with the logical AND operator.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface ConjunctionStaticFilter 
@@ -14,9 +14,82 @@ export interface ConjunctionStaticFilter
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [combinator](./search-core.conjunctionstaticfilter.combinator.md) | [FilterCombinator.AND](./search-core.filtercombinator.md) | Indicates that filters should be combined with a logical AND. |
-|  [filters](./search-core.conjunctionstaticfilter.filters.md) | [StaticFilter](./search-core.staticfilter.md)<!-- -->\[\] | The filters to combine together. |
-|  [kind](./search-core.conjunctionstaticfilter.kind.md) | 'conjunction' | The kind of static filter. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[combinator](./search-core.conjunctionstaticfilter.combinator.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[FilterCombinator.AND](./search-core.filtercombinator.md)
+
+
+</td><td>
+
+Indicates that filters should be combined with a logical AND.
+
+
+</td></tr>
+<tr><td>
+
+[filters](./search-core.conjunctionstaticfilter.filters.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[StaticFilter](./search-core.staticfilter.md)<!-- -->\[\]
+
+
+</td><td>
+
+The filters to combine together.
+
+
+</td></tr>
+<tr><td>
+
+[kind](./search-core.conjunctionstaticfilter.kind.md)
+
+
+</td><td>
+
+
+</td><td>
+
+'conjunction'
+
+
+</td><td>
+
+The kind of static filter.
+
+
+</td></tr>
+</tbody></table>

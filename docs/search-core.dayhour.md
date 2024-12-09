@@ -6,7 +6,7 @@
 
 An interface for a day's hours to use in [BaseFieldValueDirectAnswer.value](./search-core.basefieldvaluedirectanswer.value.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface DayHour 
@@ -14,8 +14,63 @@ export interface DayHour
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [isClosed?](./search-core.dayhour.isclosed.md) | boolean | <i>(Optional)</i> |
-|  [openIntervals?](./search-core.dayhour.openintervals.md) | [Interval](./search-core.interval.md)<!-- -->\[\] | <i>(Optional)</i> |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[isClosed?](./search-core.dayhour.isclosed.md)
+
+
+</td><td>
+
+
+</td><td>
+
+boolean
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[openIntervals?](./search-core.dayhour.openintervals.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Interval](./search-core.interval.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+</tbody></table>

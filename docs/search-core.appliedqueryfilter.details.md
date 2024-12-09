@@ -6,7 +6,7 @@
 
 Additional details relevant to the filter with "PLACE" for its [AppliedQueryFilterType](./search-core.appliedqueryfiltertype.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 details?: LocationFilterDetails;

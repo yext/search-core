@@ -6,12 +6,12 @@
 
 A direct answer for an integer field.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface IntegerDirectAnswer extends BaseFieldValueDirectAnswer<number> 
 ```
-<b>Extends:</b> [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;number&gt;
+**Extends:** [BaseFieldValueDirectAnswer](./search-core.basefieldvaluedirectanswer.md)<!-- -->&lt;number&gt;
 
 ## Remarks
 
@@ -19,7 +19,42 @@ export interface IntegerDirectAnswer extends BaseFieldValueDirectAnswer<number>
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [fieldType](./search-core.integerdirectanswer.fieldtype.md) | [EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.Integer](./search-core.builtinfieldtype.md)<!-- -->&gt; |  |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[fieldType](./search-core.integerdirectanswer.fieldtype.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[EnumOrLiteral](./search-core.enumorliteral.md)<!-- -->&lt;[BuiltInFieldType.Integer](./search-core.builtinfieldtype.md)<!-- -->&gt;
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

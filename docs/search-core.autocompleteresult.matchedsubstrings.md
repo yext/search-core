@@ -6,7 +6,7 @@
 
 An array of substrings which overlap with the autocomplete input.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 matchedSubstrings?: {

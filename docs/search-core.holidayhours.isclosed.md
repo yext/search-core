@@ -4,7 +4,7 @@
 
 ## HolidayHours.isClosed property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 isClosed?: boolean;

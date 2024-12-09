@@ -6,7 +6,7 @@
 
 The page number of the document that the segment came from. Populated only for pdf files.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 pageNumber?: number;

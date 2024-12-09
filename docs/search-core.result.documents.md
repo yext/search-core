@@ -6,7 +6,7 @@
 
 All relevant documents associated with the result. Present for document verticals grouped by Entity.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 documents?: DocumentResult[];
