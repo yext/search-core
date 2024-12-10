@@ -6,7 +6,7 @@
 
 An array of uids from the relevant [Result.rawData](./search-core.result.rawdata.md) that were used to form the directAnswer.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 citations: string[];

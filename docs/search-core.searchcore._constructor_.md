@@ -14,6 +14,7 @@ constructor(searchService: SearchService, questionSubmissionService: QuestionSub
 
 ## Parameters
 
+<table><thead><tr><th>
 
 Parameter
 
@@ -65,6 +66,20 @@ autoCompleteService
 </td><td>
 
 [AutocompleteService](./search-core.autocompleteservice.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+generativeDirectAnswerService
+
+
+</td><td>
+
+[GenerativeDirectAnswerService](./search-core.generativedirectanswerservice.md)
 
 
 </td><td>

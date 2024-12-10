@@ -14,7 +14,7 @@ export interface VerticalResults
 
 ## Properties
 
-
+<table><thead><tr><th>
 
 Property
 
@@ -56,7 +56,7 @@ A array of [AppliedQueryFilter](./search-core.appliedqueryfilter.md)<!-- -->s wh
 </td></tr>
 <tr><td>
 
-[queryDurationMillis](./search-core.verticalresults.querydurationmillis.md)
+[queryDurationMillis?](./search-core.verticalresults.querydurationmillis.md)
 
 
 </td><td>
@@ -69,7 +69,7 @@ number
 
 </td><td>
 
-The duration of the query in milliseconds.
+_(Optional)_ The duration of the query in milliseconds
 
 
 </td></tr>

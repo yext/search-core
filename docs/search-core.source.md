@@ -14,7 +14,7 @@ export declare enum Source
 
 ## Enumeration Members
 
-
+<table><thead><tr><th>
 
 Member
 
@@ -59,6 +59,22 @@ DocumentVertical
 </td><td>
 
 The result is from a document vertical.
+
+
+</td></tr>
+<tr><td>
+
+FunctionVertical
+
+
+</td><td>
+
+`"FUNCTION_VERTICAL"`
+
+
+</td><td>
+
+The result is from a function vertical.
 
 
 </td></tr>

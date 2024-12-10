@@ -4,7 +4,7 @@
 
 ## Endpoints.generativeDirectAnswer property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 generativeDirectAnswer?: string;

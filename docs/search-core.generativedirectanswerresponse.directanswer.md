@@ -6,7 +6,7 @@
 
 The text of the final generated response.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 directAnswer: string;

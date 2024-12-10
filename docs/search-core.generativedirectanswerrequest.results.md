@@ -6,7 +6,7 @@
 
 The complete set of Search Results
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 results: VerticalResults[];

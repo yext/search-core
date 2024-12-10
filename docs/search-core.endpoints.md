@@ -14,6 +14,8 @@ export interface Endpoints
 
 ## Properties
 
+<table><thead><tr><th>
+
 Property
 
 
@@ -36,6 +38,25 @@ Description
 <tbody><tr><td>
 
 [filterSearch?](./search-core.endpoints.filtersearch.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
+[generativeDirectAnswer?](./search-core.endpoints.generativedirectanswer.md)
 
 
 </td><td>
