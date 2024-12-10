@@ -271,8 +271,6 @@ The entrypoint to the search-core library.
 
 ## Interfaces
 
-<table><thead><tr><th>
-
 Interface
 
 

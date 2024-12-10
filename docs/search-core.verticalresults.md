@@ -14,7 +14,7 @@ export interface VerticalResults
 
 ## Properties
 
-<table><thead><tr><th>
+
 
 Property
 

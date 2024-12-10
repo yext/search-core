@@ -14,8 +14,6 @@ export interface Endpoints
 
 ## Properties
 
-<table><thead><tr><th>
-
 Property
 
 

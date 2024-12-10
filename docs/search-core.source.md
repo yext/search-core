@@ -14,7 +14,7 @@ export declare enum Source
 
 ## Enumeration Members
 
-<table><thead><tr><th>
+
 
 Member
 

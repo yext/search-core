@@ -9,12 +9,11 @@ Constructs a new instance of the `SearchCore` class
 **Signature:**
 
 ```typescript
-constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService);
+constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService, generativeDirectAnswerService: GenerativeDirectAnswerService);
 ```
 
 ## Parameters
 
-<table><thead><tr><th>
 
 Parameter
 

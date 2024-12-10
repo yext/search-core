@@ -54,6 +54,7 @@ export class EndpointsFactory {
       universalAutocomplete: `${this.getCachedDomain()}/v2/accounts/me/search/autocomplete`,
       verticalAutocomplete: `${this.getCachedDomain()}/v2/accounts/me/search/vertical/autocomplete`,
       filterSearch: `${this.getDomain()}/v2/accounts/me/search/filtersearch`,
+      generativeDirectAnswer: `${this.getDomain()}/v2/accounts/me/search/generateAnswer`,
     };
   }
 }
