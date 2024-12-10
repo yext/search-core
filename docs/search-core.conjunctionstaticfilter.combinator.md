@@ -6,7 +6,7 @@
 
 Indicates that filters should be combined with a logical AND.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 combinator: FilterCombinator.AND;

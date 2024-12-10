@@ -6,7 +6,7 @@
 
 A hyperlink associated with the result.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 link?: string;

@@ -6,7 +6,7 @@
 
 A representation of a response from a universal search.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface UniversalSearchResponse 
@@ -14,15 +14,196 @@ export interface UniversalSearchResponse
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [directAnswer?](./search-core.universalsearchresponse.directanswer.md) | [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) \| [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) | <i>(Optional)</i> A direct answer to a search. |
-|  [failedVerticals?](./search-core.universalsearchresponse.failedverticals.md) | [FailedVertical](./search-core.failedvertical.md)<!-- -->\[\] | <i>(Optional)</i> Error information from when a vertical fails to return results. |
-|  [locationBias?](./search-core.universalsearchresponse.locationbias.md) | [LocationBias](./search-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
-|  [queryId?](./search-core.universalsearchresponse.queryid.md) | string | <i>(Optional)</i> The ID of the search query. |
-|  [queryRulesActionsData?](./search-core.universalsearchresponse.queryrulesactionsdata.md) | [QueryRulesActionsData](./search-core.queryrulesactionsdata.md)<!-- -->\[\] | <i>(Optional)</i> Data returned from the Search query rules system. |
-|  [searchIntents?](./search-core.universalsearchresponse.searchintents.md) | [SearchIntent](./search-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./search-core.searchintent.md)<!-- -->s which represents requests from the API. |
-|  [spellCheck?](./search-core.universalsearchresponse.spellcheck.md) | [SpellCheck](./search-core.spellcheck.md) | <i>(Optional)</i> A spellcheck response from a search query. |
-|  [uuid](./search-core.universalsearchresponse.uuid.md) | string | A unique id which corresponds to the request. |
-|  [verticalResults](./search-core.universalsearchresponse.verticalresults.md) | [VerticalResults](./search-core.verticalresults.md)<!-- -->\[\] | An array of [VerticalResults](./search-core.verticalresults.md) which represent the results for each vertical. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[directAnswer?](./search-core.universalsearchresponse.directanswer.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) \| [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md)
+
+
+</td><td>
+
+_(Optional)_ A direct answer to a search.
+
+
+</td></tr>
+<tr><td>
+
+[failedVerticals?](./search-core.universalsearchresponse.failedverticals.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[FailedVertical](./search-core.failedvertical.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_ Error information from when a vertical fails to return results.
+
+
+</td></tr>
+<tr><td>
+
+[locationBias?](./search-core.universalsearchresponse.locationbias.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[LocationBias](./search-core.locationbias.md)
+
+
+</td><td>
+
+_(Optional)_ Information about the user's location.
+
+
+</td></tr>
+<tr><td>
+
+[queryId?](./search-core.universalsearchresponse.queryid.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ The ID of the search query.
+
+
+</td></tr>
+<tr><td>
+
+[queryRulesActionsData?](./search-core.universalsearchresponse.queryrulesactionsdata.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[QueryRulesActionsData](./search-core.queryrulesactionsdata.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_ Data returned from the Search query rules system.
+
+
+</td></tr>
+<tr><td>
+
+[searchIntents?](./search-core.universalsearchresponse.searchintents.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[SearchIntent](./search-core.searchintent.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_ An array of [SearchIntent](./search-core.searchintent.md)<!-- -->s which represents requests from the API.
+
+
+</td></tr>
+<tr><td>
+
+[spellCheck?](./search-core.universalsearchresponse.spellcheck.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[SpellCheck](./search-core.spellcheck.md)
+
+
+</td><td>
+
+_(Optional)_ A spellcheck response from a search query.
+
+
+</td></tr>
+<tr><td>
+
+[uuid](./search-core.universalsearchresponse.uuid.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+A unique id which corresponds to the request.
+
+
+</td></tr>
+<tr><td>
+
+[verticalResults](./search-core.universalsearchresponse.verticalresults.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[VerticalResults](./search-core.verticalresults.md)<!-- -->\[\]
+
+
+</td><td>
+
+An array of [VerticalResults](./search-core.verticalresults.md) which represent the results for each vertical.
+
+
+</td></tr>
+</tbody></table>

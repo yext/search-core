@@ -6,7 +6,7 @@
 
 Generates an answer to a search query.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 generateAnswer(request: GenerativeDirectAnswerRequest): Promise<GenerativeDirectAnswerResponse>;
@@ -14,11 +14,38 @@ generateAnswer(request: GenerativeDirectAnswerRequest): Promise<GenerativeDirect
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  request | [GenerativeDirectAnswerRequest](./search-core.generativedirectanswerrequest.md) |  |
+<table><thead><tr><th>
 
-<b>Returns:</b>
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+request
+
+
+</td><td>
+
+[GenerativeDirectAnswerRequest](./search-core.generativedirectanswerrequest.md)
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
 
 Promise&lt;[GenerativeDirectAnswerResponse](./search-core.generativedirectanswerresponse.md)<!-- -->&gt;
 

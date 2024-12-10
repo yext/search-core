@@ -6,7 +6,7 @@
 
 The value of the segment as plain text.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 text: string;

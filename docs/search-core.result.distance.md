@@ -6,7 +6,7 @@
 
 The distance from the user to the result in meters.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 distance?: number;

@@ -6,7 +6,7 @@
 
 The start limit of [NumberRangeValue](./search-core.numberrangevalue.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface LowerNumberRangeLimit 
@@ -14,8 +14,63 @@ export interface LowerNumberRangeLimit
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [matcher](./search-core.lowernumberrangelimit.matcher.md) | [Matcher.GreaterThan](./search-core.matcher.md) \| [Matcher.GreaterThanOrEqualTo](./search-core.matcher.md) | [Matcher](./search-core.matcher.md) for the start limit |
-|  [value](./search-core.lowernumberrangelimit.value.md) | number | Value of the limit. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[matcher](./search-core.lowernumberrangelimit.matcher.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Matcher.GreaterThan](./search-core.matcher.md) \| [Matcher.GreaterThanOrEqualTo](./search-core.matcher.md)
+
+
+</td><td>
+
+[Matcher](./search-core.matcher.md) for the start limit
+
+
+</td></tr>
+<tr><td>
+
+[value](./search-core.lowernumberrangelimit.value.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+Value of the limit.
+
+
+</td></tr>
+</tbody></table>

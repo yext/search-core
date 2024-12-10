@@ -6,7 +6,7 @@
 
 Retrieves query suggestions for universal.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 universalAutocomplete(request: UniversalAutocompleteRequest): Promise<AutocompleteResponse>;
@@ -14,11 +14,38 @@ universalAutocomplete(request: UniversalAutocompleteRequest): Promise<Autocomple
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  request | [UniversalAutocompleteRequest](./search-core.universalautocompleterequest.md) |  |
+<table><thead><tr><th>
 
-<b>Returns:</b>
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+request
+
+
+</td><td>
+
+[UniversalAutocompleteRequest](./search-core.universalautocompleterequest.md)
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>
+**Returns:**
 
 Promise&lt;[AutocompleteResponse](./search-core.autocompleteresponse.md)<!-- -->&gt;
 

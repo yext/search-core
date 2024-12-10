@@ -6,7 +6,7 @@
 
 Represents the source of a [Result](./search-core.result.md)<!-- -->.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum Source 
@@ -14,11 +14,100 @@ export declare enum Source
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  Custom | <code>&quot;CUSTOM_SEARCHER&quot;</code> | The result was from a custom source. |
-|  DocumentVertical | <code>&quot;DOCUMENT_VERTICAL&quot;</code> | The result is from a document vertical. |
-|  FunctionVertical | <code>&quot;FUNCTION_VERTICAL&quot;</code> | The result is from a function vertical. |
-|  Google | <code>&quot;GOOGLE_CSE&quot;</code> | The result is from Google Custom Search Engine. |
-|  KnowledgeManager | <code>&quot;KNOWLEDGE_MANAGER&quot;</code> | The result is from a Knowledge Graph. |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+Custom
+
+
+</td><td>
+
+`"CUSTOM_SEARCHER"`
+
+
+</td><td>
+
+The result was from a custom source.
+
+
+</td></tr>
+<tr><td>
+
+DocumentVertical
+
+
+</td><td>
+
+`"DOCUMENT_VERTICAL"`
+
+
+</td><td>
+
+The result is from a document vertical.
+
+
+</td></tr>
+<tr><td>
+
+FunctionVertical
+
+
+</td><td>
+
+`"FUNCTION_VERTICAL"`
+
+
+</td><td>
+
+The result is from a function vertical.
+
+
+</td></tr>
+<tr><td>
+
+Google
+
+
+</td><td>
+
+`"GOOGLE_CSE"`
+
+
+</td><td>
+
+The result is from Google Custom Search Engine.
+
+
+</td></tr>
+<tr><td>
+
+KnowledgeManager
+
+
+</td><td>
+
+`"KNOWLEDGE_MANAGER"`
+
+
+</td><td>
+
+The result is from a Knowledge Graph.
+
+
+</td></tr>
+</tbody></table>

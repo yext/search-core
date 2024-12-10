@@ -4,7 +4,7 @@
 
 ## DayHour.isClosed property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 isClosed?: boolean;

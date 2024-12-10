@@ -6,7 +6,7 @@
 
 Submits a custom question to the Search API.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface QuestionSubmissionService 
@@ -14,7 +14,26 @@ export interface QuestionSubmissionService
 
 ## Methods
 
-|  Method | Description |
-|  --- | --- |
-|  [submitQuestion(request)](./search-core.questionsubmissionservice.submitquestion.md) | Submits a question to be answered. |
+<table><thead><tr><th>
 
+Method
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[submitQuestion(request)](./search-core.questionsubmissionservice.submitquestion.md)
+
+
+</td><td>
+
+Submits a question to be answered.
+
+
+</td></tr>
+</tbody></table>

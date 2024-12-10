@@ -6,7 +6,7 @@
 
 Constructs a new instance of the `SearchCore` class
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService, generativeDirectAnswerService: GenerativeDirectAnswerService);
@@ -14,10 +14,76 @@ constructor(searchService: SearchService, questionSubmissionService: QuestionSub
 
 ## Parameters
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  searchService | [SearchService](./search-core.searchservice.md) |  |
-|  questionSubmissionService | [QuestionSubmissionService](./search-core.questionsubmissionservice.md) |  |
-|  autoCompleteService | [AutocompleteService](./search-core.autocompleteservice.md) |  |
-|  generativeDirectAnswerService | [GenerativeDirectAnswerService](./search-core.generativedirectanswerservice.md) |  |
+<table><thead><tr><th>
 
+Parameter
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+searchService
+
+
+</td><td>
+
+[SearchService](./search-core.searchservice.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+questionSubmissionService
+
+
+</td><td>
+
+[QuestionSubmissionService](./search-core.questionsubmissionservice.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+autoCompleteService
+
+
+</td><td>
+
+[AutocompleteService](./search-core.autocompleteservice.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+generativeDirectAnswerService
+
+
+</td><td>
+
+[GenerativeDirectAnswerService](./search-core.generativedirectanswerservice.md)
+
+
+</td><td>
+
+
+</td></tr>
+</tbody></table>

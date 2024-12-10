@@ -6,7 +6,7 @@
 
 Determines whether or not the results of the [FilterSearchResponse](./search-core.filtersearchresponse.md) are separated by field.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 sectioned: boolean;

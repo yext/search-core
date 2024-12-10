@@ -6,7 +6,7 @@
 
 A spellcheck response from a search query.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface SpellCheck 
@@ -14,10 +14,101 @@ export interface SpellCheck
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [correctedQuery](./search-core.spellcheck.correctedquery.md) | string | The corrected version of the originalQuery. |
-|  [matchedSubstrings](./search-core.spellcheck.matchedsubstrings.md) | { length: number; offset: number; }\[\] | An array of substring matches which correspond to the highlighting. Offset indicates the index of the match, and the length indicates the number of characters of the match. |
-|  [originalQuery](./search-core.spellcheck.originalquery.md) | string | The query that was input into the spell checker. |
-|  [type](./search-core.spellcheck.type.md) | [SpellCheckType](./search-core.spellchecktype.md) | The type of spell check. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[correctedQuery](./search-core.spellcheck.correctedquery.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The corrected version of the originalQuery.
+
+
+</td></tr>
+<tr><td>
+
+[matchedSubstrings](./search-core.spellcheck.matchedsubstrings.md)
+
+
+</td><td>
+
+
+</td><td>
+
+{ length: number; offset: number; }\[\]
+
+
+</td><td>
+
+An array of substring matches which correspond to the highlighting. Offset indicates the index of the match, and the length indicates the number of characters of the match.
+
+
+</td></tr>
+<tr><td>
+
+[originalQuery](./search-core.spellcheck.originalquery.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The query that was input into the spell checker.
+
+
+</td></tr>
+<tr><td>
+
+[type](./search-core.spellcheck.type.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[SpellCheckType](./search-core.spellchecktype.md)
+
+
+</td><td>
+
+The type of spell check.
+
+
+</td></tr>
+</tbody></table>

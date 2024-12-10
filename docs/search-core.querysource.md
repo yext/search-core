@@ -6,7 +6,7 @@
 
 The source of the search request.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum QuerySource 
@@ -14,9 +14,68 @@ export declare enum QuerySource
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  Autocomplete | <code>&quot;AUTOCOMPLETE&quot;</code> | Indicates that the query was initiated from visual autocomplete. |
-|  Overlay | <code>&quot;OVERLAY&quot;</code> | Indicates that the query was initiated from a Search Overlay. |
-|  Standard | <code>&quot;STANDARD&quot;</code> | Indicates that the query was initiated from a standard Search integration. |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+Autocomplete
+
+
+</td><td>
+
+`"AUTOCOMPLETE"`
+
+
+</td><td>
+
+Indicates that the query was initiated from visual autocomplete.
+
+
+</td></tr>
+<tr><td>
+
+Overlay
+
+
+</td><td>
+
+`"OVERLAY"`
+
+
+</td><td>
+
+Indicates that the query was initiated from a Search Overlay.
+
+
+</td></tr>
+<tr><td>
+
+Standard
+
+
+</td><td>
+
+`"STANDARD"`
+
+
+</td><td>
+
+Indicates that the query was initiated from a standard Search integration.
+
+
+</td></tr>
+</tbody></table>

@@ -6,10 +6,10 @@
 
 All possible built-in [BaseFeaturedSnippetDirectAnswer](./search-core.basefeaturedsnippetdirectanswer.md) interfaces.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
-export declare type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer | RichTextV2SnippetDirectAnswer | HTMLSnippetDirectAnswer | MarkdownSnippetDirectAnswer;
+export type FeaturedSnippetDirectAnswer = MultiLineTextSnippetDirectAnswer | RichTextSnippetDirectAnswer | RichTextV2SnippetDirectAnswer | HTMLSnippetDirectAnswer | MarkdownSnippetDirectAnswer;
 ```
-<b>References:</b> [MultiLineTextSnippetDirectAnswer](./search-core.multilinetextsnippetdirectanswer.md)<!-- -->, [RichTextSnippetDirectAnswer](./search-core.richtextsnippetdirectanswer.md)<!-- -->, [RichTextV2SnippetDirectAnswer](./search-core.richtextv2snippetdirectanswer.md)<!-- -->, [HTMLSnippetDirectAnswer](./search-core.htmlsnippetdirectanswer.md)<!-- -->, [MarkdownSnippetDirectAnswer](./search-core.markdownsnippetdirectanswer.md)
+**References:** [MultiLineTextSnippetDirectAnswer](./search-core.multilinetextsnippetdirectanswer.md)<!-- -->, [RichTextSnippetDirectAnswer](./search-core.richtextsnippetdirectanswer.md)<!-- -->, [RichTextV2SnippetDirectAnswer](./search-core.richtextv2snippetdirectanswer.md)<!-- -->, [HTMLSnippetDirectAnswer](./search-core.htmlsnippetdirectanswer.md)<!-- -->, [MarkdownSnippetDirectAnswer](./search-core.markdownsnippetdirectanswer.md)
 

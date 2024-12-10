@@ -6,7 +6,7 @@
 
 A description of the result.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 description?: string;

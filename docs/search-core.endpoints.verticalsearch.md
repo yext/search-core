@@ -4,7 +4,7 @@
 
 ## Endpoints.verticalSearch property
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 verticalSearch?: string;

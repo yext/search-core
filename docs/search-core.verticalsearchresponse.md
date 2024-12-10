@@ -6,7 +6,7 @@
 
 A representation of a response from a vertical search.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface VerticalSearchResponse 
@@ -14,17 +14,234 @@ export interface VerticalSearchResponse
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [allResultsForVertical?](./search-core.verticalsearchresponse.allresultsforvertical.md) | [VerticalSearchResponse](./search-core.verticalsearchresponse.md) | <i>(Optional)</i> A representation of a response from a vertical search. |
-|  [alternativeVerticals?](./search-core.verticalsearchresponse.alternativeverticals.md) | [VerticalResults](./search-core.verticalresults.md)<!-- -->\[\] | <i>(Optional)</i> The [VerticalResults](./search-core.verticalresults.md) for each search vertical. |
-|  [directAnswer?](./search-core.verticalsearchresponse.directanswer.md) | [FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) \| [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md) | <i>(Optional)</i> A direct answer to a search. |
-|  [facets?](./search-core.verticalsearchresponse.facets.md) | [DisplayableFacet](./search-core.displayablefacet.md)<!-- -->\[\] | <i>(Optional)</i> An array of [Facet](./search-core.facet.md)<!-- -->s associated with the search results. |
-|  [locationBias?](./search-core.verticalsearchresponse.locationbias.md) | [LocationBias](./search-core.locationbias.md) | <i>(Optional)</i> Information about the user's location. |
-|  [queryId](./search-core.verticalsearchresponse.queryid.md) | string | The ID of the query. |
-|  [queryRulesActionsData?](./search-core.verticalsearchresponse.queryrulesactionsdata.md) | [QueryRulesActionsData](./search-core.queryrulesactionsdata.md)<!-- -->\[\] | <i>(Optional)</i> Data returned from the Search query rules system. |
-|  [searchIntents?](./search-core.verticalsearchresponse.searchintents.md) | [SearchIntent](./search-core.searchintent.md)<!-- -->\[\] | <i>(Optional)</i> An array of [SearchIntent](./search-core.searchintent.md)<!-- -->s. |
-|  [spellCheck?](./search-core.verticalsearchresponse.spellcheck.md) | [SpellCheck](./search-core.spellcheck.md) | <i>(Optional)</i> A spellcheck response from a search query. |
-|  [uuid](./search-core.verticalsearchresponse.uuid.md) | string | A unique id which corresponds to the request. |
-|  [verticalResults](./search-core.verticalsearchresponse.verticalresults.md) | [VerticalResults](./search-core.verticalresults.md) | Represents results from a search vertical. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[allResultsForVertical?](./search-core.verticalsearchresponse.allresultsforvertical.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[VerticalSearchResponse](./search-core.verticalsearchresponse.md)
+
+
+</td><td>
+
+_(Optional)_ A representation of a response from a vertical search.
+
+
+</td></tr>
+<tr><td>
+
+[alternativeVerticals?](./search-core.verticalsearchresponse.alternativeverticals.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[VerticalResults](./search-core.verticalresults.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_ The [VerticalResults](./search-core.verticalresults.md) for each search vertical.
+
+
+</td></tr>
+<tr><td>
+
+[directAnswer?](./search-core.verticalsearchresponse.directanswer.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[FeaturedSnippetDirectAnswer](./search-core.featuredsnippetdirectanswer.md) \| [FieldValueDirectAnswer](./search-core.fieldvaluedirectanswer.md)
+
+
+</td><td>
+
+_(Optional)_ A direct answer to a search.
+
+
+</td></tr>
+<tr><td>
+
+[facets?](./search-core.verticalsearchresponse.facets.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[DisplayableFacet](./search-core.displayablefacet.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_ An array of [Facet](./search-core.facet.md)<!-- -->s associated with the search results.
+
+
+</td></tr>
+<tr><td>
+
+[locationBias?](./search-core.verticalsearchresponse.locationbias.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[LocationBias](./search-core.locationbias.md)
+
+
+</td><td>
+
+_(Optional)_ Information about the user's location.
+
+
+</td></tr>
+<tr><td>
+
+[queryId](./search-core.verticalsearchresponse.queryid.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The ID of the query.
+
+
+</td></tr>
+<tr><td>
+
+[queryRulesActionsData?](./search-core.verticalsearchresponse.queryrulesactionsdata.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[QueryRulesActionsData](./search-core.queryrulesactionsdata.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_ Data returned from the Search query rules system.
+
+
+</td></tr>
+<tr><td>
+
+[searchIntents?](./search-core.verticalsearchresponse.searchintents.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[SearchIntent](./search-core.searchintent.md)<!-- -->\[\]
+
+
+</td><td>
+
+_(Optional)_ An array of [SearchIntent](./search-core.searchintent.md)<!-- -->s.
+
+
+</td></tr>
+<tr><td>
+
+[spellCheck?](./search-core.verticalsearchresponse.spellcheck.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[SpellCheck](./search-core.spellcheck.md)
+
+
+</td><td>
+
+_(Optional)_ A spellcheck response from a search query.
+
+
+</td></tr>
+<tr><td>
+
+[uuid](./search-core.verticalsearchresponse.uuid.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+A unique id which corresponds to the request.
+
+
+</td></tr>
+<tr><td>
+
+[verticalResults](./search-core.verticalsearchresponse.verticalresults.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[VerticalResults](./search-core.verticalresults.md)
+
+
+</td><td>
+
+Represents results from a search vertical.
+
+
+</td></tr>
+</tbody></table>

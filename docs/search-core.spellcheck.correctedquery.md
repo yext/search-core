@@ -6,7 +6,7 @@
 
 The corrected version of the originalQuery.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 correctedQuery: string;

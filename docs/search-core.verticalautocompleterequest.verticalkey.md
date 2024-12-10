@@ -6,7 +6,7 @@
 
 The key for the vertical to get autocomplete suggestions from.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 verticalKey: string;

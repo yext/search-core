@@ -6,7 +6,7 @@
 
 A Matcher is a filtering operation.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum Matcher 
@@ -14,14 +14,148 @@ export declare enum Matcher
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  Between | <code>&quot;$between&quot;</code> | A limitation of the dataset to a range of values. |
-|  Equals | <code>&quot;$eq&quot;</code> | An equals comparison. |
-|  GreaterThan | <code>&quot;$gt&quot;</code> | A greater than comparison. |
-|  GreaterThanOrEqualTo | <code>&quot;$ge&quot;</code> | A greater than or equal to comparison. |
-|  LessThan | <code>&quot;$lt&quot;</code> | A less than comparison. |
-|  LessThanOrEqualTo | <code>&quot;$le&quot;</code> | A less than or equal to comparison. |
-|  Near | <code>&quot;$near&quot;</code> | A comparison of whether an entity is within a certain radius of a certain location. |
-|  NotEquals | <code>&quot;!$eq&quot;</code> | A not equals comparison. |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+Between
+
+
+</td><td>
+
+`"$between"`
+
+
+</td><td>
+
+A limitation of the dataset to a range of values.
+
+
+</td></tr>
+<tr><td>
+
+Equals
+
+
+</td><td>
+
+`"$eq"`
+
+
+</td><td>
+
+An equals comparison.
+
+
+</td></tr>
+<tr><td>
+
+GreaterThan
+
+
+</td><td>
+
+`"$gt"`
+
+
+</td><td>
+
+A greater than comparison.
+
+
+</td></tr>
+<tr><td>
+
+GreaterThanOrEqualTo
+
+
+</td><td>
+
+`"$ge"`
+
+
+</td><td>
+
+A greater than or equal to comparison.
+
+
+</td></tr>
+<tr><td>
+
+LessThan
+
+
+</td><td>
+
+`"$lt"`
+
+
+</td><td>
+
+A less than comparison.
+
+
+</td></tr>
+<tr><td>
+
+LessThanOrEqualTo
+
+
+</td><td>
+
+`"$le"`
+
+
+</td><td>
+
+A less than or equal to comparison.
+
+
+</td></tr>
+<tr><td>
+
+Near
+
+
+</td><td>
+
+`"$near"`
+
+
+</td><td>
+
+A comparison of whether an entity is within a certain radius of a certain location.
+
+
+</td></tr>
+<tr><td>
+
+NotEquals
+
+
+</td><td>
+
+`"!$eq"`
+
+
+</td><td>
+
+A not equals comparison.
+
+
+</td></tr>
+</tbody></table>

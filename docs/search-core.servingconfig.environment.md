@@ -6,7 +6,7 @@
 
 Defines the environment of the API domains.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 environment?: Environment;

@@ -6,7 +6,7 @@
 
 Represents the type of [AppliedQueryFilter](./search-core.appliedqueryfilter.md) applied to a search.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export declare enum AppliedQueryFilterType 
@@ -14,9 +14,68 @@ export declare enum AppliedQueryFilterType
 
 ## Enumeration Members
 
-|  Member | Value | Description |
-|  --- | --- | --- |
-|  FieldValue | <code>&quot;FIELD_VALUE&quot;</code> | Indicates that a field value filter is applied based on the query. |
-|  Intent | <code>&quot;INTENT&quot;</code> | Indicates that a search intent filter is applied based on the query. |
-|  Place | <code>&quot;PLACE&quot;</code> | Indicates that a location filter is applied based on the query. |
+<table><thead><tr><th>
 
+Member
+
+
+</th><th>
+
+Value
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+FieldValue
+
+
+</td><td>
+
+`"FIELD_VALUE"`
+
+
+</td><td>
+
+Indicates that a field value filter is applied based on the query.
+
+
+</td></tr>
+<tr><td>
+
+Intent
+
+
+</td><td>
+
+`"INTENT"`
+
+
+</td><td>
+
+Indicates that a search intent filter is applied based on the query.
+
+
+</td></tr>
+<tr><td>
+
+Place
+
+
+</td><td>
+
+`"PLACE"`
+
+
+</td><td>
+
+Indicates that a location filter is applied based on the query.
+
+
+</td></tr>
+</tbody></table>

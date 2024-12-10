@@ -6,7 +6,7 @@
 
 An autocomplete suggestion.
 
-<b>Signature:</b>
+**Signature:**
 
 ```typescript
 export interface AutocompleteResult 
@@ -14,13 +14,158 @@ export interface AutocompleteResult
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [filter?](./search-core.autocompleteresult.filter.md) | [FieldValueFilter](./search-core.fieldvaluefilter.md) | <i>(Optional)</i> A filter applied to the autocomplete response. |
-|  [inputIntents](./search-core.autocompleteresult.inputintents.md) | [SearchIntent](./search-core.searchintent.md)<!-- -->\[\] | [SearchIntent](./search-core.searchintent.md)<!-- -->s corresponding to the autocomplete result. |
-|  [key?](./search-core.autocompleteresult.key.md) | string | <i>(Optional)</i> The fieldId which corresponds to the AutocompleteResult value. |
-|  [matchedSubstrings?](./search-core.autocompleteresult.matchedsubstrings.md) | { length: number; offset: number; }\[\] | <i>(Optional)</i> An array of substrings which overlap with the autocomplete input. |
-|  [relatedItem?](./search-core.autocompleteresult.relateditem.md) | [Result](./search-core.result.md) | <i>(Optional)</i> An entity that corresponds to the autocomplete result. |
-|  [value](./search-core.autocompleteresult.value.md) | string | The value of an autocomplete suggestion. |
-|  [verticalKeys?](./search-core.autocompleteresult.verticalkeys.md) | string\[\] | <i>(Optional)</i> Any vertical keys associated with a prompt. This only shows up on universal autocomplete requests. |
+<table><thead><tr><th>
 
+Property
+
+
+</th><th>
+
+Modifiers
+
+
+</th><th>
+
+Type
+
+
+</th><th>
+
+Description
+
+
+</th></tr></thead>
+<tbody><tr><td>
+
+[filter?](./search-core.autocompleteresult.filter.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[FieldValueFilter](./search-core.fieldvaluefilter.md)
+
+
+</td><td>
+
+_(Optional)_ A filter applied to the autocomplete response.
+
+
+</td></tr>
+<tr><td>
+
+[inputIntents](./search-core.autocompleteresult.inputintents.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[SearchIntent](./search-core.searchintent.md)<!-- -->\[\]
+
+
+</td><td>
+
+[SearchIntent](./search-core.searchintent.md)<!-- -->s corresponding to the autocomplete result.
+
+
+</td></tr>
+<tr><td>
+
+[key?](./search-core.autocompleteresult.key.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ The fieldId which corresponds to the AutocompleteResult value.
+
+
+</td></tr>
+<tr><td>
+
+[matchedSubstrings?](./search-core.autocompleteresult.matchedsubstrings.md)
+
+
+</td><td>
+
+
+</td><td>
+
+{ length: number; offset: number; }\[\]
+
+
+</td><td>
+
+_(Optional)_ An array of substrings which overlap with the autocomplete input.
+
+
+</td></tr>
+<tr><td>
+
+[relatedItem?](./search-core.autocompleteresult.relateditem.md)
+
+
+</td><td>
+
+
+</td><td>
+
+[Result](./search-core.result.md)
+
+
+</td><td>
+
+_(Optional)_ An entity that corresponds to the autocomplete result.
+
+
+</td></tr>
+<tr><td>
+
+[value](./search-core.autocompleteresult.value.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+The value of an autocomplete suggestion.
+
+
+</td></tr>
+<tr><td>
+
+[verticalKeys?](./search-core.autocompleteresult.verticalkeys.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string\[\]
+
+
+</td><td>
+
+_(Optional)_ Any vertical keys associated with a prompt. This only shows up on universal autocomplete requests.
+
+
+</td></tr>
+</tbody></table>
