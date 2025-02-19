@@ -636,6 +636,39 @@ The response of a filtersearch request.
 </td></tr>
 <tr><td>
 
+[GenerativeDirectAnswerRequest](./search-core.generativedirectanswerrequest.md)
+
+
+</td><td>
+
+Options which can be specified for a generative direct answer request.
+
+
+</td></tr>
+<tr><td>
+
+[GenerativeDirectAnswerResponse](./search-core.generativedirectanswerresponse.md)
+
+
+</td><td>
+
+A representation of a generative direct answer response.
+
+
+</td></tr>
+<tr><td>
+
+[GenerativeDirectAnswerService](./search-core.generativedirectanswerservice.md)
+
+
+</td><td>
+
+A service for generative direct answer requests.
+
+
+</td></tr>
+<tr><td>
+
 [HighlightedValue](./search-core.highlightedvalue.md)
 
 

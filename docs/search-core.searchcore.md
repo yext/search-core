@@ -32,7 +32,7 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
-[(constructor)(searchService, questionSubmissionService, autoCompleteService)](./search-core.searchcore._constructor_.md)
+[(constructor)(searchService, questionSubmissionService, autoCompleteService, generativeDirectAnswerService)](./search-core.searchcore._constructor_.md)
 
 
 </td><td>
@@ -75,6 +75,20 @@ Description
 </td><td>
 
 Performs a filtersearch request against specified fields within a single vertical.
+
+
+</td></tr>
+<tr><td>
+
+[generativeDirectAnswer(request)](./search-core.searchcore.generativedirectanswer.md)
+
+
+</td><td>
+
+
+</td><td>
+
+Performs a generative direct answer request.
 
 
 </td></tr>

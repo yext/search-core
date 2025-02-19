@@ -9,7 +9,7 @@ Constructs a new instance of the `SearchCore` class
 **Signature:**
 
 ```typescript
-constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService);
+constructor(searchService: SearchService, questionSubmissionService: QuestionSubmissionService, autoCompleteService: AutocompleteService, generativeDirectAnswerService: GenerativeDirectAnswerService);
 ```
 
 ## Parameters
@@ -66,6 +66,20 @@ autoCompleteService
 </td><td>
 
 [AutocompleteService](./search-core.autocompleteservice.md)
+
+
+</td><td>
+
+
+</td></tr>
+<tr><td>
+
+generativeDirectAnswerService
+
+
+</td><td>
+
+[GenerativeDirectAnswerService](./search-core.generativedirectanswerservice.md)
 
 
 </td><td>

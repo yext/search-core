@@ -56,6 +56,25 @@ _(Optional)_
 </td></tr>
 <tr><td>
 
+[generativeDirectAnswer?](./search-core.endpoints.generativedirectanswer.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_
+
+
+</td></tr>
+<tr><td>
+
 [questionSubmission?](./search-core.endpoints.questionsubmission.md)
 
 
