@@ -24,7 +24,7 @@ export class EndpointsFactory {
 
   /** Provides the domain based on environment and cloud region. */
   getDomain() {
-    if (this.environment === Environment.DEV || this.environment === Environment.QA) {
+    if (this.isInternalTestEnvironment()) {
       return `https://liveapi-${this.environment}.yext.com`;
     }
     switch (this.cloudChoice){
@@ -38,8 +38,8 @@ export class EndpointsFactory {
 
   /** Provides the cached domain based on environment and cloud region. */
   getCachedDomain() {
-    if (this.environment === Environment.DEV || this.environment === Environment.QA) {
-      return this.getDomain();
+    if (this.isInternalTestEnvironment()) {
+      return `https://liveapi-${this.environment}.yext.com`;
     }
     switch (this.cloudChoice){
       case CloudChoice.GLOBAL_GCP:
@@ -62,6 +62,10 @@ export class EndpointsFactory {
       filterSearch: `${this.getDomain()}/v2/accounts/me/search/filtersearch`,
       generativeDirectAnswer: `${this.getDomain()}/v2/accounts/me/search/generateAnswer`,
     };
+  }
+
+  private isInternalTestEnvironment() {
+    return this.environment === Environment.DEV || this.environment === Environment.QA;
   }
 }
 
