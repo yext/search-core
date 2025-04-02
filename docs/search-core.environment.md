@@ -32,6 +32,22 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
+DEV
+
+
+</td><td>
+
+`"dev"`
+
+
+</td><td>
+
+For internal development only
+
+
+</td></tr>
+<tr><td>
+
 PROD
 
 
@@ -41,6 +57,22 @@ PROD
 
 
 </td><td>
+
+
+</td></tr>
+<tr><td>
+
+QA
+
+
+</td><td>
+
+`"qa"`
+
+
+</td><td>
+
+For internal development only
 
 
 </td></tr>

@@ -24,6 +24,9 @@ export class EndpointsFactory {
 
   /** Provides the domain based on environment and cloud region. */
   getDomain() {
+    if (this.environment === Environment.DEV || this.environment === Environment.QA) {
+      return `https://liveapi-${this.environment}.yext.com`;
+    }
     switch (this.cloudChoice){
       case CloudChoice.GLOBAL_GCP:
         return `https://${this.environment}-cdn-gcp.${this.cloudRegion}.yextapis.com`;
@@ -35,6 +38,9 @@ export class EndpointsFactory {
 
   /** Provides the cached domain based on environment and cloud region. */
   getCachedDomain() {
+    if (this.environment === Environment.DEV || this.environment === Environment.QA) {
+      return this.getDomain();
+    }
     switch (this.cloudChoice){
       case CloudChoice.GLOBAL_GCP:
         return `https://${this.environment}-cdn-cached-gcp.${this.cloudRegion}.yextapis.com`;
