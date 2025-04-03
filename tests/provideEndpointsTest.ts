@@ -45,3 +45,21 @@ it('Prod, EU, GCP produces expected endpoint', () => {
   }).getEndpoints();
   expect(endPoints).toHaveProperty('filterSearch', 'https://prod-cdn-gcp.eu.yextapis.com/v2/accounts/me/search/filtersearch');
 });
+
+it('Dev produces expected endpoint', () => {
+  const endPoints = new EndpointsFactory({
+    environment: Environment.DEV,
+    cloudRegion: CloudRegion.US,
+    cloudChoice: CloudChoice.GLOBAL_MULTI
+  }).getEndpoints();
+  expect(endPoints).toHaveProperty('verticalSearch', 'https://liveapi-dev.yext.com/v2/accounts/me/search/vertical/query');
+});
+
+it('QA produces expected endpoint', () => {
+  const endPoints = new EndpointsFactory({
+    environment: Environment.QA,
+    cloudRegion: CloudRegion.US,
+    cloudChoice: CloudChoice.GLOBAL_MULTI
+  }).getEndpoints();
+  expect(endPoints).toHaveProperty('verticalSearch', 'https://liveapi-qa.yext.com/v2/accounts/me/search/vertical/query');
+});
