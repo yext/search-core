@@ -24,7 +24,7 @@ export class EndpointsFactory {
 
   /** Provides the domain based on environment and cloud region. */
   getDomain() {
-    if (this.isInternalTestEnvironment()) {
+    if (this.isInternalTestEnvironment() && this.cloudRegion === CloudRegion.US) {
       return `https://liveapi-${this.environment}.yext.com`;
     }
     switch (this.cloudChoice){
@@ -38,7 +38,7 @@ export class EndpointsFactory {
 
   /** Provides the cached domain based on environment and cloud region. */
   getCachedDomain() {
-    if (this.isInternalTestEnvironment()) {
+    if (this.isInternalTestEnvironment() && this.cloudRegion === CloudRegion.US) {
       return `https://liveapi-${this.environment}.yext.com`;
     }
     switch (this.cloudChoice){

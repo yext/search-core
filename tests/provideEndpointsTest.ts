@@ -55,11 +55,20 @@ it('Dev produces expected endpoint', () => {
   expect(endPoints).toHaveProperty('verticalSearch', 'https://liveapi-dev.yext.com/v2/accounts/me/search/vertical/query');
 });
 
-it('QA produces expected endpoint', () => {
+it('QA, US produces expected endpoint', () => {
   const endPoints = new EndpointsFactory({
     environment: Environment.QA,
     cloudRegion: CloudRegion.US,
     cloudChoice: CloudChoice.GLOBAL_MULTI
   }).getEndpoints();
   expect(endPoints).toHaveProperty('verticalSearch', 'https://liveapi-qa.yext.com/v2/accounts/me/search/vertical/query');
+});
+
+it('QA, EU produces expected endpoint', () => {
+  const endPoints = new EndpointsFactory({
+    environment: Environment.QA,
+    cloudRegion: CloudRegion.EU,
+    cloudChoice: CloudChoice.GLOBAL_MULTI
+  }).getEndpoints();
+  expect(endPoints).toHaveProperty('verticalSearch', 'https://qa-cdn.eu.yextapis.com/v2/accounts/me/search/vertical/query');
 });
