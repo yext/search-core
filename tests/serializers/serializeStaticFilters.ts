@@ -237,6 +237,22 @@ it('serializeStaticFilters works with only upper limit defined for a $between Fi
   expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
 });
 
+it('serializeStaticFilters works with an $openAt FieldValueStaticFilter', () => {
+  const actualSerializedFilters = serializeStaticFilters({
+    kind: 'fieldValue',
+    fieldId: 'builtin.hours',
+    matcher: Matcher.OpenAt,
+    value: 'now'
+  });
+
+  const expectedSerializedFilters = {
+    'builtin.hours': {
+      $openAt: 'now'
+    }
+  };
+  expect(actualSerializedFilters).toEqual(JSON.stringify(expectedSerializedFilters));
+});
+
 it('serializeStaticFilters works with a nested filter with single or no children', () => {
   const actualSerializedFilters = serializeStaticFilters({
     kind: 'conjunction',
