@@ -158,4 +158,20 @@ A not equals comparison.
 
 
 </td></tr>
+<tr><td>
+
+OpenAt
+
+
+</td><td>
+
+`"$openAt"`
+
+
+</td><td>
+
+A comparison of an entity's hours and the current time to determine whether it is open.
+
+
+</td></tr>
 </tbody></table>
