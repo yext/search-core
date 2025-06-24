@@ -551,7 +551,8 @@ export enum Matcher {
     LessThan = "$lt",
     LessThanOrEqualTo = "$le",
     Near = "$near",
-    NotEquals = "!$eq"
+    NotEquals = "!$eq",
+    OpenAt = "$openAt"
 }
 
 // @public

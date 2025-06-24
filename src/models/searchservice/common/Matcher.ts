@@ -59,5 +59,12 @@ export enum Matcher {
    * @remarks
    * Compatible with integer and float.
    */
-  Between = '$between'
+  Between = '$between',
+ /**
+  * A comparison of an entity's hours and the current time to determine whether it is open.
+  *
+  * @remarks
+  * Only compatible with the builtin.hours field, and only supports the value 'now'.
+  */
+  OpenAt = '$openAt'
 }
