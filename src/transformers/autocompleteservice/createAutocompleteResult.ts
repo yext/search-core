@@ -8,7 +8,7 @@ export function createAutocompleteResult(result: any): AutocompleteResult {
     ? ResultsFactory.create([result.relatedItem], Source.KnowledgeManager)[0]
     : result.relatedItem;
   return {
-    filter: result.filter && createFieldValueFilter(result.filter),
+    filter: result.filter && createFieldValueFilter(result),
     key: result.key,
     matchedSubstrings: result.matchedSubstrings || [],
     value: result.value,

@@ -5,7 +5,7 @@ export function createAppliedQueryFilter(data: any): AppliedQueryFilter {
   return {
     displayKey: data.displayKey,
     displayValue: data.displayValue,
-    filter: createFieldValueFilter(data.filter),
+    filter: createFieldValueFilter(data),
     type: data.type,
     ...(data.details && { details: data.details })
   };

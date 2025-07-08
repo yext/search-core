@@ -565,6 +565,7 @@ export interface MultiLineTextSnippetDirectAnswer extends BaseFeaturedSnippetDir
 export interface NearFilterValue {
     lat: number;
     lng: number;
+    name?: string;
     radius: number;
 }
 

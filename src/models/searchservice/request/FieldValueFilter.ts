@@ -36,5 +36,7 @@ export interface NearFilterValue {
   /** The latitude of the location. */
   lat: number,
   /** The longitude of the location. */
-  lng: number
+  lng: number,
+  /** The name of the location, if applicable. */
+  name?: string
 }
