@@ -75,6 +75,25 @@ The longitude of the location.
 </td></tr>
 <tr><td>
 
+[name?](./search-core.nearfiltervalue.name.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string
+
+
+</td><td>
+
+_(Optional)_ The name of the location, if applicable.
+
+
+</td></tr>
+<tr><td>
+
 [radius](./search-core.nearfiltervalue.radius.md)
 
 

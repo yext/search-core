@@ -16,7 +16,7 @@ export function createFacets(facets: any): DisplayableFacet[] {
 
 function createFacetOptions(options: any[]): DisplayableFacetOption[] {
   return options.map((option: any) => {
-    const filter = createFieldValueFilter(option.filter);
+    const filter = createFieldValueFilter(option);
 
     return {
       displayName: option.displayName,
