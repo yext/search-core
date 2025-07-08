@@ -119,4 +119,50 @@ describe('AutocompleteResult', () => {
     const actualResult = createAutocompleteResult(resultWithNoRelatedItem);
     expect(actualResult).toEqual(expectedResult);
   });
+
+  it('result with near filter has name parsed correctly', () => {
+    const resultWithNearFilter = {
+      key: 'builtin.location',
+      value: 'Virginia, United States',
+      filter: {
+        'builtin.location': {
+          $near: {
+            lat: 37.677592,
+            lng: -78.619053,
+            radius: 482396.99999999994
+          }
+        }
+      },
+      matchedSubstrings: [
+        {
+          offset: 0,
+          length: 2
+        }
+      ],
+    };
+
+    const expectedResult = {
+      value: 'Virginia, United States',
+      filter: {
+        matcher: '$near',
+        value: {
+          lat: 37.677592,
+          lng: -78.619053,
+          radius: 482396.99999999994,
+          name: 'Virginia, United States'
+        },
+        fieldId: 'builtin.location'
+      },
+      key: 'builtin.location',
+      inputIntents: [],
+      matchedSubstrings: [
+        {
+          offset: 0,
+          length: 2
+        }
+      ]
+    };
+    const actualResult = createAutocompleteResult(resultWithNearFilter);
+    expect(actualResult).toEqual(expectedResult);
+  })
 });
