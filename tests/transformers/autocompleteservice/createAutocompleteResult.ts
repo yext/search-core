@@ -164,5 +164,5 @@ describe('AutocompleteResult', () => {
     };
     const actualResult = createAutocompleteResult(resultWithNearFilter);
     expect(actualResult).toEqual(expectedResult);
-  })
+  });
 });
