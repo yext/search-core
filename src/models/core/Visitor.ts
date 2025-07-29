@@ -9,7 +9,7 @@
 export interface Visitor {
   /** The ID associated with the user */
   id: string,
-  /** The type of visitor
+  /** The type of visitor. Max of 16 characters.
    *
    * @example 'YEXT_USER' for Yext Auth
    */
