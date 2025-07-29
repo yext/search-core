@@ -4,7 +4,7 @@
 
 ## Visitor.idMethod property
 
-The type of visitor
+The type of visitor. Max of 16 characters.
 
 **Signature:**
 

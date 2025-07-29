@@ -73,7 +73,7 @@ string
 
 </td><td>
 
-_(Optional)_ The type of visitor
+_(Optional)_ The type of visitor. Max of 16 characters.
 
 
 </td></tr>
