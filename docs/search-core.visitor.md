@@ -54,7 +54,7 @@ string
 
 </td><td>
 
-The ID associated with the user
+The ID associated with the user. Max of 64 characters.
 
 
 </td></tr>

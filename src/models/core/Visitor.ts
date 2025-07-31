@@ -7,7 +7,7 @@
  * @public
  */
 export interface Visitor {
-  /** The ID associated with the user */
+  /** The ID associated with the user. Max of 64 characters. */
   id: string,
   /** The type of visitor. Max of 16 characters.
    *
