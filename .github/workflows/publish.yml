@@ -38,10 +38,6 @@ jobs:
         run: |
           TAG=$(npm run ci-verify-publish ${{ github.ref_name }} | tail -n 1)
           echo "npm_tag=$TAG" >> $GITHUB_OUTPUT
-      
-      - name: Debug npm tag
-        run: |
-          echo "npm_tag='${{ steps.get_npm_tag.outputs.npm_tag }}'"
 
       - name: Publish
         run: npm publish --access public --tag ${{ steps.get_npm_tag.outputs.npm_tag }}
