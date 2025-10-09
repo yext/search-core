@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/explicit-module-boundary-types */
 import { provideCore } from '@yext/search-core';
-import { verticalRequest, functionVerticalRequest } from './requests/verticalRequest';
+import { verticalRequest, functionVerticalRequest, locationsVerticalRequest } from './requests/verticalRequest';
 import universalRequest from './requests/universalRequest';
 import questionRequest from './requests/questionRequest';
 import { univeralAutocompleteRequest, verticalAutocompleteRequest, filterSearchRequest } from './requests/autocompleteRequests';
@@ -74,6 +74,13 @@ export async function functionVerticalSearch() {
   const startTime = new Date().getTime();
   const results = await globalCore.verticalSearch(functionVerticalRequest);
   updateUI(results, startTime, 'Core Function Vertical Response:');
+}
+
+export async function locationsVerticalSearch() {
+  loadingSpinner();
+  const startTime = new Date().getTime();
+  const results = await globalCore.verticalSearch(locationsVerticalRequest);
+  updateUI(results, startTime, 'Locations Vertical Response:');
 }
 
 function loadingSpinner() {

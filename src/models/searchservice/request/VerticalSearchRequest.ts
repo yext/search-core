@@ -48,5 +48,7 @@ export interface VerticalSearchRequest extends SearchRequest {
   /** The radius (in meters) to filter the vertical search by. */
   locationRadius?: number,
   /** The queryId for the query, if this is a repeat query. */
-  queryId?: string
+  queryId?: string,
+  /** A subset of facet field IDs that facet options will be retrieved for. */
+  facetAllowlist?: string[]
 }
