@@ -20,11 +20,9 @@ import {
 (async () => {
   let targetVersion: string | undefined;
 
-  const { currentVersion, pkg, pkgPath, pkgDir } = await getPackageInfo();
+  const { currentVersion, pkgPath, pkgDir } = await getPackageInfo();
 
-  const packageName = pkg.name;
-
-  await logRecentCommits(packageName);
+  await logRecentCommits();
 
   if (!targetVersion) {
     const { release }: { release: string } = await prompts({
@@ -75,7 +73,7 @@ import {
   updateVersion(pkgDir, pkgPath, targetVersion);
 
   step('\nGenerating changelog...');
-  const latestTag = await getLatestTag(packageName);
+  const latestTag = await getLatestTag();
   if (!latestTag) {
     step('\nNo previous tag, skipping changelog generation.');
   } else {
