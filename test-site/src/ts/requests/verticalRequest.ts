@@ -17,6 +17,13 @@ export const verticalRequest: VerticalSearchRequest = {
   }
 };
 
+export const locationsVerticalRequest: VerticalSearchRequest = {
+  verticalKey: 'KM',
+  query: 'virginia',
+  retrieveFacets: true,
+  facetAllowlist: ['address.city', 'services']
+};
+
 export const functionVerticalRequest: VerticalSearchRequest = {
   verticalKey: 'function_vertical',
   query: 'virginia',
