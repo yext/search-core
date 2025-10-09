@@ -52,7 +52,7 @@ import {
     process.exit(1);
   }
 
-  const tag = `${packageName}@${targetVersion}`;
+  const tag = `v${targetVersion}`;
 
   if (targetVersion.includes('beta') && !args.tag) {
     args.tag = 'beta';
