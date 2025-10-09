@@ -57,6 +57,25 @@ _(Optional)_ Used to trigger Search [Query Rules](https://hitchhikers.yext.com/t
 </td></tr>
 <tr><td>
 
+[facetAllowlist?](./search-core.verticalsearchrequest.facetallowlist.md)
+
+
+</td><td>
+
+
+</td><td>
+
+string\[\]
+
+
+</td><td>
+
+_(Optional)_ A subset of facet field IDs that facet options will be retrieved for.
+
+
+</td></tr>
+<tr><td>
+
 [facets?](./search-core.verticalsearchrequest.facets.md)
 
 
