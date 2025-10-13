@@ -40,10 +40,7 @@
     "prepublishOnly": "npm run build",
     "api-extractor": "api-extractor run --local --verbose",
     "generate-docs": "api-documenter markdown --input-folder temp --output-folder docs && rm -rf temp && npm run generate-notices",
-    "generate-notices": "generate-license-file --input package.json --output THIRD-PARTY-NOTICES --overwrite",
-    "ci-verify-publish": "tsx scripts/verifyPublish.ts",
-    "release": "tsx scripts/release.ts",
-    "release:dry": "tsx scripts/release.ts --dry"
+    "generate-notices": "generate-license-file --input package.json --output THIRD-PARTY-NOTICES --overwrite"
   },
   "repository": {
     "type": "git",
@@ -72,12 +69,10 @@
     "eslint": "^8.11.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-tsdoc": "^0.2.14",
-    "execa": "^8.0.1",
     "generate-license-file": "^1.3.0",
     "jest": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
     "ts-loader": "^8.4.0",
-    "tsx": "^4.6.2",
     "typescript": "^4.0.3",
     "webpack": "^5.90.0",
     "webpack-cli": "^4.4.0"
