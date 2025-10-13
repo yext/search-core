@@ -171,15 +171,16 @@ export async function getLatestTag(): Promise<string> {
     .reverse()[0];
 }
 
-export async function logRecentCommits(): Promise<void> {
-  const tag = await getLatestTag();
-  if (!tag) return;
-  const sha = await run('git', ['rev-list', '-n', '1', tag], {
+export async function getTagSha(tag: string): Promise<string> {
+  return await run('git', ['rev-list', '-n', '1', tag], {
     stdio: 'pipe',
   }).then((res) => res.stdout.trim());
+}
+
+export async function logRecentCommits(tag: string, sha: string): Promise<void> {
   console.log(
     colors.bold(
-      `\n${colors.blue('i')} Commits of since ${colors.green(
+      `\n${colors.blue('i')} Commits since ${colors.green(
         tag,
       )} ${colors.gray(`(${sha.slice(0, 5)})`)}`
     )
