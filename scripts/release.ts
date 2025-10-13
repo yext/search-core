@@ -5,7 +5,6 @@ import prompts from 'prompts';
 import semver from 'semver';
 import colors from 'picocolors';
 import {
-  args,
   getLatestTag,
   getPackageInfo,
   getTagSha,
