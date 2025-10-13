@@ -5,9 +5,9 @@ import prompts from 'prompts';
 import semver from 'semver';
 import colors from 'picocolors';
 import {
-  args,
   getLatestTag,
   getPackageInfo,
+  getTagSha,
   getVersionChoices,
   isDryRun,
   logRecentCommits,
@@ -18,33 +18,31 @@ import {
 } from './releaseUtils.js';
 
 (async () => {
-  let targetVersion: string | undefined;
 
-  const { currentVersion, pkg, pkgPath, pkgDir } = await getPackageInfo();
+  const { currentVersion, pkgPath, pkgDir } = await getPackageInfo();
 
-  const packageName = pkg.name;
+  const latestTag = await getLatestTag();
+  if (latestTag) {
+    const sha = await getTagSha(latestTag);
+    await logRecentCommits(latestTag, sha);
+  }
 
-  await logRecentCommits(packageName);
+  const { release }: { release: string } = await prompts({
+    type: 'select',
+    name: 'release',
+    message: 'Select release type',
+    choices: getVersionChoices(currentVersion),
+  });
 
-  if (!targetVersion) {
-    const { release }: { release: string } = await prompts({
-      type: 'select',
-      name: 'release',
-      message: 'Select release type',
-      choices: getVersionChoices(currentVersion),
+  let targetVersion = release;
+  if (release === 'custom') {
+    const { version }: { version: string } = await prompts({
+      type: 'text',
+      name: 'version',
+      message: 'Input custom version',
+      initial: currentVersion,
     });
-
-    if (release === 'custom') {
-      const res: { version: string } = await prompts({
-        type: 'text',
-        name: 'version',
-        message: 'Input custom version',
-        initial: currentVersion,
-      });
-      targetVersion = res.version;
-    } else {
-      targetVersion = release;
-    }
+    targetVersion = version;
   }
 
   if (!semver.valid(targetVersion)) {
@@ -52,14 +50,7 @@ import {
     process.exit(1);
   }
 
-  const tag = `${packageName}@${targetVersion}`;
-
-  if (targetVersion.includes('beta') && !args.tag) {
-    args.tag = 'beta';
-  }
-  if (targetVersion.includes('alpha') && !args.tag) {
-    args.tag = 'alpha';
-  }
+  const tag = `v${targetVersion}`;
 
   const { yes }: { yes: boolean } = await prompts({
     type: 'confirm',
@@ -74,21 +65,6 @@ import {
   step('\nUpdating package version...');
   updateVersion(pkgDir, pkgPath, targetVersion);
 
-  step('\nGenerating changelog...');
-  const latestTag = await getLatestTag(packageName);
-  if (!latestTag) {
-    step('\nNo previous tag, skipping changelog generation.');
-  } else {
-    const sha = (
-      await run('git', ['rev-list', '-n', '1', latestTag], {
-        stdio: 'pipe',
-      })
-    ).stdout.trim();
-
-    const changelogArgs = ['generate-changelog', `${sha}..HEAD`];
-    await run('npx', changelogArgs, { cwd: pkgDir });
-  }
-
   const { stdout } = await run('git', ['diff'], { stdio: 'pipe' });
   if (stdout) {
     step('\nCommitting changes...');
@@ -101,8 +77,8 @@ import {
   }
 
   step('\nPushing to GitHub...');
-  await runIfNotDry('git', ['push', 'origin', `refs/tags/${tag}`]);
   await runIfNotDry('git', ['push']);
+  await runIfNotDry('git', ['push', 'origin', `refs/tags/${tag}`]);
 
   if (isDryRun) {
     console.log('\nDry run finished - run git diff to see package changes.');
