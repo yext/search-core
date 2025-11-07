@@ -47,6 +47,7 @@ Universal search request options
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 Promise&lt;[UniversalSearchResponse](./search-core.universalsearchresponse.md)<!-- -->&gt;

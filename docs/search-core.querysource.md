@@ -79,3 +79,4 @@ Indicates that the query was initiated from a standard Search integration.
 
 </td></tr>
 </tbody></table>
+

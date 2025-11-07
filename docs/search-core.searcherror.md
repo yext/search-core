@@ -100,3 +100,4 @@ _(Optional)_ Search API error type.
 
 </td></tr>
 </tbody></table>
+

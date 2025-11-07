@@ -245,3 +245,4 @@ Represents results from a search vertical.
 
 </td></tr>
 </tbody></table>
+

@@ -75,3 +75,4 @@ An array of [DisplayableFacetOption](./search-core.displayablefacetoption.md)
 
 </td></tr>
 </tbody></table>
+

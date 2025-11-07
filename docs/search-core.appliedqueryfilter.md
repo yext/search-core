@@ -131,3 +131,4 @@ Represents the type of [AppliedQueryFilter](./search-core.appliedqueryfilter.md)
 
 </td></tr>
 </tbody></table>
+
