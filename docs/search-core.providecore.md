@@ -47,6 +47,7 @@ The search-core config
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 [SearchCore](./search-core.searchcore.md)

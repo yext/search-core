@@ -94,3 +94,4 @@ Whether or not the filter is selected in the search results.
 
 </td></tr>
 </tbody></table>
+

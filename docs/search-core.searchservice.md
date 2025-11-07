@@ -48,3 +48,4 @@ Performs a search across a particular Vertical.
 
 </td></tr>
 </tbody></table>
+
