@@ -68,6 +68,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
+      limit: request.limit,
       ...this.config?.additionalQueryParams
     };
 
@@ -104,6 +105,7 @@ export class AutocompleteServiceImpl implements AutocompleteService {
       sessionTrackingEnabled: request.sessionTrackingEnabled,
       visitorId: this.config.visitor?.id,
       visitorIdMethod: this.config.visitor?.idMethod,
+      limit: request.limit,
       ...this.config?.additionalQueryParams
     };
 
