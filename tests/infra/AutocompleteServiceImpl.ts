@@ -62,7 +62,8 @@ describe('AutocompleteService', () => {
     const expectedUniversalUrl = defaultEndpoints.universalAutocomplete;
     const request: UniversalAutocompleteRequest = {
       input: '',
-      sessionTrackingEnabled: false
+      sessionTrackingEnabled: false,
+      limit: 5
     };
     const expectedQueryParams = {
       input: '',
@@ -72,15 +73,11 @@ describe('AutocompleteService', () => {
       locale: 'en',
       sessionTrackingEnabled: false,
       visitorId: '123',
-      visitorIdMethod: 'YEXT_AUTH'
+      visitorIdMethod: 'YEXT_AUTH',
+      limit: 5
     };
 
     it('query params are correct with apiKey', async () => {
-      const request: UniversalAutocompleteRequest = {
-        input: '',
-        sessionTrackingEnabled: false
-      };
-
       const autocompleteService = createMockAutocompleteService();
       await autocompleteService.universalAutocomplete(request);
       expect(mockHttpService.get).toHaveBeenLastCalledWith(
@@ -95,7 +92,8 @@ describe('AutocompleteService', () => {
         api_key: 'testApiKey',
         v: defaultApiVersion,
         locale: 'en',
-        sessionTrackingEnabled: false
+        sessionTrackingEnabled: false,
+        limit: 5
       };
 
       const { api_key: _, ...expectedParams } = expectedQueryParams;
@@ -138,7 +136,8 @@ describe('AutocompleteService', () => {
     const request: VerticalAutocompleteRequest = {
       input: 'salesforce',
       sessionTrackingEnabled: false,
-      verticalKey: 'verticalKey'
+      verticalKey: 'verticalKey',
+      limit: 20
     };
     const expectedQueryParams = {
       input: 'salesforce',
@@ -147,7 +146,8 @@ describe('AutocompleteService', () => {
       v: defaultApiVersion,
       locale: 'en',
       sessionTrackingEnabled: false,
-      verticalKey: 'verticalKey'
+      verticalKey: 'verticalKey',
+      limit: 20
     };
 
     it('query params are correct with apiKey', async () => {
