@@ -4,3 +4,4 @@ temp/
 coverage/
 .DS_Store
 .idea/
+*.tgz

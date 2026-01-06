@@ -57,6 +57,25 @@ The input string for autocomplete.
 </td></tr>
 <tr><td>
 
+[limit?](./search-core.verticalautocompleterequest.limit.md)
+
+
+</td><td>
+
+
+</td><td>
+
+number
+
+
+</td><td>
+
+_(Optional)_ Optional limit for the number of autocomplete results. Defaults to 10.
+
+
+</td></tr>
+<tr><td>
+
 [sessionTrackingEnabled?](./search-core.verticalautocompleterequest.sessiontrackingenabled.md)
 
 

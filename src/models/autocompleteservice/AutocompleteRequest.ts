@@ -10,7 +10,9 @@ export interface UniversalAutocompleteRequest extends SearchRequest {
   /** The input string for autocomplete. */
   input: string,
   /** Enables session tracking. */
-  sessionTrackingEnabled?: boolean
+  sessionTrackingEnabled?: boolean,
+  /** Optional limit for the number of autocomplete results. Defaults to 10. */
+  limit?: number
 }
 
 /**
@@ -24,7 +26,9 @@ export interface VerticalAutocompleteRequest extends SearchRequest {
   /** {@inheritDoc UniversalAutocompleteRequest.sessionTrackingEnabled} */
   sessionTrackingEnabled?: boolean,
   /** The key for the vertical to get autocomplete suggestions from. */
-  verticalKey: string
+  verticalKey: string,
+  /** Optional limit for the number of autocomplete results. Defaults to 10. */
+  limit?: number
 }
 
 /**
