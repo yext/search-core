@@ -74,3 +74,4 @@ The raw snippet value, or HTML if - entity is of type HTML - the conversion to H
 
 </td></tr>
 </tbody></table>
+

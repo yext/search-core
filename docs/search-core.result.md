@@ -302,3 +302,4 @@ Represents the source of a [Result](./search-core.result.md)<!-- -->.
 
 </td></tr>
 </tbody></table>
+

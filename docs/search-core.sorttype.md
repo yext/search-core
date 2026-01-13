@@ -79,3 +79,4 @@ Sorts based on relevance according to the algorithm and, when relevant, location
 
 </td></tr>
 </tbody></table>
+

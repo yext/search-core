@@ -78,3 +78,4 @@ Longitude formatted as a decimal degree number.
 
 </td></tr>
 </tbody></table>
+

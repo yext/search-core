@@ -47,6 +47,7 @@ Vertical search request options
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 Promise&lt;[VerticalSearchResponse](./search-core.verticalsearchresponse.md)<!-- -->&gt;

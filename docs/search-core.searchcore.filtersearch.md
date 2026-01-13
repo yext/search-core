@@ -47,6 +47,7 @@ filtersearch request options
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 Promise&lt;[FilterSearchResponse](./search-core.filtersearchresponse.md)<!-- -->&gt;

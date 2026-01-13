@@ -47,6 +47,7 @@ Vertical autocomplete request options
 
 </td></tr>
 </tbody></table>
+
 **Returns:**
 
 Promise&lt;[AutocompleteResponse](./search-core.autocompleteresponse.md)<!-- -->&gt;

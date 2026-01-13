@@ -74,3 +74,4 @@ An array of [FacetOption](./search-core.facetoption.md)
 
 </td></tr>
 </tbody></table>
+

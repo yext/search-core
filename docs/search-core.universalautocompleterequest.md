@@ -94,3 +94,4 @@ _(Optional)_ Enables session tracking.
 
 </td></tr>
 </tbody></table>
+

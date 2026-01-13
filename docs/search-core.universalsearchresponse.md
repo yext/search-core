@@ -207,3 +207,4 @@ An array of [VerticalResults](./search-core.verticalresults.md) which represent 
 
 </td></tr>
 </tbody></table>
+
