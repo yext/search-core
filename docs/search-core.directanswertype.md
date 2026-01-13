@@ -63,4 +63,3 @@ Indicates that the DirectAnswer is a [FieldValueDirectAnswer](./search-core.fiel
 
 </td></tr>
 </tbody></table>
-

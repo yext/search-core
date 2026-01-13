@@ -79,4 +79,3 @@ Indicates that a location filter is applied based on the query.
 
 </td></tr>
 </tbody></table>
-

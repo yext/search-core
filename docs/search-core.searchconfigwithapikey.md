@@ -75,4 +75,3 @@ _(Optional)_ token should NOT be provided along with apiKey.
 
 </td></tr>
 </tbody></table>
-

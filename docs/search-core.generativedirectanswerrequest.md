@@ -94,4 +94,3 @@ The text of the user-written query that prompted Search results.
 
 </td></tr>
 </tbody></table>
-

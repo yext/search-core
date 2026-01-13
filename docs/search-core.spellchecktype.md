@@ -79,4 +79,3 @@ The API is suggesting an alternative query.
 
 </td></tr>
 </tbody></table>
-

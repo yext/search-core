@@ -112,4 +112,3 @@ The type of spell check.
 
 </td></tr>
 </tbody></table>
-

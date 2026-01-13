@@ -47,4 +47,3 @@ The Search API is requesting a prompt for the user's location.
 
 </td></tr>
 </tbody></table>
-

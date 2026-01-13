@@ -74,4 +74,3 @@ The value of the field which should be highlighted.
 
 </td></tr>
 </tbody></table>
-

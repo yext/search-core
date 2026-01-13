@@ -112,4 +112,3 @@ The radius (in meters) around the latitude and longitude.
 
 </td></tr>
 </tbody></table>
-

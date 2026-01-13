@@ -1,6 +1,6 @@
 {
   "name": "@yext/search-core",
-  "version": "2.7.0",
+  "version": "2.8.0",
   "description": "Typescript Networking Library for the Yext Search API",
   "main": "./dist/commonjs/src/index.js",
   "module": "./dist/esm/src/index.js",
@@ -72,8 +72,7 @@
     "eslint": "^8.11.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-tsdoc": "^0.2.14",
-    "execa": "^8.0.1",
-    "generate-license-file": "^1.3.0",
+    "generate-license-file": "^4.1.0",
     "jest": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
     "ts-loader": "^8.4.0",

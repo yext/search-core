@@ -47,7 +47,6 @@ Generative direct answer request options
 
 </td></tr>
 </tbody></table>
-
 **Returns:**
 
 Promise&lt;[GenerativeDirectAnswerResponse](./search-core.generativedirectanswerresponse.md)<!-- -->&gt;

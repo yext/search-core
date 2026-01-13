@@ -806,6 +806,7 @@ export interface TwitterHandleDirectAnswer extends BaseFieldValueDirectAnswer<st
 // @public
 export interface UniversalAutocompleteRequest extends SearchRequest {
     input: string;
+    limit?: number;
     sessionTrackingEnabled?: boolean;
 }
 
@@ -863,6 +864,7 @@ export interface UrlDirectAnswer extends BaseFieldValueDirectAnswer<string | str
 // @public
 export interface VerticalAutocompleteRequest extends SearchRequest {
     input: string;
+    limit?: number;
     sessionTrackingEnabled?: boolean;
     verticalKey: string;
 }

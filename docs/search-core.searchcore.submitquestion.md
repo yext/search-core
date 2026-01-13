@@ -47,7 +47,6 @@ Question submission request options
 
 </td></tr>
 </tbody></table>
-
 **Returns:**
 
 Promise&lt;[QuestionSubmissionResponse](./search-core.questionsubmissionresponse.md)<!-- -->&gt;

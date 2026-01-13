@@ -74,4 +74,3 @@ _(Optional)_ Start limit of the number range value.
 
 </td></tr>
 </tbody></table>
-

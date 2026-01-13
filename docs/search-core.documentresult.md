@@ -74,4 +74,3 @@ All the relevant segments extracted from the document.
 
 </td></tr>
 </tbody></table>
-

@@ -169,4 +169,3 @@ _(Optional)_ Any vertical keys associated with a prompt. This only shows up on u
 
 </td></tr>
 </tbody></table>
-
