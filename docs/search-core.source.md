@@ -111,4 +111,3 @@ The result is from a Knowledge Graph.
 
 </td></tr>
 </tbody></table>
-

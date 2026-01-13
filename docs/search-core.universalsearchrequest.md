@@ -246,4 +246,3 @@ _(Optional)_ Disables spellcheck if true.
 
 </td></tr>
 </tbody></table>
-

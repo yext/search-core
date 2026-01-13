@@ -56,4 +56,3 @@ The kind of static filter.
 
 </td></tr>
 </tbody></table>
-

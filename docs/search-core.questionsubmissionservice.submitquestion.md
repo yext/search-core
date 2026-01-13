@@ -47,7 +47,6 @@ The question, as well as the contact info of the submitter.
 
 </td></tr>
 </tbody></table>
-
 **Returns:**
 
 Promise&lt;[QuestionSubmissionResponse](./search-core.questionsubmissionresponse.md)<!-- -->&gt;

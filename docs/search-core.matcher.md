@@ -175,4 +175,3 @@ A comparison of an entity's hours and the current time to determine whether it i
 
 </td></tr>
 </tbody></table>
-

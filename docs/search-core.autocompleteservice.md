@@ -59,4 +59,3 @@ Retrieves query suggestions for a vertical.
 
 </td></tr>
 </tbody></table>
-

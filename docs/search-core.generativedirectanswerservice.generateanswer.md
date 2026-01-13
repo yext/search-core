@@ -45,7 +45,6 @@ request
 
 </td></tr>
 </tbody></table>
-
 **Returns:**
 
 Promise&lt;[GenerativeDirectAnswerResponse](./search-core.generativedirectanswerresponse.md)<!-- -->&gt;

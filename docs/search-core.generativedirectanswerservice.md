@@ -37,4 +37,3 @@ Generates an answer to a search query.
 
 </td></tr>
 </tbody></table>
-

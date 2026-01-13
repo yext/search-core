@@ -151,4 +151,3 @@ The key for the vertical to get autocomplete suggestions from.
 
 </td></tr>
 </tbody></table>
-

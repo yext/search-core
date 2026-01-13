@@ -93,4 +93,3 @@ The unique identifier for this query rule.
 
 </td></tr>
 </tbody></table>
-

@@ -78,4 +78,3 @@ _(Optional)_ The type of visitor. Max of 16 characters.
 
 </td></tr>
 </tbody></table>
-

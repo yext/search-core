@@ -1347,4 +1347,3 @@ Represents a static filter that will be used to refine results.
 
 </td></tr>
 </tbody></table>
-
